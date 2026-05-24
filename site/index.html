@@ -226,6 +226,20 @@
     }
     .cta-ghost:hover { border-color: rgba(250,250,250,.5); }
 
+    .hero-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+    @media (max-width: 767px) {
+      .hero-bg { object-position: 100% center; }
+    }
+
     .hero-deco {
       position: absolute;
       top: 50%;
@@ -958,6 +972,7 @@
          SECTION 01 — HERO
     ================================================================ -->
     <section id="hero" aria-label="Hero">
+      <img class="hero-bg" src="Design/mascote/rascunhos/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true">
       <div class="hero-deco" aria-hidden="true">IB</div>
 
       <span class="hero-label">ESTRATÉGIA · EXECUÇÃO</span>
@@ -1422,9 +1437,11 @@
     });
 
     /* ── HERO REVEAL ── */
+    gsap.set('.hero-bg', { opacity: 0, scaleX: -1.06, scaleY: 1.06 });
     gsap.timeline({ delay: .1 })
-      .from('.hero-label', { opacity: 0, y: 16, duration: .6, ease: 'power3.out' })
-      .from('.hero-title .line, .hero-title', { opacity: 0, y: 30, duration: .8, ease: 'power4.out', stagger: .12 }, '-=.3')
+      .to('.hero-bg',     { opacity: 0.85, scaleX: -1, scaleY: 1, duration: 1.6, ease: 'power3.out' }, 0)
+      .from('.hero-label', { opacity: 0, y: 16, duration: .6, ease: 'power3.out' }, 0.2)
+      .from('.hero-title', { opacity: 0, y: 30, duration: .8, ease: 'power4.out' }, '-=.3')
       .from('.hero-bottom', { opacity: 0, y: 20, duration: .7, ease: 'power3.out' }, '-=.4');
 
     /* ── RESIZE ── */
