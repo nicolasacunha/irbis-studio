@@ -49,6 +49,38 @@
     button { font-family: var(--f); cursor: none; border: none; background: none; }
 
     /* ================================================================
+       INTRO CURTAIN
+    ================================================================ */
+    #curtain {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: -webkit-fill-available;
+      height: 100dvh;
+      min-height: 100dvh;
+      background: var(--bg);
+      z-index: 9990;
+      transform: translateY(0%);
+      pointer-events: all;
+    }
+
+    #curtain-logo {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(3rem, 10vw, 8rem);
+      font-weight: 800;
+      letter-spacing: -.055em;
+      text-transform: uppercase;
+      color: var(--text);
+      opacity: 0;
+    }
+
+    #curtain-logo .acc { color: var(--accent); position: relative; left: .08em; }
+
+    body.intro-lock { overflow: hidden; }
+
+    /* ================================================================
        CURSOR
     ================================================================ */
     #cur-dot {
@@ -900,6 +932,10 @@
 </head>
 
 <body>
+  <!-- Intro curtain -->
+  <div id="curtain" aria-hidden="true">
+    <span id="curtain-logo">IRBIS<span class="acc">.</span></span>
+  </div>
   <div id="cur-dot"></div>
   <div id="cur-ring"></div>
 
@@ -1241,6 +1277,33 @@
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(time => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
+
+    /* ── INTRO CURTAIN ── */
+    (function () {
+      const curtain = document.getElementById('curtain');
+      const logo    = document.getElementById('curtain-logo');
+
+      document.body.classList.add('intro-lock');
+      lenis.stop();
+
+      gsap.set(curtain, { height: '100dvh' });
+
+      gsap.timeline({ delay: 0.15 })
+        .to(logo,    { opacity: 1, duration: 0.5, ease: 'power2.out' })
+        .to({},      { duration: 1.0 })
+        .to(logo,    { opacity: 0, duration: 0.35, ease: 'power2.in' })
+        .to(curtain, {
+          translateY: '-100%',
+          duration: 0.85,
+          ease: 'power3.inOut',
+          onComplete() {
+            gsap.set(curtain, { translateY: '100%', pointerEvents: 'none' });
+            document.body.classList.remove('intro-lock');
+            lenis.start();
+            ScrollTrigger.refresh();
+          }
+        }, '-=0.1');
+    })();
 
     /* ── CURSOR ── */
     const curDot  = document.getElementById('cur-dot');
