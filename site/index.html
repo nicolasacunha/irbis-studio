@@ -1305,6 +1305,33 @@
         }, '-=0.1');
     })();
 
+    /* ── NAV LOGO CLICK → CURTAIN ── */
+    document.querySelector('.nav-logo').addEventListener('click', e => {
+      e.preventDefault();
+      if (window.scrollY < 10) return;
+
+      const curtain = document.getElementById('curtain');
+      const logo    = document.getElementById('curtain-logo');
+
+      lenis.stop();
+      document.body.classList.add('intro-lock');
+
+      gsap.timeline()
+        .set(curtain,  { pointerEvents: 'all' })
+        .to(curtain,   { translateY: '0%', duration: 0.6, ease: 'power3.inOut' })
+        .to(logo,      { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.1')
+        .add(() => { window.scrollTo(0, 0); lenis.scrollTo(0, { immediate: true }); })
+        .to(logo,      { opacity: 0, duration: 0.3, ease: 'power2.in' }, '+=0.5')
+        .to(curtain,   { translateY: '-100%', duration: 0.7, ease: 'power3.inOut',
+          onComplete() {
+            gsap.set(curtain, { translateY: '100%', pointerEvents: 'none' });
+            document.body.classList.remove('intro-lock');
+            lenis.start();
+            ScrollTrigger.refresh();
+          }
+        }, '-=0.1');
+    });
+
     /* ── CURSOR ── */
     const curDot  = document.getElementById('cur-dot');
     const curRing = document.getElementById('cur-ring');
