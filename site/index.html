@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRBIS — PROTÓTIPO</title>
+  <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================================================================
+       RESET & TOKENS
+    ================================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:     #0C0C0E;
+      --s1:     #18181B;
+      --s2:     #27272A;
+      --accent: #FF3D00;
+      --text:   #FAFAFA;
+      --muted:  #71717A;
+      --f:      'Sora', sans-serif;
+
+      --sp-xs:  .5rem;
+      --sp-sm:  1rem;
+      --sp-md:  1.5rem;
+      --sp-lg:  2.5rem;
+      --sp-xl:  4rem;
+      --sp-2xl: 6rem;
+    }
+
+    html { overflow-x: hidden; scroll-behavior: auto; }
+
+    body {
+      font-family: var(--f);
+      background: var(--bg);
+      color: var(--text);
+      cursor: none;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--f); cursor: none; border: none; background: none; }
+
+    /* ================================================================
+       PROTOTYPE BANNER
+    ================================================================ */
+    .proto-banner {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9999;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-align: center;
+      padding: .35rem;
+      text-transform: uppercase;
+    }
+
+    /* ================================================================
+       CURSOR
+    ================================================================ */
+    #cur-dot {
+      position: fixed; top: 0; left: 0;
+      width: 6px; height: 6px;
+      background: var(--text);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: opacity .2s;
+    }
+    #cur-ring {
+      position: fixed; top: 0; left: 0;
+      width: 32px; height: 32px;
+      border: 1px solid rgba(250,250,250,.4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9997;
+      transform: translate(-50%, -50%);
+      transition: width .2s, height .2s, border-color .2s, opacity .2s;
+    }
+    body.is-hovering #cur-ring {
+      width: 48px; height: 48px;
+      border-color: var(--accent);
+    }
+
+    /* ================================================================
+       NAV
+    ================================================================ */
+    nav {
+      position: fixed;
+      top: 1.75rem; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3rem;
+    }
+    .nav-logo {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: var(--sp-lg);
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      border: 1px solid rgba(250,250,250,.2);
+      padding: .55rem 1.25rem;
+      transition: border-color .2s, color .2s;
+    }
+    .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ================================================================
+       SECTION 01 — HERO
+    ================================================================ */
+    #hero {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 var(--sp-xl) var(--sp-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-label {
+      font-size: .6rem;
+      font-weight: 500;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--sp-md);
+    }
+
+    .hero-title {
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      font-weight: 800;
+      line-height: .95;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      max-width: 14ch;
+      margin-bottom: var(--sp-lg);
+    }
+    .hero-title .acc { color: var(--accent); }
+
+    .hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: var(--sp-lg);
+    }
+    .hero-desc {
+      font-size: clamp(.75rem, 1.1vw, .9rem);
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 42ch;
+      line-height: 1.7;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: .75rem;
+      flex-shrink: 0;
+    }
+    .cta-primary {
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: .9rem 1.75rem;
+      transition: opacity .2s;
+    }
+    .cta-primary:hover { opacity: .85; }
+    .cta-ghost {
+      border: 1px solid rgba(250,250,250,.2);
+      color: var(--text);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: .9rem 1.5rem;
+      transition: border-color .2s;
+    }
+    .cta-ghost:hover { border-color: rgba(250,250,250,.5); }
+
+    .hero-deco {
+      position: absolute;
+      top: 50%;
+      right: 3rem;
+      transform: translateY(-50%);
+      font-size: clamp(14rem, 25vw, 22rem);
+      font-weight: 800;
+      color: rgba(250,250,250,.025);
+      letter-spacing: -.06em;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ================================================================
+       SECTION 02 — COMO OPERO
+    ================================================================ */
+    #como-opero {
+      padding: var(--sp-2xl) var(--sp-xl);
+      background: var(--bg);
+    }
+    .opero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: var(--sp-xl);
+      padding-bottom: var(--sp-sm);
+      border-bottom: 1px solid var(--s2);
+    }
+    .opero-title {
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+    }
+    .opero-sub {
+      font-size: .65rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .opero-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+    .opero-item {
+      padding: var(--sp-lg) var(--sp-md) var(--sp-lg) 0;
+      border-right: 1px solid var(--s2);
+      padding-right: var(--sp-lg);
+    }
+    .opero-item:first-child { padding-left: 0; }
+    .opero-item:last-child { border-right: none; padding-right: 0; padding-left: var(--sp-lg); }
+    .opero-item:not(:first-child):not(:last-child) { padding-left: var(--sp-lg); }
+
+    .opero-num {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: var(--sp-sm);
+    }
+    .opero-name {
+      font-size: clamp(.9rem, 1.4vw, 1.1rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+      margin-bottom: var(--sp-xs);
+      line-height: 1.2;
+    }
+    .opero-desc {
+      font-size: .78rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ================================================================
+       SECTION 03 — HORIZONTAL SCROLL (4 panels)
+    ================================================================ */
+    #horizontal-section {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #h-progress-bar {
+      position: absolute;
+      bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      width: 160px; height: 1px;
+      background: rgba(255,255,255,.1);
+      z-index: 10;
+    }
+    #h-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width .1s linear;
+    }
+
+    .h-track {
+      display: flex;
+      width: 400vw;
+      height: 100%;
+      will-change: transform;
+    }
+
+    .h-panel {
+      width: 100vw;
+      height: 100%;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .h-panel-inner {
+      height: 100%;
+      padding: 8rem var(--sp-xl) 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-lg);
+      overflow: hidden;
+    }
+
+    .h-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+    .h-panel-title {
+      font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .h-panel-sub {
+      display: block;
+      font-size: .8rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: .4rem;
+    }
+    .h-panel-counter {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── PANEL 1: DIAGNÓSTICOS ── */
+    .diag-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-sm);
+      flex: 1;
+      min-height: 0;
+    }
+    .diag-card {
+      background: var(--s1);
+      padding: var(--sp-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: background .2s;
+    }
+    .diag-card:hover { background: var(--s2); }
+    .diag-card-top {}
+    .diag-tag {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: var(--sp-md);
+    }
+    .diag-name {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: var(--sp-md);
+    }
+    .diag-desc {
+      font-size: .82rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 36ch;
+    }
+    .diag-card-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .diag-meta {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .diag-num {
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: -.06em;
+      color: rgba(250,250,250,.08);
+      line-height: 1;
+    }
+    .diag-cta {
+      display: inline-block;
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: .15rem;
+      margin-top: var(--sp-md);
+      transition: color .2s;
+    }
+    .diag-cta:hover { color: var(--accent); }
+
+    /* ── PANEL 2: PROJETOS ── */
+    .proj-list {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+    }
+    .proj-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--s2);
+      transition: padding-left .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .proj-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--s1);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+      z-index: 0;
+    }
+    .proj-item:hover::before { transform: scaleX(1); }
+    .proj-item:hover { padding-left: 1rem; }
+    .proj-item > * { position: relative; z-index: 1; }
+
+    .proj-idx {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--muted);
+      min-width: 2.5rem;
+    }
+    .proj-name {
+      font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+      flex: 1;
+    }
+    .proj-tag {
+      font-size: .55rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .proj-arrow {
+      color: var(--muted);
+      transition: color .2s, transform .2s;
+    }
+    .proj-item:hover .proj-arrow { color: var(--accent); transform: translateX(4px); }
+
+    /* ── PANEL 3: INTEGRADO ── */
+    .integ-inner {
+      height: 100%;
+      padding: 8rem var(--sp-xl) 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .integ-top {}
+    .integ-tag {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: var(--sp-lg);
+    }
+    .integ-headline {
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: -.05em;
+      text-transform: uppercase;
+      line-height: .95;
+      max-width: 16ch;
+      margin-bottom: var(--sp-lg);
+    }
+    .integ-desc {
+      font-size: clamp(.85rem, 1.2vw, 1rem);
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 48ch;
+      line-height: 1.7;
+    }
+    .integ-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .integ-includes {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .integ-includes-label {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .4rem;
+    }
+    .integ-include-item {
+      font-size: .75rem;
+      font-weight: 400;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .integ-include-item::before {
+      content: '→';
+      color: var(--accent);
+      font-size: .65rem;
+    }
+    .integ-cta-wrap {}
+    .integ-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: 1rem 2.25rem;
+      transition: opacity .2s;
+    }
+    .integ-cta:hover { opacity: .85; }
+    .integ-deco {
+      position: absolute;
+      bottom: -2rem;
+      right: 3rem;
+      font-size: clamp(10rem, 18vw, 16rem);
+      font-weight: 800;
+      color: rgba(250,250,250,.03);
+      letter-spacing: -.06em;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    /* ── PANEL 4: RETAINER ── */
+    .ret-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-sm);
+      flex: 1;
+      min-height: 0;
+    }
+    .ret-module {
+      background: var(--s1);
+      padding: var(--sp-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background .2s;
+    }
+    .ret-module:hover { background: var(--s2); }
+    .ret-module-num {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--muted);
+      margin-bottom: var(--sp-lg);
+    }
+    .ret-module-name {
+      font-size: clamp(.9rem, 1.5vw, 1.3rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: var(--sp-sm);
+    }
+    .ret-module-desc {
+      font-size: .75rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .ret-bundle {
+      margin-top: var(--sp-lg);
+      padding: var(--sp-md) var(--sp-lg);
+      background: var(--accent);
+      color: var(--bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .ret-bundle-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .ret-bundle-desc {
+      font-size: .72rem;
+      font-weight: 400;
+    }
+    .ret-bundle-arrow {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    /* ================================================================
+       SECTION 04 — CASES (PLACEHOLDER)
+    ================================================================ */
+    #cases {
+      padding: var(--sp-2xl) var(--sp-xl);
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cases-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: var(--sp-xl);
+      padding-bottom: var(--sp-sm);
+      border-bottom: 1px solid var(--s2);
+    }
+    .cases-title {
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+    }
+    .cases-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      border: 1px dashed var(--s2);
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+    .cases-placeholder-text {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ================================================================
+       SECTION 05 — SOBRE
+    ================================================================ */
+    #sobre {
+      padding: var(--sp-2xl) var(--sp-xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-2xl);
+      align-items: start;
+    }
+    .sobre-left {}
+    .sobre-eyebrow {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: var(--sp-md);
+    }
+    .sobre-name {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: var(--sp-lg);
+    }
+    .sobre-bio {
+      font-size: .9rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 52ch;
+      margin-bottom: var(--sp-lg);
+    }
+    .sobre-manifesto-link {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: .2rem;
+      transition: color .2s;
+    }
+    .sobre-manifesto-link:hover { color: var(--accent); }
+    .sobre-right {
+      background: var(--s1);
+      aspect-ratio: 4/5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sobre-photo-placeholder {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ================================================================
+       SECTION 06 — CONTATO
+    ================================================================ */
+    #contato {
+      padding: var(--sp-2xl) var(--sp-xl);
+      background: var(--s1);
+    }
+    .contato-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-2xl);
+      align-items: start;
+    }
+    .contato-left {}
+    .contato-heading {
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: var(--sp-lg);
+    }
+    .contato-heading .acc { color: var(--accent); }
+    .contato-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+    .contato-link {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .contato-link:hover { color: var(--text); }
+    .contato-right {}
+    .form-row {
+      margin-bottom: var(--sp-lg);
+    }
+    .form-label {
+      display: block;
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .5rem;
+    }
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--s2);
+      color: var(--text);
+      font-family: var(--f);
+      font-size: .9rem;
+      font-weight: 400;
+      padding: .6rem 0;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .form-input::placeholder { color: var(--muted); font-weight: 300; }
+    .form-input:focus { border-color: var(--accent); }
+    .form-submit {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: 1rem;
+      margin-top: var(--sp-lg);
+      transition: opacity .2s;
+    }
+    .form-submit:hover { opacity: .85; }
+    .wpp-link {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: var(--sp-md);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .wpp-link:hover { color: var(--text); }
+
+    /* ================================================================
+       FOOTER
+    ================================================================ */
+    footer {
+      padding: var(--sp-lg) var(--sp-xl);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--s2);
+    }
+    .footer-logo {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+    .footer-copy {
+      font-size: .55rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ================================================================
+       MOBILE (< 768px)
+    ================================================================ */
+    @media (max-width: 767px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      #hero { padding: 0 1.5rem 3rem; }
+      .hero-deco { display: none; }
+      .hero-bottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .hero-ctas { flex-direction: column; width: 100%; }
+      .cta-primary, .cta-ghost { width: 100%; text-align: center; }
+
+      #como-opero { padding: 4rem 1.5rem; }
+      .opero-list { grid-template-columns: 1fr; gap: 0; }
+      .opero-item { border-right: none; border-bottom: 1px solid var(--s2); padding: 1.5rem 0 !important; }
+
+      #horizontal-section { height: auto; overflow: visible; }
+      #h-progress-bar { display: none; }
+      .h-track { flex-direction: column; width: 100%; height: auto; }
+      .h-panel { width: 100%; height: auto; }
+      .h-panel-inner { height: auto; padding: 4rem 1.5rem 3rem; }
+      .diag-grid { grid-template-columns: 1fr; }
+      .ret-grid { grid-template-columns: 1fr 1fr; }
+
+      #sobre { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+      .sobre-right { display: none; }
+      #contato { padding: 4rem 1.5rem; }
+      .contato-inner { grid-template-columns: 1fr; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
+    }
+
+    /* ================================================================
+       REVEAL INITIAL STATES (GSAP controls opacity/y)
+    ================================================================ */
+    .reveal { opacity: 0; transform: translateY(24px); }
+  </style>
+</head>
+
+<body>
+  <div class="proto-banner">PROTÓTIPO — NÃO PUBLICADO</div>
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo">IRBIS</div>
+    <ul class="nav-links">
+      <li><a href="#como-opero">COMO OPERO</a></li>
+      <li><a href="#horizontal-section">SERVIÇOS</a></li>
+      <li><a href="#cases">CASES</a></li>
+      <li><a href="#sobre">SOBRE</a></li>
+    </ul>
+    <a href="#contato" class="nav-cta">CONVERSAR</a>
+  </nav>
+
+  <main>
+
+    <!-- ================================================================
+         SECTION 01 — HERO
+    ================================================================ -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-deco" aria-hidden="true">IB</div>
+
+      <span class="hero-label">ESTRATÉGIA · EXECUÇÃO</span>
+
+      <h1 class="hero-title">
+        CLAREZA<br>ANTES.<br><span class="acc">RESULTADO</span><br>DEPOIS.
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-desc">
+          Da estratégia ao ar. Sem agência no meio.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contato" class="cta-primary">DIAGNÓSTICO</a>
+          <a href="#horizontal-section" class="cta-ghost">VER PROJETOS</a>
+          <a href="https://wa.me/5519991591265" target="_blank" class="cta-ghost">CONVERSAR</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 02 — COMO OPERO
+    ================================================================ -->
+    <section id="como-opero" aria-label="Como opero">
+      <div class="opero-header">
+        <h2 class="opero-title">COMO OPERO</h2>
+        <span class="opero-sub">PROCESSO // 5 FASES</span>
+      </div>
+      <div class="opero-list">
+        <div class="opero-item reveal">
+          <span class="opero-num">01</span>
+          <div class="opero-name">ESCUTA</div>
+          <p class="opero-desc">Entender o negócio antes de qualquer proposta.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">02</span>
+          <div class="opero-name">DIAGNÓSTICO</div>
+          <p class="opero-desc">Mapear o que está travando. Dados, não achismo.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">03</span>
+          <div class="opero-name">ESTRATÉGIA</div>
+          <p class="opero-desc">Decidir o que não fazer é tão importante quanto o que fazer.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">04</span>
+          <div class="opero-name">EXECUÇÃO</div>
+          <p class="opero-desc">Velocidade e precisão. Sem terceirização de responsabilidade.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">05</span>
+          <div class="opero-name">RITUAL</div>
+          <p class="opero-desc">Presença contínua para quem quer resultado acumulado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 03 — HORIZONTAL SCROLL (4 panels)
+         Desktop: pinned, 4 panels translados X.
+         Mobile: stack vertical.
+    ================================================================ -->
+    <section id="horizontal-section" aria-label="Serviços">
+      <div class="h-track" id="h-track">
+
+        <!-- ── PANEL 1: DIAGNÓSTICOS ── -->
+        <div class="h-panel" id="panel-diag">
+          <div class="h-panel-inner">
+            <div class="h-panel-header">
+              <div>
+                <h3 class="h-panel-title">DIAGNÓSTICOS</h3>
+                <span class="h-panel-sub">A entrada. Antes de construir, entender.</span>
+              </div>
+              <span class="h-panel-counter">001 / 004</span>
+            </div>
+            <div class="diag-grid">
+              <div class="diag-card">
+                <div class="diag-card-top">
+                  <span class="diag-tag">ENTRADA</span>
+                  <div class="diag-name">DIAGNÓSTICO<br>RÁPIDO</div>
+                  <p class="diag-desc">Uma área crítica. Clareza para agir rápido.</p>
+                  <a href="#contato" class="diag-cta">SOLICITAR →</a>
+                </div>
+                <div class="diag-card-bottom">
+                  <span class="diag-meta">1–2 SEMANAS</span>
+                  <span class="diag-num">01</span>
+                </div>
+              </div>
+              <div class="diag-card">
+                <div class="diag-card-top">
+                  <span class="diag-tag">COMPLETO</span>
+                  <div class="diag-name">DIAGNÓSTICO<br>ESTRATÉGICO</div>
+                  <p class="diag-desc">Posicionamento, canais, produto. Mapa de ação priorizado.</p>
+                  <a href="#contato" class="diag-cta">SOLICITAR →</a>
+                </div>
+                <div class="diag-card-bottom">
+                  <span class="diag-meta">3–4 SEMANAS</span>
+                  <span class="diag-num">02</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PANEL 2: PROJETOS ── -->
+        <div class="h-panel" id="panel-proj">
+          <div class="h-panel-inner">
+            <div class="h-panel-header">
+              <div>
+                <h3 class="h-panel-title">PROJETOS</h3>
+                <span class="h-panel-sub">O que entrego. Do site ao sistema.</span>
+              </div>
+              <span class="h-panel-counter">002 / 004</span>
+            </div>
+            <div class="proj-list">
+              <div class="proj-item">
+                <span class="proj-idx">01</span>
+                <div class="proj-name">SITE</div>
+                <span class="proj-tag">WEB</span>
+                <span class="proj-arrow">→</span>
+              </div>
+              <div class="proj-item">
+                <span class="proj-idx">02</span>
+                <div class="proj-name">DASH COM CRM</div>
+                <span class="proj-tag">PRODUTO DIGITAL</span>
+                <span class="proj-arrow">→</span>
+              </div>
+              <div class="proj-item">
+                <span class="proj-idx">03</span>
+                <div class="proj-name">DIAGNÓSTICO</div>
+                <span class="proj-tag">CONSULTORIA</span>
+                <span class="proj-arrow">→</span>
+              </div>
+              <div class="proj-item">
+                <span class="proj-idx">04</span>
+                <div class="proj-name">PROJETO INTEGRADO</div>
+                <span class="proj-tag">FULL STACK</span>
+                <span class="proj-arrow">→</span>
+              </div>
+              <div class="proj-item">
+                <span class="proj-idx">05</span>
+                <div class="proj-name">LANÇAMENTO</div>
+                <span class="proj-tag">ESTRATÉGIA</span>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PANEL 3: INTEGRADO ── -->
+        <div class="h-panel" id="panel-integ" style="position:relative;">
+          <div class="integ-inner">
+            <div class="integ-top">
+              <span class="integ-tag">CARRO-CHEFE</span>
+              <h3 class="integ-headline">PROJETO<br>INTEGRADO</h3>
+              <p class="integ-desc">
+                Da marca ao sistema. Do posicionamento ao primeiro cliente.
+              </p>
+            </div>
+            <div class="integ-bottom">
+              <div class="integ-includes">
+                <span class="integ-includes-label">O QUE INCLUI</span>
+                <span class="integ-include-item">Diagnóstico estratégico</span>
+                <span class="integ-include-item">Identidade e posicionamento</span>
+                <span class="integ-include-item">Site ou produto digital</span>
+                <span class="integ-include-item">Estrutura de captação</span>
+                <span class="integ-include-item">Ritual de acompanhamento</span>
+              </div>
+              <div class="integ-cta-wrap">
+                <a href="#contato" class="integ-cta">INICIAR PROJETO →</a>
+              </div>
+            </div>
+          </div>
+          <div class="integ-deco" aria-hidden="true">PI</div>
+        </div>
+
+        <!-- ── PANEL 4: ACOMPANHAMENTO ── -->
+        <div class="h-panel" id="panel-ret">
+          <div class="h-panel-inner">
+            <div class="h-panel-header">
+              <div>
+                <h3 class="h-panel-title">ACOMPANHAMENTO</h3>
+                <span class="h-panel-sub">Presença contínua. Resultado acumulado.</span>
+              </div>
+              <span class="h-panel-counter">004 / 004</span>
+            </div>
+            <div class="ret-grid">
+              <div class="ret-module">
+                <span class="ret-module-num">01</span>
+                <div class="ret-module-name">CONTEÚDO<br>ESTRATÉGICO</div>
+                <p class="ret-module-desc">Cada peça com propósito. Posicionamento ou captação.</p>
+              </div>
+              <div class="ret-module">
+                <span class="ret-module-num">02</span>
+                <div class="ret-module-name">TRÁFEGO<br>E MÍDIA</div>
+                <p class="ret-module-desc">Campanhas pagas com foco em CAC. Resultado, não relatório.</p>
+              </div>
+              <div class="ret-module">
+                <span class="ret-module-num">03</span>
+                <div class="ret-module-name">ANÁLISE<br>E DADOS</div>
+                <p class="ret-module-desc">Métricas para decidir, não para preencher reunião.</p>
+              </div>
+              <div class="ret-module">
+                <span class="ret-module-num">04</span>
+                <div class="ret-module-name">CRM<br>E OPERAÇÃO</div>
+                <p class="ret-module-desc">Automações e fluxos que funcionam enquanto você dorme.</p>
+              </div>
+            </div>
+            <div class="ret-bundle">
+              <div>
+                <div class="ret-bundle-label">ACOMPANHAMENTO COMPLETO</div>
+                <div class="ret-bundle-desc">4 módulos integrados. Ritual mensal.</div>
+              </div>
+              <div class="ret-bundle-arrow">→ CONVERSAR</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.h-track -->
+      <div id="h-progress-bar" aria-hidden="true">
+        <div id="h-progress-fill"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 04 — CASES
+    ================================================================ -->
+    <section id="cases" aria-label="Cases">
+      <div class="cases-header">
+        <h2 class="cases-title">CASES</h2>
+        <span class="opero-sub">EM BREVE</span>
+      </div>
+      <div class="cases-placeholder">
+        <span class="cases-placeholder-text">EM BREVE</span>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 05 — SOBRE
+    ================================================================ -->
+    <section id="sobre" aria-label="Sobre">
+      <div class="sobre-left">
+        <span class="sobre-eyebrow">SOBRE</span>
+        <h2 class="sobre-name">NICOLAS<br>CUNHA</h2>
+        <p class="sobre-bio">
+          Trabalho com founders que precisam de clareza antes de escalar.
+          Diagnóstico preciso, execução sem enrolação.
+          A IRBIS resolve o sistema — não só a criatividade.
+        </p>
+        <a href="manifesto.html" class="sobre-manifesto-link">→ LER O MANIFESTO</a>
+      </div>
+      <div class="sobre-right">
+        <span class="sobre-photo-placeholder">FOTO OPCIONAL</span>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 06 — CONTATO
+    ================================================================ -->
+    <section id="contato" aria-label="Contato">
+      <div class="contato-inner">
+        <div class="contato-left">
+          <h2 class="contato-heading">
+            VAMOS<br>CONSTRUIR<br><span class="acc">JUNTOS.</span>
+          </h2>
+          <div class="contato-links">
+            <a class="contato-link" href="mailto:contato@irbis.com.br">CONTATO@IRBIS.COM.BR</a>
+            <a class="contato-link wpp-link" href="https://wa.me/5519991591265" target="_blank" rel="noopener">
+              WHATSAPP →
+            </a>
+          </div>
+        </div>
+        <div class="contato-right">
+          <form>
+            <div class="form-row">
+              <label class="form-label" for="f-name">NOME / MARCA</label>
+              <input class="form-input" id="f-name" type="text" placeholder="Quem é você?" autocomplete="off">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="f-intent">O QUE PRECISA</label>
+              <input class="form-input" id="f-intent" type="text" placeholder="Diagnóstico, projeto, ou conversa?" autocomplete="off">
+            </div>
+            <button class="form-submit" type="submit">MANDA O SINAL</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer>
+    <div class="footer-logo">IRBIS</div>
+    <div class="footer-copy">©2026 IRBIS. TODOS OS DIREITOS RESERVADOS.</div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+  ================================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* ── LENIS ── */
+    const lenis = new Lenis({
+      lerp: 0.07,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.0,
+      smoothWheel: true,
+      anchors: true,
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+
+    /* ── CURSOR ── */
+    const curDot  = document.getElementById('cur-dot');
+    const curRing = document.getElementById('cur-ring');
+    let mX = window.innerWidth / 2, mY = window.innerHeight / 2;
+    let rX = mX, rY = mY;
+
+    document.addEventListener('mousemove', e => {
+      mX = e.clientX; mY = e.clientY;
+      curDot.style.left = mX + 'px';
+      curDot.style.top  = mY + 'px';
+    });
+    (function lerpRing() {
+      rX += (mX - rX) * 0.1;
+      rY += (mY - rY) * 0.1;
+      curRing.style.left = rX + 'px';
+      curRing.style.top  = rY + 'px';
+      requestAnimationFrame(lerpRing);
+    })();
+    document.querySelectorAll('a, button, .diag-card, .proj-item, .ret-module').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('is-hovering'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering'));
+    });
+
+    /* ── HORIZONTAL SCROLL (4 panels) ── */
+    (function () {
+      const track = document.getElementById('h-track');
+      if (!track || window.innerWidth < 768) return;
+
+      gsap.to(track, {
+        x: () => -(track.scrollWidth - window.innerWidth),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#horizontal-section',
+          pin: true,
+          scrub: 0.6,
+          snap: {
+            snapTo: value => {
+              const points = [0, 1/3, 2/3, 1];
+              return points.reduce((prev, curr) =>
+                Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev
+              );
+            },
+            duration: { min: 0.3, max: 0.6 },
+            delay: 0.05,
+            ease: 'power2.inOut',
+          },
+          end: () => '+=' + track.scrollWidth,
+          invalidateOnRefresh: true,
+          onUpdate(self) {
+            const fill = document.getElementById('h-progress-fill');
+            if (fill) fill.style.width = (self.progress * 100) + '%';
+          },
+          onEnter()     { gsap.to('body', { backgroundColor: '#18181B', duration: .4, overwrite: true }); },
+          onLeaveBack() { gsap.to('body', { backgroundColor: '#0C0C0E', duration: .4, overwrite: true }); },
+          onLeave()     { gsap.to('body', { backgroundColor: '#0C0C0E', duration: .4, overwrite: true }); },
+        },
+      });
+    })();
+
+    /* ── SCROLL REVEALS ── */
+    document.querySelectorAll('.reveal').forEach(el => {
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+        },
+      });
+    });
+
+    /* ── SECTION BG TRANSITIONS ── */
+    [
+      { sel: '#sobre',   color: '#0C0C0E' },
+      { sel: '#contato', color: '#18181B' },
+    ].forEach(({ sel, color }) => {
+      const el = document.querySelector(sel);
+      if (!el) return;
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 60%',
+        onEnter:     () => gsap.to('body', { backgroundColor: color, duration: .5, overwrite: true }),
+        onEnterBack: () => gsap.to('body', { backgroundColor: color, duration: .5, overwrite: true }),
+      });
+    });
+
+    /* ── HERO REVEAL ── */
+    gsap.timeline({ delay: .1 })
+      .from('.hero-label', { opacity: 0, y: 16, duration: .6, ease: 'power3.out' })
+      .from('.hero-title .line, .hero-title', { opacity: 0, y: 30, duration: .8, ease: 'power4.out', stagger: .12 }, '-=.3')
+      .from('.hero-bottom', { opacity: 0, y: 20, duration: .7, ease: 'power3.out' }, '-=.4');
+
+    /* ── RESIZE ── */
+    let rsTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(rsTimer);
+      rsTimer = setTimeout(() => ScrollTrigger.refresh(), 260);
+    });
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+  </script>
+</body>
+</html>
