@@ -136,7 +136,7 @@
       font-weight: 500;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: rgba(250,250,250,.65);
       transition: color .2s;
     }
     .nav-links a:hover { color: var(--text); }
@@ -163,6 +163,11 @@
       position: relative;
       overflow: hidden;
     }
+
+    .hero-label,
+    .hero-title,
+    .hero-bottom,
+    .hero-deco { position: relative; z-index: 2; }
 
     .hero-label {
       font-size: .6rem;
@@ -235,6 +240,15 @@
       pointer-events: none;
       user-select: none;
       z-index: 0;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, rgba(12,12,14,.75) 0%, transparent 100%);
+      z-index: 1;
+      pointer-events: none;
     }
     @media (max-width: 767px) {
       .hero-bg { object-position: 100% center; }
