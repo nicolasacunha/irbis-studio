@@ -65,13 +65,14 @@
     .case-hero-bg {
       position: absolute;
       inset: 0;
-      background: url('assets/case-capa.png') center center / cover no-repeat;
+      background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 35%, #16213e 65%, #0f0f14 100%);
     }
     .case-hero-bg::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(12,12,14,.55) 0%, rgba(12,12,14,.72) 100%);
+      bottom: 0; right: 0;
+      width: 60%; height: 75%;
+      background: radial-gradient(ellipse at 80% 90%, rgba(255,61,0,.15) 0%, transparent 60%);
     }
     .case-hero-ghost {
       position: absolute;
