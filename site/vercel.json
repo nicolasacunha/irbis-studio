@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
+    { "source": "/adash-demo",      "destination": "/adash-demo/index.html" },
+    { "source": "/adash/(.*)", "destination": "/cases-hub/adash/$1" },
+    { "source": "/adash",      "destination": "/cases-hub/adash/index.html" },
+    { "source": "/eforce/(.*)",       "destination": "/cases-hub/eforce/$1" },
+    { "source": "/eforce",            "destination": "/cases-hub/eforce/index.html" }
+  ]
+}

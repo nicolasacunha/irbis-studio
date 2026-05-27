@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/adash/(.*)", "destination": "/adash/$1" },
+    { "source": "/adash",      "destination": "/adash/index.html" },
+    { "source": "/eforce/(.*)", "destination": "/eforce/$1" },
+    { "source": "/eforce",      "destination": "/eforce/index.html" }
+  ]
+}

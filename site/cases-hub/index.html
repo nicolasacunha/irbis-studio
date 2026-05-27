@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cases — IRBIS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0C0C0E;
+      --text:   #FAFAF9;
+      --muted:  #71717A;
+      --accent: #FF3D00;
+      --border: rgba(255,255,255,.06);
+      --f: 'Sora', sans-serif;
+    }
+
+    html { background: var(--bg); color: var(--text); font-family: var(--f); }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3rem;
+      background: rgba(12,12,14,.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 1.3rem; font-weight: 800;
+      letter-spacing: -.05em; text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      padding: 14rem 3rem 5rem;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .hero-label {
+      font-size: .6rem; font-weight: 600; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .hero-title {
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      font-weight: 800; line-height: .92;
+      letter-spacing: -.04em; text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+    .hero-title span { color: var(--accent); }
+    .hero-sub {
+      font-size: .85rem; font-weight: 400; color: var(--muted);
+      max-width: 420px; line-height: 1.7;
+    }
+
+    /* CASES LIST */
+    .cases {
+      flex: 1;
+      padding: 2rem 3rem 6rem;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .cases-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+
+    .case-item {
+      display: flex; align-items: center; gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: padding-left .3s ease;
+    }
+    .case-item::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 0;
+      background: var(--accent);
+      opacity: .06;
+      transition: width .4s ease;
+    }
+    .case-item:hover::before { width: 100%; }
+    .case-item:hover { padding-left: 1rem; }
+    .case-item:hover .case-arrow { transform: translateX(6px); color: var(--accent); }
+
+    .case-idx {
+      font-size: .6rem; font-weight: 700; letter-spacing: .2em;
+      color: var(--accent); min-width: 2.5rem;
+    }
+    .case-body { flex: 1; }
+    .case-name {
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 800; letter-spacing: -.03em;
+      text-transform: uppercase; margin-bottom: .4rem;
+    }
+    .case-meta {
+      font-size: .6rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .case-year {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em;
+      color: var(--muted); min-width: 3rem; text-align: right;
+    }
+    .case-arrow {
+      transition: transform .3s ease, color .2s;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-brand { font-size: .6rem; font-weight: 700; letter-spacing: .2em; color: var(--muted); }
+    .footer-link {
+      font-size: .6rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color .2s;
+    }
+    .footer-link:hover { color: var(--accent); }
+
+    @media (max-width: 767px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .hero { padding: 10rem 1.5rem 3rem; }
+      .cases { padding: 1rem 1.5rem 4rem; }
+      footer { padding: 1.5rem; }
+      .case-year { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="https://irbis.com.br">IRBIS<span>.</span></a>
+    <a class="nav-back" href="https://irbis.com.br">← Voltar ao site</a>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-label">Portfólio · Trabalhos selecionados</p>
+    <h1 class="hero-title">O trabalho<br><span>fala.</span></h1>
+    <p class="hero-sub">Execução técnica que transforma marcas em dominância visual. Cada projeto, uma prova.</p>
+  </div>
+
+  <section class="cases">
+    <hr class="cases-divider">
+
+    <a class="case-item" href="/eforce">
+      <span class="case-idx">01</span>
+      <div class="case-body">
+        <h2 class="case-name">Eforce Drums</h2>
+        <span class="case-meta">Webdesign · Motion</span>
+      </div>
+      <span class="case-year">2026</span>
+      <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+    <a class="case-item" href="/adash">
+      <span class="case-idx">02</span>
+      <div class="case-body">
+        <h2 class="case-name">ADASH</h2>
+        <span class="case-meta">Web3 · Dashboard · Motion</span>
+      </div>
+      <span class="case-year">2026</span>
+      <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+  </section>
+
+  <footer>
+    <span class="footer-brand">©2026 IRBIS ESTÚDIO DIGITAL</span>
+    <a class="footer-link" href="https://irbis.com.br">irbis.com.br</a>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // --- Word split for .hero-title ---
+      const heroTitle = document.querySelector('.hero-title');
+      const lines = heroTitle.innerHTML.split(/<br\s*\/?>/i);
+      heroTitle.innerHTML = lines.map(line => {
+        const words = line.trim().split(/\s+/);
+        return words.map(word =>
+          `<span class="word" style="display:inline-block;overflow:hidden"><span class="word-inner" style="display:inline-block">${word}</span></span>`
+        ).join(' ');
+      }).join('<br>');
+
+      // --- Set initial states ---
+      gsap.set('nav', { opacity: 0, y: -20 });
+      gsap.set('.hero-label', { opacity: 0, y: 20 });
+      gsap.set('.word-inner', { y: '110%' });
+      gsap.set('.hero-sub', { opacity: 0, y: 20 });
+      gsap.set('.case-item', { opacity: 0, y: 30 });
+      gsap.set('footer', { opacity: 0, y: 20 });
+
+      // --- Timeline: nav → hero-label → title words → hero-sub ---
+      const tl = gsap.timeline();
+
+      tl.to('nav', {
+        opacity: 1, y: 0,
+        duration: 0.6, ease: 'power3.out'
+      })
+      .to('.hero-label', {
+        opacity: 1, y: 0,
+        duration: 0.5, ease: 'power3.out'
+      }, 0.3)
+      .to('.word-inner', {
+        y: '0%',
+        duration: 0.7, ease: 'power4.out',
+        stagger: 0.07
+      }, 0.45)
+      .to('.hero-sub', {
+        opacity: 1, y: 0,
+        duration: 0.6, ease: 'power3.out'
+      }, 0.8);
+
+      // --- Case items on scroll ---
+      gsap.to('.case-item', {
+        opacity: 1, y: 0,
+        duration: 0.6, ease: 'power3.out',
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: '.cases',
+          start: 'top 85%'
+        }
+      });
+
+      // --- Footer on scroll ---
+      gsap.to('footer', {
+        opacity: 1, y: 0,
+        duration: 0.5, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: 'footer',
+          start: 'top 85%'
+        }
+      });
+    }
+  </script>
+</body>
+</html>

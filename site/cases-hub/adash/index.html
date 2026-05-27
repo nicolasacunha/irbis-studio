@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADASH — IRBIS Cases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0C0C0E; --text: #FAFAFA; --muted: #71717A;
+      --accent: #FF3D00; --border: rgba(255,255,255,.06);
+      --f: 'Sora', sans-serif;
+    }
+    html { background: var(--bg); color: var(--text); font-family: var(--f); scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 3rem;
+      background: rgba(12,12,14,.9); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-size: 1.2rem; font-weight: 800; letter-spacing: -.05em; }
+    .nav-logo span { color: var(--accent); }
+    .nav-back { font-size: .6rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: .5rem; transition: color .2s; }
+    .nav-back:hover { color: var(--text); }
+
+    /* HERO */
+    .hero { padding: 8rem 3rem 5rem; max-width: 1200px; margin: 0 auto; }
+    .hero-tag { display: inline-flex; align-items: center; gap: .75rem; margin-bottom: 2rem; }
+    .tag { font-size: .55rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; padding: .4rem .9rem; border: 1px solid rgba(255,255,255,.12); color: var(--muted); }
+    .tag-accent { color: var(--accent); border-color: rgba(255,61,0,.3); }
+    .hero-title { font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 800; letter-spacing: -.04em; line-height: .9; text-transform: uppercase; margin-bottom: 2rem; }
+    .hero-summary { font-size: 1rem; color: var(--muted); max-width: 560px; line-height: 1.7; }
+
+    /* CASE BODY */
+    .case-body {
+      max-width: 1200px; margin: 0 auto;
+      padding: 4rem 3rem 0;
+      display: grid; grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    @media (min-width: 900px) {
+      .case-body { grid-template-columns: 60% 40%; gap: 5rem; align-items: start; overflow: visible; }
+      .sticky-col { position: sticky; top: 7rem; align-self: start; }
+    }
+
+    /* CONTENT BLOCKS */
+    .content-blocks { display: flex; flex-direction: column; gap: 3.5rem; }
+    .block {}
+    .block-label { font-size: .55rem; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .block-title { font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; margin-bottom: 1rem; line-height: 1.2; }
+    .block-body { font-size: .9rem; color: var(--muted); line-height: 1.8; }
+    .block-body strong { color: var(--text); font-weight: 600; }
+
+    /* STICKY PREVIEW */
+    .preview-wrap { display: flex; flex-direction: column; gap: 1.5rem; }
+    .notebook {
+      width: 100%;
+      background: #1a1a1f;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 10px 10px 0;
+      box-shadow: 0 24px 60px rgba(0,0,0,.6);
+    }
+    .notebook-bar {
+      display: flex; align-items: center; gap: 6px;
+      padding-bottom: 8px;
+    }
+    .nb-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.12); }
+    .preview-frame {
+      width: 100%; aspect-ratio: 16/10;
+      background: #111114;
+      overflow: hidden; position: relative;
+      border-radius: 4px 4px 0 0;
+    }
+    .notebook-base {
+      height: 14px; background: #111114;
+      border-radius: 0 0 8px 8px;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+    .preview-frame iframe { width: 200%; height: 200%; border: none; transform: scale(.5); transform-origin: top left; }
+    .live-btn {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      color: #fff; background: var(--accent); padding: .9rem 1.75rem;
+      transition: box-shadow .2s, letter-spacing .3s;
+    }
+    .live-btn:hover { box-shadow: 0 8px 32px rgba(255,61,0,.4); letter-spacing: .22em; }
+
+    /* INFO STRIP */
+    .info-strip {
+      max-width: 1200px; margin: 5rem auto 0; padding: 0 3rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .info-item { padding: 2rem 0; border-right: 1px solid var(--border); padding-right: 2rem; margin-right: 2rem; }
+    .info-item:last-child { border-right: none; }
+    .info-label { font-size: .5rem; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
+    .info-value { font-size: .9rem; font-weight: 600; }
+
+    /* NEXT */
+    .next-case {
+      max-width: 1200px; margin: 6rem auto; padding: 0 3rem 4rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;
+      border-top: 1px solid var(--border); padding-top: 3rem;
+    }
+    .next-label { font-size: .55rem; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; color: var(--muted); margin-bottom: .75rem; }
+    .next-title { font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; text-transform: uppercase; }
+    .next-btn { display: inline-flex; align-items: center; gap: .6rem; font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(255,61,0,.3); padding: .9rem 1.75rem; transition: background .2s, color .2s; }
+    .next-btn:hover { background: var(--accent); color: #fff; }
+
+    @media (max-width: 767px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 6rem 1.5rem 3rem; }
+      .case-body { padding: 2rem 1.5rem 0; }
+      .info-strip { padding: 0 1.5rem; }
+      .next-case { padding: 2rem 1.5rem 3rem; margin-top: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="https://irbis.com.br">IRBIS<span>.</span></a>
+    <a class="nav-back" href="/">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 12H4M4 12L11 5M4 12L11 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Todos os cases
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-tag">
+      <span class="tag tag-accent">02</span>
+      <span class="tag">Dashboard · SaaS · Motion</span>
+      <span class="tag">2026</span>
+    </div>
+    <h1 class="hero-title">ADASH</h1>
+    <p class="hero-summary">Plataforma de operações de marketing e vendas — Meta Ads, Google Ads, CRM, conteúdo e automações em um único dashboard construído sob medida.</p>
+  </header>
+
+  <!-- CASE BODY -->
+  <div class="case-body">
+
+    <!-- LEFT: CONTENT -->
+    <div class="content-blocks">
+
+      <div class="block">
+        <p class="block-label">Problema</p>
+        <h2 class="block-title">Quatro ferramentas. Nenhuma visão unificada.</h2>
+        <p class="block-body">O cliente gerenciava toda a operação de marketing em planilhas e plataformas separadas — Meta Ads em um lugar, CRM em outro, conteúdo no Google Drive, relatórios no Excel. <strong>A tomada de decisão era lenta, os dados chegavam atrasados e o time gastava horas toda semana só para consolidar informação.</strong></p>
+      </div>
+
+      <div class="block">
+        <p class="block-label">Abordagem</p>
+        <h2 class="block-title">Um produto, não uma integração.</h2>
+        <p class="block-body">A tentação seria conectar APIs e montar um painel genérico. Mas <strong>o que o cliente precisava era de um produto pensado para o fluxo dele</strong> — com nomenclatura, estrutura e hierarquia que fizessem sentido para o time. Cada módulo foi desenhado a partir do jeito que eles realmente trabalham.</p>
+      </div>
+
+      <div class="block">
+        <p class="block-label">Solução</p>
+        <h2 class="block-title">Dashboard full-stack com dados reais em tempo real.</h2>
+        <p class="block-body">Plataforma React com integração direta às APIs do Meta Ads e Google Ads, CRM em kanban, calendário de conteúdo, módulo de treinamento e automações com agentes de IA. <strong>Login seguro por cliente, tema claro/escuro, geração de relatórios em PDF</strong> e um agente de IA que responde perguntas sobre a performance da conta.</p>
+      </div>
+
+      <div class="block">
+        <p class="block-label">Resultado</p>
+        <h2 class="block-title">Toda a operação em um lugar. Decisões em minutos.</h2>
+        <p class="block-body">O time reduziu o tempo de análise semanal de horas para menos de 20 minutos. O cliente entra no ADASH e tem <strong>visão completa do funil, dos investimentos, do pipeline de vendas e do calendário de conteúdo</strong> — sem precisar abrir outra ferramenta.</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: STICKY PREVIEW -->
+    <div class="sticky-col">
+      <div class="preview-wrap">
+        <div class="notebook">
+          <div class="notebook-bar">
+            <div class="nb-dot"></div><div class="nb-dot"></div><div class="nb-dot"></div>
+          </div>
+          <div class="preview-frame">
+            <iframe src="https://irbis.com.br/adash-demo" title="ADASH Dashboard" loading="lazy" scrolling="no"></iframe>
+          </div>
+          <div class="notebook-base"></div>
+        </div>
+        <a class="live-btn" href="https://irbis.com.br/adash-demo" target="_blank" rel="noopener">
+          Ver projeto ao vivo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    <div class="info-item"><p class="info-label">Cliente</p><p class="info-value">Confidencial</p></div>
+    <div class="info-item"><p class="info-label">Serviços</p><p class="info-value">Product Design · Dev · IA</p></div>
+    <div class="info-item"><p class="info-label">Tecnologia</p><p class="info-value">React · TypeScript · Vite</p></div>
+    <div class="info-item"><p class="info-label">Integrações</p><p class="info-value">Meta Ads · Google Ads · Claude AI</p></div>
+    <div class="info-item"><p class="info-label">Entrega</p><p class="info-value">2026</p></div>
+  </div>
+
+  <!-- NEXT -->
+  <div class="next-case">
+    <div>
+      <p class="next-label">Próximo case</p>
+      <h3 class="next-title">EFORCE</h3>
+    </div>
+    <a class="next-btn" href="/eforce">
+      Ver case →
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.set('nav', { opacity: 0, y: -30 });
+      gsap.set('.hero-tag .tag', { opacity: 0, y: 20 });
+      gsap.set('.hero-summary', { opacity: 0, y: 20 });
+      gsap.set('.block', { opacity: 0, y: 30 });
+      gsap.set('.notebook', { opacity: 0, scale: 0.94 });
+      gsap.set('.live-btn', { opacity: 0, y: 15 });
+      gsap.set('.info-item', { opacity: 0, y: 20 });
+      gsap.set('.next-case > div, .next-case > a', { opacity: 0, y: 20 });
+
+      gsap.to('nav', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' });
+
+      gsap.to('.hero-tag .tag', {
+        opacity: 1, y: 0, duration: 0.5, ease: 'power3.out',
+        stagger: 0.08, delay: 0.2
+      });
+
+      (function splitHeroTitle() {
+        const h1 = document.querySelector('.hero-title');
+        if (!h1) return;
+        const html = h1.innerHTML;
+        const parts = html.split(/<br\s*\/?>/i);
+        h1.innerHTML = parts.map(t =>
+          `<span style="display:block;overflow:hidden"><span class="line-inner" style="display:block">${t}</span></span>`
+        ).join('');
+        gsap.set('.line-inner', { y: '105%' });
+        gsap.to('.line-inner', {
+          y: '0%', duration: 0.75, ease: 'power4.out',
+          stagger: 0.1, delay: 0.35
+        });
+      })();
+
+      gsap.to('.hero-summary', {
+        opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 0.7
+      });
+
+      document.querySelectorAll('.block').forEach(function(el) {
+        gsap.to(el, {
+          opacity: 1, y: 0, duration: 0.65, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+        });
+      });
+
+      gsap.to('.notebook', {
+        opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out',
+        scrollTrigger: { trigger: '.sticky-col', start: 'top 80%', once: true }
+      });
+
+      gsap.to('.live-btn', {
+        opacity: 1, y: 0, duration: 0.5, ease: 'power3.out',
+        scrollTrigger: { trigger: '.sticky-col', start: 'top 80%', once: true },
+        delay: 0.15
+      });
+
+      gsap.to('.info-item', {
+        opacity: 1, y: 0, duration: 0.5, ease: 'power3.out',
+        stagger: 0.07,
+        scrollTrigger: { trigger: '.info-strip', start: 'top 85%', once: true }
+      });
+
+      gsap.to('.next-case > div, .next-case > a', {
+        opacity: 1, y: 0, duration: 0.6, ease: 'power3.out',
+        stagger: 0.1,
+        scrollTrigger: { trigger: '.next-case', start: 'top 85%', once: true }
+      });
+    }
+  </script>
+
+</body>
+</html>

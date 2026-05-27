@@ -708,15 +708,9 @@
     }
 
     /* ================================================================
-       SECTION 04 — CASES (PLACEHOLDER)
+       SECTION 04 — CASES
     ================================================================ */
-    #cases {
-      padding: var(--sp-2xl) var(--sp-xl);
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    #cases { padding: var(--sp-2xl) var(--sp-xl); }
     .cases-header {
       display: flex;
       justify-content: space-between;
@@ -731,22 +725,147 @@
       letter-spacing: -.03em;
       text-transform: uppercase;
     }
-    .cases-placeholder {
+    .cases-tagline {
+      font-size: .65rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: .35rem;
+    }
+    .cases-ver-todos {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--s2);
+      padding-bottom: .15rem;
+      transition: color .2s, border-color .2s;
+    }
+    .cases-ver-todos:hover { color: var(--accent); border-color: var(--accent); }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+    }
+    .case-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      background: var(--s1);
+      aspect-ratio: 16 / 10;
+    }
+    .case-card:first-child {
+      grid-column: span 2;
+      aspect-ratio: 21 / 9;
+    }
+    .case-bg {
+      position: absolute;
+      inset: 0;
+      transition: transform .6s ease;
+    }
+    .case-card:hover .case-bg { transform: scale(1.04); }
+    .case-bg-eforce {
+      background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 35%, #16213e 65%, #0f0f14 100%);
+    }
+    .case-bg-eforce::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 55%; height: 80%;
+      background: radial-gradient(ellipse at 80% 90%, rgba(255,61,0,.12) 0%, transparent 65%);
+    }
+    .case-bg-adash {
+      background: linear-gradient(135deg, #0f0f0a 0%, #1c1a0f 40%, #201d10 70%, #0f0f0a 100%);
+    }
+    .case-bg-adash::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 60%; height: 60%;
+      background: radial-gradient(ellipse at 70% 20%, rgba(255,140,0,.10) 0%, transparent 65%);
+    }
+    .case-ghost {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 260px;
-      border: 1px dashed var(--s2);
-      flex-direction: column;
-      gap: var(--sp-sm);
-    }
-    .cases-placeholder-text {
-      font-size: .65rem;
+      pointer-events: none;
+      font-size: clamp(5rem, 14vw, 12rem);
       font-weight: 800;
-      letter-spacing: .2em;
+      letter-spacing: -.08em;
       text-transform: uppercase;
-      color: #f59e0b;
+      color: rgba(250,250,250,.04);
+      user-select: none;
+      line-height: 1;
     }
+    .case-card:first-child .case-ghost { font-size: clamp(8rem, 18vw, 18rem); }
+    .case-top-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(to bottom, rgba(12,12,14,.75) 0%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+    }
+    .case-cat {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .case-yr {
+      font-size: .52rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      color: rgba(250,250,250,.4);
+    }
+    .case-bottom-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.75rem 2rem;
+      background: linear-gradient(to top, rgba(12,12,14,.9) 0%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      z-index: 2;
+    }
+    .case-n {
+      font-size: clamp(1.6rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+    .case-card:not(:first-child) .case-n { font-size: clamp(1.2rem, 2.5vw, 2rem); }
+    .case-service {
+      font-size: .55rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .case-go {
+      font-size: 1.1rem;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: color .25s, transform .25s;
+    }
+    .case-card:hover .case-go { color: var(--accent); transform: translate(5px, -5px); }
+    .case-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      transition: border-color .3s;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .case-card:hover::after { border-color: rgba(255,61,0,.25); }
 
     /* ================================================================
        SECTION 05 — SOBRE
@@ -951,6 +1070,8 @@
       .diag-grid { grid-template-columns: 1fr; }
       .ret-grid { grid-template-columns: 1fr 1fr; }
 
+      .cases-grid { grid-template-columns: 1fr; }
+      .case-card:first-child { grid-column: span 1; aspect-ratio: 16/10; }
       #sobre { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
       .sobre-right { display: none; }
       #contato { padding: 4rem 1.5rem; }
@@ -993,16 +1114,16 @@
          SECTION 01 — HERO
     ================================================================ -->
     <section id="hero" aria-label="Hero">
-      <img class="hero-bg" src="Design/mascote/rascunhos/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true">
+      <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true">
       <div class="hero-deco" aria-hidden="true">IB</div>
 
       <h1 class="hero-title">
-        Produto digital<br>que gera<br>crescimento<br><span class="acc">de verdade.</span>
+        Design e<br>tecnologia<br>que destravam<br><span class="acc">crescimento.</span>
       </h1>
 
       <div class="hero-bottom">
         <p class="hero-desc">
-          Site, produto e operação com IA. Agilidade e eficiência em cada entrega.
+          Para negócios que querem crescer de verdade. Não só parecer que crescem.
         </p>
         <div class="hero-ctas">
           <a href="#contato" class="cta-primary">INICIAR PROJETO</a>
@@ -1017,12 +1138,48 @@
     ================================================================ -->
     <section id="cases" aria-label="Cases">
       <div class="cases-header">
-        <h2 class="cases-title">CASES</h2>
-        <a href="cases-hub/" class="cta-secondary">VER TODOS →</a>
+        <div>
+          <h2 class="cases-title">CASES</h2>
+          <p class="cases-tagline">Clientes reais. Desafios reais. Entregas que construímos juntos.</p>
+        </div>
+        <a href="cases-hub/" class="cases-ver-todos">Ver todos →</a>
       </div>
-      <a href="cases-hub/" class="cases-placeholder" style="text-decoration:none; cursor:pointer;">
-        <span class="cases-placeholder-text">VER CASES →</span>
-      </a>
+
+      <div class="cases-grid">
+
+        <a class="case-card" href="cases-hub/eforce/">
+          <div class="case-bg case-bg-eforce"></div>
+          <div class="case-ghost">EF</div>
+          <div class="case-top-bar">
+            <span class="case-cat">Webdesign · Motion</span>
+            <span class="case-yr">2026</span>
+          </div>
+          <div class="case-bottom-bar">
+            <div>
+              <div class="case-n">EForce Drums</div>
+              <div class="case-service">Site institucional · Odery Drums</div>
+            </div>
+            <span class="case-go">↗</span>
+          </div>
+        </a>
+
+        <a class="case-card" href="cases-hub/adash/">
+          <div class="case-bg case-bg-adash"></div>
+          <div class="case-ghost">AD</div>
+          <div class="case-top-bar">
+            <span class="case-cat">Web3 · Dashboard</span>
+            <span class="case-yr">2026</span>
+          </div>
+          <div class="case-bottom-bar">
+            <div>
+              <div class="case-n">Adash</div>
+              <div class="case-service">Produto digital · Analytics</div>
+            </div>
+            <span class="case-go">↗</span>
+          </div>
+        </a>
+
+      </div>
     </section>
 
     <!-- ================================================================
@@ -1237,8 +1394,9 @@
       <div class="contato-inner">
         <div class="contato-left">
           <h2 class="contato-heading">
-            VAMOS<br>CONSTRUIR<br><span class="acc">JUNTOS.</span>
+            SEU<br>PROJETO<br><span class="acc">TRAVOU?</span>
           </h2>
+          <p style="font-size:.8rem;font-weight:300;color:var(--muted);line-height:1.75;max-width:36ch;margin-bottom:var(--sp-lg)">Não precisa ter tudo pronto. Conta o que tá travando e a gente constrói junto.</p>
           <div class="contato-links">
             <a class="contato-link" href="mailto:contato@irbis.com.br">CONTATO@IRBIS.COM.BR</a>
             <a class="contato-link wpp-link" href="https://wa.me/5519991591265" target="_blank" rel="noopener">
