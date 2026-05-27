@@ -120,6 +120,11 @@
       align-items: center;
       padding: 0 3rem;
     }
+    .nav-links {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     .nav-logo {
       font-size: .75rem;
       font-weight: 800;
@@ -179,7 +184,7 @@
     }
 
     .hero-title {
-      font-size: clamp(3.5rem, 9vw, 8rem);
+      font-size: clamp(3rem, 7.65vw, 6.8rem);
       font-weight: 800;
       line-height: .95;
       letter-spacing: -.04em;
@@ -737,10 +742,10 @@
     }
     .cases-placeholder-text {
       font-size: .65rem;
-      font-weight: 600;
+      font-weight: 800;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: #f59e0b;
     }
 
     /* ================================================================
@@ -793,16 +798,16 @@
     .sobre-right {
       background: var(--s1);
       aspect-ratio: 4/5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
     }
-    .sobre-photo-placeholder {
-      font-size: .6rem;
-      font-weight: 600;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .sobre-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transform: scale(0.75);
+      transform-origin: center top;
     }
 
     /* ================================================================
@@ -972,12 +977,14 @@
   <nav>
     <div class="nav-logo">IRBIS</div>
     <ul class="nav-links">
-      <li><a href="#como-opero">COMO OPERO</a></li>
-      <li><a href="#horizontal-section">SERVIÇOS</a></li>
       <li><a href="#cases">CASES</a></li>
-      <li><a href="#sobre">SOBRE</a></li>
+      <li><a href="#horizontal-section">SERVIÇOS</a></li>
+      <li><a href="#como-opero">PROCESSO</a></li>
     </ul>
-    <a href="#contato" class="nav-cta">CONVERSAR</a>
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <a href="manifesto.html" style="font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.45rem .9rem;border-radius:2px;transition:background .15s,color .15s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">MANIFESTO</a>
+      <a href="#contato" class="nav-cta">INICIAR PROJETO</a>
+    </div>
   </nav>
 
   <main>
@@ -989,59 +996,33 @@
       <img class="hero-bg" src="Design/mascote/rascunhos/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true">
       <div class="hero-deco" aria-hidden="true">IB</div>
 
-      <span class="hero-label">ESTRATÉGIA · EXECUÇÃO</span>
-
       <h1 class="hero-title">
-        CLAREZA<br>ANTES.<br><span class="acc">RESULTADO</span><br>DEPOIS.
+        Produto digital<br>que gera<br>crescimento<br><span class="acc">de verdade.</span>
       </h1>
 
       <div class="hero-bottom">
         <p class="hero-desc">
-          Da estratégia ao ar. Sem agência no meio.
+          Site, produto e operação com IA. Agilidade e eficiência em cada entrega.
         </p>
         <div class="hero-ctas">
-          <a href="#contato" class="cta-primary">DIAGNÓSTICO</a>
-          <a href="#horizontal-section" class="cta-ghost">VER PROJETOS</a>
+          <a href="#contato" class="cta-primary">INICIAR PROJETO</a>
+          <a href="#cases" class="cta-ghost">VER CASES</a>
           <a href="https://wa.me/5519991591265" target="_blank" class="cta-ghost">CONVERSAR</a>
         </div>
       </div>
     </section>
 
     <!-- ================================================================
-         SECTION 02 — COMO OPERO
+         SECTION 02 — CASES
     ================================================================ -->
-    <section id="como-opero" aria-label="Como opero">
-      <div class="opero-header">
-        <h2 class="opero-title">COMO OPERO</h2>
-        <span class="opero-sub">PROCESSO // 5 FASES</span>
+    <section id="cases" aria-label="Cases">
+      <div class="cases-header">
+        <h2 class="cases-title">CASES</h2>
+        <a href="cases-hub/" class="cta-secondary">VER TODOS →</a>
       </div>
-      <div class="opero-list">
-        <div class="opero-item reveal">
-          <span class="opero-num">01</span>
-          <div class="opero-name">ESCUTA</div>
-          <p class="opero-desc">Entender o negócio antes de qualquer proposta.</p>
-        </div>
-        <div class="opero-item reveal">
-          <span class="opero-num">02</span>
-          <div class="opero-name">DIAGNÓSTICO</div>
-          <p class="opero-desc">Mapear o que está travando. Dados, não achismo.</p>
-        </div>
-        <div class="opero-item reveal">
-          <span class="opero-num">03</span>
-          <div class="opero-name">ESTRATÉGIA</div>
-          <p class="opero-desc">Decidir o que não fazer é tão importante quanto o que fazer.</p>
-        </div>
-        <div class="opero-item reveal">
-          <span class="opero-num">04</span>
-          <div class="opero-name">EXECUÇÃO</div>
-          <p class="opero-desc">Velocidade e precisão. Sem terceirização de responsabilidade.</p>
-        </div>
-        <div class="opero-item reveal">
-          <span class="opero-num">05</span>
-          <div class="opero-name">RITUAL</div>
-          <p class="opero-desc">Presença contínua para quem quer resultado acumulado.</p>
-        </div>
-      </div>
+      <a href="cases-hub/" class="cases-placeholder" style="text-decoration:none; cursor:pointer;">
+        <span class="cases-placeholder-text">VER CASES →</span>
+      </a>
     </section>
 
     <!-- ================================================================
@@ -1152,6 +1133,7 @@
                 <span class="integ-include-item">Diagnóstico estratégico</span>
                 <span class="integ-include-item">Identidade e posicionamento</span>
                 <span class="integ-include-item">Site ou produto digital</span>
+                <span class="integ-include-item">Automação e IA integrada</span>
                 <span class="integ-include-item">Estrutura de captação</span>
                 <span class="integ-include-item">Ritual de acompanhamento</span>
               </div>
@@ -1212,34 +1194,39 @@
     </section>
 
     <!-- ================================================================
-         SECTION 04 — CASES
+         SECTION 05 — COMO OPERO
     ================================================================ -->
-    <section id="cases" aria-label="Cases">
-      <div class="cases-header">
-        <h2 class="cases-title">CASES</h2>
-        <span class="opero-sub">EM BREVE</span>
+    <section id="como-opero" aria-label="Como opero">
+      <div class="opero-header">
+        <h2 class="opero-title">COMO OPERO</h2>
+        <span class="opero-sub">PROCESSO // 5 FASES</span>
       </div>
-      <div class="cases-placeholder">
-        <span class="cases-placeholder-text">EM BREVE</span>
-      </div>
-    </section>
-
-    <!-- ================================================================
-         SECTION 05 — SOBRE
-    ================================================================ -->
-    <section id="sobre" aria-label="Sobre">
-      <div class="sobre-left">
-        <span class="sobre-eyebrow">SOBRE</span>
-        <h2 class="sobre-name">NICOLAS<br>CUNHA</h2>
-        <p class="sobre-bio">
-          Trabalho com founders que precisam de clareza antes de escalar.
-          Diagnóstico preciso, execução sem enrolação.
-          A IRBIS resolve o sistema — não só a criatividade.
-        </p>
-        <a href="manifesto.html" class="sobre-manifesto-link">→ LER O MANIFESTO</a>
-      </div>
-      <div class="sobre-right">
-        <span class="sobre-photo-placeholder">FOTO OPCIONAL</span>
+      <div class="opero-list">
+        <div class="opero-item reveal">
+          <span class="opero-num">01</span>
+          <div class="opero-name">ESCUTA</div>
+          <p class="opero-desc">Entender o negócio antes de qualquer proposta.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">02</span>
+          <div class="opero-name">DIAGNÓSTICO</div>
+          <p class="opero-desc">Mapear o que está travando. Dados, não achismo.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">03</span>
+          <div class="opero-name">ESTRATÉGIA</div>
+          <p class="opero-desc">Decidir o que não fazer é tão importante quanto o que fazer.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">04</span>
+          <div class="opero-name">EXECUÇÃO</div>
+          <p class="opero-desc">Velocidade e precisão. Sem terceirização de responsabilidade.</p>
+        </div>
+        <div class="opero-item reveal">
+          <span class="opero-num">05</span>
+          <div class="opero-name">RITUAL</div>
+          <p class="opero-desc">Presença contínua para quem quer resultado acumulado.</p>
+        </div>
       </div>
     </section>
 
@@ -1260,7 +1247,7 @@
           </div>
         </div>
         <div class="contato-right">
-          <form>
+          <form id="contato-form">
             <div class="form-row">
               <label class="form-label" for="f-name">NOME / MARCA</label>
               <input class="form-input" id="f-name" type="text" placeholder="Quem é você?" autocomplete="off">
@@ -1271,6 +1258,15 @@
             </div>
             <button class="form-submit" type="submit">MANDA O SINAL</button>
           </form>
+          <script>
+            document.getElementById('contato-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              const nome = document.getElementById('f-name').value.trim();
+              const intent = document.getElementById('f-intent').value.trim();
+              const msg = encodeURIComponent(`Olá, me chamo ${nome || '(sem nome)'}. Preciso de: ${intent || '(sem descrição)'}`);
+              window.open(`https://wa.me/5519991591265?text=${msg}`, '_blank');
+            });
+          </script>
         </div>
       </div>
     </section>
@@ -1360,6 +1356,18 @@
             ScrollTrigger.refresh();
           }
         }, '-=0.1');
+    });
+
+    /* ── NAV ANCHOR LINKS → LENIS SCROLL ── */
+    document.querySelectorAll('nav a[href^="#"], nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        lenis.scrollTo(target, { duration: 1.2, easing: t => 1 - Math.pow(1 - t, 4) });
+      });
     });
 
     /* ── CURSOR ── */

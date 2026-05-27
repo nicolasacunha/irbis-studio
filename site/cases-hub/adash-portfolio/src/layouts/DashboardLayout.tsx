@@ -2,38 +2,20 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { PanelLeft, Sun, Moon } from 'lucide-react'
 import Sidebar from '@/components/Sidebar'
-import AIChat from '@/components/AIChat'
 import { useTheme } from '@/lib/ThemeContext'
-import { useIsMobile } from '@/hooks/useIsMobile'
 
 export default function DashboardLayout() {
-  const isMobile = useIsMobile()
-  const [sidebarOpen, setSidebarOpen] = useState(!isMobile)
-  const [chatOpen, setChatOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(true)
   const { theme, toggleTheme } = useTheme()
   const t = theme === 'light'
 
-  const handleToggle = () => setSidebarOpen(v => !v)
-
   return (
     <div style={{ minHeight: '100vh', display: 'flex', background: t ? '#F5F5F3' : '#0A0A0B' }}>
-      <Sidebar open={sidebarOpen} onToggle={handleToggle} onAgentClick={() => setChatOpen(v => !v)} agentActive={chatOpen} />
-      {chatOpen && <AIChat variant='floating' onClose={() => setChatOpen(false)} />}
-
-      {/* Mobile overlay backdrop */}
-      {isMobile && sidebarOpen && (
-        <div
-          onClick={() => setSidebarOpen(false)}
-          style={{
-            position: 'fixed', inset: 0, zIndex: 35,
-            background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(2px)',
-          }}
-        />
-      )}
+      <Sidebar open={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
 
       {/* Main area */}
       <div style={{
-        marginLeft: isMobile ? 0 : (sidebarOpen ? 260 : 0),
+        marginLeft: sidebarOpen ? 260 : 0,
         transition: 'margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0,
       }}>
@@ -41,12 +23,12 @@ export default function DashboardLayout() {
         <header style={{
           position: 'sticky', top: 0, zIndex: 30,
           height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: isMobile ? '0 16px' : '0 28px', borderBottom: `1px solid ${t ? '#E5E5E3' : '#1c1c22'}`,
+          padding: '0 28px', borderBottom: `1px solid ${t ? '#E5E5E3' : '#1c1c22'}`,
           background: t ? 'rgba(255,255,255,0.9)' : 'rgba(10,10,11,0.85)', backdropFilter: 'blur(12px)',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <button
-              onClick={handleToggle}
+              onClick={() => setSidebarOpen(!sidebarOpen)}
               style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 width: 34, height: 34, borderRadius: 8,
@@ -76,7 +58,7 @@ export default function DashboardLayout() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: 13, fontWeight: 500, color: t ? '#111111' : '#F0EDE8', lineHeight: 1.2 }}>Rafael</div>
+              <div style={{ fontSize: 13, fontWeight: 500, color: t ? '#111111' : '#F0EDE8', lineHeight: 1.2 }}>Arialdo</div>
               <div style={{ fontSize: 10, color: t ? '#9CA3AF' : '#55555e' }}>Admin</div>
             </div>
             <div style={{
@@ -94,7 +76,7 @@ export default function DashboardLayout() {
 
         {/* Content */}
         <main style={{
-          flex: 1, overflow: 'auto', padding: isMobile ? 16 : 32,
+          flex: 1, overflow: 'auto', padding: 32,
           background: t ? '#F5F5F3' : undefined,
         }}
           className={t ? undefined : 'mesh-gradient-1'}
