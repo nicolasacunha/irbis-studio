@@ -559,18 +559,9 @@
     }
 
     @media (max-width: 767px) {
-      /* Anatomia da marca: corta na proporção 3:2, sem overflow */
+      /* Anatomia da marca: oculta no mobile */
       .case-img-block:last-child {
-        overflow: hidden;
-        margin-top: 0;
-        margin-bottom: 0;
-        aspect-ratio: 3/2;
-      }
-      .case-img-block:last-child img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
+        display: none;
       }
 
       /* Hero meta empilha melhor */
