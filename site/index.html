@@ -3,9 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IRBIS | ESTÚDIO DIGITAL</title>
+  <title>IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais</title>
+  <meta name="description" content="Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa. Sem gerente, sem repasse, sem espera. Brasil.">
+  <link rel="canonical" href="https://irbis.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irbis.com.br/">
+  <meta property="og:title" content="IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais">
+  <meta property="og:description" content="Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa. Sem gerente, sem repasse, sem espera.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IRBIS Estúdio Digital">
+  <meta name="twitter:description" content="Webdesign, branding e sistemas digitais. Solo com IA. Fala direto com quem constrói.">
+  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
+
   <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <link rel="apple-touch-icon" href="Design/icone/favicon_true.png">
+  <meta name="theme-color" content="#0C0C0E">
+  <link rel="preload" as="image" href="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Schema: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://irbis.com.br/#organization",
+        "name": "IRBIS Estúdio Digital",
+        "url": "https://irbis.com.br",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://irbis.com.br/Design/icone/favicon_true.png"
+        },
+        "description": "Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa.",
+        "foundingDate": "2024",
+        "areaServed": "BR",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://wa.me/5519991591265",
+          "availableLanguage": "Portuguese"
+        },
+        "knowsAbout": ["Webdesign", "Branding", "Product Design", "Dashboard", "IA", "Estratégia Digital"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://irbis.com.br/#website",
+        "url": "https://irbis.com.br",
+        "name": "IRBIS Estúdio Digital",
+        "publisher": { "@id": "https://irbis.com.br/#organization" },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://irbis.com.br/#webpage",
+        "url": "https://irbis.com.br/",
+        "name": "IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais",
+        "description": "Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa.",
+        "isPartOf": { "@id": "https://irbis.com.br/#website" },
+        "about": { "@id": "https://irbis.com.br/#organization" },
+        "inLanguage": "pt-BR"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -47,6 +115,12 @@
     ::selection { background: var(--accent); color: var(--bg); }
     a { text-decoration: none; color: inherit; }
     button { font-family: var(--f); cursor: none; border: none; background: none; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .form-input:focus-visible { outline: none; }
 
     /* ================================================================
        INTRO CURTAIN
@@ -107,6 +181,29 @@
       transform: translate(-50%, -50%) scale(1.5);
       border-color: var(--accent);
     }
+    #cur-label {
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9999;
+      font-size: .5rem; font-weight: 800; letter-spacing: .22em;
+      color: var(--bg); text-transform: uppercase;
+      transform: translate(-50%, -50%);
+      opacity: 0; transition: opacity .18s;
+      white-space: nowrap;
+    }
+    body.is-case-hover #cur-label { opacity: 1; }
+    body.is-case-hover #cur-ring {
+      transform: translate(-50%, -50%) scale(3.8);
+      background: var(--accent); border-color: var(--accent);
+    }
+    body.is-case-hover #cur-dot { opacity: 0; }
+
+    /* ── GLOBAL POLISH ── */
+    ::selection { background: var(--accent); color: var(--bg); }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
     /* ================================================================
        NAV
@@ -167,6 +264,7 @@
       padding: 0 var(--sp-xl) var(--sp-xl);
       position: relative;
       overflow: hidden;
+      background-image: radial-gradient(ellipse 70% 60% at 65% 55%, rgba(255,61,0,.05) 0%, transparent 70%);
     }
 
     .hero-label,
@@ -184,7 +282,7 @@
     }
 
     .hero-title {
-      font-size: clamp(3rem, 7.65vw, 6.8rem);
+      font-size: clamp(3.5rem, 9vw, 8rem);
       font-weight: 800;
       line-height: .95;
       letter-spacing: -.04em;
@@ -234,7 +332,7 @@
       padding: .9rem 1.5rem;
       transition: border-color .2s;
     }
-    .cta-ghost:hover { border-color: rgba(250,250,250,.5); }
+    .cta-ghost:hover { border-color: rgba(250,250,250,.5); background: rgba(250,250,250,.04); }
 
     .hero-bg {
       position: absolute; inset: 0;
@@ -359,9 +457,11 @@
     }
     #h-progress-fill {
       height: 100%;
-      width: 0%;
+      width: 100%;
       background: var(--accent);
-      transition: width .1s linear;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .1s linear;
     }
 
     .h-track {
@@ -506,7 +606,6 @@
       justify-content: space-between;
       padding: 1.1rem 0;
       border-bottom: 1px solid var(--s2);
-      transition: padding-left .25s ease;
       position: relative;
       overflow: hidden;
     }
@@ -521,8 +620,8 @@
       z-index: 0;
     }
     .proj-item:hover::before { transform: scaleX(1); }
-    .proj-item:hover { padding-left: 1rem; }
-    .proj-item > * { position: relative; z-index: 1; }
+    .proj-item > * { position: relative; z-index: 1; transition: transform .25s ease; }
+    .proj-item:hover > * { transform: translateX(1rem); }
 
     .proj-idx {
       font-size: .55rem;
@@ -775,14 +874,13 @@
       background: linear-gradient(to bottom, rgba(12,12,14,.35) 0%, rgba(12,12,14,.6) 100%);
     }
     .case-bg-adash {
-      background: linear-gradient(135deg, #0f0f0a 0%, #1c1a0f 40%, #201d10 70%, #0f0f0a 100%);
+      background: url('cases-hub/adash/assets/ADASH-CAPA.jpg') center center / cover no-repeat;
     }
     .case-bg-adash::after {
       content: '';
       position: absolute;
-      top: 0; right: 0;
-      width: 60%; height: 60%;
-      background: radial-gradient(ellipse at 70% 20%, rgba(255,140,0,.10) 0%, transparent 65%);
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(12,12,14,.25) 0%, rgba(12,12,14,.55) 100%);
     }
     .case-ghost {
       position: absolute;
@@ -866,18 +964,147 @@
     }
     .case-card:hover::after { border-color: rgba(255,61,0,.25); }
 
-    /* ================================================================
-       SECTION 05 — SOBRE
+/* ================================================================
+       SOCIAL PROOF — NUMEROS
     ================================================================ */
-    #sobre {
+    #numeros {
       padding: var(--sp-2xl) var(--sp-xl);
+      border-top: 1px solid var(--s2);
+    }
+    .num-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--s2);
+      margin-bottom: var(--sp-xl);
+    }
+    .num-item {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      padding: var(--sp-xl) var(--sp-lg);
+      background: var(--bg);
+    }
+    .num-big {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1;
+      color: var(--text);
+    }
+    .num-big .acc { color: var(--accent); }
+    .num-label {
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 18ch;
+    }
+    .proof-quotes {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--sp-2xl);
-      align-items: start;
+      gap: 1px;
+      background: var(--s2);
     }
-    .sobre-left {}
-    .sobre-eyebrow {
+    .proof-quotes.proof-single {
+      grid-template-columns: 1fr;
+    }
+    .proof-quotes.proof-single .proof-text {
+      max-width: 72ch;
+    }
+    .proof-q {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--sp-lg);
+      padding: var(--sp-xl) var(--sp-lg);
+      background: var(--bg);
+    }
+    .proof-text {
+      font-size: clamp(.95rem, 1.5vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(250,250,250,.8);
+      max-width: 44ch;
+    }
+    .proof-from {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    @media (max-width: 900px) {
+      .num-grid { grid-template-columns: 1fr 1fr; }
+      .proof-quotes { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      .num-grid { grid-template-columns: 1fr 1fr; }
+      .num-item { padding: var(--sp-lg) var(--sp-md); }
+      .proof-q { padding: var(--sp-lg) var(--sp-md); }
+    }
+
+    /* ================================================================
+       CLIENTES MARQUEE
+    ================================================================ */
+    #clientes {
+      padding: 2rem 0;
+      border-top: 1px solid var(--s2);
+      border-bottom: 1px solid var(--s2);
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      width: max-content;
+      animation: marquee-scroll 22s linear infinite;
+    }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 0 2.5rem;
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .marquee-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    #clientes:hover .marquee-track { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation-play-state: paused; }
+    }
+
+    /* ================================================================
+       IA POSITIONING
+    ================================================================ */
+    #aumentado {
+      padding: var(--sp-2xl) var(--sp-xl);
+      border-top: 1px solid var(--s2);
+    }
+    .aumentado-inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-xl);
+    }
+    .aumentado-left {
+      position: static;
+    }
+    .aumentado-tag {
       font-size: .6rem;
       font-weight: 700;
       letter-spacing: .25em;
@@ -886,46 +1113,128 @@
       display: block;
       margin-bottom: var(--sp-md);
     }
-    .sobre-name {
-      font-size: clamp(2rem, 4vw, 3.5rem);
+    .aumentado-title {
+      font-size: clamp(4.5rem, 12vw, 12rem);
       font-weight: 800;
       letter-spacing: -.04em;
       text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: var(--sp-lg);
+      line-height: .88;
     }
-    .sobre-bio {
-      font-size: .9rem;
+    .aumentado-right {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-lg);
+      padding-top: var(--sp-lg);
+      border-top: 1px solid var(--s2);
+    }
+    .aumentado-block {
+      border-bottom: 1px solid var(--s2);
+      padding-bottom: var(--sp-lg);
+    }
+    .aumentado-block:last-child { border-bottom: none; padding-bottom: 0; }
+    .aumentado-num {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: .5rem;
+    }
+    .aumentado-block-title {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+      margin-bottom: .6rem;
+    }
+    .aumentado-block-desc {
+      font-size: .8rem;
       font-weight: 300;
       color: var(--muted);
       line-height: 1.75;
-      max-width: 52ch;
-      margin-bottom: var(--sp-lg);
+      max-width: 48ch;
     }
-    .sobre-manifesto-link {
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: .18em;
+
+    /* ================================================================
+       FAQ
+    ================================================================ */
+    #faq {
+      padding: var(--sp-2xl) var(--sp-xl);
+      border-top: 1px solid var(--s2);
+    }
+    .faq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: var(--sp-xl);
+    }
+    .faq-title {
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
       text-transform: uppercase;
-      color: var(--text);
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: .2rem;
-      transition: color .2s;
     }
-    .sobre-manifesto-link:hover { color: var(--accent); }
-    .sobre-right {
-      background: var(--s1);
-      aspect-ratio: 4/5;
+    .faq-count {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      color: var(--muted);
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--s2);
       overflow: hidden;
     }
-    .sobre-photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transform: scale(0.75);
-      transform-origin: center top;
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      font-size: clamp(.85rem, 1.5vw, 1.05rem);
+      font-weight: 600;
+      letter-spacing: -.02em;
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      position: relative;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: currentColor;
+      border-radius: 1px;
+      transition: transform .35s ease, opacity .2s;
+    }
+    .faq-icon::before { width: 100%; height: 1.5px; top: 50%; left: 0; transform: translateY(-50%); }
+    .faq-icon::after  { width: 1.5px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+    .faq-item.is-open .faq-icon::after { transform: translateX(-50%) rotate(90deg); opacity: 0; }
+    .faq-item.is-open .faq-q { color: var(--text); }
+    .faq-item.is-open .faq-icon { color: var(--accent); }
+    .faq-a {
+      height: 0;
+      overflow: hidden;
+    }
+    .faq-a-inner {
+      padding-bottom: 1.5rem;
+      font-size: .85rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 70ch;
+    }
+
+    @media (max-width: 767px) {
+      .aumentado-right { grid-template-columns: 1fr; gap: var(--sp-lg); }
+      #faq, #aumentado { padding: 3rem 1.5rem; }
+      #clientes { padding: 1.5rem 0; }
     }
 
     /* ================================================================
@@ -1025,24 +1334,78 @@
        FOOTER
     ================================================================ */
     footer {
-      padding: var(--sp-lg) var(--sp-xl);
-      display: flex;
-      justify-content: space-between;
+      padding: var(--sp-xl) var(--sp-xl);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
+      gap: var(--sp-xl);
       border-top: 1px solid var(--s2);
     }
+    .footer-left { display: flex; flex-direction: column; gap: .3rem; }
     .footer-logo {
       font-size: .75rem;
       font-weight: 800;
       letter-spacing: .18em;
     }
-    .footer-copy {
-      font-size: .55rem;
+    .footer-tagline {
+      font-size: .5rem;
       font-weight: 400;
       letter-spacing: .12em;
       color: var(--muted);
       text-transform: uppercase;
     }
+    .footer-nav {
+      display: flex;
+      gap: var(--sp-lg);
+    }
+    .footer-nav a {
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .footer-nav a:hover { color: var(--text); }
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      text-align: right;
+    }
+    .footer-location,
+    .footer-copy {
+      font-size: .5rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ── SCROLL TO TOP ── */
+    #scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      left: var(--sp-xl);
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--s2);
+      background: none;
+      color: var(--muted);
+      font-size: .7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s, transform .3s, border-color .2s, color .2s;
+      pointer-events: none;
+      z-index: 90;
+    }
+    #scroll-top.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+    #scroll-top:hover { border-color: var(--accent); color: var(--accent); }
+    @media (max-width: 767px) { #scroll-top { display: none; } }
 
     /* ================================================================
        MOBILE (< 768px)
@@ -1098,11 +1461,7 @@
       .opero-list { grid-template-columns: 1fr; gap: 0; }
       .opero-item { border-right: none; border-bottom: 1px solid var(--s2); padding: 1.5rem 0 !important; }
 
-      /* ── SOBRE ── */
-      #sobre { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
-      .sobre-right { display: none; }
-
-      /* ── CONTATO ── */
+/* ── CONTATO ── */
       #contato { padding: 4rem 1.5rem; }
       .contato-inner { grid-template-columns: 1fr; }
       .contato-right { display: none; }
@@ -1125,7 +1484,9 @@
       .h-scroll-hint { display: none; }
 
       /* ── FOOTER ── */
-      footer { padding: 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
+      footer { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: var(--sp-lg); }
+      .footer-nav { flex-wrap: wrap; gap: var(--sp-md); }
+      .footer-right { text-align: left; }
     }
 
     /* ================================================================
@@ -1199,11 +1560,15 @@
       display: flex;
       align-items: center;
       gap: .5rem;
-      font-size: .6rem;
+      font-size: .65rem;
       font-weight: 600;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: rgba(250,250,250,.55);
+      background: rgba(12,12,14,.55);
+      padding: .4rem .85rem;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
       opacity: 1;
       transition: opacity .5s;
       pointer-events: none;
@@ -1219,10 +1584,20 @@
       50%       { transform: translateX(4px); opacity: 1; }
     }
 
-    /* ================================================================
+/* ================================================================
        REVEAL INITIAL STATES (GSAP controls opacity/y)
     ================================================================ */
     .reveal { opacity: 0; transform: translateY(24px); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .h-scroll-hint-arrow { animation: none; }
+    }
   </style>
 </head>
 
@@ -1233,6 +1608,7 @@
   </div>
   <div id="cur-dot"></div>
   <div id="cur-ring"></div>
+  <div id="cur-label">VER</div>
 
   <!-- ── NAV ── -->
   <nav>
@@ -1255,7 +1631,9 @@
       <a href="#cases">Cases</a>
       <a href="#horizontal-section">Serviços</a>
       <a href="#como-opero">Processo</a>
+      <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
+      <a href="sobre.html">Sobre</a>
     </nav>
     <p class="mobile-nav-tagline">IRBIS · ESTÚDIO DIGITAL</p>
   </div>
@@ -1266,21 +1644,22 @@
          SECTION 01 — HERO
     ================================================================ -->
     <section id="hero" aria-label="Hero">
-      <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true">
+      <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
       <div class="hero-deco" aria-hidden="true">IB</div>
 
+      <p class="hero-label">Para founders que não têm tempo pra esperar</p>
+
       <h1 class="hero-title">
-        Design e<br>tecnologia<br>que destravam<br><span class="acc">crescimento.</span>
+        O estúdio que<br>entrega como<br><span class="acc">agência, sem ser.</span>
       </h1>
 
       <div class="hero-bottom">
         <p class="hero-desc">
-          Para negócios que querem crescer de verdade. Não só parecer que crescem.
+          Do briefing ao ar em 3 semanas. Sites, marcas e sistemas digitais entregues por quem pensa e executa — sem gerente, sem repasse.
         </p>
         <div class="hero-ctas">
           <a href="#contato" class="cta-primary">INICIAR PROJETO</a>
           <a href="#cases" class="cta-ghost">VER CASES</a>
-          <a href="https://wa.me/5519991591265" target="_blank" class="cta-ghost">CONVERSAR</a>
         </div>
       </div>
     </section>
@@ -1292,7 +1671,7 @@
       <div class="cases-header">
         <div>
           <h2 class="cases-title">CASES</h2>
-          <p class="cases-tagline">Clientes reais. Desafios reais. Entregas que construímos juntos.</p>
+          <p class="cases-tagline">Resultado real, prazo real. Do brief ao ar, sem surpresa no meio do caminho.</p>
         </div>
         <a href="cases-hub/" class="cases-ver-todos">Ver todos →</a>
       </div>
@@ -1319,7 +1698,7 @@
           <div class="case-bg case-bg-adash"></div>
           <div class="case-ghost">AD</div>
           <div class="case-top-bar">
-            <span class="case-cat">Web3 · Dashboard</span>
+            <span class="case-cat">SaaS · Analytics</span>
             <span class="case-yr">2026</span>
           </div>
           <div class="case-bottom-bar">
@@ -1331,6 +1710,49 @@
           </div>
         </a>
 
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SOCIAL PROOF — NUMEROS
+    ================================================================ -->
+    <section id="numeros" aria-label="Resultados">
+      <div class="num-grid">
+        <div class="num-item reveal">
+          <span class="num-big"><span class="acc">1</span></span>
+          <span class="num-label">profissional. Acesso direto a quem pensa e executa.</span>
+        </div>
+        <div class="num-item reveal">
+          <span class="num-big">3<span class="acc">sem.</span></span>
+          <span class="num-label">do briefing ao ar, em média</span>
+        </div>
+        <div class="num-item reveal">
+          <span class="num-big">–<span class="acc">90%</span></span>
+          <span class="num-label">de redução em análise operacional — clientes Adash decidem mais rápido.</span>
+        </div>
+        <div class="num-item reveal">
+          <span class="num-big"><span class="acc">0</span></span>
+          <span class="num-label">intermediários entre você e quem executa.</span>
+        </div>
+      </div>
+      <div class="proof-quotes proof-single">
+        <div class="proof-q reveal">
+          <p class="proof-text">"Sem palavras pra agradecer pelo site impressionante. Moderníssimo, em 6 línguas diferentes, efeitos alucinantes. Ficou realmente sensacional e muito profissional."</p>
+          <span class="proof-from">Mauricio Odery · EForce Drums · eforcedrums.com</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CLIENTES MARQUEE
+    ================================================================ -->
+    <section id="clientes" aria-label="Clientes">
+      <div class="marquee-track" aria-hidden="true">
+        <!-- repeated 4× para loop suave -->
+        <div class="marquee-item">ODERY DRUMS<span class="marquee-dot"></span>EFORCE<span class="marquee-dot"></span>ADASH<span class="marquee-dot"></span>EDUBOXS<span class="marquee-dot"></span>ZUMO<span class="marquee-dot"></span>ZAPFY<span class="marquee-dot"></span></div>
+        <div class="marquee-item">ODERY DRUMS<span class="marquee-dot"></span>EFORCE<span class="marquee-dot"></span>ADASH<span class="marquee-dot"></span>EDUBOXS<span class="marquee-dot"></span>ZUMO<span class="marquee-dot"></span>ZAPFY<span class="marquee-dot"></span></div>
+        <div class="marquee-item">ODERY DRUMS<span class="marquee-dot"></span>EFORCE<span class="marquee-dot"></span>ADASH<span class="marquee-dot"></span>EDUBOXS<span class="marquee-dot"></span>ZUMO<span class="marquee-dot"></span>ZAPFY<span class="marquee-dot"></span></div>
+        <div class="marquee-item">ODERY DRUMS<span class="marquee-dot"></span>EFORCE<span class="marquee-dot"></span>ADASH<span class="marquee-dot"></span>EDUBOXS<span class="marquee-dot"></span>ZUMO<span class="marquee-dot"></span>ZAPFY<span class="marquee-dot"></span></div>
       </div>
     </section>
 
@@ -1348,7 +1770,7 @@
             <div class="h-panel-header">
               <div>
                 <h3 class="h-panel-title">DIAGNÓSTICOS</h3>
-                <span class="h-panel-sub">A entrada. Antes de construir, entender.</span>
+                <span class="h-panel-sub">Quando você não sabe o que está travando. Ou sabe, mas não sabe por onde atacar.</span>
               </div>
               <span class="h-panel-counter">001 / 004</span>
             </div>
@@ -1357,7 +1779,7 @@
                 <div class="diag-card-top">
                   <span class="diag-tag">ENTRADA</span>
                   <div class="diag-name">DIAGNÓSTICO<br>RÁPIDO</div>
-                  <p class="diag-desc">Uma área crítica. Clareza para agir rápido.</p>
+                  <p class="diag-desc">Quando precisa de clareza em um ponto específico. Diagnóstico cirúrgico, mapa de ação em dias.</p>
                   <a href="#contato" class="diag-cta">SOLICITAR →</a>
                 </div>
                 <div class="diag-card-bottom">
@@ -1369,7 +1791,7 @@
                 <div class="diag-card-top">
                   <span class="diag-tag">COMPLETO</span>
                   <div class="diag-name">DIAGNÓSTICO<br>ESTRATÉGICO</div>
-                  <p class="diag-desc">Posicionamento, canais, produto. Mapa de ação priorizado.</p>
+                  <p class="diag-desc">Quando quer entender o todo antes de investir em qualquer parte. Posicionamento, canais e produto, com prioridades claras.</p>
                   <a href="#contato" class="diag-cta">SOLICITAR →</a>
                 </div>
                 <div class="diag-card-bottom">
@@ -1387,41 +1809,41 @@
             <div class="h-panel-header">
               <div>
                 <h3 class="h-panel-title">PROJETOS</h3>
-                <span class="h-panel-sub">O que entrego. Do site ao sistema.</span>
+                <span class="h-panel-sub">Quando você sabe o que quer construir e precisa de alguém que executa com visão estratégica.</span>
               </div>
               <span class="h-panel-counter">002 / 004</span>
             </div>
             <div class="proj-list">
-              <div class="proj-item">
+              <a href="#contato" class="proj-item">
                 <span class="proj-idx">01</span>
                 <div class="proj-name">SITE</div>
                 <span class="proj-tag">WEB</span>
                 <span class="proj-arrow">→</span>
-              </div>
-              <div class="proj-item">
+              </a>
+              <a href="#contato" class="proj-item">
                 <span class="proj-idx">02</span>
                 <div class="proj-name">DASH COM CRM</div>
                 <span class="proj-tag">PRODUTO DIGITAL</span>
                 <span class="proj-arrow">→</span>
-              </div>
-              <div class="proj-item">
+              </a>
+              <a href="#contato" class="proj-item">
                 <span class="proj-idx">03</span>
                 <div class="proj-name">DIAGNÓSTICO</div>
                 <span class="proj-tag">CONSULTORIA</span>
                 <span class="proj-arrow">→</span>
-              </div>
-              <div class="proj-item">
+              </a>
+              <a href="#contato" class="proj-item">
                 <span class="proj-idx">04</span>
                 <div class="proj-name">PROJETO INTEGRADO</div>
                 <span class="proj-tag">FULL STACK</span>
                 <span class="proj-arrow">→</span>
-              </div>
-              <div class="proj-item">
+              </a>
+              <a href="#contato" class="proj-item">
                 <span class="proj-idx">05</span>
                 <div class="proj-name">LANÇAMENTO</div>
                 <span class="proj-tag">ESTRATÉGIA</span>
                 <span class="proj-arrow">→</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -1430,10 +1852,13 @@
         <div class="h-panel" id="panel-integ" style="position:relative;">
           <div class="integ-inner">
             <div class="integ-top">
-              <span class="integ-tag">CARRO-CHEFE</span>
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--sp-lg)">
+                <span class="integ-tag" style="margin-bottom:0">SOLUÇÃO COMPLETA</span>
+                <span class="h-panel-counter">003 / 004</span>
+              </div>
               <h3 class="integ-headline">PROJETO<br>INTEGRADO</h3>
               <p class="integ-desc">
-                Da marca ao sistema. Do posicionamento ao primeiro cliente.
+                Quando faz sentido construir tudo junto: da marca ao produto, do posicionamento ao primeiro cliente.
               </p>
             </div>
             <div class="integ-bottom">
@@ -1460,7 +1885,7 @@
             <div class="h-panel-header">
               <div>
                 <h3 class="h-panel-title">ACOMPANHAMENTO</h3>
-                <span class="h-panel-sub">Presença contínua. Resultado acumulado.</span>
+                <span class="h-panel-sub">Quando o projeto foi entregue mas o trabalho ainda não terminou.</span>
               </div>
               <span class="h-panel-counter">004 / 004</span>
             </div>
@@ -1543,6 +1968,95 @@
     </section>
 
     <!-- ================================================================
+         IA POSITIONING
+    ================================================================ -->
+    <section id="aumentado" aria-label="Aumentado por IA">
+      <div class="aumentado-inner">
+        <div class="aumentado-left reveal">
+          <span class="aumentado-tag">Vantagem estrutural</span>
+          <h2 class="aumentado-title">IA COMO<br>ALAVANCA,<br><span class="acc">NÃO MULETA.</span></h2>
+        </div>
+        <div class="aumentado-right">
+          <div class="aumentado-block reveal">
+            <span class="aumentado-num">01</span>
+            <div class="aumentado-block-title">Execução amplificada, estratégia intacta</div>
+            <p class="aumentado-block-desc">A visão estratégica, o olho de design e a leitura de negócio são meus. IA entra para amplificar execução: prototipagem rápida, variações, código. O que leva semanas numa agência tradicional, aqui leva dias.</p>
+          </div>
+          <div class="aumentado-block reveal">
+            <span class="aumentado-num">02</span>
+            <div class="aumentado-block-title">Output de equipe. Custo e velocidade de estúdio solo.</div>
+            <p class="aumentado-block-desc">Sem camadas de aprovação. Sem reunião de alinhamento interno. Você fala diretamente com quem vai executar. A IA resolve o que escala; o humano resolve o que importa.</p>
+          </div>
+          <div class="aumentado-block reveal">
+            <span class="aumentado-num">03</span>
+            <div class="aumentado-block-title">Agências que "também usam IA" ainda têm 20 pessoas de overhead</div>
+            <p class="aumentado-block-desc">Aqui, o modelo nasceu assim — não foi adaptado depois. Mais rápido, mais barato, sem perder o nível estratégico. Não é IA no lugar do pensamento. É IA a serviço dele.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FAQ
+    ================================================================ -->
+    <section id="faq" aria-label="FAQ">
+      <div class="faq-header">
+        <h2 class="faq-title">Perguntas</h2>
+        <span class="faq-count">05 QUESTÕES</span>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          Você trabalha sozinho?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner">Sim. Com IA como estrutura de suporte. O pensamento estratégico, o olho de design e a visão de negócio são meus. A execução técnica é amplificada. Resultado: capacidade de equipe, custo e velocidade de estúdio solo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          Quanto tempo leva um projeto?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner">Depende do escopo, mas a vantagem da estrutura solo + IA é velocidade sem reunião de alinhamento de equipe. Sites institucionais saem em 2–4 semanas. Sistemas e produtos mais complexos, conversamos na primeira reunião e você já sai com uma estimativa real.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          Quanto custa?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner">Sem tabela fixa, mas existe lógica. Projetos de diagnóstico e estratégia ficam entre R$8k–R$15k. Sites e produtos digitais, entre R$18k–R$45k dependendo de complexidade. SaaS e sistemas maiores, conversamos. Em todos os casos: menos que uma agência de mesmo nível, porque não existe overhead de equipe. Na primeira conversa você já sai com uma estimativa real.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          Como funciona depois que o projeto é entregue?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner">O projeto é seu. Código, arquivos, acessos. Tudo. Não crio dependência. Você tem autonomia total para continuar, ajustar ou trazer outro profissional. Continuar trabalhando juntos é uma escolha, não uma obrigação.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          O que eu preciso pra começar?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-inner">Um problema e vontade de resolvê-lo. Não precisa ter briefing pronto, deck elaborado ou orçamento definido. Conta o que está travando e a gente constrói o caminho junto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
          SECTION 06 — CONTATO
     ================================================================ -->
     <section id="contato" aria-label="Contato">
@@ -1560,24 +2074,36 @@
           </div>
         </div>
         <div class="contato-right">
-          <form id="contato-form">
+          <form id="contato-form" novalidate>
             <div class="form-row">
               <label class="form-label" for="f-name">NOME / MARCA</label>
-              <input class="form-input" id="f-name" type="text" placeholder="Quem é você?" autocomplete="off">
+              <input class="form-input" id="f-name" type="text" placeholder="Quem é você?" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="f-email">EMAIL</label>
+              <input class="form-input" id="f-email" type="email" placeholder="seu@email.com" autocomplete="email" required>
             </div>
             <div class="form-row">
               <label class="form-label" for="f-intent">O QUE PRECISA</label>
-              <input class="form-input" id="f-intent" type="text" placeholder="Diagnóstico, projeto, ou conversa?" autocomplete="off">
+              <input class="form-input" id="f-intent" type="text" placeholder="O projeto + prazo esperado. Ex: site institucional, 30 dias" autocomplete="off" required>
             </div>
-            <button class="form-submit" type="submit">MANDA O SINAL</button>
+            <p id="form-error" style="display:none;font-size:.7rem;color:var(--accent);letter-spacing:.08em;margin-bottom:.75rem">PREENCHE TODOS OS CAMPOS</p>
+            <button class="form-submit" type="submit">ENVIAR BRIEFING</button>
           </form>
           <script>
             document.getElementById('contato-form').addEventListener('submit', function(e) {
               e.preventDefault();
-              const nome = document.getElementById('f-name').value.trim();
+              const nome   = document.getElementById('f-name').value.trim();
+              const email  = document.getElementById('f-email').value.trim();
               const intent = document.getElementById('f-intent').value.trim();
-              const msg = encodeURIComponent(`Olá, me chamo ${nome || '(sem nome)'}. Preciso de: ${intent || '(sem descrição)'}`);
-              window.open(`https://wa.me/5519991591265?text=${msg}`, '_blank');
+              const err    = document.getElementById('form-error');
+              if (!nome || !email || !intent) { err.style.display = 'block'; return; }
+              err.style.display = 'none';
+              const msg = encodeURIComponent(`Olá, me chamo ${nome} (${email}). Preciso de: ${intent}`);
+              const opened = window.open(`https://wa.me/5519991591265?text=${msg}`, '_blank');
+              if (!opened) {
+                window.location.href = `mailto:contato@irbis.com.br?subject=Projeto%3A%20${encodeURIComponent(nome)}&body=${msg}`;
+              }
             });
           </script>
         </div>
@@ -1590,8 +2116,22 @@
        FOOTER
   ================================================================ -->
   <footer>
-    <div class="footer-logo">IRBIS</div>
-    <div class="footer-copy">©2026 IRBIS. TODOS OS DIREITOS RESERVADOS.</div>
+    <div class="footer-left">
+      <div class="footer-logo">IRBIS<span class="acc">.</span></div>
+      <p class="footer-tagline">Webdesign · Branding · Sistemas</p>
+    </div>
+    <div class="footer-nav">
+      <a href="#cases">Cases</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="processo/adash.html">Processo</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="footer-right">
+      <span class="footer-location">São Paulo · Brasil</span>
+      <span class="footer-copy">©2026 IRBIS</span>
+    </div>
   </footer>
 
   <!-- ================================================================
@@ -1605,12 +2145,15 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) gsap.defaults({ duration: 0 });
+
     /* ── LENIS ── */
     const lenis = new Lenis({
-      lerp: 0.07,
+      lerp: prefersReducedMotion ? 1 : 0.07,
       wheelMultiplier: 0.9,
       touchMultiplier: 1.0,
-      smoothWheel: true,
+      smoothWheel: !prefersReducedMotion,
       anchors: true,
     });
     lenis.on('scroll', ScrollTrigger.update);
@@ -1684,8 +2227,9 @@
     });
 
     /* ── CURSOR ── */
-    const curDot  = document.getElementById('cur-dot');
-    const curRing = document.getElementById('cur-ring');
+    const curDot   = document.getElementById('cur-dot');
+    const curRing  = document.getElementById('cur-ring');
+    const curLabel = document.getElementById('cur-label');
     let mX = window.innerWidth / 2, mY = window.innerHeight / 2;
     let rX = mX, rY = mY;
 
@@ -1699,11 +2243,16 @@
       rY += (mY - rY) * 0.1;
       curRing.style.left = rX + 'px';
       curRing.style.top  = rY + 'px';
+      if (curLabel) { curLabel.style.left = rX + 'px'; curLabel.style.top = rY + 'px'; }
       requestAnimationFrame(lerpRing);
     })();
     document.querySelectorAll('a, button, .diag-card, .proj-item, .ret-module').forEach(el => {
       el.addEventListener('mouseenter', () => document.body.classList.add('is-hovering'));
       el.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering'));
+    });
+    document.querySelectorAll('.case-card').forEach(card => {
+      card.addEventListener('mouseenter', () => document.body.classList.add('is-case-hover'));
+      card.addEventListener('mouseleave', () => document.body.classList.remove('is-case-hover'));
     });
 
     /* ── HORIZONTAL SCROLL (4 panels) ── */
@@ -1733,7 +2282,7 @@
           invalidateOnRefresh: true,
           onUpdate(self) {
             const fill = document.getElementById('h-progress-fill');
-            if (fill) fill.style.width = (self.progress * 100) + '%';
+            if (fill) fill.style.transform = 'scaleX(' + self.progress + ')';
           },
           onEnter()     { gsap.to('body', { backgroundColor: '#18181B', duration: .4, overwrite: true }); },
           onLeaveBack() { gsap.to('body', { backgroundColor: '#0C0C0E', duration: .4, overwrite: true }); },
@@ -1758,7 +2307,6 @@
 
     /* ── SECTION BG TRANSITIONS ── */
     [
-      { sel: '#sobre',   color: '#0C0C0E' },
       { sel: '#contato', color: '#18181B' },
     ].forEach(({ sel, color }) => {
       const el = document.querySelector(sel);
@@ -1773,11 +2321,12 @@
 
     /* ── HERO REVEAL ── */
     gsap.set('.hero-bg', { opacity: 0, scaleX: -1.06, scaleY: 1.06 });
-    gsap.timeline({ delay: .1 })
-      .to('.hero-bg',     { opacity: 0.85, scaleX: -1, scaleY: 1, duration: 1.6, ease: 'power3.out' }, 0)
-      .from('.hero-label', { opacity: 0, y: 16, duration: .6, ease: 'power3.out' }, 0.2)
-      .from('.hero-title', { opacity: 0, y: 30, duration: .8, ease: 'power4.out' }, '-=.3')
-      .from('.hero-bottom', { opacity: 0, y: 20, duration: .7, ease: 'power3.out' }, '-=.4');
+    gsap.timeline({ delay: 2.4 })
+      .to('.hero-bg',      { opacity: 1.0, scaleX: -1, scaleY: 1, duration: 0.55, ease: 'power3.out' }, 0)
+      .from('.hero-label', { opacity: 0, y: 16, duration: .5, ease: 'power3.out' }, 0.45)
+      .from('.hero-title', { opacity: 0, y: 30, duration: .7, ease: 'power4.out' }, 0.5)
+      .to('.hero-bg',      { opacity: 0.85, duration: 0.7, ease: 'power2.inOut' }, 0.55)
+      .from('.hero-bottom', { opacity: 0, y: 20, duration: .6, ease: 'power3.out' }, '-=.35');
 
     /* ── HAMBURGER MENU ── */
     (function () {
@@ -1816,6 +2365,7 @@
       }
 
       btn.addEventListener('click', () => open ? closeMenu() : openMenu());
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) closeMenu(); });
 
       links.forEach(link => {
         link.addEventListener('click', e => {
@@ -1839,11 +2389,108 @@
       ScrollTrigger.create({
         trigger: '#horizontal-section',
         start: 'top top',
-        onEnter() { hint.classList.add('hidden'); },
+        onEnter()     { hint.classList.add('hidden'); },
+        onLeaveBack() { hint.classList.remove('hidden'); },
       });
     })();
 
-    /* ── RESIZE ── */
+    /* ── PAGE TRANSITIONS ── */
+    (function () {
+      const curtain = document.getElementById('curtain');
+      const logo    = document.getElementById('curtain-logo');
+      if (!curtain) return;
+
+      function navigate(href) {
+        lenis.stop();
+        document.body.classList.add('intro-lock');
+        gsap.timeline()
+          .set(curtain,  { pointerEvents: 'all' })
+          .to(curtain,   { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+          .to(logo,      { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { window.location.href = href; }, '+=0.15');
+      }
+
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (a.target === '_blank') return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          navigate(href);
+        });
+      });
+    })();
+
+    /* ── FAQ ACCORDION ── */
+    (function () {
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const q = item.querySelector('.faq-q');
+        const a = item.querySelector('.faq-a');
+        const inner = item.querySelector('.faq-a-inner');
+
+        function open() {
+          item.classList.add('is-open');
+          q.setAttribute('aria-expanded', 'true');
+          gsap.to(a, { height: inner.offsetHeight, duration: .4, ease: 'power3.out' });
+        }
+        function close() {
+          item.classList.remove('is-open');
+          q.setAttribute('aria-expanded', 'false');
+          gsap.to(a, { height: 0, duration: .3, ease: 'power3.in' });
+        }
+
+        q.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+          // fechar todos
+          document.querySelectorAll('.faq-item.is-open').forEach(other => {
+            other.classList.remove('is-open');
+            gsap.to(other.querySelector('.faq-a'), { height: 0, duration: .3, ease: 'power3.in' });
+          });
+          if (!isOpen) open();
+        });
+
+        q.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); }
+        });
+      });
+    })();
+
+    /* ── SCROLL TO TOP ── */
+    (function () {
+      const btn = document.getElementById('scroll-top');
+      if (!btn) return;
+      ScrollTrigger.create({
+        trigger: '#hero',
+        start: 'bottom top',
+        onEnter:     () => btn.classList.add('visible'),
+        onLeaveBack: () => btn.classList.remove('visible'),
+      });
+      btn.addEventListener('click', () => lenis.scrollTo(0, { duration: 1.4 }));
+    })();
+
+    /* ── MASCOTE PARALLAX ── */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const hero = document.getElementById('hero');
+      const bg   = document.querySelector('.hero-bg');
+      if (!hero || !bg) return;
+      const setX = gsap.quickSetter(bg, 'x', 'px');
+      const setY = gsap.quickSetter(bg, 'y', 'px');
+      let cx = 0, cy = 0, tx = 0, ty = 0;
+      hero.addEventListener('mousemove', e => {
+        const r = hero.getBoundingClientRect();
+        tx = (e.clientX - r.left - r.width  / 2) / r.width  * 18;
+        ty = (e.clientY - r.top  - r.height / 2) / r.height * 10;
+      });
+      hero.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
+      gsap.ticker.add(() => {
+        cx += (tx - cx) * 0.06;
+        cy += (ty - cy) * 0.06;
+        setX(cx); setY(cy);
+      });
+    })();
+
+/* ── RESIZE ── */
     let rsTimer;
     window.addEventListener('resize', () => {
       clearTimeout(rsTimer);
@@ -1851,5 +2498,8 @@
     });
     window.addEventListener('load', () => ScrollTrigger.refresh());
   </script>
+
+  <button id="scroll-top" aria-label="Voltar ao topo">↑</button>
+
 </body>
 </html>
