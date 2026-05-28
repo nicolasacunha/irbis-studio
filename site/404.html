@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 · IRBIS</title>
+  <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0C0C0E; --text: #FAFAFA; --accent: #FF3D00; --muted: #71717A; }
+    html, body { height: 100%; font-family: 'Sora', sans-serif; }
+    body {
+      background: var(--bg); color: var(--text);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 100dvh; padding: 2rem;
+      overflow: hidden; position: relative;
+    }
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    .num {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: clamp(20rem, 50vw, 45rem); font-weight: 800; line-height: 1;
+      letter-spacing: -.06em; text-transform: uppercase;
+      color: transparent; -webkit-text-stroke: 1px rgba(250,250,250,.04);
+      user-select: none; pointer-events: none;
+    }
+
+    .content {
+      position: relative; z-index: 2;
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 2rem;
+    }
+
+    .eyebrow {
+      font-size: .6rem; font-weight: 600; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--accent);
+    }
+
+    .title {
+      font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800;
+      letter-spacing: -.04em; line-height: .93; text-transform: uppercase;
+    }
+
+    .desc {
+      font-size: .9rem; font-weight: 300; line-height: 1.7;
+      color: rgba(250,250,250,.55); max-width: 36ch;
+    }
+
+    .cta {
+      display: inline-flex; align-items: center; gap: .75rem;
+      padding: .9rem 2rem; background: var(--accent);
+      font-size: .65rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--bg);
+      text-decoration: none; transition: opacity .2s;
+    }
+    .cta:hover { opacity: .85; }
+
+    .logo {
+      position: fixed; top: 1.75rem; left: 50%; transform: translateX(-50%);
+      font-size: .75rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; text-decoration: none; color: var(--text);
+      opacity: .5;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="logo">IRBIS</a>
+  <div class="num" aria-hidden="true">404</div>
+  <div class="content">
+    <p class="eyebrow">Página não encontrada</p>
+    <h1 class="title">Nada<br>aqui.</h1>
+    <p class="desc">Esse endereço não existe ou foi movido. Mas o restante do site está inteiro.</p>
+    <a href="/" class="cta">← Voltar ao início</a>
+  </div>
+</body>
+</html>

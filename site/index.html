@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais</title>
-  <meta name="description" content="Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa. Sem gerente, sem repasse, sem espera. Brasil.">
+  <title>IRBIS Estúdio Digital | Webdesign e Sistemas Digitais</title>
+  <meta name="description" content="O estúdio que entrega como agência, sem ser uma. Sites, marcas e sistemas digitais do briefing ao ar em 3 semanas. Você fala direto com quem executa.">
   <link rel="canonical" href="https://irbis.com.br/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://irbis.com.br/">
-  <meta property="og:title" content="IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais">
-  <meta property="og:description" content="Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa. Sem gerente, sem repasse, sem espera.">
+  <meta property="og:title" content="IRBIS Estúdio Digital | Webdesign e Sistemas Digitais">
+  <meta property="og:description" content="O estúdio que entrega como agência, sem ser uma. Sites, marcas e sistemas digitais do briefing ao ar em 3 semanas.">
   <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="IRBIS Estúdio Digital">
@@ -19,7 +19,7 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IRBIS Estúdio Digital">
-  <meta name="twitter:description" content="Webdesign, branding e sistemas digitais. Solo com IA. Fala direto com quem constrói.">
+  <meta name="twitter:description" content="O estúdio que entrega como agência, sem ser uma. Sites, marcas e sistemas digitais em 3 semanas.">
   <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
 
   <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
@@ -27,14 +27,25 @@
   <meta name="theme-color" content="#0C0C0E">
   <link rel="preload" as="image" href="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com">
 
-  <!-- Schema: Organization + WebSite -->
+  <!-- GA4 — substitua G-XXXXXXXX pelo seu Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXX', { anonymize_ip: true });
+  </script>
+
+  <!-- Schema: Organization + WebSite + FAQPage + ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "@id": "https://irbis.com.br/#organization",
         "name": "IRBIS Estúdio Digital",
         "url": "https://irbis.com.br",
@@ -42,16 +53,34 @@
           "@type": "ImageObject",
           "url": "https://irbis.com.br/Design/icone/favicon_true.png"
         },
-        "description": "Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa.",
+        "description": "O estúdio que entrega como agência, sem ser uma. Sites, marcas e sistemas digitais do briefing ao ar em 3 semanas.",
         "foundingDate": "2024",
         "areaServed": "BR",
+        "priceRange": "R$8.000 – R$45.000",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://irbis.com.br/sobre#nicolas",
+          "name": "Nicolas Cunha",
+          "jobTitle": "Designer e Desenvolvedor",
+          "url": "https://irbis.com.br/sobre"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
-          "contactType": "customer service",
+          "contactType": "sales",
           "url": "https://wa.me/5519991591265",
           "availableLanguage": "Portuguese"
         },
-        "knowsAbout": ["Webdesign", "Branding", "Product Design", "Dashboard", "IA", "Estratégia Digital"]
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços IRBIS",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Webdesign e Landing Pages" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding e Identidade Visual" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dashboards e Sistemas SaaS" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diagnóstico Estratégico Digital" } }
+          ]
+        },
+        "sameAs": ["https://irbis.com.br"]
       },
       {
         "@type": "WebSite",
@@ -65,11 +94,56 @@
         "@type": "WebPage",
         "@id": "https://irbis.com.br/#webpage",
         "url": "https://irbis.com.br/",
-        "name": "IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais",
-        "description": "Estúdio digital solo com IA. Webdesign, branding, dashboards e sistemas digitais entregues por quem executa.",
+        "name": "IRBIS Estúdio Digital | Webdesign e Sistemas Digitais",
+        "description": "O estúdio que entrega como agência, sem ser uma. Sites, marcas e sistemas digitais do briefing ao ar em 3 semanas.",
         "isPartOf": { "@id": "https://irbis.com.br/#website" },
         "about": { "@id": "https://irbis.com.br/#organization" },
         "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Você trabalha sozinho?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Pensamento estratégico, olho de design e visão de negócio são meus. Uso IA para amplificar execução técnica. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva um projeto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O escopo define o prazo. Sites institucionais saem em 2–4 semanas. Para sistemas e produtos maiores, a primeira conversa já define uma estimativa real."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto custa um projeto na IRBIS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sem tabela fixa, mas existe lógica. Projetos de diagnóstico e estratégia ficam entre R$8k–R$15k. Sites e produtos digitais, entre R$18k–R$45k dependendo de complexidade. SaaS e sistemas maiores, conversamos. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona depois que o projeto é entregue?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O projeto é seu. Código, arquivos, acessos. Tudo. Não crio dependência. Você tem autonomia total para continuar, ajustar ou trazer outro profissional. Continuar trabalhando juntos é sua escolha."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que eu preciso pra começar um projeto com a IRBIS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Um problema claro o suficiente pra descrever. Conta o que está travando."
+            }
+          }
+        ]
       }
     ]
   }
@@ -98,9 +172,14 @@
       --sp-lg:  2.5rem;
       --sp-xl:  4rem;
       --sp-2xl: 6rem;
+
+      /* Easing curves (Emil Kowalski) */
+      --ease-out:     cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-in-out:  cubic-bezier(0.77, 0, 0.175, 1);
+      --ease-press:   cubic-bezier(0.2, 0, 0, 1);
     }
 
-    html { overflow-x: hidden; scroll-behavior: auto; }
+    html { overflow-x: hidden; scroll-behavior: auto; color-scheme: dark; }
 
     body {
       font-family: var(--f);
@@ -113,8 +192,13 @@
     }
 
     ::selection { background: var(--accent); color: var(--bg); }
-    a { text-decoration: none; color: inherit; }
-    button { font-family: var(--f); cursor: none; border: none; background: none; }
+    a { text-decoration: none; color: inherit; touch-action: manipulation; }
+    button { font-family: var(--f); cursor: none; border: none; background: none; touch-action: manipulation; }
+
+    /* Anchor sections: offset for fixed nav */
+    #cases, #horizontal-section, #como-opero, #aumentado, #faq, #contato {
+      scroll-margin-top: 5rem;
+    }
 
     :focus-visible {
       outline: 2px solid var(--accent);
@@ -249,9 +333,10 @@
       text-transform: uppercase;
       border: 1px solid rgba(250,250,250,.2);
       padding: .55rem 1.25rem;
-      transition: border-color .2s, color .2s;
+      transition: border-color .2s, color .2s, transform .12s var(--ease-press);
     }
     .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-cta:active { transform: scale(0.96); }
 
     /* ================================================================
        SECTION 01 — HERO
@@ -289,6 +374,7 @@
       text-transform: uppercase;
       max-width: 14ch;
       margin-bottom: var(--sp-lg);
+      text-wrap: balance;
     }
     .hero-title .acc { color: var(--accent); }
 
@@ -304,6 +390,7 @@
       color: var(--muted);
       max-width: 42ch;
       line-height: 1.7;
+      text-wrap: pretty;
     }
 
     .hero-ctas {
@@ -319,9 +406,10 @@
       letter-spacing: .15em;
       text-transform: uppercase;
       padding: .9rem 1.75rem;
-      transition: opacity .2s;
+      transition: opacity .2s, transform .12s var(--ease-press);
     }
     .cta-primary:hover { opacity: .85; }
+    .cta-primary:active { transform: scale(0.96); }
     .cta-ghost {
       border: 1px solid rgba(250,250,250,.2);
       color: var(--text);
@@ -330,9 +418,10 @@
       letter-spacing: .15em;
       text-transform: uppercase;
       padding: .9rem 1.5rem;
-      transition: border-color .2s;
+      transition: border-color .2s, transform .12s var(--ease-press);
     }
     .cta-ghost:hover { border-color: rgba(250,250,250,.5); background: rgba(250,250,250,.04); }
+    .cta-ghost:active { transform: scale(0.96); }
 
     .hero-bg {
       position: absolute; inset: 0;
@@ -500,6 +589,7 @@
       letter-spacing: -.04em;
       text-transform: uppercase;
       line-height: 1;
+      text-wrap: balance;
     }
     .h-panel-sub {
       display: block;
@@ -616,12 +706,15 @@
       background: var(--s1);
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform .3s ease;
+      transition: transform .3s var(--ease-out);
       z-index: 0;
     }
-    .proj-item:hover::before { transform: scaleX(1); }
-    .proj-item > * { position: relative; z-index: 1; transition: transform .25s ease; }
-    .proj-item:hover > * { transform: translateX(1rem); }
+    .proj-item > * { position: relative; z-index: 1; transition: transform .25s var(--ease-out); }
+    @media (hover: hover) and (pointer: fine) {
+      .proj-item:hover::before { transform: scaleX(1); }
+      .proj-item:hover > * { transform: translateX(1rem); }
+      .proj-item:hover .proj-arrow { color: var(--accent); transform: translateX(4px); }
+    }
 
     .proj-idx {
       font-size: .55rem;
@@ -646,9 +739,8 @@
     }
     .proj-arrow {
       color: var(--muted);
-      transition: color .2s, transform .2s;
+      transition: color .2s, transform .2s var(--ease-out);
     }
-    .proj-item:hover .proj-arrow { color: var(--accent); transform: translateX(4px); }
 
     /* ── PANEL 3: INTEGRADO ── */
     .integ-inner {
@@ -676,6 +768,7 @@
       line-height: .95;
       max-width: 16ch;
       margin-bottom: var(--sp-lg);
+      text-wrap: balance;
     }
     .integ-desc {
       font-size: clamp(.85rem, 1.2vw, 1rem);
@@ -853,6 +946,7 @@
       overflow: hidden;
       background: var(--s1);
       aspect-ratio: 16 / 10;
+      box-shadow: inset 0 0 0 1px rgba(250,250,250,.06);
     }
     .case-card:first-child {
       grid-column: span 2;
@@ -861,9 +955,11 @@
     .case-bg {
       position: absolute;
       inset: 0;
-      transition: transform .6s ease;
+      transition: transform .6s var(--ease-out);
     }
-    .case-card:hover .case-bg { transform: scale(1.04); }
+    @media (hover: hover) and (pointer: fine) {
+      .case-card:hover .case-bg { transform: scale(1.04); }
+    }
     .case-bg-eforce {
       background: url('cases-hub/eforce/assets/case-capa.jpg') center center / cover no-repeat;
     }
@@ -950,9 +1046,11 @@
       font-size: 1.1rem;
       color: var(--muted);
       flex-shrink: 0;
-      transition: color .25s, transform .25s;
+      transition: color .25s, transform .25s var(--ease-out);
     }
-    .case-card:hover .case-go { color: var(--accent); transform: translate(5px, -5px); }
+    @media (hover: hover) and (pointer: fine) {
+      .case-card:hover .case-go { color: var(--accent); transform: translate(5px, -5px); }
+    }
     .case-card::after {
       content: '';
       position: absolute;
@@ -991,6 +1089,7 @@
       letter-spacing: -.04em;
       line-height: 1;
       color: var(--text);
+      font-variant-numeric: tabular-nums;
     }
     .num-big .acc { color: var(--accent); }
     .num-label {
@@ -1195,6 +1294,9 @@
       font-weight: 600;
       letter-spacing: -.02em;
       user-select: none;
+      width: 100%;
+      text-align: left;
+      touch-action: manipulation;
     }
     .faq-q:hover { color: var(--accent); }
     .faq-icon {
@@ -1313,8 +1415,9 @@
       text-transform: uppercase;
       padding: 1rem;
       margin-top: var(--sp-lg);
-      transition: opacity .2s;
+      transition: opacity .2s, transform .12s var(--ease-press);
     }
+    .form-submit:active { transform: scale(0.96); }
     .form-submit:hover { opacity: .85; }
     .wpp-link {
       display: flex;
@@ -1577,7 +1680,8 @@
     .h-scroll-hint.hidden { opacity: 0; }
     .h-scroll-hint-arrow {
       display: inline-block;
-      animation: hint-pulse 1.4s ease-in-out infinite;
+      animation: hint-pulse 1.4s var(--ease-in-out) infinite;
+      animation-fill-mode: both;
     }
     @keyframes hint-pulse {
       0%, 100% { transform: translateX(0); opacity: .5; }
@@ -1588,6 +1692,15 @@
        REVEAL INITIAL STATES (GSAP controls opacity/y)
     ================================================================ */
     .reveal { opacity: 0; transform: translateY(24px); }
+
+    /* Stagger siblings dentro de grids e listas */
+    .num-grid .reveal:nth-child(2) { transition-delay: 60ms; }
+    .num-grid .reveal:nth-child(3) { transition-delay: 120ms; }
+    .num-grid .reveal:nth-child(4) { transition-delay: 180ms; }
+    .opero-list .reveal:nth-child(2) { transition-delay: 60ms; }
+    .opero-list .reveal:nth-child(3) { transition-delay: 120ms; }
+    .opero-list .reveal:nth-child(4) { transition-delay: 180ms; }
+    .opero-list .reveal:nth-child(5) { transition-delay: 240ms; }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1644,7 +1757,7 @@
          SECTION 01 — HERO
     ================================================================ -->
     <section id="hero" aria-label="Hero">
-      <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+      <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
       <div class="hero-deco" aria-hidden="true">IB</div>
 
       <p class="hero-label">Para founders que não têm tempo pra esperar</p>
@@ -1659,9 +1772,9 @@
         </p>
         <div class="hero-ctas">
           <a href="#contato" class="cta-primary">INICIAR PROJETO</a>
-          <a href="#cases" class="cta-ghost">VER CASES</a>
+          <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-ghost">WHATSAPP →</a>
         </div>
-        <p style="font-size:.55rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.75rem">Conversa de 30 min · sem compromisso</p>
+        <p style="font-size:.55rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.75rem">Agenda limitada · máx. 3 projetos ativos</p>
       </div>
     </section>
 
@@ -1998,6 +2111,19 @@
     </section>
 
     <!-- ================================================================
+         MID-PAGE CTA (após seção IA)
+    ================================================================ -->
+    <div style="padding:var(--sp-2xl) var(--sp-xl);border-top:1px solid var(--s2);display:flex;justify-content:space-between;align-items:center;gap:var(--sp-lg);flex-wrap:wrap;">
+      <div>
+        <p style="font-size:clamp(1.1rem,2.5vw,1.6rem);font-weight:800;letter-spacing:-.03em;text-transform:uppercase;line-height:1.15">Seu projeto tem prazo.<br><span style="color:var(--accent)">A agenda também.</span></p>
+      </div>
+      <div style="display:flex;gap:.75rem;align-items:center;flex-shrink:0">
+        <a href="#contato" class="cta-primary">INICIAR PROJETO</a>
+        <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" style="font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--s2);padding-bottom:.15rem;transition:color .2s,border-color .2s" onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--s2)'">WHATSAPP →</a>
+      </div>
+    </div>
+
+    <!-- ================================================================
          FAQ
     ================================================================ -->
     <section id="faq" aria-label="FAQ">
@@ -2007,50 +2133,50 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+        <button class="faq-q" aria-expanded="false">
           Você trabalha sozinho?
           <span class="faq-icon" aria-hidden="true"></span>
-        </div>
+        </button>
         <div class="faq-a">
           <p class="faq-a-inner">Sim. Pensamento estratégico, olho de design e visão de negócio são meus. Uso IA para amplificar execução técnica. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+        <button class="faq-q" aria-expanded="false">
           Quanto tempo leva um projeto?
           <span class="faq-icon" aria-hidden="true"></span>
-        </div>
+        </button>
         <div class="faq-a">
           <p class="faq-a-inner">O escopo define o prazo. Sites institucionais saem em 2–4 semanas. Para sistemas e produtos maiores, a primeira conversa já define uma estimativa real.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+        <button class="faq-q" aria-expanded="false">
           Quanto custa?
           <span class="faq-icon" aria-hidden="true"></span>
-        </div>
+        </button>
         <div class="faq-a">
           <p class="faq-a-inner">Sem tabela fixa, mas existe lógica. Projetos de diagnóstico e estratégia ficam entre R$8k–R$15k. Sites e produtos digitais, entre R$18k–R$45k dependendo de complexidade. SaaS e sistemas maiores, conversamos. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura. Na primeira conversa você já tem uma estimativa real.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+        <button class="faq-q" aria-expanded="false">
           Como funciona depois que o projeto é entregue?
           <span class="faq-icon" aria-hidden="true"></span>
-        </div>
+        </button>
         <div class="faq-a">
           <p class="faq-a-inner">O projeto é seu. Código, arquivos, acessos. Tudo. Não crio dependência. Você tem autonomia total para continuar, ajustar ou trazer outro profissional. Continuar trabalhando juntos é sua escolha.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+        <button class="faq-q" aria-expanded="false">
           O que eu preciso pra começar?
           <span class="faq-icon" aria-hidden="true"></span>
-        </div>
+        </button>
         <div class="faq-a">
           <p class="faq-a-inner">Um problema claro o suficiente pra descrever. Conta o que está travando.</p>
         </div>
@@ -2125,8 +2251,11 @@
       <a href="#cases">Cases</a>
       <a href="manifesto.html">Manifesto</a>
       <a href="sobre.html">Sobre</a>
-      <a href="processo/adash.html">Processo</a>
+      <a href="metodo.html">Método</a>
       <a href="#faq">FAQ</a>
+      <a href="vs-agencia.html">IRBIS vs Agência</a>
+      <a href="para/saas.html">Para SaaS</a>
+      <a href="para/startups.html">Para Startups</a>
       <a href="#contato">Contato</a>
     </div>
     <div class="footer-right">
@@ -2292,19 +2421,68 @@
       });
     })();
 
-    /* ── SCROLL REVEALS ── */
-    document.querySelectorAll('.reveal').forEach(el => {
-      gsap.to(el, {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 88%',
-        },
+    /* ── SCROLL REVEALS — stagger siblings in grids ── */
+    (function () {
+      const grids = ['.num-grid', '.opero-list', '.ret-grid', '.aumentado-right'];
+      const handled = new Set();
+
+      grids.forEach(sel => {
+        const parent = document.querySelector(sel);
+        if (!parent) return;
+        const siblings = Array.from(parent.querySelectorAll('.reveal'));
+        if (!siblings.length) return;
+        siblings.forEach(el => handled.add(el));
+        gsap.to(siblings, {
+          opacity: 1, y: 0, duration: 0.65,
+          ease: 'power3.out',
+          stagger: { each: 0.08, from: 'start' },
+          scrollTrigger: { trigger: parent, start: 'top 85%' },
+        });
       });
-    });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        if (handled.has(el)) return;
+        gsap.to(el, {
+          opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%' },
+        });
+      });
+    })();
+
+    /* ── ANIMATED RULES — linhas de separação crescem da esquerda ── */
+    (function () {
+      // Alvos: headers com border-bottom + seções com border-top visível
+      const borderBottomTargets = ['.cases-header', '.opero-header', '.faq-header'];
+      const borderTopTargets    = ['#numeros', '#clientes', '#aumentado', '#faq', '#como-opero'];
+
+      borderBottomTargets.forEach(sel => {
+        const el = document.querySelector(sel);
+        if (!el) return;
+        el.style.borderBottom = 'none';
+        const rule = document.createElement('div');
+        rule.style.cssText = 'height:1px;background:var(--s2);transform:scaleX(0);transform-origin:left;';
+        el.appendChild(rule);
+        gsap.to(rule, {
+          scaleX: 1, duration: 1.1,
+          ease: 'power3.inOut',
+          scrollTrigger: { trigger: el, start: 'top 88%' },
+        });
+      });
+
+      borderTopTargets.forEach(sel => {
+        const el = document.querySelector(sel);
+        if (!el) return;
+        el.style.borderTop = 'none';
+        const rule = document.createElement('div');
+        rule.style.cssText = 'height:1px;background:var(--s2);transform:scaleX(0);transform-origin:left;';
+        el.insertAdjacentElement('afterbegin', rule);
+        gsap.to(rule, {
+          scaleX: 1, duration: 1.1,
+          ease: 'power3.inOut',
+          scrollTrigger: { trigger: el, start: 'top 88%' },
+        });
+      });
+    })();
 
     /* ── SECTION BG TRANSITIONS ── */
     [
@@ -2498,6 +2676,79 @@
       rsTimer = setTimeout(() => ScrollTrigger.refresh(), 260);
     });
     window.addEventListener('load', () => ScrollTrigger.refresh());
+
+    /* ── GA4 EVENTS ── */
+    (function () {
+      if (typeof gtag !== 'function') return;
+
+      function track(event, params) {
+        gtag('event', event, params);
+      }
+
+      // CTA clicks — hero
+      document.querySelectorAll('.hero-ctas a').forEach(el => {
+        el.addEventListener('click', () => {
+          track('cta_clicked', {
+            button_text: el.textContent.trim(),
+            location: 'hero'
+          });
+        });
+      });
+
+      // Mid-page CTA
+      document.querySelectorAll('[data-track-mid] a, #faq ~ div a.cta-primary').forEach(el => {
+        el.addEventListener('click', () => {
+          track('cta_clicked', {
+            button_text: el.textContent.trim(),
+            location: 'mid_page'
+          });
+        });
+      });
+
+      // Nav CTA
+      document.querySelector('.nav-cta')?.addEventListener('click', () => {
+        track('cta_clicked', { button_text: 'INICIAR PROJETO', location: 'nav' });
+      });
+
+      // WhatsApp clicks (todos)
+      document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
+        el.addEventListener('click', () => {
+          const loc = el.closest('#hero') ? 'hero'
+            : el.closest('#contato') ? 'contact'
+            : 'mid_page';
+          track('whatsapp_clicked', { location: loc });
+        });
+      });
+
+      // Form submit
+      document.getElementById('contato-form')?.addEventListener('submit', () => {
+        track('form_submitted', { form_type: 'contact' });
+      });
+
+      // Case card clicks
+      document.querySelectorAll('.case-card').forEach(el => {
+        el.addEventListener('click', () => {
+          const name = el.querySelector('.case-n')?.textContent.trim() || 'unknown';
+          track('case_viewed', { case_name: name });
+        });
+      });
+
+      // FAQ accordion opens
+      document.querySelectorAll('.faq-q').forEach(el => {
+        el.addEventListener('click', () => {
+          const q = el.textContent.trim().replace(/\s+/g, ' ').slice(0, 60);
+          track('faq_opened', { question: q });
+        });
+      });
+
+      // Scroll depth — 50% e 90%
+      const depths = { 50: false, 90: false };
+      window.addEventListener('scroll', () => {
+        const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (pct >= 50 && !depths[50]) { depths[50] = true; track('scroll_depth', { depth: '50%' }); }
+        if (pct >= 90 && !depths[90]) { depths[90] = true; track('scroll_depth', { depth: '90%' }); }
+      }, { passive: true });
+    })();
   </script>
 
   <button id="scroll-top" aria-label="Voltar ao topo">↑</button>

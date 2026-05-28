@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+Disallow: /adash-demo/
+
+# AI search crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Training crawlers — blocked
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://irbis.com.br/sitemap.xml

@@ -1,0 +1,33 @@
+# IRBIS Estúdio Digital
+
+> Estúdio de webdesign e produto digital localizado no Brasil. Solo com IA integrada — webdesign, branding, dashboards, sistemas digitais e estratégia de negócio entregues por quem executa, sem intermediários.
+
+## Páginas principais
+
+- [Home](https://irbis.com.br/): Estúdio digital solo com IA. Webdesign, branding e sistemas digitais.
+- [Manifesto](https://irbis.com.br/manifesto): Filosofia e posicionamento do estúdio — por que solo com IA e o que isso significa na prática.
+- [O Método](https://irbis.com.br/metodo): Como a IRBIS trabalha — processo, uso de IA, modelo solo e o que o cliente recebe.
+- [Cases](https://irbis.com.br/cases): Portfólio — trabalhos selecionados.
+- [EForce Drums](https://irbis.com.br/eforce): Case — webdesign e motion para a linha EForce da Odery Drums (maior fabricante de baterias do Brasil).
+- [ADASH](https://irbis.com.br/adash): Case — dashboard SaaS full-stack com IA integrada para operações de marketing e vendas.
+- [Sobre](https://irbis.com.br/sobre): Nicolas Cunha — quem executa, como trabalha, clientes e abordagem do estúdio.
+- [ADASH em 3 semanas](https://irbis.com.br/processo/adash): Breakdown técnico completo — arquitetura, decisões de design, integração com IA e aprendizados de construir um SaaS do zero em 3 semanas.
+
+## Serviços
+
+- Diagnósticos estratégicos: análise de posicionamento, canais e produto
+- Webdesign e desenvolvimento front-end: sites, landing pages, produtos digitais
+- Product design e desenvolvimento de dashboards e SaaS
+- Identidade visual e branding
+- Projetos integrados: da marca ao sistema digital completo
+- Acompanhamento contínuo: presença e resultado ao longo do tempo
+
+## Diferencial
+
+IRBIS é um estúdio solo que usa IA como estrutura de execução — não como substituto do pensamento estratégico. O resultado é velocidade de agência com custo e comunicação de freelancer. O cliente fala direto com quem constrói.
+
+## Contato
+
+- Site: https://irbis.com.br
+- WhatsApp: https://wa.me/5519991591265
+- Localização: Brasil

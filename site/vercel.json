@@ -2,9 +2,16 @@
   "rewrites": [
     { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
     { "source": "/adash-demo",      "destination": "/adash-demo/index.html" },
-    { "source": "/adash/(.*)", "destination": "/cases-hub/adash/$1" },
-    { "source": "/adash",      "destination": "/cases-hub/adash/index.html" },
-    { "source": "/eforce/(.*)",       "destination": "/cases-hub/eforce/$1" },
-    { "source": "/eforce",            "destination": "/cases-hub/eforce/index.html" }
+    { "source": "/adash/(.*)",      "destination": "/cases-hub/adash/$1" },
+    { "source": "/adash",           "destination": "/cases-hub/adash/index.html" },
+    { "source": "/eforce/(.*)",     "destination": "/cases-hub/eforce/$1" },
+    { "source": "/eforce",          "destination": "/cases-hub/eforce/index.html" },
+    { "source": "/cases/(.*)",      "destination": "/cases-hub/$1" },
+    { "source": "/cases",           "destination": "/cases-hub/index.html" },
+    { "source": "/metodo",          "destination": "/metodo.html" },
+    { "source": "/manifesto",       "destination": "/manifesto.html" },
+    { "source": "/sobre",              "destination": "/sobre.html" },
+    { "source": "/processo/adash",     "destination": "/processo/adash.html" },
+    { "source": "/processo",           "destination": "/processo/adash.html" }
   ]
 }

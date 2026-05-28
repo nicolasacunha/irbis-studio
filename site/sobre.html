@@ -20,19 +20,31 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "name": "Sobre Nicolas Cunha · IRBIS Estúdio Digital",
-    "description": "Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona e por que o modelo solo com IA é mais rápido e direto que uma agência.",
-    "url": "https://irbis.com.br/sobre",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Nicolas Cunha",
-      "jobTitle": "Designer e Desenvolvedor",
-      "worksFor": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
-      "url": "https://irbis.com.br/sobre",
-      "knowsAbout": ["Webdesign", "Product Design", "Branding", "Dashboard", "SaaS", "Inteligência Artificial"]
-    },
-    "inLanguage": "pt-BR"
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "name": "Sobre Nicolas Cunha · IRBIS Estúdio Digital",
+        "description": "Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona e por que o modelo solo com IA é mais rápido e direto que uma agência.",
+        "url": "https://irbis.com.br/sobre",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://irbis.com.br/sobre#nicolas",
+          "name": "Nicolas Cunha",
+          "jobTitle": "Designer e Desenvolvedor",
+          "worksFor": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
+          "url": "https://irbis.com.br/sobre",
+          "knowsAbout": ["Webdesign", "Product Design", "Branding", "Dashboard", "SaaS", "Inteligência Artificial"]
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://irbis.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://irbis.com.br/sobre" }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">

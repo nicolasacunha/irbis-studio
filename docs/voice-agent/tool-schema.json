@@ -1,0 +1,50 @@
+{
+  "tools": [
+    {
+      "name": "book_discovery_call",
+      "description": "Agenda uma discovery call de 30 minutos quando o lead está qualificado. Só chamar após confirmar nome, email, tipo de projeto e budget. Nunca chamar sem todos os campos obrigatórios preenchidos.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nome completo do lead"
+          },
+          "email": {
+            "type": "string",
+            "description": "Email do lead para envio do convite"
+          },
+          "project_type": {
+            "type": "string",
+            "enum": ["webdesign", "branding", "dashboard", "saas", "outro"],
+            "description": "Tipo de projeto que o lead precisa"
+          },
+          "budget_range": {
+            "type": "string",
+            "enum": ["ate_3k", "3k_8k", "acima_8k"],
+            "description": "Faixa de budget do lead"
+          },
+          "preferred_date": {
+            "type": "string",
+            "description": "Data preferida do lead (opcional, formato: YYYY-MM-DD)"
+          }
+        },
+        "required": ["name", "email", "project_type", "budget_range"]
+      }
+    },
+    {
+      "name": "check_availability",
+      "description": "Verifica disponibilidade de agenda antes de confirmar horário. Chamar antes de book_discovery_call quando o lead mencionar uma data preferida.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "preferred_date": {
+            "type": "string",
+            "description": "Data preferida no formato YYYY-MM-DD"
+          }
+        },
+        "required": ["preferred_date"]
+      }
+    }
+  ]
+}

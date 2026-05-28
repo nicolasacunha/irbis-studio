@@ -1,0 +1,11 @@
+{
+  "name": "irbis-promo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.6.53 preview",
+    "check": "npx --yes hyperframes@0.6.53 lint && npx --yes hyperframes@0.6.53 validate && npx --yes hyperframes@0.6.53 inspect",
+    "render": "npx --yes hyperframes@0.6.53 render",
+    "publish": "npx --yes hyperframes@0.6.53 publish"
+  }
+}

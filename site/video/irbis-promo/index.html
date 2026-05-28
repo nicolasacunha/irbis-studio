@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1080" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Sora';
+      font-weight: 300;
+      src: local('Sora Light'), local('SoraLight'), url('fonts/Sora-Regular.woff2') format('woff2');
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Sora';
+      font-weight: 700 800;
+      src: local('Sora Bold'), local('SoraBold'), url('fonts/Sora-Bold.woff2') format('woff2');
+      font-display: block;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      margin: 0; width: 1080px; height: 1080px;
+      overflow: hidden; background: #0C0C0E;
+      font-family: 'Sora', sans-serif;
+    }
+
+    /* ── SHARED ── */
+    .clip { position: absolute; }
+
+    /* Beat 1 — Hero Headline */
+    #beat1-bg { inset: 0; background: #0C0C0E; }
+    #beat1-line1 {
+      top: 340px; left: 80px;
+      font-size: 88px; font-weight: 800; letter-spacing: -.04em;
+      text-transform: uppercase; color: #FAFAFA; line-height: 1;
+    }
+    #beat1-line2 {
+      top: 450px; left: 80px;
+      font-size: 88px; font-weight: 800; letter-spacing: -.04em;
+      text-transform: uppercase; line-height: 1;
+      color: #FAFAFA;
+    }
+    #beat1-accent { color: #FF3D00; }
+    #beat1-dot {
+      top: 436px; left: 80px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #FF3D00;
+    }
+
+    /* Beat 2 — Stat */
+    #beat2-bg { inset: 0; background: #18181B; }
+    #beat2-label {
+      top: 300px; left: 80px;
+      font-size: 22px; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: #8A8A93;
+    }
+    #beat2-num {
+      top: 350px; left: 80px;
+      font-size: 240px; font-weight: 800; letter-spacing: -.06em;
+      color: #FF3D00; line-height: 1; font-variant-numeric: tabular-nums;
+    }
+    #beat2-unit {
+      top: 570px; left: 90px;
+      font-size: 52px; font-weight: 300; color: #FAFAFA;
+      letter-spacing: -.02em;
+    }
+    #beat2-bar {
+      bottom: 120px; left: 80px; right: 80px; height: 2px;
+      background: #27272A; overflow: hidden;
+    }
+    #beat2-bar-fill { height: 100%; width: 0%; background: #FF3D00; }
+
+    /* Beat 3 — Diferencial */
+    #beat3-bg { inset: 0; background: #0C0C0E; }
+    #beat3-line1 {
+      top: 380px; left: 80px;
+      font-size: 80px; font-weight: 800; letter-spacing: -.04em;
+      text-transform: uppercase; color: #FAFAFA; line-height: 1;
+    }
+    #beat3-line2 {
+      top: 470px; left: 80px;
+      font-size: 80px; font-weight: 800; letter-spacing: -.04em;
+      text-transform: uppercase; color: #FF3D00; line-height: 1;
+    }
+    #beat3-rule {
+      top: 580px; left: 80px;
+      width: 0px; height: 2px; background: #FF3D00;
+    }
+
+    /* Beat 4 — Serviços */
+    #beat4-bg { inset: 0; background: #0C0C0E; }
+    .svc {
+      left: 100px;
+      font-size: 62px; font-weight: 800; letter-spacing: -.03em;
+      text-transform: uppercase; color: #FAFAFA; line-height: 1;
+    }
+    #svc-1 { top: 300px; }
+    #svc-2 { top: 390px; }
+    #svc-3 { top: 480px; }
+    #svc-bar {
+      top: 300px; left: 80px;
+      width: 4px; height: 240px; background: #FF3D00;
+    }
+
+    /* Beat 5 — Logo */
+    #beat5-bg { inset: 0; background: #0C0C0E; }
+    #beat5-logo {
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-size: 160px; font-weight: 800; letter-spacing: -.05em;
+      text-transform: uppercase; color: #FAFAFA; white-space: nowrap;
+    }
+    #beat5-dot { color: #FF3D00; }
+    #beat5-url {
+      top: 620px; left: 50%; transform: translateX(-50%);
+      font-size: 24px; font-weight: 300; letter-spacing: .18em;
+      text-transform: uppercase; color: #8A8A93; white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-duration="20"
+       data-width="1080" data-height="1080">
+
+    <!-- Beat 1 · 0–4s -->
+    <div id="beat1-bg"  class="clip" data-start="0" data-duration="4" data-track-index="1"></div>
+    <div id="beat1-line1" class="clip" data-start="0" data-duration="4" data-track-index="2">O estúdio que</div>
+    <div id="beat1-line2" class="clip" data-start="0" data-duration="4" data-track-index="3">entrega como <span id="beat1-accent">agência,</span><br>sem ser.</div>
+
+    <!-- Beat 2 · 4–9s -->
+    <div id="beat2-bg"    class="clip" data-start="4" data-duration="5" data-track-index="1"></div>
+    <div id="beat2-label" class="clip" data-start="4" data-duration="5" data-track-index="2">Do briefing ao ar</div>
+    <div id="beat2-num"   class="clip" data-start="4" data-duration="5" data-track-index="3">3</div>
+    <div id="beat2-unit"  class="clip" data-start="4" data-duration="5" data-track-index="4">semanas</div>
+    <div id="beat2-bar"   class="clip" data-start="4" data-duration="5" data-track-index="5">
+      <div id="beat2-bar-fill"></div>
+    </div>
+
+    <!-- Beat 3 · 9–14s -->
+    <div id="beat3-bg"    class="clip" data-start="9" data-duration="5" data-track-index="1"></div>
+    <div id="beat3-line1" class="clip" data-start="9" data-duration="5" data-track-index="2">Você fala direto</div>
+    <div id="beat3-line2" class="clip" data-start="9" data-duration="5" data-track-index="3">com quem constrói.</div>
+    <div id="beat3-rule"  class="clip" data-start="9" data-duration="5" data-track-index="4"></div>
+
+    <!-- Beat 4 · 14–18s -->
+    <div id="beat4-bg" class="clip" data-start="14" data-duration="4" data-track-index="1"></div>
+    <div id="svc-bar"  class="clip" data-start="14" data-duration="4" data-track-index="2"></div>
+    <div id="svc-1" class="svc clip" data-start="14" data-duration="4" data-track-index="3">Webdesign</div>
+    <div id="svc-2" class="svc clip" data-start="14" data-duration="4" data-track-index="4">Branding</div>
+    <div id="svc-3" class="svc clip" data-start="14" data-duration="4" data-track-index="5">Sistemas Digitais</div>
+
+    <!-- Beat 5 · 18–20s -->
+    <div id="beat5-bg"  class="clip" data-start="18" data-duration="2" data-track-index="1"></div>
+    <div id="beat5-logo" class="clip" data-start="18" data-duration="2" data-track-index="2">IRBIS<span id="beat5-dot">.</span></div>
+    <div id="beat5-url"  class="clip" data-start="18" data-duration="2" data-track-index="3">irbis.com.br</div>
+
+  </div>
+
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
+
+    /* ── BEAT 1 — Hero Headline ── */
+    tl.from('#beat1-line1', { y: 48, opacity: 0, duration: 0.6 }, 0);
+    tl.from('#beat1-line2', { y: 48, opacity: 0, duration: 0.6 }, 0.25);
+
+    /* ── BEAT 2 — Stat ── */
+    tl.from('#beat2-label', { opacity: 0, y: 20, duration: 0.5 }, 4);
+    tl.from('#beat2-num',   { opacity: 0, scale: 0.85, duration: 0.6, ease: 'back.out(1.2)' }, 4.2);
+    tl.from('#beat2-unit',  { opacity: 0, x: -20, duration: 0.4 }, 4.6);
+    tl.to('#beat2-bar-fill', { width: '100%', duration: 3.5, ease: 'power2.inOut' }, 4.3);
+
+    /* ── BEAT 3 — Diferencial ── */
+    tl.from('#beat3-line1', { x: -60, opacity: 0, duration: 0.55 }, 9);
+    tl.from('#beat3-line2', { x: -60, opacity: 0, duration: 0.55 }, 9.2);
+    tl.to('#beat3-rule',    { width: 920, duration: 0.8, ease: 'power2.inOut' }, 9.6);
+
+    /* ── BEAT 4 — Serviços ── */
+    tl.from('#svc-bar', { height: 0, duration: 0.6, transformOrigin: 'top center' }, 14);
+    tl.from('#svc-1', { x: 40, opacity: 0, duration: 0.4 }, 14.1);
+    tl.from('#svc-2', { x: 40, opacity: 0, duration: 0.4 }, 14.25);
+    tl.from('#svc-3', { x: 40, opacity: 0, duration: 0.4 }, 14.4);
+
+    /* ── BEAT 5 — Logo ── */
+    tl.from('#beat5-logo', { opacity: 0, scale: 0.92, duration: 0.6, ease: 'power2.out' }, 18);
+    tl.from('#beat5-url',  { opacity: 0, duration: 0.5 }, 18.4);
+
+    window.__timelines['main'] = tl;
+  </script>
+</body>
+</html>

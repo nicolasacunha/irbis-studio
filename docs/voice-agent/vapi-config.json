@@ -1,0 +1,93 @@
+{
+  "_comment": "Configuração Vapi para o agente IRBIS. Substitua os IDs de placeholder.",
+  "assistant": {
+    "name": "Agente IRBIS",
+    "model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "temperature": 0.3,
+      "maxTokens": 150,
+      "emotionRecognitionEnabled": false,
+      "systemPrompt": "VER docs/voice-agent/system-prompt.md"
+    },
+    "voice": {
+      "provider": "11labs",
+      "voiceId": "INSERIR_VOICE_ID",
+      "_note": "Testar a voz com o system prompt antes de commitar. Voz direta, sem exageros."
+    },
+    "transcriber": {
+      "provider": "deepgram",
+      "model": "nova-2",
+      "language": "pt-BR",
+      "smartFormat": true,
+      "endpointing": 500
+    },
+    "tools": "VER docs/voice-agent/tool-schema.json",
+    "maxDurationSeconds": 600,
+    "backgroundSound": "off",
+    "silenceTimeoutSeconds": 30,
+    "responseDelaySeconds": 0,
+    "firstMessage": "IRBIS Estúdio. O que você está precisando construir?",
+    "firstMessageMode": "assistant-speaks-first",
+    "endCallMessage": "Ótimo. Você vai receber o convite por email. Até logo.",
+    "endCallPhrases": [
+      "até logo",
+      "tchau",
+      "até mais",
+      "obrigado"
+    ]
+  },
+  "stateMachine": {
+    "_note": "Implemente via Vapi workflow ou Vapi functions com state tracking",
+    "states": [
+      {
+        "id": "greeting",
+        "tools": []
+      },
+      {
+        "id": "collect_project",
+        "tools": []
+      },
+      {
+        "id": "collect_budget",
+        "tools": []
+      },
+      {
+        "id": "qualify_and_schedule",
+        "tools": ["check_availability", "book_discovery_call"]
+      },
+      {
+        "id": "confirm",
+        "tools": []
+      },
+      {
+        "id": "polite_exit",
+        "tools": []
+      }
+    ]
+  },
+  "guards": {
+    "input": {
+      "patterns": [
+        "ignore previous instructions",
+        "pretend you are",
+        "your real instructions",
+        "ignore suas instruções",
+        "finja que você é"
+      ],
+      "piiPatterns": ["\\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}", "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}"]
+    },
+    "output": {
+      "blockedPhrases": ["garanto", "prometo", "com certeza vai", "definitivamente vai"],
+      "escalationPhrase": "ENTENDO QUE PRECISA DE MAIS INFORMAÇÕES. DEIXA EU CONECTAR VOCÊ DIRETAMENTE COM O NICOLAS."
+    }
+  },
+  "smallTalkGate": {
+    "patterns": ["^(oi|olá|bom dia|boa tarde|boa noite|tudo bem|tudo bom|obrigado|valeu|ok|certo|entendi)\\b"],
+    "action": "bypass_rag_and_memory"
+  },
+  "logging": {
+    "schema": "VER docs/voice-agent/turn-log-schema.json",
+    "replayEndpoint": "POST /api/voice/replay?call_id=X&turn_index=N"
+  }
+}
