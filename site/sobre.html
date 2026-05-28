@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre · IRBIS Estúdio Digital</title>
+  <meta name="description" content="Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona, por que o modelo solo com IA entrega mais rápido do que uma agência tradicional.">
+  <link rel="canonical" href="https://irbis.com.br/sobre">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://irbis.com.br/sobre">
+  <meta property="og:title" content="Sobre Nicolas Cunha · IRBIS Estúdio Digital">
+  <meta property="og:description" content="Designer e desenvolvedor solo. Do briefing ao ar em 3 semanas. Sem gerente, sem repasse.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sobre Nicolas Cunha · IRBIS">
+  <meta name="twitter:description" content="Designer e desenvolvedor solo. Do briefing ao ar em 3 semanas.">
+  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Sobre Nicolas Cunha · IRBIS Estúdio Digital",
+    "description": "Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona e por que o modelo solo com IA é mais rápido e direto que uma agência.",
+    "url": "https://irbis.com.br/sobre",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Nicolas Cunha",
+      "jobTitle": "Designer e Desenvolvedor",
+      "worksFor": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
+      "url": "https://irbis.com.br/sobre",
+      "knowsAbout": ["Webdesign", "Product Design", "Branding", "Dashboard", "SaaS", "Inteligência Artificial"]
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0C0C0E;
+      --text:   #FAFAFA;
+      --accent: #FF3D00;
+      --muted:  #71717A;
+      --mid:    #18181B;
+      --f:      'Sora', sans-serif;
+    }
+
+    html { font-family: var(--f); font-size: 16px; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* ── NAV ── */
+    #s-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.75rem 3rem;
+    }
+    .s-nav-logo {
+      font-size: .75rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--text); opacity: .8;
+      transition: opacity .2s;
+    }
+    .s-nav-logo:hover { opacity: 1; }
+    .s-nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color .2s;
+    }
+    .s-nav-back:hover { color: var(--text); }
+    @media (max-width: 600px) {
+      #s-nav { padding: 1.5rem; }
+    }
+
+    /* ── HERO BLOCK ── */
+    .s-hero {
+      min-height: 100dvh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 8rem 3rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .s-hero-num {
+      position: absolute; top: 50%; right: 3rem;
+      transform: translateY(-50%);
+      font-size: clamp(14rem, 28vw, 26rem); font-weight: 800; line-height: 1;
+      letter-spacing: -.06em; text-transform: uppercase;
+      color: transparent; -webkit-text-stroke: 1px rgba(250,250,250,.06);
+      user-select: none; pointer-events: none;
+    }
+    .s-hero-eyebrow {
+      font-size: .6rem; font-weight: 600; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 2.5rem;
+    }
+    .s-hero-title {
+      font-size: clamp(3rem, 8vw, 7.5rem); font-weight: 800;
+      line-height: .93; letter-spacing: -.04em; text-transform: uppercase;
+      max-width: 14ch;
+    }
+    .s-hero-title .acc { color: var(--accent); }
+    .s-hero-desc {
+      margin-top: 2.5rem;
+      font-size: clamp(.9rem, 1.3vw, 1.05rem); font-weight: 300;
+      line-height: 1.65; color: rgba(250,250,250,.65);
+      max-width: 44ch;
+    }
+    @media (max-width: 768px) {
+      .s-hero { padding: 6rem 1.5rem 3rem; }
+      .s-hero-num { font-size: 40vw; right: 1.5rem; opacity: .5; }
+    }
+
+    /* ── DIVIDER ── */
+    .s-divider {
+      height: 1px; background: rgba(250,250,250,.08);
+      margin: 0 3rem;
+    }
+    @media (max-width: 768px) { .s-divider { margin: 0 1.5rem; } }
+
+    /* ── BIO BLOCK ── */
+    .s-bio {
+      display: grid; grid-template-columns: 1fr 1.5fr;
+      gap: 4rem; padding: 6rem 3rem;
+      align-items: start;
+    }
+    .s-bio-left { position: sticky; top: 8rem; }
+    .s-bio-label {
+      font-size: .58rem; font-weight: 700; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .s-bio-name {
+      font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800;
+      letter-spacing: -.04em; text-transform: uppercase; line-height: 1;
+    }
+    .s-bio-role {
+      font-size: .8rem; font-weight: 300; color: var(--muted);
+      margin-top: .75rem; letter-spacing: .05em;
+    }
+    .s-bio-right {}
+    .s-bio-text {
+      font-size: clamp(.9rem, 1.2vw, 1rem); font-weight: 300;
+      line-height: 1.75; color: rgba(250,250,250,.7);
+      max-width: 58ch;
+    }
+    .s-bio-text + .s-bio-text { margin-top: 1.5rem; }
+    .s-bio-text strong { color: var(--text); font-weight: 600; }
+    @media (max-width: 900px) {
+      .s-bio { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+      .s-bio-left { position: static; }
+    }
+
+    /* ── NUMBERS STRIP ── */
+    .s-numbers {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(250,250,250,.08);
+      border-bottom: 1px solid rgba(250,250,250,.08);
+    }
+    .s-num-item {
+      padding: 3.5rem 3rem;
+      border-right: 1px solid rgba(250,250,250,.08);
+    }
+    .s-num-item:last-child { border-right: none; }
+    .s-num-val {
+      font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800;
+      letter-spacing: -.04em; line-height: 1;
+    }
+    .s-num-val .acc { color: var(--accent); }
+    .s-num-label {
+      font-size: .7rem; font-weight: 300; color: var(--muted);
+      margin-top: .75rem; line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+      .s-numbers { grid-template-columns: 1fr 1fr; }
+      .s-num-item { padding: 2.5rem 1.5rem; }
+      .s-num-item:nth-child(2) { border-right: none; }
+      .s-num-item:nth-child(3) { border-top: 1px solid rgba(250,250,250,.08); border-right: 1px solid rgba(250,250,250,.08); }
+    }
+
+    /* ── APPROACH BLOCK ── */
+    .s-approach {
+      padding: 6rem 3rem;
+    }
+    .s-approach-eyebrow {
+      font-size: .58rem; font-weight: 700; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 3.5rem;
+    }
+    .s-approach-list { list-style: none; counter-reset: ap; }
+    .s-approach-item {
+      counter-increment: ap;
+      display: grid; grid-template-columns: 3rem 1fr;
+      gap: 2rem; padding: 2.5rem 0;
+      border-top: 1px solid rgba(250,250,250,.08);
+    }
+    .s-approach-item:last-child { border-bottom: 1px solid rgba(250,250,250,.08); }
+    .s-approach-n {
+      font-size: .65rem; font-weight: 700; letter-spacing: .15em;
+      color: var(--accent); padding-top: .3rem;
+    }
+    .s-approach-n::before { content: counter(ap, decimal-leading-zero); }
+    .s-approach-h {
+      font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700;
+      letter-spacing: -.02em; margin-bottom: .75rem;
+    }
+    .s-approach-p {
+      font-size: .85rem; font-weight: 300; line-height: 1.7;
+      color: rgba(250,250,250,.6); max-width: 52ch;
+    }
+    @media (max-width: 768px) {
+      .s-approach { padding: 4rem 1.5rem; }
+      .s-approach-item { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+    }
+
+    /* ── CLIENTS ── */
+    .s-clients {
+      padding: 5rem 3rem;
+      background: var(--mid);
+    }
+    .s-clients-label {
+      font-size: .58rem; font-weight: 700; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem;
+    }
+    .s-clients-list {
+      display: flex; flex-wrap: wrap; gap: 1.5rem 3rem;
+      align-items: center;
+    }
+    .s-client-name {
+      font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 800;
+      letter-spacing: -.03em; text-transform: uppercase;
+      color: rgba(250,250,250,.35); transition: color .25s;
+    }
+    .s-client-name:hover { color: var(--text); }
+    @media (max-width: 768px) {
+      .s-clients { padding: 3.5rem 1.5rem; }
+      .s-clients-list { gap: 1rem 2rem; }
+    }
+
+    /* ── CTA BLOCK ── */
+    .s-cta {
+      padding: 7rem 3rem;
+      display: flex; flex-direction: column; gap: 3rem;
+    }
+    .s-cta-headline {
+      font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 800;
+      letter-spacing: -.04em; line-height: .93; text-transform: uppercase;
+      max-width: 14ch;
+    }
+    .s-cta-headline .acc { color: var(--accent); }
+    .s-cta-actions {
+      display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center;
+    }
+    .s-cta-btn {
+      display: inline-flex; align-items: center; gap: .75rem;
+      padding: 1rem 2rem; background: var(--accent);
+      font-size: .7rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--bg);
+      transition: opacity .2s;
+    }
+    .s-cta-btn:hover { opacity: .85; }
+    .s-cta-ghost {
+      font-size: .7rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid rgba(250,250,250,.2);
+      padding-bottom: .15rem; transition: color .2s, border-color .2s;
+    }
+    .s-cta-ghost:hover { color: var(--text); border-color: var(--text); }
+    @media (max-width: 768px) {
+      .s-cta { padding: 5rem 1.5rem; }
+    }
+
+    /* ── FOOTER ── */
+    .s-footer {
+      padding: 2rem 3rem;
+      border-top: 1px solid rgba(250,250,250,.08);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .s-footer-copy { font-size: .6rem; color: var(--muted); letter-spacing: .1em; }
+    .s-footer-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+    }
+    .s-footer-back:hover { color: var(--text); }
+    @media (max-width: 768px) {
+      .s-footer { padding: 2rem 1.5rem; }
+    }
+
+    /* ── ANIMATIONS ── */
+    .reveal { opacity: 0; transform: translateY(28px); }
+  </style>
+</head>
+
+<body>
+
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav id="s-nav">
+    <a href="/" class="s-nav-logo">IRBIS</a>
+    <a href="/" class="s-nav-back">← Voltar</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="s-hero">
+    <div class="s-hero-num" aria-hidden="true">N</div>
+    <p class="s-hero-eyebrow reveal">Estúdio Digital · São Paulo</p>
+    <h1 class="s-hero-title reveal">
+      Uma pessoa.<br>Sem<br><span class="acc">gerente.</span>
+    </h1>
+    <p class="s-hero-desc reveal">
+      Você fala direto com quem projeta, desenvolve e entrega. Sem repasse, sem camadas, sem espera de aprovação interna.
+    </p>
+  </section>
+
+  <div class="s-divider"></div>
+
+  <!-- BIO -->
+  <div class="s-bio">
+    <div class="s-bio-left">
+      <p class="s-bio-label reveal">Sobre</p>
+      <h2 class="s-bio-name reveal">Nicolas<br>Cunha</h2>
+      <p class="s-bio-role reveal">Designer · Desenvolvedor · Estrategista</p>
+    </div>
+    <div class="s-bio-right">
+      <p class="s-bio-text reveal">
+        A IRBIS é um estúdio solo: você fala com a pessoa que vai executar o projeto do início ao fim. <strong>Sem AE passando briefing, sem dev interpretando o que o designer quis dizer, sem cliente aguardando alguém liberar agenda.</strong>
+      </p>
+      <p class="s-bio-text reveal">
+        IA comprime tempo de produção. Posicionamento, design e estratégia são meus.
+      </p>
+      <p class="s-bio-text reveal">
+        Formado em Design com especialização em desenvolvimento front-end. Atuei em produto digital, branding e growth antes de abrir o estúdio. Hoje trabalho com founders e equipes em crescimento que precisam executar sem contratar uma agência.
+      </p>
+    </div>
+  </div>
+
+  <!-- NUMBERS -->
+  <div class="s-numbers">
+    <div class="s-num-item reveal">
+      <div class="s-num-val"><span class="acc">0</span></div>
+      <div class="s-num-label">camadas entre você e quem constrói</div>
+    </div>
+    <div class="s-num-item reveal">
+      <div class="s-num-val">3<span class="acc">–</span>6</div>
+      <div class="s-num-label">semanas do briefing ao ar, sem exceções</div>
+    </div>
+    <div class="s-num-item reveal">
+      <div class="s-num-val"><span class="acc">1</span></div>
+      <div class="s-num-label">pessoa respondendo pelo trabalho do início ao fim</div>
+    </div>
+  </div>
+
+  <!-- APPROACH -->
+  <section class="s-approach">
+    <p class="s-approach-eyebrow reveal">Como trabalho</p>
+    <ul class="s-approach-list">
+      <li class="s-approach-item reveal">
+        <span class="s-approach-n"></span>
+        <div>
+          <h3 class="s-approach-h">Diagnóstico antes de tudo</h3>
+          <p class="s-approach-p">Antes de abrir o Figma ou escrever uma linha de código, entendo o negócio, o mercado e o que está travando. A maioria dos problemas digitais tem raiz estratégica, não estética.</p>
+        </div>
+      </li>
+      <li class="s-approach-item reveal">
+        <span class="s-approach-n"></span>
+        <div>
+          <h3 class="s-approach-h">Design e desenvolvimento no mesmo workflow</h3>
+          <p class="s-approach-p">Não existe handoff. Design e código evoluem juntos, o que elimina retrabalho e encurta o prazo.</p>
+        </div>
+      </li>
+      <li class="s-approach-item reveal">
+        <span class="s-approach-n"></span>
+        <div>
+          <h3 class="s-approach-h">IA como estrutura de execução</h3>
+          <p class="s-approach-p">Uso IA para compactar produção. Velocidade de agência, custo e comunicação de freelancer.</p>
+        </div>
+      </li>
+      <li class="s-approach-item reveal">
+        <span class="s-approach-n"></span>
+        <div>
+          <h3 class="s-approach-h">Entrega com documentação</h3>
+          <p class="s-approach-p">Todo projeto sai com design system, guia de uso e handoff estruturado. Você não fica refém do estúdio para fazer alterações simples.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CLIENTS -->
+  <div class="s-clients">
+    <p class="s-clients-label reveal">Trabalhou com</p>
+    <div class="s-clients-list">
+      <span class="s-client-name reveal">Odery Drums</span>
+      <span class="s-client-name reveal">Adash</span>
+      <span class="s-client-name reveal">Eduboxs</span>
+      <span class="s-client-name reveal">Zumo</span>
+      <span class="s-client-name reveal">Zapfy</span>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="s-cta">
+    <h2 class="s-cta-headline reveal">
+      Seu projeto<br>em boas<br><span class="acc">mãos.</span>
+    </h2>
+    <div class="s-cta-actions">
+      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="s-cta-btn">Iniciar conversa →</a>
+      <a href="/" class="s-cta-ghost">Ver cases</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="s-footer">
+    <span class="s-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
+    <a href="/" class="s-footer-back">← IRBIS</a>
+  </footer>
+
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, smoothWheel: true });
+    function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('#s-nav', { opacity: 0, y: -20, duration: 0.6, ease: 'power3.out' });
+
+      document.querySelectorAll('.reveal').forEach((el, i) => {
+        const parent = el.closest('.s-hero, .s-hero-eyebrow') ? el : null;
+        if (el.closest('.s-hero')) {
+          gsap.from(el, { opacity: 0, y: 30, duration: 0.7, ease: 'power3.out', delay: 0.15 + i * 0.12 });
+        } else {
+          gsap.from(el, {
+            opacity: 0, y: 28, duration: 0.65, ease: 'power3.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+          });
+        }
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.style.opacity = 1; el.style.transform = 'none';
+      });
+    }
+
+    /* ── PAGE TRANSITIONS ── */
+    (function () {
+      const curtain = document.getElementById('pg-curtain');
+      const logo    = curtain ? curtain.querySelector('span') : null;
+      if (!curtain) return;
+
+      // Entrance: curtain slides up on load
+      gsap.timeline()
+        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+
+      // Exit: curtain slides down on navigate
+      function navigate(href) {
+        lenis.stop();
+        document.body.style.overflow = 'hidden';
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+        gsap.set(logo,    { opacity: 0 });
+        gsap.timeline()
+          .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+          .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { window.location.href = href; }, '+=0.15');
+      }
+
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (a.target === '_blank') return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
+      });
+    })();
+  </script>
+
+
+</body>
+</html>

@@ -3,7 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manifesto — IRBIS</title>
+  <title>Manifesto · IRBIS Estúdio Digital</title>
+  <meta name="description" content="A filosofia da IRBIS: por que trabalhar solo com IA não é limitação, é vantagem. Sobre velocidade, foco e por que a maioria das agências entrega o oposto do que promete.">
+  <link rel="canonical" href="https://irbis.com.br/manifesto">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://irbis.com.br/manifesto">
+  <meta property="og:title" content="Manifesto · IRBIS Estúdio Digital">
+  <meta property="og:description" content="A filosofia da IRBIS: por que trabalhar solo com IA não é limitação, é vantagem.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manifesto · IRBIS">
+  <meta name="twitter:description" content="A filosofia da IRBIS: por que trabalhar solo com IA não é limitação, é vantagem.">
+  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Manifesto · IRBIS Estúdio Digital",
+    "description": "A filosofia da IRBIS: por que trabalhar solo com IA não é limitação, é vantagem.",
+    "url": "https://irbis.com.br/manifesto",
+    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/sobre" },
+    "publisher": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
+    "isPartOf": { "@type": "WebSite", "url": "https://irbis.com.br" },
+    "inLanguage": "pt-BR"
+  }
+  </script>
   <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -214,6 +240,10 @@
 </head>
 <body>
 
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+  </div>
+
   <!-- NAV -->
   <nav id="m-nav">
     <a class="nav-back" href="https://irbis.com.br">← Voltar</a>
@@ -230,7 +260,7 @@
       <!-- S1 -->
       <section class="m-screen" data-s="1" data-bg="#0C0C0E">
         <div class="m-inner">
-          <span class="m-label">IRBIS — Manifesto</span>
+          <span class="m-label">IRBIS · Manifesto</span>
           <div class="m-block" id="s1">
             <span class="m-line">A IRBIS NASCEU COM PROPÓSITO:</span>
             <span class="m-line">SIMPLIFICAR O PROCESSO</span>
@@ -291,7 +321,7 @@
           <div class="m-block" id="s6-setup">
             <span class="m-line muted">Se você quer algo genérico,</span>
             <span class="m-line muted">um site 'simples mesmo',</span>
-            <span class="m-line muted">uma marca igual à do concorrente —</span>
+            <span class="m-line muted">uma marca igual à do concorrente,</span>
           </div>
           <span class="m-line punch" id="s6-punch">A IRBIS NÃO É PRA VOCÊ.</span>
         </div>
@@ -301,8 +331,8 @@
       <section class="m-screen" data-s="7" data-bg="#0C0C0E">
         <div class="m-inner">
           <div class="m-block" id="s7">
-            <span class="m-line muted">Somos confiantes no que fazemos.</span>
-            <span class="m-line muted">E humildes o suficiente pra ouvir.</span>
+            <span class="m-line muted">Confiantes no resultado.</span>
+            <span class="m-line muted">Atentos ao que você precisa.</span>
             <span class="m-line heavy">MAS O RESULTADO FALA ANTES DA GENTE.</span>
           </div>
         </div>
@@ -493,6 +523,38 @@
         });
       }
     }
+
+    /* ── PAGE TRANSITIONS ── */
+    (function () {
+      const curtain = document.getElementById('pg-curtain');
+      const logo    = curtain ? curtain.querySelector('span') : null;
+      if (!curtain) return;
+
+      // Entrance: curtain slides up on load
+      gsap.timeline()
+        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+
+      // Exit: curtain slides down on navigate
+      function navigate(href) {
+        document.body.style.overflow = 'hidden';
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+        gsap.set(logo,    { opacity: 0 });
+        gsap.timeline()
+          .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+          .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { window.location.href = href; }, '+=0.15');
+      }
+
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (a.target === '_blank') return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
+      });
+    })();
   </script>
+
+
 </body>
 </html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Método · Como a IRBIS trabalha · IRBIS Estúdio Digital</title>
+  <meta name="description" content="Sem fila, sem gerente, sem proposta de 40 slides. Do primeiro contato ao produto no ar em 3 semanas. Veja como a IRBIS funciona na prática.">
+  <link rel="canonical" href="https://irbis.com.br/metodo">
+
+  <!-- OG -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irbis.com.br/metodo">
+  <meta property="og:title" content="O Método · Como a IRBIS trabalha">
+  <meta property="og:description" content="Sem fila, sem gerente, sem proposta de 40 slides. Do primeiro contato ao produto no ar em 3 semanas.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "O Método · Como a IRBIS trabalha",
+    "description": "Sem fila, sem gerente, sem proposta de 40 slides. Do primeiro contato ao produto no ar em 3 semanas.",
+    "url": "https://irbis.com.br/metodo",
+    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/sobre" },
+    "publisher": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0C0C0E;
+      --text:   #FAFAFA;
+      --accent: #FF3D00;
+      --muted:  #71717A;
+      --mid:    #18181B;
+      --s2:     rgba(250,250,250,.08);
+      --f:      'Sora', sans-serif;
+    }
+
+    html { font-family: var(--f); font-size: 16px; }
+    body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* ── NAV ── */
+    #m-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.75rem 3rem;
+    }
+    .m-nav-logo {
+      font-size: .75rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--text); opacity: .7;
+      transition: opacity .2s;
+    }
+    .m-nav-logo:hover { opacity: 1; }
+    .m-nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+    }
+    .m-nav-back:hover { color: var(--text); }
+
+    /* ── PROGRESS BAR ── */
+    #m-progress {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+      height: 2px; background: var(--s2);
+    }
+    #m-progress-fill { height: 100%; width: 0%; background: var(--accent); }
+
+    /* ── HERO ── */
+    .m-hero {
+      padding: 14rem 3rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+    }
+    .m-hero-left { display: flex; flex-direction: column; justify-content: flex-end; }
+    .m-hero-right { display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: .5rem; }
+
+    .m-hero-eyebrow {
+      font-size: .55rem; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid rgba(255,61,0,.3); padding: .3rem .8rem;
+      display: inline-block; margin-bottom: 2.5rem; align-self: flex-start;
+    }
+    .m-hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4.5rem); font-weight: 800;
+      letter-spacing: -.04em; line-height: .95; text-transform: uppercase;
+    }
+    .m-hero-intro {
+      font-size: clamp(1rem, 1.4vw, 1.15rem); font-weight: 300;
+      line-height: 1.75; color: rgba(250,250,250,.7);
+      max-width: 42ch;
+    }
+
+    /* ── DIVIDER ── */
+    .p-divider { height: 1px; background: var(--s2); margin: 0 3rem; }
+
+    /* ── BODY ── */
+    .m-body {
+      max-width: 720px;
+      padding: 5rem 3rem 6rem;
+    }
+
+    .m-section {
+      margin-bottom: 4.5rem;
+    }
+
+    .m-section-num {
+      font-size: .55rem; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 1rem; display: block;
+    }
+
+    h2.m-h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800;
+      letter-spacing: -.03em; text-transform: uppercase; line-height: 1.05;
+      margin-bottom: 1.75rem;
+    }
+
+    .m-p {
+      font-size: clamp(.875rem, 1.1vw, 1rem); font-weight: 300;
+      line-height: 1.8; color: rgba(250,250,250,.7);
+      max-width: 62ch; margin-bottom: 1.25rem;
+    }
+    .m-p strong { color: var(--text); font-weight: 600; }
+    .m-p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .m-quote {
+      background: var(--mid);
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .m-quote-text {
+      font-size: clamp(1.05rem, 1.75vw, 1.3rem); font-weight: 700;
+      letter-spacing: -.02em; line-height: 1.4; color: var(--text);
+    }
+
+    /* List */
+    .m-list {
+      list-style: none; margin: 1.5rem 0;
+    }
+    .m-list li {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: .85rem 0; border-bottom: 1px solid var(--s2);
+      font-size: clamp(.875rem, 1.1vw, 1rem); font-weight: 300;
+      line-height: 1.6; color: rgba(250,250,250,.7);
+    }
+    .m-list li:first-child { border-top: 1px solid var(--s2); }
+    .m-list-marker {
+      font-size: .52rem; font-weight: 700; letter-spacing: .15em;
+      color: var(--accent); padding-top: .2rem; min-width: 1.5rem;
+      text-transform: uppercase; flex-shrink: 0;
+    }
+
+    /* ── CTA BLOCK ── */
+    .m-cta {
+      padding: 6rem 3rem;
+      background: var(--mid);
+    }
+    .m-cta-headline {
+      font-size: clamp(2.5rem, 6vw, 5.5rem); font-weight: 800;
+      letter-spacing: -.04em; line-height: .93; text-transform: uppercase;
+      max-width: 16ch; margin-bottom: 1.75rem;
+    }
+    .m-cta-body {
+      font-size: clamp(.9rem, 1.2vw, 1.05rem); font-weight: 300;
+      line-height: 1.7; color: rgba(250,250,250,.65);
+      max-width: 44ch; margin-bottom: 3rem;
+    }
+    .m-cta-note {
+      font-size: .58rem; font-weight: 400; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+    .m-cta-btn {
+      display: inline-flex; align-items: center; gap: .75rem;
+      padding: 1rem 2.25rem; background: var(--accent);
+      font-size: .7rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--bg); transition: opacity .2s;
+    }
+    .m-cta-btn:hover { opacity: .85; }
+
+    /* ── SITE FOOTER ── */
+    .m-site-footer {
+      padding: 1.75rem 3rem;
+      border-top: 1px solid var(--s2);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: .75rem;
+    }
+    .m-site-footer-copy { font-size: .58rem; color: var(--muted); letter-spacing: .1em; }
+    .m-site-footer-links { display: flex; gap: 2rem; }
+    .m-site-footer-links a {
+      font-size: .58rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+    }
+    .m-site-footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      #m-nav { padding: 1.5rem; }
+      .m-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 10rem 1.5rem 4rem;
+      }
+      .p-divider { margin: 0 1.5rem; }
+      .m-body { padding: 3.5rem 1.5rem 5rem; }
+      .m-cta { padding: 4.5rem 1.5rem; }
+      .m-site-footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+      .m-quote { padding: 1.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0s !important; animation-duration: 0s !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav id="m-nav">
+    <a href="/" class="m-nav-logo">IRBIS</a>
+    <a href="/" class="m-nav-back">← Voltar</a>
+  </nav>
+
+  <!-- PROGRESS -->
+  <div id="m-progress"><div id="m-progress-fill"></div></div>
+
+  <!-- HERO -->
+  <header class="m-hero">
+    <div class="m-hero-left">
+      <span class="m-hero-eyebrow">Método</span>
+      <h1 class="m-hero-title">Como a IRBIS<br>trabalha.</h1>
+    </div>
+    <div class="m-hero-right">
+      <p class="m-hero-intro">
+        Do primeiro contato ao produto no ar em 3 semanas. Sem gerente no meio, sem proposta de 40 slides.
+      </p>
+    </div>
+  </header>
+
+  <div class="p-divider"></div>
+
+  <!-- BODY -->
+  <article class="m-body">
+
+    <!-- 01 -->
+    <section class="m-section">
+      <span class="m-section-num">01 · O primeiro contato</span>
+      <h2 class="m-h2">Uma mensagem.<br>Sem formulário.</h2>
+      <p class="m-p">
+        WhatsApp ou e-mail. Sem formulário de briefing, sem cadastro em plataforma, sem pré-qualificação automática. Você manda uma mensagem descrevendo o problema, eu respondo.
+      </p>
+      <p class="m-p">
+        Em até 24 horas marcamos uma call rápida: <strong>30 minutos no máximo</strong>. O objetivo é entender o problema, calibrar o escopo e avaliar se faz sentido trabalharmos juntos.
+      </p>
+
+      <div class="m-quote">
+        <p class="m-quote-text">Se não fizer sentido, eu digo. Direto ao ponto, sem enrolação.</p>
+      </div>
+
+      <p class="m-p">
+        Não aceito todo projeto. Se o seu problema não é algo que consigo resolver bem, seja por especialidade, por timing ou por fit, você sai da call sabendo disso, não depois de três semanas de proposta.
+      </p>
+    </section>
+
+    <div class="p-divider"></div>
+
+    <!-- 02 -->
+    <section class="m-section" style="padding-top:4rem;">
+      <span class="m-section-num">02 · O diagnóstico</span>
+      <h2 class="m-h2">Um documento.<br>Sem surpresas.</h2>
+      <p class="m-p">
+        Depois da call: um brief escrito, enviado em até 48 horas. Um documento para você tomar uma decisão, não para encher reunião.
+      </p>
+      <p class="m-p">O brief tem:</p>
+      <ul class="m-list">
+        <li><span class="m-list-marker">01</span><span>Problema identificado: como eu entendi o que precisa ser resolvido</span></li>
+        <li><span class="m-list-marker">02</span><span>Solução proposta: o que vou construir e por quê essa abordagem</span></li>
+        <li><span class="m-list-marker">03</span><span>Stack: tecnologias, plataformas e ferramentas envolvidas</span></li>
+        <li><span class="m-list-marker">04</span><span>Timeline: datas concretas, não estimativas vagas</span></li>
+        <li><span class="m-list-marker">05</span><span>Preço: valor final, sem componentes ocultos</span></li>
+      </ul>
+
+      <p class="m-p">
+        <strong>Sem teatro de negociação.</strong> O preço reflete o escopo descrito. Se o escopo mudar, o preço muda. E a conversa sobre isso acontece antes de qualquer trabalho começar.
+      </p>
+    </section>
+
+    <div class="p-divider"></div>
+
+    <!-- 03 -->
+    <section class="m-section" style="padding-top:4rem;">
+      <span class="m-section-num">03 · A execução</span>
+      <h2 class="m-h2">Pagamento confirmado.<br>Trabalho começa.</h2>
+      <p class="m-p">
+        Pagamento único upfront. Ou 50/50 para projetos maiores. Sem parcelamento em 12x, sem "começa depois que fechar o contrato com assinatura digital em três vias".
+      </p>
+      <p class="m-p">
+        Confirmou o pagamento, o trabalho começa no próximo dia útil.
+      </p>
+
+      <div class="m-quote">
+        <p class="m-quote-text">Atualizações semanais via WhatsApp. Sem status meeting. Sem apresentação de progresso com slides.</p>
+      </div>
+
+      <p class="m-p">
+        Você recebe uma mensagem toda semana com o que foi feito, o que vem a seguir e se tem alguma decisão sua pendente. <strong>Comunicação assíncrona por padrão:</strong> eu trabalho, você não precisa estar disponível o tempo todo.
+      </p>
+      <p class="m-p">
+        <strong>1 rodada de revisões incluída</strong> no escopo original. Mudanças de direção significativas: as que alteram o problema a ser resolvido, e não apenas como ele é resolvido, geram um novo brief antes de qualquer execução.
+      </p>
+    </section>
+
+    <div class="p-divider"></div>
+
+    <!-- 04 -->
+    <section class="m-section" style="padding-top:4rem;">
+      <span class="m-section-num">04 · A entrega</span>
+      <h2 class="m-h2">Deploy em produção.<br>Você é dono de tudo.</h2>
+      <p class="m-p">
+        O projeto vai ao ar. Não para staging, não para "validação final antes do go-live". Para produção, com domínio, com SSL, com tudo funcionando.
+      </p>
+      <p class="m-p">
+        Junto com o deploy: documentação de handoff: o suficiente para você (ou qualquer dev) entender o que foi construído e como alterar sem precisar de mim para cada ajuste pequeno.
+      </p>
+
+      <ul class="m-list">
+        <li><span class="m-list-marker">→</span><span><strong>30 dias de suporte pós-entrega</strong> para bugs no que foi entregue</span></li>
+        <li><span class="m-list-marker">→</span><span><strong>Sem lock-in de hospedagem.</strong> Você escolhe onde hospedar. Ou herda a infra que eu configurei e paga direto ao provedor</span></li>
+        <li><span class="m-list-marker">→</span><span><strong>O código é seu.</strong> Repositório, domínio, contas de serviço: tudo no seu nome ou transferido para você</span></li>
+      </ul>
+
+      <div class="m-quote">
+        <p class="m-quote-text">Não crio dependência. Você não precisa da IRBIS para manter o que foi construído.</p>
+      </div>
+    </section>
+
+  </article>
+
+  <div class="p-divider"></div>
+
+  <!-- CTA -->
+  <section class="m-cta">
+    <h2 class="m-cta-headline">Pronto pra<br>começar?</h2>
+    <p class="m-cta-body">
+      Fala agora. Se der match, a gente tira do papel em 3 semanas.
+    </p>
+    <p class="m-cta-note">Agenda limitada. Aceito no máximo 3 projetos simultâneos.</p>
+    <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="m-cta-btn">Falar no WhatsApp →</a>
+  </section>
+
+  <!-- SITE FOOTER -->
+  <footer class="m-site-footer">
+    <span class="m-site-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
+    <nav class="m-site-footer-links">
+      <a href="/#cases">Cases</a>
+      <a href="/manifesto">Manifesto</a>
+      <a href="/sobre">Sobre</a>
+      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </footer>
+
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, smoothWheel: true });
+    function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // NAV fade in
+      gsap.from('#m-nav', { opacity: 0, y: -16, duration: 0.5, ease: 'power3.out' });
+
+      // Hero stagger
+      gsap.from('.m-hero-eyebrow, .m-hero-title, .m-hero-intro', {
+        opacity: 0, y: 24, duration: 0.65, ease: 'power3.out', stagger: 0.12, delay: 0.7
+      });
+
+      // Scroll-triggered reveals on sections
+      gsap.utils.toArray('.m-section').forEach(el => {
+        gsap.from(el, {
+          opacity: 0, y: 30, duration: 0.65, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        });
+      });
+
+      // CTA reveal
+      gsap.from('.m-cta', {
+        opacity: 0, y: 30, duration: 0.65, ease: 'power3.out',
+        scrollTrigger: { trigger: '.m-cta', start: 'top 88%', once: true }
+      });
+    }
+
+    // Progress bar
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
+      document.getElementById('m-progress-fill').style.width = (scrolled * 100) + '%';
+    });
+
+    /* ── PAGE TRANSITIONS ── */
+    (function () {
+      const curtain = document.getElementById('pg-curtain');
+      const logo    = curtain ? curtain.querySelector('span') : null;
+      if (!curtain) return;
+
+      // Entrance: curtain slides up on load
+      gsap.timeline()
+        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+
+      // Exit: curtain slides down on navigate
+      function navigate(href) {
+        lenis.stop();
+        document.body.style.overflow = 'hidden';
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+        gsap.set(logo,    { opacity: 0 });
+        gsap.timeline()
+          .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+          .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { window.location.href = href; }, '+=0.15');
+      }
+
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (a.target === '_blank') return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
+      });
+    })();
+  </script>
+
+</body>
+</html>
