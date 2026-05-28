@@ -12,8 +12,7 @@
     },
     "voice": {
       "provider": "11labs",
-      "voiceId": "INSERIR_VOICE_ID",
-      "_note": "Testar a voz com o system prompt antes de commitar. Voz direta, sem exageros."
+      "voiceId": "tLjRsQAetUjtGMr5t3y3",
     },
     "transcriber": {
       "provider": "deepgram",
