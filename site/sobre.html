@@ -469,6 +469,13 @@
       });
     }
 
+    // Fallback: força visibilidade após 2s caso animações não disparem
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.style.opacity = 1; el.style.transform = 'none';
+      });
+    }, 2000);
+
     /* ── PAGE TRANSITIONS ── */
     (function () {
       const curtain = document.getElementById('pg-curtain');
