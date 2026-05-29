@@ -13,6 +13,9 @@
     { "source": "/sobre",              "destination": "/sobre.html" },
     { "source": "/processo/adash",     "destination": "/processo/adash.html" },
     { "source": "/processo",           "destination": "/processo/adash.html" },
-    { "source": "/obrigado",           "destination": "/obrigado.html" }
+    { "source": "/vs-agencia",          "destination": "/vs-agencia.html" },
+    { "source": "/para/saas",           "destination": "/para/saas.html" },
+    { "source": "/para/startups",       "destination": "/para/startups.html" },
+    { "source": "/obrigado",            "destination": "/obrigado.html" }
   ]
 }
