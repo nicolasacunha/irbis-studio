@@ -12,6 +12,7 @@
     { "source": "/manifesto",       "destination": "/manifesto.html" },
     { "source": "/sobre",              "destination": "/sobre.html" },
     { "source": "/processo/adash",     "destination": "/processo/adash.html" },
-    { "source": "/processo",           "destination": "/processo/adash.html" }
+    { "source": "/processo",           "destination": "/processo/adash.html" },
+    { "source": "/obrigado",           "destination": "/obrigado.html" }
   ]
 }
