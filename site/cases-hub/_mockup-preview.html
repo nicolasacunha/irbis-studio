@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRBIS — Cases Layout + Copy · Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0C0C0E;
+      --s1:     #18181B;
+      --s2:     #27272A;
+      --accent: #FF3D00;
+      --text:   #FAFAFA;
+      --muted:  #71717A;
+      --f:      'Sora', sans-serif;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { background: var(--bg); scroll-behavior: smooth; }
+    body { font-family: var(--f); color: var(--text); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ───── MOCK LABEL ───── */
+    .mock-banner {
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      padding: .6rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mock-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .mock-nav a {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--bg);
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(12,12,14,.3);
+    }
+
+    /* ───── SECTION: CASES GRID ───── */
+    #cases {
+      padding: 6rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid var(--s2);
+      margin-bottom: 3rem;
+    }
+    .section-title {
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+    .section-sub {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .section-cta {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--s2);
+      padding-bottom: .15rem;
+      transition: color .2s, border-color .2s;
+    }
+    .section-cta:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── Grid ── */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: .75rem;
+    }
+
+    /* ── Card base ── */
+    .case-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      background: var(--s1);
+      cursor: pointer;
+    }
+
+    /* First card: full width, taller */
+    .case-card:first-child {
+      grid-column: span 2;
+      aspect-ratio: 21 / 9;
+    }
+
+    /* Cards 2 & 3: half width */
+    .case-card:not(:first-child) {
+      aspect-ratio: 16 / 10;
+    }
+
+    /* ── Gradient placeholder backgrounds ── */
+    .case-bg {
+      position: absolute;
+      inset: 0;
+      transition: transform .6s ease, opacity .3s;
+    }
+    .case-card:hover .case-bg { transform: scale(1.04); opacity: .9; }
+
+    /* EForce: dark blue-purple industrial */
+    .case-card:nth-child(1) .case-bg {
+      background: linear-gradient(135deg,
+        #0f0f14 0%,
+        #1a1a2e 30%,
+        #16213e 60%,
+        #0f0f14 100%
+      );
+    }
+    /* EForce accent detail */
+    .case-card:nth-child(1) .case-bg::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 55%; height: 80%;
+      background: radial-gradient(ellipse at 80% 90%, rgba(255,61,0,.12) 0%, transparent 65%);
+    }
+
+    /* Adash: amber/warm dark */
+    .case-card:nth-child(2) .case-bg {
+      background: linear-gradient(135deg,
+        #0f0f0a 0%,
+        #1c1a0f 40%,
+        #201d10 70%,
+        #0f0f0a 100%
+      );
+    }
+    .case-card:nth-child(2) .case-bg::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 60%; height: 60%;
+      background: radial-gradient(ellipse at 70% 20%, rgba(255,140,0,.10) 0%, transparent 65%);
+    }
+
+    /* Slot 3: neutral */
+    .case-card:nth-child(3) .case-bg {
+      background: linear-gradient(135deg, #111113 0%, #1d1d20 100%);
+    }
+
+    /* ── Ghost device / UI deco inside card ── */
+    .case-deco {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .case-deco-text {
+      font-size: clamp(5rem, 14vw, 12rem);
+      font-weight: 800;
+      letter-spacing: -.08em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,.04);
+      user-select: none;
+      line-height: 1;
+    }
+    .case-card:nth-child(1) .case-deco-text { font-size: clamp(8rem, 18vw, 18rem); }
+
+    /* ── Top overlay: category + year ── */
+    .case-top {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(to bottom, rgba(12,12,14,.75) 0%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 2;
+    }
+    .case-category {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .case-year {
+      font-size: .52rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,.4);
+    }
+
+    /* ── Bottom overlay: name + type + arrow ── */
+    .case-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.75rem 2rem;
+      background: linear-gradient(to top, rgba(12,12,14,.9) 0%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      z-index: 2;
+    }
+    .case-info {}
+    .case-name {
+      font-size: clamp(1.6rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: .3rem;
+      transition: color .2s;
+    }
+    .case-card:not(:first-child) .case-name {
+      font-size: clamp(1.2rem, 2.5vw, 2rem);
+    }
+    .case-card:hover .case-name { color: var(--text); }
+    .case-type {
+      font-size: .55rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .case-arrow {
+      font-size: 1.1rem;
+      color: var(--muted);
+      transition: color .25s, transform .25s;
+      flex-shrink: 0;
+    }
+    .case-card:hover .case-arrow {
+      color: var(--accent);
+      transform: translate(5px, -5px);
+    }
+
+    /* ── Hover border ── */
+    .case-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      transition: border-color .3s;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .case-card:hover::after { border-color: rgba(255,61,0,.25); }
+
+    /* ───── SECTION: COPY PROPOSAL ───── */
+    #copy {
+      padding: 6rem 4rem;
+      border-top: 1px solid var(--s2);
+      background: var(--s1);
+    }
+    .copy-intro {
+      margin-bottom: 5rem;
+    }
+    .copy-eyebrow {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .copy-heading {
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      max-width: 18ch;
+    }
+    .copy-heading .acc { color: var(--accent); }
+
+    .copy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--s2);
+    }
+    .copy-block {
+      background: var(--s1);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .copy-block-label {
+      font-size: .5rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .copy-col-header {
+      background: var(--s2);
+      padding: .75rem 2.5rem;
+      font-size: .5rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .copy-before {
+      font-size: .82rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+      opacity: .55;
+      text-decoration: line-through;
+    }
+    .copy-after {
+      font-size: clamp(.95rem, 1.8vw, 1.3rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.25;
+    }
+    .copy-note {
+      font-size: .72rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+      padding-top: .75rem;
+      border-top: 1px solid var(--s2);
+    }
+
+    /* ───── SECTION: INSANY PATTERN ───── */
+    #patterns {
+      padding: 6rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .pattern-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .pattern-item {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--s2);
+      align-items: start;
+    }
+    .pattern-num {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--accent);
+      padding-top: .25rem;
+    }
+    .pattern-trigger {
+      font-size: clamp(.9rem, 1.4vw, 1.1rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+    .pattern-trigger small {
+      display: block;
+      font-size: .68rem;
+      font-weight: 300;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--muted);
+      margin-top: .5rem;
+      line-height: 1.55;
+    }
+    .pattern-irbis {
+      font-size: .82rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.65;
+      font-style: italic;
+    }
+    .pattern-irbis strong {
+      color: var(--text);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* ───── RESPONSIVE ───── */
+    @media (max-width: 900px) {
+      #cases, #copy, #patterns { padding: 4rem 1.5rem; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .case-card:first-child { grid-column: span 1; aspect-ratio: 16/10; }
+      .copy-grid { grid-template-columns: 1fr; }
+      .pattern-item { grid-template-columns: 2rem 1fr; }
+      .pattern-irbis { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Banner de contexto -->
+<div class="mock-banner">
+  <span>Mockup — não altera o site real</span>
+  <nav class="mock-nav">
+    <a href="#cases">Cases Layout</a>
+    <a href="#copy">Copy</a>
+    <a href="#patterns">Padrões "Quando"</a>
+  </nav>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PARTE 1 — CASES SECTION LAYOUT
+     (como ficaria no index.html da IRBIS)
+═══════════════════════════════════════════ -->
+<section id="cases">
+
+  <div class="section-header">
+    <div style="display:flex;flex-direction:column;gap:.4rem;">
+      <h2 class="section-title">Projetos.</h2>
+      <span style="font-size:.65rem;font-weight:300;color:var(--muted);letter-spacing:.01em">Clientes reais. Desafios reais. Entregas que construímos juntos.</span>
+    </div>
+    <a href="cases-hub/" class="section-cta">Ver todos →</a>
+  </div>
+
+  <div class="cases-grid">
+
+    <!-- CARD 1 — EForce (featured, full width) -->
+    <a class="case-card" href="cases-hub/eforce/">
+      <div class="case-bg"></div>
+
+      <div class="case-deco">
+        <span class="case-deco-text">EF</span>
+      </div>
+
+      <div class="case-top">
+        <span class="case-category">Webdesign · Motion</span>
+        <span class="case-year">2026</span>
+      </div>
+
+      <div class="case-bottom">
+        <div class="case-info">
+          <div class="case-name">EForce Drums</div>
+          <div class="case-type">Site institucional · Odery Drums</div>
+        </div>
+        <span class="case-arrow">↗</span>
+      </div>
+    </a>
+
+    <!-- CARD 2 — Adash -->
+    <a class="case-card" href="cases-hub/adash/">
+      <div class="case-bg"></div>
+
+      <div class="case-deco">
+        <span class="case-deco-text">AD</span>
+      </div>
+
+      <div class="case-top">
+        <span class="case-category">Web3 · Dashboard</span>
+        <span class="case-year">2026</span>
+      </div>
+
+      <div class="case-bottom">
+        <div class="case-info">
+          <div class="case-name">Adash</div>
+          <div class="case-type">Produto digital · Analytics</div>
+        </div>
+        <span class="case-arrow">↗</span>
+      </div>
+    </a>
+
+    <!-- CARD 3 — Slot vazio / próximo case -->
+    <a class="case-card" href="cases-hub/" style="cursor:default;opacity:.45;pointer-events:none;">
+      <div class="case-bg"></div>
+
+      <div class="case-top">
+        <span class="case-category">Em breve</span>
+        <span class="case-year">2026</span>
+      </div>
+
+      <div class="case-bottom">
+        <div class="case-info">
+          <div class="case-name">Próximo</div>
+          <div class="case-type">Novo projeto</div>
+        </div>
+        <span class="case-arrow">↗</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PARTE 2 — PROPOSTA DE COPY
+═══════════════════════════════════════════ -->
+<section id="copy">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="copy-intro">
+      <span class="copy-eyebrow">Proposta de Copy — inspirado na Insany</span>
+      <h2 class="copy-heading">Mesma <span class="acc">voz.</span><br>Outra empresa.</h2>
+    </div>
+
+    <div class="copy-grid">
+
+      <!-- Header row -->
+      <div class="copy-col-header">Atual — IRBIS</div>
+      <div class="copy-col-header">Proposta — voz Insany adaptada</div>
+
+      <!-- Hero headline -->
+      <div class="copy-block">
+        <span class="copy-block-label">Hero — Headline</span>
+        <p class="copy-before">Produto digital que gera crescimento de verdade.</p>
+      </div>
+      <div class="copy-block">
+        <span class="copy-block-label">Hero — Headline</span>
+        <p class="copy-after">Design e tecnologia que destravam crescimento.</p>
+        <p class="copy-note">A Insany usa "destrava" como verbo central. Mantém a mesma força mas soa mais específico sobre o mecanismo — não só "gera", mas "remove o que trava".</p>
+      </div>
+
+      <!-- Hero sub -->
+      <div class="copy-block">
+        <span class="copy-block-label">Hero — Subtítulo</span>
+        <p class="copy-before">Site, produto e operação com IA. Agilidade e eficiência em cada entrega.</p>
+      </div>
+      <div class="copy-block">
+        <span class="copy-block-label">Hero — Subtítulo</span>
+        <p class="copy-after">Para negócios que querem crescer de verdade — não só parecer que crescem.</p>
+        <p class="copy-note">Insany usa "Para empresas que querem crescer, escalar, reposicionar...". A versão IRBIS mantém o mesmo posicionamento mas adiciona a crítica embutida — lembrete da diferença entre aparência e resultado.</p>
+      </div>
+
+      <!-- Cases sub -->
+      <div class="copy-block">
+        <span class="copy-block-label">Seção Cases — Header</span>
+        <p class="copy-before">CASES</p>
+        <p class="copy-before" style="margin-top:.5rem">(sem subtítulo)</p>
+      </div>
+      <div class="copy-block">
+        <span class="copy-block-label">Seção Cases — Header</span>
+        <p class="copy-after">Projetos.</p>
+        <p class="copy-after" style="font-size:.85rem;font-weight:400;color:var(--muted);margin-top:.5rem">Clientes reais. Desafios reais. Entregas que construímos juntos.</p>
+        <p class="copy-note">Insany usa "Projetos." (minúsculo + ponto) — transmite confiança madura sem gritar. O subtítulo espelha a fórmula deles: "Ideias em estágios diferentes. Times com desafios reais. Soluções que construímos juntos."</p>
+      </div>
+
+      <!-- Diagnósticos -->
+      <div class="copy-block">
+        <span class="copy-block-label">Painel Diagnósticos — Subtítulo</span>
+        <p class="copy-before">A entrada. Antes de construir, entender.</p>
+      </div>
+      <div class="copy-block">
+        <span class="copy-block-label">Painel Diagnósticos — Subtítulo</span>
+        <p class="copy-after">Quando falta clareza sobre o que está travando o crescimento.</p>
+        <p class="copy-note">Insany abre cada serviço com "Quando [dor específica]". Esse padrão é mais persuasivo porque faz o leitor se identificar antes de receber a solução.</p>
+      </div>
+
+      <!-- Projeto Integrado -->
+      <div class="copy-block">
+        <span class="copy-block-label">Painel Projeto Integrado — Body</span>
+        <p class="copy-before">Da marca ao sistema. Do posicionamento ao primeiro cliente.</p>
+      </div>
+      <div class="copy-block">
+        <span class="copy-block-label">Painel Projeto Integrado — Body</span>
+        <p class="copy-after">Quando você precisa ir do zero ao produto funcionando — sem retrabalho e sem terceirizar a decisão.</p>
+        <p class="copy-note">Mantém a amplitude do "do zero a tudo" mas especifica a dor: retrabalho e falta de autonomia. Ressoa mais com fundadores que já foram queimados por isso.</p>
+      </div>
+
+      <!-- Contato -->
+      <div class="copy-block">
+        <span class="copy-block-label">Seção Contato — Headline</span>
+        <p class="copy-before">Vamos construir juntos.</p>
+      </div>
+      <div class="copy-block">
+        <span class="copy-block-label">Seção Contato — Headline</span>
+        <p class="copy-after">Seu projeto travou?</p>
+        <p class="copy-after" style="font-size:.9rem;font-weight:300;color:var(--muted);margin-top:.5rem">Não precisa ter tudo pronto. Conta o que tá travando e a gente destrava junto.</p>
+        <p class="copy-note">Insany usa "Seu projeto travou?" como headline de conversão — altamente específico sobre dor, funciona porque qualquer lead que chegou até aqui tem algo travado. A frase seguinte remove a barreira: "não precisa ter tudo pronto".</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PARTE 3 — PADRÕES INSANY → IRBIS
+     (Padrão "Quando" aplicado a cada serviço)
+═══════════════════════════════════════════ -->
+<section id="patterns">
+  <div class="section-header">
+    <h2 class="section-title" style="font-size:clamp(1rem,2vw,1.4rem)">Padrão "Quando" — 4 painéis horizontais</h2>
+    <span class="section-sub">Insany → IRBIS</span>
+  </div>
+
+  <div class="pattern-list">
+
+    <div class="pattern-item">
+      <span class="pattern-num">01</span>
+      <div class="pattern-trigger">
+        Diagnósticos
+        <small>Insany: "Quando falta clareza sobre o que fazer ou por onde começar..."</small>
+      </div>
+      <p class="pattern-irbis">
+        <strong>Quando você sente que está investindo sem saber no que.</strong> Antes de construir qualquer coisa, mapeamos o que está travando o crescimento — com dados, não com achismo.
+      </p>
+    </div>
+
+    <div class="pattern-item">
+      <span class="pattern-num">02</span>
+      <div class="pattern-trigger">
+        Projetos
+        <small>Insany: "Quando seu site não comunica bem ou não gera resultado..."</small>
+      </div>
+      <p class="pattern-irbis">
+        <strong>Quando o produto precisa existir — bem feito, no prazo, sem surpresa.</strong> Site, dashboard, sistema ou landing page. Entrego código que funciona e design que converte.
+      </p>
+    </div>
+
+    <div class="pattern-item">
+      <span class="pattern-num">03</span>
+      <div class="pattern-trigger">
+        Projeto Integrado
+        <small>Insany: "formato exclusivo" — diferencial da proposta</small>
+      </div>
+      <p class="pattern-irbis">
+        <strong>Quando você quer ir do zero ao produto funcionando — sem terceirizar a decisão.</strong> Da marca ao sistema, do posicionamento ao primeiro cliente. Com IA integrada onde faz sentido.
+      </p>
+    </div>
+
+    <div class="pattern-item">
+      <span class="pattern-num">04</span>
+      <div class="pattern-trigger">
+        Acompanhamento
+        <small>Insany: "Extensão de time" — presença contínua</small>
+      </div>
+      <p class="pattern-irbis">
+        <strong>Quando o projeto acabou mas o crescimento não pode parar.</strong> Conteúdo, tráfego, CRM e dados — 4 módulos que trabalham juntos. Presença contínua com resultado que acumula.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

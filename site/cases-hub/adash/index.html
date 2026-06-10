@@ -301,6 +301,8 @@
     }
     .case-browser img { width: 100%; display: block; }
     @media (max-width: 767px) { .case-browser { margin: 0 1.5rem; } }
+    .lqip { filter: blur(12px); transform: scale(1.02); transition: filter .5s ease, transform .5s ease; }
+    .lqip.loaded { filter: none; transform: scale(1); }
   </style>
 </head>
 <body>
@@ -386,7 +388,7 @@
     </div>
     <div class="case-browser-url">app.adash.com.br</div>
   </div>
-  <img src="assets/ADASH-HERO.jpg" alt="Adash: interface principal do dashboard" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+  <img src="assets/ADASH-HERO-lq.jpg" data-src="assets/ADASH-HERO.jpg" alt="Adash: interface principal do dashboard" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
 </div>
 
 
@@ -412,7 +414,7 @@
     </div>
     <div class="case-browser-url">app.adash.com.br/performance</div>
   </div>
-  <img src="assets/ADASH-DASH.jpg" alt="Adash: painel de performance com dados de mídia paga" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+  <img src="assets/ADASH-DASH-lq.jpg" data-src="assets/ADASH-DASH.jpg" alt="Adash: painel de performance com dados de mídia paga" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
 </div>
 
 
@@ -457,7 +459,7 @@
     </div>
     <div class="case-browser-url">app.adash.com.br/crm</div>
   </div>
-  <img src="assets/ADASH-CRM.jpg" alt="Adash: módulo CRM em kanban integrado ao funil de vendas" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+  <img src="assets/ADASH-CRM-lq.jpg" data-src="assets/ADASH-CRM.jpg" alt="Adash: módulo CRM em kanban integrado ao funil de vendas" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
 </div>
 
 
@@ -664,7 +666,13 @@
     });
   })();
 </script>
-
+<script>
+  document.querySelectorAll('img.lqip[data-src]').forEach(img => {
+    const hi = new Image();
+    hi.onload = () => { img.src = hi.src; img.classList.add('loaded'); };
+    hi.src = img.dataset.src;
+  });
+</script>
 
 </body>
 </html>

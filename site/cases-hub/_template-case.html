@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  IRBIS CASE TEMPLATE                                            │
+  │  Copie este arquivo para cases-hub/[slug]/index.html            │
+  │  Substitua todos os [PLACEHOLDER] antes de publicar             │
+  ├─────────────────────────────────────────────────────────────────┤
+  │  CHECKLIST OBRIGATÓRIO                                          │
+  │                                                                 │
+  │  META                                                           │
+  │  [ ] <title> sem travessão (usar : ou ·)                        │
+  │  [ ] <meta name="description"> com 120-160 caracteres          │
+  │  [ ] <link rel="canonical"> com URL definitiva                  │
+  │  [ ] og:title, og:description, og:image preenchidos             │
+  │  [ ] twitter:title, twitter:description preenchidos             │
+  │  [ ] favicon href="/Design/icone/favicon_true.png"              │
+  │                                                                 │
+  │  SCHEMA                                                         │
+  │  [ ] BreadcrumbList com 3 níveis (IRBIS > Cases > [CASE])      │
+  │  [ ] @type correto: CreativeWork (site) ou SoftwareApplication  │
+  │      (produto digital / dashboard / SaaS)                       │
+  │  [ ] datePublished e dateModified com datas reais               │
+  │                                                                 │
+  │  CONTEÚDO                                                       │
+  │  [ ] Nenhum travessão (—) no conteúdo ou atributos             │
+  │  [ ] Hero: ghost text (2-3 letras), gradiente, meta info        │
+  │  [ ] Intro 2 colunas: corpo à esquerda, specs à direita         │
+  │  [ ] Cenário: headline forte + parágrafo concreto               │
+  │  [ ] Desafios: mínimo 4 itens numerados com bold inicial        │
+  │  [ ] Resultados: headline + parágrafo + 3 stats                 │
+  │  [ ] Next cases: link para outro case + link "Seu Projeto"      │
+  │  [ ] CTA: WhatsApp wa.me/5519991591265                          │
+  │                                                                 │
+  │  TÉCNICO                                                        │
+  │  [ ] Lenis 1.3.21 (CSS + JS)                                    │
+  │  [ ] GSAP 3.12.5 + ScrollTrigger                                │
+  │  [ ] prefers-reduced-motion block no CSS                        │
+  │  [ ] Nav links: href="/" e href="/#cases" (relativos)           │
+  │  [ ] Imagens: alt text sem travessão, object-fit:cover          │
+  │  [ ] Assets em cases-hub/[slug]/assets/                         │
+  └─────────────────────────────────────────────────────────────────┘
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[NOME DO PROJETO]: [TIPO DE SERVIÇO] · Case IRBIS</title>
+  <meta name="description" content="Como a IRBIS [VERBO: criou / construiu / desenvolveu] [DESCRIÇÃO DO PROJETO] para [CLIENTE]. [RESULTADO CONCRETO em 1 linha].">
+  <link rel="canonical" href="https://irbis.com.br/[SLUG]">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://irbis.com.br/[SLUG]">
+  <meta property="og:title" content="[NOME DO PROJETO]: [TIPO] · Case IRBIS">
+  <meta property="og:description" content="[DESCRIÇÃO CURTA DO PROJETO E RESULTADO. 100-120 caracteres.]">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[NOME DO PROJETO]: Case · IRBIS">
+  <meta name="twitter:description" content="[DESCRIÇÃO DE 1 LINHA PARA TWITTER]">
+  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
+  <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://irbis.com.br/[SLUG]#webpage",
+    "url": "https://irbis.com.br/[SLUG]",
+    "name": "[NOME DO PROJETO]: [TIPO DE SERVIÇO] · Case IRBIS",
+    "description": "Como a IRBIS [VERBO] [DESCRIÇÃO CURTA].",
+    "isPartOf": { "@id": "https://irbis.com.br/#website" },
+    "datePublished": "[YYYY-MM-DD]",
+    "dateModified": "[YYYY-MM-DD]",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "IRBIS", "item": "https://irbis.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Cases", "item": "https://irbis.com.br/cases" },
+        { "@type": "ListItem", "position": 3, "name": "[NOME DO PROJETO]", "item": "https://irbis.com.br/[SLUG]" }
+      ]
+    },
+    "about": {
+      "@type": "[CreativeWork | SoftwareApplication]",
+      "name": "[NOME DO PROJETO]: [SUBTÍTULO DESCRITIVO]",
+      "description": "[DESCRIÇÃO COMPLETA DO ENTREGÁVEL. 1-2 frases.]",
+      "creator": { "@id": "https://irbis.com.br/#organization" },
+      "dateCreated": "[ANO]",
+      "keywords": ["[keyword1]", "[keyword2]", "[keyword3]", "[keyword4]"]
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0C0C0E;
+      --s1:     #18181B;
+      --s2:     #27272A;
+      --accent: #FF3D00;
+      --text:   #FAFAFA;
+      --muted:  #71717A;
+      --f:      'Sora', sans-serif;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { background: var(--bg); }
+    body { font-family: var(--f); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0s !important; animation-duration: 0s !important; }
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.75rem 3rem;
+      background: linear-gradient(to bottom, rgba(12,12,14,.85) 0%, transparent 100%);
+    }
+    .nav-logo { font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* HERO */
+    .case-hero {
+      min-height: 100vh; position: relative;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 0 3rem 4rem; overflow: hidden;
+    }
+    /* AJUSTE: troque as cores do gradiente para o projeto */
+    .case-hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 35%, #16213e 65%, #0f0f14 100%);
+    }
+    .case-hero-bg::after {
+      content: '';
+      position: absolute; bottom: 0; right: 0; width: 60%; height: 75%;
+      background: radial-gradient(ellipse at 80% 90%, rgba(255,61,0,.15) 0%, transparent 60%);
+    }
+    .case-hero-ghost {
+      position: absolute; bottom: -2rem; right: 2rem;
+      font-size: clamp(12rem, 25vw, 22rem); font-weight: 800;
+      letter-spacing: -.08em; text-transform: uppercase;
+      color: rgba(250,250,250,.03); pointer-events: none; user-select: none; line-height: 1;
+    }
+    .case-hero-label {
+      position: absolute; top: 7rem; left: 3rem;
+      display: flex; flex-direction: column; gap: .4rem; z-index: 2;
+    }
+    .case-hero-client { font-size: .55rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); }
+    .case-hero-type   { font-size: .52rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: rgba(250,250,250,.35); }
+    .case-hero-title {
+      position: relative; z-index: 2;
+      font-size: clamp(3.5rem, 9vw, 9rem); font-weight: 800;
+      letter-spacing: -.05em; text-transform: uppercase; line-height: .92; margin-bottom: 3rem;
+    }
+    .case-hero-meta {
+      position: relative; z-index: 2;
+      display: flex; gap: 3rem; flex-wrap: wrap;
+      padding-top: 1.5rem; border-top: 1px solid rgba(250,250,250,.1);
+    }
+    .case-meta-key { font-size: .48rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .3rem; }
+    .case-meta-val  { font-size: .75rem; font-weight: 600; letter-spacing: .06em; }
+
+    /* INTRO 2 COLUNAS */
+    .case-intro {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      padding: 5rem 3rem; border-bottom: 1px solid var(--s2);
+    }
+    .case-intro-body { font-size: clamp(.9rem, 1.3vw, 1.05rem); font-weight: 300; color: var(--muted); line-height: 1.8; }
+    .case-intro-body strong { color: var(--text); font-weight: 600; }
+    .case-intro-right { display: flex; flex-direction: column; gap: 1.5rem; padding-left: 4rem; border-left: 1px solid var(--s2); }
+    .case-spec-key { font-size: .48rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .3rem; }
+    .case-spec-val { font-size: .8rem; font-weight: 400; }
+
+    /* CENÁRIO */
+    .case-cenario {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 4rem;
+      padding: 6rem 3rem; border-bottom: 1px solid var(--s2);
+    }
+    .case-cenario-label { font-size: .52rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); padding-top: .4rem; }
+    .case-cenario-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -.04em; line-height: .96; margin-bottom: 2rem; }
+    .case-cenario-headline .acc { color: var(--accent); }
+    .case-cenario-body { font-size: clamp(.85rem, 1.2vw, 1rem); font-weight: 300; color: var(--muted); line-height: 1.8; }
+
+    /* DESAFIOS */
+    .case-desafios {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 4rem;
+      padding: 6rem 3rem; border-bottom: 1px solid var(--s2);
+    }
+    .case-desafios-eyebrow { font-size: .52rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 1.5rem; }
+    .case-desafios-headline { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -.04em; line-height: .96; }
+    .case-desafio-item { display: flex; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--s2); }
+    .case-desafio-item:last-child { border-bottom: none; }
+    .case-desafio-num { font-size: .55rem; font-weight: 700; letter-spacing: .2em; color: var(--accent); padding-top: .25rem; min-width: 2rem; }
+    .case-desafio-text { font-size: clamp(.85rem, 1.2vw, 1rem); font-weight: 300; color: var(--muted); line-height: 1.7; }
+    .case-desafio-text strong { color: var(--text); font-weight: 600; }
+
+    /* RESULTADOS */
+    .case-resultados { padding: 6rem 3rem; border-bottom: 1px solid var(--s2); }
+    .case-resultados-eyebrow { font-size: .52rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 1.5rem; }
+    .case-resultados-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -.04em; line-height: .96; margin-bottom: 2rem; }
+    .case-resultados-body { font-size: clamp(.85rem, 1.2vw, 1rem); font-weight: 300; color: var(--muted); line-height: 1.8; max-width: 65ch; margin-bottom: 4rem; }
+    .case-stats { display: flex; gap: 4rem; flex-wrap: wrap; }
+    .case-stat-num   { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -.04em; color: var(--accent); display: block; }
+    .case-stat-label { font-size: .6rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); display: block; margin-top: .3rem; }
+
+    /* NEXT CASES */
+    .case-next { padding: 5rem 3rem; border-bottom: 1px solid var(--s2); }
+    .case-next-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+    .case-next-title { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    .case-next-ver   { font-size: .6rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); transition: color .2s; }
+    .case-next-ver:hover { color: var(--accent); }
+    .case-next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .case-next-card {
+      position: relative; overflow: hidden; border-radius: 4px;
+      aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: flex-end;
+      transition: transform .3s ease; cursor: pointer;
+    }
+    .case-next-card:hover { transform: scale(1.01); }
+    .case-next-bg { position: absolute; inset: 0; }
+    .case-next-bottom {
+      position: relative; z-index: 2;
+      display: flex; justify-content: space-between; align-items: flex-end;
+      padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 100%);
+    }
+    .case-next-name  { font-size: clamp(.9rem, 1.5vw, 1.2rem); font-weight: 800; letter-spacing: -.02em; text-transform: uppercase; }
+    .case-next-type  { font-size: .52rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: rgba(250,250,250,.5); margin-top: .3rem; }
+    .case-next-arrow { font-size: 1.2rem; color: var(--accent); }
+
+    /* CTA */
+    .case-cta {
+      padding: 8rem 3rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;
+    }
+    .case-cta-eyebrow { font-size: .52rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 1.5rem; }
+    .case-cta-headline { font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 800; letter-spacing: -.05em; line-height: .92; margin-bottom: 1.5rem; }
+    .case-cta-sub { font-size: clamp(.85rem, 1.2vw, 1rem); font-weight: 300; color: var(--muted); line-height: 1.7; max-width: 40ch; }
+    .case-cta-btn {
+      display: inline-flex; align-items: center; gap: .75rem;
+      background: var(--accent); color: var(--text);
+      padding: 1.1rem 2.5rem; border-radius: 2px;
+      font-size: .7rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      transition: opacity .2s; white-space: nowrap; flex-shrink: 0;
+    }
+    .case-cta-btn:hover { opacity: .88; }
+
+    /* RESPONSIVE */
+    @media (max-width: 767px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .case-hero { padding: 0 1.5rem 3rem; }
+      .case-intro,
+      .case-cenario,
+      .case-desafios { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+      .case-intro-right { padding-left: 0; border-left: none; border-top: 1px solid var(--s2); padding-top: 2rem; }
+      .case-resultados { padding: 3rem 1.5rem; }
+      .case-next { padding: 3rem 1.5rem; }
+      .case-next-grid { grid-template-columns: 1fr; }
+      .case-cta { padding: 4rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">IRBIS</a>
+  <a href="/#cases" class="nav-back">← Cases</a>
+</nav>
+
+
+<!-- 1. HERO -->
+<!--
+  ghost: 2-3 letras iniciais do projeto (ex: "EF", "AD", "IR")
+  gradiente: ajuste as cores para a identidade do case
+  meta: Ano, Serviço, Indústria/Tecnologia, Entregável
+-->
+<section class="case-hero">
+  <div class="case-hero-bg"></div>
+  <div class="case-hero-ghost">[SIGLA]</div>
+
+  <div class="case-hero-label">
+    <span class="case-hero-client">[NOME DO CLIENTE]</span>
+    <span class="case-hero-type">[TIPO 1] · [TIPO 2] · [ANO]</span>
+  </div>
+
+  <h1 class="case-hero-title">[NOME<br>DO<br>PROJETO]</h1>
+
+  <div class="case-hero-meta">
+    <div>
+      <span class="case-meta-key">Ano</span>
+      <span class="case-meta-val">[ANO]</span>
+    </div>
+    <div>
+      <span class="case-meta-key">Serviço</span>
+      <span class="case-meta-val">[SERVIÇO PRINCIPAL]</span>
+    </div>
+    <div>
+      <span class="case-meta-key">Indústria</span>
+      <span class="case-meta-val">[SETOR DO CLIENTE]</span>
+    </div>
+    <div>
+      <span class="case-meta-key">Entregável</span>
+      <span class="case-meta-val">[O QUE FOI ENTREGUE]</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2. INTRO -->
+<!--
+  Corpo esquerdo: parágrafo de 3-4 linhas contextualizando o cliente e o problema
+  Specs direita: Cliente, Tecnologia, Escopo, + 1 spec específica do projeto
+-->
+<div class="case-intro">
+  <p class="case-intro-body">
+    [CONTEXTO DO CLIENTE em 1-2 frases]. [PROBLEMA ESPECÍFICO que levou ao projeto]. <strong>[FRASE FORTE que sintetiza o problema central].</strong>
+  </p>
+  <div class="case-intro-right">
+    <div>
+      <span class="case-spec-key">Cliente</span>
+      <span class="case-spec-val">[NOME DO CLIENTE ou "Confidencial"]</span>
+    </div>
+    <div>
+      <span class="case-spec-key">Tecnologia</span>
+      <span class="case-spec-val">[STACK: React · TypeScript · etc.]</span>
+    </div>
+    <div>
+      <span class="case-spec-key">Escopo</span>
+      <span class="case-spec-val">[ESCOPO: Design, Dev, IA, etc.]</span>
+    </div>
+    <div>
+      <span class="case-spec-key">[LABEL ESPECÍFICA]</span>
+      <span class="case-spec-val">[VALOR ESPECÍFICO]</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- 3. IMAGEM FULL-WIDTH (opcional) -->
+<!--
+  Coloque uma imagem principal do case aqui.
+  Dimensões recomendadas: 1920x1080 ou 1440x810
+  <div class="case-full-img" style="height:60vh;overflow:hidden;">
+    <img src="assets/[CASE]-HERO.png" alt="[NOME]: visão geral" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+-->
+
+
+<!-- 4. O CENÁRIO -->
+<!--
+  headline: 4-6 palavras, problema em forma de frase impactante
+  body: por que o cenário anterior não funcionava, dados concretos se possível
+-->
+<section class="case-cenario">
+  <span class="case-cenario-label">O Cenário</span>
+  <div>
+    <h2 class="case-cenario-headline">[HEADLINE DO<br>PROBLEMA<br>EM 4-6<br><span class="acc">PALAVRAS.]</span></h2>
+    <p class="case-cenario-body">
+      [DESCRIÇÃO DO CENÁRIO ANTERIOR: o que não funcionava, por que, qual o impacto no negócio. Seja específico. Evite generalizações. 3-5 frases.]
+    </p>
+  </div>
+</section>
+
+
+<!-- 5. GRID DE IMAGENS (opcional) -->
+<!--
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;padding:0 3rem 4rem;">
+    <div style="overflow:hidden;border-radius:4px;">
+      <img src="assets/[CASE]-IMG1.png" alt="[DESCRIÇÃO]" style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;">
+    </div>
+    <div style="overflow:hidden;border-radius:4px;">
+      <img src="assets/[CASE]-IMG2.png" alt="[DESCRIÇÃO]" style="width:100%;height:auto;display:block;">
+    </div>
+  </div>
+-->
+
+
+<!-- 6. O QUE RESOLVEMOS -->
+<!--
+  Mínimo 4 itens. Cada item: bold inicial + continuação em texto normal.
+  Sem travessão. Use ponto, vírgula ou dois-pontos para separar.
+-->
+<section class="case-desafios">
+  <div>
+    <span class="case-desafios-eyebrow">O que resolvemos</span>
+    <h3 class="case-desafios-headline">Tudo que o<br>[CONTEXTO]<br>precisava.</h3>
+  </div>
+  <div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">01</span>
+      <p class="case-desafio-text"><strong>[ENTREGÁVEL 1]</strong> [descrição concreta do que foi resolvido, com detalhe técnico ou funcional].</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">02</span>
+      <p class="case-desafio-text"><strong>[ENTREGÁVEL 2]</strong> [descrição concreta].</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">03</span>
+      <p class="case-desafio-text"><strong>[ENTREGÁVEL 3]</strong> [descrição concreta].</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">04</span>
+      <p class="case-desafio-text"><strong>[ENTREGÁVEL 4]</strong> [descrição concreta].</p>
+    </div>
+    <!-- Adicione mais itens se necessário -->
+  </div>
+</section>
+
+
+<!-- 7. IMAGEM WIDE (opcional) -->
+<!--
+  <div style="height:50vh;overflow:hidden;">
+    <img src="assets/[CASE]-WIDE.png" alt="[NOME]: [ASPECTO VISUAL]" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+-->
+
+
+<!-- 8. RESULTADOS -->
+<!--
+  stats: 3 números concretos. Use % para redução, número absoluto para quantidade.
+  Prefira dados reais. Se não tiver, use métricas de qualidade (100% documentado, etc.)
+-->
+<section class="case-resultados">
+  <span class="case-resultados-eyebrow">Resultados</span>
+  <h3 class="case-resultados-headline">[HEADLINE DE<br>RESULTADO em<br>4-6 palavras.]</h3>
+  <p class="case-resultados-body">
+    [PARÁGRAFO descrevendo o resultado final: o que mudou, o que foi entregue, qual o impacto real. 3-4 frases.]
+  </p>
+  <div class="case-stats">
+    <div>
+      <span class="case-stat-num">[NUM]</span>
+      <span class="case-stat-label">[label do stat 1]</span>
+    </div>
+    <div>
+      <span class="case-stat-num">[NUM]</span>
+      <span class="case-stat-label">[label do stat 2]</span>
+    </div>
+    <div>
+      <span class="case-stat-num">[NUM]</span>
+      <span class="case-stat-label">[label do stat 3]</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 9. MAIS CASES -->
+<!--
+  card 1: link para o outro case existente
+  card 2: sempre "Seu Projeto" apontando para /#contato
+  Ajuste as cores dos gradientes para cada case linkado.
+-->
+<div class="case-next">
+  <div class="case-next-header">
+    <span class="case-next-title">Mais projetos</span>
+    <a href="/#cases" class="case-next-ver">Ver todos →</a>
+  </div>
+  <div class="case-next-grid">
+
+    <a class="case-next-card" href="/[SLUG-OUTRO-CASE]">
+      <div class="case-next-bg" style="background:linear-gradient(135deg,#0f0f14 0%,#1a1a2e 50%,#0f0f14 100%);">
+        <div style="position:absolute;top:0;right:0;width:60%;height:60%;background:radial-gradient(ellipse at 70% 20%,rgba(255,61,0,.10) 0%,transparent 65%);"></div>
+      </div>
+      <div class="case-next-bottom">
+        <div>
+          <div class="case-next-name">[NOME DO OUTRO CASE]</div>
+          <div class="case-next-type">[Tipo] · [ANO]</div>
+        </div>
+        <span class="case-next-arrow">↗</span>
+      </div>
+    </a>
+
+    <a class="case-next-card" href="/#contato">
+      <div class="case-next-bg" style="background:linear-gradient(135deg,#111113 0%,#1d1d20 100%);">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(3rem,6vw,5rem);font-weight:800;letter-spacing:-.06em;color:rgba(255,61,0,.06);text-transform:uppercase;user-select:none">IRBIS</div>
+      </div>
+      <div class="case-next-bottom">
+        <div>
+          <div class="case-next-name">Seu Projeto</div>
+          <div class="case-next-type">Iniciar conversa</div>
+        </div>
+        <span class="case-next-arrow">↗</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- 10. CTA -->
+<section class="case-cta">
+  <div>
+    <span class="case-cta-eyebrow">Próximo passo</span>
+    <h2 class="case-cta-headline">Seu projeto<br>merece<br>isso.</h2>
+    <p class="case-cta-sub">Não precisa ter tudo pronto. Conta o que tá travando e a gente constrói junto.</p>
+  </div>
+  <a href="https://wa.me/5519991591265" class="case-cta-btn">Iniciar conversa →</a>
+</section>
+
+
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, touchMultiplier: 1.0, smoothWheel: true });
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* NAV + HERO */
+    gsap.set('nav', { opacity: 0, y: -20 });
+    gsap.set('.case-hero-label', { opacity: 0, y: 20 });
+    gsap.set('.case-hero-title', { opacity: 0, y: 30 });
+    gsap.set('.case-hero-meta', { opacity: 0, y: 20 });
+
+    const tl = gsap.timeline();
+    tl.to('nav',             { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
+      .to('.case-hero-label',{ opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.2)
+      .to('.case-hero-title',{ opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.35)
+      .to('.case-hero-meta', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.7);
+
+    /* SCROLL REVEALS */
+    const revealSels = [
+      '.case-intro-body', '.case-intro-right',
+      '.case-cenario-headline', '.case-cenario-body',
+      '.case-resultados-eyebrow', '.case-resultados-headline',
+      '.case-resultados-body', '.case-cta > div', '.case-cta-btn'
+    ];
+    revealSels.forEach(sel => {
+      gsap.from(sel, {
+        opacity: 0, y: 30, duration: 0.7, ease: 'power3.out',
+        scrollTrigger: { trigger: sel, start: 'top 85%' }
+      });
+    });
+
+    gsap.from('.case-desafio-item', {
+      opacity: 0, y: 20, duration: 0.5, ease: 'power3.out', stagger: 0.08,
+      scrollTrigger: { trigger: '.case-desafios', start: 'top 80%' }
+    });
+
+    gsap.from('.case-stats > div', {
+      opacity: 0, y: 20, duration: 0.5, ease: 'power3.out', stagger: 0.1,
+      scrollTrigger: { trigger: '.case-stats', start: 'top 85%' }
+    });
+
+    gsap.from('.case-next-card', {
+      opacity: 0, y: 30, duration: 0.6, ease: 'power3.out', stagger: 0.12,
+      scrollTrigger: { trigger: '.case-next-grid', start: 'top 85%' }
+    });
+  }
+</script>
+</body>
+</html>
