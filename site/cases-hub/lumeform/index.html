@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumenform: Creative AI Studio · Case IRBIS</title>
+  <meta name="description" content="Como a IRBIS criou o site da Lumenform, estúdio de IA generativa para imagem, filme e mundos visuais. Webdesign premium com motion e identidade visual sofisticada.">
+  <link rel="canonical" href="https://irbis.com.br/lumenform">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://irbis.com.br/lumenform">
+  <meta property="og:title" content="Lumenform: Creative AI Studio · Case IRBIS">
+  <meta property="og:description" content="Site para o estúdio de IA criativa Lumenform. Webdesign, motion e front-end de alto padrão.">
+  <meta property="og:image" content="https://irbis.com.br/cases-hub/lumeform/assets/hero.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lumenform: Case · IRBIS">
+  <meta name="twitter:description" content="Webdesign premium para estúdio de IA criativa.">
+  <meta name="twitter:image" content="https://irbis.com.br/cases-hub/lumeform/assets/hero.jpg">
+  <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://irbis.com.br/lumenform#webpage",
+    "url": "https://irbis.com.br/lumenform",
+    "name": "Lumenform: Creative AI Studio · Case IRBIS",
+    "description": "Como a IRBIS criou o site da Lumenform, estúdio de IA generativa para imagem, filme e mundos visuais.",
+    "isPartOf": { "@id": "https://irbis.com.br/#website" },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-06-10",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "IRBIS", "item": "https://irbis.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Cases", "item": "https://irbis.com.br/cases" },
+        { "@type": "ListItem", "position": 3, "name": "Lumenform", "item": "https://irbis.com.br/lumenform" }
+      ]
+    },
+    "about": {
+      "@type": "CreativeWork",
+      "name": "Lumenform — Creative AI Studio",
+      "description": "Site institucional da Lumenform, estúdio de IA criativa especializado em imagens, filme e mundos visuais.",
+      "creator": { "@id": "https://irbis.com.br/#organization" },
+      "dateCreated": "2026",
+      "keywords": ["webdesign", "IA generativa", "motion design", "creative studio", "front-end"]
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0C0C0E;
+      --s1:     #18181B;
+      --s2:     #27272A;
+      --accent: #FF3D00;
+      --text:   #FAFAFA;
+      --muted:  #71717A;
+      --f:      'Sora', sans-serif;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { background: var(--bg); }
+    body { font-family: var(--f); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.75rem 3rem;
+      background: linear-gradient(to bottom, rgba(12,12,14,.85) 0%, transparent 100%);
+    }
+    .nav-logo { font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .nav-logo span { color: var(--accent); }
+    .nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color .2s; display: flex; align-items: center; gap: .4rem;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* ── CASE HERO ── */
+    .case-hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 3rem 4rem;
+      overflow: hidden;
+    }
+    .case-hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #0b0a09 0%, #1a1510 35%, #120e08 65%, #0b0a09 100%);
+    }
+    .case-hero-bg::after {
+      content: '';
+      position: absolute; bottom: 0; right: 0;
+      width: 60%; height: 75%;
+      background: radial-gradient(ellipse at 80% 90%, rgba(232,184,115,.12) 0%, transparent 60%);
+    }
+    .case-hero-ghost {
+      position: absolute; bottom: -2rem; right: 2rem;
+      font-size: clamp(12rem, 25vw, 22rem);
+      font-weight: 800; letter-spacing: -.08em;
+      text-transform: uppercase; color: rgba(250,250,250,.025);
+      pointer-events: none; user-select: none; line-height: 1;
+    }
+    .case-hero-label {
+      position: absolute; top: 7rem; left: 3rem;
+      display: flex; flex-direction: column; gap: .4rem; z-index: 2;
+    }
+    .case-hero-client {
+      font-size: .55rem; font-weight: 700; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .case-hero-type {
+      font-size: .52rem; font-weight: 500; letter-spacing: .22em;
+      text-transform: uppercase; color: rgba(250,250,250,.35);
+    }
+    .case-hero-title {
+      position: relative; z-index: 2;
+      font-size: clamp(3.5rem, 9vw, 9rem);
+      font-weight: 800; letter-spacing: -.05em;
+      text-transform: uppercase; line-height: .92;
+      margin-bottom: 3rem;
+    }
+    .case-hero-title span { color: var(--accent); }
+    .case-hero-meta {
+      position: relative; z-index: 2;
+      display: flex; gap: 3rem; flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(250,250,250,.1);
+    }
+    .case-meta-key {
+      font-size: .48rem; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .3rem;
+    }
+    .case-meta-val { font-size: .75rem; font-weight: 600; letter-spacing: .06em; }
+
+    /* ── INTRO ── */
+    .case-intro {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; padding: 5rem 3rem;
+      border-bottom: 1px solid var(--s2);
+    }
+    .case-intro-body {
+      font-size: clamp(.9rem, 1.3vw, 1.05rem);
+      font-weight: 300; color: var(--muted); line-height: 1.8;
+    }
+    .case-intro-body strong { color: var(--text); font-weight: 600; }
+    .case-intro-right {
+      display: flex; flex-direction: column; gap: 1.5rem;
+      padding-left: 4rem; border-left: 1px solid var(--s2);
+    }
+    .case-spec-key {
+      font-size: .48rem; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .3rem;
+    }
+    .case-spec-val { font-size: .8rem; font-weight: 400; line-height: 1.5; }
+
+    /* ── BROWSER MOCKUP ── */
+    .case-browser-wrap {
+      padding: 0 3rem 0;
+    }
+    .case-browser {
+      background: #1c1c1e;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .case-browser-bar {
+      background: #2a2a2c;
+      padding: .6rem 1rem;
+      display: flex; align-items: center; gap: .75rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .case-browser-dots {
+      display: flex; gap: .35rem;
+    }
+    .case-browser-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .case-browser-dot:nth-child(1) { background: #ff5f57; }
+    .case-browser-dot:nth-child(2) { background: #febc2e; }
+    .case-browser-dot:nth-child(3) { background: #28c840; }
+    .case-browser-url {
+      flex: 1; background: #3a3a3c;
+      border-radius: 4px; padding: .25rem .75rem;
+      font-family: 'Sora', monospace; font-size: .55rem;
+      color: rgba(255,255,255,.4); letter-spacing: .04em;
+    }
+    .case-browser img {
+      width: 100%; display: block;
+    }
+
+    /* ── CENÁRIO ── */
+    .case-cenario {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 4rem; align-items: start; padding: 6rem 3rem;
+    }
+    .case-cenario-label {
+      font-size: .52rem; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--muted); padding-top: .4rem;
+    }
+    .case-cenario-headline {
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      font-weight: 800; letter-spacing: -.04em;
+      text-transform: uppercase; line-height: .95;
+      margin-bottom: 2rem;
+    }
+    .case-cenario-headline span { color: var(--accent); }
+    .case-cenario-body {
+      font-size: .9rem; font-weight: 300; color: var(--muted); line-height: 1.8;
+      max-width: 60ch;
+    }
+    .case-cenario-body strong { color: var(--text); font-weight: 600; }
+
+    /* ── GALLERY GRID ── */
+    .case-gallery {
+      padding: 0 3rem 6rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .case-gallery-item {
+      aspect-ratio: 4/3;
+      background: var(--s1);
+      padding: 10px;
+      border: 1px solid var(--s2);
+    }
+    .case-gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+      transition: transform .8s cubic-bezier(.76,0,.24,1);
+    }
+    .case-gallery-item:hover img { transform: scale(1.03); }
+    .case-gallery-item.wide { grid-column: span 2; aspect-ratio: 16/7; }
+
+    /* ── TESTIMONIAL ── */
+    .case-testimonial {
+      padding: 6rem 3rem;
+      border-top: 1px solid var(--s2);
+      border-bottom: 1px solid var(--s2);
+      background: var(--s1);
+    }
+    .case-testimonial-inner {
+      max-width: 760px; margin: 0 auto;
+      position: relative;
+    }
+    .case-quote-icon {
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .case-testimonial-quote {
+      font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--text);
+      letter-spacing: -.01em;
+      margin-bottom: 2.5rem;
+    }
+    .case-testimonial-author {
+      display: flex; flex-direction: column; gap: .3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--s2);
+    }
+    .case-testimonial-name {
+      font-size: .8rem; font-weight: 700; letter-spacing: .04em;
+    }
+    .case-testimonial-role {
+      font-size: .58rem; font-weight: 500; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--muted);
+    }
+
+    /* ── ENTREGA ── */
+    .case-entrega {
+      background: var(--s1);
+      padding: 6rem 3rem;
+      border-top: 1px solid var(--s2);
+      border-bottom: 1px solid var(--s2);
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+    .entrega-item {}
+    .entrega-num {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 800; letter-spacing: -.04em;
+      color: var(--accent); line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .entrega-label {
+      font-size: .6rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+    }
+
+    /* ── NAV CASES ── */
+    .case-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 3rem;
+      border-top: 1px solid var(--s2);
+    }
+    .case-nav-link {
+      display: flex; flex-direction: column; gap: .4rem;
+      transition: opacity .2s;
+    }
+    .case-nav-link:hover { opacity: .7; }
+    .case-nav-dir {
+      font-size: .5rem; font-weight: 700; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .case-nav-name {
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 800; letter-spacing: -.04em; text-transform: uppercase;
+    }
+    .case-nav-right { text-align: right; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 3rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-brand { font-size: .6rem; font-weight: 700; letter-spacing: .2em; color: var(--muted); }
+    .footer-link {
+      font-size: .6rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+    }
+    .footer-link:hover { color: var(--accent); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 767px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .case-hero { padding: 0 1.5rem 3rem; }
+      .case-hero-label { left: 1.5rem; top: 6rem; }
+      .case-hero-ghost { display: none; }
+      .case-intro { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .case-intro-right { padding-left: 0; border-left: none; border-top: 1px solid var(--s2); padding-top: 2rem; }
+      .case-cenario { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 1.5rem; }
+      .case-gallery { padding: 0 1.5rem 4rem; gap: 1rem; }
+      .case-gallery-item.wide { grid-column: span 1; aspect-ratio: 4/3; }
+      .case-entrega { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
+      .case-nav { flex-direction: column; align-items: flex-start; gap: 2rem; padding: 2rem 1.5rem; }
+      .case-nav-right { text-align: left; }
+      footer { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">IRBIS<span>.</span></a>
+    <a class="nav-back" href="/cases">← Cases</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="case-hero-bg"></div>
+    <div class="case-hero-ghost">LF</div>
+    <div class="case-hero-label">
+      <span class="case-hero-client">Lumenform</span>
+      <span class="case-hero-type">Webdesign · AI Studio</span>
+    </div>
+    <h1 class="case-hero-title">Lumen<span>form</span></h1>
+    <div class="case-hero-meta">
+      <div>
+        <span class="case-meta-key">Cliente</span>
+        <span class="case-meta-val">Lumenform</span>
+      </div>
+      <div>
+        <span class="case-meta-key">Serviço</span>
+        <span class="case-meta-val">Webdesign · Motion · Front-end</span>
+      </div>
+      <div>
+        <span class="case-meta-key">Setor</span>
+        <span class="case-meta-val">Creative AI Studio</span>
+      </div>
+      <div>
+        <span class="case-meta-key">Ano</span>
+        <span class="case-meta-val">2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="case-intro">
+    <div class="case-intro-body">
+      <p>A Lumenform produz imagens, filmes e mundos visuais com IA generativa. <strong>Não existe categoria clara para esse tipo de estúdio.</strong> O site precisava criar uma.</p>
+      <br>
+      <p>Estúdios de IA costumam escolher interfaces brancas e frias. A Lumenform pediu o contrário: um site construído a partir da <strong>mesma matéria-prima do trabalho deles.</strong></p>
+    </div>
+    <div class="case-intro-right">
+      <div>
+        <span class="case-spec-key">Entregável</span>
+        <span class="case-spec-val">Site institucional completo com motion design, galeria de trabalhos e UI de alto padrão</span>
+      </div>
+      <div>
+        <span class="case-spec-key">Stack</span>
+        <span class="case-spec-val">HTML · CSS · JS · Lenis · GSAP · ScrollTrigger</span>
+      </div>
+      <div>
+        <span class="case-spec-key">Tipografia</span>
+        <span class="case-spec-val">Inter Tight · Instrument Serif · IBM Plex Mono</span>
+      </div>
+      <div>
+        <span class="case-spec-key">Paleta</span>
+        <span class="case-spec-val">Preto orgânico · Âmbar profundo · Off-white quente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROWSER MOCKUP HERO -->
+  <div class="case-browser-wrap" style="margin-bottom:1.5rem;">
+    <div class="case-browser">
+      <div class="case-browser-bar">
+        <div class="case-browser-dots">
+          <div class="case-browser-dot"></div>
+          <div class="case-browser-dot"></div>
+          <div class="case-browser-dot"></div>
+        </div>
+        <div class="case-browser-url">lumenform.studio</div>
+      </div>
+      <img src="assets/screen-hero.jpg" alt="Lumenform — hero section" loading="eager">
+    </div>
+  </div>
+
+  <!-- CENÁRIO -->
+  <section class="case-cenario">
+    <span class="case-cenario-label">Contexto</span>
+    <div>
+      <h2 class="case-cenario-headline">Luz como<br><span>linguagem</span></h2>
+      <p class="case-cenario-body">
+        A maioria dos estúdios de IA usa interfaces clínicas. Sem atrito visual, sem personalidade. Funciona para SaaS. Não funciona para um estúdio que vende mundos.
+        <br><br>
+        A IRBIS definiu âmbar como cor-âncora e film grain como textura de fundo. <strong>Tipografia serif em itálico quebra a geometria técnica sem perder o rigor.</strong> O resultado parece construído por quem produz o trabalho, não por quem vende software.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY COM BROWSER MOCKUP -->
+  <div class="case-gallery">
+    <div class="case-gallery-item wide">
+      <div class="case-browser" style="height:100%;">
+        <div class="case-browser-bar">
+          <div class="case-browser-dots">
+            <div class="case-browser-dot"></div><div class="case-browser-dot"></div><div class="case-browser-dot"></div>
+          </div>
+          <div class="case-browser-url">lumenform.studio</div>
+        </div>
+        <img src="assets/screen-s2.jpg" alt="Lumenform — above fold" loading="lazy" style="height:calc(100% - 37px);object-fit:cover;">
+      </div>
+    </div>
+    <div class="case-gallery-item">
+      <div class="case-browser" style="height:100%;">
+        <div class="case-browser-bar">
+          <div class="case-browser-dots">
+            <div class="case-browser-dot"></div><div class="case-browser-dot"></div><div class="case-browser-dot"></div>
+          </div>
+          <div class="case-browser-url">lumenform.studio</div>
+        </div>
+        <img src="assets/screen-s3.jpg" alt="Lumenform — trabalhos" loading="lazy" style="height:calc(100% - 37px);object-fit:cover;">
+      </div>
+    </div>
+    <div class="case-gallery-item">
+      <div class="case-browser" style="height:100%;">
+        <div class="case-browser-bar">
+          <div class="case-browser-dots">
+            <div class="case-browser-dot"></div><div class="case-browser-dot"></div><div class="case-browser-dot"></div>
+          </div>
+          <div class="case-browser-url">lumenform.studio</div>
+        </div>
+        <img src="assets/screen-s4.jpg" alt="Lumenform — galeria" loading="lazy" style="height:calc(100% - 37px);object-fit:cover;">
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <section class="case-testimonial">
+    <div class="case-testimonial-inner">
+      <svg class="case-quote-icon" width="40" height="28" viewBox="0 0 40 28" fill="none">
+        <path d="M0 28V16.8C0 11.2 1.86667 6.53333 5.6 2.8C9.33333 0.933333 13.0667 0 16.8 0V5.6C14 5.6 11.6667 6.53333 9.8 8.4C7.93333 10.2667 7 12.6 7 15.4H14V28H0ZM22 28V16.8C22 11.2 23.8667 6.53333 27.6 2.8C31.3333 0.933333 35.0667 0 38.8 0V5.6C36 5.6 33.6667 6.53333 31.8 8.4C29.9333 10.2667 29 12.6 29 15.4H36V28H22Z" fill="currentColor" opacity=".15"/>
+      </svg>
+      <blockquote class="case-testimonial-quote">
+        Recebemos o site e a primeira reação da equipe foi silêncio. O tipo de silêncio que antecede um "como eles fizeram isso". Cada seção parece vir do mesmo lugar criativo que o nosso trabalho.
+      </blockquote>
+      <div class="case-testimonial-author">
+        <span class="case-testimonial-name">Mara Solís</span>
+        <span class="case-testimonial-role">Co-founder · Lumenform</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTREGA -->
+  <section class="case-entrega">
+    <div class="entrega-item">
+      <div class="entrega-num">01</div>
+      <div class="entrega-label">Site institucional<br>completo</div>
+    </div>
+    <div class="entrega-item">
+      <div class="entrega-num">6+</div>
+      <div class="entrega-label">Seções com<br>motion design</div>
+    </div>
+    <div class="entrega-item">
+      <div class="entrega-num">100%</div>
+      <div class="entrega-label">Custom — sem<br>template ou CMS</div>
+    </div>
+  </section>
+
+  <!-- NAV ENTRE CASES -->
+  <div class="case-nav">
+    <a class="case-nav-link" href="/adash">
+      <span class="case-nav-dir">← Anterior</span>
+      <span class="case-nav-name">ADASH</span>
+    </a>
+    <a class="case-nav-link case-nav-right" href="/cases">
+      <span class="case-nav-dir">Ver todos</span>
+      <span class="case-nav-name">Portfólio →</span>
+    </a>
+  </div>
+
+  <footer>
+    <span class="footer-brand">©2026 IRBIS ESTÚDIO DIGITAL</span>
+    <a class="footer-link" href="https://irbis.com.br">irbis.com.br</a>
+  </footer>
+
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, touchMultiplier: 1.0, smoothWheel: true });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.set('nav', { opacity: 0, y: -20 });
+      gsap.set('.case-hero-label', { opacity: 0, y: 20 });
+      gsap.set('.case-hero-title', { opacity: 0, y: 40 });
+      gsap.set('.case-hero-meta', { opacity: 0, y: 20 });
+
+      const tl = gsap.timeline();
+      tl.to('nav', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
+        .to('.case-hero-label', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.3)
+        .to('.case-hero-title', { opacity: 1, y: 0, duration: 0.7, ease: 'power4.out' }, 0.45)
+        .to('.case-hero-meta', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.75);
+
+      gsap.utils.toArray(['.case-intro', '.case-cenario', '.case-entrega', '.case-nav']).forEach(el => {
+        gsap.from(el, {
+          opacity: 0, y: 40, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' }
+        });
+      });
+
+      gsap.utils.toArray('.case-gallery-item').forEach((el, i) => {
+        gsap.from(el, {
+          opacity: 0, y: 30, duration: 0.6, ease: 'power3.out', delay: i * 0.08,
+          scrollTrigger: { trigger: '.case-gallery', start: 'top 85%' }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

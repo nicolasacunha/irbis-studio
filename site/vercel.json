@@ -6,6 +6,8 @@
     { "source": "/adash",           "destination": "/cases-hub/adash/index.html" },
     { "source": "/eforce/(.*)",     "destination": "/cases-hub/eforce/$1" },
     { "source": "/eforce",          "destination": "/cases-hub/eforce/index.html" },
+    { "source": "/lumenform/(.*)", "destination": "/cases-hub/lumeform/$1" },
+    { "source": "/lumenform",      "destination": "/cases-hub/lumeform/index.html" },
     { "source": "/cases/(.*)",      "destination": "/cases-hub/$1" },
     { "source": "/cases",           "destination": "/cases-hub/index.html" },
     { "source": "/metodo",          "destination": "/metodo.html" },
@@ -16,6 +18,7 @@
     { "source": "/vs-agencia",          "destination": "/vs-agencia.html" },
     { "source": "/para/saas",           "destination": "/para/saas.html" },
     { "source": "/para/startups",       "destination": "/para/startups.html" },
-    { "source": "/obrigado",            "destination": "/obrigado.html" }
+    { "source": "/obrigado",            "destination": "/obrigado.html" },
+    { "source": "/founder",             "destination": "/founder.html" }
   ]
 }
