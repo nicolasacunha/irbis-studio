@@ -14,6 +14,15 @@
   <meta property="og:site_name" content="IRBIS Estúdio Digital">
   <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VKHL68G50M');
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,7 +57,39 @@
             "name": "Quanto custa uma agência de webdesign vs um estúdio solo?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Agências de webdesign cobram tipicamente entre R$30k–R$150k por projetos de site ou produto digital, com overhead de equipe embutido no preço. Um estúdio solo especializado como a IRBIS trabalha entre R$18k–R$45k para o mesmo nível de entrega, sem a camada de gerenciamento no custo."
+              "text": "Agências de webdesign cobram tipicamente entre R$30k–R$150k por projetos de site ou produto digital, com overhead de equipe embutido no preço. Um estúdio solo especializado como a IRBIS oferece landing page a partir de R$5k. Sites institucionais e e-commerce sob escopo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é um estúdio digital e como é diferente de uma agência?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Um estúdio digital é uma operação de design e desenvolvimento enxuta, geralmente conduzida por 1 a 5 profissionais com alta especialização. Diferente de uma agência, não tem overhead de equipe grande, gerência de conta e múltiplas camadas de aprovação. O resultado prático: mais velocidade, menor custo e comunicação direta com quem executa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva um site para startup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Com um estúdio solo especializado: 2–4 semanas para sites institucionais e landing pages, 4–8 semanas para sistemas ou produtos com funcionalidades. Com agência tradicional: normalmente 2–6 meses, considerando proposta, kick-off, alinhamento interno e aprovações."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Webdesign para SaaS é diferente de site institucional?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Um site de SaaS precisa converter visitante em trial ou demo — não apenas apresentar a empresa. Isso muda a hierarquia de conteúdo, o design da hero section, a estratégia de pricing page e a integração com o produto. Sites institucionais têm objetivos mais brandísticos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso ter o código do meu site ou fico dependente de plataforma?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Na IRBIS, o código, os arquivos e todos os acessos são entregues ao cliente ao final do projeto. Sem dependência de plataforma proprietária, sem lock-in. Você pode levar para outro profissional, continuar sozinho ou seguir trabalhando com a IRBIS — a escolha é sua."
             }
           }
         ]
@@ -189,6 +230,20 @@
     .cta-btn:active { transform: scale(0.96); }
     .cta-sub { font-size: .55rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; display: block; }
 
+    /* FAQ EXPANDIDO */
+    .faq-item {
+      border-bottom: 1px solid var(--s2);
+      padding: 1.5rem 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 {
+      font-size: .95rem; font-weight: 600; margin-bottom: .75rem;
+      color: var(--text);
+    }
+    .faq-item p {
+      font-size: .85rem; line-height: 1.8; color: rgba(250,250,250,.65);
+    }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--s2); padding: 2rem 3rem;
@@ -210,7 +265,7 @@
 
 <nav>
   <a href="index.html" class="nav-logo">IRBIS<span style="color:var(--accent)">.</span></a>
-  <a href="https://calendly.com/nicolas-cunhan-aluno/30min" target="_blank" rel="noopener" class="nav-cta">INICIAR PROJETO</a>
+  <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="nav-cta">FALAR NO WHATSAPP</a>
 </nav>
 
 <main>
@@ -238,7 +293,7 @@
       <tbody>
         <tr>
           <td>Prazo médio</td>
-          <td><span class="check">2–4 semanas</span> para sites<br>4–8 semanas para sistemas</td>
+          <td><span class="check">2–4 semanas</span> para landing pages, sites institucionais e e-commerce</td>
           <td class="neutral">2–6 meses (com proposta, alinhamento, aprovações)</td>
         </tr>
         <tr>
@@ -331,7 +386,7 @@
           <li>Quer falar direto com quem executa</li>
           <li>Não quer pagar overhead de estrutura de agência</li>
           <li>Prefere ter o código e os arquivos no seu controle</li>
-          <li>Tem um projeto claro (site, sistema, branding)</li>
+          <li>Tem um projeto claro (landing page, site institucional ou e-commerce)</li>
         </ul>
       </div>
       <div class="who-card">
@@ -344,6 +399,64 @@
           <li>Tem orçamento para o overhead de uma estrutura maior</li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- QUANDO AGENCIA FAZ SENTIDO (fair) -->
+  <section>
+    <h2>Quando a agência é a escolha certa</h2>
+    <p>
+      Esta página não é um ataque a agências. Para alguns perfis, agência é exatamente o que faz sentido — e vale ser honesto sobre isso.
+    </p>
+    <p>
+      <strong>Escolha agência se:</strong> você tem uma equipe de marketing interna que vai gerenciar o relacionamento, precisa de múltiplos projetos rodando em paralelo com times separados, ou precisa de SLA contratual com backup de equipe. Nesses cenários, a estrutura de agência é uma vantagem, não um custo evitável.
+    </p>
+    <p>
+      <strong>Escolha estúdio se:</strong> você é founder ou está em equipe pequena, tem um projeto claro com escopo definido, precisa de agilidade e comunicação direta, e não quer pagar overhead de uma estrutura que não vai usar.
+    </p>
+  </section>
+
+  <!-- OUTROS ESTÚDIOS NO MERCADO -->
+  <section>
+    <h2>Outros estúdios no mercado: o que saber</h2>
+    <p>
+      A IRBIS não é o único estúdio digital no Brasil. Existem outros nomes no mercado que operam em formatos similares — e vale conhecê-los antes de decidir.
+    </p>
+    <p>
+      <strong>GG Studio</strong> é outro estúdio BR com foco em SaaS e startups, usando Framer como plataforma principal. Oferece também "assinatura de design" (modelo de retenção mensal). É uma opção legítima para quem quer Framer especificamente ou um modelo de assinatura contínua. A IRBIS usa stack customizado (HTML/CSS/JS nativo) quando Framer não atende, e foca em projetos únicos com prazo definido — não em retenção mensal.
+    </p>
+    <p>
+      A diferença prática: se você precisa de um site Framer com ongoing de design mensal, GG Studio é uma opção. Se você precisa de landing page, site institucional ou e-commerce em 3 semanas com código limpo que é seu, IRBIS é a escolha.
+    </p>
+  </section>
+
+  <!-- FAQ EXPANDIDO -->
+  <section id="faq">
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq-item">
+      <h3>O que é um estúdio digital e como é diferente de uma agência?</h3>
+      <p>Um estúdio digital é uma operação de design e desenvolvimento enxuta, geralmente conduzida por 1 a 5 profissionais com alta especialização. Diferente de uma agência, não tem overhead de equipe grande, gerência de conta e múltiplas camadas de aprovação. O resultado prático: mais velocidade, menor custo e comunicação direta com quem executa. A IRBIS opera como estúdio solo — você fala direto com o designer e desenvolvedor em todos os momentos.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Quanto tempo leva um site para startup?</h3>
+      <p>Com a IRBIS: 2–4 semanas para sites institucionais, landing pages e e-commerce. Com agência tradicional: normalmente 2–6 meses, considerando proposta, kick-off, alinhamento interno e aprovações. A diferença não é qualidade — é o processo interno de cada modelo.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Webdesign para SaaS é diferente de site institucional?</h3>
+      <p>Sim, significativamente. Um site de SaaS precisa converter visitante em trial ou demo — não apenas apresentar a empresa. Isso muda a hierarquia de conteúdo (benefício antes de feature), o design da hero section (prova social + CTA acima da dobra), a estratégia de pricing page e a integração com o produto. Sites institucionais têm objetivos mais brandísticos. A IRBIS tem experiência específica com produtos digitais e SaaS.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Posso ter o código do meu site ou fico dependente de plataforma?</h3>
+      <p>Na IRBIS, o código, os arquivos e todos os acessos são entregues ao cliente ao final do projeto. Sem dependência de plataforma proprietária, sem lock-in. Você pode levar para outro profissional, continuar sozinho ou seguir trabalhando com a IRBIS — a escolha é sua. Algumas agências e estúdios constroem em plataformas como Framer ou Webflow onde o código real não é acessível — vale confirmar antes de contratar.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Como funciona o processo de início de projeto?</h3>
+      <p>Uma conversa de 30 minutos pelo WhatsApp ou Calendly. Se houver fit, você recebe um diagnóstico inicial em 48 horas com escopo, prazo e investimento. Sem proposta de 40 slides, sem reunião de kick-off de equipe. O trabalho começa no próximo dia útil após confirmação.</p>
     </div>
   </section>
 
@@ -372,5 +485,29 @@
   <a href="index.html" style="color:var(--muted)">← Voltar ao site</a>
 </footer>
 
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+  function track(e, p) { gtag('event', e, p || {}); }
+
+  document.querySelector('a[href*="wa.me"]')?.addEventListener('click', () =>
+    track('whatsapp_clicked', { location: 'vs_agencia_cta' }));
+  document.querySelector('.nav-cta')?.addEventListener('click', () =>
+    track('whatsapp_clicked', { location: 'vs_agencia_nav' }));
+
+  const depths = { 50: false, 90: false };
+  window.addEventListener('scroll', () => {
+    const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    if (pct >= 50 && !depths[50]) { depths[50] = true; track('scroll_depth', { depth: '50%', page: 'vs_agencia' }); }
+    if (pct >= 90 && !depths[90]) { depths[90] = true; track('scroll_depth', { depth: '90%', page: 'vs_agencia' }); }
+  }, { passive: true });
+
+  const faqObs = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { track('section_viewed', { section: 'faq', page: 'vs_agencia' }); faqObs.disconnect(); }
+  }, { threshold: 0.3 });
+  const faq = document.getElementById('faq');
+  if (faq) faqObs.observe(faq);
+})();
+</script>
 </body>
 </html>
