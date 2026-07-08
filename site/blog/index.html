@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | IRBIS</title>
+  <meta name="description" content="Conteúdo sobre criação de site, conversão e presença digital — para quem decide sobre o site do próprio negócio.">
+  <link rel="canonical" href="https://irbis.com.br/blog">
+  <link rel="icon" href="/Design/icone/favicon_true.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0C0C0E; --text: #FAFAFA; --muted: #71717A; --accent: #FF6600; --s1: #18181B; --s2: #27272A; --f: 'Sora', sans-serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: var(--bg); color: var(--text); font-family: var(--f); -webkit-font-smoothing: antialiased; }
+    body { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0 3rem; border-bottom: 1px solid var(--s2); margin-bottom: 3rem; }
+    .nav-logo { font-size: 1.2rem; font-weight: 800; letter-spacing: -.03em; text-decoration: none; color: var(--text); }
+    .nav-cta { font-size: .6rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--text); border: 1px solid var(--s2); padding: .5rem 1rem; text-decoration: none; transition: border-color .2s; }
+    .nav-cta:hover { border-color: var(--accent); }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -.04em; margin-bottom: 3rem; }
+    .post-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid var(--s2); text-decoration: none; color: var(--text); transition: opacity .2s; }
+    .post-item:hover { opacity: .7; }
+    .post-idx { font-size: .7rem; font-weight: 700; color: var(--muted); flex-shrink: 0; }
+    .post-body { flex: 1; }
+    .post-name { font-size: 1.1rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .4rem; }
+    .post-desc { font-size: .85rem; font-weight: 300; color: rgba(250,250,250,.7); line-height: 1.6; margin-bottom: .5rem; }
+    .post-meta { font-size: .6rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .post-arrow { flex-shrink: 0; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://irbis.com.br" class="nav-logo">IRBIS.</a>
+  <a href="https://irbis.com.br/#contato" class="nav-cta">Falar sobre o meu site →</a>
+</nav>
+
+<h1>Blog</h1>
+
+<div class="posts">
+    <a class="post-item" href="/blog/erros-site-startup">
+      <span class="post-idx">01</span>
+      <div class="post-body">
+        <h2 class="post-name">7 Erros de Site que Afastam Clientes antes da Primeira Conversa</h2>
+        <p class="post-desc">Auditei 13 sites de startups brasileiras em uma semana. Os mesmos erros aparecem em quase todos. Veja o que está custando leads antes de você perceber.</p>
+        <span class="post-meta">01 jun 2026 · 6 min de leitura</span>
+      </div>
+      <svg class="post-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+</div>
+
+</body>
+</html>

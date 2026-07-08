@@ -26,6 +26,10 @@
 
 IRBIS é um estúdio solo que usa IA como estrutura de execução — não como substituto do pensamento estratégico. O resultado é velocidade de agência com custo e comunicação de freelancer. O cliente fala direto com quem constrói.
 
+## Blog
+
+- [7 Erros de Site que Afastam Clientes antes da Primeira Conversa](https://irbis.com.br/blog/erros-site-startup): Auditei 13 sites de startups brasileiras em uma semana. Os mesmos erros aparecem em quase todos. Veja o que está custando leads antes de você perceber.
+
 ## Contato
 
 - Site: https://irbis.com.br

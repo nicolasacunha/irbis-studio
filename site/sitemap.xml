@@ -74,4 +74,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/processo/adash"/>
   </url>
 
+  <url>
+    <loc>https://irbis.com.br/blog/erros-site-startup</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/erros-site-startup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/erros-site-startup"/>
+  </url>
+
 </urlset>
