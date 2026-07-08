@@ -6,20 +6,8 @@
     { "source": "/adash",           "destination": "/cases-hub/adash/index.html" },
     { "source": "/eforce/(.*)",     "destination": "/cases-hub/eforce/$1" },
     { "source": "/eforce",          "destination": "/cases-hub/eforce/index.html" },
-    { "source": "/design/alba/(.*)",        "destination": "/cases-hub/design/alba/$1" },
-    { "source": "/design/alba",             "destination": "/cases-hub/design/alba/index.html" },
-    { "source": "/design/arvo/(.*)",        "destination": "/cases-hub/design/arvo/$1" },
-    { "source": "/design/arvo",             "destination": "/cases-hub/design/arvo/index.html" },
-    { "source": "/design/atelier-norr/(.*)", "destination": "/cases-hub/design/atelier-norr/$1" },
-    { "source": "/design/atelier-norr",     "destination": "/cases-hub/design/atelier-norr/index.html" },
-    { "source": "/design/lumenform/(.*)",   "destination": "/cases-hub/design/lumenform/$1" },
-    { "source": "/design/lumenform",        "destination": "/cases-hub/design/lumenform/index.html" },
-    { "source": "/design/meridian/(.*)",    "destination": "/cases-hub/design/meridian/$1" },
-    { "source": "/design/meridian",         "destination": "/cases-hub/design/meridian/index.html" },
-    { "source": "/design/vektor/(.*)",      "destination": "/cases-hub/design/vektor/$1" },
-    { "source": "/design/vektor",           "destination": "/cases-hub/design/vektor/index.html" },
-    { "source": "/design/(.*)",             "destination": "/cases-hub/design/$1" },
-    { "source": "/design",                  "destination": "/cases-hub/design/index.html" },
+    { "source": "/lumenform/(.*)", "destination": "/cases-hub/lumeform/$1" },
+    { "source": "/lumenform",      "destination": "/cases-hub/lumeform/index.html" },
     { "source": "/cases/(.*)",      "destination": "/cases-hub/$1" },
     { "source": "/cases",           "destination": "/cases-hub/index.html" },
     { "source": "/blog",            "destination": "/blog/index.html" },
@@ -33,7 +21,6 @@
     { "source": "/para/saas",           "destination": "/para/saas.html" },
     { "source": "/para/startups",       "destination": "/para/startups.html" },
     { "source": "/obrigado",            "destination": "/obrigado.html" },
-    { "source": "/founder",             "destination": "/founder.html" },
-    { "source": "/beta",                "destination": "/beta.html" }
+    { "source": "/founder",             "destination": "/founder.html" }
   ]
 }
