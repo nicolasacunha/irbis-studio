@@ -1,0 +1,46 @@
+{
+  "description": "Banco de imagens de capa geradas via Higgsfield (nano_banana_pro) para o blog automático da IRBIS. Abstratas, sem texto, sem logos, sem pessoas — alinhadas ao brand (fundo escuro #0C0C0E, acento laranja #FF6600). A rotina semanal escolhe uma imagem não usada do pilar correspondente; se esgotar, cai no pool 'geral'.",
+  "pillars": {
+    "erros-de-site": [
+      "erros-site-01.png",
+      "erros-site-02.png",
+      "erros-site-03.png",
+      "erros-site-04.png"
+    ],
+    "hora-de-trocar": [
+      "trocar-site-01.png",
+      "trocar-site-02.png",
+      "trocar-site-03.png",
+      "trocar-site-04.png"
+    ],
+    "tendencias": [
+      "tendencias-01.png",
+      "tendencias-02.png",
+      "tendencias-03.png",
+      "tendencias-04.png"
+    ],
+    "conversao-cro": [
+      "cro-01.png",
+      "cro-02.png",
+      "cro-03.png",
+      "cro-04.png"
+    ],
+    "seo-geo": [
+      "seo-geo-01.png",
+      "seo-geo-02.png",
+      "seo-geo-03.png",
+      "seo-geo-04.png"
+    ],
+    "geral": [
+      "geral-01.png",
+      "geral-02.png",
+      "geral-03.png",
+      "geral-04.png",
+      "geral-05.png",
+      "geral-06.png",
+      "geral-07.png",
+      "geral-08.png"
+    ]
+  },
+  "used": []
+}
