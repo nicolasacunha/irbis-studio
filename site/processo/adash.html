@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADASH em 3 semanas: como construí um dashboard SaaS do zero · IRBIS</title>
+  <meta name="description" content="Breakdown técnico completo: arquitetura, decisões de design, integração com IA e o que aprendi construindo um dashboard SaaS full-stack para operações de marketing e vendas em 3 semanas.">
+  <link rel="canonical" href="https://irbis.com.br/processo/adash">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://irbis.com.br/processo/adash">
+  <meta property="og:title" content="ADASH em 3 semanas: como construí um dashboard SaaS do zero">
+  <meta property="og:description" content="Breakdown técnico: arquitetura, decisões de design, integração com IA e o que aprendi construindo um SaaS full-stack em 3 semanas.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ADASH em 3 semanas: como construí um dashboard SaaS do zero",
+    "description": "Breakdown técnico completo: arquitetura, decisões de design, integração com IA e o que aprendi construindo um SaaS full-stack em 3 semanas.",
+    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/sobre" },
+    "publisher": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://irbis.com.br/processo/adash" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0C0C0E;
+      --text:   #FAFAFA;
+      --accent: #FF3D00;
+      --muted:  #71717A;
+      --mid:    #18181B;
+      --s2:     rgba(250,250,250,.08);
+      --f:      'Sora', sans-serif;
+    }
+
+    html { font-family: var(--f); font-size: 16px; }
+    body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* ── NAV ── */
+    #p-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.75rem 3rem;
+    }
+    .p-nav-logo {
+      font-size: .75rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--text); opacity: .7;
+      transition: opacity .2s;
+    }
+    .p-nav-logo:hover { opacity: 1; }
+    .p-nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+    }
+    .p-nav-back:hover { color: var(--text); }
+
+    /* ── PROGRESS BAR ── */
+    #p-progress {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+      height: 2px; background: var(--s2);
+    }
+    #p-progress-fill { height: 100%; width: 0%; background: var(--accent); }
+
+    /* ── HERO ── */
+    .p-hero {
+      padding: 14rem 3rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+    }
+    @media (max-width: 768px) {
+      .p-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 10rem 1.5rem 4rem;
+      }
+    }
+    .p-hero-left { display: flex; flex-direction: column; justify-content: flex-end; }
+    .p-hero-right { display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: .5rem; }
+
+    .p-hero-meta {
+      display: flex; gap: 2rem; align-items: center;
+      margin-bottom: 2.5rem; flex-wrap: wrap;
+    }
+    .p-hero-tag {
+      font-size: .55rem; font-weight: 700; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid rgba(255,61,0,.3); padding: .3rem .8rem;
+    }
+    .p-hero-date {
+      font-size: .58rem; font-weight: 400; letter-spacing: .12em;
+      color: var(--muted); text-transform: uppercase;
+    }
+    .p-hero-read {
+      font-size: .58rem; font-weight: 400; letter-spacing: .12em;
+      color: var(--muted); text-transform: uppercase;
+    }
+    .p-hero-title {
+      font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 800;
+      letter-spacing: -.04em; line-height: 1; text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .p-hero-title .acc { color: var(--accent); }
+    .p-hero-intro {
+      font-size: clamp(1rem, 1.4vw, 1.15rem); font-weight: 300;
+      line-height: 1.75; color: rgba(250,250,250,.7);
+    }
+
+    /* ── DIVIDER ── */
+    .p-divider { height: 1px; background: var(--s2); margin: 0 3rem; }
+
+    /* ── BODY ── */
+    .p-body {
+      max-width: 720px;
+      padding: 5rem 3rem 6rem;
+    }
+
+    .p-section {
+      margin-bottom: 4rem;
+    }
+
+    .p-section-num {
+      font-size: .55rem; font-weight: 700; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 1rem; display: block;
+    }
+
+    h2.p-h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800;
+      letter-spacing: -.03em; text-transform: uppercase; line-height: 1.05;
+      margin-bottom: 1.75rem;
+    }
+
+    h3.p-h3 {
+      font-size: clamp(1rem, 1.5vw, 1.25rem); font-weight: 700;
+      letter-spacing: -.02em; margin-bottom: .75rem; margin-top: 2rem;
+      color: var(--text);
+    }
+
+    .p-p {
+      font-size: clamp(.875rem, 1.1vw, 1rem); font-weight: 300;
+      line-height: 1.8; color: rgba(250,250,250,.7);
+      max-width: 62ch; margin-bottom: 1.25rem;
+    }
+    .p-p strong { color: var(--text); font-weight: 600; }
+    .p-p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .p-quote {
+      border-left: 0; /* no side-stripe */
+      background: var(--mid);
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .p-quote-text {
+      font-size: clamp(1.1rem, 1.8vw, 1.35rem); font-weight: 700;
+      letter-spacing: -.02em; line-height: 1.35; color: var(--text);
+    }
+
+    /* List */
+    .p-list {
+      list-style: none; margin: 1.5rem 0;
+    }
+    .p-list li {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: .75rem 0; border-bottom: 1px solid var(--s2);
+      font-size: clamp(.875rem, 1.1vw, 1rem); font-weight: 300;
+      line-height: 1.6; color: rgba(250,250,250,.7);
+    }
+    .p-list li:first-child { border-top: 1px solid var(--s2); }
+    .p-list-marker {
+      font-size: .52rem; font-weight: 700; letter-spacing: .15em;
+      color: var(--accent); padding-top: .2rem; min-width: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    /* Code block */
+    .p-code {
+      background: #111113; padding: 1.5rem 2rem; margin: 1.5rem 0;
+      font-family: 'Courier New', monospace; font-size: .78rem;
+      line-height: 1.7; color: rgba(250,250,250,.6); overflow-x: auto;
+    }
+    .p-code-label {
+      font-size: .5rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: .75rem; display: block;
+    }
+
+    /* Timeline */
+    .p-timeline {
+      margin: 2rem 0;
+    }
+    .p-tl-item {
+      display: grid; grid-template-columns: 5rem 1fr;
+      gap: 1.5rem; padding: 1.25rem 0;
+      border-bottom: 1px solid var(--s2);
+    }
+    .p-tl-item:first-child { border-top: 1px solid var(--s2); }
+    .p-tl-week {
+      font-size: .52rem; font-weight: 700; letter-spacing: .15em;
+      color: var(--accent); text-transform: uppercase; padding-top: .15rem;
+    }
+    .p-tl-content {}
+    .p-tl-title {
+      font-size: .9rem; font-weight: 700; margin-bottom: .3rem;
+    }
+    .p-tl-desc {
+      font-size: .8rem; font-weight: 300; color: var(--muted); line-height: 1.6;
+    }
+
+    /* Callout */
+    .p-callout {
+      background: rgba(255,61,0,.07);
+      padding: 1.75rem 2rem; margin: 2rem 0;
+    }
+    .p-callout-label {
+      font-size: .5rem; font-weight: 700; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: .75rem;
+    }
+    .p-callout-text {
+      font-size: .9rem; font-weight: 300; line-height: 1.7;
+      color: rgba(250,250,250,.75);
+    }
+    .p-callout-text strong { color: var(--text); font-weight: 600; }
+
+    /* ── FOOTER ARTICLE ── */
+    .p-footer {
+      padding: 4rem 3rem;
+      border-top: 1px solid var(--s2);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: start;
+    }
+    .p-footer-author-label {
+      font-size: .52rem; font-weight: 700; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: .75rem;
+    }
+    .p-footer-author-name {
+      font-size: 1.2rem; font-weight: 800; letter-spacing: -.03em;
+      text-transform: uppercase;
+    }
+    .p-footer-author-desc {
+      font-size: .8rem; font-weight: 300; color: var(--muted);
+      line-height: 1.6; margin-top: .5rem; max-width: 40ch;
+    }
+    .p-footer-cta {}
+    .p-footer-cta-text {
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 800;
+      letter-spacing: -.03em; text-transform: uppercase; line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .p-footer-cta-text .acc { color: var(--accent); }
+    .p-footer-btn {
+      display: inline-flex; align-items: center; gap: .75rem;
+      padding: .9rem 2rem; background: var(--accent);
+      font-size: .65rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--bg); transition: opacity .2s;
+    }
+    .p-footer-btn:hover { opacity: .85; }
+
+    /* ── SITE FOOTER ── */
+    .p-site-footer {
+      padding: 1.75rem 3rem;
+      border-top: 1px solid var(--s2);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: .75rem;
+    }
+    .p-site-footer-copy { font-size: .58rem; color: var(--muted); letter-spacing: .1em; }
+    .p-site-footer-links { display: flex; gap: 2rem; }
+    .p-site-footer-links a {
+      font-size: .58rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--muted); transition: color .2s;
+    }
+    .p-site-footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      #p-nav { padding: 1.5rem; }
+      .p-hero { padding: 10rem 1.5rem 4rem; }
+      .p-divider { margin: 0 1.5rem; }
+      .p-body { padding: 3.5rem 1.5rem 5rem; }
+      .p-footer { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .p-site-footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+      .p-tl-item { grid-template-columns: 4rem 1fr; gap: 1rem; }
+      .p-quote { padding: 1.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0s !important; animation-duration: 0s !important; }
+    }
+  </style>
+<script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body>
+
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav id="p-nav">
+    <a href="/" class="p-nav-logo">IRBIS</a>
+    <a href="/" class="p-nav-back">← Voltar</a>
+  </nav>
+
+  <!-- PROGRESS -->
+  <div id="p-progress"><div id="p-progress-fill"></div></div>
+
+  <!-- HERO -->
+  <header class="p-hero">
+    <div class="p-hero-left">
+      <div class="p-hero-meta">
+        <span class="p-hero-tag">Processo</span>
+        <span class="p-hero-date">Maio 2026</span>
+        <span class="p-hero-read">10 min de leitura</span>
+      </div>
+      <h1 class="p-hero-title">ADASH em<br>3 semanas:<br>como construí<br>um SaaS<br><span class="acc">do zero.</span></h1>
+    </div>
+    <div class="p-hero-right">
+      <p class="p-hero-intro">
+        Breakdown técnico e de design do ADASH, um dashboard SaaS full-stack para operações de marketing e vendas. Da arquitetura às decisões de UX, passando pela integração com IA e o que eu faria diferente se começasse hoje.
+      </p>
+    </div>
+  </header>
+
+  <div class="p-divider"></div>
+
+  <!-- BODY -->
+  <article class="p-body">
+
+    <!-- 1. O PROBLEMA -->
+    <section class="p-section">
+      <span class="p-section-num">01 · O problema</span>
+      <h2 class="p-h2">Quatro ferramentas.<br>Nenhuma decisão boa.</h2>
+      <p class="p-p">
+        O cliente gerenciava toda a operação de marketing e vendas com um conjunto de ferramentas que nunca foram pensadas para trabalhar juntas: Meta Ads em um lugar, Google Ads em outro, CRM em planilha no Google Drive e relatórios exportados para o Excel toda semana.
+      </p>
+      <p class="p-p">
+        O problema visível era o tempo perdido. Mas o problema real era mais sutil: <strong>decisões de investimento sendo tomadas com dados que chegavam sempre atrasados</strong>. Quando você demora dois dias para consolidar o relatório da semana passada, você já está três dias atrasado.
+      </p>
+
+      <div class="p-quote">
+        <p class="p-quote-text">"A solução óbvia seria conectar APIs e montar um painel genérico. A solução certa foi entender como o time tomava decisões e construir algo que seguisse essa lógica."</p>
+      </div>
+
+      <p class="p-p">
+        O briefing inicial pedia um "dashboard de marketing". Depois de três horas de conversa, ficou claro que o que eles precisavam não era de um painel. Era de uma única fonte de verdade para toda a operação.
+      </p>
+    </section>
+
+    <!-- 2. DECISÃO DE ARQUITETURA -->
+    <section class="p-section">
+      <span class="p-section-num">02 · Decisão de arquitetura</span>
+      <h2 class="p-h2">Por que construir<br>do zero, não customizar.</h2>
+      <p class="p-p">
+        A primeira pergunta que qualquer dev honesto faz nesse tipo de projeto: isso não resolve com Notion + Zapier + um bom template de Google Data Studio?
+      </p>
+      <p class="p-p">
+        Às vezes resolve. Nesse caso, não. Os motivos:
+      </p>
+      <ul class="p-list">
+        <li><span class="p-list-marker">01</span><span>O cliente tinha nomenclatura própria para estágios do funil. Ferramentas off-the-shelf não dobram para isso sem gambiarra que quebra quando você atualiza o plano.</span></li>
+        <li><span class="p-list-marker">02</span><span>A integração entre CRM e mídia paga precisava de lógica de negócio específica: atribuição, regras de estágio, alertas baseados em performance relativa, não absoluta.</span></li>
+        <li><span class="p-list-marker">03</span><span>O agente de IA não seria possível em cima de uma ferramenta de terceiro. Precisava de acesso direto aos dados, não a uma camada de exportação.</span></li>
+        <li><span class="p-list-marker">04</span><span>Custo de longo prazo: ferramentas SaaS empilhadas somam rápido. Uma solução própria tem custo de infraestrutura, não de licença por seat.</span></li>
+      </ul>
+      <p class="p-p">
+        Stack escolhido: <strong>React + TypeScript + Vite</strong> no front-end, integração direta com a API do Meta Ads e Google Ads, base de dados própria para o CRM, e Claude como motor do agente de IA.
+      </p>
+    </section>
+
+    <!-- 3. DECISÃO DE DESIGN -->
+    <section class="p-section">
+      <span class="p-section-num">03 · Decisão de design</span>
+      <h2 class="p-h2">Design de produto,<br>não de dashboard.</h2>
+      <p class="p-p">
+        A maioria dos dashboards falha por um motivo que não é técnico: <strong>eles são construídos como espelhos de banco de dados, não como ferramentas de decisão</strong>. Você vê os dados organizados da forma que o sistema os armazena, não da forma que você os usa para pensar.
+      </p>
+      <p class="p-p">
+        Antes de abrir o Figma, mapeei o fluxo real de tomada de decisão do time. Que pergunta eles faziam primeiro quando abriam o computador de manhã? Com que frequência consultavam cada tipo de dado? Quando um número precisava de contexto de outro módulo para fazer sentido?
+      </p>
+      <p class="p-p">
+        Três princípios guiaram o design:
+      </p>
+      <ul class="p-list">
+        <li><span class="p-list-marker">A</span><span><strong>Hierarquia de informação por frequência de uso</strong>, não por importância percebida. O que o time consultava toda manhã ficou no topo. O que consultava uma vez por semana ficou dois cliques atrás.</span></li>
+        <li><span class="p-list-marker">B</span><span><strong>Contexto cruzado visível sem navegação</strong>. Quando você está vendo performance de mídia, o funil de vendas desse mesmo período aparece colapsado ao lado, você expande se precisar, sem trocar de tela.</span></li>
+        <li><span class="p-list-marker">C</span><span><strong>Termos do negócio, não da ferramenta</strong>. O CRM não chamava "Lead" de lead: chamava pelo nome que eles usavam internamente. Soa óbvio, mas a maioria das ferramentas força você a aprender a nomenclatura delas.</span></li>
+      </ul>
+
+      <div class="p-callout">
+        <p class="p-callout-label">Insight de processo</p>
+        <p class="p-callout-text">Passei as primeiras duas semanas sem escrever uma linha de código. Só mapeando fluxos, fazendo perguntas e desenhando wireframes em papel. Essa foi a decisão que mais economizou tempo no final. Cada hora de descoberta que você pula vira dois dias de refatoração depois.</p>
+      </div>
+    </section>
+
+    <!-- 4. A IA -->
+    <section class="p-section">
+      <span class="p-section-num">04 · A integração com IA</span>
+      <h2 class="p-h2">IA que responde,<br>não que gera ruído.</h2>
+      <p class="p-p">
+        O agente de IA foi o módulo mais delicado, não pela implementação técnica, mas pela definição de escopo. A pergunta errada é "o que a IA pode fazer?". A pergunta certa é "qual é a tarefa específica que o usuário faz hoje de forma manual que a IA resolve melhor do que qualquer interface?"
+      </p>
+      <p class="p-p">
+        No caso do ADASH, a resposta era clara: <strong>interpretação de relatórios semanais</strong>. Toda sexta, alguém passava 45 minutos olhando para números e tentando articular o que eles significavam em linguagem natural para o time de vendas. Isso é exatamente o que um LLM faz bem.
+      </p>
+      <p class="p-p">
+        O agente tem acesso direto ao contexto da conta: métricas de mídia, estágios do funil, histórico de campanhas, e responde a perguntas em linguagem natural. Não é um chatbot genérico. Ele conhece o negócio.
+      </p>
+      <p class="p-p">
+        Três regras que guiaram a implementação:
+      </p>
+      <ul class="p-list">
+        <li><span class="p-list-marker">01</span><span>O agente só fala sobre o que ele sabe. Sem especulação. Se o dado não está no contexto, ele diz que não tem a informação.</span></li>
+        <li><span class="p-list-marker">02</span><span>Toda resposta vem com a fonte. O usuário pode verificar o número bruto se quiser. Confiança se constrói com transparência, não com respostas fluentes.</span></li>
+        <li><span class="p-list-marker">03</span><span>O agente não toma decisões. Ele apresenta contexto e indica implicações. A decisão fica com o humano.</span></li>
+      </ul>
+    </section>
+
+    <!-- 5. TIMELINE -->
+    <section class="p-section">
+      <span class="p-section-num">05 · As 3 semanas</span>
+      <h2 class="p-h2">O que aconteceu<br>em cada semana.</h2>
+
+      <div class="p-timeline">
+        <div class="p-tl-item">
+          <span class="p-tl-week">Sem. 1</span>
+          <div class="p-tl-content">
+            <p class="p-tl-title">Descoberta e arquitetura</p>
+            <p class="p-tl-desc">Mapeamento de fluxos, entrevistas com o time, definição de módulos, wireframes em papel. Decisão de stack e estrutura de dados. Aprovação do cliente antes de qualquer linha de código.</p>
+          </div>
+        </div>
+        <div class="p-tl-item">
+          <span class="p-tl-week">Sem. 2</span>
+          <div class="p-tl-content">
+            <p class="p-tl-title">Módulos core: Performance + CRM + Conteúdo</p>
+            <p class="p-tl-desc">Integração com Meta Ads e Google Ads. Dashboard de performance em tempo real. CRM em kanban com pipeline customizado. Calendário editorial por canal. Design system implementado em paralelo no código.</p>
+          </div>
+        </div>
+        <div class="p-tl-item">
+          <span class="p-tl-week">Sem. 3</span>
+          <div class="p-tl-content">
+            <p class="p-tl-title">QG Agent + Relatórios + Deploy</p>
+            <p class="p-tl-desc">Implementação do agente de IA, calibração de prompts com dados reais. Gerador de PDFs com identidade do cliente. Sessões de uso com o time, ajustes de UX, deploy em produção e handoff.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. O QUE FARIA DIFERENTE -->
+    <section class="p-section">
+      <span class="p-section-num">06 · O que eu faria diferente</span>
+      <h2 class="p-h2">Os erros<br>que valem documentar.</h2>
+      <p class="p-p">
+        Todo projeto tem pelo menos uma decisão que você tomaria diferente na segunda vez. No ADASH foram duas:
+      </p>
+
+      <h3 class="p-h3">Comecei o módulo de relatórios cedo demais</h3>
+      <p class="p-p">
+        Iniciei a implementação do gerador de PDF na semana 4, antes de ter o design final dos outros módulos consolidado. Resultado: tive que refatorar parte da estrutura de dados quando mudei o layout do dashboard na semana 5. Não foi crítico, mas custou meio dia que não estava no planejamento.
+      </p>
+      <p class="p-p">
+        <strong>Lição:</strong> módulos de output (relatórios, exportações, notificações) devem ser os últimos a serem implementados, porque eles dependem de como os dados estão estruturados nos módulos de core.
+      </p>
+
+      <h3 class="p-h3">Subestimei o tempo de ajuste do agente</h3>
+      <p class="p-p">
+        Implementar o agente de IA tecnicamente levou dois dias. Fazer ele se comportar da forma certa, responder com o tom correto, não alucinar, saber quando dizer "não sei", e isso levou mais uma semana de ajustes de prompt e testes com dados reais.
+      </p>
+      <p class="p-p">
+        <strong>Lição:</strong> em projetos com LLM, separe "implementação" de "calibração". São fases distintas. A calibração nunca está no escopo inicial e sempre cabe no prazo só se você reservar tempo para ela explicitamente.
+      </p>
+
+      <div class="p-callout">
+        <p class="p-callout-label">Sobre o prazo</p>
+        <p class="p-callout-text">3 semanas é apertado para um SaaS com 5 módulos e IA integrada. Possível porque <strong>não existe camada de gerenciamento</strong>: quem projetou implementou, quem implementou testou, quem testou fez o deploy. Sem reunião de alinhamento entre design e dev, sem aprovação de gerente, sem sprint planning que duplica o tempo sem duplicar o output.</p>
+      </div>
+    </section>
+
+    <!-- 7. CONCLUSÃO -->
+    <section class="p-section">
+      <span class="p-section-num">07 · O resultado</span>
+      <h2 class="p-h2">O que a equipe<br>tem hoje.</h2>
+      <p class="p-p">
+        O ADASH está em produção há meses. O time usa todos os cinco módulos diariamente. O tempo de análise semanal passou de horas para menos de 20 minutos. O agente de IA é consultado antes de toda reunião de performance.
+      </p>
+      <p class="p-p">
+        Mas o resultado mais importante não está em nenhuma dessas métricas: <strong>eles pararam de usar planilha</strong>. Quando uma equipe migra permanentemente de um fluxo antigo para uma ferramenta nova, sem ser forçada a isso, é porque a ferramenta está resolvendo um problema real da forma certa.
+      </p>
+      <p class="p-p">
+        Esse é o teste que uso para avaliar se um produto digital funcionou.
+      </p>
+    </section>
+
+  </article>
+
+  <div class="p-divider"></div>
+
+  <!-- ARTICLE FOOTER -->
+  <div class="p-footer">
+    <div>
+      <p class="p-footer-author-label">Escrito por</p>
+      <p class="p-footer-author-name">Nicolas Cunha</p>
+      <p class="p-footer-author-desc">Designer e desenvolvedor solo. Fundador da IRBIS Estúdio Digital. Constrói sites, dashboards e sistemas digitais para founders e early-stage teams.</p>
+    </div>
+    <div class="p-footer-cta">
+      <p class="p-footer-cta-text">Tem um projeto<br>parecido com<br><span class="acc">esse?</span></p>
+      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="p-footer-btn">Falar com a IRBIS →</a>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="p-site-footer">
+    <span class="p-site-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
+    <nav class="p-site-footer-links">
+      <a href="/">Home</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/manifesto">Manifesto</a>
+      <a href="/#cases">Cases</a>
+    </nav>
+  </footer>
+
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, smoothWheel: true });
+    function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // NAV fade in
+      gsap.from('#p-nav', { opacity: 0, y: -16, duration: 0.5, ease: 'power3.out' });
+
+      // Hero stagger
+      gsap.from('.p-hero-meta, .p-hero-title, .p-hero-intro', {
+        opacity: 0, y: 24, duration: 0.65, ease: 'power3.out', stagger: 0.12, delay: 0.7
+      });
+
+      // Scroll-triggered reveals
+      gsap.utils.toArray('.p-section').forEach(el => {
+        gsap.from(el, {
+          opacity: 0, y: 30, duration: 0.65, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        });
+      });
+    }
+
+    // Progress bar
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
+      document.getElementById('p-progress-fill').style.width = (scrolled * 100) + '%';
+    });
+
+    /* ── PAGE TRANSITIONS ── */
+    (function () {
+      const curtain = document.getElementById('pg-curtain');
+      const logo    = curtain ? curtain.querySelector('span') : null;
+      if (!curtain) return;
+
+      // Entrance
+      gsap.timeline()
+        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+
+      // Exit
+      function navigate(href) {
+        lenis.stop();
+        document.body.style.overflow = 'hidden';
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+        gsap.set(logo,    { opacity: 0 });
+        gsap.timeline()
+          .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+          .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { window.location.href = href; }, '+=0.15');
+      }
+
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (a.target === '_blank') return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
+      });
+    })();
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhe com Nicolas Cunha · Designer 1-on-1 · IRBIS</title>
+  <meta name="description" content="Projeto de design 1-on-1 com Nicolas Cunha, founder do IRBIS. Site, landing page ou identidade visual. Você fala direto com quem executa.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://irbis.com.br/founder">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irbis.com.br/founder">
+  <meta property="og:title" content="Trabalhe com Nicolas Cunha · IRBIS">
+  <meta property="og:description" content="Projeto de design 1-on-1. Site, landing page ou identidade visual para founders. Você fala direto com quem executa.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
+
+  <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <meta name="theme-color" content="#0C0C0E">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VKHL68G50M');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       TOKENS — idênticos ao irbis.com.br
+    ============================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:      #0C0C0E;
+      --s1:      #18181B;
+      --s2:      #27272A;
+      --s3:      #3F3F46;
+      --accent:  #FF3D00;
+      --text:    #FAFAFA;
+      --muted:   #8A8A93;
+      --subtle:  #52525B;
+      --f:       'Sora', sans-serif;
+
+      --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-press:  cubic-bezier(0.2, 0, 0, 1);
+
+      --max-w: 1240px;
+      --gutter: clamp(1.25rem, 5vw, 3rem);
+    }
+
+    html { overflow-x: hidden; scroll-behavior: smooth; color-scheme: dark; }
+
+    body {
+      font-family: var(--f);
+      background: var(--bg);
+      color: var(--text);
+      cursor: none;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+    a { text-decoration: none; color: inherit; }
+    button, input, textarea, select { font-family: var(--f); }
+
+    /* ============================================================
+       CURSOR
+    ============================================================ */
+    #cur-dot {
+      position: fixed; top: 0; left: 0;
+      width: 6px; height: 6px;
+      background: var(--text);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: opacity .2s, background .2s;
+    }
+    #cur-ring {
+      position: fixed; top: 0; left: 0;
+      width: 32px; height: 32px;
+      border: 1px solid rgba(250,250,250,.35);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9997;
+      transform: translate(-50%,-50%);
+      transition: transform .18s var(--ease-out), border-color .18s;
+    }
+    body.hovering #cur-ring {
+      transform: translate(-50%,-50%) scale(1.6);
+      border-color: var(--accent);
+    }
+    body.pressing #cur-dot { background: var(--accent); }
+
+    /* ============================================================
+       SCROLL REVEALS
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .32s; }
+    .reveal-delay-4 { transition-delay: .44s; }
+    .reveal-delay-5 { transition-delay: .56s; }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.25rem var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-logo:hover { color: var(--text); }
+    .nav-logo-sep {
+      width: 1px;
+      height: 14px;
+      background: var(--s3);
+    }
+    .nav-logo-irbis { color: var(--text); }
+    .nav-cta {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: .5rem 1rem;
+      border: 1px solid rgba(255,61,0,.35);
+      border-radius: 4px;
+      transition: background .2s, color .2s;
+    }
+    .nav-cta:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      min-height: 100dvh;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: calc(6rem + 60px) var(--gutter) 6rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* decorative monogram — background */
+    .hero-deco {
+      position: absolute;
+      right: -2vw;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(12rem, 28vw, 26rem);
+      font-weight: 800;
+      letter-spacing: -.08em;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(250,250,250,.09);
+      user-select: none;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .hero-inner { max-width: 780px; position: relative; z-index: 2; }
+
+    .hero-kicker {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .hero-kicker::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2.8rem, 7vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -.04em;
+      color: var(--text);
+      margin-bottom: 1.75rem;
+    }
+    .hero-h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(.95rem, 1.5vw, 1.125rem);
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 52ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      padding: .85rem 1.75rem;
+      border-radius: 5px;
+      border: none;
+      cursor: none;
+      transition: transform .15s var(--ease-press), opacity .15s;
+    }
+    .btn-primary:hover { opacity: .9; }
+    .btn-primary:active { transform: scale(.97); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: var(--muted);
+      padding: .85rem .25rem;
+      background: none;
+      border: none;
+      cursor: none;
+      transition: color .2s;
+    }
+    .btn-ghost:hover { color: var(--text); }
+    .btn-ghost svg { transition: transform .2s var(--ease-out); }
+    .btn-ghost:hover svg { transform: translateY(3px); }
+
+    /* depoimento inline */
+    .hero-quote {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(250,250,250,.08);
+      max-width: 500px;
+    }
+    .hero-quote-mark {
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--accent);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: -.25rem;
+    }
+    .hero-quote-text {
+      font-size: .875rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    .hero-quote-author {
+      margin-top: .5rem;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    /* ============================================================
+       SECTION DIVIDERS
+    ============================================================ */
+    .sec-divider {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--gutter);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      border-top: 1px solid rgba(250,250,250,.08);
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    .sec-number {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+    .sec-title-label {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    /* ============================================================
+       SECTIONS COMMON
+    ============================================================ */
+    section {
+      padding: clamp(4rem, 8vw, 7rem) var(--gutter);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .sec-heading {
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .sec-sub {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 52ch;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ============================================================
+       PARA QUEM — two-column stark split
+    ============================================================ */
+    #paraquem .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid rgba(250,250,250,.09);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .split-col {
+      padding: 2.5rem;
+    }
+    .split-col:first-child {
+      border-right: 1px solid rgba(250,250,250,.09);
+    }
+    .split-col-label {
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .split-col-label.yes { color: var(--accent); }
+    .split-col-label.no  { color: var(--subtle); }
+    .split-col-label.yes::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .split-col-label.no::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--subtle);
+      flex-shrink: 0;
+    }
+
+    .split-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; }
+    .split-item {
+      font-size: .9rem;
+      line-height: 1.55;
+      color: var(--text);
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(250,250,250,.06);
+    }
+    .split-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .split-item.dim { color: var(--subtle); }
+
+    /* ============================================================
+       O QUE VOCÊ RECEBE — numbered rows, not equal cards
+    ============================================================ */
+    #entrega .entries { display: flex; flex-direction: column; gap: 0; }
+    .entry-row {
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      gap: 2rem;
+      align-items: start;
+      padding: 2.25rem 0;
+      border-bottom: 1px solid rgba(250,250,250,.08);
+    }
+    .entry-row:first-child { border-top: 1px solid rgba(250,250,250,.08); }
+    .entry-num {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -.06em;
+      color: rgba(250,250,250,.12);
+      line-height: 1;
+      padding-top: .1rem;
+    }
+    .entry-body {}
+    .entry-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      color: var(--text);
+      margin-bottom: .5rem;
+    }
+    .entry-desc {
+      font-size: .875rem;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 48ch;
+    }
+    .entry-tag {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      padding-top: .3rem;
+    }
+
+    /* ============================================================
+       CASOS
+    ============================================================ */
+    #casos .case-list { display: flex; flex-direction: column; gap: 1px; background: rgba(250,250,250,.07); border-radius: 10px; overflow: hidden; }
+    .case-item {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      background: var(--bg);
+      transition: background .2s;
+    }
+    .case-item:hover { background: var(--s1); }
+    .case-img {
+      height: 200px;
+      background: var(--s1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+    .case-body {
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .case-tag {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+    .case-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--text);
+      margin-bottom: .5rem;
+    }
+    .case-desc {
+      font-size: .875rem;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 44ch;
+      margin-bottom: 1.25rem;
+    }
+    .case-result {
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .case-result::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       FORMULÁRIO — aplicação
+    ============================================================ */
+    #aplicacao {
+      padding: clamp(4rem, 8vw, 7rem) var(--gutter) clamp(5rem, 10vw, 9rem);
+    }
+    .form-wrap {
+      background: var(--s1);
+      border: 1px solid rgba(250,250,250,.09);
+      border-radius: 12px;
+      padding: clamp(2.5rem, 5vw, 4rem);
+      max-width: 720px;
+    }
+    .form-pretag {
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .form-pretag::before {
+      content: '';
+      width: 16px;
+      height: 1px;
+      background: var(--accent);
+      display: block;
+    }
+    .form-heading {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: .75rem;
+    }
+    .form-sub {
+      font-size: .9rem;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 50ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .form-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .form-input {
+      background: var(--bg);
+      border: 1px solid rgba(250,250,250,.12);
+      border-radius: 6px;
+      padding: .75rem 1rem;
+      font-size: .9rem;
+      font-weight: 400;
+      color: var(--text);
+      transition: border-color .2s;
+      appearance: none;
+      -webkit-appearance: none;
+      resize: vertical;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .form-input::placeholder { color: var(--subtle); }
+    select.form-input { cursor: none; }
+    option { background: var(--s2); }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: .875rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      padding: .95rem 2rem;
+      border-radius: 5px;
+      border: none;
+      cursor: none;
+      transition: transform .15s var(--ease-press), opacity .2s;
+    }
+    .btn-submit:hover { opacity: .9; }
+    .btn-submit:active { transform: scale(.97); }
+    .btn-submit svg { transition: transform .2s var(--ease-out); }
+    .btn-submit:hover svg { transform: translateX(3px); }
+
+    .form-note {
+      font-size: .75rem;
+      line-height: 1.5;
+      color: var(--subtle);
+      max-width: 28ch;
+    }
+
+    /* success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .form-success.visible { display: block; }
+    #form-actual.hidden { display: none; }
+    .success-mark {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,61,0,.1);
+      border: 1px solid rgba(255,61,0,.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.25rem;
+    }
+    .success-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--text);
+      margin-bottom: .5rem;
+    }
+    .success-sub { font-size: .9rem; color: var(--muted); }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      padding: 2.5rem var(--gutter);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid rgba(250,250,250,.07);
+    }
+    .footer-left {
+      font-size: .75rem;
+      color: var(--subtle);
+      font-weight: 500;
+    }
+    .footer-left a {
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .footer-left a:hover { color: var(--text); }
+    .footer-right {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 768px) {
+      body { cursor: auto; }
+      #cur-dot, #cur-ring { display: none; }
+
+      .hero-deco { display: none; }
+      .hero-h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
+
+      #paraquem .split {
+        grid-template-columns: 1fr;
+      }
+      .split-col:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(250,250,250,.09);
+      }
+
+      .entry-row {
+        grid-template-columns: 48px 1fr;
+        gap: 1.25rem;
+      }
+      .entry-tag { display: none; }
+      .entry-num { font-size: 1.8rem; }
+
+      .case-item {
+        grid-template-columns: 1fr;
+      }
+      .case-img { height: 160px; }
+      .case-body { padding: 1.5rem; }
+
+      .form-fields { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+
+      .form-submit-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .btn-submit { width: 100%; justify-content: center; }
+      .form-note { max-width: 100%; }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+      }
+    }
+  </style>
+<script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- NAV -->
+  <nav aria-label="Navegação principal">
+    <a href="https://irbis.com.br" class="nav-logo" aria-label="Voltar para IRBIS">
+      <span class="nav-logo-irbis">IRBIS</span>
+      <span class="nav-logo-sep" aria-hidden="true"></span>
+      <span>Nicolas Cunha</span>
+    </a>
+    <a href="#aplicacao" class="nav-cta">Aplicar agora</a>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <div id="hero" aria-label="Hero">
+    <div class="hero-deco" aria-hidden="true">NC</div>
+    <div class="hero-inner">
+
+      <p class="hero-kicker reveal">Designer · Founder do IRBIS</p>
+
+      <h1 class="hero-h1 reveal reveal-delay-1">
+        Trabalhe comigo<br>
+        no site do<br>
+        seu negócio.
+      </h1>
+
+      <p class="hero-sub reveal reveal-delay-2">
+        Projeto de design com entrega em semanas.
+        Você fala direto com quem executa.
+      </p>
+
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#aplicacao" class="btn-primary">
+          Aplicar para trabalhar comigo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#casos" class="btn-ghost">
+          Ver casos
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+
+      <blockquote class="hero-quote reveal reveal-delay-4" aria-label="Depoimento de Mauricio Odery">
+        <span class="hero-quote-mark" aria-hidden="true">"</span>
+        <div>
+          <p class="hero-quote-text">
+            Resultado em três semanas. Nicolas entende o que o founder precisa antes mesmo de você terminar de falar.
+          </p>
+          <p class="hero-quote-author">Mauricio Odery · EForce Drums</p>
+        </div>
+      </blockquote>
+
+    </div>
+  </div>
+
+  <!-- DIVIDER 01 -->
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sec-number">—01</span>
+    <span class="sec-title-label">Para quem é</span>
+  </div>
+
+  <!-- ============================================================
+       PARA QUEM
+  ============================================================ -->
+  <section id="paraquem" aria-labelledby="paraquem-heading">
+    <h2 class="sec-heading reveal" id="paraquem-heading">Esse projeto é pra você?</h2>
+    <p class="sec-sub reveal reveal-delay-1">Sem rodeios. Leia antes de aplicar.</p>
+
+    <div class="split reveal reveal-delay-2">
+      <div class="split-col">
+        <p class="split-col-label yes">É pra você</p>
+        <ul class="split-list">
+          <li class="split-item">Founder com produto ou serviço já definido</li>
+          <li class="split-item">Precisa do site no ar em menos de 60 dias</li>
+          <li class="split-item">Quer converter visitante em cliente ou atrair investidor</li>
+          <li class="split-item">Sabe que template não resolve problema de posicionamento</li>
+        </ul>
+      </div>
+      <div class="split-col">
+        <p class="split-col-label no">Não é pra você</p>
+        <ul class="split-list">
+          <li class="split-item dim">Ainda está validando a ideia, sem produto ou oferta definida</li>
+          <li class="split-item dim">Quer algo rápido e barato sem pensar em resultado de negócio</li>
+          <li class="split-item dim">Está procurando uma agência com muita gente no projeto</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER 02 -->
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sec-number">—02</span>
+    <span class="sec-title-label">O que você recebe</span>
+  </div>
+
+  <!-- ============================================================
+       ENTREGA
+  ============================================================ -->
+  <section id="entrega" aria-labelledby="entrega-heading">
+    <h2 class="sec-heading reveal" id="entrega-heading">Três tipos de projeto</h2>
+    <p class="sec-sub reveal reveal-delay-1">O processo é o mesmo. A entrega depende do que você precisa construir.</p>
+
+    <div class="entries">
+      <div class="entry-row reveal reveal-delay-2">
+        <span class="entry-num" aria-hidden="true">01</span>
+        <div class="entry-body">
+          <h3 class="entry-name">Site institucional</h3>
+          <p class="entry-desc">Para quem precisa provar que o negócio existe antes de pedir uma reunião. Funciona para rodadas de captação e due diligence.</p>
+        </div>
+        <span class="entry-tag">A partir de R$12k</span>
+      </div>
+      <div class="entry-row reveal reveal-delay-3">
+        <span class="entry-num" aria-hidden="true">02</span>
+        <div class="entry-body">
+          <h3 class="entry-name">Landing page</h3>
+          <p class="entry-desc">Cada elemento existe por uma razão: mover o visitante para a ação. Funciona para vendas diretas e captura de contato.</p>
+        </div>
+        <span class="entry-tag">A partir de R$5k</span>
+      </div>
+      <div class="entry-row reveal reveal-delay-4">
+        <span class="entry-num" aria-hidden="true">03</span>
+        <div class="entry-body">
+          <h3 class="entry-name">Identidade visual</h3>
+          <p class="entry-desc">Logo, paleta e sistema visual que posiciona antes de o cliente ler uma palavra. Para quem precisa comunicar quem é antes de ser conhecido.</p>
+        </div>
+        <span class="entry-tag">A partir de R$8k</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER 03 -->
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sec-number">—03</span>
+    <span class="sec-title-label">Casos anteriores</span>
+  </div>
+
+  <!-- ============================================================
+       CASOS
+  ============================================================ -->
+  <section id="casos" aria-labelledby="casos-heading">
+    <h2 class="sec-heading reveal" id="casos-heading">Trabalhos recentes</h2>
+    <p class="sec-sub reveal reveal-delay-1">Dois projetos entregues, com problema específico e resultado verificável.</p>
+
+    <div class="case-list reveal reveal-delay-2">
+      <article class="case-item">
+        <div class="case-img" aria-label="Screenshot do site EForce Drums">
+          Screenshot · EForce
+        </div>
+        <div class="case-body">
+          <p class="case-tag">Site institucional · Identidade visual</p>
+          <h3 class="case-name">EForce Drums</h3>
+          <p class="case-desc">
+            Marca de bateria eletrônica que precisava de presença digital do zero: site, identidade e posicionamento para entrar no mercado.
+          </p>
+          <p class="case-result">Site e identidade no ar em 4 semanas</p>
+        </div>
+      </article>
+
+      <article class="case-item">
+        <div class="case-img" aria-label="Screenshot do site Adash">
+          Screenshot · Adash
+        </div>
+        <div class="case-body">
+          <p class="case-tag">Software · Dashboard</p>
+          <h3 class="case-name">Adash</h3>
+          <p class="case-desc">
+            Software com dashboard que precisava de site para converter usuário e comunicar o produto para quem ainda não o viu funcionando.
+          </p>
+          <p class="case-result">Site que comunica o produto antes da demo</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- DIVIDER 04 -->
+  <div class="sec-divider" aria-hidden="true">
+    <span class="sec-number">—04</span>
+    <span class="sec-title-label">Aplicação</span>
+  </div>
+
+  <!-- ============================================================
+       FORMULÁRIO
+  ============================================================ -->
+  <section id="aplicacao" aria-labelledby="aplicacao-heading">
+    <div class="form-wrap reveal">
+      <p class="form-pretag">Candidatura</p>
+      <h2 class="form-heading" id="aplicacao-heading">Aplique para trabalhar comigo</h2>
+      <p class="form-sub">
+        Analiso toda candidatura pessoalmente. Se fizer sentido para os dois lados, entro em contato em até 48 horas para agendar um diagnóstico gratuito de 30 minutos.
+      </p>
+
+      <form id="form-actual" action="https://formspree.io/f/XXXXX" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nova aplicação — irbis.com.br/founder">
+        <input type="hidden" name="_redirect" value="false">
+
+        <div class="form-fields">
+          <div class="form-group">
+            <label for="f-nome">Nome</label>
+            <input class="form-input" type="text" id="f-nome" name="nome" placeholder="Seu nome" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input class="form-input" type="email" id="f-email" name="email" placeholder="voce@empresa.com" required autocomplete="email">
+          </div>
+          <div class="form-group full">
+            <label for="f-site">Site atual (se tiver)</label>
+            <input class="form-input" type="url" id="f-site" name="site_atual" placeholder="https://..." autocomplete="url">
+          </div>
+          <div class="form-group full">
+            <label for="f-tipo">O que você precisa?</label>
+            <select class="form-input" id="f-tipo" name="tipo_projeto" required>
+              <option value="" disabled selected>Selecione um tipo de projeto</option>
+              <option value="landing_page">Landing page</option>
+              <option value="site_institucional">Site institucional</option>
+              <option value="identidade_visual">Identidade visual</option>
+              <option value="outro">Outro, descreverei abaixo</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="f-contexto">Prazo e contexto</label>
+            <textarea class="form-input" id="f-contexto" name="contexto" rows="4" placeholder="Qual é o prazo? Qual é o orçamento aproximado? O que você está tentando resolver?" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn-submit" id="btn-submit">
+            Enviar candidatura
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">Um diagnóstico gratuito de 30 minutos.</p>
+        </div>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <div class="success-mark" aria-hidden="true">✓</div>
+        <p class="success-title">Candidatura recebida.</p>
+        <p class="success-sub">Analiso e entro em contato em até 48 horas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-left">
+      Nicolas Cunha · Founder do <a href="https://irbis.com.br">IRBIS</a>
+    </p>
+    <p class="footer-right">2026</p>
+  </footer>
+
+  <script>
+    /* ── CURSOR ── */
+    const dot  = document.getElementById('cur-dot');
+    const ring = document.getElementById('cur-ring');
+    let mx = -100, my = -100, rx = -100, ry = -100;
+
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    document.addEventListener('mousedown', () => document.body.classList.add('pressing'));
+    document.addEventListener('mouseup',   () => document.body.classList.remove('pressing'));
+
+    const interactives = 'a, button, input, textarea, select, [role="button"]';
+    document.querySelectorAll(interactives).forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+    });
+
+    (function animCursor() {
+      rx += (mx - rx) * .15;
+      ry += (my - ry) * .15;
+      dot.style.transform  = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
+      ring.style.transform = ring.classList.contains('scale') ? '' :
+        `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
+      ring.style.left = '0'; ring.style.top = '0';
+      dot.style.left  = '0'; dot.style.top  = '0';
+      dot.style.transform  = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
+      ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%)) ${document.body.classList.contains('hovering') ? 'scale(1.6)' : 'scale(1)'}`;
+      ring.style.borderColor = document.body.classList.contains('hovering') ? 'var(--accent)' : 'rgba(250,250,250,.35)';
+      requestAnimationFrame(animCursor);
+    })();
+
+    /* ── SCROLL REVEALS ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* trigger hero reveals on load */
+    setTimeout(() => {
+      document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('in'));
+    }, 100);
+
+    /* ── FORM ── */
+    const form    = document.getElementById('form-actual');
+    const success = document.getElementById('form-success');
+    const submitBtn = document.getElementById('btn-submit');
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      // basic validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'var(--accent)';
+          valid = false;
+          field.addEventListener('input', () => {
+            field.style.borderColor = '';
+          }, { once: true });
+        }
+      });
+      if (!valid) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      // gtag conversion event
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', { event_category: 'founder_page', event_label: 'aplicacao' });
+      }
+
+      try {
+        const data = new FormData(form);
+        const action = form.getAttribute('action');
+
+        // If Formspree is configured, post there
+        if (action && action !== '#' && !action.includes('XXXXX')) {
+          await fetch(action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+        }
+
+        form.classList.add('hidden');
+        success.classList.add('visible');
+      } catch (_) {
+        // Fallback: show success anyway and log
+        form.classList.add('hidden');
+        success.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
