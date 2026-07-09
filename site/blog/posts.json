@@ -31,6 +31,23 @@
       ],
       "coverImage": "/blog/assets/covers/trocar-site-01.png",
       "readingTimeMin": 3
+    },
+    {
+      "slug": "ia-esta-mudando-como-clientes-encontram-seu-negocio",
+      "title": "48% das Buscas no Google Já Não Geram Clique: Seu Site Aparece na Resposta?",
+      "description": "Quase metade das buscas no Google já responde sem clique. Veja como estruturar seu site pra continuar sendo encontrado pela IA e por clientes.",
+      "dateISO": "2026-07-09",
+      "pilar": "seo-geo",
+      "keywords": [
+        "GEO generative engine optimization",
+        "IA overviews Google",
+        "SEO para IA",
+        "site aparecer no ChatGPT",
+        "busca por IA negócio",
+        "otimização para IA"
+      ],
+      "coverImage": "/blog/assets/covers/seo-geo-01.png",
+      "readingTimeMin": 4
     }
   ]
 }
