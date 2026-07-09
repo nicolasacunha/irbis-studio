@@ -92,4 +92,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/sinais-hora-trocar-site"/>
   </url>
 
+  <url>
+    <loc>https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio"/>
+  </url>
+
 </urlset>
