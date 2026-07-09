@@ -1018,44 +1018,27 @@
     }
     .cases-ver-todos:hover { color: var(--accent); border-color: var(--accent); }
 
-    .cases-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .75rem;
-    }
-    .case-card {
+    .case-featured, .case-card {
       display: block;
       position: relative;
       overflow: hidden;
       background: var(--s1);
-      aspect-ratio: 16 / 10;
       box-shadow: inset 0 0 0 1px rgba(250,250,250,.06);
     }
-    .case-card:first-child {
-      grid-column: span 2;
-      aspect-ratio: 21 / 9;
-    }
+    .case-card { aspect-ratio: 16 / 10; }
+    .case-featured { aspect-ratio: 21 / 9; }
     .case-bg {
       position: absolute;
       inset: 0;
       transition: transform .6s var(--ease-out);
     }
     @media (hover: hover) and (pointer: fine) {
-      .case-card:hover .case-bg { transform: scale(1.04); }
+      .case-featured:hover .case-bg, .case-card:hover .case-bg { transform: scale(1.04); }
     }
     .case-bg-eforce {
       background: url('cases-hub/eforce/assets/EFORCE-CASE.jpeg') center center / cover no-repeat;
     }
     .case-bg-eforce::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(12,12,14,.65) 0%, rgba(12,12,14,.92) 100%);
-    }
-    .case-bg-adash {
-      background: url('cases-hub/adash/assets/ADASH-HERO.jpg') center center / cover no-repeat;
-    }
-    .case-bg-adash::after {
       content: '';
       position: absolute;
       inset: 0;
@@ -1085,15 +1068,30 @@
       user-select: none;
       line-height: 1;
     }
-    .case-card:first-child .case-ghost { font-size: clamp(8rem, 18vw, 18rem); }
+    .case-featured .case-ghost { font-size: clamp(8rem, 18vw, 18rem); }
     .case-top-bar {
       position: absolute;
       top: 0; left: 0; right: 0;
       padding: 1.5rem 2rem;
       background: linear-gradient(to bottom, rgba(12,12,14,.75) 0%, transparent 100%);
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .6rem .9rem;
+      justify-content: flex-start;
       z-index: 2;
+    }
+    .case-top-bar .case-yr { margin-left: auto; }
+    .case-destaque { flex-shrink: 0; }
+    .case-destaque {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--accent);
+      padding: .3rem .6rem;
+      line-height: 1;
     }
     .case-cat {
       font-size: .52rem;
@@ -1128,6 +1126,7 @@
       color: #ffffff;
       text-shadow: 0 2px 16px rgba(0,0,0,.8), 0 1px 4px rgba(0,0,0,.9);
     }
+    .case-featured .case-n { font-size: clamp(1.6rem, 3.5vw, 3rem); }
     .case-card:not(:first-child) .case-n { font-size: clamp(1.2rem, 2.5vw, 2rem); }
     .case-service {
       font-size: .55rem;
@@ -1144,9 +1143,9 @@
       transition: color .25s, transform .25s var(--ease-out);
     }
     @media (hover: hover) and (pointer: fine) {
-      .case-card:hover .case-go { color: var(--accent); transform: translate(5px, -5px); }
+      .case-featured:hover .case-go, .case-card:hover .case-go { color: var(--accent); transform: translate(5px, -5px); }
     }
-    .case-card::after {
+    .case-featured::after, .case-card::after {
       content: '';
       position: absolute;
       inset: 0;
@@ -1155,7 +1154,33 @@
       pointer-events: none;
       z-index: 3;
     }
-    .case-card:hover::after { border-color: rgba(255,61,0,.25); }
+    .case-featured:hover::after, .case-card:hover::after { border-color: rgba(255,61,0,.25); }
+
+    .case-metrics {
+      display: flex;
+      gap: 1.75rem;
+    }
+    .case-metric { text-align: left; }
+    .case-metric-num {
+      display: block;
+      font-size: clamp(1.1rem, 2vw, 1.6rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--accent);
+      line-height: 1;
+      text-shadow: 0 2px 16px rgba(0,0,0,.8);
+    }
+    .case-metric-label {
+      display: block;
+      font-size: .5rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.75);
+      margin-top: .3rem;
+      max-width: 8rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,.6);
+    }
 
 /* ================================================================
        SOCIAL PROOF — NUMEROS
@@ -1642,13 +1667,15 @@
       /* ── CASES ── */
       #cases { padding: 3rem 1.5rem; }
       .cases-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
-      .cases-grid { grid-template-columns: 1fr; gap: .75rem; }
-      .case-card { aspect-ratio: 4/3; }
-      .case-card:first-child { grid-column: span 1; aspect-ratio: 4/3; }
+      .case-featured, .case-card { aspect-ratio: 4/3; }
       .case-ghost { font-size: clamp(5rem, 18vw, 8rem); }
       .case-go { display: none; }
       .case-n { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+      .case-featured .case-n { font-size: clamp(1.4rem, 6vw, 1.8rem); }
       .case-card:not(:first-child) .case-n { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+      .case-bottom-bar { flex-wrap: wrap; gap: .75rem; align-items: flex-start; }
+      .case-metrics { flex-wrap: wrap; gap: 1rem 1.5rem; width: 100%; }
+      .case-metric-label { max-width: none; }
 
       /* ── PAINÉIS HORIZONTAIS → VERTICAL ── */
       #horizontal-section { height: auto; overflow: visible; }
@@ -1900,57 +1927,36 @@
         <a href="cases-hub/" class="cases-ver-todos">Ver todos →</a>
       </div>
 
-      <div class="cases-grid">
-
-        <a class="case-card" href="cases-hub/eforce/">
-          <div class="case-bg case-bg-eforce"></div>
-          <div class="case-ghost">EF</div>
-          <div class="case-top-bar">
-            <span class="case-cat">Webdesign · Motion</span>
-            <span class="case-yr">2026</span>
+      <a class="case-featured" href="cases-hub/eforce/">
+        <div class="case-bg case-bg-eforce"></div>
+        <div class="case-ghost">EF</div>
+        <div class="case-top-bar">
+          <span class="case-destaque">Em destaque</span>
+          <span class="case-cat">Webdesign · Motion</span>
+          <span class="case-yr">2026</span>
+        </div>
+        <div class="case-bottom-bar">
+          <div>
+            <div class="case-n">EForce Drums</div>
+            <div class="case-service">Site institucional · Odery Drums</div>
           </div>
-          <div class="case-bottom-bar">
-            <div>
-              <div class="case-n">EForce Drums</div>
-              <div class="case-service">Site institucional · Odery Drums</div>
+          <div class="case-metrics">
+            <div class="case-metric">
+              <span class="case-metric-num">+350k</span>
+              <span class="case-metric-label">em vendas atribuídas ao site</span>
             </div>
-            <span class="case-go">↗</span>
-          </div>
-        </a>
-
-        <a class="case-card" href="cases-hub/adash/">
-          <div class="case-bg case-bg-adash"></div>
-          <div class="case-ghost">AD</div>
-          <div class="case-top-bar">
-            <span class="case-cat">SaaS · Analytics</span>
-            <span class="case-yr">2026</span>
-          </div>
-          <div class="case-bottom-bar">
-            <div>
-              <div class="case-n">Adash</div>
-              <div class="case-service">Produto digital · Analytics</div>
+            <div class="case-metric">
+              <span class="case-metric-num">3 sem.</span>
+              <span class="case-metric-label">do briefing ao ar</span>
             </div>
-            <span class="case-go">↗</span>
-          </div>
-        </a>
-
-        <a class="case-card" href="cases-hub/design/">
-          <div class="case-bg case-bg-lumeform"></div>
-          <div class="case-ghost">DS</div>
-          <div class="case-top-bar">
-            <span class="case-cat">Design Cases · 6 Projetos</span>
-            <span class="case-yr">2026</span>
-          </div>
-          <div class="case-bottom-bar">
-            <div>
-              <div class="case-n">Design Cases</div>
-              <div class="case-service">Portfólio de Design Exploratório</div>
+            <div class="case-metric">
+              <span class="case-metric-num">6</span>
+              <span class="case-metric-label">idiomas no design system</span>
             </div>
-            <span class="case-go">↗</span>
           </div>
-        </a>
-
-      </div>
+          <span class="case-go">↗</span>
+        </div>
+      </a>
     </section>
 
     <!-- ================================================================
@@ -2447,7 +2453,7 @@
       el.addEventListener('mouseenter', () => document.body.classList.add('is-hovering'));
       el.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering'));
     });
-    document.querySelectorAll('.case-card').forEach(card => {
+    document.querySelectorAll('.case-card, .case-featured').forEach(card => {
       card.addEventListener('mouseenter', () => document.body.classList.add('is-case-hover'));
       card.addEventListener('mouseleave', () => document.body.classList.remove('is-case-hover'));
     });
@@ -2793,7 +2799,7 @@
       });
 
       // Case card clicks
-      document.querySelectorAll('.case-card').forEach(el => {
+      document.querySelectorAll('.case-card, .case-featured').forEach(el => {
         el.addEventListener('click', () => {
           const name = el.querySelector('.case-n')?.textContent.trim() || 'unknown';
           track('case_viewed', { case_name: name });
