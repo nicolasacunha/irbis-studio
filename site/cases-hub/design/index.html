@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Cases · Portfólio de Design · IRBIS</title>
+  <meta name="description" content="Projetos de design exploratório da IRBIS. Cada caso é um exercício de estética, tipografia e narrativa visual — sem cliente real, com intenção real.">
+  <link rel="icon" type="image/png" href="https://irbis.com.br/Design/icone/favicon_true.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0C0C0E;
+      --text:   #FAFAF9;
+      --muted:  #71717A;
+      --accent: #FF3D00;
+      --border: rgba(255,255,255,.06);
+      --f: 'Sora', sans-serif;
+    }
+
+    html { background: var(--bg); color: var(--text); font-family: var(--f); }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3rem;
+      background: rgba(12,12,14,.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 1.3rem; font-weight: 800;
+      letter-spacing: -.05em; text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-back {
+      font-size: .6rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      padding: 14rem 3rem 5rem;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .hero-label {
+      font-size: .6rem; font-weight: 600; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 800; line-height: .92;
+      letter-spacing: -.04em; text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .hero-title span { color: var(--accent); }
+    .hero-sub {
+      font-size: .85rem; font-weight: 400; color: var(--muted);
+      max-width: 480px; line-height: 1.7;
+    }
+    .hero-note {
+      display: inline-flex; align-items: center; gap: .5rem;
+      margin-top: 2rem;
+      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+      border: 1px solid var(--border);
+      padding: .5rem 1rem;
+      border-radius: 2px;
+    }
+    .hero-note::before {
+      content: '';
+      display: block; width: 6px; height: 6px;
+      background: var(--accent); border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* GRID */
+    .grid-wrap {
+      flex: 1;
+      padding: 3rem 3rem 8rem;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .grid-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    .design-card {
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .design-card:hover { background: #111113; }
+    .design-card:hover .card-thumb { transform: scale(1.04); }
+    .design-card:hover .card-arrow { color: var(--accent); transform: translate(4px, -4px); }
+
+    .card-thumb-wrap {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #111;
+    }
+    .card-thumb {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+      display: block;
+    }
+    .card-thumb-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #161618 0%, #1a1a1c 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-thumb-placeholder span {
+      font-size: 3rem; font-weight: 800;
+      letter-spacing: -.05em;
+      color: rgba(255,255,255,.04);
+      text-transform: uppercase;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      flex: 1; display: flex; flex-direction: column;
+      border-top: 1px solid var(--border);
+    }
+    .card-top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .card-cat {
+      font-size: .55rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .card-arrow {
+      font-size: 1rem; color: var(--muted);
+      transition: color .2s, transform .2s;
+    }
+    .card-name {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 800; letter-spacing: -.03em;
+      text-transform: uppercase;
+      margin-bottom: .4rem;
+    }
+    .card-desc {
+      font-size: .7rem; color: var(--muted);
+      line-height: 1.6; margin-top: auto; padding-top: .75rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-brand { font-size: .6rem; font-weight: 700; letter-spacing: .2em; color: var(--muted); }
+    .footer-link {
+      font-size: .6rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color .2s;
+    }
+    .footer-link:hover { color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .design-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .hero { padding: 10rem 1.5rem 3rem; }
+      .grid-wrap { padding: 1.5rem 1.5rem 5rem; }
+      footer { padding: 1.5rem; }
+      .design-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">IRBIS<span>.</span></a>
+    <a class="nav-back" href="/cases">← Todos os cases</a>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-label">Portfólio de Design · Exercícios Exploratórios</p>
+    <h1 class="hero-title">Design<br><span>sem</span> cliente.</h1>
+    <p class="hero-sub">Projetos que existem para provar que estética e intenção não precisam de briefing. Cada um foi construído como se fosse real — porque a execução não sabe a diferença.</p>
+    <div class="hero-note">Exercícios de design · Sem cliente real</div>
+  </div>
+
+  <div class="grid-wrap">
+    <hr class="grid-divider">
+    <div class="design-grid">
+
+      <a class="design-card" href="/design/alba">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="/cases-hub/design/alba/assets/02-morning.webp" alt="Alba — hotel de montanha" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-cat">Hospitalidade · Editorial</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-name">Alba</div>
+          <div class="card-desc">Retiro de montanha. Editorial, lento.</div>
+        </div>
+      </a>
+
+      <a class="design-card" href="/design/arvo">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="/cases-hub/design/arvo/assets/card.jpg" alt="Arvo — fintech banking" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-cat">Fintech · SaaS</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-name">Arvo</div>
+          <div class="card-desc">Business banking. Limpo, direto.</div>
+        </div>
+      </a>
+
+      <a class="design-card" href="/design/atelier-norr">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="/cases-hub/design/atelier-norr/assets/hero.jpg" alt="Atelier Norr — arquitetura" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-cat">Arquitetura · Portfólio</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-name">Atelier Norr</div>
+          <div class="card-desc">Arquitetura escandinava. Quieto, rigoroso.</div>
+        </div>
+      </a>
+
+      <a class="design-card" href="/design/lumenform">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="/cases-hub/design/lumenform/assets/hero.jpg" alt="Lumenform — AI Studio" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-cat">Tech · AI Studio</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-name">Lumenform</div>
+          <div class="card-desc">AI Studio criativo. Tecnologia com sensibilidade.</div>
+        </div>
+      </a>
+
+      <a class="design-card" href="/design/meridian">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="/cases-hub/design/meridian/assets/hero.webp" alt="Meridian — relógio de luxo" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-cat">Luxo · Produto</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-name">Meridian</div>
+          <div class="card-desc">Haute horlogerie. Detalhe mecânico, peso visual.</div>
+        </div>
+      </a>
+
+      <a class="design-card" href="/design/vektor">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="/cases-hub/design/vektor/assets/hero-shape.webp" alt="Vektor — agentes de código" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-cat">Tech · Developer Tools</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-name">Vektor</div>
+          <div class="card-desc">Agentes de código. Developer tools, sem ruído.</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-brand">©2026 IRBIS ESTÚDIO DIGITAL</span>
+    <a class="footer-link" href="https://irbis.com.br">irbis.com.br</a>
+  </footer>
+
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, touchMultiplier: 1.0, smoothWheel: true });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.set('nav', { opacity: 0, y: -20 });
+      gsap.set('.hero-label', { opacity: 0, y: 20 });
+      gsap.set('.hero-title', { opacity: 0, y: 30 });
+      gsap.set('.hero-sub', { opacity: 0, y: 20 });
+      gsap.set('.hero-note', { opacity: 0, y: 20 });
+      gsap.set('.design-card', { opacity: 0, y: 40 });
+
+      const tl = gsap.timeline();
+      tl.to('nav',         { opacity: 1, y: 0, duration: .6, ease: 'power3.out' })
+        .to('.hero-label', { opacity: 1, y: 0, duration: .5, ease: 'power3.out' }, .3)
+        .to('.hero-title', { opacity: 1, y: 0, duration: .6, ease: 'power4.out' }, .45)
+        .to('.hero-sub',   { opacity: 1, y: 0, duration: .5, ease: 'power3.out' }, .7)
+        .to('.hero-note',  { opacity: 1, y: 0, duration: .4, ease: 'power3.out' }, .85);
+
+      gsap.to('.design-card', {
+        opacity: 1, y: 0,
+        duration: .7, ease: 'power3.out',
+        stagger: .08,
+        delay: .5
+      });
+    }
+  </script>
+</body>
+</html>

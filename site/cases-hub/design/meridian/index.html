@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>MERIDIAN — Obsidienne · Réf. M·72</title>
+<meta name="description" content="The Obsidienne M·72. A manual-wind calibre of 231 components, sealed beneath hand-guilloché obsidian. Scroll, and we will take it apart for you.">
+<meta name="theme-color" content="#050404">
+<meta property="og:title" content="MERIDIAN — Obsidienne · Réf. M·72">
+<meta property="og:description" content="Most watches are admired for their face. Ours asks to be opened.">
+<meta property="og:image" content="/cases-hub/design/meridian/assets/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/cases-hub/design/meridian/assets/hero.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050404'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23c8a55c' stroke-width='2.5'/%3E%3Cline x1='32' y1='32' x2='32' y2='20' stroke='%23c8a55c' stroke-width='2.5'/%3E%3Cline x1='32' y1='32' x2='40' y2='38' stroke='%23c8a55c' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+/* ============ MERIDIAN — design tokens ============ */
+:root{
+  --obsidian:#050404;
+  --black:#000000;
+  --coal:#0c0a08;
+  --gold:#c8a55c;
+  --gold-bright:#e9cd8a;
+  --gold-dim:rgba(200,165,92,.34);
+  --bone:#ece4d3;
+  --grey:#8d857a;
+  --grey-dim:#55504a;
+  --hairline:rgba(200,165,92,.16);
+  --serif:'Italiana',serif;
+  --garamond:'Cormorant Garamond',serif;
+  --mono:'Space Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+html,body{background:var(--obsidian);}
+body{
+  color:var(--bone);
+  font-family:var(--garamond);
+  font-weight:300;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--gold);color:#000;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+
+/* ============ utilities ============ */
+.mono{
+  font-family:var(--mono);
+  font-size:.625rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--grey);
+}
+.mono--gold{color:var(--gold);}
+.hairline{width:100%;height:1px;background:var(--hairline);}
+
+/* masked line reveals */
+.line{display:block;overflow:hidden;}
+.line>span{
+  display:block;
+  transform:translateY(110%);
+  transition:transform 1.1s var(--ease);
+}
+.in .line>span{transform:translateY(0);}
+.line:nth-child(2)>span{transition-delay:.08s;}
+.line:nth-child(3)>span{transition-delay:.16s;}
+.line:nth-child(4)>span{transition-delay:.24s;}
+
+.fade{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity 1.2s var(--ease),transform 1.2s var(--ease);
+}
+.in.fade,.in .fade{opacity:1;transform:none;}
+.fade[data-delay="1"]{transition-delay:.12s;}
+.fade[data-delay="2"]{transition-delay:.24s;}
+.fade[data-delay="3"]{transition-delay:.36s;}
+
+/* ============ grain + vignette ============ */
+.grain{
+  position:fixed;inset:-100px;z-index:120;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity:.055;
+  animation:grain 9s steps(10) infinite;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}10%{transform:translate(-3%,-2%)}20%{transform:translate(2%,3%)}
+  30%{transform:translate(-4%,1%)}40%{transform:translate(3%,-3%)}50%{transform:translate(-2%,4%)}
+  60%{transform:translate(4%,2%)}70%{transform:translate(-3%,-4%)}80%{transform:translate(1%,2%)}90%{transform:translate(-1%,-3%)}
+}
+
+/* ============ custom cursor ============ */
+.cursor,.cursor-ring{
+  position:fixed;top:0;left:0;z-index:200;pointer-events:none;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  display:none;
+}
+.cursor{width:5px;height:5px;background:var(--gold-bright);}
+.cursor-ring{
+  width:34px;height:34px;
+  border:1px solid var(--gold-dim);
+  transition:width .45s var(--ease),height .45s var(--ease),border-color .45s var(--ease);
+}
+.cursor-ring.is-active{width:66px;height:66px;border-color:var(--gold);}
+.cursor-ring.is-label::after{
+  content:attr(data-label);
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.5rem;letter-spacing:.18em;color:var(--gold);
+}
+@media (pointer:fine){
+  .cursor,.cursor-ring{display:block;}
+  body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none;}
+}
+
+/* ============ preloader ============ */
+.loader{
+  position:fixed;inset:0;z-index:300;
+  background:var(--black);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;
+  transition:transform 1.1s cubic-bezier(.76,0,.24,1);
+}
+.loader.is-done{transform:translateY(-101%);}
+.loader__mark{
+  font-family:var(--serif);
+  font-size:clamp(1.6rem,3.4vw,2.4rem);
+  letter-spacing:.52em;text-indent:.52em;
+  color:var(--bone);
+  opacity:0;animation:loaderIn 1.4s var(--ease) .15s forwards;
+}
+.loader__bar{width:min(220px,42vw);height:1px;background:rgba(200,165,92,.15);overflow:hidden;}
+.loader__bar i{display:block;height:100%;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s linear;}
+.loader__pct{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--grey);}
+@keyframes loaderIn{from{opacity:0;letter-spacing:.8em}to{opacity:1;letter-spacing:.52em}}
+
+/* ============ nav ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:calc(1.1rem + env(safe-area-inset-top)) clamp(1.2rem,4vw,3.2rem) 1.1rem;
+  mix-blend-mode:normal;
+  transition:transform .6s var(--ease);
+}
+.nav.is-hidden{transform:translateY(-110%);}
+.nav__logo{
+  font-family:var(--serif);
+  font-size:1.05rem;letter-spacing:.42em;text-indent:.42em;
+  color:var(--bone);
+}
+.nav__links{display:flex;gap:2.4rem;list-style:none;}
+.nav__links a{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--grey);
+  display:inline-block;padding:.5rem 0;
+  transition:color .4s;
+  position:relative;
+}
+.nav__links a::after{
+  content:"";position:absolute;left:0;bottom:.25rem;height:1px;width:100%;
+  background:var(--gold);transform:scaleX(0);transform-origin:right;
+  transition:transform .5s var(--ease);
+}
+.nav__links a:hover{color:var(--gold);}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left;}
+.nav__burger{display:none;}
+
+/* mobile menu */
+@media (max-width:760px){
+  .nav__links{display:none;}
+  .nav__burger{
+    display:flex;align-items:center;gap:.7rem;
+    font-family:var(--mono);font-size:.58rem;letter-spacing:.26em;color:var(--bone);
+    padding:.6rem 0;
+  }
+  .nav__burger i{display:block;width:26px;height:1px;background:var(--gold);transition:transform .4s var(--ease);}
+}
+.menu{
+  position:fixed;inset:0;z-index:90;
+  background:var(--black);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 clamp(1.4rem,7vw,4rem);
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path .8s cubic-bezier(.76,0,.24,1);
+}
+.menu.is-open{clip-path:inset(0 0 0 0);}
+.menu a{
+  font-family:var(--serif);
+  font-size:clamp(2.4rem,9vw,3.6rem);
+  letter-spacing:.12em;
+  color:var(--bone);
+  padding:.55rem 0;
+  border-bottom:1px solid rgba(200,165,92,.12);
+  display:flex;align-items:baseline;gap:1.1rem;
+}
+.menu a em{font-family:var(--mono);font-style:normal;font-size:.6rem;letter-spacing:.2em;color:var(--gold);}
+.menu__foot{margin-top:3rem;display:flex;justify-content:space-between;}
+
+/* ============ hero ============ */
+.hero{
+  position:relative;
+  min-height:100svh;
+  background:radial-gradient(120% 90% at 50% 42%, #0d0a07 0%, var(--black) 62%);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero__ghost{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);
+  font-family:var(--serif);
+  font-size:clamp(7rem,24vw,21rem);
+  letter-spacing:.1em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(200,165,92,.07);
+  white-space:nowrap;user-select:none;pointer-events:none;
+}
+.hero__watch{
+  position:relative;z-index:2;
+  width:min(54vh,76vw);
+  will-change:transform;
+  animation:breathe 7s ease-in-out infinite;
+}
+.hero__watch img{width:100%;filter:drop-shadow(0 40px 80px rgba(0,0,0,.8));}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.018)}}
+.hero__title{
+  position:absolute;z-index:3;left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;pointer-events:none;
+  width:100%;
+}
+.hero__title h1{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(3.4rem,13vw,11.5rem);
+  letter-spacing:.16em;text-indent:.16em;
+  line-height:.95;
+  color:var(--bone);
+  text-shadow:0 0 60px rgba(0,0,0,.65);
+}
+.hero__kicker{
+  position:absolute;z-index:4;
+  top:calc(5.2rem + env(safe-area-inset-top));left:0;right:0;
+  text-align:center;
+}
+.hero__meta{
+  position:absolute;z-index:4;
+  bottom:calc(1.6rem + env(safe-area-inset-bottom));
+  left:clamp(1.2rem,4vw,3.2rem);right:clamp(1.2rem,4vw,3.2rem);
+  display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;
+}
+.hero__scroll{display:flex;align-items:center;gap:.9rem;}
+.hero__scroll .tick{
+  width:1px;height:44px;background:var(--gold-dim);
+  position:relative;overflow:hidden;
+}
+.hero__scroll .tick::after{
+  content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;
+  background:var(--gold-bright);
+  animation:drip 2.2s var(--ease) infinite;
+}
+@keyframes drip{0%{top:-100%}55%{top:0}100%{top:100%}}
+@media (max-width:760px){
+  .hero__meta{flex-direction:column;align-items:flex-start;gap:1.2rem;}
+  .hero__scroll{order:-1;}
+}
+
+/* ============ manifesto ============ */
+.manifesto{
+  position:relative;
+  padding:clamp(7rem,16vh,12rem) clamp(1.4rem,7vw,4rem);
+  background:linear-gradient(var(--black), var(--obsidian) 30%);
+  text-align:center;
+}
+.manifesto h2{
+  font-family:var(--garamond);
+  font-weight:300;
+  font-size:clamp(2rem,5.6vw,4.6rem);
+  line-height:1.18;
+  color:var(--bone);
+  max-width:21ch;margin:0 auto;
+}
+.manifesto h2 em{font-style:italic;color:var(--gold);}
+.manifesto p{
+  margin:3.2rem auto 0;
+  max-width:46ch;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;line-height:2.1;
+  text-transform:uppercase;color:var(--grey);
+}
+.manifesto .num{
+  display:block;margin:0 auto 2.6rem;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;color:var(--gold);
+}
+
+/* ============ deconstruction (sticky scrub) ============ */
+.anatomy{position:relative;background:var(--black);}
+.anatomy__track{height:520vh;}
+.anatomy__stage{
+  position:sticky;top:0;height:100svh;overflow:hidden;
+  background:radial-gradient(95% 80% at 50% 50%, #0a0805 0%, var(--black) 70%);
+}
+.anatomy__axis{
+  position:absolute;left:50%;top:7%;bottom:7%;width:1px;
+  background:linear-gradient(transparent, var(--gold-dim) 12%, var(--gold-dim) 88%, transparent);
+  transform:scaleY(0);transform-origin:top;
+}
+.anatomy__head{
+  position:absolute;top:calc(1.4rem + env(safe-area-inset-top));left:0;right:0;
+  display:flex;justify-content:center;
+}
+.anatomy__counter{
+  position:absolute;top:calc(5rem + env(safe-area-inset-top));left:0;right:0;
+  text-align:center;
+  font-family:var(--serif);font-size:.95rem;letter-spacing:.34em;text-indent:.34em;
+  color:var(--gold);
+  opacity:.85;
+}
+.stack{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.layer{
+  position:absolute;
+  width:min(42vh,42vw);
+  aspect-ratio:1;
+  display:flex;align-items:center;justify-content:center;
+  will-change:transform,opacity;
+}
+.layer img{
+  width:calc(100% * var(--s,1));
+  mix-blend-mode:screen;
+  pointer-events:none;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 var(--m1,58%), transparent var(--m2,76%));
+  mask-image:radial-gradient(circle at 50% 50%, #000 var(--m1,58%), transparent var(--m2,76%));
+}
+.layer--assembled img{--m1:55%;--m2:82%;}
+.layer--crystal img{--m1:46%;--m2:66%;}
+.layer--dial img{--m1:55%;--m2:70%;}
+.layer--movement img{--m1:52%;--m2:68%;}
+.layer--case img{--m1:55%;--m2:80%;}
+.layer--assembled{z-index:6;}
+.layer--crystal{z-index:5;}
+.layer--dial{z-index:4;}
+.layer--movement{z-index:3;}
+.layer--case{z-index:2;}
+@media (max-width:760px){
+  .layer{width:min(40vh,78vw);}
+}
+
+/* anatomy labels — desktop rail */
+.anatomy__rail{
+  position:absolute;left:clamp(1.2rem,4.5vw,4rem);top:50%;
+  transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:2rem;
+  max-width:240px;
+}
+.spec-label{opacity:.16;transition:opacity .6s var(--ease);}
+.spec-label.is-active{opacity:1;}
+.spec-label .idx{
+  font-family:var(--mono);font-size:.56rem;letter-spacing:.3em;color:var(--gold);
+  display:flex;align-items:center;gap:.8rem;
+}
+.spec-label .idx::after{content:"";height:1px;flex:1;background:var(--hairline);}
+.spec-label h3{
+  font-family:var(--serif);font-weight:400;
+  font-size:1.15rem;letter-spacing:.2em;
+  margin:.55rem 0 .35rem;color:var(--bone);
+}
+.spec-label p{
+  font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;line-height:1.9;
+  text-transform:uppercase;color:var(--grey);
+}
+/* anatomy label — mobile bottom */
+.anatomy__mobile-label{
+  display:none;
+  position:absolute;left:0;right:0;bottom:calc(2rem + env(safe-area-inset-bottom));
+  text-align:center;padding:0 1.4rem;
+}
+.anatomy__mobile-label .idx{font-family:var(--mono);font-size:.56rem;letter-spacing:.3em;color:var(--gold);}
+.anatomy__mobile-label h3{
+  font-family:var(--serif);font-weight:400;font-size:1.25rem;letter-spacing:.24em;
+  margin:.4rem 0 .3rem;color:var(--bone);
+}
+.anatomy__mobile-label p{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;line-height:1.8;text-transform:uppercase;color:var(--grey);}
+.anatomy__mobile-label>div{transition:opacity .45s var(--ease);}
+@media (max-width:1020px){
+  .anatomy__rail{display:none;}
+  .anatomy__mobile-label{display:block;}
+}
+.anatomy__end{
+  position:absolute;bottom:calc(1.6rem + env(safe-area-inset-bottom));left:0;right:0;
+  text-align:center;opacity:0;transition:opacity .8s var(--ease);
+  z-index:8;text-shadow:0 2px 18px rgba(0,0,0,.95);
+}
+@media (max-width:1020px){
+  .anatomy__end{display:none;}
+}
+
+/* ============ calibre ============ */
+.calibre{position:relative;background:var(--obsidian);}
+.calibre__visual{
+  position:relative;height:120vh;min-height:600px;overflow:hidden;
+}
+.calibre__visual img{
+  position:absolute;left:50%;top:50%;
+  width:max(110vw,1200px);
+  transform:translate(-50%,-50%);
+  will-change:transform;
+  opacity:.92;
+}
+.calibre__visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(var(--obsidian), transparent 22%, transparent 70%, var(--obsidian));
+}
+.calibre__statement{
+  position:absolute;inset:0;z-index:2;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:0 1.4rem;
+  background:radial-gradient(62% 44% at 50% 50%, rgba(0,0,0,.62), transparent 72%);
+}
+.calibre__statement h2{
+  font-family:var(--garamond);font-weight:300;font-style:italic;
+  font-size:clamp(2.1rem,6vw,5rem);
+  line-height:1.12;color:var(--bone);
+  text-shadow:0 4px 50px rgba(0,0,0,.9);
+}
+.calibre__statement .mono{margin-bottom:2rem;}
+.stats{
+  position:relative;z-index:3;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);
+  margin:0 clamp(1.2rem,4vw,3.2rem);
+  transform:translateY(-6rem);
+  background:rgba(5,4,4,.55);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.stat{
+  padding:2.4rem 1rem 2.2rem;
+  text-align:center;
+  border-left:1px solid var(--hairline);
+  position:relative;overflow:hidden;
+}
+.stat:first-child{border-left:none;}
+.stat b{
+  display:block;
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.9rem,4.2vw,3.4rem);
+  color:var(--gold);
+  font-variant-numeric:tabular-nums;
+}
+.stat span{
+  display:block;margin-top:.7rem;
+  font-family:var(--mono);font-size:.54rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);
+}
+@media (max-width:760px){
+  .stats{grid-template-columns:1fr 1fr;transform:translateY(-3.4rem);}
+  .stat:nth-child(3){border-left:none;}
+  .stat:nth-child(n+3){border-top:1px solid var(--hairline);}
+}
+
+/* ============ craft editorial ============ */
+.craft{
+  padding:clamp(4rem,10vh,8rem) clamp(1.2rem,4vw,3.2rem) clamp(6rem,14vh,10rem);
+  display:flex;flex-direction:column;gap:clamp(6rem,14vh,11rem);
+}
+.craft__row{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem;align-items:center;
+}
+.craft__img{
+  grid-column:2/7;
+  position:relative;overflow:hidden;
+}
+.craft__row:nth-child(even) .craft__img{grid-column:7/12;order:2;}
+.craft__img img{
+  width:100%;transform:scale(1.06);
+  transition:transform 1.6s var(--ease);
+  will-change:transform;
+}
+.craft__img:hover img{transform:scale(1.0);}
+.craft__img::after{
+  content:attr(data-tag);
+  position:absolute;left:1.1rem;bottom:1rem;
+  font-family:var(--mono);font-size:.52rem;letter-spacing:.26em;color:var(--gold);
+}
+.craft__txt{grid-column:8/12;}
+.craft__row:nth-child(even) .craft__txt{grid-column:2/6;order:1;}
+.craft__txt .num{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--gold);display:block;margin-bottom:1.6rem;}
+.craft__txt h3{
+  font-family:var(--garamond);font-weight:300;
+  font-size:clamp(1.7rem,3.4vw,2.9rem);
+  line-height:1.2;color:var(--bone);margin-bottom:1.4rem;
+}
+.craft__txt h3 em{font-style:italic;color:var(--gold);}
+.craft__txt p{
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;line-height:2.05;
+  text-transform:uppercase;color:var(--grey);max-width:36ch;
+}
+@media (max-width:900px){
+  .craft__row{grid-template-columns:1fr;gap:1.8rem;}
+  .craft__img,.craft__txt,
+  .craft__row:nth-child(even) .craft__img,
+  .craft__row:nth-child(even) .craft__txt{grid-column:1/-1;order:initial;}
+  .craft__txt{padding:0 .2rem;}
+}
+
+/* ============ presence ============ */
+.presence{
+  position:relative;
+  display:grid;grid-template-columns:1fr 1fr;
+  background:var(--black);
+  min-height:100svh;
+}
+.presence__txt{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(4rem,10vh,8rem) clamp(1.4rem,6vw,5rem);
+}
+.presence__txt h2{
+  font-family:var(--garamond);font-weight:300;
+  font-size:clamp(2.2rem,4.6vw,4.2rem);
+  line-height:1.16;color:var(--bone);
+}
+.presence__txt h2 em{font-style:italic;color:var(--gold);}
+.presence__txt .mono{margin-top:2.6rem;line-height:2.1;max-width:38ch;}
+.presence__img{
+  position:relative;overflow:hidden;min-height:64vh;
+}
+.presence__img img{
+  position:absolute;inset:0;width:100%;height:112%;object-fit:cover;
+  object-position:50% 22%;
+  will-change:transform;
+}
+.presence__img::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg, var(--black), transparent 38%);
+}
+@media (max-width:900px){
+  .presence{grid-template-columns:1fr;}
+  .presence__img{min-height:72vw;order:-1;}
+  .presence__img::after{background:linear-gradient(transparent 55%, var(--black));}
+}
+
+/* ============ specs ============ */
+.specs{
+  padding:clamp(6rem,14vh,10rem) clamp(1.2rem,4vw,3.2rem);
+  background:var(--obsidian);
+}
+.specs__head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3.4rem;gap:1rem;flex-wrap:wrap;}
+.specs__head h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.22em;
+  color:var(--bone);
+}
+.specs table{width:100%;border-collapse:collapse;}
+.specs tr{border-top:1px solid var(--hairline);transition:background .4s;}
+.specs tr:last-child{border-bottom:1px solid var(--hairline);}
+.specs td{
+  padding:1.25rem .4rem;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  vertical-align:top;
+}
+.specs td:first-child{color:var(--grey-dim);width:38%;}
+.specs td:last-child{color:var(--bone);text-align:right;transition:color .4s,letter-spacing .6s var(--ease);}
+.specs tr:hover td:last-child{color:var(--gold);letter-spacing:.22em;}
+@media (max-width:600px){
+  .specs td{font-size:.56rem;padding:1.05rem .2rem;}
+}
+
+/* ============ reserve ============ */
+.reserve{
+  position:relative;
+  min-height:92svh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  background:radial-gradient(80% 64% at 50% 60%, #0d0a06 0%, var(--black) 70%);
+  padding:6rem 1.4rem calc(6rem + env(safe-area-inset-bottom));
+  overflow:hidden;
+}
+.reserve__ghost{
+  position:absolute;bottom:-4vw;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);
+  font-size:clamp(6rem,19vw,17rem);
+  letter-spacing:.14em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(200,165,92,.06);
+  white-space:nowrap;pointer-events:none;user-select:none;
+}
+.reserve h2{
+  font-family:var(--garamond);font-weight:300;
+  font-size:clamp(2.2rem,5.4vw,4.8rem);
+  line-height:1.14;color:var(--bone);max-width:18ch;
+}
+.reserve h2 em{font-style:italic;color:var(--gold);}
+.reserve .mono{margin-top:2.2rem;}
+.btn{
+  position:relative;
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:3.6rem;
+  padding:1.35rem 3.6rem;
+  border:1px solid var(--gold-dim);
+  border-radius:999px;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);
+  overflow:hidden;
+  transition:color .5s var(--ease),border-color .5s var(--ease);
+}
+.btn::before{
+  content:"";position:absolute;inset:0;
+  background:var(--gold);
+  border-radius:inherit;
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform .55s var(--ease);
+  z-index:-1;
+}
+.btn:hover{color:#070604;border-color:var(--gold);}
+.btn:hover::before{transform:scaleY(1);}
+.btn:focus-visible{outline:1px solid var(--gold);outline-offset:4px;}
+
+/* ============ footer ============ */
+.footer{
+  background:var(--black);
+  border-top:1px solid var(--hairline);
+  padding:4.2rem clamp(1.2rem,4vw,3.2rem) calc(2.4rem + env(safe-area-inset-bottom));
+}
+.footer__mark{
+  font-family:var(--serif);
+  font-size:clamp(2.6rem,9vw,7rem);
+  letter-spacing:.34em;text-indent:.34em;
+  text-align:center;color:var(--bone);
+  margin-bottom:3.6rem;
+}
+.footer__cols{
+  display:flex;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;
+}
+.footer__cols .mono{font-size:.54rem;line-height:2;}
+.footer a:hover{color:var(--gold);}
+
+/* ============ reduced motion ============ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;}
+  html{scroll-behavior:auto;}
+  .line>span{transform:none;}
+  .fade{opacity:1;transform:none;}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- preloader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">MERIDIAN</div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+  <div class="loader__pct" id="loaderPct">00</div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#" data-magnetic data-cursor>MERIDIAN</a>
+  <nav aria-label="Primary">
+    <ul class="nav__links">
+      <li><a href="#obsidienne" data-magnetic data-cursor>01 — Obsidienne</a></li>
+      <li><a href="#anatomy" data-magnetic data-cursor>02 — Anatomy</a></li>
+      <li><a href="#calibre" data-magnetic data-cursor>03 — Calibre</a></li>
+      <li><a href="#reserve" data-magnetic data-cursor>04 — Reserve</a></li>
+    </ul>
+  </nav>
+  <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="menu" data-cursor>
+    <i id="burgerLine"></i><span id="burgerTxt">Menu</span>
+  </button>
+</header>
+
+<!-- mobile menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#obsidienne" data-menu-link><em>01</em>Obsidienne</a>
+  <a href="#anatomy" data-menu-link><em>02</em>Anatomy</a>
+  <a href="#calibre" data-menu-link><em>03</em>Calibre</a>
+  <a href="#reserve" data-menu-link><em>04</em>Reserve</a>
+  <div class="menu__foot">
+    <span class="mono">Genève — MMXXVI</span>
+    <span class="mono mono--gold">Réf. M·72</span>
+  </div>
+</div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="obsidienne">
+    <div class="hero__ghost" aria-hidden="true">M·72</div>
+    <div class="hero__kicker mono">Manufacture d'horlogerie — Genève · MCMXLVII</div>
+    <div class="hero__watch" id="heroWatch">
+      <img src="/cases-hub/design/meridian/assets/hero.webp" alt="Meridian Obsidienne M·72 — gold mechanical watch with black guilloché dial" fetchpriority="high">
+    </div>
+    <div class="hero__title in">
+      <h1><span class="line"><span>OBSIDIENNE</span></span></h1>
+    </div>
+    <div class="hero__meta">
+      <div class="mono">Réf. M·72 — Manual wind<br>18k gold · 38.5 mm · 72 pieces</div>
+      <div class="hero__scroll">
+        <span class="mono mono--gold">Scroll to disassemble</span>
+        <span class="tick" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto" data-reveal>
+    <span class="num fade">— I —</span>
+    <h2>
+      <span class="line"><span>Most watches are admired</span></span>
+      <span class="line"><span>for their face.</span></span>
+      <span class="line"><span><em>Ours asks to be opened.</em></span></span>
+    </h2>
+    <p class="fade" data-delay="2">
+      The Obsidienne M·72 — a manual-wind calibre of 231 parts, finished by hand
+      over four months, sealed beneath a dial of hand-guilloché obsidian.
+      Scroll, and we will take it apart for you.
+    </p>
+  </section>
+
+  <!-- ============ DECONSTRUCTION ============ -->
+  <section class="anatomy" id="anatomy">
+    <div class="anatomy__track" id="anatomyTrack">
+      <div class="anatomy__stage">
+        <div class="anatomy__axis" id="anatomyAxis" aria-hidden="true"></div>
+        <div class="anatomy__head mono mono--gold">Exploded view</div>
+        <div class="anatomy__counter" id="anatomyCounter">00 / 04</div>
+
+        <div class="stack" aria-label="The watch deconstructs into its four layers as you scroll">
+          <div class="layer layer--assembled" id="lAssembled" style="--s:1">
+            <img src="/cases-hub/design/meridian/assets/hero.webp" alt="" aria-hidden="true">
+          </div>
+          <div class="layer layer--crystal" id="lCrystal" style="--s:1.04">
+            <img src="/cases-hub/design/meridian/assets/layer-crystal.webp" alt="Domed sapphire crystal" loading="lazy">
+          </div>
+          <div class="layer layer--dial" id="lDial" style="--s:.78">
+            <img src="/cases-hub/design/meridian/assets/layer-dial.webp" alt="Black guilloché dial with gold markers" loading="lazy">
+          </div>
+          <div class="layer layer--movement" id="lMovement" style="--s:.72">
+            <img src="/cases-hub/design/meridian/assets/layer-movement.webp" alt="Openworked gilt calibre M·72" loading="lazy">
+          </div>
+          <div class="layer layer--case" id="lCase" style="--s:.94">
+            <img src="/cases-hub/design/meridian/assets/layer-case.webp" alt="Empty 18k gold case with crown" loading="lazy">
+          </div>
+        </div>
+
+        <div class="anatomy__rail" id="rail">
+          <div class="spec-label" data-step="1">
+            <span class="idx">01 — Crystal</span>
+            <h3>SAPPHIRE</h3>
+            <p>Box-domed, double anti-reflective. Invisible until it catches the light.</p>
+          </div>
+          <div class="spec-label" data-step="2">
+            <span class="idx">02 — Dial</span>
+            <h3>OBSIDIAN</h3>
+            <p>Hand-guilloché at 0.05 mm. Eleven hours on a rose engine from 1904.</p>
+          </div>
+          <div class="spec-label" data-step="3">
+            <span class="idx">03 — Calibre</span>
+            <h3>M·72</h3>
+            <p>Manual wind. 231 components, mirror-finished by a single watchmaker.</p>
+          </div>
+          <div class="spec-label" data-step="4">
+            <span class="idx">04 — Case</span>
+            <h3>18K GOLD</h3>
+            <p>38.5 mm, hand-polished and brushed. Fluted crown, forty-eight teeth.</p>
+          </div>
+        </div>
+
+        <div class="anatomy__mobile-label" id="mobileLabel">
+          <div data-step="0" style="opacity:1">
+            <span class="idx">Réf. M·72</span>
+            <h3>ASSEMBLED</h3>
+            <p>Keep scrolling — the watch will open itself.</p>
+          </div>
+          <div data-step="1" style="opacity:0;position:absolute;inset:0;">
+            <span class="idx">01 / 04</span>
+            <h3>SAPPHIRE CRYSTAL</h3>
+            <p>Box-domed, double anti-reflective coating.</p>
+          </div>
+          <div data-step="2" style="opacity:0;position:absolute;inset:0;">
+            <span class="idx">02 / 04</span>
+            <h3>OBSIDIAN DIAL</h3>
+            <p>Hand-guilloché at 0.05 mm depth.</p>
+          </div>
+          <div data-step="3" style="opacity:0;position:absolute;inset:0;">
+            <span class="idx">03 / 04</span>
+            <h3>CALIBRE M·72</h3>
+            <p>231 components. One pair of hands.</p>
+          </div>
+          <div data-step="4" style="opacity:0;position:absolute;inset:0;">
+            <span class="idx">04 / 04</span>
+            <h3>18K GOLD CASE</h3>
+            <p>38.5 mm. Polished and brushed by hand.</p>
+          </div>
+        </div>
+
+        <div class="anatomy__end mono" id="anatomyEnd">
+          231 components — assembled by one watchmaker, over four months
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALIBRE ============ -->
+  <section class="calibre" id="calibre">
+    <div class="calibre__visual">
+      <img src="/cases-hub/design/meridian/assets/macro-balance.webp" alt="Macro of the M·72 balance wheel on black" id="calibreImg" loading="lazy">
+      <div class="calibre__statement" data-reveal>
+        <span class="mono mono--gold fade">— II — The heart</span>
+        <h2>
+          <span class="line"><span>It beats eight times a second,</span></span>
+          <span class="line"><span>for three days straight.</span></span>
+        </h2>
+      </div>
+    </div>
+    <div class="stats" data-reveal id="stats">
+      <div class="stat"><b data-count="231">000</b><span>Components</span></div>
+      <div class="stat"><b data-count="33">00</b><span>Jewels</span></div>
+      <div class="stat"><b data-count="28800">00000</b><span>Vibrations / hour</span></div>
+      <div class="stat"><b data-count="72">00</b><span>Hours of reserve</span></div>
+    </div>
+
+    <!-- ============ CRAFT ============ -->
+    <div class="craft">
+      <div class="craft__row" data-reveal>
+        <div class="craft__img fade" data-tag="Guilloché — 0.05 mm" data-cursor-label="CLOSER">
+          <img src="/cases-hub/design/meridian/assets/macro-guilloche.webp" alt="Macro of the engine-turned obsidian dial" loading="lazy">
+        </div>
+        <div class="craft__txt">
+          <span class="num fade">— III —</span>
+          <h3 class="fade" data-delay="1">The dial is cut on a rose engine <em>from 1904.</em></h3>
+          <p class="fade" data-delay="2">
+            One slip of the hand ruins eleven hours of engine-turning.
+            There are no slips. There is no second dial.
+          </p>
+        </div>
+      </div>
+      <div class="craft__row" data-reveal>
+        <div class="craft__img fade" data-tag="Crown — 48 flutes" data-cursor-label="CLOSER">
+          <img src="/cases-hub/design/meridian/assets/macro-crown.webp" alt="Macro of the fluted gold crown and case flank" loading="lazy">
+        </div>
+        <div class="craft__txt">
+          <span class="num fade">— IV —</span>
+          <h3 class="fade" data-delay="1">A crown that winds like a <em>bank-vault door.</em></h3>
+          <p class="fade" data-delay="2">
+            Forty-eight flutes, cut then polished by hand. Resistance calibrated
+            to the gram — scaled to a fingertip.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRESENCE ============ -->
+  <section class="presence" data-reveal>
+    <div class="presence__txt">
+      <span class="mono mono--gold fade">— V — Presence</span>
+      <h2 style="margin-top:2.2rem">
+        <span class="line"><span>Worn beneath a cuff,</span></span>
+        <span class="line"><span>it disappears.</span></span>
+        <span class="line"><span><em>It was never for them.</em></span></span>
+      </h2>
+      <p class="mono fade" data-delay="2">
+        38.5 mm × 8.9 mm — a presence felt, not shown.<br>
+        Black alligator, gold pin buckle.<br>
+        The dial faces the one who wound it.
+      </p>
+    </div>
+    <div class="presence__img">
+      <img src="/cases-hub/design/meridian/assets/wrist.webp" alt="The Obsidienne worn on the wrist, under a black suit cuff" id="presenceImg" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ============ SPECS ============ -->
+  <section class="specs" data-reveal>
+    <div class="specs__head">
+      <h2 class="fade">SPECIFICATIONS</h2>
+      <span class="mono mono--gold fade" data-delay="1">Réf. M·72 — Obsidienne</span>
+    </div>
+    <table class="fade" data-delay="2">
+      <tbody>
+        <tr><td>Reference</td><td>M·72 «Obsidienne»</td></tr>
+        <tr><td>Movement</td><td>Manufacture calibre M·72, manual wind</td></tr>
+        <tr><td>Power reserve</td><td>72 hours</td></tr>
+        <tr><td>Frequency</td><td>4 Hz — 28,800 vph</td></tr>
+        <tr><td>Components</td><td>231 — 33 jewels</td></tr>
+        <tr><td>Case</td><td>18k yellow gold, polished &amp; brushed</td></tr>
+        <tr><td>Dimensions</td><td>38.5 mm × 8.9 mm</td></tr>
+        <tr><td>Dial</td><td>Obsidian, hand-guilloché, gold indices</td></tr>
+        <tr><td>Crystal</td><td>Box-domed sapphire, double AR</td></tr>
+        <tr><td>Water resistance</td><td>30 m — rain, never the sea</td></tr>
+        <tr><td>Strap</td><td>Black alligator, 18k gold pin buckle</td></tr>
+        <tr><td>Limitation</td><td>72 pieces per year</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ RESERVE ============ -->
+  <section class="reserve" id="reserve" data-reveal>
+    <div class="reserve__ghost" aria-hidden="true">MERIDIAN</div>
+    <span class="mono mono--gold fade">— VI — Reserve</span>
+    <h2 style="margin-top:2rem">
+      <span class="line"><span>Seventy-two pieces a year.</span></span>
+      <span class="line"><span><em>One conversation each.</em></span></span>
+    </h2>
+    <p class="mono fade" data-delay="2">By private appointment — Genève · London · São Paulo</p>
+    <a class="btn fade" data-delay="3" href="#" data-magnetic data-cursor>Request an audience</a>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__mark">MERIDIAN</div>
+  <div class="footer__cols">
+    <span class="mono">© MMXXVI Meridian Genève<br>A fictional maison.</span>
+    <span class="mono" style="text-align:center">Réf. M·72 — Obsidienne<br>Manual wind · 72 pieces</span>
+    <span class="mono" style="text-align:right">Design study — <a href="#" data-cursor style="color:var(--gold)">IRBIS Studio</a><br>Assets generated with Higgsfield</span>
+  </div>
+</footer>
+
+<noscript><style>.loader{display:none}.line>span{transform:none}.fade{opacity:1;transform:none}</style></noscript>
+<script>
+(()=>{
+"use strict";
+const $=s=>document.querySelector(s);
+const $$=s=>[...document.querySelectorAll(s)];
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const ramp=(p,a,b)=>clamp((p-a)/(b-a),0,1);
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer=matchMedia('(pointer: fine)').matches;
+let vh=innerHeight, vw=innerWidth;
+addEventListener('resize',()=>{vh=innerHeight;vw=innerWidth;measure();},{passive:true});
+
+/* ---------- preloader ---------- */
+const loader=$('#loader'), bar=$('#loaderBar'), pct=$('#loaderPct');
+const preload=['/cases-hub/design/meridian/assets/hero.webp','/cases-hub/design/meridian/assets/layer-crystal.webp','/cases-hub/design/meridian/assets/layer-dial.webp','/cases-hub/design/meridian/assets/layer-movement.webp','/cases-hub/design/meridian/assets/layer-case.webp'];
+let loaded=0, t0=performance.now();
+const heroTitle=$('.hero__title');
+heroTitle.classList.remove('in');
+function step(){
+  loaded++;
+  const p=loaded/preload.length;
+  bar.style.transform=`scaleX(${p})`;
+  pct.textContent=String(Math.round(p*100)).padStart(2,'0');
+  if(loaded>=preload.length){
+    const wait=Math.max(0,(reduced?0:1100)-(performance.now()-t0));
+    setTimeout(()=>{
+      loader.classList.add('is-done');
+      setTimeout(()=>{loader.remove();heroTitle.classList.add('in');},reduced?0:300);
+    },wait);
+  }
+}
+preload.forEach(src=>{const im=new Image();im.onload=step;im.onerror=step;im.src=src;});
+
+/* ---------- custom cursor ---------- */
+const dot=$('.cursor'), ring=$('.cursor-ring');
+let mx=vw/2,my=vh/2,rx=mx,ry=my,cursorOn=false;
+if(finePointer&&!reduced){
+  document.body.classList.add('has-cursor');
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursorOn=true;},{passive:true});
+  const hoverables='a,button,[data-cursor],[data-cursor-label]';
+  document.addEventListener('mouseover',e=>{
+    const t=e.target.closest(hoverables);
+    if(!t)return;
+    ring.classList.add('is-active');
+    const lbl=t.closest('[data-cursor-label]');
+    if(lbl){ring.classList.add('is-label');ring.dataset.label=lbl.dataset.cursorLabel;}
+  });
+  document.addEventListener('mouseout',e=>{
+    if(e.target.closest(hoverables)){ring.classList.remove('is-active','is-label');}
+  });
+}
+
+/* ---------- magnetic ---------- */
+const magnets=$$('[data-magnetic]').map(el=>({el,x:0,y:0,tx:0,ty:0}));
+function magnetTick(){
+  if(!finePointer||reduced)return;
+  for(const m of magnets){
+    const r=m.el.getBoundingClientRect();
+    const cx=r.left+r.width/2, cy=r.top+r.height/2;
+    const dx=mx-cx, dy=my-cy;
+    const dist=Math.hypot(dx,dy);
+    const range=Math.max(r.width,r.height)/2+46;
+    if(cursorOn&&dist<range){m.tx=dx*.34;m.ty=dy*.34;}
+    else{m.tx=0;m.ty=0;}
+    m.x=lerp(m.x,m.tx,.12);m.y=lerp(m.y,m.ty,.12);
+    if(Math.abs(m.x)>.05||Math.abs(m.y)>.05||m.tx!==0)
+      m.el.style.transform=`translate(${m.x.toFixed(2)}px,${m.y.toFixed(2)}px)`;
+    else m.el.style.transform='';
+  }
+}
+
+/* ---------- mobile menu ---------- */
+const burger=$('#burger'), menu=$('#menu'), burgerTxt=$('#burgerTxt');
+let menuOpen=false;
+function setMenu(open){
+  menuOpen=open;
+  menu.classList.toggle('is-open',open);
+  menu.setAttribute('aria-hidden',String(!open));
+  burger.setAttribute('aria-expanded',String(open));
+  burgerTxt.textContent=open?'Close':'Menu';
+  document.body.style.overflow=open?'hidden':'';
+}
+burger.addEventListener('click',()=>setMenu(!menuOpen));
+$$('[data-menu-link]').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+/* ---------- nav hide on scroll ---------- */
+const nav=$('#nav');
+let lastY=scrollY;
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  if(y>180&&y>lastY+4)nav.classList.add('is-hidden');
+  else if(y<lastY-4)nav.classList.remove('is-hidden');
+  lastY=y;
+},{passive:true});
+
+/* ---------- reveals ---------- */
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.22});
+$$('[data-reveal]').forEach(el=>io.observe(el));
+
+/* ---------- counters ---------- */
+const statsEl=$('#stats');
+let counted=false;
+const cio=new IntersectionObserver(es=>{
+  if(es[0].isIntersecting&&!counted){
+    counted=true;
+    $$('#stats b').forEach(b=>{
+      const target=+b.dataset.count, t1=performance.now(), dur=reduced?0:1500;
+      (function tick(now){
+        const p=dur?clamp((now-t1)/dur,0,1):1;
+        b.textContent=Math.round(target*ease(p)).toLocaleString('en-US');
+        if(p<1)requestAnimationFrame(tick);
+      })(t1);
+    });
+    cio.disconnect();
+  }
+},{threshold:.4});
+if(statsEl)cio.observe(statsEl);
+
+/* ---------- hero tilt ---------- */
+const heroWatch=$('#heroWatch');
+let hx=0,hy=0;
+
+/* ---------- anatomy scrub ---------- */
+const track=$('#anatomyTrack');
+const axis=$('#anatomyAxis');
+const counter=$('#anatomyCounter');
+const endCap=$('#anatomyEnd');
+const rail=$$('#rail .spec-label');
+const mobileWrap=$('#mobileLabel');
+const mobileSteps=mobileWrap?[...mobileWrap.children]:[];
+if(mobileWrap){mobileWrap.style.position='absolute';mobileWrap.style.minHeight='96px';}
+const L={
+  assembled:{el:$('#lAssembled'),off:0,rot:0},
+  crystal:{el:$('#lCrystal'),off:-30,rot:-5},
+  dial:{el:$('#lDial'),off:-11,rot:-2},
+  movement:{el:$('#lMovement'),off:11,rot:2.5},
+  case:{el:$('#lCase'),off:30,rot:4},
+};
+let trackTop=0,trackH=1,smooth=0,lastStep=-1;
+function measure(){
+  if(!track)return;
+  const r=track.getBoundingClientRect();
+  trackTop=r.top+scrollY;
+  trackH=r.height-vh;
+}
+measure();
+addEventListener('load',measure);
+
+function anatomyTick(){
+  if(!track)return;
+  const raw=clamp((scrollY-trackTop)/trackH,0,1);
+  smooth=reduced?raw:lerp(smooth,raw,.085);
+  const p=smooth;
+  if(Math.abs(p-raw)<.0005&&(p<=0||p>=1)&&lastStep!==-2){/* idle */}
+  const mob=vw<761;
+  const k=ease(ramp(p,.07,.6));            // explosion amount
+  const aOp=1-ramp(p,.05,.15);             // assembled fade
+  const lOp=ramp(p,.04,.12);               // layers fade-in
+  for(const key in L){
+    const o=L[key];
+    if(key==='assembled'){
+      o.el.style.opacity=aOp.toFixed(3);
+      o.el.style.transform=`translate3d(0,0,0) scale(${(1-k*.04).toFixed(4)})`;
+      continue;
+    }
+    const off=o.off*(mob?.76:1)*k;
+    o.el.style.opacity=lOp.toFixed(3);
+    o.el.style.transform=`translate3d(0,${off.toFixed(2)}vh,0) rotate(${(o.rot*k).toFixed(2)}deg)`;
+  }
+  axis.style.transform=`scaleY(${ease(ramp(p,.08,.66)).toFixed(3)})`;
+  const stepN=p<.16?0:p<.32?1:p<.48?2:p<.64?3:4;
+  if(stepN!==lastStep){
+    lastStep=stepN;
+    counter.textContent=`0${stepN} / 04`;
+    rail.forEach(el=>el.classList.toggle('is-active',+el.dataset.step<=stepN));
+    mobileSteps.forEach(el=>{el.style.opacity=+el.dataset.step===stepN?'1':'0';});
+  }
+  endCap.style.opacity=p>.8?'1':'0';
+}
+
+/* ---------- parallax images ---------- */
+function parallax(el,strength){
+  if(!el)return;
+  const r=el.parentElement.getBoundingClientRect();
+  if(r.bottom<0||r.top>vh)return;
+  const c=(r.top+r.height/2-vh/2)/vh;     // -~1 .. ~1
+  el.style.transform=(el.id==='calibreImg')
+    ?`translate(-50%,${(-50+c*strength).toFixed(2)}%)`
+    :`translateY(${(c*strength).toFixed(2)}%)`;
+}
+const calibreImg=$('#calibreImg'), presenceImg=$('#presenceImg');
+
+/* ---------- main loop ---------- */
+function frame(){
+  if(finePointer&&!reduced){
+    /* cursor */
+    dot.style.transform=`translate(${mx-2.5}px,${my-2.5}px)`;
+    rx=lerp(rx,mx,.16);ry=lerp(ry,my,.16);
+    ring.style.transform=`translate(${rx-ring.offsetWidth/2}px,${ry-ring.offsetHeight/2}px)`;
+    /* hero tilt */
+    if(heroWatch&&scrollY<vh){
+      const nx=(mx/vw-.5), ny=(my/vh-.5);
+      hx=lerp(hx,nx,.06);hy=lerp(hy,ny,.06);
+      heroWatch.style.translate=`${(hx*18).toFixed(2)}px ${(hy*12).toFixed(2)}px`;
+    }
+    magnetTick();
+  }
+  anatomyTick();
+  if(!reduced){
+    parallax(calibreImg,10);
+    parallax(presenceImg,7);
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

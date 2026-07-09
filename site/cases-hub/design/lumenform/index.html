@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumenform — Creative AI Studio</title>
+<meta name="description" content="Lumenform is a creative AI studio sculpting light into images, film and living worlds.">
+<meta property="og:title" content="Lumenform — Creative AI Studio">
+<meta property="og:description" content="We sculpt light into form. Images, film & living worlds engineered from light.">
+<meta property="og:image" content="/cases-hub/design/lumenform/assets/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23e8b873'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="/cases-hub/design/lumenform/assets/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   LUMENFORM — design tokens
+   ============================================================ */
+:root{
+  --bg:#0b0a09;
+  --bg-2:#11100e;
+  --ink:#f2efe9;
+  --ink-dim:rgba(242,239,233,.55);
+  --ink-faint:rgba(242,239,233,.28);
+  --line:rgba(242,239,233,.14);
+  --amber:#e8b873;
+  --amber-deep:#c9935a;
+  --font-display:"Inter Tight",system-ui,sans-serif;
+  --font-serif:"Instrument Serif",Georgia,serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --ease:cubic-bezier(.76,0,.24,1);
+  --gutter:clamp(1.25rem,4vw,4rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-display);
+  font-weight:400;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--amber);color:#0b0a09}
+
+/* film grain */
+.noise{
+  position:fixed;inset:-50%;z-index:1200;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 8s steps(10) infinite;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}10%{transform:translate(-5%,-8%)}20%{transform:translate(-12%,4%)}
+  30%{transform:translate(6%,-12%)}40%{transform:translate(-4%,14%)}50%{transform:translate(-10%,8%)}
+  60%{transform:translate(12%,0)}70%{transform:translate(0,10%)}80%{transform:translate(-14%,0)}90%{transform:translate(8%,4%)}
+}
+
+/* ============================================================
+   Preloader
+   ============================================================ */
+.preloader{
+  position:fixed;inset:0;z-index:2000;background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+}
+.preloader__inner{text-align:center}
+.preloader__word{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.5em;text-indent:.5em;
+  color:var(--ink-dim);text-transform:uppercase;margin-bottom:1rem;
+}
+.preloader__count{
+  font-weight:300;font-size:clamp(4rem,14vw,9rem);line-height:1;letter-spacing:-.04em;
+  font-variant-numeric:tabular-nums;
+}
+.preloader__count i{font-family:var(--font-serif);font-style:italic;color:var(--amber)}
+.preloader__bar{
+  width:min(16rem,60vw);height:1px;background:var(--line);margin:1.5rem auto 0;position:relative;overflow:hidden;
+}
+.preloader__bar i{position:absolute;inset:0;background:var(--amber);transform:scaleX(0);transform-origin:left}
+
+/* ============================================================
+   Cursor (desktop only)
+   ============================================================ */
+.cursor{display:none}
+@media (hover:hover) and (pointer:fine){
+  .cursor{
+    display:flex;align-items:center;justify-content:center;
+    position:fixed;top:0;left:0;z-index:1500;pointer-events:none;
+    width:10px;height:10px;border-radius:50%;background:var(--amber);
+    transform:translate(-50%,-50%);
+    transition:width .35s var(--ease),height .35s var(--ease),background-color .35s;
+  }
+  .cursor span{
+    font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;color:#0b0a09;
+    opacity:0;transition:opacity .2s;white-space:nowrap;
+  }
+  .cursor.is-hover{width:64px;height:64px;background:var(--ink)}
+  .cursor.is-view{width:88px;height:88px;background:var(--amber)}
+  .cursor.is-view span{opacity:1}
+}
+
+/* ============================================================
+   Nav
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem var(--gutter);
+  transition:transform .5s var(--ease);
+}
+.nav.is-hidden{transform:translateY(-110%)}
+.nav::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(rgba(11,10,9,.72),rgba(11,10,9,0));
+  backdrop-filter:blur(0px);
+  opacity:0;transition:opacity .4s;
+}
+.nav.is-solid::before{opacity:1;backdrop-filter:blur(14px);background:rgba(11,10,9,.55);border-bottom:1px solid var(--line)}
+.nav__logo{
+  font-weight:700;letter-spacing:-.02em;font-size:1.05rem;display:flex;align-items:center;gap:.45rem;
+}
+.nav__logo i{width:9px;height:9px;border-radius:50%;background:var(--amber);display:inline-block}
+.nav__links{display:none}
+.nav__cta{display:none}
+.nav__burger{
+  position:relative;width:44px;height:44px;margin-right:-10px;
+}
+.nav__burger b,.nav__burger b::before{
+  content:"";position:absolute;left:10px;right:10px;height:1.5px;background:var(--ink);
+  transition:transform .45s var(--ease),top .45s var(--ease);
+}
+.nav__burger b{top:19px}
+.nav__burger b::before{top:7px;left:0;right:0}
+.menu-open .nav__burger b{transform:rotate(45deg);top:22px}
+.menu-open .nav__burger b::before{transform:rotate(-90deg);top:0}
+@media (min-width:900px){
+  .nav__burger{display:none}
+  .nav__links{display:flex;gap:2.2rem}
+  .nav__links a{
+    font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);
+    transition:color .3s;position:relative;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:0;bottom:-5px;width:100%;height:1px;background:var(--amber);
+    transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease);
+  }
+  .nav__links a:hover{color:var(--ink)}
+  .nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+  .nav__cta{
+    display:inline-flex;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    border:1px solid var(--line);border-radius:99px;padding:.65rem 1.3rem;
+    transition:background-color .35s,color .35s,border-color .35s;
+  }
+  .nav__cta:hover{background:var(--ink);color:#0b0a09;border-color:var(--ink)}
+}
+
+/* mobile overlay menu */
+.menu{
+  position:fixed;inset:0;z-index:900;background:var(--bg-2);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:6.5rem var(--gutter) 2.5rem;
+  clip-path:inset(0 0 100% 0);
+  visibility:hidden;
+}
+.menu__link{
+  display:flex;align-items:baseline;gap:1rem;
+  font-weight:600;font-size:clamp(2.6rem,11vw,4.5rem);letter-spacing:-.03em;line-height:1.12;
+  padding:.35rem 0;border-bottom:1px solid var(--line);
+}
+.menu__link em{font-family:var(--font-mono);font-style:normal;font-size:.65rem;letter-spacing:.2em;color:var(--amber)}
+.menu__foot{
+  margin-top:2.2rem;display:flex;justify-content:space-between;
+  font-family:var(--font-mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-dim);
+}
+@media (min-width:900px){.menu{display:none}}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;overflow:clip;
+  display:flex;flex-direction:column;justify-content:flex-end;
+}
+.hero__media{position:absolute;inset:0;z-index:-1}
+.hero__media img{
+  width:100%;height:115%;object-fit:cover;object-position:center;
+  position:relative;top:-13%;
+  filter:brightness(.9);
+}
+.hero__media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(11,10,9,.55),rgba(11,10,9,.05) 35%,rgba(11,10,9,.1) 60%,rgba(11,10,9,.92));
+}
+.hero__content{padding:0 var(--gutter) 1.4rem;position:relative}
+.hero__kicker{
+  display:flex;align-items:center;gap:.8rem;
+  font-family:var(--font-mono);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim);
+  margin-bottom:1.2rem;
+}
+.hero__kicker::before{content:"";width:2.4rem;height:1px;background:var(--amber)}
+.hero__title{
+  font-weight:800;letter-spacing:-.045em;line-height:.92;
+  font-size:13.5vw;
+  text-transform:uppercase;
+  display:flex;flex-wrap:nowrap;width:fit-content;
+}
+.hero__title span{display:inline-block;will-change:transform}
+.hero__sub{
+  margin:1.6rem 0 2.4rem;max-width:30ch;
+  font-size:clamp(1rem,2.6vw,1.25rem);color:var(--ink-dim);line-height:1.55;
+}
+.hero__sub i{font-family:var(--font-serif);color:var(--ink)}
+.hero__meta{
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  border-top:1px solid var(--line);padding:1.1rem 0 calc(1.1rem + env(safe-area-inset-bottom));
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);
+}
+.hero__meta .scroll-cue{display:flex;align-items:center;gap:.6rem}
+.scroll-cue i{
+  width:1px;height:2.2rem;background:var(--ink-dim);display:inline-block;position:relative;overflow:hidden;
+}
+.scroll-cue i::after{
+  content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:var(--amber);
+  animation:cue 1.8s var(--ease) infinite;
+}
+@keyframes cue{0%{top:-100%}50%{top:0}100%{top:100%}}
+@media (min-width:900px){
+  .hero__content{padding-bottom:2rem}
+  .hero__sub{max-width:34ch}
+}
+
+/* ============================================================
+   Marquee
+   ============================================================ */
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:clip;padding:1.05rem 0;background:var(--bg);
+  display:flex;white-space:nowrap;
+}
+.marquee__track{display:flex;gap:3rem;padding-right:3rem;animation:marquee 26s linear infinite;will-change:transform}
+.marquee span{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim);
+  display:flex;align-items:center;gap:3rem;
+}
+.marquee b{color:var(--amber);font-weight:400}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ============================================================
+   Manifesto
+   ============================================================ */
+.manifesto{padding:clamp(6rem,16vh,11rem) var(--gutter)}
+.section-tag{
+  font-family:var(--font-mono);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);
+  display:flex;align-items:center;gap:.8rem;margin-bottom:2.2rem;
+}
+.section-tag::after{content:"";flex:1;height:1px;background:var(--line)}
+.manifesto__text{
+  font-weight:500;letter-spacing:-.025em;line-height:1.22;
+  font-size:clamp(1.7rem,5.6vw,3.6rem);
+  max-width:22ch;
+}
+.manifesto__text .w{display:inline-block;opacity:.13}
+.manifesto__text i{font-family:var(--font-serif);font-weight:400;color:var(--amber)}
+.manifesto__foot{
+  margin-top:3rem;display:grid;gap:1.5rem;color:var(--ink-dim);font-size:.95rem;line-height:1.7;
+}
+.manifesto__foot p{max-width:36ch}
+@media (min-width:900px){
+  .manifesto__foot{grid-template-columns:repeat(2,minmax(0,1fr));max-width:60rem;margin-left:auto}
+}
+
+/* ============================================================
+   Work
+   ============================================================ */
+.work{padding:0 var(--gutter) clamp(5rem,12vh,9rem)}
+.work__head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem}
+.work__title{
+  font-weight:700;letter-spacing:-.04em;line-height:1;font-size:clamp(2.6rem,9vw,6.5rem);text-transform:uppercase;
+}
+.work__count{font-family:var(--font-mono);font-size:.7rem;color:var(--ink-dim);letter-spacing:.2em}
+.work__grid{display:grid;gap:clamp(3.5rem,9vw,7rem)}
+.project{display:block}
+.project__media{
+  position:relative;overflow:clip;border-radius:6px;
+  aspect-ratio:3/4;
+}
+.project__media.is-wide{aspect-ratio:16/10}
+.project__media img{
+  width:100%;height:120%;object-fit:cover;will-change:transform;
+  position:relative;top:-10%;
+  transition:scale .8s var(--ease);
+}
+.project:hover .project__media img{scale:1.04}
+.project__media::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(rgba(11,10,9,0) 60%,rgba(11,10,9,.35));
+  pointer-events:none;
+}
+.project__row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-top:1.1rem}
+.project__name{font-weight:600;letter-spacing:-.02em;font-size:clamp(1.4rem,4.4vw,2.2rem)}
+.project__idx{font-family:var(--font-mono);font-size:.65rem;color:var(--amber);letter-spacing:.2em}
+.project__cat{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);
+  margin-top:.3rem;
+}
+@media (min-width:900px){
+  .work__grid{grid-template-columns:repeat(12,1fr)}
+  .project:nth-child(1){grid-column:1/7}
+  .project:nth-child(2){grid-column:8/13;margin-top:18vh}
+  .project:nth-child(3){grid-column:2/7;margin-top:-8vh}
+  .project:nth-child(4){grid-column:8/13;align-self:start}
+}
+
+/* ============================================================
+   Capabilities
+   ============================================================ */
+.caps{padding:clamp(5rem,12vh,9rem) 0;background:var(--bg-2)}
+.caps .section-tag{margin:0 var(--gutter) 2.5rem}
+.caps__row{
+  position:relative;display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:1.2rem;
+  padding:1.6rem var(--gutter);border-top:1px solid var(--line);
+  transition:background-color .4s;
+}
+.caps__row:last-child{border-bottom:1px solid var(--line)}
+.caps__num{font-family:var(--font-mono);font-size:.65rem;color:var(--amber);letter-spacing:.15em}
+.caps__name{
+  font-weight:600;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(1.9rem,7.4vw,4.6rem);text-transform:uppercase;
+  transition:transform .5s var(--ease),color .4s;
+}
+.caps__desc{
+  grid-column:2;color:var(--ink-dim);font-size:.92rem;line-height:1.65;max-width:46ch;
+  margin-top:.5rem;
+}
+@media (hover:hover) and (min-width:900px){
+  .caps__row:hover{background:rgba(232,184,115,.05)}
+  .caps__row:hover .caps__name{transform:translateX(1.2rem);color:var(--amber)}
+}
+
+/* ============================================================
+   Studio (pinned image + stats)
+   ============================================================ */
+.studio{position:relative}
+.studio__media{
+  position:relative;height:72svh;overflow:clip;
+}
+.studio__media img{width:100%;height:130%;object-fit:cover;will-change:transform;position:relative;top:-15%}
+.studio__media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(rgba(11,10,9,.7),rgba(11,10,9,.15) 40%,rgba(11,10,9,.85));
+}
+.studio__quote{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:0 var(--gutter);
+}
+.studio__quote p{
+  font-family:var(--font-serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.8rem,6.4vw,4rem);line-height:1.2;max-width:18ch;
+  text-wrap:balance;
+}
+.stats{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line);
+}
+.stat{
+  padding:2.2rem var(--gutter);border-bottom:1px solid var(--line);
+}
+.stat:nth-child(odd){border-right:1px solid var(--line)}
+.stat__num{
+  font-weight:300;font-size:clamp(2.6rem,9vw,5.5rem);letter-spacing:-.04em;line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.stat__num i{font-family:var(--font-serif);font-style:italic;color:var(--amber);font-size:.7em}
+.stat__label{
+  margin-top:.6rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);
+}
+@media (min-width:900px){
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .stat{border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .studio__media{height:100svh}
+}
+
+/* ============================================================
+   CTA + Footer
+   ============================================================ */
+.cta{
+  position:relative;text-align:center;overflow:clip;
+  padding:clamp(7rem,20vh,14rem) var(--gutter);
+}
+.cta__glow{
+  position:absolute;left:50%;top:55%;width:130vw;aspect-ratio:1;z-index:0;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(232,184,115,.16),rgba(232,184,115,.05) 35%,transparent 62%);
+  pointer-events:none;
+}
+.cta__tag{position:relative;z-index:1;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim)}
+.cta__title{
+  position:relative;z-index:1;
+  margin:1.4rem auto 2.6rem;
+  font-weight:700;letter-spacing:-.04em;line-height:1.02;
+  font-size:clamp(2.8rem,11vw,8rem);text-transform:uppercase;max-width:10ch;
+}
+.cta__title i{font-family:var(--font-serif);font-weight:400;font-style:italic;text-transform:none;color:var(--amber)}
+.btn{
+  position:relative;z-index:1;display:inline-flex;align-items:center;gap:.9rem;
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  border:1px solid var(--ink);border-radius:99px;padding:1.15rem 2.2rem;
+  overflow:clip;transition:color .45s var(--ease),border-color .45s;
+}
+.btn::before{
+  content:"";position:absolute;inset:0;background:var(--amber);border-radius:inherit;
+  transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1;
+}
+.btn:hover{color:#0b0a09;border-color:var(--amber)}
+.btn:hover::before{transform:translateY(0)}
+.btn svg{width:.9rem;height:.9rem}
+
+.footer{border-top:1px solid var(--line);padding:3rem var(--gutter) 1.6rem;overflow:clip}
+.footer__grid{
+  display:grid;gap:2.4rem;
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+}
+.footer__col h4{color:var(--ink-faint);font-weight:400;margin-bottom:.9rem;font-size:.62rem;letter-spacing:.25em}
+.footer__col a{display:block;padding:.22rem 0;color:var(--ink-dim);transition:color .3s}
+.footer__col a:hover{color:var(--amber)}
+.footer__wordmark{
+  margin-top:3.5rem;
+  font-weight:800;letter-spacing:-.045em;line-height:.8;text-transform:uppercase;
+  font-size:clamp(3.4rem,16.5vw,16.5vw);text-align:center;white-space:nowrap;
+  color:transparent;-webkit-text-stroke:1px rgba(242,239,233,.22);
+}
+.footer__legal{
+  margin-top:2.2rem;display:flex;justify-content:space-between;gap:1rem;
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-faint);
+}
+@media (min-width:900px){.footer__grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+
+/* reveal helpers (JS sets initial states) */
+.reveal-line{overflow:clip}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+}
+</style>
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span>VIEW</span></div>
+
+<!-- Preloader -->
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__word">Lumenform</div>
+    <div class="preloader__count"><span id="count">0</span><i>%</i></div>
+    <div class="preloader__bar"><i id="bar"></i></div>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" data-hover>lumenform<i></i></a>
+  <nav class="nav__links">
+    <a href="#work" data-hover>Work</a>
+    <a href="#studio" data-hover>Studio</a>
+    <a href="#capabilities" data-hover>Capabilities</a>
+  </nav>
+  <a class="nav__cta" href="#contact" data-hover>Start a project</a>
+  <button class="nav__burger" id="burger" aria-label="Menu"><b></b></button>
+</header>
+
+<!-- Mobile menu -->
+<div class="menu" id="menu">
+  <nav>
+    <a class="menu__link" href="#work"><em>01</em>Work</a>
+    <a class="menu__link" href="#studio"><em>02</em>Studio</a>
+    <a class="menu__link" href="#capabilities"><em>03</em>Capabilities</a>
+    <a class="menu__link" href="#contact"><em>04</em>Contact</a>
+  </nav>
+  <div class="menu__foot">
+    <span>São Paulo — Lisbon</span>
+    <span>hello@lumenform.studio</span>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__media" data-parallax>
+      <img src="/cases-hub/design/lumenform/assets/hero.jpg" alt="Ribbon of volumetric light folding through darkness" fetchpriority="high">
+    </div>
+    <div class="hero__content">
+      <p class="hero__kicker">Creative AI Studio</p>
+      <h1 class="hero__title" id="heroTitle" aria-label="Lumenform">LUMENFORM</h1>
+      <p class="hero__sub">We sculpt light into form — <i>images, film and living worlds</i> engineered with machine intelligence.</p>
+      <div class="hero__meta">
+        <span>EST. 2021</span>
+        <span class="scroll-cue">Scroll <i></i></span>
+        <span>SP — LIS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>AI-crafted visuals <b>●</b> Cinematic systems <b>●</b> Generative film <b>●</b> Brand worlds <b>●</b> Synthetic photography <b>●</b></span>
+      <span>AI-crafted visuals <b>●</b> Cinematic systems <b>●</b> Generative film <b>●</b> Brand worlds <b>●</b> Synthetic photography <b>●</b></span>
+    </div>
+  </div>
+
+  <!-- Manifesto -->
+  <section class="manifesto">
+    <p class="section-tag">Manifesto</p>
+    <p class="manifesto__text" id="manifesto">
+      We teach machines to <i>dream in light.</i> Lumenform shapes imagery, film and worlds that feel <i>impossibly human</i> — built at the speed of thought.
+    </p>
+    <div class="manifesto__foot">
+      <p data-reveal>Every frame begins as physics: photons, volume, shadow. Our models learn the grammar of cinema so your brand can speak it fluently.</p>
+      <p data-reveal>From a single prompt to a full campaign universe — we direct the machine, the machine never directs us.</p>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="work" id="work">
+    <div class="work__head">
+      <h2 class="work__title" data-reveal>Selected<br>Work</h2>
+      <span class="work__count">(04)</span>
+    </div>
+    <div class="work__grid">
+
+      <a class="project" href="#contact" data-cursor="view">
+        <figure class="project__media"><img src="/cases-hub/design/lumenform/assets/work-01.jpg" alt="Editorial portrait carved by a blade of warm light" loading="lazy" data-inner-parallax></figure>
+        <div class="project__row"><h3 class="project__name">Halide Bloom</h3><span class="project__idx">/ 01</span></div>
+        <p class="project__cat">AI Campaign — Fashion</p>
+      </a>
+
+      <a class="project" href="#contact" data-cursor="view">
+        <figure class="project__media"><img src="/cases-hub/design/lumenform/assets/work-02.jpg" alt="Obsidian and chrome monolith in a dark void" loading="lazy" data-inner-parallax></figure>
+        <div class="project__row"><h3 class="project__name">Obsidian</h3><span class="project__idx">/ 02</span></div>
+        <p class="project__cat">Product Film — CGI</p>
+      </a>
+
+      <a class="project" href="#contact" data-cursor="view">
+        <figure class="project__media"><img src="/cases-hub/design/lumenform/assets/work-03.jpg" alt="Bioluminescent organic forms suspended in black liquid" loading="lazy" data-inner-parallax></figure>
+        <div class="project__row"><h3 class="project__name">Vessel</h3><span class="project__idx">/ 03</span></div>
+        <p class="project__cat">Generative Art — Installation</p>
+      </a>
+
+      <a class="project" href="#contact" data-cursor="view">
+        <figure class="project__media is-wide"><img src="/cases-hub/design/lumenform/assets/work-04.jpg" alt="Silk-like ribbons of smoke and amber light" loading="lazy" data-inner-parallax></figure>
+        <div class="project__row"><h3 class="project__name">Ember</h3><span class="project__idx">/ 04</span></div>
+        <p class="project__cat">Title Sequence — Film</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="caps" id="capabilities">
+    <p class="section-tag">Capabilities</p>
+    <div class="caps__list">
+      <div class="caps__row" data-reveal>
+        <span class="caps__num">01</span>
+        <h3 class="caps__name">AI Direction</h3>
+        <p class="caps__desc">Creative direction for the generative era — taste, narrative and craft applied to model-driven pipelines.</p>
+      </div>
+      <div class="caps__row" data-reveal>
+        <span class="caps__num">02</span>
+        <h3 class="caps__name">Synthetic Imagery</h3>
+        <p class="caps__desc">Campaign photography without cameras. Editorial, product and worlds rendered with cinematic fidelity.</p>
+      </div>
+      <div class="caps__row" data-reveal>
+        <span class="caps__num">03</span>
+        <h3 class="caps__name">Motion &amp; Film</h3>
+        <p class="caps__desc">Generative film, title sequences and spots — from boards to final grade in days, not months.</p>
+      </div>
+      <div class="caps__row" data-reveal>
+        <span class="caps__num">04</span>
+        <h3 class="caps__name">Brand Worlds</h3>
+        <p class="caps__desc">Coherent visual universes: trained styles, custom models and systems your team can run forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio -->
+  <section class="studio" id="studio">
+    <div class="studio__media">
+      <img src="/cases-hub/design/lumenform/assets/studio.jpg" alt="A blade of light crossing a vast dark hall" loading="lazy" data-inner-parallax>
+      <div class="studio__quote"><p data-reveal>“Light is the only material that never lies.”</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat__num"><span data-count="140">0</span><i>+</i></div><p class="stat__label">Projects shipped</p></div>
+      <div class="stat"><div class="stat__num"><span data-count="23">0</span><i>×</i></div><p class="stat__label">Intl. awards</p></div>
+      <div class="stat"><div class="stat__num"><span data-count="9">0</span><i>+</i></div><p class="stat__label">Countries</p></div>
+      <div class="stat"><div class="stat__num"><span data-count="48">0</span><i>h</i></div><p class="stat__label">Avg. first cut</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta__glow" data-glow></div>
+    <p class="cta__tag">New business</p>
+    <h2 class="cta__title" data-reveal>Have a vision? <i>Give it form.</i></h2>
+    <a class="btn" href="mailto:hello@lumenform.studio" data-hover>
+      Start a project
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 13 13 1M4 1h9v9"/></svg>
+    </a>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <h4>Studio</h4>
+      <a href="mailto:hello@lumenform.studio" data-hover>hello@lumenform.studio</a>
+      <a href="#" data-hover>São Paulo — Lisbon</a>
+    </div>
+    <div class="footer__col">
+      <h4>Sitemap</h4>
+      <a href="#work" data-hover>Work</a>
+      <a href="#studio" data-hover>Studio</a>
+      <a href="#capabilities" data-hover>Capabilities</a>
+    </div>
+    <div class="footer__col">
+      <h4>Social</h4>
+      <a href="#" data-hover>Instagram</a>
+      <a href="#" data-hover>Behance</a>
+      <a href="#" data-hover>X / Twitter</a>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <a href="#" data-hover>Privacy</a>
+      <a href="#" data-hover>Imprint</a>
+    </div>
+  </div>
+  <div class="footer__wordmark" aria-hidden="true">LUMENFORM</div>
+  <div class="footer__legal">
+    <span>© 2026 Lumenform Studio</span>
+    <span>Made of light</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(() => {
+  "use strict";
+  const $  = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hasGsap = typeof gsap !== "undefined";
+
+  /* ----- graceful degradation ----- */
+  if (!hasGsap || reduced) {
+    const pl = $(".preloader");
+    if (pl) pl.style.display = "none";
+    if (!hasGsap) return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ----- smooth scroll (Lenis) ----- */
+  let lenis = null;
+  if (typeof Lenis !== "undefined" && !reduced) {
+    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+  const scrollTo = target => {
+    if (lenis) lenis.scrollTo(target, { duration: 1.4, easing: t => 1 - Math.pow(1 - t, 4) });
+    else target.scrollIntoView({ behavior: "smooth" });
+  };
+
+  /* ----- split helpers ----- */
+  const splitChars = el => {
+    const chars = el.textContent.split("");
+    el.innerHTML = chars.map(c => `<span>${c}</span>`).join("");
+    return $$("span", el);
+  };
+  const splitWords = el => {
+    const wrap = node => {
+      node.childNodes.forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(part => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) frag.append(document.createTextNode(" "));
+            else { const s = document.createElement("span"); s.className = "w"; s.textContent = part; frag.append(s); }
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) wrap(n);
+      });
+    };
+    wrap(el);
+    return $$(".w", el);
+  };
+
+  /* ----- fit big titles to container width ----- */
+  const fitters = [];
+  const fitTitle = el => {
+    const fit = () => {
+      el.style.fontSize = "";
+      const p = el.parentElement, ps = getComputedStyle(p);
+      const avail = p.clientWidth - parseFloat(ps.paddingLeft) - parseFloat(ps.paddingRight);
+      const w = el.scrollWidth;
+      if (w > avail) el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) * avail / w) + "px";
+    };
+    fitters.push(fit); fit();
+  };
+  addEventListener("resize", () => fitters.forEach(f => f()));
+  if (document.fonts) document.fonts.ready.then(() => { fitters.forEach(f => f()); ScrollTrigger.refresh(); });
+
+  /* ----- preloader + hero intro ----- */
+  const heroChars = splitChars($("#heroTitle"));
+  fitTitle($("#heroTitle"));
+  fitTitle($(".footer__wordmark"));
+  const heroEls   = [".hero__kicker", ".hero__sub", ".hero__meta"].map(s => $(s));
+  gsap.set(heroChars, { yPercent: 115 });
+  gsap.set($("#heroTitle"), { overflow: "clip" });
+  gsap.set(heroEls, { autoAlpha: 0, y: 24 });
+  gsap.set(".hero__media img", { scale: 1.18 });
+
+  const intro = () => {
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+    tl.to(".preloader", { yPercent: -100, duration: 1, ease: "power4.inOut" })
+      .set(".preloader", { display: "none" })
+      .to(".hero__media img", { scale: 1, duration: 2, ease: "power3.out" }, "-=.9")
+      .to(heroChars, { yPercent: 0, duration: 1.1, stagger: 0.045 }, "-=1.7")
+      .to(heroEls, { autoAlpha: 1, y: 0, duration: .9, stagger: .12 }, "-=.7");
+  };
+
+  if (reduced) {
+    gsap.set([heroChars, heroEls], { clearProps: "all" });
+    gsap.set(".hero__media img", { scale: 1 });
+  } else {
+    const counter = { v: 0 };
+    const countEl = $("#count");
+    const heroImg = new Image();
+    heroImg.src = "/cases-hub/design/lumenform/assets/hero.jpg";
+    const loaded = heroImg.decode ? heroImg.decode().catch(() => {}) : Promise.resolve();
+    const counted = gsap.to(counter, {
+      v: 100, duration: 2, ease: "power2.inOut",
+      onUpdate: () => {
+        countEl.textContent = Math.round(counter.v);
+        gsap.set("#bar", { scaleX: counter.v / 100 });
+      }
+    }).then();
+    Promise.all([loaded, counted]).then(() => requestAnimationFrame(intro));
+  }
+
+  /* ----- hero parallax out ----- */
+  gsap.to(".hero__media img", {
+    yPercent: 10, ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+  });
+  gsap.to(".hero__content", {
+    yPercent: -14, autoAlpha: .25, ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom 20%", scrub: true }
+  });
+
+  /* ----- manifesto word reveal (scrub) ----- */
+  const words = splitWords($("#manifesto"));
+  gsap.to(words, {
+    opacity: 1, ease: "none", stagger: .6,
+    scrollTrigger: { trigger: "#manifesto", start: "top 78%", end: "bottom 45%", scrub: .4 }
+  });
+
+  /* ----- generic line reveals ----- */
+  $$("[data-reveal]").forEach(el => {
+    gsap.fromTo(el, { autoAlpha: 0, y: 36 }, {
+      autoAlpha: 1, y: 0, duration: 1.1, ease: "power4.out",
+      scrollTrigger: { trigger: el, start: "top 86%" }
+    });
+  });
+
+  /* ----- project media: clip reveal + inner parallax ----- */
+  $$(".project__media").forEach(media => {
+    gsap.fromTo(media,
+      { clipPath: "inset(10% 7% 10% 7% round 6px)" },
+      { clipPath: "inset(0% 0% 0% 0% round 6px)", duration: 1.3, ease: "power4.out",
+        scrollTrigger: { trigger: media, start: "top 82%" } });
+  });
+  $$("[data-inner-parallax]").forEach(img => {
+    gsap.fromTo(img, { yPercent: -7 }, {
+      yPercent: 7, ease: "none",
+      scrollTrigger: { trigger: img.closest("figure, .studio__media"), start: "top bottom", end: "bottom top", scrub: true }
+    });
+  });
+
+  /* ----- stats counters ----- */
+  $$("[data-count]").forEach(el => {
+    const end = +el.dataset.count;
+    const obj = { v: 0 };
+    ScrollTrigger.create({
+      trigger: el, start: "top 88%", once: true,
+      onEnter: () => gsap.to(obj, {
+        v: end, duration: 1.8, ease: "power3.out",
+        onUpdate: () => el.textContent = Math.round(obj.v)
+      })
+    });
+  });
+
+  /* ----- CTA glow ----- */
+  gsap.fromTo("[data-glow]", { scale: .55, opacity: .4 }, {
+    scale: 1.15, opacity: 1, ease: "none",
+    scrollTrigger: { trigger: ".cta", start: "top 90%", end: "center center", scrub: true }
+  });
+
+  /* ----- footer wordmark ----- */
+  gsap.fromTo(".footer__wordmark", { yPercent: 42 }, {
+    yPercent: 0, ease: "none",
+    scrollTrigger: { trigger: ".footer", start: "top 95%", end: "bottom bottom", scrub: true }
+  });
+
+  /* ----- nav behaviour ----- */
+  const nav = $("#nav");
+  ScrollTrigger.create({
+    start: "top -80",
+    onUpdate: self => {
+      nav.classList.toggle("is-hidden", self.direction === 1 && self.scroll() > 300 && !document.body.classList.contains("menu-open"));
+      nav.classList.toggle("is-solid", self.scroll() > 80);
+    }
+  });
+
+  /* ----- mobile menu ----- */
+  const menu = $("#menu");
+  const menuLinks = $$(".menu__link, .menu__foot", menu);
+  gsap.set(menuLinks, { autoAlpha: 0, y: 30 });
+  const menuTl = gsap.timeline({ paused: true })
+    .set(menu, { visibility: "visible" })
+    .to(menu, { clipPath: "inset(0% 0 0% 0)", duration: .7, ease: "power4.inOut" })
+    .to(menuLinks, { autoAlpha: 1, y: 0, duration: .6, stagger: .07, ease: "power3.out" }, "-=.25");
+  let menuOpen = false;
+  const toggleMenu = force => {
+    menuOpen = force ?? !menuOpen;
+    document.body.classList.toggle("menu-open", menuOpen);
+    if (menuOpen) { menuTl.timeScale(1).play(); lenis && lenis.stop(); }
+    else { menuTl.timeScale(1.6).reverse(); lenis && lenis.start(); }
+  };
+  $("#burger").addEventListener("click", () => toggleMenu());
+
+  /* ----- anchor scrolling ----- */
+  $$('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", e => {
+      const target = $(a.getAttribute("href"));
+      if (!target) return;
+      e.preventDefault();
+      if (menuOpen) { toggleMenu(false); setTimeout(() => scrollTo(target), 450); }
+      else scrollTo(target);
+    });
+  });
+
+  /* ----- custom cursor + magnetic ----- */
+  if (matchMedia("(hover:hover) and (pointer:fine)").matches) {
+    const cursor = $(".cursor");
+    const pos = { x: innerWidth / 2, y: innerHeight / 2 }, mouse = { ...pos };
+    addEventListener("mousemove", e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    gsap.ticker.add(() => {
+      pos.x += (mouse.x - pos.x) * .16;
+      pos.y += (mouse.y - pos.y) * .16;
+      cursor.style.transform = `translate(${pos.x}px,${pos.y}px) translate(-50%,-50%)`;
+    });
+    $$("a, button, [data-hover]").forEach(el => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("is-hover"));
+      el.addEventListener("mouseleave", () => cursor.classList.remove("is-hover"));
+    });
+    $$("[data-cursor='view']").forEach(el => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("is-view"));
+      el.addEventListener("mouseleave", () => cursor.classList.remove("is-view"));
+    });
+    /* magnetic buttons */
+    $$(".btn, .nav__cta").forEach(el => {
+      el.addEventListener("mousemove", e => {
+        const r = el.getBoundingClientRect();
+        gsap.to(el, { x: (e.clientX - r.left - r.width / 2) * .3, y: (e.clientY - r.top - r.height / 2) * .3, duration: .4 });
+      });
+      el.addEventListener("mouseleave", () => gsap.to(el, { x: 0, y: 0, duration: .7, ease: "elastic.out(1,.4)" }));
+    });
+  }
+
+  /* ----- refresh after images settle ----- */
+  addEventListener("load", () => ScrollTrigger.refresh());
+})();
+</script>
+<noscript><style>.preloader{display:none}</style></noscript>
+</body>
+</html>

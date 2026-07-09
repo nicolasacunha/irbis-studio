@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Alba — A remote valley. One unhurried day.</title>
+<meta name="description" content="Alba is a remote nature retreat measured in light, not nights. Three cabins, one valley, and the oldest schedule on earth — from first mist to the Milky Way.">
+<meta property="og:title" content="Alba — A remote valley. One unhurried day.">
+<meta property="og:description" content="A retreat measured in light, not nights. Scroll through one full day at Alba.">
+<meta property="og:image" content="/cases-hub/design/alba/assets/01-dawn.webp">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,200;1,9..144,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/cases-hub/design/alba/assets/01-dawn.webp" imagesrcset="/cases-hub/design/alba/assets/01-dawn-sm.webp 960w, assets/01-dawn.webp 1920w" imagesizes="100vw">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='38' fill='%23C97E54'/></svg>">
+<style>
+/* ============ RESET / TOKENS ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#EAE3E8; --ink:#443C4A; --acc:#B96A4B;
+  --skyA:#D9CEDC; --skyB:#F2E3DC;
+  --bg-rgb:234 227 232; --ink-rgb:68 60 74;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+  --gutter:clamp(20px,5vw,72px);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+/* fixed sky wash — the day happens here */
+.sky{
+  position:fixed;inset:0;z-index:-2;
+  background:linear-gradient(180deg,var(--skyA) 0%,var(--skyB) 100%);
+}
+/* cinematic grain */
+.grain{
+  position:fixed;inset:-50%;z-index:40;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 7s steps(8) infinite;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}25%{transform:translate(2%,1%)}
+  50%{transform:translate(-1%,2%)}75%{transform:translate(1%,-2%)}
+}
+::selection{background:var(--acc);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+
+/* ============ HEADER ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:clamp(16px,2.5vw,28px) var(--gutter);
+  mix-blend-mode:normal;
+  transition:transform .5s var(--ease);
+}
+.nav .logo{
+  font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:.14em;
+  text-decoration:none;text-transform:uppercase;color:var(--ink);
+  transition:color .4s;
+}
+.nav .nav-right{display:flex;align-items:center;gap:clamp(16px,3vw,36px)}
+.nav .nav-link{
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+  text-decoration:none;opacity:.75;transition:opacity .3s,color .4s;
+}
+.nav .nav-link:hover{opacity:1}
+.nav .nav-time{
+  font-size:11px;letter-spacing:.18em;font-weight:500;
+  font-variant-numeric:tabular-nums;opacity:.6;
+}
+@media(max-width:640px){.nav .nav-link.hide-m{display:none}}
+
+/* ============ PROGRESS RAIL (sun line) ============ */
+.rail{
+  position:fixed;right:clamp(14px,2.4vw,32px);top:50%;translate:0 -50%;
+  z-index:45;display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.rail .rail-line{width:1px;height:34vh;background:color-mix(in srgb,var(--ink) 28%,transparent);position:relative}
+.rail .rail-sun{
+  position:absolute;left:50%;top:0;width:11px;height:11px;border-radius:50%;
+  translate:-50% -50%;background:var(--acc);
+  box-shadow:0 0 14px 2px color-mix(in srgb,var(--acc) 60%,transparent);
+  transition:background .6s,box-shadow .6s;
+}
+.rail .rail-time{
+  font-size:10px;letter-spacing:.2em;font-weight:500;
+  font-variant-numeric:tabular-nums;writing-mode:vertical-rl;opacity:.55;
+}
+@media(max-width:760px){.rail{display:none}}
+
+/* ============ FLOATING CTA ============ */
+.cta-pill{
+  position:fixed;z-index:50;
+  left:50%;translate:-50% 0;bottom:calc(18px + env(safe-area-inset-bottom));
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 26px;border-radius:999px;border:0;cursor:pointer;
+  font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  background:var(--ink);color:var(--bg);text-decoration:none;white-space:nowrap;
+  box-shadow:0 10px 30px -8px rgb(0 0 0/.35);
+  opacity:0;pointer-events:none;transform:translateY(14px);
+  transition:opacity .5s var(--ease),transform .5s var(--ease),background .6s,color .6s;
+}
+.cta-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);transition:background .6s}
+.cta-pill.on{opacity:1;pointer-events:auto;transform:translateY(0)}
+.cta-pill:hover{transform:translateY(-2px)}
+@media(min-width:761px){.cta-pill{left:auto;translate:0 0;right:32px;bottom:32px}}
+
+/* ============ SCENES ============ */
+.scene{position:relative}
+.full{height:115svh;min-height:600px}
+.full .media{position:sticky;top:0;height:100svh;overflow:hidden}
+.full .media img{
+  width:100%;height:118%;object-fit:cover;
+  transform:translateY(var(--py,0)) scale(1.06);
+  will-change:transform;
+}
+.full .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgb(10 10 20/.18) 0%,transparent 30%,transparent 60%,rgb(10 10 20/.34) 100%)}
+.full .scene-copy{
+  position:absolute;left:var(--gutter);right:var(--gutter);
+  bottom:clamp(56px,11vh,120px);z-index:3;color:#F4F1EC;max-width:580px;
+}
+.scene .stamp{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;
+  margin-bottom:18px;
+}
+.scene .stamp::before{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+.scene h2{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(34px,5.6vw,72px);line-height:1.04;letter-spacing:-.01em;
+  margin-bottom:18px;text-wrap:balance;
+}
+.scene h2 em{font-style:italic;font-weight:200}
+.scene p{font-size:clamp(15px,1.25vw,17px);line-height:1.65;max-width:46ch;opacity:.92}
+.full .scene-copy .stamp{color:#F4F1EC}
+/* ghost numeral */
+.ghost{
+  position:absolute;z-index:2;pointer-events:none;user-select:none;
+  font-family:var(--serif);font-weight:200;font-style:italic;
+  font-size:clamp(120px,26vw,340px);line-height:1;letter-spacing:-.02em;
+  opacity:.13;color:#fff;mix-blend-mode:overlay;
+  top:10%;right:4%;
+  transform:translateY(var(--py,0));will-change:transform;
+}
+.dark-ghost{color:var(--ink);mix-blend-mode:normal;opacity:.06}
+
+/* editorial (inset) scenes */
+.split{
+  display:grid;align-items:center;
+  grid-template-columns:repeat(12,1fr);
+  gap:clamp(20px,3vw,48px);
+  padding:clamp(110px,16vh,200px) var(--gutter);
+  position:relative;
+}
+.split .frame{position:relative;overflow:hidden;border-radius:3px}
+.split .frame img{
+  width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;
+  transform:translateY(var(--py,0)) scale(1.14);will-change:transform;
+}
+.split .copy{color:var(--ink)}
+.split .copy .stamp{color:var(--acc)}
+.split.img-right .frame{grid-column:6/13;grid-row:1}
+.split.img-right .copy{grid-column:1/6;grid-row:1}
+.split.img-left .frame{grid-column:1/8;grid-row:1}
+.split.img-left .copy{grid-column:9/13;grid-row:1}
+@media(max-width:760px){
+  .full .scene-copy{bottom:clamp(96px,15vh,150px)}
+}
+@media(max-width:880px){
+  .split{padding:clamp(80px,12vh,140px) var(--gutter)}
+  .split .frame,.split .copy{grid-column:1/13!important;grid-row:auto!important}
+  .split .copy{order:2;margin-top:8px}
+  .split .frame img{aspect-ratio:4/3}
+}
+
+/* ============ HERO ============ */
+.hero{height:118svh;min-height:640px;position:relative}
+.hero .media{position:sticky;top:0;height:100svh;overflow:hidden}
+.hero .media img{
+  width:100%;height:122%;object-fit:cover;object-position:50% 38%;
+  transform:translateY(var(--py,0)) scale(1.04);will-change:transform;
+}
+.hero .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgb(40 30 50/.10),transparent 35%,transparent 62%,rgb(30 22 40/.38))}
+.hero .hero-inner{
+  position:absolute;inset:0;z-index:3;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 var(--gutter) clamp(40px,7vh,84px);color:#F6F2EE;
+}
+.hero .coords{
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;
+  opacity:.85;margin-bottom:14px;
+}
+.hero h1{
+  font-family:var(--serif);font-weight:250;
+  font-size:clamp(72px,19.5vw,300px);line-height:.86;letter-spacing:.04em;
+  text-transform:uppercase;margin-left:-.04em;
+  transform:translateY(var(--py,0));will-change:transform;
+}
+.hero .hero-sub{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+  gap:14px;margin-top:26px;
+}
+.hero .hero-sub p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(17px,2.1vw,26px);opacity:.95}
+.hero .scroll-cue{
+  display:flex;align-items:center;gap:10px;
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;opacity:.8;
+}
+.hero .scroll-cue::after{
+  content:"";width:1px;height:44px;background:currentColor;
+  animation:cue 2.2s var(--ease) infinite;transform-origin:top;
+}
+@keyframes cue{0%{transform:scaleY(0)}45%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ============ MANIFESTO ============ */
+.manifesto{
+  padding:clamp(120px,20vh,240px) var(--gutter);
+  max-width:1100px;margin-inline:auto;text-align:center;
+}
+.manifesto p{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(26px,4vw,52px);line-height:1.28;letter-spacing:-.01em;
+  color:var(--ink);text-wrap:balance;max-width:none;
+}
+.manifesto p em{font-style:italic;font-weight:200;color:var(--acc)}
+.manifesto .kicker{margin-bottom:30px;justify-content:center;display:inline-flex;color:var(--acc)}
+
+/* ============ FACTS ============ */
+.facts{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(18px,3vw,40px);
+  padding:clamp(70px,11vh,130px) var(--gutter);
+  max-width:1200px;margin-inline:auto;
+}
+.facts .fact{border-top:1px solid color-mix(in srgb,var(--ink) 30%,transparent);padding-top:18px}
+.facts .fact strong{
+  display:block;font-family:var(--serif);font-weight:250;
+  font-size:clamp(34px,5vw,64px);line-height:1;margin-bottom:10px;color:var(--ink);
+}
+.facts .fact span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--acc)}
+.facts .fact p{font-size:14px;line-height:1.6;margin-top:10px;opacity:.8;color:var(--ink)}
+@media(max-width:680px){.facts{grid-template-columns:1fr;gap:34px}}
+
+/* ============ BOOKING ============ */
+.book{
+  padding:clamp(110px,16vh,200px) var(--gutter) clamp(80px,12vh,150px);
+  display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,4vw,60px);
+  max-width:1280px;margin-inline:auto;align-items:start;color:var(--ink);
+}
+.book .book-intro{grid-column:1/6}
+.book .book-intro h2{color:var(--ink)}
+.book .book-intro .stamp{color:var(--acc)}
+.book .book-intro p{opacity:.85;color:var(--ink)}
+.book form{grid-column:7/13}
+@media(max-width:880px){.book .book-intro,.book form{grid-column:1/13}}
+.field{
+  display:flex;flex-direction:column;gap:8px;margin-bottom:26px;
+}
+.field label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--acc)}
+.field input{
+  appearance:none;background:transparent;border:0;
+  border-bottom:1px solid color-mix(in srgb,var(--ink) 35%,transparent);
+  padding:10px 2px 12px;font-family:var(--serif);font-weight:300;
+  font-size:clamp(20px,2.4vw,28px);color:var(--ink);border-radius:0;
+  transition:border-color .3s;width:100%;
+}
+.field input:focus{outline:none;border-bottom-color:var(--acc)}
+.field input::placeholder{color:color-mix(in srgb,var(--ink) 40%,transparent)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,32px)}
+@media(max-width:520px){.field-row{grid-template-columns:1fr}}
+.stepper{display:flex;align-items:center;gap:18px;border-bottom:1px solid color-mix(in srgb,var(--ink) 35%,transparent);padding:6px 2px 10px}
+.stepper button{
+  width:40px;height:40px;border-radius:50%;border:1px solid color-mix(in srgb,var(--ink) 40%,transparent);
+  background:transparent;color:var(--ink);font-size:18px;cursor:pointer;
+  display:grid;place-items:center;transition:border-color .3s,background .3s;
+  flex:none;
+}
+.stepper button:hover{border-color:var(--acc)}
+.stepper output{font-family:var(--serif);font-weight:300;font-size:clamp(20px,2.4vw,28px);min-width:2ch;text-align:center}
+.submit{
+  margin-top:14px;width:100%;padding:20px 28px;border-radius:999px;border:0;cursor:pointer;
+  background:var(--ink);color:var(--bg);
+  font-family:var(--sans);font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  transition:transform .35s var(--ease),background .6s,color .6s,opacity .3s;
+}
+.submit:hover{transform:translateY(-2px)}
+.book .fine{margin-top:16px;font-size:12px;letter-spacing:.04em;opacity:.6;text-align:center;color:var(--ink)}
+.book-ok{
+  grid-column:7/13;display:none;padding:8px 0;
+}
+@media(max-width:880px){.book-ok{grid-column:1/13}}
+.book-ok h3{font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.6vw,44px);line-height:1.15;margin-bottom:14px;color:var(--ink)}
+.book-ok p{opacity:.8;line-height:1.65;color:var(--ink)}
+.book.sent form{display:none}
+.book.sent .book-ok{display:block}
+
+/* ============ FOOTER ============ */
+footer{
+  padding:60px var(--gutter) calc(34px + env(safe-area-inset-bottom));
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;
+  border-top:1px solid color-mix(in srgb,var(--ink) 18%,transparent);
+  color:var(--ink);
+}
+footer .f-logo{font-family:var(--serif);letter-spacing:.14em;text-transform:uppercase;font-size:16px}
+footer p{font-size:12px;opacity:.6;letter-spacing:.04em}
+footer a{text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--ink) 40%,transparent)}
+
+/* ============ REVEALS ============ */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
+.frame.rv{clip-path:inset(8% 6% 8% 6%);transition:clip-path 1.1s var(--ease),opacity .9s var(--ease),transform .9s var(--ease)}
+.frame.rv.in{clip-path:inset(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none}
+  .frame.rv{clip-path:none}
+  .full .media img,.split .frame img,.hero .media img,.hero h1,.ghost{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="sky" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="logo" href="#top">Alba</a>
+  <nav class="nav-right" aria-label="Main">
+    <span class="nav-time" id="navTime" aria-hidden="true">05:42</span>
+    <a class="nav-link hide-m" href="#morning">The day</a>
+    <a class="nav-link" href="#book">Reserve</a>
+  </nav>
+</header>
+
+<div class="rail" aria-hidden="true">
+  <div class="rail-line"><div class="rail-sun" id="railSun"></div></div>
+  <div class="rail-time" id="railTime">05:42</div>
+</div>
+
+<a class="cta-pill" id="ctaPill" href="#book"><span class="dot"></span>Reserve a day</a>
+
+<main id="top">
+
+  <!-- 05:42 DAWN -->
+  <section class="hero scene" data-phase="dawn" id="dawn">
+    <div class="media">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/01-dawn-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/01-dawn.webp" alt="Pre-dawn alpine valley in mist, a single lit cabin far below a rose and lavender sky" data-px="-10" fetchpriority="high">
+      </picture>
+      <div class="hero-veil"></div>
+      <div class="hero-inner">
+        <p class="coords rv in">63°26′N · above the treeline</p>
+        <h1 data-px="6">Alba</h1>
+        <div class="hero-sub">
+          <p class="rv in">A remote valley. One unhurried day.</p>
+          <span class="scroll-cue">Scroll through the light</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto scene" data-phase="dawn2">
+    <span class="stamp kicker rv">A different unit of time</span>
+    <p class="rv rv-d1">We measure a stay not in nights, but in <em>light</em>. Arrive before the sun. Leave after the stars. Alba is one valley, three cabins, and the oldest schedule on earth.</p>
+  </section>
+
+  <!-- 06:30 MORNING -->
+  <section class="scene full" data-phase="morning" id="morning">
+    <div class="media">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/02-morning-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/02-morning.webp" alt="Golden morning sunbeams breaking through a misty pine forest over a dewy footpath" data-px="-10" loading="lazy" decoding="async">
+      </picture>
+      <div class="veil"></div>
+      <span class="ghost" data-px="14" aria-hidden="true">06:30</span>
+      <div class="scene-copy">
+        <span class="stamp rv">06:30 — First walk</span>
+        <h2 class="rv rv-d1">Wake with <em>the forest</em></h2>
+        <p class="rv rv-d2">Mist burns off the pines as the valley exhales. Coffee on the porch, then a slow path threaded with light.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12:04 MIDDAY -->
+  <section class="scene split img-right" data-phase="midday" id="midday">
+    <figure class="frame rv">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/03-midday-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/03-midday.webp" alt="A lone swimmer crossing a still mountain lake from a wooden deck, peaks behind" data-px="-7" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <div class="copy">
+      <span class="stamp rv">12:04 — The lake</span>
+      <h2 class="rv rv-d1">Swim in <em>glacier light</em></h2>
+      <p class="rv rv-d2">The water is honest: cold, clear, awake. Lunch is whatever the valley gave us that morning, served on the deck.</p>
+    </div>
+    <span class="ghost dark-ghost" data-px="10" aria-hidden="true">12:04</span>
+  </section>
+
+  <!-- 15:30 AFTERNOON -->
+  <section class="scene split img-left" data-phase="afternoon" id="afternoon">
+    <figure class="frame rv">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/04-interior-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/04-interior.webp" alt="Minimal cabin interior with a linen daybed facing a floor-to-ceiling window onto alpine meadow" data-px="-7" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <div class="copy">
+      <span class="stamp rv">15:30 — The cabin</span>
+      <h2 class="rv rv-d1">Do nothing, <em>beautifully</em></h2>
+      <p class="rv rv-d2">Linen, oak, a window the size of the view. The afternoon asks nothing of you — and means it.</p>
+    </div>
+  </section>
+
+  <!-- 18:47 GOLDEN HOUR -->
+  <section class="scene full" data-phase="golden" id="golden">
+    <div class="media">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/05-golden-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/05-golden.webp" alt="A hiker walking a high ridge trail toward a low amber sun at golden hour" data-px="-10" loading="lazy" decoding="async">
+      </picture>
+      <div class="veil"></div>
+      <span class="ghost" data-px="14" aria-hidden="true">18:47</span>
+      <div class="scene-copy">
+        <span class="stamp rv">18:47 — The ridge</span>
+        <h2 class="rv rv-d1">Walk into the <em>amber hour</em></h2>
+        <p class="rv rv-d2">The trail climbs just enough to watch the sun lower itself into the next valley over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 20:30 DUSK -->
+  <section class="scene split img-right" data-phase="dusk" id="dusk">
+    <figure class="frame rv">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/06-dusk-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/06-dusk.webp" alt="A stone fire pit sparking at blue hour beside two chairs draped in wool blankets" data-px="-7" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <div class="copy">
+      <span class="stamp rv">20:30 — The fire</span>
+      <h2 class="rv rv-d1">Gather as the <em>cold arrives</em></h2>
+      <p class="rv rv-d2">Wool blankets, cedar smoke, dinner over flame. The sky runs through every blue it knows.</p>
+    </div>
+  </section>
+
+  <!-- 23:00 NIGHT -->
+  <section class="scene full" data-phase="night" id="night">
+    <div class="media">
+      <picture>
+        <source srcset="/cases-hub/design/alba/assets/07-night-sm.webp" media="(max-width:760px)">
+        <img src="/cases-hub/design/alba/assets/07-night.webp" alt="The Milky Way arching over a small cabin with one warm lit window in a dark valley" data-px="-10" loading="lazy" decoding="async">
+      </picture>
+      <div class="veil"></div>
+      <span class="ghost" data-px="14" aria-hidden="true">23:00</span>
+      <div class="scene-copy">
+        <span class="stamp rv">23:00 — Lights out</span>
+        <h2 class="rv rv-d1">Sleep under the <em>Milky Way</em></h2>
+        <p class="rv rv-d2">One warm window in a dark valley. The stars handle the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section class="facts scene" data-phase="night2" aria-label="Alba in numbers">
+    <div class="fact rv"><span>Cabins</span><strong>03</strong><p>Timber and glass, two guests each, a respectful walk apart.</p></div>
+    <div class="fact rv rv-d1"><span>Schedules</span><strong>00</strong><p>The sun decides. We just cook, pour, and point at trails.</p></div>
+    <div class="fact rv rv-d2"><span>Sky</span><strong>∞</strong><p>No wifi, no neighbours, no light for forty kilometres.</p></div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="book scene" data-phase="night3" id="book">
+    <div class="book-intro">
+      <span class="stamp rv">Reserve</span>
+      <h2 class="rv rv-d1">Begin at <em>first light</em></h2>
+      <p class="rv rv-d2">Three cabins. Two guests each. One day at a time. Tell us when, and we'll hold the valley for you.</p>
+    </div>
+    <form id="bookForm" novalidate>
+      <div class="field-row">
+        <div class="field rv">
+          <label for="arr">Arrival</label>
+          <input type="date" id="arr" name="arrival" required>
+        </div>
+        <div class="field rv rv-d1">
+          <label for="guests">Guests</label>
+          <div class="stepper">
+            <button type="button" id="gMinus" aria-label="Fewer guests">−</button>
+            <output id="gOut" for="gMinus gPlus">2</output>
+            <button type="button" id="gPlus" aria-label="More guests">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="field rv rv-d2">
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="email" placeholder="you@somewhere.quiet" required>
+      </div>
+      <button class="submit rv rv-d3" type="submit">Request your day</button>
+      <p class="fine">No payment now — this is a request, answered by a human.</p>
+    </form>
+    <div class="book-ok" id="bookOk">
+      <h3>Received. We'll reply <em>before sunrise</em>.</h3>
+      <p>Keep an eye on your inbox — and start deciding which hour of the day you'll claim as your favourite.</p>
+    </div>
+  </section>
+
+  <footer class="scene" data-phase="night4">
+    <span class="f-logo">Alba</span>
+    <p>A fictional retreat, designed as a study in light. Concept &amp; build by <a href="#top">IRBIS</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- PALETTES: the day, as color ---------- */
+  // [bg, ink, acc, skyA, skyB] hex
+  const PAL = {
+    dawn:      ['#EAE3E8','#443C4A','#B96A4B','#D8CCDC','#F4E4DA'],
+    dawn2:     ['#EFE7E4','#463E44','#B96A4B','#E3D6D8','#F6EADF'],
+    morning:   ['#F3EDDE','#3F3A2C','#A8762D','#EBDFC2','#F8F1E0'],
+    midday:    ['#EBF0ED','#2E3B39','#4E7D72','#D9E6E2','#F2F5F1'],
+    afternoon: ['#F2EADC','#463A2B','#9C6B3F','#E8DCC6','#F7EFE1'],
+    golden:    ['#F1DFC4','#52351F','#C2722F','#E9CFA4','#F6E8CD'],
+    dusk:      ['#312E4A','#E9E3F0','#E2854F','#272343','#4A3F63'],
+    night:     ['#11141F','#DCE2F2','#94ABDB','#0B0E18','#1A2030'],
+    night2:    ['#10131D','#DCE2F2','#94ABDB','#0A0D16','#171C2B'],
+    night3:    ['#0F121C','#E0E5F3','#9DB2DF','#090C14','#151A28'],
+    night4:    ['#0D101A','#E0E5F3','#9DB2DF','#080B12','#131825']
+  };
+  const TIMES = {dawn:'05:42',dawn2:'05:58',morning:'06:30',midday:'12:04',afternoon:'15:30',golden:'18:47',dusk:'20:30',night:'23:00',night2:'23:20',night3:'23:40',night4:'00:00'};
+
+  const hex2rgb = h => [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+  const mix = (a,b,t) => a.map((v,i)=>Math.round(v+(b[i]-v)*t));
+  const css = r => `rgb(${r[0]} ${r[1]} ${r[2]})`;
+
+  // build stops from sections
+  const scenes = $$('.scene[data-phase]');
+  let stops = [];
+  function buildStops(){
+    const sy = scrollY, vh = innerHeight;
+    stops = scenes.map(el=>{
+      const r = el.getBoundingClientRect();
+      const center = r.top + sy + r.height/2 - vh/2;
+      const p = PAL[el.dataset.phase] || PAL.dawn;
+      return {y:Math.max(0,center), pal:p.map(hex2rgb), time:TIMES[el.dataset.phase]||'05:42', phase:el.dataset.phase};
+    }).sort((a,b)=>a.y-b.y);
+  }
+
+  const root = document.documentElement.style;
+  const railSun = $('#railSun'), railTime = $('#railTime'), navTime = $('#navTime');
+  const railLineH = () => $('.rail-line') ? $('.rail-line').offsetHeight : 0;
+
+  let maxScroll = 1;
+  function applyPalette(){
+    const y = scrollY;
+    let a = stops[0], b = stops[0];
+    for(let i=0;i<stops.length;i++){
+      if(stops[i].y <= y){ a = stops[i]; b = stops[i+1] || stops[i]; }
+      else { if(i===0){ a = b = stops[0]; } break; }
+    }
+    const span = Math.max(1, b.y - a.y);
+    const t = a===b ? 0 : Math.min(1, Math.max(0,(y - a.y)/span));
+    const e = t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2; // easeInOutQuad
+    const [bg,ink,acc,skyA,skyB] = a.pal.map((c,i)=>mix(c,b.pal[i],e));
+    root.setProperty('--bg',css(bg));
+    root.setProperty('--ink',css(ink));
+    root.setProperty('--acc',css(acc));
+    root.setProperty('--skyA',css(skyA));
+    root.setProperty('--skyB',css(skyB));
+    // time labels: snap to nearer stop
+    const label = (t<.5? a : b).time;
+    if(navTime.textContent !== label){ navTime.textContent = label; railTime.textContent = label; }
+    // sun position on rail
+    const p = Math.min(1, y/maxScroll);
+    if(railSun) railSun.style.top = (p*railLineH())+'px';
+  }
+
+  /* ---------- PARALLAX ---------- */
+  const pxEls = $$('[data-px]');
+  function parallax(){
+    if(reduced) return;
+    const vh = innerHeight;
+    for(const el of pxEls){
+      const host = el.closest('.media, .frame, section') || el;
+      const r = host.getBoundingClientRect();
+      if(r.bottom < -80 || r.top > vh+80) continue;
+      const prog = (r.top + r.height/2 - vh/2) / vh; // -x..x, 0 centered
+      const amt = parseFloat(el.dataset.px) || 0;
+      el.style.setProperty('--py', (prog*amt*10).toFixed(1)+'px');
+    }
+  }
+
+  /* ---------- RAF LOOP ---------- */
+  let ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(()=>{ applyPalette(); parallax(); ticking = false; });
+  }
+  function measure(){
+    maxScroll = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    buildStops(); applyPalette(); parallax();
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', measure);
+  addEventListener('load', measure);
+  measure();
+  setTimeout(measure, 600); // after fonts/images settle
+
+  /* ---------- REVEALS ---------- */
+  const io = new IntersectionObserver(es=>{
+    es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.18, rootMargin:'0px 0px -8% 0px'});
+  $$('.rv').forEach(el=>io.observe(el));
+
+  /* ---------- CTA PILL ---------- */
+  const pill = $('#ctaPill'), hero = $('#dawn'), book = $('#book'), foot = document.querySelector('footer');
+  let heroIn = true, bookIn = false, footIn = false;
+  const pillIO = new IntersectionObserver(es=>{
+    es.forEach(en=>{
+      if(en.target===hero) heroIn = en.isIntersecting;
+      if(en.target===book) bookIn = en.isIntersecting;
+      if(en.target===foot) footIn = en.isIntersecting;
+    });
+    pill.classList.toggle('on', !heroIn && !bookIn && !footIn);
+  },{threshold:.03});
+  pillIO.observe(hero); pillIO.observe(book); pillIO.observe(foot);
+
+  /* ---------- BOOKING ---------- */
+  const form = $('#bookForm'), gOut = $('#gOut'), arr = $('#arr');
+  let guests = 2;
+  arr.min = new Date().toISOString().slice(0,10);
+  $('#gMinus').addEventListener('click',()=>{ guests=Math.max(1,guests-1); gOut.textContent=guests; });
+  $('#gPlus').addEventListener('click',()=>{ guests=Math.min(6,guests+1); gOut.textContent=guests; });
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    $('#book').classList.add('sent');
+    $('#bookOk').scrollIntoView({behavior:reduced?'auto':'smooth',block:'center'});
+  });
+})();
+</script>
+</body>
+</html>
