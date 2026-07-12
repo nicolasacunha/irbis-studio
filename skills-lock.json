@@ -1,11 +1,305 @@
 {
   "version": 1,
   "skills": {
+    "ads": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "ads/SKILL.md",
+      "computedHash": "2e44f03ffdff3083e28f9b8f7fb7a63f53b78bb4390a8a95d41de30a1c92c1be"
+    },
+    "ads-amazon": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-amazon/SKILL.md",
+      "computedHash": "ece87402b6205e4a24fe32731da4aef0b8666febe0c8051f5b39174bdb99d436"
+    },
+    "ads-apple": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-apple/SKILL.md",
+      "computedHash": "c850678ebfb566ac942da01430444b3f58581a7c3de3c163c8458fecdbd647fe"
+    },
+    "ads-attribution": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-attribution/SKILL.md",
+      "computedHash": "9ccba2bee008050e94e82719f655bc54ea4d244e07787173114ab3d440093eec"
+    },
+    "ads-audit": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-audit/SKILL.md",
+      "computedHash": "cd756ca47aa188ce3b0f634258d696ca06c9d9276edf7aa6164b505a9db67abf"
+    },
+    "ads-budget": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-budget/SKILL.md",
+      "computedHash": "e588c170e7b2dcf73c6d6d541b9fab69e8d1e2ffafffbc8b0fd3b56cc6f0b736"
+    },
+    "ads-competitor": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-competitor/SKILL.md",
+      "computedHash": "8f223d607bec7a12e792c2c50946003a7b2d30fb977aec6511550e18a58b8644"
+    },
+    "ads-create": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-create/SKILL.md",
+      "computedHash": "452f0c34bed0bf6851642eb502eef430114ba4539169ca3a268f626a36f5bba0"
+    },
+    "ads-creative": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-creative/SKILL.md",
+      "computedHash": "187281a3a59d756509e69f7ca1d0b0d4ee3d844d1e8b5606d8cc2f6eff107c5a"
+    },
+    "ads-dna": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-dna/SKILL.md",
+      "computedHash": "d2a8bd9c3a7c5efa05b50f6352f65c8d0ccedbce1d9baa4b1d45832f935e98eb"
+    },
+    "ads-generate": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-generate/SKILL.md",
+      "computedHash": "adf0877bb2d149a3488e9062376d9eeca364f491f1476291990a8e1638af5d84"
+    },
+    "ads-google": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-google/SKILL.md",
+      "computedHash": "33e81810db7647dda89f015f8c6f445155e473a08dde6f9873464808e8786733"
+    },
+    "ads-landing": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-landing/SKILL.md",
+      "computedHash": "5fd3d95e9b70f9dff7c960a96b6574afb27f8506936b3c01f692059fcc7ad9e4"
+    },
+    "ads-linkedin": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-linkedin/SKILL.md",
+      "computedHash": "653cb7a7656c2ab5fc48fe221b06861915f2e88e821624942c0194bc1676af9a"
+    },
+    "ads-math": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-math/SKILL.md",
+      "computedHash": "907ee3e0a03869fe37a8c1f3b4b34f63836519cd335b9ce3621f8af65a7245ea"
+    },
+    "ads-meta": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-meta/SKILL.md",
+      "computedHash": "afc82d654c50e3039d054875bd7606518adaef6460c95f480bb2df6551626585"
+    },
+    "ads-microsoft": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-microsoft/SKILL.md",
+      "computedHash": "83eaf69fcda83ae4d78ef52dac261d96cafd3e12b0fa9d7546c3970e6f7ff706"
+    },
+    "ads-photoshoot": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-photoshoot/SKILL.md",
+      "computedHash": "e455dd66845b3ea18a3b105dd55b9af0815afe9baa5ede732ae64e2c32fff20e"
+    },
+    "ads-plan": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-plan/SKILL.md",
+      "computedHash": "a12697ef7c80bd00764806d7bac0ea4d13ec50a50a95147ac42868c56305ca98"
+    },
+    "ads-server-side-tracking": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-server-side-tracking/SKILL.md",
+      "computedHash": "9463b420aaa166becc5c457744099d239f15027dbd18b2720bb63c9e9fecb0bb"
+    },
+    "ads-test": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-test/SKILL.md",
+      "computedHash": "f445904cf0229f1dbd09cf2846042ba81c529cb03855bd0884044801ef1bb7ee"
+    },
+    "ads-tiktok": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-tiktok/SKILL.md",
+      "computedHash": "158dee85aded79602b5a642bfee4924f6e053bfe042919c8e9169a644d8e034b"
+    },
+    "ads-youtube": {
+      "source": "AgriciDaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-youtube/SKILL.md",
+      "computedHash": "25652b37f6830a2ca82bbe414ec8a423e4feb225287117eabcb59400037893e1"
+    },
     "app-store-screenshots": {
       "source": "ParthJadhav/app-store-screenshots",
       "sourceType": "github",
       "skillPath": "skills/app-store-screenshots/SKILL.md",
       "computedHash": "eead0ebca3cbafbe6f81a895aa158f78d70b69779b3bac6cb2d8dc56511632f5"
+    },
+    "broken-link-checker": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/broken-link-checker/SKILL.md",
+      "computedHash": "f0f51d569e1fb79c3a9e30d6608cbe3d1b62a0da8e8984856ea46245d6b5e8d2"
+    },
+    "cmo": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "notfair-cmo-skill/SKILL.md",
+      "computedHash": "7a4c9118e1936e103001132eb5b5bb687de2fac4173cc25575683ff685775a60"
+    },
+    "content-planner": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/content-planner/SKILL.md",
+      "computedHash": "e9b41db176abd15cb52bd0f2dc953d979b2cdcbfc3f7a4c911abd8ab1de7563a"
+    },
+    "content-writer": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/content-writer/SKILL.md",
+      "computedHash": "0446d598b0d0a2c049283987936c73a522bb614a602ae3b61882ab22647ae2cd"
+    },
+    "context-mode": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": "skills/context-mode/SKILL.md",
+      "computedHash": "1962755c8f5995762dff3e14b1d2703ae15c37e83fb10d5077ce2ddc595538e7"
+    },
+    "context-mode-ops": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/context-mode-ops/SKILL.md",
+      "computedHash": "e6d9cc5428012d85be5580d0fccec5c47a8f1566f7f41448687953f7ab4081c5"
+    },
+    "ctx-doctor": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": "skills/ctx-doctor/SKILL.md",
+      "computedHash": "0a3a57087267cb07f85bdf102f6b0778e1464a2e0a3f6383730f4aa2748c8cae"
+    },
+    "ctx-insight": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": "skills/ctx-insight/SKILL.md",
+      "computedHash": "534d8ca8507738469ce4428a92e1bdcca3427ea6694a1a09646174cc93cd8a96"
+    },
+    "ctx-purge": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": "skills/ctx-purge/SKILL.md",
+      "computedHash": "885b7538bfb20d315cd200ddd74ae6c621885d5d022dae964391837437b498d3"
+    },
+    "ctx-stats": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": "skills/ctx-stats/SKILL.md",
+      "computedHash": "688761c1b6590738855da468c51acd855f19dd686fcd9f14c0e83cc89aaf6008"
+    },
+    "ctx-upgrade": {
+      "source": "mksglu/context-mode",
+      "sourceType": "github",
+      "skillPath": "skills/ctx-upgrade/SKILL.md",
+      "computedHash": "2113c6b0d6dbf0efbac1a611a4bd142be7ca9b3f1431bd5d065806525bd9bcce"
+    },
+    "gemini": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "gemini/SKILL.md",
+      "computedHash": "86473098fd23ee8dac18347efeb31cdeef3f7cb3d0909e45412a123edeb313c7"
+    },
+    "geo-optimizer": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/geo-optimizer/SKILL.md",
+      "computedHash": "3770fde686442e9fb7aefe5263290a0c45d314f691629d799f562df85973d712"
+    },
+    "google-ads": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "google-ads/manage/SKILL.md",
+      "computedHash": "2eb14e8dd51162674104f3fd4b3e4e191f6a78a5ef7c76d56660cf4a0c716db1"
+    },
+    "google-ads-audit": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "google-ads/audit/SKILL.md",
+      "computedHash": "7a33185532f998eb5c06626669e404726c0a6c62129d628b00c61d3fc4bc688d"
+    },
+    "google-ads-copy": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "google-ads/copy/SKILL.md",
+      "computedHash": "9dfe5cfc8b35f8063936578b06fb530ab5a77283d1c1dde52adac71d5cd6661a"
+    },
+    "google-ads-landing": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "google-ads/landing/SKILL.md",
+      "computedHash": "5a42df374e51cc1d06f65fd71e9e36d54cf3f78951e37acb0227321b112d0615"
+    },
+    "keyword-research": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/keyword-research/SKILL.md",
+      "computedHash": "f5e9561e6e6933b73d055835ffb71eb9b61ee88fae819f990f651a2fd9d5b8fb"
+    },
+    "meta-ads": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "meta-ads/manage/SKILL.md",
+      "computedHash": "89fa525efd0a24e68dad2740658170312e313ea713da4b75015a9a4eb224904a"
+    },
+    "meta-ads-audit": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "meta-ads/audit/SKILL.md",
+      "computedHash": "16f5014f46e198eab97892294288eef2e74b8fa40beac3c9d742cabbf214c0c4"
+    },
+    "meta-tags-optimizer": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/meta-tags-optimizer/SKILL.md",
+      "computedHash": "c4d875e8588b606621cc4106e6589f87edb5bdf9e39fb8f0098cbb628423da1c"
+    },
+    "schema-markup-generator": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/schema-markup-generator/SKILL.md",
+      "computedHash": "a7f35d7d35c5853bdb096aefdb56d821427d0f46167822a27bb7aea5e208f310"
+    },
+    "seo-analysis": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/seo-analysis/SKILL.md",
+      "computedHash": "44c00bc2d54434c2a549642a8cd6e11aacdcd6a34c9411c10417d7cc5123de07"
+    },
+    "seo-page": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/seo-page/SKILL.md",
+      "computedHash": "26c8a1a66ed9c15c418e590b2b49ba9770313d848284273b0c3d775308b28e1a"
+    },
+    "setup-cms": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "seo/setup-cms/SKILL.md",
+      "computedHash": "a11dcc8b5c4782fa5a2fcbe50c06d1ceb95c9bcf17491eecc1ec3435ba3a30d8"
+    },
+    "upgrade": {
+      "source": "nowork-studio/NotFair",
+      "sourceType": "github",
+      "skillPath": "notfair-upgrade-skill/SKILL.md",
+      "computedHash": "4009290daf5504b365f6e1892062dfc29acfd305ac469a1ed8d723617098eb83"
     }
   }
 }
