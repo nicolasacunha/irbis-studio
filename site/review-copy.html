@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review — Fases 1–6 · IRBIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0C0C0E;--s1:#18181B;--s2:#27272A;--s3:#3F3F46;
+  --text:#FAFAFA;--muted:#71717A;
+  --accent:#FF3D00;
+  --green:#22C55E;--red:#EF4444;
+  --green-bg:rgba(34,197,94,.08);--red-bg:rgba(239,68,68,.08);
+  --f:'Sora',sans-serif;
+}
+html{background:var(--bg);color:var(--text);font-family:var(--f);font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* ── LAYOUT ── */
+body{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+
+/* ── SIDEBAR ── */
+aside{
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  background:var(--s1);border-right:1px solid var(--s2);
+  padding:2rem 1.5rem;display:flex;flex-direction:column;gap:2rem;
+}
+.sidebar-logo{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.sidebar-logo span{color:var(--accent)}
+.sidebar-meta{font-size:.6rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;line-height:1.6}
+nav{display:flex;flex-direction:column;gap:.25rem}
+.nav-section{font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:1rem 0 .4rem;padding-left:.5rem}
+nav a{
+  font-size:.72rem;font-weight:400;color:var(--muted);
+  padding:.4rem .75rem;border-radius:4px;
+  transition:background .15s,color .15s;display:block;
+}
+nav a:hover,nav a.active{background:var(--s2);color:var(--text)}
+.nav-count{
+  display:inline-block;font-size:.5rem;font-weight:700;
+  background:var(--s3);color:var(--muted);
+  padding:.1rem .35rem;border-radius:999px;float:right;margin-top:.05rem;
+}
+
+/* ── MAIN ── */
+main{padding:3rem 3.5rem;max-width:900px}
+
+/* ── PAGE HEADER ── */
+.page-header{margin-bottom:4rem}
+.page-header h1{font-size:1.8rem;font-weight:800;letter-spacing:-.04em;margin-bottom:.5rem}
+.page-header h1 span{color:var(--accent)}
+.page-header p{font-size:.82rem;color:var(--muted);line-height:1.7;max-width:56ch}
+
+/* ── STATS BAR ── */
+.stats-bar{
+  display:flex;gap:2rem;padding:1.25rem 0;
+  border-top:1px solid var(--s2);border-bottom:1px solid var(--s2);
+  margin-bottom:4rem;
+}
+.stat-item{display:flex;flex-direction:column;gap:.2rem}
+.stat-val{font-size:1.6rem;font-weight:800;letter-spacing:-.04em;color:var(--accent)}
+.stat-label{font-size:.58rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* ── SECTION ── */
+.section{margin-bottom:5rem}
+.section-eyebrow{
+  font-size:.55rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--accent);display:block;margin-bottom:.75rem;
+}
+.section-title{
+  font-size:1.3rem;font-weight:800;letter-spacing:-.03em;text-transform:uppercase;
+  margin-bottom:.35rem;
+}
+.section-desc{font-size:.78rem;color:var(--muted);line-height:1.65;margin-bottom:2rem;max-width:60ch}
+
+/* ── CHANGE CARD ── */
+.change-card{
+  background:var(--s1);border:1px solid var(--s2);border-radius:6px;
+  overflow:hidden;margin-bottom:1rem;
+}
+.change-card-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.75rem 1.25rem;border-bottom:1px solid var(--s2);
+  background:var(--bg);
+}
+.change-location{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.change-tag{
+  font-size:.5rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  padding:.2rem .6rem;border-radius:999px;
+}
+.tag-stop-slop{background:rgba(239,68,68,.12);color:#EF4444}
+.tag-copy-edit{background:rgba(59,130,246,.12);color:#60A5FA}
+.tag-copywriting{background:rgba(168,85,247,.12);color:#C084FC}
+.tag-ogilvy{background:rgba(255,61,0,.12);color:#FF6B35}
+
+.change-body{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--s2)}
+.change-before,.change-after{padding:1.25rem 1.5rem;background:var(--s1)}
+.change-label{
+  font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:.6rem;display:block;
+}
+.change-before .change-label{color:var(--red)}
+.change-after .change-label{color:var(--green)}
+.change-text{font-size:.82rem;font-weight:400;line-height:1.7;color:var(--text)}
+.change-before .change-text{color:rgba(250,250,250,.5);text-decoration:line-through;text-decoration-color:rgba(239,68,68,.4)}
+.reason{
+  padding:.75rem 1.25rem;background:var(--bg);
+  font-size:.68rem;color:var(--muted);line-height:1.6;
+  border-top:1px solid var(--s2);
+}
+.reason strong{color:var(--text);font-weight:600}
+
+/* ── NEW ADDITION ── */
+.change-new{
+  background:var(--green-bg);border-color:rgba(34,197,94,.2);
+}
+.change-new .change-body{grid-template-columns:1fr;background:transparent}
+.change-new .change-after{background:transparent;border:none}
+
+/* ── DIVIDER ── */
+hr{border:none;border-top:1px solid var(--s2);margin:3.5rem 0}
+</style>
+<script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<aside>
+  <div>
+    <div class="sidebar-logo">IRBIS<span>.</span></div>
+    <div class="sidebar-meta" style="margin-top:.5rem">Review de Copy<br>Fase 1 · 3 Rounds</div>
+  </div>
+
+  <nav>
+    <div class="nav-section">Páginas</div>
+    <a href="#index">Homepage <span class="nav-count">14</span></a>
+    <a href="#sobre">Sobre <span class="nav-count">5</span></a>
+    <a href="#manifesto">Manifesto <span class="nav-count">2</span></a>
+    <a href="#metodo">Método <span class="nav-count">4</span></a>
+
+    <div class="nav-section">Por Round</div>
+    <a href="#round-ogilvy">Ogilvy</a>
+    <a href="#round-stopslop">Stop Slop</a>
+    <a href="#round-copyedit">Copy Editing</a>
+    <a href="#round-copywriting">Copywriting</a>
+    <div class="nav-section">Fase 2 · Design</div>
+    <a href="#fase2-guidelines">Web Guidelines <span class="nav-count">9</span></a>
+    <a href="#fase2-interfaces">Make It Feel Better <span class="nav-count">6</span></a>
+    <a href="#fase2-emil">Emil Design Eng <span class="nav-count">4</span></a>
+    <div class="nav-section">Fase 3 · CRO & SEO</div>
+    <a href="#fase3-cro">Page CRO <span class="nav-count">3</span></a>
+    <a href="#fase3-seo">SEO Audit <span class="nav-count">5</span></a>
+    <a href="#fase3-schema">Schema Markup <span class="nav-count">3</span></a>
+    <a href="#fase3-analytics">Analytics <span class="nav-count">1</span></a>
+    <a href="#fase3-content">Content Strategy</a>
+    <a href="#fase3-pages">Novas Páginas <span class="nav-count">3</span></a>
+    <div class="nav-section">Fases 4–6</div>
+    <a href="#fase4-anim">Animações GSAP</a>
+    <a href="#fase5-video">HyperFrames Video</a>
+    <a href="#fase6-voice">Agente de Voz</a>
+  </nav>
+
+  <div style="margin-top:auto;padding-top:1.5rem;border-top:1px solid var(--s2)">
+    <a href="index.html" target="_blank" style="font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1rem">Ver site ao vivo →</a>
+  </div>
+  <div>
+    <div style="font-size:.58rem;color:var(--muted);line-height:1.7;letter-spacing:.08em">
+      <div style="margin-bottom:.4rem;color:var(--text);font-weight:600">Skills usados</div>
+      ogilvy-copywriting<br>stop-slop<br>copy-editing<br>copywriting
+    </div>
+  </div>
+</aside>
+
+<main>
+  <div class="page-header">
+    <h1>Review — <span>Fases 1 a 6</span></h1>
+    <p>6 fases concluídas, 19 skills aplicados, 0 commits. Aprove o que quiser manter e sinalize o que reverter.</p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-val">7</div><div class="stat-label">Arquivos editados</div></div>
+    <div class="stat-item"><div class="stat-val">3</div><div class="stat-label">Páginas novas</div></div>
+    <div class="stat-item"><div class="stat-val">19</div><div class="stat-label">Skills aplicados</div></div>
+    <div class="stat-item"><div class="stat-val">0</div><div class="stat-label">Commits pendentes</div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       INDEX.HTML
+  ══════════════════════════════════════════════ -->
+  <div id="index" class="section">
+    <span class="section-eyebrow">site/index.html</span>
+    <h2 class="section-title">Homepage</h2>
+    <p class="section-desc">14 alterações ao longo dos 4 rounds. Foco em: headline hero, stats, seção IA, FAQ e zero-risk CTA.</p>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Hero · label</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Para founders e startups</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Para founders que não têm tempo pra esperar</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Segmentação psicológica — nomeia a dor do leitor, não só o cargo.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Hero · H1</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Sites, marcas e sistemas digitais.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">O estúdio que entrega como agência, sem ser.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Headline precisa prometer benefício, não listar categorias. Essa versão ancora a big idea central da IRBIS.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Hero · descrição</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Do briefing ao ar em 3 semanas. Você fala direto com quem constrói. Sem gerente, sem repasse, sem espera.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Do briefing ao ar em 3 semanas. Sites, marcas e sistemas digitais. Quem projeta também executa, sem gerente no meio.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Voz ativa, sem em-dash, elimina listagem de negações. O diferencial fica implícito no "quem projeta também executa".</div>
+    </div>
+
+    <div class="change-card change-new">
+      <div class="change-card-header">
+        <span class="change-location">Hero · CTA zero-risk</span>
+        <span class="change-tag tag-copy-edit">Copy Editing</span>
+      </div>
+      <div class="change-body">
+        <div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">Conversa de 30 min · sem compromisso</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Sweep 7 (Zero Risk) — reduz fricção perto do CTA principal antes de qualquer prova de confiança acumulada.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Stats · "1 profissional"</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">profissional. Você fala direto com quem constrói</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">profissional. Acesso direto a quem pensa e executa.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Framing positivo. Remove a voz passiva implícita, nomeia benefício concreto.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Stats · "–90%"</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">tempo de análise operacional (Adash)</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">de redução em análise operacional — clientes Adash decidem mais rápido.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Contexto + consequência. O stat sozinho é fraco sem o "então, o que acontece".</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Stats · "0"</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">camadas de gerenciamento no processo</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">intermediários entre você e quem executa.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Positivo e direto. "Intermediários" é mais concreto que "camadas de gerenciamento".</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Serviços · painel PROJETOS</span>
+        <span class="change-tag tag-copy-edit">Copy Editing</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Quando você sabe o que quer construir e precisa de alguém que executa com visão estratégica.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Quando você sabe o que quer construir e precisa de execução que pensa junto.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Visão estratégica" é jargon. "Pensa junto" é concreto e humano.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Processo · Ritual (fase 05)</span>
+        <span class="change-tag tag-copy-edit">Copy Editing</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Presença contínua para quem quer resultado acumulado.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Acompanhamento mensal para projetos que precisam crescer depois de ir ao ar.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Resultado acumulado" é vago. A nova versão responde "o que isso significa na prática".</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">IA · H2</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">SIM, EU USO IA.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">IA COMO ALAVANCA, NÃO MULETA.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Postura defensiva → postura ofensiva. Nomeia o diferencial em vez de confirmar o óbvio.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">IA · bloco 02 desc</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Você fala diretamente com quem vai executar. A IA resolve o que escala; o humano resolve o que importa.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Você fala com quem vai executar. IA resolve escala. Eu resolvo o que importa.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Diretamente" é adverb morto. "O humano" é narrator-from-a-distance — substitui por "Eu" (primeira pessoa, voz ativa).</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">IA · bloco 03 desc</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Aqui, o modelo nasceu assim — não foi adaptado depois. Mais rápido, mais barato, sem perder o nível estratégico. Não é IA no lugar do pensamento. É IA a serviço dele.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">O modelo nasceu assim, não foi adaptado depois. Mais rápido e mais barato, sem ceder em nível estratégico. IA a serviço do pensamento.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Em-dash removido. "Aqui," como abertura cortada. Contraste binário "Não é X. É Y." → frase direta.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">FAQ · respostas (5)</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes (5 respostas)</span>
+          <p class="change-text">1. "Sim. Com IA como estrutura de suporte. A execução técnica é amplificada."<br>2. "Depende do escopo, mas a vantagem da estrutura solo + IA é velocidade sem reunião de alinhamento de equipe."<br>3. "menos que uma agência de mesmo nível... Na primeira conversa você já sai com uma estimativa real." (duplicada)<br>4. "Continuar trabalhando juntos é uma escolha, não uma obrigação."<br>5. "Não precisa ter briefing pronto, deck elaborado ou orçamento definido."</p>
+        </div>
+        <div class="change-after"><span class="change-label">Depois</span>
+          <p class="change-text">1. "Uso IA para amplificar execução técnica. Você tem acesso a capacidade de equipe com custo de estúdio solo."<br>2. "O escopo define o prazo. Sites em 2–4 semanas."<br>3. "menos que uma agência equivalente, sem overhead de estrutura." (sem duplicata)<br>4. "Continuar trabalhando juntos é sua escolha."<br>5. "Um problema claro o suficiente pra descrever."</p>
+        </div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Eliminados: jargon ("estrutura de suporte"), voz passiva, frase duplicada, contraste binário, listagem negativa antes do ponto.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Form · CTA</span>
+        <span class="change-tag tag-ogilvy">Ogilvy</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">MANDA O SINAL</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">ENVIAR BRIEFING</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> CTA precisa de clareza acima de criatividade. "ENVIAR BRIEFING" diz exatamente o que acontece.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE.HTML
+  ══════════════════════════════════════════════ -->
+  <div id="sobre" class="section">
+    <span class="section-eyebrow">site/sobre.html</span>
+    <h2 class="section-title">Sobre</h2>
+    <p class="section-desc">5 alterações. Foco em: voz ativa, eliminação de contrastes binários, jargon e listagem de três itens.</p>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Bio · parágrafo 1</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">A IRBIS é um estúdio solo. Isso significa que você fala com a pessoa que vai executar...</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">A IRBIS é um estúdio solo: você fala com a pessoa que vai executar...</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Isso significa que" é throat-clearing antes do ponto. Cortado com dois pontos.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Bio · parágrafo 2 (IA)</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Trabalho com IA como estrutura de execução, não como substituto do pensamento. Ela comprime o tempo de produção, mas o posicionamento, as decisões de design e a estratégia digital ainda precisam de uma cabeça pensante por trás. Essa cabeça é minha.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">IA comprime tempo de produção. Posicionamento, design e estratégia são meus.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Contraste binário, "mas", pull-quote dramático e "cabeça pensante por trás" → tudo eliminado. Frase direta, ativa, dois elementos.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Bio · parágrafo 3</span>
+        <span class="change-tag tag-copy-edit">Copy Editing</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">...equipes early-stage que precisam de execução de alto nível sem estrutura de agência.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">...equipes em crescimento que precisam executar sem contratar uma agência.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "early-stage" é inglês num texto PT. "Alto nível" é vago. "Executar sem contratar uma agência" é específico e descreve a situação real do cliente.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Como trabalho · Workflow</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">...o que elimina retrabalho, reduz prazo e garante que o produto final seja exatamente o que foi projetado.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">...o que elimina retrabalho e encurta o prazo.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Lista de três → dois itens. "Garante que o produto final seja exatamente o que foi projetado" é redundante e passivo.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Como trabalho · IA</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Uso IA para compactar produção, não para substituir pensamento. O resultado é velocidade de agência com custo e comunicação de freelancer.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Uso IA para compactar produção. Velocidade de agência, custo e comunicação de freelancer.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Contraste binário "não para substituir pensamento" removido — já dito no parágrafo 2 da bio. Sem repetição.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════
+       MANIFESTO.HTML
+  ══════════════════════════════════════════════ -->
+  <div id="manifesto" class="section">
+    <span class="section-eyebrow">site/manifesto.html</span>
+    <h2 class="section-title">Manifesto</h2>
+    <p class="section-desc">2 alterações. Mínimo — o estilo ALL-CAPS poético é intencional e foi preservado.</p>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Bloco de confiança</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Somos confiantes no que fazemos.<br>E humildes o suficiente pra ouvir.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Confiantes no resultado.<br>Atentos ao que você precisa.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "E humildes o suficiente pra ouvir" é reassurance desnecessário — padrão de insegurança disfarçado de virtude. "Atentos ao que você precisa" é concreto e orientado ao cliente.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════
+       METODO.HTML
+  ══════════════════════════════════════════════ -->
+  <div id="metodo" class="section">
+    <span class="section-eyebrow">site/metodo.html</span>
+    <h2 class="section-title">Método</h2>
+    <p class="section-desc">4 alterações cirúrgicas. Página já estava forte — apenas padrões residuais de stop-slop.</p>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">Hero · intro</span>
+        <span class="change-tag tag-copywriting">Copywriting</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Sem fila, sem gerente, sem proposta de 40 slides. Do primeiro contato ao produto no ar em 3 semanas.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Do primeiro contato ao produto no ar em 3 semanas. Sem gerente no meio, sem proposta de 40 slides.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> Benefit first — começar com a promessa positiva (3 semanas), depois os diferenciais. Listagem negativa no começo diminui o impacto.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">02 · Diagnóstico · parágrafo</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">...Um documento só, estruturado para você tomar uma decisão. Não para impressionar.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">...Um documento para você tomar uma decisão, não para encher reunião.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Não para impressionar" é vago. "Não para encher reunião" é específico e ressoa com a dor real do cliente de agência.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">04 · Entrega · suporte</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">30 dias de suporte pós-entrega para bugs e problemas do que foi entregue</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">30 dias de suporte pós-entrega para bugs no que foi entregue</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Bugs e problemas" é redundante. "Bugs" já inclui os problemas.</div>
+    </div>
+
+    <div class="change-card">
+      <div class="change-card-header">
+        <span class="change-location">04 · Entrega · quote final</span>
+        <span class="change-tag tag-stop-slop">Stop Slop</span>
+      </div>
+      <div class="change-body">
+        <div class="change-before"><span class="change-label">Antes</span><p class="change-text">Não existe dependência intencional. Você não precisa da IRBIS para manter o que foi construído.</p></div>
+        <div class="change-after"><span class="change-label">Depois</span><p class="change-text">Não crio dependência. Você não precisa da IRBIS para manter o que foi construído.</p></div>
+      </div>
+      <div class="reason"><strong>Por quê:</strong> "Não existe dependência intencional" é tortuoso — sujeito inanimate + adjetivo. "Não crio dependência" é primeira pessoa, ativa, direta.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════
+       FASE 2 — DESIGN & POLISH
+  ══════════════════════════════════════════════ -->
+  <div style="background:var(--s1);border:1px solid var(--s2);padding:1rem 1.5rem;border-radius:6px;margin-bottom:3rem">
+    <span style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)">Fase 2 · Design &amp; Polish</span>
+    <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;line-height:1.6">Skills: web-design-guidelines, make-interfaces-feel-better, emil-design-eng — todas aplicadas em <code style="font-size:.72rem;color:var(--text)">site/index.html</code></p>
+  </div>
+
+  <div id="fase2-guidelines" class="section">
+    <span class="section-eyebrow">web-design-guidelines</span>
+    <h2 class="section-title">Acessibilidade &amp; Standards</h2>
+    <p class="section-desc">9 fixes de compliance — acessibilidade, performance e HTML semântico.</p>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">html — color-scheme</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">color-scheme: dark → corrige scrollbar, inputs e select em dark mode (especialmente Windows)</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">&lt;head&gt; — preconnect CDNs</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">preconnect para cdnjs.cloudflare.com e unpkg.com (GSAP + Lenis)</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.num-big — tabular-nums</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">font-variant-numeric: tabular-nums — previne layout shift em números dinâmicos</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.hero-title — text-wrap</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">text-wrap: balance — previne widows em títulos</p></div></div></div>
+
+    <div class="change-card"><div class="change-card-header"><span class="change-location">5× FAQ &lt;div role="button"&gt;</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">&lt;div class="faq-q" role="button" tabindex="0"&gt;</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">&lt;button class="faq-q" aria-expanded="false"&gt;</p></div></div><div class="reason"><strong>Por quê:</strong> Usar &lt;button&gt; nativo antes de ARIA — keyboard, click e touch grátis sem JS extra.</div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">a, button — touch-action</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">touch-action: manipulation — remove delay de 300ms de duplo-tap em mobile</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">Seções anchor — scroll-margin-top</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">scroll-margin-top: 5rem em #cases, #horizontal-section, #como-opero, #aumentado, #faq, #contato</p></div></div></div>
+
+    <div class="change-card"><div class="change-card-header"><span class="change-location">hero-bg &lt;img&gt; — dimensões</span><span class="change-tag tag-copy-edit">Guidelines</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">&lt;img&gt; sem width/height</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">width="1200" height="900" — previne CLS (Cumulative Layout Shift)</p></div></div></div>
+  </div>
+
+  <div id="fase2-interfaces" class="section">
+    <span class="section-eyebrow">make-interfaces-feel-better</span>
+    <h2 class="section-title">Polish de Interface</h2>
+    <p class="section-desc">6 melhorias de detalhe que somam na percepção de qualidade.</p>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.cta-primary / .cta-ghost / .nav-cta / .form-submit</span><span class="change-tag tag-stop-slop">Polish</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">:active { transform: scale(0.96); } com cubic-bezier(0.2,0,0,1) em 120ms — feedback tátil imediato no press</p></div></div><div class="reason"><strong>Por quê:</strong> Botões precisam confirmar que a UI ouviu o usuário. Scale sutil (0.96) nunca parece exagerado.</div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.case-card</span><span class="change-tag tag-stop-slop">Polish</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">box-shadow: inset 0 0 0 1px rgba(250,250,250,.06) — outline sutil para depth consistente</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.hero-desc</span><span class="change-tag tag-stop-slop">Polish</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">text-wrap: pretty — evita orphans em texto de corpo</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.h-panel-title / .integ-headline</span><span class="change-tag tag-stop-slop">Polish</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">text-wrap: balance em mais headings da seção de serviços</p></div></div></div>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">.num-grid / .opero-list — stagger</span><span class="change-tag tag-stop-slop">Polish</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">transition-delay: 60ms, 120ms, 180ms por filho — entrada escalonada das stats e fases do processo</p></div></div><div class="reason"><strong>Por quê:</strong> Elementos entrando juntos parecem um bloco. Stagger cria ritmo visual.</div></div>
+  </div>
+
+  <div id="fase2-emil" class="section">
+    <span class="section-eyebrow">emil-design-eng</span>
+    <h2 class="section-title">Easing &amp; Hover Gates</h2>
+    <p class="section-desc">4 melhorias de motion design — curvas customizadas e proteção de hover em touch.</p>
+
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">:root — variáveis de easing</span><span class="change-tag tag-ogilvy">Emil</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">--ease-out: cubic-bezier(0.23,1,0.32,1)<br>--ease-in-out: cubic-bezier(0.77,0,0.175,1)<br>--ease-press: cubic-bezier(0.2,0,0,1)</p></div></div><div class="reason"><strong>Por quê:</strong> Built-in CSS easings são fracos. Curvas customizadas têm mais punch e coerência visual em todo o site.</div></div>
+
+    <div class="change-card"><div class="change-card-header"><span class="change-location">Scale on press — duração</span><span class="change-tag tag-ogilvy">Emil</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">transform .15s cubic-bezier(0.2,0,0,1)</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">transform .12s var(--ease-press)</p></div></div><div class="reason"><strong>Por quê:</strong> 120ms dá feedback mais imediato que 150ms. Referencia a variável para consistência.</div></div>
+
+    <div class="change-card"><div class="change-card-header"><span class="change-location">.proj-item:hover transforms</span><span class="change-tag tag-ogilvy">Emil</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">Aplicado sem restrição de dispositivo</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">@media (hover: hover) and (pointer: fine) { ... }</p></div></div><div class="reason"><strong>Por quê:</strong> Touch devices acionam :hover no tap. Sem o gate, o translateX dispara em mobile causando falso positivo.</div></div>
+
+    <div class="change-card"><div class="change-card-header"><span class="change-location">.case-card:hover transforms</span><span class="change-tag tag-ogilvy">Emil</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">.case-card:hover .case-bg { transform: scale(1.04); }</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">@media (hover: hover) and (pointer: fine) { scale(1.04) }</p></div></div><div class="reason"><strong>Por quê:</strong> Zoom de imagem em tap mobile parece bug, não feature.</div></div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════
+       FASE 3 — CRO & SEO
+  ══════════════════════════════════════════════ -->
+  <hr>
+  <div style="background:var(--s1);border:1px solid var(--s2);padding:1rem 1.5rem;border-radius:6px;margin-bottom:3rem">
+    <span style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)">Fase 3 · Conversão &amp; SEO</span>
+    <p style="font-size:.8rem;color:var(--muted);margin-top:.4rem;line-height:1.6">Skills: page-cro, seo-audit, schema-markup, analytics-tracking, content-strategy, competitor-alternatives, programmatic-seo</p>
+  </div>
+
+  <div id="fase3-cro" class="section">
+    <span class="section-eyebrow">page-cro</span>
+    <h2 class="section-title">CRO — 3 Quick Wins</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">Hero · 2º CTA</span><span class="change-tag tag-ogilvy">CRO</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">"WHATSAPP →" como opção de menor fricção ao lado de "INICIAR PROJETO" — lead sem tempo para preencher formulário pode falar direto</p></div></div></div>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">Mid-page CTA (após seção IA)</span><span class="change-tag tag-ogilvy">CRO</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">"Seu projeto tem prazo. A agenda também." — CTA intermediário entre hero e contato. Inclui INICIAR PROJETO + WHATSAPP</p></div></div><div class="reason"><strong>Por quê:</strong> Nenhum CTA entre o hero e o form (grande scroll). Leads quentes perdidos antes de chegar ao contato.</div></div>
+    <div class="change-card"><div class="change-card-header"><span class="change-location">Hero scarcity signal</span><span class="change-tag tag-stop-slop">CRO</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">Conversa de 30 min · sem compromisso</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">Agenda limitada · máx. 3 projetos ativos</p></div></div><div class="reason"><strong>Por quê:</strong> Frase anterior era AI slop genérico. Nova cria escassez real ancorada no modelo de negócio.</div></div>
+  </div>
+
+  <div id="fase3-seo" class="section">
+    <span class="section-eyebrow">seo-audit</span>
+    <h2 class="section-title">SEO — 5 Correções</h2>
+    <div class="change-card"><div class="change-card-header"><span class="change-location">index.html · &lt;title&gt;</span><span class="change-tag tag-copy-edit">SEO</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes (63c)</span><p class="change-text">IRBIS Estúdio Digital | Webdesign, Branding e Sistemas Digitais</p></div><div class="change-after"><span class="change-label">Depois (54c)</span><p class="change-text">IRBIS Estúdio Digital | Webdesign e Sistemas Digitais</p></div></div><div class="reason"><strong>Por quê:</strong> &gt;60 chars é truncado no SERP. Limite ideal: 50–60.</div></div>
+    <div class="change-card"><div class="change-card-header"><span class="change-location">index.html · meta description</span><span class="change-tag tag-copy-edit">SEO</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">Estúdio digital solo com IA. Webdesign, branding, dashboards...</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">O estúdio que entrega como agência, sem ser uma. Sites, marcas e sistemas digitais do briefing ao ar em 3 semanas.</p></div></div><div class="reason"><strong>Por quê:</strong> Alinha com o novo posicionamento; mais provável de receber clique no SERP.</div></div>
+    <div class="change-card"><div class="change-card-header"><span class="change-location">manifesto.html · sem H1</span><span class="change-tag tag-copy-edit">SEO</span></div><div class="change-body"><div class="change-before"><span class="change-label">Antes</span><p class="change-text">Sem &lt;h1&gt; — &lt;span class="m-label"&gt;</p></div><div class="change-after"><span class="change-label">Depois</span><p class="change-text">&lt;h1 class="m-label"&gt; com estilos preservados</p></div></div><div class="reason"><strong>Por quê:</strong> Página sem H1 perde relevância de heading estrutural para o Google.</div></div>
+    <div class="change-card"><div class="change-card-header"><span class="change-location">manifesto.html · desc longa (169c)</span><span class="change-tag tag-copy-edit">SEO</span></div><div class="change-body"><div class="change-after"><span class="change-label">Depois (138c)</span><p class="change-text">A filosofia da IRBIS: solo com IA não é limitação, é vantagem. Velocidade, foco e por que agências entregam o oposto do que prometem.</p></div></div></div>
+    <div class="change-card"><div class="change-card-header"><span class="change-location">metodo.html · desc desatualizada</span><span class="change-tag tag-copy-edit">SEO</span></div><div class="change-body"><div class="change-after"><span class="change-label">Depois</span><p class="change-text">Do primeiro contato ao produto no ar em 3 semanas. Sem gerente no meio. Como a IRBIS funciona na prática: diagnóstico, execução e entrega.</p></div></div></div>
+  </div>
+
+  <div id="fase3-schema" class="section">
+    <span class="section-eyebrow">schema-markup</span>
+    <h2 class="section-title">Schema — 3 Adições</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">index.html · FAQPage schema</span><span class="change-tag tag-copy-edit">Schema</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">5 Q&amp;As do FAQ em JSON-LD FAQPage — habilita rich snippets no Google com as respostas expandidas diretamente no SERP</p></div></div></div>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">index.html · ProfessionalService + OfferCatalog</span><span class="change-tag tag-copy-edit">Schema</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">ProfessionalService com priceRange, founder Person, 4 serviços em OfferCatalog — melhor entendimento pelo Google do negócio</p></div></div></div>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">sobre.html · BreadcrumbList</span><span class="change-tag tag-copy-edit">Schema</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">BreadcrumbList: Início → Sobre — habilita breadcrumbs no SERP para a página de perfil</p></div></div></div>
+  </div>
+
+  <div id="fase3-analytics" class="section">
+    <span class="section-eyebrow">analytics-tracking</span>
+    <h2 class="section-title">GA4 — Setup Completo</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">index.html · GA4 + 7 eventos</span><span class="change-tag tag-copy-edit">Analytics</span></div><div class="change-body"><div class="change-after"><span class="change-label">Adicionado</span><p class="change-text">GA4 gtag.js + eventos: cta_clicked (hero/nav/mid_page), whatsapp_clicked, form_submitted, case_viewed, faq_opened, scroll_depth (50% e 90%)<br><br><strong>Action required:</strong> Substituir G-XXXXXXXX pelo Measurement ID real do GA4</p></div></div></div>
+  </div>
+
+  <div id="fase3-content" class="section">
+    <span class="section-eyebrow">content-strategy</span>
+    <h2 class="section-title">Plano de Conteúdo — 3 Pilares</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem">
+      <div style="background:var(--s1);border:1px solid var(--s2);padding:1.25rem;border-radius:6px">
+        <div style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem">Pillar 1</div>
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">Solo vs Agência</div>
+        <div style="font-size:.72rem;color:var(--muted);line-height:1.6">Freelancer vs agência / overhead oculto / por que founders preferem estúdio solo</div>
+      </div>
+      <div style="background:var(--s1);border:1px solid var(--s2);padding:1.25rem;border-radius:6px">
+        <div style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem">Pillar 2</div>
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">Design para Startups</div>
+        <div style="font-size:.72rem;color:var(--muted);line-height:1.6">Quanto custa um site / landing page que converte / o que ter antes do lançamento</div>
+      </div>
+      <div style="background:var(--s1);border:1px solid var(--s2);padding:1.25rem;border-radius:6px">
+        <div style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem">Pillar 3</div>
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">IA no Processo Criativo</div>
+        <div style="font-size:.72rem;color:var(--muted);line-height:1.6">IA sem perder qualidade / ferramentas para designers / o que muda na prática</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fase3-pages" class="section">
+    <span class="section-eyebrow">competitor-alternatives + programmatic-seo</span>
+    <h2 class="section-title">3 Novas Páginas</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">site/vs-agencia.html</span><span class="change-tag tag-ogilvy">Nova página</span></div><div class="change-body"><div class="change-after"><span class="change-label">Criada</span><p class="change-text">Página de comparação "IRBIS vs Agência de Webdesign" — tabela completa, who's it for, testimonial, CTA. Captura buscas de decisão no fundo do funil. Ver: <a href="vs-agencia.html" target="_blank" style="color:var(--accent)">vs-agencia.html →</a></p></div></div></div>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">site/para/saas.html</span><span class="change-tag tag-ogilvy">Nova página</span></div><div class="change-body"><div class="change-after"><span class="change-label">Criada</span><p class="change-text">Landing de persona "Webdesign para SaaS" — 4 serviços, prova social (–90% Adash), processo, CTA. Ver: <a href="para/saas.html" target="_blank" style="color:var(--accent)">para/saas.html →</a></p></div></div></div>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">site/para/startups.html</span><span class="change-tag tag-ogilvy">Nova página</span></div><div class="change-body"><div class="change-after"><span class="change-label">Criada</span><p class="change-text">Landing de persona "Webdesign para Startups" — por estágio (pré-seed/seed/série A), stats, diferencial, CTA. Ver: <a href="para/startups.html" target="_blank" style="color:var(--accent)">para/startups.html →</a></p></div></div></div>
+  </div>
+
+  <hr>
+
+  <!-- FASES 4–6 -->
+  <div id="fase4-anim" class="section">
+    <span class="section-eyebrow">Fase 4 · Animações</span>
+    <h2 class="section-title">GSAP + CSS Animations</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">Scroll reveals — stagger via GSAP</span><span class="change-tag tag-stop-slop">GSAP</span></div><div class="change-body"><div class="change-after"><span class="change-label">Melhorado</span><p class="change-text">Reveals em grade (.num-grid, .opero-list, .ret-grid, .aumentado-right) agora usam stagger GSAP de 80ms por item — mais preciso e interruptível que CSS transition-delay</p></div></div></div>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">hint-pulse · animation-fill-mode</span><span class="change-tag tag-stop-slop">CSS</span></div><div class="change-body"><div class="change-after"><span class="change-label">Melhorado</span><p class="change-text">animation-fill-mode: both adicionado + easing atualizado para --ease-in-out (variável do Emil)</p></div></div></div>
+  </div>
+
+  <div id="fase5-video" class="section">
+    <span class="section-eyebrow">Fase 5 · HyperFrames</span>
+    <h2 class="section-title">Vídeo Promo IRBIS — 20s</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">site/video/irbis-promo/</span><span class="change-tag tag-ogilvy">HyperFrames</span></div><div class="change-body"><div class="change-after"><span class="change-label">Criado</span><p class="change-text">Composição HyperFrames de 20s, square 1080×1080. 5 beats: headline hero, stat "3 semanas", diferencial, serviços empilhados, logo final. Zero erros de lint, 3 warnings cosméticos.<br><br><strong>Preview:</strong> <a href="http://localhost:3002/#project/irbis-promo" target="_blank" style="color:var(--accent)">localhost:3002/#project/irbis-promo →</a></p></div></div></div>
+  </div>
+
+  <div id="fase6-voice" class="section">
+    <span class="section-eyebrow">Fase 6 · Agente de Voz</span>
+    <h2 class="section-title">Blueprint Completo — Pronto para Implementar</h2>
+    <div class="change-card change-new"><div class="change-card-header"><span class="change-location">docs/voice-agent/</span><span class="change-tag tag-ogilvy">Voice Agent</span></div><div class="change-body"><div class="change-after"><span class="change-label">4 arquivos criados</span><p class="change-text">
+      <strong>system-prompt.md</strong> — 578 tokens, PT-BR, com regras de conversa, escopo IRBIS e frase de escalada<br>
+      <strong>tool-schema.json</strong> — book_discovery_call + check_availability com todos os campos required<br>
+      <strong>vapi-config.json</strong> — configuração completa: Deepgram Nova-2, GPT-4o-mini, ElevenLabs, state machine<br>
+      <strong>eval-set.md</strong> — 20 conversas: 8 happy path, 6 edge cases, 3 error, 2 adversarial, 1 acoustic<br><br>
+      <strong>Action required:</strong> (1) Criar conta Vapi, (2) Inserir Voice ID do ElevenLabs, (3) Conectar Cal.com, (4) Rodar eval set antes do deploy
+    </p></div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       PRÓXIMOS PASSOS
+  ══════════════════════════════════════════════ -->
+  <div class="section">
+    <span class="section-eyebrow">Fases 1–6 concluídas</span>
+    <h2 class="section-title">Próximas Fases disponíveis</h2>
+    <p class="section-desc">Após aprovação e commit, as fases restantes do plano original podem ser executadas.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1.5rem">
+      <div style="background:var(--s1);border:1px solid var(--s2);padding:1.25rem;border-radius:6px">
+        <div style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">04</div>
+        <div style="font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.3rem">Web Design Guidelines</div>
+        <div style="font-size:.72rem;color:var(--muted);line-height:1.6">Audit completo de UI/UX contra padrões modernos</div>
+      </div>
+      <div style="background:var(--s1);border:1px solid var(--s2);padding:1.25rem;border-radius:6px">
+        <div style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">05</div>
+        <div style="font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.3rem">Make Interfaces Feel Better</div>
+        <div style="font-size:.72rem;color:var(--muted);line-height:1.6">Micro-polish: hover, borders, shadows, timing</div>
+      </div>
+      <div style="background:var(--s1);border:1px solid var(--s2);padding:1.25rem;border-radius:6px">
+        <div style="font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">06</div>
+        <div style="font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.3rem">Emil Design Eng</div>
+        <div style="font-size:.72rem;color:var(--muted);line-height:1.6">Filosofia de UI polish — guia as decisões de detalhe</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

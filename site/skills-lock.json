@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "knowledge-capture": {
+      "source": "tommy-ca/notion-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/notion-skills/skills/knowledge-capture/SKILL.md",
+      "computedHash": "ee5fd5e6244500c967ca50e437614d319b8ac25423a645c1be30a66cdfe1cb63"
+    },
+    "meeting-intelligence": {
+      "source": "tommy-ca/notion-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/notion-skills/skills/meeting-intelligence/SKILL.md",
+      "computedHash": "95fd7d8f7497f78ae296e58acde4d1df37480646b4dc79a3d5ed704b2a587721"
+    },
+    "research-documentation": {
+      "source": "tommy-ca/notion-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/notion-skills/skills/research-documentation/SKILL.md",
+      "computedHash": "61f43ee0628a63d8882ca29659b12eabf8112b5e2f265fae3e12a04e53295c37"
+    },
+    "spec-to-implementation": {
+      "source": "tommy-ca/notion-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/notion-skills/skills/spec-to-implementation/SKILL.md",
+      "computedHash": "567eeac860ff7956d622589f54b3c6b8b9c3c76571e7270c83d833b37c33e980"
+    }
+  }
+}
