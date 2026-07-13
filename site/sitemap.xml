@@ -110,4 +110,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/beta"/>
   </url>
 
+  <url>
+    <loc>https://irbis.com.br/blog/benchmark-conversao-mobile-2026</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+  </url>
+
 </urlset>
