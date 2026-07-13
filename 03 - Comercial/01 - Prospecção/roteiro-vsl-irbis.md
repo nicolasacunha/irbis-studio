@@ -26,7 +26,6 @@
 ## [PROVA — 2:30–3:30]
 > E isso dá resultado real:
 > - **E-Force:** +R$ 350 mil em vendas no lançamento, com o site segurando todo o tráfego do evento.
-> - **Odery:** LTV 1,8x maior — cliente que comprava uma vez passou a voltar.
 >
 > Resultado real. Prazo real.
 

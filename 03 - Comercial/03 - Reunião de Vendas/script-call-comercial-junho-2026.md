@@ -77,7 +77,7 @@ Regra: o rapport da IRBIS é demonstração de dever de casa, não puxa-saco. Se
 
 Máximo 2 minutos. Autoridade não se estica — se prova e segue.
 
-⚠️ Os números dos cases (EForce +500, Odery 1,8x, "3 semanas de média") ainda estão em revisão no deck — confirmar antes de usar como afirmação.
+⚠️ Números dos cases: "+500" e "1,8x" são BANIDOS (decisão do dono, 04/jul/2026); "3 semanas de média" segue sem confirmação. Único resultado afirmável: +R$350k (E-Force). Não citar os banidos em call nem no deck.
 
 ---
 
@@ -287,7 +287,7 @@ Direto do Manual de Copy:
 
 ## Pendências (ajustar no deck antes de padronizar)
 
-1. **Números dos cases** — EForce +500, Odery 1,8x e "3 sem. de média" marcados como em revisão pelo Nicolas. Confirmar antes de afirmar em call.
+1. **Números dos cases** — "+500" e "1,8x" BANIDOS pelo dono (04/jul/2026); remover do deck. "3 sem. de média" sem confirmação. Afirmável em call só "+R$350k" (E-Force).
 2. **Slide Agenda diz "30 minutos"** — a call padrão é ~45. Ou ajustar o slide ("Os próximos minutos") ou tratar os 30 min como a parte apresentada.
 3. **Slide Investimento** — decisão tomada: número apresentado ao vivo na call. Ajustar copy do slide para refletir isso e revisar o passo "01 Proposta — você recebe hoje" dos Próximos passos (vira termo de aceite no fechamento).
 4. **E-mail no slide final** está com proteção da Cloudflare (placeholder quebrado) — corrigir para contato@irbis.com.br.

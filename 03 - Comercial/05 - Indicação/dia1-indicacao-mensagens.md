@@ -13,7 +13,7 @@
 
 Curta, genuína, sem pedir nada ainda — só reconectar e puxar o pico de satisfação.
 
-### 1A — Odery (resultado: LTV 1,8x)
+### 1A — Odery
 
 > [Nome], passando pra saber como a landing de retenção tá performando — aquele movimento de cliente voltando a comprar segurou?
 > Queria entender como evoluiu de lá pra cá.

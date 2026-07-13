@@ -90,7 +90,7 @@ Atuais: Método · Lifestyle · Me · Cases (capas pretas vazias, perfil novo).
 - **Ordem:** começa pela tese e pela prova. Nova ordem: **Método → Cases → Me → Lifestyle**. Hoje Cases está por último, e ele é prova forte, tem que vir na frente.
 - **Conteúdo de cada um:**
   - Método: seu processo (briefing, semanas, no ar) e a tese. É o destaque que apresenta o seu jeito.
-  - Cases: E-Force (R$350k), Odery (1,8x), antes e depois dos projetos. Prova.
+  - Cases: E-Force (R$350k), antes e depois dos projetos. Prova.
   - Me: quem é o Nicolas e a sua história (o Arco). Conexão.
   - Lifestyle: bastidor e rotina. Humaniza, prioridade mais baixa.
 - **Capas:** ✅ geradas na identidade IRBIS (preto e laranja). Ícones: Método = chave inglesa · Cases = troféu · Me = pantera · Lifestyle = câmera. Baixar e subir no perfil.
@@ -119,7 +119,7 @@ Mostra COMO se faz IA bem feita, o oposto do site genérico e mal feito.
 
 **Pilar 2 — Site que vende** (resultado / negócio) → prova a tese
 Site não é arte, é máquina de venda. Fala a língua do founder.
-Ângulos: cases (E-Force R$350k, Odery 1,8x), dados da dor (98% pesquisam antes, 75% julgam pelo design, 53% abandonam por lentidão), princípios de conversão, "por que seu site não traz cliente".
+Ângulos: cases (E-Force R$350k), dados da dor (98% pesquisam antes, 75% julgam pelo design, 53% abandonam por lentidão), princípios de conversão, "por que seu site não traz cliente".
 
 **Pilar 3 — O terceiro caminho** (posicionamento) → ataca a agência
 Velocidade e foco contra a agência lenta, cara e cheia de camadas.

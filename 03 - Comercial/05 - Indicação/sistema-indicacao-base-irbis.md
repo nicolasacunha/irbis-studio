@@ -12,7 +12,7 @@
 |---|---|---|---|---|---|
 | **E-Force** (pai) | 27/04/2026 | 5/5 | ~7,5 sem | **+R$ 350k em vendas** | Última reunião já passou → coletar agora |
 | **Adash** ⚠️ *fictício* | 21/05/2026 | 5/5 | ~4 sem | não mensurável | Última reunião já passou → coletar agora |
-| Odery | — | Alta | — | **LTV 1,8x** | Externo real → coletar |
+| Odery | — | Alta | — | sem métrica pública afirmável | Externo real → coletar |
 | Eduboxs | — | Alta | — | site entregue (sem métrica forte) | Externo real → coletar com mensagem genérica |
 
 > ⚠️ **Adash = dados fictícios** — o projeto não foi entregue de fato. Está aqui só como **exemplo da estrutura**. Pra indicação real, ele sai: seus nós quentes de verdade são **E-Force (pai), Odery e Eduboxs**.
