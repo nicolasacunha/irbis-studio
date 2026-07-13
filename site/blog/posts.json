@@ -48,6 +48,23 @@
       ],
       "coverImage": "/blog/assets/covers/seo-geo-01.png",
       "readingTimeMin": 4
+    },
+    {
+      "slug": "benchmark-conversao-mobile-2026",
+      "title": "Seu Site Converte Menos que a Média: o Motivo Provável é o Celular",
+      "description": "Micro-empresas convertem 1,87% em média, abaixo da mediana de 2,35%. Veja os números de 2026 sobre mobile e velocidade que explicam essa diferença.",
+      "dateISO": "2026-07-13",
+      "pilar": "conversao-cro",
+      "keywords": [
+        "taxa de conversão site",
+        "CRO para pequenas empresas",
+        "conversão mobile",
+        "benchmark de conversão 2026",
+        "velocidade de carregamento conversão",
+        "otimização de conversão"
+      ],
+      "coverImage": "/blog/assets/covers/cro-01.png",
+      "readingTimeMin": 3
     }
   ]
 }
