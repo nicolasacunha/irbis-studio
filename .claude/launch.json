@@ -2,6 +2,30 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "tatiana-mareto",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "Testes/tatiana-mareto", "--", "--port", "3009"],
+      "port": 3009
+    },
+    {
+      "name": "pousada-vento-manso",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "Testes/pousada-vento-manso", "--", "--port", "3005"],
+      "port": 3005
+    },
+    {
+      "name": "delsantcoffee",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "Testes/delsantcoffee", "--", "--port", "3007"],
+      "port": 3007
+    },
+    {
+      "name": "propropertyprojects",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "Testes/propropertyprojects"],
+      "port": 3000
+    },
+    {
       "name": "Static Server (npx serve)",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", ".", "--listen", "3002"],
@@ -12,6 +36,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080"],
       "port": 8080
+    },
+    {
+      "name": "panda-concept",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "02 - Projetos/Panda Storee/concept"],
+      "port": 4173
     }
   ]
 }
