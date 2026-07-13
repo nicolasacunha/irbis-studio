@@ -46,49 +46,49 @@ Guard-rail SAM ≥R$8k: estética premium no Itaim tem ticket compatível (proce
 - **CONTATO** — Tel: +55 11 93340-1752 · End: Rua Tabapuã, 503 · Decisor: `[Não verificado]` (pedir "quem cuida do marketing/site").
 - **DIAGNÓSTICO** — GMB: 196 avaliações, ⭐5,0 `[Confirmado]`. Site: o link no Maps é o **Instagram** (`instagram.com/lifeitaim`), não há site próprio `[Provável — confirmar buscando o nome no Google na hora]`.
 - **GARGALO** — Reputação de primeira linha (196 avaliações 5 estrelas) sem nenhum site para converter. Quem pesquisa "clínica estética Itaim Bibi" no Google encontra o perfil e não tem uma página que apresente procedimentos, preços e agendamento. O Instagram prende o cliente numa rede que não é dela.
-- **ABERTURA (~30s)** — "Oi, é o Nicolas. É uma ligação que você não esperava, me dá 30 segundos? Eu vi que a Life Itaim tem 196 avaliações 5 estrelas no Google, está entre as melhores da região. Mas quando fui procurar o site de vocês, achei só o Instagram. Todo cliente que pesquisa clínica de estética no Itaim encontra essa reputação e não tem pra onde ir depois. Foi por isso que liguei."
+- **ABERTURA (~30s)** — "Oi, é o Nicolas. Ligação que você não esperava, me dá 30 segundos? A Life Itaim tem 196 avaliações 5 estrelas no Google. Fui atrás do site de vocês e só existe o Instagram. Toda cliente que pesquisa estética no Itaim vê essa reputação e não acha uma página de vocês pra fechar. É disso que eu queria falar."
 
 ### 2. Clínica Pró Estética Itaim · **Tier 1**
 - **CONTATO** — Tel: +55 11 92103-7117 · End: R. João Cachoeira, 1332 · Site: proesteticaoficial.com.br.
 - **DIAGNÓSTICO** — GMB: **1235 avaliações**, ⭐4,8 `[Confirmado]` (maior volume da lista, ticket alto: Ultraformer, Fotona, Endolaser). Site moderno e bem estruturado, mas os CTAs "AGENDAR AGORA" apontam para `#!` e não levam a lugar nenhum `[Confirmado na leitura — confirmar clicando na hora]`. Sem captura de lead por formulário.
 - **GARGALO** — Uma clínica com 1235 avaliações e ticket premium, cujo principal botão de conversão (agendar) está quebrado. Cada visitante que clica e cai numa página em branco é um agendamento perdido no volume mais alto da região.
-- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? Entrei no site da Pró Estética pra testar como é agendar e os botões de 'Agendar agora' não levam a lugar nenhum, abrem em branco. Numa clínica com mais de mil avaliações, cada clique desses é um cliente que desistiu no meio do caminho. Foi por isso que liguei."
+- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? Testei agendar no site da Pró Estética e os botões de 'Agendar agora' abrem em branco, não levam a lugar nenhum. São mais de mil avaliações atrás desse site, e cada clique nesse botão é uma cliente que desiste no meio. Por isso liguei."
 
 ### 3. Esteticista Giselle Chaves · **Tier 1**
 - **CONTATO** — Tel: +55 11 99911-2772 · End: R. Joaquim Floriano, 466 · Decisor: provavelmente a própria Giselle (esteticista solo).
 - **DIAGNÓSTICO** — GMB: 88 avaliações, ⭐5,0 `[Confirmado]`. **Sem site** no Maps `[Provável — confirmar na hora]`.
 - **GARGALO** — 88 avaliações 5 estrelas e nenhuma página própria. Profissional solo se apoia 100% em indicação e Instagram; perde o cliente novo que pesquisa no Google antes de escolher.
-- **ABERTURA (~30s)** — "Oi Giselle, é o Nicolas, me dá 30 segundos? Vi que você tem 88 avaliações 5 estrelas no Google, o que é raro. Mas fui procurar seu site e não achei. Toda cliente nova que te pesquisa antes de marcar não encontra uma página sua, só o perfil. É sobre isso que eu queria falar rapidinho."
+- **ABERTURA (~30s)** — "Oi Giselle, é o Nicolas, me dá 30 segundos? Você tem 88 avaliações 5 estrelas, isso é raro. Fui procurar seu site e não existe, só o perfil. Toda cliente nova que te pesquisa antes de marcar não encontra nada seu pra decidir. É disso que eu queria falar rapidinho."
 
 ### 4. Dra. Mafê Porfirio — Estética Avançada e Injetáveis · **Tier 1**
 - **CONTATO** — Tel: +55 11 98935-5487 · End: R. Bandeira Paulista, 662 · Decisor: provavelmente a própria Dra. Mafê.
 - **DIAGNÓSTICO** — GMB: 32 avaliações, ⭐5,0 `[Confirmado]`. Site está no ar via **Google Sites** `[Confirmado na leitura]`, com CTA só para WhatsApp.
 - **GARGALO** — Clínica de injetáveis (ticket alto, decisão de confiança) apresentada num Google Sites. Para o público que paga botox/preenchimento no Itaim, um site de ferramenta gratuita mina a percepção de autoridade da médica.
-- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? Vi que o site da Dra. Mafê é feito no Google Sites. Pra uma clínica de injetáveis no Itaim, onde a paciente escolhe pela confiança, esse tipo de página passa uma imagem abaixo do trabalho que ela entrega. Foi por isso que liguei."
+- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? Vi que o site da clínica roda no Google Sites. Pra injetáveis no Itaim, onde a paciente escolhe pela confiança, essa página joga contra o trabalho que a Dra. Mafê entrega. Por isso liguei."
 
 ### 5. Bella Corpo — Estética e Bem Estar · **Tier 2**
 - **CONTATO** — Tel: +55 11 91636-6706 · Site: bellacorpo.com.br.
 - **DIAGNÓSTICO** — GMB: 200 avaliações, ⭐5,0 `[Confirmado]`. Site profissional e atualizado; conversão 100% dependente de WhatsApp, sem agendamento online `[Confirmado na leitura]`.
 - **GARGALO** — Bom site, mas todo agendamento passa por iniciar conversa no WhatsApp. Perde o cliente que quer marcar fora do horário comercial, quando ninguém responde.
-- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? O site da Bella Corpo é bonito, mas reparei que a única forma de marcar é abrindo conversa no WhatsApp. Todo cliente que entra de madrugada ou no fim de semana, quando não tem ninguém pra responder, some. É sobre isso que eu queria falar."
+- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? O site da Bella Corpo é bom, mas a única forma de marcar é abrir conversa no WhatsApp. Toda cliente que entra de noite ou no fim de semana, quando ninguém responde, some. É disso que eu queria falar."
 
 ### 6. Juliestetik — Limpeza de Pele Itaim · **Tier 2**
 - **CONTATO** — Tel: +55 11 94777-1801 · Site: juliestetik.com.
 - **DIAGNÓSTICO** — GMB: 247 avaliações, ⭐5,0 `[Confirmado]`. Site profissional; sem agendamento automatizado, só WhatsApp `[Confirmado na leitura]`.
 - **GARGALO** — 247 avaliações e um site que depende de resposta manual no WhatsApp. Lead noturno ou de fim de semana não vira agendamento.
-- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? Vi que a Juliestetik tem 247 avaliações, uma das mais fortes do Itaim. O site é bom, mas só dá pra marcar via WhatsApp. Quem tenta agendar fora do horário, quando não tem resposta, acaba desistindo. Foi por isso que liguei."
+- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? A Juliestetik tem 247 avaliações, das mais fortes do Itaim. O site é bom, mas só dá pra marcar pelo WhatsApp. Quem tenta agendar fora do horário não recebe resposta e desiste. Por isso liguei."
 
 ### 7. Clínica Sheila Duarte · **Tier 2**
 - **CONTATO** — Tel: +55 11 99944-9620 · Site: sheiladuarte.com.br (redireciona para HTTPS).
 - **DIAGNÓSTICO** — GMB: 104 avaliações, ⭐5,0 `[Confirmado]`. Site atualizado (menciona "29 anos", conteúdo 2025); captura só por WhatsApp, sem formulário nem telefone alternativo visível `[Confirmado na leitura]`.
 - **GARGALO** — Marca consolidada (29 anos) que deixa o lead escapar por depender só do WhatsApp. Quem não gosta de mensageiro não tem uma segunda porta de contato.
-- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? Vi que a clínica tem 29 anos e uma reputação forte no Google. O site está bem cuidado, mas reparei que só dá pra falar por WhatsApp, não tem formulário nem outra forma de contato. Uma parte dos clientes trava aí. É sobre isso que eu queria falar."
+- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? A clínica tem 29 anos e reputação forte no Google. O site está bem cuidado, mas o único contato é o WhatsApp, sem formulário nem outra porta. Uma parte das clientes trava aí. É disso que eu queria falar."
 
 ### 8. Instituto Mônica Silva · **Tier 3**
 - **CONTATO** — Tel: +55 11 98893-2111 · End: R. Jesuíno Arruda, 676.
 - **DIAGNÓSTICO** — GMB: **só 6 avaliações**, ⭐5,0 `[Confirmado]`. Site: link do Maps é o Instagram `[Provável]`.
 - **GARGALO** — Sem site e ainda construindo reputação no Google (6 avaliações). Prospect de volume/treino, não Tier 1: espere objeção de preço mais cedo, sem âncora alta.
-- **ABERTURA (~30s)** — mesma linha da Life Itaim (sem site), com tom mais consultivo dado o estágio inicial.
+- **ABERTURA (~30s)** — "Oi, é o Nicolas, me dá 30 segundos? O Instituto Mônica aparece no Google só com o Instagram, sem site próprio. Quem pesquisa estética no Itaim não acha uma página de vocês pra conhecer o trabalho. É sobre isso que eu queria falar." (tom mais consultivo dado o estágio inicial: 6 avaliações, ainda construindo reputação.)
 
 ---
 
