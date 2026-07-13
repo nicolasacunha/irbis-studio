@@ -1,3 +1,34 @@
-.vercel
+# === Sistema / IDE ===
 .DS_Store
 **/.DS_Store
+.vercel
+.windsurf/
+.claude/worktrees/
+
+# === Dependências e builds ===
+node_modules/
+.next/
+dist/
+build/
+.cache/
+
+# === Projetos-cliente: repos git INDEPENDENTES, versionados por conta própria ===
+# (adash, Odery Drums/Site Odery, Odery Drums/EForce, whatsapp-agent têm .git próprio)
+/02 - Projetos/
+
+# === Mídia pesada / documentos exportados (regeneráveis a partir do fonte) ===
+# Texto (md/html/csv) das pastas de marca/comercial CONTINUA versionado.
+# Para forçar um binário específico no git: git add -f <arquivo>
+*.pdf
+*.zip
+*.mp4
+*.mov
+*.psd
+*.ai
+*.sketch
+*.key
+*.xlsx
+*.bak
+
+# === Downloads brutos ===
+/docs/drive/
