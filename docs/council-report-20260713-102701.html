@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Council — Escopo da IRBIS</title>
+<style>
+  :root{
+    --bg:#0f0e0d; --panel:#1a1917; --panel2:#211f1c; --ink:#f3efe9; --mut:#a39e95;
+    --line:#332f2a; --gold:#c9a15a; --panther:#e8e3da; --red:#c96a5a; --green:#7fa66a; --blue:#6a8bc9;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:48px 22px 80px}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font-size:30px;line-height:1.15;margin:10px 0 6px;font-weight:750;letter-spacing:-.01em}
+  .sub{color:var(--mut);font-size:15px;margin:0 0 8px}
+  .meta{color:var(--mut);font-size:12.5px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:10px 0;margin:22px 0 30px;display:flex;gap:18px;flex-wrap:wrap}
+  .meta b{color:var(--ink);font-weight:600}
+
+  .verdict{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 26px 22px;margin:0 0 30px;position:relative;overflow:hidden}
+  .verdict::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+  .verdict h2{margin:0 0 4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .rec{font-size:20px;line-height:1.4;font-weight:650;margin:8px 0 4px;letter-spacing:-.01em}
+  .rec em{color:var(--gold);font-style:normal}
+  .first{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line)}
+  .first .lab{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+  .first .act{font-size:16px;font-weight:600}
+
+  section{margin:0 0 26px}
+  h3.blk{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);
+    margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  p{margin:0 0 12px}
+  .agree li{margin:0 0 8px}
+  .agree b{color:var(--green)}
+  .clash b{color:var(--gold)}
+  .blind b{color:var(--blue)}
+  ul{margin:0;padding-left:20px}
+
+  /* alignment strip */
+  .align{display:grid;grid-template-columns:1fr;gap:10px;margin:6px 0 4px}
+  .adv{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);
+    border-radius:10px;padding:11px 14px}
+  .dot{width:9px;height:9px;border-radius:50%;flex:none}
+  .adv .nm{font-weight:650;font-size:14.5px;min-width:150px}
+  .adv .st{font-size:13px;color:var(--mut)}
+  .camp{font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:999px;margin-left:auto;white-space:nowrap}
+  .c-sell{background:rgba(127,166,106,.16);color:#a7cd8f}
+  .c-repos{background:rgba(201,161,90,.16);color:var(--gold)}
+
+  details{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
+  summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:14.5px;list-style:none;
+    display:flex;align-items:center;gap:10px}
+  summary::-webkit-details-marker{display:none}
+  summary .tag{font-size:11px;color:var(--mut);font-weight:500;margin-left:auto}
+  summary::after{content:"+";color:var(--mut);font-weight:400;font-size:18px;margin-left:6px}
+  details[open] summary::after{content:"–"}
+  details .body{padding:2px 16px 16px;color:var(--ink);font-size:14.5px}
+  details .body p{color:#ddd7cd}
+
+  .foot{color:var(--mut);font-size:12px;margin-top:44px;padding-top:16px;border-top:1px solid var(--line)}
+  .foot .panther{color:var(--panther)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">LLM Council · Veredito</div>
+  <h1>Só sites, adicionar serviços, ou pivot?</h1>
+  <p class="sub">Cinco conselheiros independentes + revisão cega por pares + síntese do chairman.</p>
+
+  <div class="meta">
+    <span><b>Negócio:</b> IRBIS (estúdio de sites, solo)</span>
+    <span><b>Data:</b> 13/jul/2026</span>
+    <span><b>Conselheiros:</b> 5</span>
+    <span><b>Veredito majoritário:</b> vender antes de decidir</span>
+  </div>
+
+  <div class="verdict">
+    <h2>A recomendação</h2>
+    <p class="rec">Nenhuma das três. <em>A/B/C é a pergunta errada</em> — as três são "o que eu ofereço?", que é justo o lado do gargalo que já funciona. O problema não é a oferta; é que <em>nada está sendo levado a um humano que pode pagar</em>. Você não tem nem o "não" do mercado. Congela A/B/C por 30 dias e vende a oferta que já existe.</p>
+    <div class="first">
+      <div class="lab">A única coisa a fazer primeiro</div>
+      <div class="act">Segunda, 14h: disparar 10 contatos novos de prospecção com a oferta que já existe (sites, case Odery) — a mesma cota acordada e parada desde 15/jun. <b>Correção pós-council:</b> o ADash não é venda a fechar — foi <em>recusado</em> (uma das 3 recusas conhecidas: ADash, Dermotion, Ana RE). O ativo aqui não é cobrar assinatura, é o <em>post-mortem</em> dessas 3 recusas antes de disparar mais do mesmo às cegas.</div>
+    </div>
+  </div>
+
+  <section>
+    <h3 class="blk">Onde o conselho concorda</h3>
+    <ul class="agree">
+      <li><b>O gargalo não é a oferta, é a venda que não dispara.</b> Contrarian, First Principles, Outsider e Executor chegaram a isso de forma independente. R$3.200 em 7 meses, "Propostas Aceitas" vazia, zero contato desde 15/jun — isso é ausência de esforço comercial, não falha de produto.</li>
+      <li><b>Trocar a oferta agora é procrastinação sofisticada.</b> "Preciso decidir o produto antes de prospectar" parece rigor estratégico e nunca exige falar com ninguém. Quatro dos cinco nomearam isso explicitamente.</li>
+      <li><b>Pivot completo (C) está descartado.</b> Você não tem dados para pivotar — tem zero observações de mercado. Pivotar do que você nunca tentou vender é trocar de mesa sem ter jogado uma mão.</li>
+      <li><b>O sinal do "já entrego IA/dashboard/CRM" é real e não deve ser jogado fora</b> — mas é uma <em>hipótese a testar em call</em>, não uma estratégia para construir por três semanas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="blk">Onde o conselho se divide</h3>
+    <div class="align">
+      <div class="adv"><span class="dot" style="background:var(--green)"></span><span class="nm">Executor</span><span class="st">Vende o que já existe. Cobra o ADash. 10 contatos/dia.</span><span class="camp c-sell">VENDER JÁ</span></div>
+      <div class="adv"><span class="dot" style="background:var(--green)"></span><span class="nm">Contrarian</span><span class="st">Congela A/B/C 30 dias. Uma venda paga esta semana é o teste.</span><span class="camp c-sell">VENDER JÁ</span></div>
+      <div class="adv"><span class="dot" style="background:var(--green)"></span><span class="nm">First Principles</span><span class="st">Modelo com zero observações. Force 10 conversas com preço.</span><span class="camp c-sell">VENDER JÁ</span></div>
+      <div class="adv"><span class="dot" style="background:var(--green)"></span><span class="nm">Outsider</span><span class="st">Restaurante vazio não muda com cardápio novo. Mas: por que esconder a IA?</span><span class="camp c-sell">VENDER JÁ</span></div>
+      <div class="adv"><span class="dot" style="background:var(--gold)"></span><span class="nm">Expansionist</span><span class="st">Inverte o carro-chefe: agente IA = MRR recorrente, site vira isca.</span><span class="camp c-repos">REPOSICIONAR</span></div>
+    </div>
+    <p class="clash" style="margin-top:14px">O choque real é <b>sequência</b>, não destino. Quatro conselheiros dizem "vender primeiro, o produto se decide depois". O Expansionist dá o teto mais alto — recorrência (R$500–1.500/mês/cliente) contra R$8k one-shot por boca — e argumenta que o mercado já puxou a IA de você. A tensão: o teto dele é atraente, mas construí-lo agora é exatamente a fuga que os outros quatro identificam.</p>
+  </section>
+
+  <section>
+    <h3 class="blk">Pontos cegos que a revisão pegou</h3>
+    <p class="blind"><b>O ponto cego do Expansionist (voto quase unânime dos revisores):</b> ele projeta MRR de "10 clientes = a conta se paga" sobre um negócio com <em>essencialmente zero clientes pagantes reais</em> — a receita é majoritariamente subsídio familiar. É product-market fit extrapolado de uma amostra perto de zero. E recorrência é <em>mais difícil</em> de vender que projeto (exige confiança contínua), não mais fácil — adicionar isso a quem tem zero músculo de venda é somar dificuldade.</p>
+    <p class="blind"><b>O que os CINCO deixaram passar (unânime na revisão):</b> ninguém investigou <em>por que</em> a execução trava desde 15/jun. Todos prescrevem "dispare os 10 contatos" — mas essa ordem já existia e falhou. Se o bloqueio é medo de rejeição (ou uma oferta que o próprio Nicolas não acredita), "faça segunda 14h" só repete o adiamento. Falta um <em>mecanismo de compromisso externo</em> e um plano B escrito para o caso de os 10 contatos darem zero resposta.</p>
+  </section>
+
+  <section>
+    <h3 class="blk">Respostas completas dos conselheiros</h3>
+
+    <details>
+      <summary>The Contrarian <span class="tag">procura a falha fatal</span></summary>
+      <div class="body">
+        <p>Todas as três opções são a mesma armadilha vestida de três roupas. A pergunta pressupõe que o problema é o QUE se oferta. Não é. O diagnóstico é inequívoco: a execução para antes do contato humano. Trocar a oferta é a forma mais sofisticada de procrastinação — parece trabalho estratégico. "Preciso decidir o produto antes de prospectar" é a desculpa perfeita: nobre, infinita, nunca exige ligar para ninguém.</p>
+        <p>R$3.200 em sete meses. "Propostas Aceitas" vazia. ADash nunca assinada. Zero contato desde 15/jun. Nada disso é problema de escopo. Um site vendido é melhor que um "site+IA+dashboard+CRM" não vendido. B não adiciona receita — adiciona superfície de dispersão para um operador com histórico de dispersão; é a recaída do problema que o pivot de 01/jun tentou curar. C é pior: joga fora os únicos ativos com tração.</p>
+        <p>O teste real: Nicolas consegue fechar UMA venda paga da oferta que já existe, esta semana? Congelem A/B/C por 30 dias. A resposta aparece sozinha no dia em que ele disparar a prospecção.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>The First Principles Thinker <span class="tag">refaz a pergunta do zero</span></summary>
+      <div class="body">
+        <p>A questão A/B/C é a pergunta errada. As três são "o que eu ofereço?" — exatamente onde Nicolas se sente confortável e produtivo. É o lado do gargalo que já funciona. Debater A vs B vs C adia o único movimento que importa: falar com um humano que pode pagar.</p>
+        <p>Um dado explica tudo: R$3.200 em 7 meses, zero contato desde 15/jun. Não é problema de oferta — um negócio com problema de oferta tem gente dizendo não. O IRBIS não tem nem o não. Escolher entre A/B/C agora é otimizar um modelo com zero observações.</p>
+        <p>A pergunta certa: "qual a menor coisa que me obriga a ter 10 conversas de venda esta semana, com preço na mesa?". Você já vende IA/dashboards na prática — o mercado, não seu documento de "definitivo", está te dizendo o que quer. Mas é hipótese a testar em call. Escolha "produto irrelevante" provisoriamente; depois os dados escolhem A ou B por você.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>The Expansionist <span class="tag">caça o upside escondido</span></summary>
+      <div class="body">
+        <p>Você está sentado em cima de um ativo e olhando pelo lado errado do binóculo. Já entrega agente de IA no WhatsApp, dashboards e CRM para clientes reais — é o produto que o mercado já puxou de você sem você oferecer.</p>
+        <p>O upside é inverter o carro-chefe. Site é commodity de R$3-8k, one-shot, cliente some. Agente de IA para negócio local é dor aguda, recorrente, mensal — o dono da clínica sangra lead todo dia porque ninguém responde no WhatsApp. Vale R$500-1.500/mês, MRR, custo marginal quase zero. Dez clientes = a conta se paga. O site vira o cavalo de Troia que abre a porta pro recorrente.</p>
+        <p>R$3.200 não prova que o mercado não te quer — prova que vendeu o produto morto (projeto) em vez do vivo (recorrência). Você não é "estúdio de sites", é quem instala infraestrutura de aquisição pra negócio local sem time de tech. Não é pivot nem cardápio disperso: é reposicionar o hero product e rebaixar o site a isca. Teto de "só sites" = R$8k por boca. Teto disso = MRR composto.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>The Outsider <span class="tag">olhos frescos, zero contexto</span></summary>
+      <div class="body">
+        <p>O que mais me confunde: quase todo o dinheiro vem da família. Isso é subsídio, não receita. Antes de A/B/C: quantos clientes de verdade, que pagaram do próprio bolso, você já teve? Se for menos de cinco, você não tem problema de oferta — tem problema de ninguém comprando, e trocar o cardápio de um restaurante vazio não enche o restaurante.</p>
+        <p>Soa estranho demais: você já entrega robô de WhatsApp, dashboards e CRM, mas oficialmente esconde e diz que "só faz sites". Por quê? Está escondendo a parte mais valiosa e difícil de copiar. Um site qualquer compra num template de 40 reais; um robô que atende sozinho, um dono de padaria pagaria mensalmente.</p>
+        <p>Duas perguntas na cara: (1) Quando um cliente pagou de verdade, ele pediu "um site" ou "resolver o atendimento/os dados"? (2) O "só sites" é decisão estratégica ou medo de parecer bagunçado? Se for medo, não é foco — é você amputando sua melhor perna por vergonha dela.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>The Executor <span class="tag">o que você faz segunda de manhã</span></summary>
+      <div class="body">
+        <p>Segunda de manhã, você não escolhe entre A, B e C. Abre o WhatsApp e manda 10 mensagens. O problema não é a oferta — é que ninguém está sendo abordado. Você tem plano de prospecção ACORDADO e NÃO EXECUTADO desde 15/jun. Trocar a oferta só dá motivo novo pra adiar.</p>
+        <p><b>1. Segunda, 14h:</b> dispare os 10 contatos do bloco acordado. Oferta = sites, é o que já vende e tem case (Odery). Não reinvente nada.<br>
+        <b>2. ADash R$8k:</b> cliente já disse sim ao escopo. Manda UMA mensagem: "Fechei a agenda de julho, te encaixo se assinar até sexta. Segue o link." R$8k a um clique, tratado como decisão filosófica.<br>
+        <b>3. IA/dashboard/CRM:</b> não é estratégia, é upsell. Já entrega; oferece como add-on na próxima venda.</p>
+        <p>C está descartado: você não tem dados pra pivotar, tem ausência de esforço de venda. A questão A/B/C é procrastinação disfarçada de rigor. A ação de segunda é a mesma nos três cenários. Faça isso três semanas seguidas antes de voltar a discutir oferta.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h3 class="blk">Destaques da revisão por pares</h3>
+    <details>
+      <summary>O que os revisores cegos disseram</summary>
+      <div class="body">
+        <p><b>Mais fortes:</b> Executor e First Principles empataram na preferência — o primeiro por virar diagnóstico em ação datada com receita concreta (o ADash), o segundo por nomear o erro raiz: "otimizar um modelo com zero observações".</p>
+        <p><b>Maior ponto cego (quase unânime):</b> o Expansionist — constrói uma tese inteira de MRR sobre zero venda validada; confunde "entreguei para clientes que já tinha" com "o mercado quer e vai pagar recorrência".</p>
+        <p><b>O furo coletivo:</b> nenhum dos cinco investigou por que a execução trava desde 15/jun. Sem atacar o bloqueio real (medo de rejeição? oferta que ele mesmo não compra?), "manda 10 mensagens segunda" repete a ordem que já falhou. Faltou mecanismo de responsabilização, plano B escrito e uma checagem de runway.</p>
+      </div>
+    </details>
+  </section>
+
+  <p class="foot">Conselho reunido em 13/jul/2026 sobre a decisão de escopo da <span class="panther">IRBIS</span> · 5 conselheiros · revisão cega por pares · síntese do chairman. Transcrição completa em <code>council-transcript-20260713-102701.md</code>.</p>
+
+</div>
+</body>
+</html>
