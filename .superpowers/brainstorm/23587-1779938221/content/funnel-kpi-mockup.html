@@ -1,0 +1,79 @@
+<h2>Funil — Painel de 4 KPIs</h2>
+<p class="subtitle">Validando o visual do painel antes de avançar. Cada bloco mostra a origem do dado.</p>
+
+<div class="mockup">
+  <div class="mockup-header">Overview — logo abaixo do Header</div>
+  <div class="mockup-body" style="background:#0e0e11;padding:24px;font-family:system-ui">
+
+    <!-- Funil KPI row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px">
+
+      <!-- Investimento -->
+      <div style="background:#111114;border:1px solid #1c1c22;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2DD4BF,#1aada0)"></div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#55555e;margin-bottom:6px">INVESTIMENTO</div>
+        <div style="font-size:26px;font-weight:700;color:#F0EDE8;font-family:monospace;line-height:1">R$ 8.500</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:5px">
+          <span style="font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(45,212,191,0.12);color:#2DD4BF;font-weight:700">META + GOOGLE</span>
+        </div>
+        <div style="font-size:11px;color:#22C55E;margin-top:6px">↑ 12% vs mês ant.</div>
+      </div>
+
+      <!-- Leads -->
+      <div style="background:#111114;border:1px solid #1c1c22;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2DD4BF,#60A5FA)"></div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#55555e;margin-bottom:6px">LEADS GERADOS</div>
+        <div style="font-size:26px;font-weight:700;color:#F0EDE8;font-family:monospace;line-height:1">247</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:5px">
+          <span style="font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(45,212,191,0.12);color:#2DD4BF;font-weight:700">META + GOOGLE</span>
+        </div>
+        <div style="font-size:11px;color:#22C55E;margin-top:6px">↑ 18% vs mês ant.</div>
+      </div>
+
+      <!-- Pipeline -->
+      <div style="background:#111114;border:1px solid rgba(212,168,83,0.2);border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#D4A853,#b8923f)"></div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#55555e;margin-bottom:6px">PIPELINE ABERTO</div>
+        <div style="font-size:26px;font-weight:700;color:#F0EDE8;font-family:monospace;line-height:1">R$ 44.600</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:5px">
+          <span style="font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(212,168,83,0.12);color:#D4A853;font-weight:700">CRM</span>
+        </div>
+        <div style="font-size:11px;color:#7a7a85;margin-top:6px">9 oportunidades</div>
+      </div>
+
+      <!-- Vendas -->
+      <div style="background:#111114;border:1px solid rgba(212,168,83,0.2);border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#D4A853,#22C55E)"></div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#55555e;margin-bottom:6px">VENDAS NO MÊS</div>
+        <div style="font-size:26px;font-weight:700;color:#F0EDE8;font-family:monospace;line-height:1">R$ 14.800</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:5px">
+          <span style="font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(212,168,83,0.12);color:#D4A853;font-weight:700">CRM</span>
+        </div>
+        <div style="font-size:11px;color:#22C55E;margin-top:6px">ROAS 3.2x</div>
+      </div>
+    </div>
+
+    <!-- Label de fonte -->
+    <div style="display:flex;gap:16px;font-size:11px;color:#55555e">
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:2px;background:#2DD4BF;display:inline-block"></span>Dados automáticos via API</span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:2px;background:#D4A853;display:inline-block"></span>Dados manuais via CRM</span>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:20px" class="options">
+  <div class="option" data-choice="ok" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>Aprovado — seguir assim</h3>
+      <p>Topo teal para Meta/Google, topo dourado para CRM, legenda de fonte embaixo</p>
+    </div>
+  </div>
+  <div class="option" data-choice="ajuste" onclick="toggleSelect(this)">
+    <div class="letter">?</div>
+    <div class="content">
+      <h3>Ajustar alguma coisa</h3>
+      <p>Me diz o que mudar no terminal</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,182 @@
+<h2>Wireframe — irbis.com.br/founder</h2>
+<p class="subtitle">Estrutura da página de aplicação · clique em qualquer seção para comentar</p>
+
+<style>
+.page-mock {
+  max-width: 680px;
+  margin: 24px auto 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* NAV */
+.mock-nav-bar {
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+.mock-logo { font-weight: 700; color: rgba(255,255,255,0.8); font-size: 13px; }
+
+/* SECTIONS */
+.ms { padding: 36px 28px; border-bottom: 1px solid rgba(255,255,255,0.06); position: relative; cursor: pointer; transition: background 0.15s; }
+.ms:hover { background: rgba(255,255,255,0.02); }
+.ms-label { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.2); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.ms-label-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* HERO */
+.hero-kicker { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+.hero-h1 { font-size: 28px; font-weight: 800; color: #f1f5f9; line-height: 1.25; margin-bottom: 14px; }
+.hero-h1 em { color: #6366f1; font-style: normal; }
+.hero-sub { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 500px; margin-bottom: 24px; }
+.hero-cta-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.cta-btn { background: #6366f1; color: white; border: none; border-radius: 8px; padding: 12px 22px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.cta-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.5); border-radius: 8px; padding: 12px 18px; font-size: 12px; cursor: pointer; }
+.social-line { display: flex; align-items: center; gap: 6px; margin-top: 16px; }
+.social-dot { width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.1); }
+.social-txt { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* FOR WHOM */
+.check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+.check-item::before { content: '✓'; color: #22c55e; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.x-item { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; color: rgba(255,255,255,0.35); line-height: 1.5; }
+.x-item::before { content: '✕'; color: rgba(255,100,100,0.6); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.divider-label { font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; margin: 12px 0; }
+
+/* ENTREGA */
+.entrega-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.entrega-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; }
+.entrega-icon { font-size: 20px; margin-bottom: 6px; }
+.entrega-nome { font-size: 12px; font-weight: 700; color: #f1f5f9; margin-bottom: 3px; }
+.entrega-desc { font-size: 11px; color: rgba(255,255,255,0.35); line-height: 1.4; }
+
+/* CASES */
+.cases-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.case-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
+.case-img { height: 100px; background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.2)); display: flex; align-items: center; justify-content: center; font-size: 11px; color: rgba(255,255,255,0.3); }
+.case-body { padding: 12px 14px; }
+.case-nome { font-size: 12px; font-weight: 700; color: #f1f5f9; margin-bottom: 3px; }
+.case-desc { font-size: 11px; color: rgba(255,255,255,0.35); }
+.case-resultado { font-size: 11px; color: #86efac; margin-top: 5px; font-weight: 600; }
+
+/* FORM */
+.form-section { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15); border-radius: 12px; padding: 20px; }
+.form-title { font-size: 16px; font-weight: 700; color: #f1f5f9; margin-bottom: 4px; }
+.form-sub { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+.form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.mock-field { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 7px; padding: 10px 12px; font-size: 11px; color: rgba(255,255,255,0.25); }
+.mock-field.full { grid-column: 1 / -1; }
+.form-cta { background: #6366f1; color: white; border: none; border-radius: 8px; padding: 13px 24px; font-size: 13px; font-weight: 600; width: 100%; margin-top: 12px; cursor: pointer; }
+.form-note { font-size: 10px; color: rgba(255,255,255,0.2); text-align: center; margin-top: 8px; }
+</style>
+
+<div class="page-mock">
+  <!-- NAV -->
+  <div class="mock-nav-bar">
+    <span class="mock-logo">Nicolas Cunha</span>
+    <span>← irbis.com.br</span>
+  </div>
+
+  <!-- 01 HERO -->
+  <div class="ms" data-choice="hero" onclick="toggleSelect(this)">
+    <div class="ms-label"><span class="ms-label-dot" style="background:#6366f1;"></span> 01 · HERO</div>
+    <div class="hero-kicker">Designer · Founder do IRBIS</div>
+    <div class="hero-h1">Trabalhe diretamente<br>comigo no <em>site do seu negócio</em></div>
+    <div class="hero-sub">Projeto 1-on-1. Sem agência, sem intermediário. Você fala direto com quem executa.</div>
+    <div class="hero-cta-row">
+      <button class="cta-btn">Aplicar para trabalhar comigo</button>
+      <button class="cta-ghost">Ver casos anteriores ↓</button>
+    </div>
+    <div class="social-line">
+      <div class="social-dot"></div>
+      <span class="social-txt">Mauricio Odery, EForce Drums · "Resultado em 3 semanas"</span>
+    </div>
+  </div>
+
+  <!-- 02 PARA QUEM -->
+  <div class="ms" data-choice="paraquem" onclick="toggleSelect(this)">
+    <div class="ms-label"><span class="ms-label-dot" style="background:#22c55e;"></span> 02 · PARA QUEM É</div>
+    <div class="check-grid">
+      <div class="check-item">Founder com produto ou serviço já definido</div>
+      <div class="check-item">Precisa do site no ar em menos de 60 dias</div>
+      <div class="check-item">Quer converter cliente, fechar deal ou atrair investidor</div>
+      <div class="check-item">Entende que template não resolve o problema</div>
+    </div>
+    <div class="divider-label">Não é pra você se...</div>
+    <div style="display:flex;flex-direction:column;gap:5px;">
+      <div class="x-item">Ainda está validando a ideia (sem produto ou oferta definida)</div>
+      <div class="x-item">Quer algo rápido e barato sem pensar em resultado</div>
+    </div>
+  </div>
+
+  <!-- 03 O QUE VOCÊ ENTREGA -->
+  <div class="ms" data-choice="entrega" onclick="toggleSelect(this)">
+    <div class="ms-label"><span class="ms-label-dot" style="background:#f59e0b;"></span> 03 · O QUE VOCÊ RECEBE</div>
+    <div class="entrega-grid">
+      <div class="entrega-card">
+        <div class="entrega-icon">🌐</div>
+        <div class="entrega-nome">Site institucional</div>
+        <div class="entrega-desc">Credibilidade para fechar parceria e captação</div>
+      </div>
+      <div class="entrega-card">
+        <div class="entrega-icon">⚡</div>
+        <div class="entrega-nome">Landing page</div>
+        <div class="entrega-desc">Convertida para tráfego pago ou orgânico</div>
+      </div>
+      <div class="entrega-card">
+        <div class="entrega-icon">🎨</div>
+        <div class="entrega-nome">Identidade visual</div>
+        <div class="entrega-desc">Brand que posiciona e diferencia no mercado</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 CASOS -->
+  <div class="ms" data-choice="casos" onclick="toggleSelect(this)">
+    <div class="ms-label"><span class="ms-label-dot" style="background:#a855f7;"></span> 04 · CASOS ANTERIORES</div>
+    <div class="cases-row">
+      <div class="case-card">
+        <div class="case-img">[ screenshot EForce ]</div>
+        <div class="case-body">
+          <div class="case-nome">EForce Drums</div>
+          <div class="case-desc">E-commerce + identidade visual para marca de bateria eletrônica</div>
+          <div class="case-resultado">↑ Presença digital do zero</div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-img">[ screenshot Adash ]</div>
+        <div class="case-body">
+          <div class="case-nome">Adash</div>
+          <div class="case-desc">Site institucional + posicionamento para startup</div>
+          <div class="case-resultado">↑ Credibilidade para captação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 APLICAÇÃO -->
+  <div class="ms" data-choice="form" onclick="toggleSelect(this)">
+    <div class="ms-label"><span class="ms-label-dot" style="background:#6366f1;"></span> 05 · APLICAÇÃO</div>
+    <div class="form-section">
+      <div class="form-title">Aplique para trabalhar comigo</div>
+      <div class="form-sub">Analiso todas as aplicações. Se houver fit, entro em contato em até 48h para agendar uma call gratuita.</div>
+      <div class="form-fields">
+        <div class="mock-field">Nome</div>
+        <div class="mock-field">Email</div>
+        <div class="mock-field full">URL do site atual (se tiver)</div>
+        <div class="mock-field full">O que você precisa? (landing page / site / identidade)</div>
+        <div class="mock-field full">Qual é o prazo e o orçamento aproximado?</div>
+      </div>
+      <button class="form-cta">Enviar aplicação →</button>
+      <div class="form-note">Não é call de vendas. É um diagnóstico gratuito de 30 minutos.</div>
+    </div>
+  </div>
+
+</div>

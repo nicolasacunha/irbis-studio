@@ -1,0 +1,6 @@
+{"type":"server-started","port":51824,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:51824","screen_dir":"/Users/nicolascunha/Projects/Business/irbis/.superpowers/brainstorm/87348-1780415293/content","state_dir":"/Users/nicolascunha/Projects/Business/irbis/.superpowers/brainstorm/87348-1780415293/state"}
+{"type":"screen-added","file":"/Users/nicolascunha/Projects/Business/irbis/.superpowers/brainstorm/87348-1780415293/content/abordagens.html"}
+{"type":"screen-added","file":"/Users/nicolascunha/Projects/Business/irbis/.superpowers/brainstorm/87348-1780415293/content/funil-arquitetura.html"}
+{"type":"screen-added","file":"/Users/nicolascunha/Projects/Business/irbis/.superpowers/brainstorm/87348-1780415293/content/wireframe-founder.html"}
+{"type":"screen-added","file":"/Users/nicolascunha/Projects/Business/irbis/.superpowers/brainstorm/87348-1780415293/content/waiting.html"}
+{"type":"server-stopped","reason":"idle timeout"}

@@ -1,0 +1,72 @@
+<h2>Funil — Forma visual</h2>
+<p class="subtitle">Qual estilo de funil prefere para a hero da Overview?</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Funil trapézio (barras decrescentes)</h3>
+      <p>Cada etapa é uma barra que encolhe — clássico funil de marketing</p>
+      <div style="margin-top:14px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:12px">
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:rgba(45,212,191,0.12);border-left:3px solid #2DD4BF;border-radius:6px"><span style="color:#9CA3AF">Investimento</span><span style="color:#2DD4BF;font-family:monospace;font-weight:700">R$ 8.500</span></div>
+        <div style="width:88%;display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:rgba(45,212,191,0.10);border-left:3px solid #5bc8be;border-radius:6px"><span style="color:#9CA3AF">Leads</span><span style="color:#5bc8be;font-family:monospace;font-weight:700">247</span></div>
+        <div style="width:72%;display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:rgba(212,168,83,0.12);border-left:3px solid #D4A853;border-radius:6px"><span style="color:#9CA3AF">Pipeline</span><span style="color:#D4A853;font-family:monospace;font-weight:700">R$ 44.600</span></div>
+        <div style="width:56%;display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:rgba(212,168,83,0.18);border-left:3px solid #e8c97a;border-radius:6px"><span style="color:#9CA3AF">Vendas</span><span style="color:#e8c97a;font-family:monospace;font-weight:700">R$ 14.800</span></div>
+      </div>
+      <div style="margin-top:10px;font-size:10px;color:#55555e">ROAS 3.2x · CPL médio R$ 34,41</div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Funil SVG em forma real</h3>
+      <p>Trapézio desenhado em SVG, etapas coladas, visual mais impactante</p>
+      <div style="margin-top:14px;background:#0e0e11;border-radius:10px;padding:20px 16px">
+        <svg viewBox="0 0 280 200" style="width:100%;max-width:280px;display:block;margin:0 auto">
+          <!-- Investimento -->
+          <polygon points="0,0 280,0 252,44 28,44" fill="rgba(45,212,191,0.18)" stroke="#2DD4BF" stroke-width="1"/>
+          <text x="140" y="26" text-anchor="middle" fill="#2DD4BF" font-size="11" font-family="monospace" font-weight="700">Investimento · R$ 8.500</text>
+          <!-- Leads -->
+          <polygon points="28,47 252,47 224,91 56,91" fill="rgba(45,212,191,0.12)" stroke="#5bc8be" stroke-width="1"/>
+          <text x="140" y="73" text-anchor="middle" fill="#5bc8be" font-size="11" font-family="monospace" font-weight="700">Leads · 247</text>
+          <!-- Pipeline -->
+          <polygon points="56,94 224,94 196,138 84,138" fill="rgba(212,168,83,0.15)" stroke="#D4A853" stroke-width="1"/>
+          <text x="140" y="120" text-anchor="middle" fill="#D4A853" font-size="11" font-family="monospace" font-weight="700">Pipeline · R$ 44.600</text>
+          <!-- Vendas -->
+          <polygon points="84,141 196,141 168,185 112,185" fill="rgba(212,168,83,0.22)" stroke="#e8c97a" stroke-width="1"/>
+          <text x="140" y="167" text-anchor="middle" fill="#e8c97a" font-size="11" font-family="monospace" font-weight="700">Vendas · R$ 14.800</text>
+        </svg>
+      </div>
+      <div style="margin-top:8px;font-size:10px;color:#55555e;text-align:center">ROAS 3.2x · CPL médio R$ 34,41</div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Funil + mini KPIs laterais</h3>
+      <p>Funil trapézio à esquerda, ROAS e Ticket Médio em cards à direita</p>
+      <div style="margin-top:14px;display:flex;gap:12px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:3px;font-size:11px">
+          <div style="padding:7px 10px;background:rgba(45,212,191,0.12);border-left:2px solid #2DD4BF;border-radius:5px;display:flex;justify-content:space-between"><span style="color:#9CA3AF">Investimento</span><span style="color:#2DD4BF;font-family:monospace">R$ 8.500</span></div>
+          <div style="width:88%;padding:7px 10px;background:rgba(45,212,191,0.09);border-left:2px solid #5bc8be;border-radius:5px;display:flex;justify-content:space-between"><span style="color:#9CA3AF">Leads</span><span style="color:#5bc8be;font-family:monospace">247</span></div>
+          <div style="width:72%;padding:7px 10px;background:rgba(212,168,83,0.12);border-left:2px solid #D4A853;border-radius:5px;display:flex;justify-content:space-between"><span style="color:#9CA3AF">Pipeline</span><span style="color:#D4A853;font-family:monospace">R$ 44.600</span></div>
+          <div style="width:56%;padding:7px 10px;background:rgba(212,168,83,0.18);border-left:2px solid #e8c97a;border-radius:5px;display:flex;justify-content:space-between"><span style="color:#9CA3AF">Vendas</span><span style="color:#e8c97a;font-family:monospace">R$ 14.800</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;min-width:100px">
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.08em">ROAS</div>
+            <div style="font-size:22px;font-family:monospace;font-weight:700;color:#2DD4BF">3.2x</div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.08em">CPL</div>
+            <div style="font-size:18px;font-family:monospace;font-weight:700;color:#D4A853">R$34</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,117 @@
+<h2>Arquitetura do funil — Nicolas Cunha</h2>
+<p class="subtitle">"O site do founder" · Instagram → YouTube → irbis.com.br/founder → Projeto</p>
+
+<style>
+.funil { display: flex; align-items: flex-start; gap: 0; margin: 32px 0; overflow-x: auto; padding-bottom: 8px; }
+.etapa { display: flex; flex-direction: column; align-items: center; min-width: 170px; }
+.etapa-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 20px 16px; text-align: center; width: 158px; position: relative; }
+.etapa-num { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+.etapa-icon { font-size: 28px; margin-bottom: 8px; }
+.etapa-nome { font-size: 13px; font-weight: 700; color: #f1f5f9; margin-bottom: 4px; }
+.etapa-sub { font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.4; }
+.etapa-tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-top: 8px; display: inline-block; }
+.seta { display: flex; align-items: center; padding-top: 36px; color: rgba(255,255,255,0.2); font-size: 20px; margin: 0 4px; flex-shrink: 0; }
+
+.e1 .etapa-box { border-color: rgba(99,102,241,0.4); background: rgba(99,102,241,0.08); }
+.e2 .etapa-box { border-color: rgba(239,68,68,0.4); background: rgba(239,68,68,0.08); }
+.e3 .etapa-box { border-color: rgba(34,197,94,0.4); background: rgba(34,197,94,0.08); }
+.e4 .etapa-box { border-color: rgba(251,191,36,0.4); background: rgba(251,191,36,0.08); }
+.e5 .etapa-box { border-color: rgba(168,85,247,0.4); background: rgba(168,85,247,0.08); }
+
+.tag-ig { background: rgba(99,102,241,0.2); color: #a5b4fc; }
+.tag-yt { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.tag-site { background: rgba(34,197,94,0.2); color: #86efac; }
+.tag-call { background: rgba(251,191,36,0.2); color: #fde68a; }
+.tag-proj { background: rgba(168,85,247,0.2); color: #d8b4fe; }
+
+.detalhe-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 32px; }
+.detalhe { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px; }
+.d-titulo { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.d-item { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 5px; display: flex; gap: 7px; line-height: 1.4; }
+.d-item::before { content: '·'; color: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+.highlight-box { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25); border-radius: 12px; padding: 14px 18px; margin-top: 16px; font-size: 12.5px; color: #86efac; line-height: 1.6; }
+</style>
+
+<div class="funil">
+  <div class="etapa e1">
+    <div class="etapa-box">
+      <div class="etapa-num">01</div>
+      <div class="etapa-icon">📸</div>
+      <div class="etapa-nome">Instagram</div>
+      <div class="etapa-sub">@nicolascunha<br>Reels + Carrosséis</div>
+      <span class="etapa-tag tag-ig">Topo do funil</span>
+    </div>
+  </div>
+  <div class="seta">→</div>
+  <div class="etapa e2">
+    <div class="etapa-box">
+      <div class="etapa-num">02</div>
+      <div class="etapa-icon">▶️</div>
+      <div class="etapa-nome">YouTube</div>
+      <div class="etapa-sub">Nicolas Cunha<br>Blueprints 15-25min</div>
+      <span class="etapa-tag tag-yt">Autoridade</span>
+    </div>
+  </div>
+  <div class="seta">→</div>
+  <div class="etapa e3">
+    <div class="etapa-box">
+      <div class="etapa-num">03</div>
+      <div class="etapa-icon">🌐</div>
+      <div class="etapa-nome">irbis.com.br<br>/founder</div>
+      <div class="etapa-sub">VSL + Casos + Aplicação</div>
+      <span class="etapa-tag tag-site">Conversão</span>
+    </div>
+  </div>
+  <div class="seta">→</div>
+  <div class="etapa e4">
+    <div class="etapa-box">
+      <div class="etapa-num">04</div>
+      <div class="etapa-icon">📞</div>
+      <div class="etapa-nome">Call 30min</div>
+      <div class="etapa-sub">Diagnóstico gratuito<br>Qualifica o projeto</div>
+      <span class="etapa-tag tag-call">Diagnóstico</span>
+    </div>
+  </div>
+  <div class="seta">→</div>
+  <div class="etapa e5">
+    <div class="etapa-box">
+      <div class="etapa-num">05</div>
+      <div class="etapa-icon">🎨</div>
+      <div class="etapa-nome">Projeto</div>
+      <div class="etapa-sub">Site, LP ou identidade<br>R$5k – R$45k+</div>
+      <span class="etapa-tag tag-proj">Receita</span>
+    </div>
+  </div>
+</div>
+
+<div class="detalhe-grid">
+  <div class="detalhe">
+    <div class="d-titulo">📸 Instagram @nicolascunha</div>
+    <div class="d-item">Reels curtos: erros comuns no site de founders</div>
+    <div class="d-item">Carrosséis: frameworks visuais de design</div>
+    <div class="d-item">Bio CTA → link do YouTube ou irbis.com.br/founder</div>
+    <div class="d-item">3x/semana no início</div>
+    <div class="d-item">Tom: direto, sem enrolação, baseado em resultado</div>
+  </div>
+  <div class="detalhe">
+    <div class="d-titulo">▶️ YouTube Nicolas Cunha</div>
+    <div class="d-item">"Por que o site da sua startup perde clientes"</div>
+    <div class="d-item">"A anatomia do site que fecha deal"</div>
+    <div class="d-item">"Como construo sites para founders em 3 semanas"</div>
+    <div class="d-item">Transformações de cliente (antes/depois)</div>
+    <div class="d-item">CTA final: irbis.com.br/founder</div>
+  </div>
+  <div class="detalhe">
+    <div class="d-titulo">🌐 irbis.com.br/founder</div>
+    <div class="d-item">Vídeo curto ou texto: "Trabalhe diretamente comigo"</div>
+    <div class="d-item">Para quem é (qualificação)</div>
+    <div class="d-item">O que você entrega (projeto de design)</div>
+    <div class="d-item">2 casos: EForce + Adash</div>
+    <div class="d-item">Formulário de aplicação → Call no Calendly</div>
+  </div>
+</div>
+
+<div class="highlight-box">
+  💡 <strong>Âncora de posicionamento:</strong> "O site do founder" — você não vende design, você vende o ativo que converte cliente, fecha deal e atrai investidor. O conteúdo educa sobre isso. A página fecha quem já está convencido.
+</div>

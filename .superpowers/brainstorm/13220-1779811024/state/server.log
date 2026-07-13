@@ -1,0 +1,3 @@
+{"type":"server-started","port":57505,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:57505","screen_dir":"/Users/nicolascunha/Projects/Business/IRBIS/.superpowers/brainstorm/13220-1779811024/content","state_dir":"/Users/nicolascunha/Projects/Business/IRBIS/.superpowers/brainstorm/13220-1779811024/state"}
+{"type":"screen-added","file":"/Users/nicolascunha/Projects/Business/IRBIS/.superpowers/brainstorm/13220-1779811024/content/accent-color.html"}
+{"type":"server-stopped","reason":"idle timeout"}

@@ -1,0 +1,99 @@
+<h2>CRM — Painel de métricas no rodapé</h2>
+<p class="subtitle">Abaixo do kanban. Dados cruzados: pipeline, fechamentos, ticket médio, meta mensal.</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>KPI row + barra de meta</h3>
+      <p>5 blocos em linha com os principais números, mais barra de progresso da meta mensal abaixo.</p>
+      <div style="margin-top:14px;background:#0e0e11;border-radius:12px;padding:16px;font-size:12px">
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:12px">
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:12px 10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.06em;margin-bottom:4px">PIPELINE ABERTO</div>
+            <div style="font-size:16px;font-weight:700;color:#F0EDE8;font-family:monospace">R$44.600</div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:12px 10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.06em;margin-bottom:4px">FECHADO NO MÊS</div>
+            <div style="font-size:16px;font-weight:700;color:#22C55E;font-family:monospace">R$14.800</div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:12px 10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.06em;margin-bottom:4px">TICKET MÉDIO</div>
+            <div style="font-size:16px;font-weight:700;color:#D4A853;font-family:monospace">R$7.400</div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:12px 10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.06em;margin-bottom:4px">TOTAL DE LEADS</div>
+            <div style="font-size:16px;font-weight:700;color:#F0EDE8;font-family:monospace">9</div>
+          </div>
+          <div style="background:#111114;border:1px solid rgba(212,168,83,0.2);border-radius:10px;padding:12px 10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;letter-spacing:.06em;margin-bottom:4px">META MENSAL</div>
+            <div style="font-size:16px;font-weight:700;color:#D4A853;font-family:monospace">R$20.000</div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:#55555e;margin-bottom:4px"><span>Meta do mês</span><span style="color:#D4A853">74% concluído</span></div>
+          <div style="height:6px;border-radius:3px;background:#1c1c22;overflow:hidden">
+            <div style="width:74%;height:100%;border-radius:3px;background:linear-gradient(90deg,#b8923f,#D4A853,#e8c97a)"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>2 linhas: resumo + gráfico de funil</h3>
+      <p>Linha superior com KPIs, linha inferior com gráfico de barras (leads por etapa) e taxa de conversão.</p>
+      <div style="margin-top:14px;background:#0e0e11;border-radius:12px;padding:16px;font-size:12px">
+        <!-- KPI row -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px">
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;margin-bottom:3px">PIPELINE</div>
+            <div style="font-size:15px;font-weight:700;color:#F0EDE8;font-family:monospace">R$44.600</div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;margin-bottom:3px">FECHADO</div>
+            <div style="font-size:15px;font-weight:700;color:#22C55E;font-family:monospace">R$14.800</div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;margin-bottom:3px">TICKET MÉDIO</div>
+            <div style="font-size:15px;font-weight:700;color:#D4A853;font-family:monospace">R$7.400</div>
+          </div>
+          <div style="background:#111114;border:1px solid rgba(212,168,83,0.2);border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#55555e;font-weight:700;margin-bottom:3px">META 74%</div>
+            <div style="height:4px;border-radius:2px;background:#1c1c22;margin-top:6px;overflow:hidden"><div style="width:74%;height:100%;background:#D4A853;border-radius:2px"></div></div>
+            <div style="font-size:13px;font-weight:700;color:#D4A853;font-family:monospace;margin-top:4px">R$20.000</div>
+          </div>
+        </div>
+        <!-- Gráfico mini + conversão -->
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:8px">
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:12px">
+            <div style="font-size:10px;color:#55555e;font-weight:700;margin-bottom:8px">LEADS POR ETAPA</div>
+            <div style="display:flex;align-items:flex-end;gap:4px;height:40px">
+              <div style="flex:1;background:#2DD4BF;border-radius:3px 3px 0 0;height:100%"></div>
+              <div style="flex:1;background:#2DD4BF;border-radius:3px 3px 0 0;height:66%"></div>
+              <div style="flex:1;background:#D4A853;border-radius:3px 3px 0 0;height:42%"></div>
+              <div style="flex:1;background:#D4A853;border-radius:3px 3px 0 0;height:25%"></div>
+              <div style="flex:1;background:#22C55E;border-radius:3px 3px 0 0;height:8%"></div>
+            </div>
+            <div style="display:flex;gap:4px;margin-top:4px">
+              <div style="flex:1;font-size:8px;color:#55555e;text-align:center">Novo</div>
+              <div style="flex:1;font-size:8px;color:#55555e;text-align:center">Contato</div>
+              <div style="flex:1;font-size:8px;color:#55555e;text-align:center">Qualif.</div>
+              <div style="flex:1;font-size:8px;color:#55555e;text-align:center">Proposta</div>
+              <div style="flex:1;font-size:8px;color:#55555e;text-align:center">Ganho</div>
+            </div>
+          </div>
+          <div style="background:#111114;border:1px solid #1c1c22;border-radius:10px;padding:12px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px">
+            <div style="font-size:9px;color:#55555e;font-weight:700">CONVERSÃO</div>
+            <div style="font-size:22px;font-weight:700;color:#22C55E;font-family:monospace">8.1%</div>
+            <div style="font-size:9px;color:#55555e">lead → venda</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,110 @@
+<h2>3 caminhos para o funil</h2>
+<p class="subtitle">Conteúdo → irbis.com.br → Aplicação → Call → Projeto de design</p>
+
+<style>
+.abordagens { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+.op { border-radius: 14px; padding: 24px 28px; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; }
+.op:hover { border-color: rgba(255,255,255,0.15); }
+.op.selected { border-color: #6366f1 !important; background: rgba(99,102,241,0.08) !important; }
+.op-a { background: rgba(99,102,241,0.07); }
+.op-b { background: rgba(34,197,94,0.07); }
+.op-c { background: rgba(251,146,60,0.07); }
+.op-header { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.badge { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; letter-spacing: 0.5px; }
+.badge-a { background: rgba(99,102,241,0.25); color: #a5b4fc; }
+.badge-b { background: rgba(34,197,94,0.2); color: #86efac; }
+.badge-b-rec { background: #22c55e; color: #0a0a0a; }
+.badge-c { background: rgba(251,146,60,0.2); color: #fdba74; }
+.op-title { font-size: 17px; font-weight: 700; color: #f1f5f9; }
+.rec-tag { font-size: 10px; font-weight: 700; background: #22c55e; color: #0a0a0a; padding: 2px 8px; border-radius: 999px; letter-spacing: 0.5px; margin-left: 8px; }
+.funnel-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.fstep { font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 8px; }
+.arrow { color: rgba(255,255,255,0.3); font-size: 14px; }
+.prós-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.pro-list, .con-list { font-size: 12px; line-height: 1.7; }
+.pro-list { color: #86efac; }
+.con-list { color: #fca5a5; }
+.note { font-size: 11.5px; color: rgba(255,255,255,0.45); margin-top: 10px; font-style: italic; }
+</style>
+
+<div class="abordagens">
+
+  <!-- OPÇÃO A -->
+  <div class="op op-a option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="op-header">
+      <span class="badge badge-a">A</span>
+      <span class="op-title">Marca pessoal separada — dois universos distintos</span>
+    </div>
+    <div class="funnel-row">
+      <span class="fstep" style="background:rgba(99,102,241,0.2);color:#a5b4fc;">@nicolascunha (IG novo)</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(99,102,241,0.2);color:#a5b4fc;">YouTube Nicolas Cunha</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(99,102,241,0.2);color:#a5b4fc;">irbis.com.br/founder</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(99,102,241,0.2);color:#a5b4fc;">Aplicação + Call</span>
+    </div>
+    <div class="prós-cons">
+      <div>
+        <div class="pro-list">✓ Audiência pessoal que te segue, não ao estúdio<br>✓ Escala além do IRBIS (curso, consultoria, etc.)<br>✓ Exatamente o que Casper faz</div>
+      </div>
+      <div>
+        <div class="con-list">✗ Construir do zero — dois canais separados<br>✗ Mais esforço inicial de setup<br>✗ @byirbis e YouTube IRBIS ficam ociosos</div>
+      </div>
+    </div>
+    <p class="note">Ideal se você quer que a marca pessoal sobreviva independente do IRBIS no futuro.</p>
+  </div>
+
+  <!-- OPÇÃO B — RECOMENDADA -->
+  <div class="op op-b option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="op-header">
+      <span class="badge badge-b">B</span>
+      <span class="op-title">Nicolas como face do IRBIS <span class="rec-tag">RECOMENDADO</span></span>
+    </div>
+    <div class="funnel-row">
+      <span class="fstep" style="background:rgba(34,197,94,0.15);color:#86efac;">@byirbis com Nicolas como face</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(34,197,94,0.15);color:#86efac;">YouTube IRBIS / Nicolas</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(34,197,94,0.15);color:#86efac;">irbis.com.br/nicolas</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(34,197,94,0.15);color:#86efac;">Aplicação + Call</span>
+    </div>
+    <div class="prós-cons">
+      <div>
+        <div class="pro-list">✓ Usa audiência que já existe no @byirbis<br>✓ Um canal só — menos esforço operacional<br>✓ IRBIS ganha autoridade via seu rosto<br>✓ Página dentro do irbis.com.br faz sentido</div>
+      </div>
+      <div>
+        <div class="con-list">✗ Marca pessoal presa ao IRBIS<br>✗ Precisa pivô de conteúdo no @byirbis<br>✗ Menor diferenciação vs "estúdio genérico"</div>
+      </div>
+    </div>
+    <p class="note">Você aparece como "Nicolas Cunha, founder do IRBIS" — credibilidade do estúdio + rosto humano. Menos trabalho, mais rápido de lançar.</p>
+  </div>
+
+  <!-- OPÇÃO C -->
+  <div class="op op-c option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="op-header">
+      <span class="badge badge-c">C</span>
+      <span class="op-title">Instagram pessoal + IRBIS YouTube — híbrido</span>
+    </div>
+    <div class="funnel-row">
+      <span class="fstep" style="background:rgba(251,146,60,0.15);color:#fdba74;">@nicolascunha (IG novo)</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(251,146,60,0.15);color:#fdba74;">YouTube IRBIS com Nicolas</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(251,146,60,0.15);color:#fdba74;">irbis.com.br/nicolas</span>
+      <span class="arrow">→</span>
+      <span class="fstep" style="background:rgba(251,146,60,0.15);color:#fdba74;">Aplicação + Call</span>
+    </div>
+    <div class="prós-cons">
+      <div>
+        <div class="pro-list">✓ Instagram pessoal desvinculado do estúdio<br>✓ YouTube aproveita a marca IRBIS<br>✓ Flexibilidade futura</div>
+      </div>
+      <div>
+        <div class="con-list">✗ Dois handles diferentes — confunde audiência<br>✗ Complexidade sem benefício claro<br>✗ Pior dos dois mundos em vez do melhor</div>
+      </div>
+    </div>
+    <p class="note">Não recomendado — divide atenção e audiência sem ganho real de nenhum lado.</p>
+  </div>
+
+</div>
