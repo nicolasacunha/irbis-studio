@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mapa da Call — IRBIS</title>
+<style>
+  :root{
+    --bg:#0e0e11; --panel:rgba(14,14,17,.92); --node:#1b1c22; --node-bd:#2a2b33;
+    --text:#ececf1; --muted:#8a8b94; --red:#e11d2e;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;}
+  body{padding-bottom:60px;}
+
+  /* ---------- header ---------- */
+  #hd{position:sticky;top:0;z-index:50;background:var(--panel);backdrop-filter:blur(12px);
+    border-bottom:1px solid #222;padding:max(10px,env(safe-area-inset-top)) 14px 10px;}
+  #hd .row{display:flex;align-items:center;gap:10px;}
+  #hd .brand{font-weight:900;font-size:13px;letter-spacing:.1em;}
+  #hd .brand em{color:var(--red);font-style:normal;}
+  #seg{margin-left:auto;display:flex;background:#17181d;border:1px solid #2c2d36;border-radius:999px;padding:3px;}
+  #seg button{border:0;background:transparent;color:#9a9ba4;font-size:12px;font-weight:700;
+    padding:6px 14px;border-radius:999px;cursor:pointer;}
+  #seg button.on{background:var(--red);color:#fff;}
+
+  /* ---------- breadcrumbs ---------- */
+  #crumbs{display:flex;gap:6px;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:none;}
+  #crumbs::-webkit-scrollbar{display:none;}
+  .crumb{flex:0 0 auto;font-size:11.5px;font-weight:700;color:#cfd0d8;background:#17181d;
+    border:1px solid #2c2d36;border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap;}
+  .crumb.here{border-color:var(--cc,#555);color:var(--cc,#fff);}
+  .crumb .x{opacity:.55;margin-right:4px;}
+
+  /* ---------- map (drill) ---------- */
+  #map{max-width:680px;margin:0 auto;padding:14px 14px 30px;}
+  #wrap{position:relative;}
+  #lines{position:absolute;inset:0;pointer-events:none;z-index:0;}
+
+  #focus{position:relative;z-index:1;display:inline-block;max-width:100%;
+    background:#000;border:2px solid var(--cc,var(--red));border-radius:16px;
+    padding:14px 18px;margin:6px 0 18px;box-shadow:0 0 0 6px color-mix(in srgb,var(--cc,var(--red)) 12%,transparent),0 8px 30px rgba(0,0,0,.5);}
+  #focus small{display:block;font-size:9.5px;letter-spacing:.28em;color:var(--cc,var(--red));font-weight:800;margin-bottom:5px;}
+  #focus .t{font-size:18px;font-weight:900;letter-spacing:.04em;line-height:1.3;}
+  #focus.fala .t{font-weight:600;font-size:16px;letter-spacing:0;}
+
+  .card{position:relative;z-index:1;margin:0 0 12px 34px;border-radius:14px;cursor:pointer;
+    animation:in .35s cubic-bezier(.2,.8,.3,1) both;}
+  @keyframes in{from{opacity:0;transform:translateX(14px);}to{opacity:1;transform:none;}}
+  .card .inner{display:flex;align-items:center;gap:10px;}
+  .card.f .inner{background:var(--node);border:1px solid var(--node-bd);border-left:4px solid var(--cc);
+    border-radius:14px;padding:13px 14px;box-shadow:0 2px 12px rgba(0,0,0,.35);}
+  .card.f .txt{font-size:15.5px;line-height:1.5;}
+  .card.f .txt::before{content:"\201C";color:var(--cc);font-weight:900;}
+  .card.f .txt::after{content:"\201D";color:var(--cc);font-weight:900;}
+  .card.l .inner{background:color-mix(in srgb,var(--cc) 10%,#141519);border:1px solid color-mix(in srgb,var(--cc) 35%,#222);
+    border-radius:14px;padding:14px;}
+  .card.l .txt{font-size:15px;font-weight:800;color:var(--cc);letter-spacing:.02em;line-height:1.35;}
+  .card.n .inner{border:1.5px dashed #3a3b45;border-radius:12px;padding:10px 13px;}
+  .card.n .txt{font-size:12px;font-weight:700;font-style:italic;color:var(--muted);letter-spacing:.05em;line-height:1.45;}
+  .card .meta{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:7px;}
+  .badge{min-width:24px;height:24px;border-radius:999px;border:2px solid var(--cc);color:var(--cc);
+    display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;padding:0 5px;}
+  .chev{color:var(--cc);font-size:18px;font-weight:900;}
+  .card.done{opacity:.38;}
+  .sub{font-size:10px;color:#6f7078;letter-spacing:.18em;font-weight:800;margin:2px 0 10px 34px;}
+
+  /* ---------- cola (linear) ---------- */
+  #cola{max-width:680px;margin:0 auto;padding:6px 14px 40px;display:none;}
+  .sec{position:sticky;top:56px;z-index:5;margin:22px 0 10px;display:flex;align-items:center;gap:10px;
+    background:var(--bg);padding:8px 0;}
+  .sec .dot{width:12px;height:12px;border-radius:50%;background:var(--cc);box-shadow:0 0 14px var(--cc);}
+  .sec .t{font-size:15px;font-weight:900;letter-spacing:.08em;color:var(--cc);}
+  .sec .line{flex:1;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--cc),transparent);}
+  .gl{font-size:12.5px;font-weight:800;color:var(--cc);opacity:.9;letter-spacing:.04em;margin:14px 0 8px;}
+  .gl.g2{margin-left:14px;opacity:.75;}
+  .gl.g3{margin-left:28px;opacity:.6;}
+  #cola .card{margin-left:0;animation:none;}
+  #cola .ind2{margin-left:14px;}
+  #cola .ind3{margin-left:28px;}
+
+  #hint{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:40;
+    background:var(--panel);border:1px solid #26272e;color:var(--muted);font-size:11px;
+    padding:6px 14px;border-radius:999px;backdrop-filter:blur(8px);white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<div id="hd">
+  <div class="row">
+    <div class="brand">IRBIS<em>.</em>&nbsp; CALL · 45 MIN</div>
+    <div id="seg">
+      <button id="mMap" class="on">Mapa</button>
+      <button id="mCola">Cola</button>
+    </div>
+  </div>
+  <div id="crumbs"></div>
+</div>
+
+<div id="map"><div id="wrap"><svg id="lines"></svg><div id="content"></div></div></div>
+<div id="cola"></div>
+<div id="hint">toque num ramo para entrar · toque numa fala para marcar como dita</div>
+
+<script>
+"use strict";
+/* ---------- DATA ----------
+   f = fala literal · l = grupo · n = instrução de conduta */
+const F=(t,c)=>({k:"f",t,c}), L=(t,c)=>({k:"l",t,c}), N=t=>({k:"n",t});
+
+const DATA = {k:"root", t:"CALL IRBIS · 45 MIN", c:[
+
+ {k:"b", t:"INTRO", time:"0–5 min", color:"#A78BFA", c:[
+   N("RAPPORT É DEVER DE CASA, NÃO PUXA-SACO — SEM OBSERVAÇÃO REAL, VAI DIRETO AO PACTO"),
+   F("Vi seu site antes da call. [observação específica da auditoria]."),
+   F("Vi que você atua com [área] — [conexão real, se existir]."),
+   F("Se eu olhar pra baixo durante a conversa, é porque estou anotando o que você fala. Combinado?"),
+   L("Pacto de transição",[
+     F("[Nome], deixa eu te explicar como funciona essa conversa. Primeiro eu quero entender seu negócio — onde o site está travando o crescimento. Depois te mostro como eu resolvo isso e exatamente o que você recebe. E no final eu te apresento o investimento."),
+     F("Eu não vou tentar te empurrar nada. Mas no final eu vou te pedir uma resposta: sim ou não. Os dois são respostas boas. Combinado?")
+   ])
+ ]},
+
+ {k:"b", t:"AUTORIDADE", time:"5–7 min", color:"#60A5FA", c:[
+   N("MÁXIMO 2 MIN — AUTORIDADE NÃO SE ESTICA, SE PROVA E SEGUE"),
+   F("Prazer, IRBIS. Eu faço só sites — landing page, institucional, e-commerce. Mais nada. Foco é uma decisão: quem faz de tudo não é referência em nada."),
+   F("Você fala direto com quem pensa e executa. Sem camadas, sem telefone sem fio."),
+   F("Antes de qualquer promessa, números: [EForce · Adash · Odery]. A pergunta dessa call é: qual vai ser o seu número?"),
+   N("ATENÇÃO: NÚMEROS DOS CASES EM REVISÃO — CONFIRMAR ANTES DE AFIRMAR")
+ ]},
+
+ {k:"b", t:"SPIN", time:"7–20 min", color:"#34D399", c:[
+   L("Situação",[
+     F("Como o cliente chega até você hoje? Quanto disso vem do digital?"),
+     F("Tem site no ar? Quem fez? Quem consegue mexer nele hoje?"),
+     F("Roda tráfego pago? Quanto investe por mês?"),
+     F("Qual a meta de faturamento pros próximos 12 meses?")
+   ]),
+   L("Problema",[
+     F("O que te fez aceitar essa conversa?"),
+     F("Qual o maior travamento do site hoje — ou da falta dele?"),
+     N("AVANÇAR PELOS SLIDES DAS 6 DORES E PARAR NA QUE ELE CITOU"),
+     F("Me fala se isso faz sentido pra você hoje."),
+     F("Dessas seis, quantas são suas?")
+   ]),
+   L("Implicação",[
+     F("Quantos leads ou vendas você estima que perde por mês por causa disso?"),
+     N("ANOTAR O NÚMERO — VOLTA NA ANCORAGEM E NO FECHAMENTO"),
+     F("Cada clique pago que cai numa página fraca custa quanto?"),
+     F("Se nada mudar nos próximos 6 meses, o que acontece com a meta que você me falou?")
+   ]),
+   L("Necessidade",[
+     F("Se o site virasse seu melhor vendedor — rodando 24h, sem depender de ninguém — o que mudaria na sua operação?"),
+     F("De 0 a 10, quão urgente é resolver isso agora?"),
+     L("Se nota < 7",[ F("O que faria isso virar um 9?") ])
+   ]),
+   L("Pacto de apresentação",[
+     F("Então olha o que você me disse: não é o tráfego, não é o produto, não é falta de esforço."),
+     F("[Nome], com base nisso — faz sentido eu te mostrar como você sai de [situação atual] para [objetivo]?"),
+     F("No final você me dá um sim ou um não. Fechado?")
+   ])
+ ]},
+
+ {k:"b", t:"PITCH", time:"20–33 min", color:"#FBBF24", c:[
+   F("O que resolve isso não é esforço. É estrutura."),
+   L("Método — 5 fases, conectar com o SPIN",[
+     N("ESCUTA → DIAGNÓSTICO → ESTRATÉGIA → EXECUÇÃO → RITUAL"),
+     F("Fase 2 é diagnóstico — exatamente isso que você me falou do [dor dele]. A gente acha onde está vazando com dado, não com achismo."),
+     F("A estratégia é minha. A execução é amplificada. O que leva semanas numa agência, aqui leva dias. IA como alavanca, não muleta.")
+   ]),
+   L("Micro-confirmação obrigatória",[ F("Faz sentido esse cenário até aqui?") ]),
+   L("4 pilares — ler só o “na prática”",[
+     L("01 · Estratégia & copy",[ F("A visita entende em segundos o que você faz — e o que fazer em seguida.") ]),
+     L("02 · Design & identidade",[ F("Um site no nível do negócio que você construiu, não um template com seu logo. Respeito nos primeiros 5 segundos — antes de qualquer reunião.") ]),
+     L("03 · Tecnologia & performance",[ F("Rápido, estável, pronto pra escalar tráfego sem cair. Ninguém desiste esperando carregar — e o Google repara nisso.") ]),
+     L("04 · Conversão & dados",[ F("Cada clique vira informação, cada informação vira decisão. Você sabe o que funciona — e investe onde dá retorno.") ])
+   ]),
+   L("Entregáveis — preto no branco",[
+     F("Site no ar — publicado, testado, funcionando. Não um arquivo de Figma."),
+     F("Código e acessos seus desde o dia 1, analytics configurado, guia de edição. Tudo é seu. Eu não crio dependência.")
+   ]),
+   L("Prazo",[
+     F("Landing page em 1–2 semanas. Site institucional em 2–3. E-commerce, a primeira conversa define a estimativa real. Prazo fechado antes de começar.")
+   ]),
+   L("Suporte",[
+     F("Checkpoint semanal, WhatsApp direto, resposta em horas. Quem responde é quem executa — sem ticket, sem fila, sem gerente de conta."),
+     F("Depois do ar: lançamento assistido — acompanho os primeiros dias com dado real.")
+   ]),
+   L("Cases — escolher 1 ou 2, o mais parecido",[
+     N("EFORCE: LANÇAMENTO MARCADO, SITE QUE NÃO SEGURAVA → SITE COMPLETO EM SEMANAS → +500 VENDAS"),
+     N("ADASH: OPERAÇÃO EM PLANILHAS, CICLOS DE DIAS → PLATAFORMA NO PROCESSO REAL → DIAS VIRARAM HORAS"),
+     N("ODERY: CLIENTE COMPRAVA 1X E SUMIA → LANDING DE RETENÇÃO → LTV 1,8X"),
+     N("CONTEXTO → AÇÃO → RESULTADO · 1 MINUTO CADA")
+   ]),
+   L("Transição pra oferta",[
+     F("De tudo que você viu até aqui, o que é mais urgente pra você hoje?"),
+     F("De 0 a 10, quanto isso impacta seu negócio agora?")
+   ])
+ ]},
+
+ {k:"b", t:"ANCORAGEM", time:"33–38 min", color:"#F472B6", c:[
+   F("Antes do número, uma distinção: preço é o que você paga uma vez. Valor é o que o site devolve todo mês. Vamos olhar o valor primeiro."),
+   L("Bônus — apresentar antes do stack",[
+     F("Setup de dados: analytics e eventos de conversão configurados e testados antes do ar."),
+     F("30 dias de ajustes pós-lançamento, inclusos. O site real encontra o usuário real — e a gente ajusta com dado, não com opinião."),
+     F("Kit de lançamento: favicon, imagens de compartilhamento, assets prontos pra anúncio e social."),
+     F("Treinamento de edição: vídeo mostrando como alterar textos, imagens e páginas. Seu time edita no dia seguinte.")
+   ]),
+   L("Stack na tela — tudo que entra",[
+     N("4 PILARES + SUPORTE DIRETO + SETUP DE DADOS + 30 DIAS DE AJUSTES + KIT + TREINAMENTO"),
+     F("Isso não é extra. Isso faz parte da conta.")
+   ]),
+   F("A pergunta não é quanto custa o site. É quanto custa continuar sem ele. Você me disse que perde [implicação]. Esse é o preço de não decidir.")
+ ]},
+
+ {k:"b", t:"FECHAMENTO", time:"38–50 min", color:"#F87171", c:[
+   L("Pré-close",[
+     F("Tirando os valores da equação — isso resolve o seu problema?"),
+     N("SÓ APRESENTE O NÚMERO DEPOIS DO SIM"),
+     L("Se vier “depende”",[ F("Depende do quê?") ])
+   ]),
+   L("Número",[
+     F("Você me disse que [dor], que isso custa [implicação] por mês, e que resolver é prioridade [nota] de 10. Pra esse escopo, o investimento é R$ [X]."),
+     N("SILÊNCIO — QUEM FALA PRIMEIRO NÃO É VOCÊ"),
+     N("EXPLICAR 1X. NUNCA JUSTIFICAR DE NOVO.")
+   ]),
+   F("Se a condição encaixar pra você, fechamos hoje — e seu briefing acontece ainda essa semana. Fechado?"),
+   L("Urgência — só se for verdade",[
+     F("Eu pego um projeto por vez — atenção total. A agenda fecha quando lotada. Hoje ela está [status real]."),
+     N("ESCASSEZ FABRICADA QUEBRA A MARCA")
+   ]),
+   L("Indicação (depois da decisão, fechando ou não)",[
+     F("Última coisa: se essa conversa te ajudou a enxergar o problema, quem você conhece que está com o site travando o negócio? Me apresenta que eu faço a mesma análise pra ele.")
+   ])
+ ]},
+
+ {k:"b", t:"OBJEÇÕES", time:"quando aparecer", color:"#2DD4BF", c:[
+   L("Passo universal",[
+     N("1 DESPRESSURIZAR → 2 AMARRAR → 3 ISOLAR → 4 CONFIRMAR 2X → 5 LIDAR → 6 AVANÇAR"),
+     F("Tirando isso, você está 100% dentro?"),
+     F("Então, resolvendo isso, a gente fecha?"),
+     L("Se hesitar no “tirando isso”",[
+       N("A OBJEÇÃO DECLARADA NÃO É A REAL"),
+       F("O que mais está pesando?")
+     ])
+   ]),
+   L("“Preciso pensar”",[
+     F("Claro. O que costuma ajudar a decidir — é o escopo, o valor ou o timing?"),
+     F("De 0 a 10, quão seguro você está de que isso é o que o negócio precisa?"),
+     F("O que falta pra ser 10?"),
+     F("Então, se [X] estivesse resolvido, você fecharia?"),
+     N("SILÊNCIO"),
+     L("Prova ao vivo, não promessa",[
+       F("Deixa eu te mostrar na prática."),
+       N("COMPARTILHAR TELA: 2–3 PROBLEMAS REAIS DO SITE DELE + CASE PARECIDO + PROCESSO")
+     ])
+   ]),
+   L("“Tá caro”",[
+     F("Tirando o investimento, você está 100% dentro?"),
+     F("Então é só condição. Você está aberto a encontrar uma forma de viabilizar?"),
+     F("O que caberia hoje sem comprometer o caixa?"),
+     F("Não faz sentido te apertar. Também não faz sentido você continuar perdendo [implicação] todo mês."),
+     F("Dois caminhos: entrada de [X] e saldo parcelado — ou começamos pela landing page e o site completo entra na sequência, com a primeira fase pagando a segunda. Qual faz mais sentido?"),
+     N("NUNCA BAIXAR PREÇO SEM CORTAR ESCOPO — “ADAPTO O ESCOPO, NÃO O PADRÃO”")
+   ]),
+   L("“Preciso falar com meu sócio”",[
+     N("REGRA: DECISOR SE MAPEIA NO AGENDAMENTO — “QUEM MAIS PARTICIPA DA DECISÃO? TRAZ ELE JUNTO.”"),
+     F("Faz sentido. Se dependesse só de você, você fecharia?"),
+     F("Então o que falta é o seu sócio ter o contexto que você acabou de ter. Faço 15 minutos com vocês dois ainda essa semana — quinta ou sexta?"),
+     N("SE O “SÓ DE MIM” FOR NÃO → O SÓCIO NÃO É A OBJEÇÃO REAL. VOLTAR AO PASSO UNIVERSAL"),
+     L("Se pedir o preço pro sócio",[
+       F("Se fosse só número, eu te mandava por mensagem. Mas número sem contexto vira só custo — e ele vai comparar com o sobrinho que faz site. Traz ele pra 15 minutos que eu apresento inteiro.")
+     ])
+   ]),
+   L("“Não vou fechar hoje”",[
+     F("Se o investimento não fosse questão, você faria?"),
+     F("Por quê?"),
+     N("DEIXA ELE VENDER PRA SI MESMO"),
+     F("Você me disse que perde [implicação] por mês. O lead que saiu não volta — ele fechou com o concorrente. Qual o risco maior: decidir agora ou continuar pagando esse custo todo mês?"),
+     F("Então qual decisão você precisa tomar hoje?")
+   ]),
+   L("“E se não funcionar?”",[
+     F("O que exatamente está te deixando inseguro?"),
+     N("ISOLAR: PRAZO, QUALIDADE OU RESULTADO"),
+     L("Prazo",[ F("Prazo definido antes de começar. Checkpoint toda semana — você vê o avanço, sem sumiço, sem surpresa.") ]),
+     L("Qualidade",[ F("Esse é o padrão que entra em todo projeto — olha os cases e os estudos de design.") ]),
+     L("Resultado",[ F("Site não é aposta — é o ativo mais mensurável do negócio. Analytics desde o dia 1, 30 dias de ajuste com dado real. A gente não torce, a gente mede e corrige.") ]),
+     F("E tudo é seu desde o primeiro dia: código, acessos, arquivos. Se amanhã você quiser seguir sem mim, você consegue. Eu não crio dependência — não preciso.")
+   ]),
+   L("“Já tenho quem faz”",[
+     F("Há quanto tempo com eles?"),
+     F("E o site atual entrega [meta que ele falou]?"),
+     F("Se em [X] meses o caminho atual não te levou aí, manter o mesmo caminho te leva no próximo nível?"),
+     F("Você não precisa demitir ninguém. O site sai com guia de edição — seu time continua tocando o dia a dia. Eu entro pra construir a estrutura, não pra virar dependência.")
+   ]),
+   L("“Tenho outras prioridades”",[
+     F("Me fala quais."),
+     F("Qual dessas prioridades não passa pelo site? Tráfego aterrissa no site. Cliente novo pesquisa o site antes da reunião. Lançamento precisa de página que segura o peso. O site não concorre com as suas prioridades — ele é a infraestrutura delas."),
+     N("SILÊNCIO"),
+     F("Se você continuar decidindo com o cenário atual, onde o negócio está daqui 1 ano?")
+   ]),
+   L("“Quanto custa?” (antes da call)",[
+     F("Depende do escopo. Me fala o que você precisa e te dou um número real, não um “a partir de”."),
+     L("Se insistir sem contexto",[
+       F("Número sem escopo é chute — e eu não chuto. 20 minutos de conversa e você sai com número e prazo reais. Te mando dois horários?")
+     ])
+   ])
+ ]},
+
+ {k:"b", t:"PRÉ & PÓS-CALL", time:"ritual", color:"#94A3B8", c:[
+   L("Checklist pré-call",[
+     N("SITE DO PROSPECT AUDITADO NO DIA DA CALL"),
+     N("1 OBSERVAÇÃO ESPECÍFICA ANOTADA PRO RAPPORT"),
+     N("CASE MAIS PARECIDO COM O CENÁRIO DELE ESCOLHIDO"),
+     N("FAIXA DE PREÇO DEFINIDA PRO ESCOPO PROVÁVEL"),
+     N("DECK ABERTO E TESTADO · GRAVAÇÃO LIGADA"),
+     N("STATUS REAL DA AGENDA CONFIRMADO (SLIDE 1 VAGA)")
+   ]),
+   L("Pós-call",[
+     L("Fechou",[ N("TERMO DE ACEITE + AGENDAMENTO DO BRIEFING NO MESMO DIA") ]),
+     L("Quente, não fechou",[
+       N("PROPOSTA POR ESCRITO EM ATÉ 24H"),
+       F("Esse é o projeto. Quando quiser começar, é só falar.")
+     ]),
+     L("Sumiu depois da proposta — D+4",[
+       F("[Nome], a proposta segue aberta. Se quiser ajustar algo, pode falar. Se o timing mudou, tudo bem também — só me avisa.")
+     ]),
+     L("Não é o momento",[
+       F("Sem problema. Posso te mandar um exemplo do que entrego em 5 minutos de leitura, só pra ficar na memória quando a hora chegar?"),
+       N("SE SIM → MANDAR O CASE EFORCE")
+     ]),
+     N("REVISAR GRAVAÇÃO: TIMING REAL VS TABELA — DESVIO RECORRENTE = PONTO DE TREINO")
+   ])
+ ]},
+
+ {k:"b", t:"REGRAS DA CASA", time:"sempre", color:"#E5C07B", c:[
+   L("Princípios da call",[
+     N("TIMING É MATURIDADE COMERCIAL — CRONOMETRAR TODA CALL"),
+     N("PROBLEMA ANTES DA SOLUÇÃO. SEMPRE."),
+     N("O DECK CONDUZ, VOCÊ CONVERSA — ELE OLHA PRA VOCÊ, NÃO PRO SLIDE"),
+     N("ANOTAR AS PALAVRAS DELE — REPETIR AS PALAVRAS DELE, NÃO AS SUAS"),
+     N("NÃO PASSAR DE 50 MIN SEM DECISÃO EXPLÍCITA NA MESA")
+   ]),
+   L("Princípios de objeção",[
+     N("NUNCA INTERROMPER O CLIENTE"),
+     N("VALIDAR ANTES DE RESPONDER — SEM CONFRONTO DIRETO"),
+     N("PERGUNTA CONDUZ, IMPOSIÇÃO TRAVA"),
+     N("OBJEÇÃO É INFORMAÇÃO, NÃO ATAQUE"),
+     N("SILÊNCIO É FERRAMENTA")
+   ]),
+   L("Objeção = diagnóstico da call",[
+     N("“PRECISO PENSAR” → IMPLICAÇÃO FRACA NO SPIN — A DOR NÃO DOEU"),
+     N("“TÁ CARO” → ANCORAGEM FRACA — NÚMERO CHEGOU ANTES DO VALOR"),
+     N("“SÓCIO” → DECISOR NÃO MAPEADO NO AGENDAMENTO"),
+     N("“SERÁ QUE FUNCIONA?” → AUTORIDADE E CASES MAL USADOS NO PITCH"),
+     N("OBJEÇÃO RECORRENTE = ETAPA PRA TREINAR")
+   ]),
+   L("Nunca na call",[
+     N("ENTUSIASMO DE PALCO (“MELHOR DIA DA MINHA VIDA”)"),
+     N("“ESTOU À DISPOSIÇÃO” · “PARCERIA” · “SOLUÇÕES PERSONALIZADAS” · “METODOLOGIA ÁGIL”"),
+     N("PEDIR DESCULPA POR PREÇO, FOLLOW-UP OU SILÊNCIO"),
+     N("JUSTIFICAR O PREÇO MAIS DE UMA VEZ"),
+     N("PROMETER FORA DO ESCOPO — A IRBIS FAZ SÓ SITES")
+   ]),
+   L("Mindset do closer",[
+     N("ESPERE OBJEÇÕES — SURPRESA É FALTA DE PREPARO"),
+     N("NÃO REAJA EMOCIONALMENTE"),
+     N("TOM CALMO E FIRME — A IRBIS NÃO CONVENCE NO GRITO, CONDUZ NO CRITÉRIO"),
+     N("DESAPEGO SELETIVO — “NÃO” HONESTO VALE MAIS QUE “SIM” ARRANCADO")
+   ]),
+   N("OBJEÇÃO NÃO SE COMBATE, SE CONDUZ. QUEM ARGUMENTA PERDE. QUEM CONDUZ, FECHA.")
+ ]}
+]};
+
+/* ---------- index ---------- */
+const ALL=[];
+(function walk(n,depth,color,parent){
+  n.id=ALL.length;n.depth=depth;n.parent=parent;
+  n.color=n.color||color||"#e11d2e";
+  ALL.push(n);(n.c||[]).forEach(ch=>walk(ch,depth+1,n.color,n));
+})(DATA,0,null,null);
+const byId=id=>ALL[id];
+const countDesc=n=>{let c=0;(n.c||[]).forEach(k=>{c+=1+countDesc(k);});return c;};
+const said=new Set();
+
+/* ---------- els ---------- */
+const crumbsEl=document.getElementById("crumbs");
+const contentEl=document.getElementById("content");
+const lines=document.getElementById("lines");
+const wrap=document.getElementById("wrap");
+const mapEl=document.getElementById("map");
+const colaEl=document.getElementById("cola");
+let focusId=0;
+
+/* ---------- mapa (drill) ---------- */
+function shortT(n){return n.k==="root"?"CALL":n.t.replace(/[“”]/g,"").split("—")[0].trim();}
+
+function renderCrumbs(){
+  crumbsEl.innerHTML="";
+  const chain=[];let n=byId(focusId);
+  while(n){chain.unshift(n);n=n.parent;}
+  chain.forEach((c,i)=>{
+    const b=document.createElement("div");
+    b.className="crumb"+(i===chain.length-1?" here":"");
+    b.style.setProperty("--cc",c.color);
+    b.innerHTML=(i>0?'<span class="x">›</span>':"")+shortT(c);
+    b.onclick=()=>{if(c.id!==focusId)go(c.id);};
+    crumbsEl.appendChild(b);
+  });
+  crumbsEl.scrollLeft=crumbsEl.scrollWidth;
+}
+
+function cardFor(n,i,inMap){
+  const d=document.createElement("div");
+  d.className="card "+(n.k==="b"?"l":n.k)+(said.has(n.id)?" done":"");
+  d.style.setProperty("--cc",n.color);
+  if(inMap)d.style.animationDelay=(Math.min(i,12)*45)+"ms";
+  const kids=n.c&&n.c.length;
+  d.innerHTML=`<div class="inner"><div class="txt"></div>
+    <div class="meta">${kids?`<div class="badge">${countDesc(n)}</div><div class="chev">›</div>`:""}</div></div>`;
+  d.querySelector(".txt").textContent=(n.k==="b"&&n.time)?(n.t+" · "+n.time):n.t;
+  d.onclick=()=>{
+    if(kids)go(n.id);
+    else{said.has(n.id)?said.delete(n.id):said.add(n.id);d.classList.toggle("done");}
+  };
+  return d;
+}
+
+function renderMap(){
+  renderCrumbs();
+  const f=byId(focusId);
+  contentEl.innerHTML="";
+
+  const fo=document.createElement("div");
+  fo.id="focus";fo.style.setProperty("--cc",f.color);
+  if(f.k==="f")fo.classList.add("fala");
+  fo.innerHTML=`<small></small><div class="t"></div>`;
+  fo.querySelector("small").textContent=f.k==="root"?"IRBIS · ESTÚDIO DIGITAL":(f.parent&&f.parent.k!=="root"?shortT(f.parent):"ETAPA");
+  fo.querySelector(".t").textContent=f.t+(f.time?" · "+f.time:"");
+  contentEl.appendChild(fo);
+
+  const lbl=document.createElement("div");lbl.className="sub";
+  lbl.textContent=f.k==="root"?((f.c||[]).length+" RAMOS — TOQUE PRA ENTRAR"):"RAMOS";
+  contentEl.appendChild(lbl);
+
+  (f.c||[]).forEach((k,i)=>contentEl.appendChild(cardFor(k,i,true)));
+  requestAnimationFrame(draw);
+}
+
+function draw(){
+  const fo=document.getElementById("focus");
+  if(!fo)return;
+  const W=wrap.offsetWidth,H=wrap.offsetHeight;
+  lines.setAttribute("width",W);lines.setAttribute("height",H);
+  lines.style.width=W+"px";lines.style.height=H+"px";
+  while(lines.firstChild)lines.removeChild(lines.firstChild);
+  const bx=fo.offsetLeft+26, by=fo.offsetTop+fo.offsetHeight;
+  document.querySelectorAll("#content .card").forEach(c=>{
+    const cy=c.offsetTop+Math.min(c.offsetHeight/2,30), cx=c.offsetLeft;
+    const col=getComputedStyle(c).getPropertyValue("--cc").trim()||"#888";
+    const p=document.createElementNS("http://www.w3.org/2000/svg","path");
+    p.setAttribute("d",`M ${bx} ${by} C ${bx} ${by+(cy-by)*.55}, ${bx} ${cy}, ${cx} ${cy}`);
+    p.setAttribute("fill","none");p.setAttribute("stroke",col);
+    p.setAttribute("stroke-width",3.5);p.setAttribute("stroke-linecap","round");
+    p.setAttribute("stroke-opacity",.85);
+    lines.appendChild(p);
+  });
+}
+
+function go(id){
+  focusId=id;renderMap();
+  scrollTo({top:0,behavior:"smooth"});
+}
+
+/* ---------- cola (linear) ---------- */
+function renderCola(){
+  colaEl.innerHTML="";
+  DATA.c.forEach(b=>{
+    const s=document.createElement("div");s.className="sec";s.style.setProperty("--cc",b.color);
+    s.innerHTML=`<div class="dot"></div><div class="t"></div><div class="line"></div>`;
+    s.querySelector(".t").textContent=b.t+" · "+b.time;
+    colaEl.appendChild(s);
+    (function emit(n,lvl){
+      (n.c||[]).forEach(k=>{
+        if(k.k==="l"){
+          const g=document.createElement("div");
+          g.className="gl"+(lvl>=2?" g3":lvl===1?" g2":"");
+          g.style.setProperty("--cc",k.color);
+          g.textContent="↳ "+k.t;colaEl.appendChild(g);
+          emit(k,lvl+1);
+        }else{
+          const c=cardFor(k,0,false);
+          if(lvl===1)c.classList.add("ind2");
+          if(lvl>=2)c.classList.add("ind3");
+          colaEl.appendChild(c);
+        }
+      });
+    })(b,0);
+  });
+}
+
+/* ---------- modos ---------- */
+const bMap=document.getElementById("mMap"),bCola=document.getElementById("mCola");
+function mode(m){
+  bMap.classList.toggle("on",m==="map");bCola.classList.toggle("on",m==="cola");
+  mapEl.style.display=m==="map"?"block":"none";
+  colaEl.style.display=m==="cola"?"block":"none";
+  crumbsEl.style.display=m==="map"?"flex":"none";
+  document.getElementById("hint").textContent=m==="map"
+    ?"toque num ramo para entrar · toque numa fala para marcar como dita"
+    :"script corrido — toque numa fala para marcar como dita";
+  if(m==="map")requestAnimationFrame(draw);
+}
+bMap.onclick=()=>mode("map");
+bCola.onclick=()=>mode("cola");
+addEventListener("resize",()=>{if(mapEl.style.display!=="none")draw();});
+
+renderCola();
+renderMap();
+mode("map");
+</script>
+</body>
+</html>

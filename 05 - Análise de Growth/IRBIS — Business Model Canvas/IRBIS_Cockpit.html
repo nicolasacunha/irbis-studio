@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRBIS — Cockpit Operacional</title>
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #14141a;
+    --surface-2: #1c1c24;
+    --border: #2a2a35;
+    --border-soft: #1f1f28;
+    --text: #e8e6dd;
+    --text-soft: #8a8580;
+    --text-mute: #5c5953;
+    --amber: #d4a574;
+    --amber-soft: #b08a5a;
+    --sage: #7a9a76;
+    --terra: #c9645a;
+    --gold: #c9a565;
+    --blue-soft: #6e89a8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Text', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 28px 80px; }
+  header.top {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  .brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .brand h1 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+    color: var(--amber);
+  }
+  .brand h1 .dot { color: var(--text); }
+  .brand .sub {
+    color: var(--text-soft);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  .stamp {
+    text-align: right;
+    color: var(--text-mute);
+    font-size: 12px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+  }
+  .stamp .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--sage); margin-right: 6px; vertical-align: middle; }
+  blockquote.manifesto {
+    margin: 28px 0 0;
+    padding: 18px 22px;
+    background: var(--surface);
+    border-left: 3px solid var(--amber);
+    border-radius: 2px;
+    font-size: 15px;
+    color: var(--text);
+    font-style: italic;
+  }
+  blockquote.manifesto strong { color: var(--amber); font-style: normal; }
+
+  nav.tabs {
+    display: flex;
+    gap: 2px;
+    margin: 28px 0 32px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  nav.tabs button {
+    background: transparent;
+    border: none;
+    color: var(--text-soft);
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  nav.tabs button:hover { color: var(--text); }
+  nav.tabs button.active { color: var(--amber); border-bottom-color: var(--amber); }
+
+  section.tab { display: none; }
+  section.tab.active { display: block; animation: fade 0.2s ease-out; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  h2 + .lede { color: var(--text-soft); margin: 0 0 28px; font-size: 14px; }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 32px 0 14px;
+    color: var(--amber);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text); }
+  p { margin: 8px 0; }
+
+  /* ============ HOJE — Quadro 2x2 ============ */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 8px 0 32px;
+  }
+  .grid-2 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 18px 20px; }
+  .grid-2 .card h4 {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .grid-2 .card.tem h4 { color: var(--sage); }
+  .grid-2 .card.naotem h4 { color: var(--terra); }
+  .grid-2 .card.vaimudar h4 { color: var(--gold); }
+  .grid-2 .card.naovaimudar h4 { color: var(--blue-soft); }
+  .grid-2 .card ul { list-style: none; margin: 0; padding: 0; }
+  .grid-2 .card li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 14px;
+    color: var(--text);
+  }
+  .grid-2 .card li:last-child { border-bottom: none; }
+  .grid-2 .card li small { display: block; color: var(--text-mute); font-size: 12px; margin-top: 2px; }
+
+  /* ============ Métricas atuais ============ */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 8px 0 32px;
+  }
+  .metric {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 16px;
+  }
+  .metric .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-mute); margin-bottom: 6px; }
+  .metric .value { font-size: 22px; font-weight: 600; color: var(--amber); font-family: 'SF Mono', Menlo, Consolas, monospace; }
+  .metric .note { font-size: 12px; color: var(--text-soft); margin-top: 4px; }
+
+  /* ============ Tabela ============ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 22px;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-soft);
+    vertical-align: top;
+  }
+  th {
+    background: var(--surface);
+    color: var(--amber);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  td.num { font-family: 'SF Mono', Menlo, Consolas, monospace; color: var(--amber); white-space: nowrap; }
+  tbody tr:hover { background: var(--surface); }
+
+  /* ============ Cards genéricos ============ */
+  .card-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .card-block h4 { margin-top: 0; }
+  .card-block .meta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-bottom: 12px;
+  }
+  .card-block .meta span strong { color: var(--amber); font-family: 'SF Mono', Menlo, Consolas, monospace; }
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 6px;
+    letter-spacing: 0.02em;
+  }
+  .pill.go { background: rgba(122, 154, 118, 0.15); color: var(--sage); border: 1px solid var(--sage); }
+  .pill.warn { background: rgba(201, 165, 101, 0.15); color: var(--gold); border: 1px solid var(--gold); }
+  .pill.stop { background: rgba(201, 100, 90, 0.15); color: var(--terra); border: 1px solid var(--terra); }
+  .pill.info { background: rgba(110, 137, 168, 0.15); color: var(--blue-soft); border: 1px solid var(--blue-soft); }
+
+  /* ============ Checkbox lists ============ */
+  ul.checklist { list-style: none; padding: 0; margin: 0; }
+  ul.checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  ul.checklist li:last-child { border-bottom: none; }
+  ul.checklist input[type=checkbox] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--text-mute);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 2px;
+    flex-shrink: 0;
+    background: var(--surface);
+    position: relative;
+  }
+  ul.checklist input[type=checkbox]:checked {
+    background: var(--amber);
+    border-color: var(--amber);
+  }
+  ul.checklist input[type=checkbox]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 14px;
+  }
+  ul.checklist li.done .task { text-decoration: line-through; color: var(--text-mute); }
+  ul.checklist li.done .when { color: var(--text-mute); }
+  ul.checklist .task { flex: 1; font-size: 14px; }
+  ul.checklist .task .desc { display: block; color: var(--text-soft); font-size: 12px; margin-top: 3px; }
+  ul.checklist .when {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 11px;
+    color: var(--amber);
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+
+  /* ============ Highlight box ============ */
+  .alert {
+    background: rgba(201, 100, 90, 0.08);
+    border: 1px solid var(--terra);
+    border-left: 4px solid var(--terra);
+    border-radius: 2px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .alert strong { color: var(--terra); }
+  .info-box {
+    background: rgba(110, 137, 168, 0.08);
+    border: 1px solid var(--blue-soft);
+    border-left: 4px solid var(--blue-soft);
+    border-radius: 2px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .calc-box {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: var(--text-soft);
+  }
+  .calc-box strong { color: var(--amber); }
+  .calc-box .total { color: var(--text); font-size: 15px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
+
+  /* ============ Filtros to-do ============ */
+  .filters {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0 20px;
+    flex-wrap: wrap;
+  }
+  .filters button {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    padding: 6px 14px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .filters button:hover { color: var(--text); border-color: var(--amber); }
+  .filters button.active { background: var(--amber); color: var(--bg); border-color: var(--amber); font-weight: 600; }
+
+  /* ============ Progress ============ */
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin: 8px 0 20px;
+    overflow: hidden;
+  }
+  .progress-bar .fill { height: 100%; background: var(--amber); transition: width 0.3s; }
+
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  details { margin: 8px 0; }
+  details summary {
+    cursor: pointer;
+    padding: 8px 0;
+    color: var(--amber);
+    font-size: 13px;
+    font-weight: 500;
+    list-style: none;
+  }
+  details summary::before { content: "▸ "; color: var(--text-mute); }
+  details[open] summary::before { content: "▾ "; }
+  details > div { padding: 8px 0 12px 16px; color: var(--text-soft); font-size: 14px; }
+  details > div ul { padding-left: 20px; }
+  details > div li { margin: 4px 0; }
+
+  /* ============ Responsive ============ */
+  @media (max-width: 760px) {
+    .wrap { padding: 20px 16px 60px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 13px; }
+    th, td { padding: 8px 10px; }
+    .brand h1 { font-size: 24px; }
+    nav.tabs button { padding: 10px 12px; font-size: 13px; }
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-mute);
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<header class="top">
+  <div class="brand">
+    <div>
+      <h1>IRBIS<span class="dot">.</span></h1>
+      <div class="sub">Cockpit Operacional — síntese do Business Model Canvas</div>
+    </div>
+    <div class="stamp">
+      <div><span class="dot"></span>versão maio/2026</div>
+      <div>2 meses operação · 4 leads · 2 fechados</div>
+    </div>
+  </div>
+  <blockquote class="manifesto">
+    A IRBIS rejeita <strong>templates de massa</strong>, <strong>no-code sem propósito</strong> e <strong>produtos prontos</strong> como solução padrão para empresas que precisam crescer com identidade própria. Onde a maioria entrega "rápido e barato", a IRBIS entrega <strong>rápido, sob medida e com método</strong>. Bússola, não muro.
+  </blockquote>
+</header>
+
+<!-- TABS -->
+<nav class="tabs" id="tabs">
+  <button data-tab="hoje" class="active">Hoje</button>
+  <button data-tab="pricing">Precificação</button>
+  <button data-tab="entrega">Entrega</button>
+  <button data-tab="icp">ICPs</button>
+  <button data-tab="decisoes">Decisões</button>
+  <button data-tab="todo">To-Do</button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- TAB 1: HOJE -->
+<!-- ============================================================ -->
+<section class="tab active" id="tab-hoje">
+  <h2>O retrato real da IRBIS hoje</h2>
+  <p class="lede">2 meses de operação. Folha em branco. Reserva &gt; 6 meses. Espaço estratégico real — sem pânico de curto prazo.</p>
+
+  <h3>Métricas baseline (corrigidas)</h3>
+  <div class="metrics">
+    <div class="metric"><div class="label">Leads totais</div><div class="value">4</div><div class="note">2/mês média, 100% indicação</div></div>
+    <div class="metric"><div class="label">Taxa fechamento</div><div class="value">50%</div><div class="note">enviesado · n=4</div></div>
+    <div class="metric"><div class="label">Ticket médio</div><div class="value">R$ 6k</div><div class="note">sem padrão</div></div>
+    <div class="metric"><div class="label">Receita 2m</div><div class="value">R$ 12k</div><div class="note">alta volatilidade</div></div>
+    <div class="metric"><div class="label">LTV/CAC tempo</div><div class="value">1,5x</div><div class="note">abaixo do ideal de 3x</div></div>
+    <div class="metric"><div class="label">Capacidade</div><div class="value">100%</div><div class="note">sócio em delivery</div></div>
+    <div class="metric"><div class="label">Despesas IRBIS</div><div class="value">R$ 1k/m</div><div class="note">ferramentas</div></div>
+    <div class="metric"><div class="label">Contratos</div><div class="value">0</div><div class="note">só proposta + e-mail</div></div>
+  </div>
+
+  <h3>Quadro estratégico</h3>
+  <div class="grid-2">
+    <div class="card tem">
+      <h4>✓ Já temos</h4>
+      <ul>
+        <li>Manifesto interno claro <small>anti-template, customização real, profundidade técnica</small></li>
+        <li>2 cases entregues <small>Baterias (varejo/indústria) + Agência de Growth (digital)</small></li>
+        <li>Reserva &gt; 6 meses <small>espaço para pensar estrategicamente sem pânico</small></li>
+        <li>Stack técnico real <small>código próprio (vibe), CRM/Automação, Dashboards/Design</small></li>
+        <li>Indicação saudável <small>4 leads em 2 meses, taxa de fechamento alta (mas enviesada)</small></li>
+        <li>Advogado de confiança <small>destrava o passo de contrato em 30 dias</small></li>
+        <li>Capacidade full-time <small>35–50h/sem dedicadas à IRBIS</small></li>
+        <li>Diagnóstico de 15 templates <small>autoconsciência rara em estágio early</small></li>
+      </ul>
+    </div>
+    <div class="card naotem">
+      <h4>✗ Ainda não temos</h4>
+      <ul>
+        <li>CNPJ formal <small>opero como PF, sem emissão de NF</small></li>
+        <li>Contrato-padrão <small>0 contratos formais nos 2 cases</small></li>
+        <li>Método de pricing <small>chuto um número intuitivo</small></li>
+        <li>Pacotes nomeados <small>nada empacotado, tudo customizado</small></li>
+        <li>Briefing padronizado <small>cada cliente extrai info diferente</small></li>
+        <li>Padrão de entrega <small>vai do que o projeto pediu</small></li>
+        <li>Estrutura de follow-up <small>tento, mas não sei como/quando</small></li>
+        <li>Política de garantia <small>indefinida</small></li>
+        <li>Contábil de confiança <small>preciso encontrar antes de abrir CNPJ</small></li>
+        <li>Rede de freelas validados <small>limita aceitar projetos maiores</small></li>
+        <li>Canal ativo funcionando <small>LinkedIn em uso, sem retorno</small></li>
+        <li>1 retainer ativo <small>0 clientes recorrentes</small></li>
+      </ul>
+    </div>
+    <div class="card vaimudar">
+      <h4>↻ Vai mudar nos próximos 90 dias</h4>
+      <ul>
+        <li>Status fiscal <small>PF → CNPJ + regime decidido (MEI ou Simples)</small></li>
+        <li>Contrato <small>0 → contrato-padrão + NDA + proposta-modelo prontos</small></li>
+        <li>Pricing <small>chute → tabela de horas + 5 pacotes nomeados com margem auditada</small></li>
+        <li>Entrega <small>caso-a-caso → checklist mínima de kickoff/entrega/handover</small></li>
+        <li>Follow-up <small>improviso → cadência 30/60/90 dias com script</small></li>
+        <li>Cobrança <small>uma vez na entrega → sinal 50% + saldo 50% padrão</small></li>
+        <li>Modelo comercial <small>one-shot puro → projeto + gancho de retainer modular</small></li>
+        <li>Canal de aquisição <small>100% indicação → indicação treinada + LinkedIn ativo</small></li>
+        <li>Métrica primária <small>receita → % capacidade do sócio ≤ 70%</small></li>
+      </ul>
+    </div>
+    <div class="card naovaimudar">
+      <h4>= Não vai mudar (decisão consciente)</h4>
+      <ul>
+        <li>Manifesto anti-template <small>regra com critério (≥ 60% customização real), nunca dogma cego</small></li>
+        <li>Sócio único por enquanto <small>sócio externo de Growth só em 6–9 meses, base sólida primeiro</small></li>
+        <li>Foco em customização sob medida <small>não vou virar fábrica de template barato</small></li>
+        <li>Tamanho boutique <small>sem virar agência grande — qualidade &gt; volume</small></li>
+        <li>Relação 1:1 com cliente <small>sócio é ponto de contato direto, sem intermediário</small></li>
+        <li>Mercado B2B <small>não atendo consumidor final</small></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>3 aprendizados centrais do BMC</h3>
+  <div class="card-block">
+    <h4>1. A variável-raiz não é leads — é capacidade do sócio</h4>
+    <p>O Mapa de Complexidade revelou que o gargalo do sistema IRBIS é a <strong>capacidade do sócio único</strong>. Toda a estratégia (pacotes, retainer, sócio externo) só faz sentido porque ataca essa variável-raiz. A métrica primária do dashboard semanal passa a ser <strong>% capacidade ocupada em delivery ≤ 70%</strong> — antes de receita, antes de leads.</p>
+  </div>
+  <div class="card-block">
+    <h4>2. Manifesto forte é fortaleza E freio simultaneamente</h4>
+    <p>Rejeitar template diferencia comercialmente. Mas a mesma lei, sem critério objetivo, faz IRBIS recusar projetos viáveis. <strong>Regra:</strong> aceita híbrido se ≥ 60% é customização real. Princípio sem critério é freio com pé no chão.</p>
+  </div>
+  <div class="card-block">
+    <h4>3. O problema não está no cliente — está no modelo comercial</h4>
+    <p>Os ICPs certos já chegam por indicação. A IRBIS subvende porque <strong>não tem método empacotado</strong>, não porque atrai cliente errado. Inverte a tese de "preciso de mais leads" para <strong>"preciso vender melhor para os leads que já chegam"</strong>.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 2: PRECIFICAÇÃO -->
+<!-- ============================================================ -->
+<section class="tab" id="tab-pricing">
+  <h2>Guia de Precificação IRBIS</h2>
+  <p class="lede">Calibrado a partir do seu piso pessoal real, suas despesas operacionais e sua capacidade de horas. Para de chutar — passa a defender preço com conta.</p>
+
+  <h3>1. Quanto vale a tua hora — cálculo de chão</h3>
+  <p>Antes de qualquer pacote, a IRBIS precisa de um <strong>valor-hora efetivo</strong>. Não é o que você gostaria de ganhar — é o que <strong>precisa ganhar</strong> para a operação fazer sentido.</p>
+
+  <div class="calc-box">
+    <div><strong>Piso pessoal mensal:</strong> R$ 5.000 (média da faixa R$ 3–6k informada)</div>
+    <div><strong>Despesas IRBIS:</strong> R$ 1.000 (ferramentas)</div>
+    <div><strong>Provisão fiscal (~10%):</strong> R$ 700 (Simples Anexo III estimado)</div>
+    <div><strong>Reserva mensal (10%):</strong> R$ 700</div>
+    <div class="total">→ Receita mínima necessária: <strong>R$ 7.400/mês</strong></div>
+    <div style="margin-top:14px"><strong>Capacidade real faturável:</strong> 35–50h/sem × 4 sem = 140–200h/mês</div>
+    <div>↳ Em <strong>delivery (≤ 70%):</strong> 100–140h/mês</div>
+    <div>↳ Em <strong>delivery faturável</strong> (descontando venda/admin/follow-up): <strong>60–90h/mês</strong></div>
+    <div class="total">→ Valor-hora mínimo: R$ 7.400 / 75h ≈ <strong>R$ 100/h</strong> (subsistência)</div>
+    <div>→ Valor-hora saudável (3× margem): <strong>R$ 200/h</strong></div>
+    <div>→ Valor-hora alvo North Star: <strong>R$ 300/h</strong></div>
+  </div>
+
+  <div class="info-box">
+    <strong>Faixa recomendada para usar nas propostas:</strong> R$ 180–250/h efetiva. Use <strong>R$ 200/h como âncora interna</strong>. Cliente nunca vê esse número — é a calculadora que valida se o pacote tem margem. <em>Quando você cobrar abaixo de R$ 150/h efetiva, você está pagando para trabalhar.</em>
+  </div>
+
+  <p><strong>Comparação com o caso real:</strong> Empresa de Baterias = R$ 6.000 por 40–60h em 1 mês = R$ 100–150/h efetiva. <span class="pill warn">No limite inferior</span>. Não foi prejuízo, mas <strong>não cobriu o piso de operação saudável</strong>.</p>
+
+  <hr class="divider">
+
+  <h3>2. Tabela de tempo por tipo de projeto</h3>
+  <p>Use como <strong>âncora interna</strong> para estimar horas antes de cobrar. Estimativa = horas alvo + buffer 20%.</p>
+
+  <table>
+    <thead><tr><th>Tipo</th><th>Horas alvo</th><th>Buffer</th><th>Prazo</th><th>Ticket recomendado</th><th>R$/h efetiva</th></tr></thead>
+    <tbody>
+      <tr><td>Site institucional B2B (código próprio)</td><td class="num">50h</td><td class="num">+10h</td><td>4–6 semanas</td><td class="num">R$ 12.000</td><td class="num">R$ 200</td></tr>
+      <tr><td>Setup de CRM + Automações</td><td class="num">45h</td><td class="num">+10h</td><td>3–5 semanas</td><td class="num">R$ 10.000</td><td class="num">R$ 222</td></tr>
+      <tr><td>Dashboard de dados</td><td class="num">40h</td><td class="num">+8h</td><td>3–5 semanas</td><td class="num">R$ 9.000</td><td class="num">R$ 225</td></tr>
+      <tr><td>Sprint de Diagnóstico Técnico</td><td class="num">20h</td><td class="num">+4h</td><td>2 semanas</td><td class="num">R$ 4.500</td><td class="num">R$ 225</td></tr>
+      <tr><td>Diagnóstico Executivo (1 dia + apresentação)</td><td class="num">16h</td><td class="num">+4h</td><td>2 semanas</td><td class="num">R$ 6.000</td><td class="num">R$ 375</td></tr>
+      <tr><td>Projeto Integrado (Site + CRM + Dashboard)</td><td class="num">150h</td><td class="num">+30h</td><td>3–4 meses</td><td class="num">R$ 38.000</td><td class="num">R$ 253</td></tr>
+      <tr><td>Lançamento como serviço (produto digital)</td><td class="num">80h</td><td class="num">+20h</td><td>6–8 semanas</td><td class="num">R$ 20.000</td><td class="num">R$ 250</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alert"><strong>Atenção:</strong> "horas alvo" são <strong>horas efetivas dedicadas ao projeto</strong> — não incluem tempo de venda, follow-up comercial, ou redesign por mudança de escopo do cliente. Sempre estime ANTES de mandar proposta. Sem isso, voltamos ao chute.</div>
+
+  <hr class="divider">
+
+  <h3>3. Os 5 pacotes nomeados (catálogo IRBIS)</h3>
+
+  <div class="card-block">
+    <h4>Sprint de Diagnóstico Técnico <span class="pill info">PORTA DE ENTRADA</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 4.500</strong></span>
+      <span>Horas: <strong>20h</strong></span>
+      <span>Prazo: <strong>2 semanas</strong></span>
+      <span>R$/h: <strong>R$ 225</strong></span>
+    </div>
+    <p><strong>Para quem:</strong> Lead Segmento A (scale-up nativa digital) que tem dor mas não tem clareza do escopo.</p>
+    <p><strong>Entrega:</strong> Mapa técnico escrito + recomendação de prioridade + escopo do projeto principal. Funciona como ímã de lead qualificado e ANCORA preço para venda subsequente.</p>
+    <p><strong>Conversão alvo:</strong> ≥ 40% dos que fazem sprint compram projeto principal. Abaixo disso, mata o pacote.</p>
+  </div>
+
+  <div class="card-block">
+    <h4>Diagnóstico Executivo <span class="pill info">PORTA DE ENTRADA — Segmento B</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 6.000</strong></span>
+      <span>Horas: <strong>16h</strong></span>
+      <span>Prazo: <strong>2 semanas (1 dia in-loco + 1 semana de análise)</strong></span>
+      <span>R$/h: <strong>R$ 375</strong></span>
+    </div>
+    <p><strong>Para quem:</strong> CEO/Dono mid-market (Segmento B) que precisa de visão executiva, não de execução técnica.</p>
+    <p><strong>Entrega:</strong> Workshop de 1 dia com C-level + apresentação executiva 1 semana depois + roadmap escrito de 6 meses.</p>
+    <p><strong>Conversão alvo:</strong> ≥ 50% dos que fazem diagnóstico compram projeto integrado.</p>
+  </div>
+
+  <div class="card-block">
+    <h4>Sprint Site B2B <span class="pill go">CARRO-CHEFE</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 12.000</strong></span>
+      <span>Horas: <strong>50h</strong></span>
+      <span>Prazo: <strong>4–6 semanas</strong></span>
+      <span>R$/h: <strong>R$ 200</strong></span>
+    </div>
+    <p><strong>Para quem:</strong> Scale-up ou mid-market precisando de site profissional com identidade própria, integração de analytics e formulários funcionais.</p>
+    <p><strong>Entrega:</strong> Site completo em código próprio (Next.js/React), identidade visual aplicada, integração analytics + formulários, hosting configurado, documentação técnica.</p>
+    <p><strong>Comparação com o caso Baterias:</strong> R$ 12k vs R$ 6k que cobrou no case real — <strong>preço duplica</strong>. Ancorado pelo método nomeado, não pela hora de trabalho.</p>
+  </div>
+
+  <div class="card-block">
+    <h4>Sprint CRM + Automação <span class="pill go">SEGMENTO A FORTE</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 10.000</strong></span>
+      <span>Horas: <strong>45h</strong></span>
+      <span>Prazo: <strong>3–5 semanas</strong></span>
+      <span>R$/h: <strong>R$ 222</strong></span>
+    </div>
+    <p><strong>Para quem:</strong> Scale-up cujo CRM virou planilha gigante. CMO/Head de Growth quer reorganização rápida.</p>
+    <p><strong>Entrega:</strong> CRM configurado (HubSpot/RD/Pipedrive), pipelines desenhados, automações em Zapier/Make, dashboards de funil, treinamento da equipe.</p>
+  </div>
+
+  <div class="card-block">
+    <h4>Sprint Dashboard <span class="pill go">SEGMENTO A/B</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 9.000</strong></span>
+      <span>Horas: <strong>40h</strong></span>
+      <span>Prazo: <strong>3–5 semanas</strong></span>
+      <span>R$/h: <strong>R$ 225</strong></span>
+    </div>
+    <p><strong>Para quem:</strong> Empresa cujos dados estão em planilha e ninguém entende mais. Quer painel de gestão executivo.</p>
+    <p><strong>Entrega:</strong> Painel em Looker/Metabase/Power BI com integração de fontes (Sheets, BD, APIs), visualizações customizadas por área, documentação de uso.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>4. Política de cobrança</h3>
+  <p>O modelo atual (cobrar tudo na entrega) é a primeira fonte de risco de fluxo de caixa. <strong>Padrão recomendado a partir do próximo cliente:</strong></p>
+
+  <table>
+    <thead><tr><th>Faixa do projeto</th><th>Sinal</th><th>Meio do projeto</th><th>Entrega</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td>Até R$ 6k</td><td class="num">50%</td><td>—</td><td class="num">50%</td><td>Sinal + saldo simples</td></tr>
+      <tr><td>R$ 6–15k</td><td class="num">40%</td><td class="num">30% (meio)</td><td class="num">30%</td><td>3 parcelas, alinha com marcos</td></tr>
+      <tr><td>R$ 15–35k</td><td class="num">30%</td><td class="num">35% (meio) + 25% (review)</td><td class="num">10%</td><td>4 parcelas, projeto integrado</td></tr>
+      <tr><td>R$ 35k+</td><td class="num">25%</td><td>Mensal por marco</td><td class="num">15%</td><td>Cronograma de pagamentos no contrato</td></tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Sinal SEMPRE.</strong> Sem sinal pago, projeto não inicia. Não negociável.</li>
+    <li><strong>NF emitida a cada parcela</strong> (assume Simples Nacional Anexo III pós CNPJ).</li>
+    <li><strong>Multa por atraso:</strong> 2% + 1% ao mês (cláusula no contrato).</li>
+    <li><strong>Cartão de crédito:</strong> aceito com acréscimo de 5% (cobre taxa).</li>
+    <li><strong>Pix/Transferência:</strong> sem acréscimo. Preferencial.</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>5. Ajustes avulsos pós-entrega — proposta de modelo</h3>
+  <p>Você disse "não sei". Recomendação baseada no seu contexto:</p>
+
+  <div class="card-block">
+    <h4>Pacote de Horas Pré-Pago <span class="pill go">recomendado</span></h4>
+    <div class="meta">
+      <span>10 horas por <strong>R$ 2.200</strong></span>
+      <span>Validade: <strong>90 dias</strong></span>
+      <span>R$/h: <strong>R$ 220</strong></span>
+    </div>
+    <p><strong>Por que esse modelo:</strong></p>
+    <ul>
+      <li><strong>Reduz friction de venda repetida</strong> — cliente compra antes, queima conforme demanda. Você não precisa fazer proposta para cada ajuste.</li>
+      <li><strong>Compromete o cliente</strong> — quem pagou tende a usar (caso contrário, perde validade).</li>
+      <li><strong>Justifica preço alto/hora</strong> — R$ 220/h é maior que a média do projeto principal, porque é demanda fragmentada.</li>
+      <li><strong>Inadequado para cliente Segmento C</strong> — ticket avulso de R$ 2,2k pode ser caro para profissional liberal. Para Segmento C, vender hora avulsa a R$ 250/h faz mais sentido.</li>
+    </ul>
+    <p><strong>Regra de oferta:</strong> apresentar como "extensão recomendada" no momento da entrega do projeto principal. Não como upsell agressivo — como continuidade natural da relação.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>6. Retainer modular (sua escolha confirmada)</h3>
+  <p>Cliente monta o retainer escolhendo 1 ou mais módulos. Mínimo: 1 módulo. Faturamento mensal recorrente.</p>
+
+  <table>
+    <thead><tr><th>Módulo</th><th>Horas/mês</th><th>Preço/mês</th><th>O que cobre</th></tr></thead>
+    <tbody>
+      <tr><td><strong>SITE</strong> — manutenção evolutiva</td><td class="num">5h</td><td class="num">R$ 1.500</td><td>Correções, atualizações, pequenas adições, monitoramento</td></tr>
+      <tr><td><strong>CRM</strong> — sprint contínuo</td><td class="num">8h</td><td class="num">R$ 2.500</td><td>Novos pipelines, automações, ajustes, treinamento adicional</td></tr>
+      <tr><td><strong>DASHBOARD</strong> — analytics evolution</td><td class="num">8h</td><td class="num">R$ 2.500</td><td>Novas visualizações, fontes de dados, refinamento de métricas</td></tr>
+      <tr><td><strong>SUPORTE</strong> — disponibilidade técnica</td><td class="num">3h</td><td class="num">R$ 1.000</td><td>Resposta em até 48h úteis, troubleshooting, consultoria pontual</td></tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><strong>Bundle de 2 módulos:</strong> 10% de desconto.</li>
+    <li><strong>Bundle de 3+:</strong> 15% de desconto.</li>
+    <li><strong>Horas não usadas:</strong> não acumulam (use ou perca — incentivo a usar).</li>
+    <li><strong>Excedente:</strong> entra como adendo (R$ 200/h sobre o limite).</li>
+    <li><strong>Rescisão:</strong> aviso prévio de 30 dias. Sem multa.</li>
+    <li><strong>Reajuste anual:</strong> IPCA, automático.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 3: ENTREGA -->
+<!-- ============================================================ -->
+<section class="tab" id="tab-entrega">
+  <h2>Guia de Entrega IRBIS</h2>
+  <p class="lede">Ritual operacional padronizado: do briefing inicial ao handover final. Cada passo abaixo é checklist — não opinião.</p>
+
+  <h3>1. Briefing inicial — template que você manda ANTES da conversa</h3>
+  <p>Hoje você não faz briefing. Esse template, enviado por e-mail antes da primeira call, <strong>poupa horas de discovery e qualifica o cliente automaticamente</strong>:</p>
+
+  <div class="card-block">
+    <h4>BRIEFING IRBIS — preencha antes da nossa primeira conversa</h4>
+    <details><summary>Bloco 1: Sobre você e a empresa</summary><div>
+      <ul>
+        <li>Nome, cargo, empresa, link do LinkedIn ou site</li>
+        <li>Tamanho da empresa (funcionários) e estágio (bootstrap / Série A–B / estabelecido)</li>
+        <li>Setor / vertical principal</li>
+        <li>Como você se descobriu interessado(a) na IRBIS</li>
+      </ul>
+    </div></details>
+    <details><summary>Bloco 2: Diagnóstico de dor</summary><div>
+      <ul>
+        <li>Em uma frase: qual problema você está tentando resolver?</li>
+        <li>Que solução você já tentou (interna ou externa)? Por que não funcionou?</li>
+        <li>O que aconteceria com a empresa se este problema continuar 6 meses sem solução?</li>
+        <li>O que aconteceria de melhor se ele fosse resolvido em 90 dias?</li>
+      </ul>
+    </div></details>
+    <details><summary>Bloco 3: Escopo e expectativa</summary><div>
+      <ul>
+        <li>Você está buscando: site, CRM, dashboard, produto digital, lançamento, diagnóstico, ou ainda não sabe?</li>
+        <li>Existe data crítica (lançamento, evento, sazonalidade)?</li>
+        <li>Quem mais decide na sua empresa sobre esse projeto?</li>
+        <li>Qual faixa de orçamento você considera viável (mesmo aproximada)?</li>
+      </ul>
+    </div></details>
+    <details><summary>Bloco 4: Estado técnico atual</summary><div>
+      <ul>
+        <li>Que ferramentas você já usa hoje (CRM, site builder, dashboard, etc)?</li>
+        <li>Existe equipe interna técnica (dev, designer, marketing)?</li>
+        <li>Há restrição obrigatória (precisa ser X plataforma, integrar com Y)?</li>
+      </ul>
+    </div></details>
+    <details><summary>Bloco 5: Relacionamento esperado</summary><div>
+      <ul>
+        <li>Você pensa neste projeto como: pontual (entrega e saída) ou início de relação contínua?</li>
+        <li>Após entrega, você imagina precisar de manutenção mensal?</li>
+        <li>Como prefere comunicação durante o projeto: WhatsApp, Slack, e-mail, reuniões semanais?</li>
+      </ul>
+    </div></details>
+  </div>
+
+  <div class="info-box">
+    <strong>Lógica de uso:</strong> envie como <strong>link Google Forms</strong> ou PDF. Cliente preenche → você analisa em 30 minutos antes da call → call vira <strong>conversa sobre solução</strong>, não sobre descoberta. Reduz seu tempo de pré-venda em ~70%.
+  </div>
+
+  <hr class="divider">
+
+  <h3>2. Regra objetiva para escopo extra durante o projeto</h3>
+  <p>Hoje você "avalia caso-a-caso, se pequeno faz". Sem critério, vira destruição de margem invisível. <strong>Regra objetiva proposta:</strong></p>
+
+  <div class="card-block">
+    <h4>Regra dos 90 minutos</h4>
+    <ul>
+      <li><strong>≤ 90 minutos de trabalho extra?</strong> Absorvo (sinal de boa vontade). Documento como cortesia no e-mail seguinte: <em>"Esse ajuste demorou ~1h e fica como cortesia desta vez."</em></li>
+      <li><strong>&gt; 90 minutos?</strong> Resposta padrão (script): <em>"Faz total sentido essa adição. Isso vai exigir [X] horas extras — proponho adendar R$ [200×X]. Posso seguir?"</em></li>
+      <li><strong>Mudança estrutural (escopo refeito)?</strong> Pausa o projeto + nova proposta. Sem negociação no calor.</li>
+      <li><strong>Documenta TUDO</strong> — cada cortesia, cada adendo. Vira histórico em caso de discussão futura.</li>
+    </ul>
+    <p style="margin-top:14px"><strong>Por que essa régua:</strong> 90 minutos cabe na cortesia operacional sem matar margem. Acima disso, o cliente já está usando você como time interno gratuito — e isso destrói o LTV/CAC.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>3. Política de garantia pós-entrega</h3>
+  <p>Hoje indefinido. <strong>Proposta de estrutura:</strong></p>
+
+  <table>
+    <thead><tr><th>Janela</th><th>Cobertura</th><th>Cobrança</th></tr></thead>
+    <tbody>
+      <tr><td>0–30 dias após entrega</td><td>Correção integral de qualquer bug técnico (não regra de negócio)</td><td class="num">Gratuito</td></tr>
+      <tr><td>31–90 dias</td><td>Correção de bug crítico (sistema parado, dado perdido)</td><td class="num">Gratuito</td></tr>
+      <tr><td>31–90 dias</td><td>Outras correções/ajustes</td><td>Pacote de horas pré-pago (R$ 220/h)</td></tr>
+      <tr><td>Após 90 dias</td><td>Tudo</td><td>Pacote de horas pré-pago OU retainer</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Definições importantes (incluir no contrato):</strong></p>
+  <ul>
+    <li><strong>"Bug técnico":</strong> comportamento divergente do escopo escrito. Não inclui "achei que ia funcionar diferente".</li>
+    <li><strong>"Bug crítico":</strong> sistema indisponível, dado corrompido, falha de segurança.</li>
+    <li><strong>Não cobre:</strong> mudança de regra de negócio do cliente, novas features, redesign por mudança de gosto, integração com sistema novo.</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>4. Ritual mínimo do projeto — 4 cerimônias</h3>
+
+  <div class="card-block">
+    <h4>① Kickoff (1h, dia 1)</h4>
+    <ul>
+      <li>Revisar escopo do contrato — alinhamento explícito do que entra e do que NÃO entra</li>
+      <li>Definir canal de comunicação único (WhatsApp/Slack/Email — escolher 1)</li>
+      <li>Definir cadência (reunião semanal de 30 min? Atualização escrita às sextas?)</li>
+      <li>Apresentar você como ponto único de contato</li>
+      <li>Enviar e-mail-resumo no fim do dia formalizando combinações</li>
+    </ul>
+  </div>
+
+  <div class="card-block">
+    <h4>② Check-in semanal (15–30 min)</h4>
+    <ul>
+      <li>O que foi feito na semana (3 itens)</li>
+      <li>O que será feito na próxima (3 itens)</li>
+      <li>O que está bloqueado / pendente do cliente</li>
+      <li>Documenta em ata curta enviada no mesmo dia</li>
+    </ul>
+  </div>
+
+  <div class="card-block">
+    <h4>③ Entrega final (2h, último dia)</h4>
+    <ul>
+      <li>Demonstração ao vivo do entregável</li>
+      <li>Entrega dos acessos (repositório + serviços + credenciais)</li>
+      <li>Walkthrough da documentação (não envia apenas — explica)</li>
+      <li>Definir janela de garantia (90 dias) + canal de bug crítico</li>
+      <li>Apresentar pacote de horas pré-pago + retainer modular</li>
+      <li>Definir data do check-in de 30 dias</li>
+    </ul>
+  </div>
+
+  <div class="card-block">
+    <h4>④ Follow-ups pós-entrega (cadência 30/60/90/180 dias)</h4>
+    <ul>
+      <li><strong>30 dias:</strong> "Como está funcionando? Algum bug crítico? Quer pedir cortesia inicial?" <em>(canal escolhido — WhatsApp se for o caso)</em></li>
+      <li><strong>60 dias:</strong> "Vi que [métrica X] está em [valor]. Quer revisar?" <em>(mostra que você está olhando o dado do cliente, não só esperando)</em></li>
+      <li><strong>90 dias:</strong> Garantia encerra. <em>"Quer migrar para retainer ou pacote de horas?"</em> Apresenta os módulos.</li>
+      <li><strong>180 dias:</strong> "Lembra do roadmap que conversamos? Quer ativar a fase 2?" <em>(2ª venda formal)</em></li>
+      <li><strong>Pedido de indicação:</strong> entre 90 e 180 dias, com o cliente satisfeito. <em>"Conhece outro CEO/CMO no mesmo tipo de situação?"</em></li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <h3>5. Padrão mínimo de entrega (handover)</h3>
+  <p>Hoje é "vai do que o projeto pediu". Checklist mínima para qualquer entrega IRBIS, independente do tipo:</p>
+
+  <ul class="checklist" data-store="entrega-checklist">
+    <li><input type="checkbox"><div class="task">Repositório próprio do cliente (GitHub/GitLab) ou cópia transferida<span class="desc">Cliente fica com tudo. Sem dependência da IRBIS.</span></div></li>
+    <li><input type="checkbox"><div class="task">README escrito com: o que é, como rodar/acessar, dependências, contatos<span class="desc">Mínimo de 1 página, máximo de 4. Em português.</span></div></li>
+    <li><input type="checkbox"><div class="task">Lista de acessos transferidos (services, painéis, contas)<span class="desc">Documento dedicado. Senhas via gerenciador (1Password, Bitwarden) ou e-mail criptografado.</span></div></li>
+    <li><input type="checkbox"><div class="task">Vídeo-walkthrough de 5–10 minutos<span class="desc">Loom ou similar. Mostra como funciona, como editar, como adicionar coisa.</span></div></li>
+    <li><input type="checkbox"><div class="task">Lista de "o que não entra na garantia"<span class="desc">Explícito. Evita briga depois.</span></div></li>
+    <li><input type="checkbox"><div class="task">Convite formal para retainer / pacote de horas<span class="desc">PDF de 1 página com módulos disponíveis.</span></div></li>
+    <li><input type="checkbox"><div class="task">Pedido de feedback escrito (formulário curto)<span class="desc">3 perguntas: o que foi melhor que esperava? o que poderia melhorar? recomendaria?</span></div></li>
+    <li><input type="checkbox"><div class="task">Pedido de autorização para usar como case<span class="desc">Mesmo que anonimizado. Vira munição de venda para Segmento A.</span></div></li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 4: ICPs -->
+<!-- ============================================================ -->
+<section class="tab" id="tab-icp">
+  <h2>ICPs IRBIS — filtro de aceite</h2>
+  <p class="lede">Use os 3 âncoras antes de aceitar qualquer lead novo. Lead que falha em 2+ âncoras → recusa amistosa.</p>
+
+  <h3>Os 3 âncoras (filtro de 30 segundos)</h3>
+  <div class="card-block">
+    <h4>① Tipo de dor digital cabe no portfólio IRBIS</h4>
+    <p>Site profissional / CRM / Dashboard / Produto digital sob medida / Lançamento. Se a dor é "template Wix rápido", recusa por manifesto (regra: aceita híbrido se ≥ 60% é customização real).</p>
+  </div>
+  <div class="card-block">
+    <h4>② Decisor é CEO/Dono OU CMO/Head de Marketing</h4>
+    <p>100% do histórico fechou com esses 2 perfis. Lead com decisor intermediário (gerente sem alçada) → baixa prioridade automaticamente.</p>
+  </div>
+  <div class="card-block">
+    <h4>③ Modelo aceita gancho de recorrência</h4>
+    <p>One-shot puro só é aceito se ticket ≥ R$ 25k. Abaixo disso, o projeto precisa ter potencial de virar retainer/sprint contínuo. Caso contrário, perpetua a volatilidade da receita.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Os 3 segmentos prioritários (90 dias)</h3>
+
+  <div class="card-block">
+    <h4>Segmento A — Nativos digitais <span class="pill go">FOCO PRIMÁRIO</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 12–40k</strong> + retainer <strong>R$ 3–8k/mês</strong></span>
+      <span>Ciclo: <strong>2–6 semanas</strong></span>
+      <span>Confiança: <strong>Média (1 case)</strong></span>
+    </div>
+    <p><strong>Quem:</strong> Scale-up Série A–B (SaaS, fintech, edtech, agência growth, e-commerce em crescimento), 20–100 funcionários.</p>
+    <p><strong>Decisor:</strong> CMO / Head de Growth (raro: CEO).</p>
+    <p><strong>Canal:</strong> LinkedIn ativo + comunidades (Slack Growth Hackers BR, ProductLed BR).</p>
+    <p><strong>Mensagem-âncora:</strong> <em>"Você não precisa de mais uma agência que te empurra template. Precisa de alguém que entenda seu CRM/dashboard tão profundamente quanto você entende seu produto."</em></p>
+    <p><strong>Case-protótipo:</strong> Agência de Growth (entregue).</p>
+  </div>
+
+  <div class="card-block">
+    <h4>Segmento B — Mid-market virando digital <span class="pill warn">MAIOR TICKET</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 25–80k</strong> + retainer <strong>R$ 5–10k/mês</strong></span>
+      <span>Ciclo: <strong>8–16 semanas</strong></span>
+      <span>Confiança: <strong>Média (1 case)</strong></span>
+    </div>
+    <p><strong>Quem:</strong> Familiar/capital fechado em varejo, indústria, distribuição, serviços tradicionais. 50–500 funcionários, R$ 10M–R$ 100M.</p>
+    <p><strong>Decisor:</strong> CEO / Dono.</p>
+    <p><strong>Canal:</strong> Indicação treinada (briefing escrito para 10 indicadores) + parcerias com contadores/advogados.</p>
+    <p><strong>Mensagem-âncora:</strong> <em>"Sua empresa cresceu sem que a estrutura digital crescesse junto. Antes de gastar R$ 200k com agência multinacional, vale conversar com quem entrega sob medida e fica com você no pós."</em></p>
+    <p><strong>Case-protótipo:</strong> Empresa de Baterias (entregue).</p>
+  </div>
+
+  <div class="card-block">
+    <h4>Segmento C — Profissional liberal <span class="pill stop">EXPERIMENTAL</span></h4>
+    <div class="meta">
+      <span>Ticket: <strong>R$ 5–12k</strong> + retainer <strong>R$ 1,5k/mês</strong></span>
+      <span>Ciclo: <strong>1–3 semanas</strong></span>
+      <span>Confiança: <strong>Baixa (2 não fecharam)</strong></span>
+    </div>
+    <p><strong>Quem:</strong> Profissional autônomo (advogado, corretor, terapeuta, consultor) ou empresa ≤ 20 pessoas.</p>
+    <p><strong>Decisor:</strong> O próprio profissional.</p>
+    <p><strong>Canal:</strong> LinkedIn pessoal + indicação leve.</p>
+    <p><strong>Critério de existência:</strong> só faz sentido com pacote nomeado pronto. Sem pacote, é anti-ICP.</p>
+    <p><strong>Critério de morte:</strong> se em 90 dias o pacote não gerar ≥ 3 leads alinhados → engavetar.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Anti-ICP — quem recusar mesmo se vier quente</h3>
+  <ul>
+    <li>"Quero um site igual ao do meu concorrente, rápido e barato" (compara com Wix)</li>
+    <li>Ticket abaixo de R$ 5k</li>
+    <li>Decisor sem alçada — gerente intermediário pedindo proposta sem C-level envolvido</li>
+    <li>Empresa que quer template puro, sem customização significativa</li>
+    <li>Cliente "tóxico": mau pagador histórico, escopo emocional, expectativa de horas extras grátis</li>
+    <li>Empresa em crise financeira aguda (folha atrasada, demissões em curso)</li>
+    <li>Projeto que exige equipe maior que a IRBIS suporta hoje</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 5: DECISÕES -->
+<!-- ============================================================ -->
+<section class="tab" id="tab-decisoes">
+  <h2>Decisões críticas pendentes</h2>
+  <p class="lede">As 11 decisões prioritárias do BMC, com prazo e bloqueador. Marca quando resolver.</p>
+  <div class="progress-bar"><div class="fill" id="decisoes-fill"></div></div>
+
+  <ul class="checklist" data-store="decisoes-checklist">
+    <li><input type="checkbox"><div class="task"><strong>🚨 Contratar advogado + produzir contrato-padrão + NDA + política de proposta</strong><span class="desc">Sem isso, todo o resto amplifica risco. R$ 1,5–3k em advogado boutique (você já tem advogado de confiança — destrava rapidamente).</span></div><div class="when">30 dias · CRÍTICO</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Achar contábil de confiança + revisar regime fiscal</strong><span class="desc">Você não tem contábil ainda. Conversa para definir: continua PF até quando? abre MEI ou Simples direto?</span></div><div class="when">30 dias · CRÍTICO</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Abrir CNPJ formalmente</strong><span class="desc">Você opera como PF hoje. Limita clientes mid-market que exigem NF. Decidir MEI (R$ 81k/ano) ou Simples Nacional Anexo III.</span></div><div class="when">45 dias · CRÍTICO</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Construir os 5 pacotes nomeados com escopo detalhado escrito</strong><span class="desc">Página de venda PDF para cada um. Sem isso, IRBIS continua subvendendo.</span></div><div class="when">30 dias · CRÍTICO</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Auditar margem real do Sprint Site B2B (R$ 12k em 50h)</strong><span class="desc">Cronometrar próximo projeto e validar se 50h é viável. Caso contrário, reposicionar preço.</span></div><div class="when">60 dias (no próximo projeto) · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Propor retainer modular aos clientes Baterias e Agência de Growth</strong><span class="desc">Cada um = R$ 2,5–5k/mês. 2 retainers já cobrem 2/3 da meta de R$ 25k/mês recorrente. Dinheiro deixado na mesa hoje.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Post-mortem com leads E-commerce e Real Estate</strong><span class="desc">Entender por que não fecharam é mais valioso do que prospectar 10 leads novos. Mensagem honesta, sem cobrança.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Implementar planilha mínima de leads (origem, ICP, estágio, motivo desfecho)</strong><span class="desc">Precursor de CRM próprio. Sem instrumentação, dado não vira aprendizado.</span></div><div class="when">15 dias · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Construir template de briefing Google Forms + enviar a próximos 3 leads</strong><span class="desc">Reduz tempo de pré-venda em ~70%. Qualifica automaticamente.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Reabrir conversa com Real Estate quando pacote ICP C estiver pronto</strong><span class="desc">Menor risco para testar o pacote — relação já existe.</span></div><div class="when">60–90 dias · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Lançar canal ativo (LinkedIn ativo + comunidades) com política LGPD + autorização para prova social</strong><span class="desc">3–5 DMs/semana + 1 post técnico/semana. Caso Agência de Growth como prova social principal.</span></div><div class="when">60 dias · IMPORTANTE</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Decidir se ICP C continua ou é matado</strong><span class="desc">Com base em 90 dias de dados. Se pacote não gerou ≥ 3 leads alinhados, engaveta.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Decidir se LinkedIn ativo é canal viável ou pivotar para comunidades/parcerias</strong><span class="desc">Com base em dados de 36+ DMs enviadas + taxa de resposta.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Construir rede de 2–3 freelas validados (dev + designer + outro)</strong><span class="desc">Sem rede, IRBIS não pode aceitar projetos maiores que a capacidade do sócio único.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li><input type="checkbox"><div class="task"><strong>Iniciar conversas informais com candidato a sócio de Growth</strong><span class="desc">SEM compromisso formal. Só explorar quem existe + o que olha como atrativo. Decisão de societário fica em 9–12 meses.</span></div><div class="when">6 meses · DESEJÁVEL</div></li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 6: TO-DO -->
+<!-- ============================================================ -->
+<section class="tab" id="tab-todo">
+  <h2>To-Do operacional — por prioridade</h2>
+  <p class="lede">Lista consolidada das ações que saem desta conversa. Filtros por prioridade. Estado salvo automaticamente no seu navegador.</p>
+
+  <div class="filters" id="todo-filters">
+    <button data-filter="all" class="active">Tudo</button>
+    <button data-filter="critico">Crítico</button>
+    <button data-filter="importante">Importante</button>
+    <button data-filter="desejavel">Desejável</button>
+  </div>
+
+  <div class="progress-bar"><div class="fill" id="todo-fill"></div></div>
+
+  <ul class="checklist" data-store="todo-checklist" id="todo-list">
+    <!-- CRÍTICO -->
+    <li data-prio="critico"><input type="checkbox"><div class="task"><strong>Conversa com seu advogado de confiança sobre contrato-padrão IRBIS</strong><span class="desc">Apresenta o que IRBIS faz, pede modelo de contrato de prestação de serviços digitais + NDA bilateral + política de proposta. Custo esperado: R$ 1,5–3k.</span></div><div class="when">Esta semana · CRÍTICO</div></li>
+    <li data-prio="critico"><input type="checkbox"><div class="task"><strong>Achar contábil (pedir indicação à rede, marcar 1 reunião)</strong><span class="desc">Quem dá indicação boa: advogado atual, ex-clientes, colegas empreendedores. Conversa para decidir regime fiscal antes de abrir CNPJ.</span></div><div class="when">Esta semana · CRÍTICO</div></li>
+    <li data-prio="critico"><input type="checkbox"><div class="task"><strong>Abrir CNPJ formalmente (após decisão de regime)</strong><span class="desc">MEI (limite R$ 81k/ano) ou Simples Anexo III. Cuidado: hoje você emite NF como PF — não pode mais.</span></div><div class="when">30 dias · CRÍTICO</div></li>
+    <li data-prio="critico"><input type="checkbox"><div class="task"><strong>Escrever os 5 pacotes nomeados como PDF de venda (1 página cada)</strong><span class="desc">Sprint Diagnóstico Técnico, Diagnóstico Executivo, Sprint Site B2B, Sprint CRM, Sprint Dashboard. Use o "Guia de Precificação" desta página como base.</span></div><div class="when">30 dias · CRÍTICO</div></li>
+    <li data-prio="critico"><input type="checkbox"><div class="task"><strong>Marcar 8h/semana fixas no calendário para Growth</strong><span class="desc">Protegidas, não negociáveis. Sem isso, delivery come 100% e nada muda. Variável A (capacidade do sócio).</span></div><div class="when">Esta semana · CRÍTICO</div></li>
+    <li data-prio="critico"><input type="checkbox"><div class="task"><strong>Criar planilha de leads (origem, ICP, estágio, motivo desfecho)</strong><span class="desc">Mínimo: Google Sheets. Cada lead novo entra. Pré-requisito de qualquer instrumentação futura.</span></div><div class="when">Esta semana · CRÍTICO</div></li>
+
+    <!-- IMPORTANTE -->
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Construir template de briefing (Google Forms) usando o modelo de 5 blocos</strong><span class="desc">Veja a aba "Entrega". Envia ANTES da call. Reduz tempo de pré-venda em ~70%.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Conversar com Empresa de Baterias propondo retainer modular (Módulo Site R$ 1,5k/mês)</strong><span class="desc">Já tem 90% do caminho — site já entregue. Propor manutenção evolutiva mensal. Mensagem direta, sem rodeio.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Conversar com Agência de Growth propondo retainer (Módulo CRM ou Site, R$ 2,5k/mês)</strong><span class="desc">Agência de growth é o ICP A perfeito para retainer recorrente. Maior probabilidade de aceitar.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Pedir case study formal + autorização de uso à Agência de Growth</strong><span class="desc">Vira munição central do LinkedIn ativo para Segmento A. Sem case formal, narrativa fica vaga.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Post-mortem com lead E-commerce (proposta recusada)</strong><span class="desc">Mensagem honesta: "Sem cobrança, só quero entender — o que faltou na proposta?" Resposta orienta o ICP C.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Post-mortem com lead Real Estate (proposta recusada)</strong><span class="desc">Mesma mensagem. Quando pacote ICP C estiver pronto, reabrir conversa.</span></div><div class="when">30 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Auditar margem real do próximo Sprint Site B2B (cronometrar horas efetivas)</strong><span class="desc">Toggl/Clockify simples. Validar se 50h é viável. Se for 80h, repreçar para R$ 16k.</span></div><div class="when">No próximo projeto · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Lançar canal ativo no LinkedIn (3–5 DMs/semana + 1 post técnico/semana)</strong><span class="desc">Mensagem direta com base no caso da Agência de Growth. Sem isso, IRBIS depende eternamente de indicação.</span></div><div class="when">60 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Construir página IRBIS mínima (site + manifesto + casos + pacotes)</strong><span class="desc">Você é dev, conhece o ofício — não terceiriza. 1 semana de delivery próprio. Vira ponto de chegada para LinkedIn.</span></div><div class="when">60 dias · IMPORTANTE</div></li>
+    <li data-prio="importante"><input type="checkbox"><div class="task"><strong>Briefing escrito do ICP B enviado para 5–10 indicadores estratégicos</strong><span class="desc">"Este é o tipo de cliente que faz sentido para a IRBIS hoje — se cruzar com alguém assim, me avisa." Indicação treinada, não reativa.</span></div><div class="when">60 dias · IMPORTANTE</div></li>
+
+    <!-- DESEJÁVEL -->
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Buscar 2–3 freelas validados na sua rede (dev, designer, motion)</strong><span class="desc">Sem rede, IRBIS não escala. Pode ser conversa exploratória, sem contrato formal ainda.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Reabrir conversa com Real Estate quando pacote ICP C estiver pronto</strong><span class="desc">Menor risco para testar o pacote — relação já existe, expectativa calibrada.</span></div><div class="when">60–90 dias · DESEJÁVEL</div></li>
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Decidir se ICP C (profissional liberal) continua ou é matado</strong><span class="desc">90 dias após pacote pronto. Critério: ≥ 3 leads alinhados gerados.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Decidir se LinkedIn ativo é canal viável ou pivotar (comunidades / parcerias)</strong><span class="desc">90 dias de dados. Taxa de resposta ≥ 8% = viável. Abaixo, repensa.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Estudar 2–3 referências de boutique digital BR/internacional</strong><span class="desc">Você disse "não sigo o mercado". Sem referência, manifesto vira eco. Sugestões: estudos de Lenny, Reforge, perfis BR de Heron Bezerra, agência Loop, Frigideira (curadoria) e similares.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Iniciar conversa informal com 2–3 candidatos a sócio de Growth</strong><span class="desc">SEM compromisso. Só explorar. Decisão formal fica em 9–12 meses.</span></div><div class="when">6 meses · DESEJÁVEL</div></li>
+    <li data-prio="desejavel"><input type="checkbox"><div class="task"><strong>Revisar BMC integralmente quando n ≥ 12 leads</strong><span class="desc">Os ICPs são hipóteses com n=4. Em 90 dias, com mais dados, refazer Templates 12, 13, e este cockpit.</span></div><div class="when">90 dias · DESEJÁVEL</div></li>
+  </ul>
+</section>
+
+<footer>
+  IRBIS Cockpit · síntese de 15 templates do BMC · mantido por Nicolas · revisão integral prevista para agosto/2026
+</footer>
+
+</div>
+
+<script>
+  // ============ TABS ============
+  const tabs = document.querySelectorAll('nav.tabs button');
+  const sections = document.querySelectorAll('section.tab');
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabs.forEach(b => b.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + target).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      localStorage.setItem('irbis-tab', target);
+    });
+  });
+  const savedTab = localStorage.getItem('irbis-tab');
+  if (savedTab) {
+    document.querySelector('nav.tabs button[data-tab="' + savedTab + '"]')?.click();
+  }
+
+  // ============ CHECKBOXES PERSISTIDOS ============
+  document.querySelectorAll('ul.checklist').forEach(list => {
+    const storeKey = 'irbis-' + list.dataset.store;
+    const saved = JSON.parse(localStorage.getItem(storeKey) || '{}');
+    const items = list.querySelectorAll('li');
+    items.forEach((li, idx) => {
+      const cb = li.querySelector('input[type=checkbox]');
+      if (saved[idx]) {
+        cb.checked = true;
+        li.classList.add('done');
+      }
+      cb.addEventListener('change', () => {
+        li.classList.toggle('done', cb.checked);
+        const state = JSON.parse(localStorage.getItem(storeKey) || '{}');
+        state[idx] = cb.checked;
+        localStorage.setItem(storeKey, JSON.stringify(state));
+        updateProgress();
+      });
+    });
+  });
+
+  // ============ FILTROS TO-DO ============
+  document.querySelectorAll('#todo-filters button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#todo-filters button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('#todo-list li').forEach(li => {
+        li.style.display = (f === 'all' || li.dataset.prio === f) ? 'flex' : 'none';
+      });
+    });
+  });
+
+  // ============ PROGRESS BARS ============
+  function updateProgress() {
+    ['decisoes', 'todo'].forEach(key => {
+      const list = document.querySelector(`ul.checklist[data-store="${key}-checklist"]`);
+      if (!list) return;
+      const total = list.querySelectorAll('input[type=checkbox]').length;
+      const done = list.querySelectorAll('input[type=checkbox]:checked').length;
+      const pct = total ? (done / total) * 100 : 0;
+      const fill = document.getElementById(`${key}-fill`);
+      if (fill) fill.style.width = pct + '%';
+    });
+  }
+  updateProgress();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRBIS — Plano de Execução · Mai/2026 → Mai/2027</title>
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #14141a;
+    --surface-2: #1c1c24;
+    --border: #2a2a35;
+    --border-soft: #1f1f28;
+    --text: #e8e6dd;
+    --text-soft: #8a8580;
+    --text-mute: #5c5953;
+    --amber: #d4a574;
+    --amber-soft: #b08a5a;
+    --sage: #7a9a76;
+    --terra: #c9645a;
+    --gold: #c9a565;
+    --blue-soft: #6e89a8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Text', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 28px 80px; }
+
+  /* =================== HEADER =================== */
+  header.top {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+  .brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+    color: var(--amber);
+  }
+  h1 .accent { color: var(--text); }
+  .subtitle {
+    color: var(--text-soft);
+    font-size: 15px;
+    margin: 4px 0 0;
+  }
+  .horizon {
+    text-align: right;
+    color: var(--text-mute);
+    font-size: 12px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+  }
+  .horizon .big {
+    color: var(--amber);
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  /* =================== SUMÁRIO EXECUTIVO =================== */
+  .exec {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin: 28px 0 8px;
+  }
+  .exec h2 {
+    margin: 0 0 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .exec p { margin: 8px 0; font-size: 15px; }
+  .exec strong { color: var(--amber); }
+
+  /* =================== ANTES/DEPOIS =================== */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0 40px;
+  }
+  .ba-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 22px;
+  }
+  .ba-card.now { border-left: 3px solid var(--terra); }
+  .ba-card.then { border-left: 3px solid var(--sage); }
+  .ba-card .when {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .ba-card.now .when { color: var(--terra); }
+  .ba-card.then .when { color: var(--sage); }
+  .ba-card h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .ba-card ul { margin: 0; padding-left: 18px; }
+  .ba-card li {
+    padding: 4px 0;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .ba-card.now li::marker { color: var(--terra); }
+  .ba-card.then li::marker { color: var(--sage); }
+
+  /* =================== TIMELINE =================== */
+  .timeline-intro {
+    margin: 40px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-intro h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .timeline-intro p {
+    margin: 6px 0 0;
+    color: var(--text-soft);
+    font-size: 14px;
+  }
+
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+    border-radius: 1px;
+  }
+
+  .phase {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .phase::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 18px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2.5px solid var(--amber);
+    z-index: 1;
+  }
+  .phase.now::before { background: var(--amber); }
+  .phase.future::before { border-color: var(--text-mute); }
+
+  .phase-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+  }
+  .phase-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .phase-head .when {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  .phase-head .label {
+    background: rgba(212, 165, 116, 0.1);
+    color: var(--amber);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .phase-card h3 {
+    margin: 4px 0 8px;
+    font-size: 18px;
+    color: var(--text);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .phase-card .focus {
+    color: var(--text-soft);
+    font-size: 14px;
+    margin: 0 0 16px;
+    font-style: italic;
+  }
+
+  .tasks {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+  }
+  .tasks li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .tasks li:last-child { border-bottom: none; }
+  .tasks input[type=checkbox] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--text-mute);
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 3px;
+    background: var(--surface);
+    position: relative;
+  }
+  .tasks input[type=checkbox]:checked {
+    background: var(--amber);
+    border-color: var(--amber);
+  }
+  .tasks input[type=checkbox]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .tasks li.done .task-text { text-decoration: line-through; color: var(--text-mute); }
+  .tasks .task-text { flex: 1; }
+  .tasks .task-text strong { color: var(--text); }
+  .tasks .task-text small { display: block; color: var(--text-soft); font-size: 12px; margin-top: 3px; }
+
+  .milestone {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: rgba(122, 154, 118, 0.08);
+    border-left: 3px solid var(--sage);
+    border-radius: 2px;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .milestone strong { color: var(--sage); display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px; }
+
+  .dep {
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: rgba(110, 137, 168, 0.06);
+    border-left: 3px solid var(--blue-soft);
+    border-radius: 2px;
+    font-size: 12px;
+    color: var(--text-soft);
+  }
+  .dep strong { color: var(--blue-soft); }
+
+  .blocker {
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: rgba(201, 100, 90, 0.06);
+    border-left: 3px solid var(--terra);
+    border-radius: 2px;
+    font-size: 12px;
+    color: var(--text-soft);
+  }
+  .blocker strong { color: var(--terra); }
+
+  /* =================== NEXT 48H =================== */
+  .next {
+    margin: 50px 0 20px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(212, 165, 116, 0.02));
+    border: 1px solid var(--amber);
+    border-radius: 6px;
+  }
+  .next .when {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+    color: var(--amber);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .next h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .next ol {
+    margin: 16px 0 0;
+    padding-left: 24px;
+    counter-reset: nextc;
+    list-style: none;
+  }
+  .next ol li {
+    position: relative;
+    padding: 8px 0 8px 4px;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 15px;
+    counter-increment: nextc;
+  }
+  .next ol li::before {
+    content: counter(nextc);
+    position: absolute;
+    left: -24px;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    background: var(--amber);
+    color: var(--bg);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .next ol li:last-child { border-bottom: none; }
+  .next ol li strong { color: var(--amber); }
+
+  /* =================== KPI TRACKER =================== */
+  .kpi-section {
+    margin: 50px 0 20px;
+  }
+  .kpi-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  th {
+    background: var(--surface);
+    color: var(--amber);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  td.num {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    color: var(--amber);
+    white-space: nowrap;
+  }
+
+  /* =================== RULES =================== */
+  .rules-section {
+    margin: 50px 0 20px;
+  }
+  .rules-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .rule {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .rule .icon {
+    color: var(--terra);
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .rule.go .icon { color: var(--sage); }
+
+  /* =================== FOOTER =================== */
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-mute);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 20px 16px 60px; }
+    .ba-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 26px; }
+    .phase-head { flex-direction: column; gap: 6px; }
+    table { font-size: 12px; }
+    th, td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<header class="top">
+  <div class="brand-row">
+    <div>
+      <h1>Plano de Execução<span class="accent"> IRBIS</span></h1>
+      <div class="subtitle">O que faço a partir de agora — Maio/2026 → Maio/2027</div>
+    </div>
+    <div class="horizon">
+      <span class="big">12 meses</span>
+      ponto a ponto
+    </div>
+  </div>
+
+  <div class="exec">
+    <h2>Resumo executivo</h2>
+    <p>Os próximos <strong>30 dias</strong> são a única coisa que importa — sem contrato, CNPJ e pacotes prontos, todo o resto amplifica risco. Nos <strong>60 dias seguintes</strong>, transformo Baterias e Agência de Growth em retainers ativos e lanço canal ativo. Em <strong>6 meses</strong> tenho 2 retainers estáveis + canal validado. Em <strong>12 meses</strong> a IRBIS sai do modo "sobrevivência reativa" e entra em "operação saudável" — receita ≥ R$ 25k/mês recorrente, capacidade ≤ 70%, LTV/CAC ≥ 3:1.</p>
+    <p>Não é roadmap aspiracional. É <strong>lista de tarefas datadas com marcos de pronto</strong>. Cada fase tem dependência explícita da anterior e métrica de validação. Se uma fase escorrega, a próxima escorrega junto — então cada semana conta.</p>
+  </div>
+</header>
+
+<!-- ANTES / DEPOIS -->
+<div class="ba-grid">
+  <div class="ba-card now">
+    <div class="when">Onde estou hoje · Mai/2026</div>
+    <h3>Subsistência reativa</h3>
+    <ul>
+      <li>2 cases entregues, ticket médio R$ 6k, sem padrão</li>
+      <li>4 leads totais em 2 meses, 100% via indicação</li>
+      <li>Receita R$ 12k em 2 meses, alta volatilidade</li>
+      <li>0 contratos formais, sem CNPJ, sem NF</li>
+      <li>Pricing por chute, briefing informal, entrega sem padrão</li>
+      <li>Capacidade do sócio ≈ 100% em delivery</li>
+      <li>Sem retainer ativo, sem canal além de indicação</li>
+    </ul>
+  </div>
+  <div class="ba-card then">
+    <div class="when">Onde estarei · Mai/2027</div>
+    <h3>Operação saudável</h3>
+    <ul>
+      <li>Receita ≥ R$ 25k/mês recorrente, CV &lt; 50%</li>
+      <li>≥ 3 retainers ativos, ≥ 50% pipeline via canal ativo</li>
+      <li>LTV/CAC tempo ≥ 3x, capacidade ≤ 70%</li>
+      <li>5 pacotes nomeados rodando, contrato-padrão em uso</li>
+      <li>CNPJ ativo, NF mensal, regime fiscal correto</li>
+      <li>≥ 12 leads/mês, taxa de fechamento real 22% blended</li>
+      <li>Rede de 2–3 freelas validados ativos</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- NEXT 48H -->
+<!-- ============================================================ -->
+<div class="next">
+  <div class="when">Próximas 48 horas</div>
+  <h2>Quando você fechar este documento</h2>
+  <ol>
+    <li><strong>Mande mensagem ao seu advogado</strong> pedindo reunião de 30 min nesta semana sobre contrato-padrão de prestação de serviços digitais + NDA + política de proposta. Diga que é projeto pessoal seu (IRBIS) e tem orçamento R$ 1,5–3k para o pacote.</li>
+    <li><strong>Pergunte na sua rede</strong> (3–5 pessoas — pode ser WhatsApp/LinkedIn) por indicação de contábil de confiança. Critério: especialista em serviços digitais ou MEI/Simples; já atendeu freelancer/consultor antes.</li>
+    <li><strong>Abra seu calendário e marque 8h/semana fixas</strong> com o título "IRBIS — Growth (não negociável)". Sugestão: 2h segunda manhã + 2h quarta tarde + 4h sexta. Protegido. Sem essa hora, nada do plano abaixo acontece.</li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<!-- TIMELINE -->
+<!-- ============================================================ -->
+<div class="timeline-intro">
+  <h2>Timeline — 12 meses, 7 fases</h2>
+  <p>Cada fase tem foco, tarefas com checkbox, marco de "pronto" e dependência explícita.</p>
+</div>
+
+<div class="timeline">
+
+  <!-- ===== FASE 1 ===== -->
+  <div class="phase now">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Semana 1 · 19–25 Mai/2026</span>
+        <span class="label">Fundação</span>
+      </div>
+      <h3>Destravar os 4 bloqueios silenciosos</h3>
+      <p class="focus">Antes de qualquer estratégia, resolver o que está silenciosamente travando a operação: rede profissional acionada + tempo protegido + instrumentação mínima.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s1-1"><div class="task-text"><strong>Mensagem ao advogado pedindo reunião sobre contrato-padrão</strong><small>Reunião marcada para até 25/mai.</small></div></li>
+        <li><input type="checkbox" data-id="s1-2"><div class="task-text"><strong>Pedir indicação de contábil a 3–5 pessoas da rede</strong><small>WhatsApp/LinkedIn. Critério: já atendeu freelancer/consultor; conhece MEI e Simples.</small></div></li>
+        <li><input type="checkbox" data-id="s1-3"><div class="task-text"><strong>Marcar 8h/semana fixas no calendário como "IRBIS — Growth"</strong><small>Protegido, não negociável. Sugestão: 2h seg + 2h qua + 4h sex.</small></div></li>
+        <li><input type="checkbox" data-id="s1-4"><div class="task-text"><strong>Criar planilha de leads no Google Sheets</strong><small>Colunas: data · nome · empresa · origem · ICP estimado · dor · ticket proposto · estágio · próximo passo · motivo desfecho.</small></div></li>
+        <li><input type="checkbox" data-id="s1-5"><div class="task-text"><strong>Instalar Toggl ou Clockify no notebook</strong><small>Pré-requisito de auditar margem real no próximo projeto.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto</strong>Reunião com advogado agendada + 2+ indicações de contábil recebidas + 8h/sem bloqueadas no calendário + planilha criada + Toggl instalado.</div>
+      <div class="blocker"><strong>Não dá para começar sem:</strong> nada. Esta é a fase inicial.</div>
+    </div>
+  </div>
+
+  <!-- ===== FASE 2 ===== -->
+  <div class="phase now">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Semanas 2–4 · 26 Mai → 15 Jun/2026</span>
+        <span class="label">Contrato + Pacotes</span>
+      </div>
+      <h3>Construir as duas fundações estruturais</h3>
+      <p class="focus">Contrato formal pronto + 5 pacotes nomeados em PDF de venda. Sem essas 2 coisas, a IRBIS continua vendendo no improviso.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s2-1"><div class="task-text"><strong>Reunião com advogado — fechar escopo do contrato-padrão</strong><small>Pacote: contrato de prestação de serviços + NDA bilateral + modelo de proposta comercial + política de garantia + cláusula LGPD. Orçamento R$ 1,5–3k.</small></div></li>
+        <li><input type="checkbox" data-id="s2-2"><div class="task-text"><strong>Reunião com 2 candidatos a contábil — escolher 1</strong><small>Critério final: regime tributário recomendado + valor mensal honorário. Decidir MEI ou Simples Nacional.</small></div></li>
+        <li><input type="checkbox" data-id="s2-3"><div class="task-text"><strong>Escrever PDF de 1 página — Sprint de Diagnóstico Técnico (R$ 4,5k / 2 sem)</strong><small>Para quem é, o que entrega, prazo, preço, política de garantia, FAQ.</small></div></li>
+        <li><input type="checkbox" data-id="s2-4"><div class="task-text"><strong>Escrever PDF de 1 página — Diagnóstico Executivo (R$ 6k / 2 sem)</strong><small>Workshop 1 dia + apresentação + roadmap escrito. Foco no Segmento B.</small></div></li>
+        <li><input type="checkbox" data-id="s2-5"><div class="task-text"><strong>Escrever PDF de 1 página — Sprint Site B2B (R$ 12k / 4–6 sem)</strong><small>Carro-chefe. Use o case Baterias como prova social inicial.</small></div></li>
+        <li><input type="checkbox" data-id="s2-6"><div class="task-text"><strong>Escrever PDF de 1 página — Sprint CRM + Automação (R$ 10k / 3–5 sem)</strong><small>Stack: HubSpot/RD/Pipedrive + Zapier/Make.</small></div></li>
+        <li><input type="checkbox" data-id="s2-7"><div class="task-text"><strong>Escrever PDF de 1 página — Sprint Dashboard (R$ 9k / 3–5 sem)</strong><small>Stack: Looker/Metabase/Power BI.</small></div></li>
+        <li><input type="checkbox" data-id="s2-8"><div class="task-text"><strong>Criar template de briefing em Google Forms (5 blocos)</strong><small>Pré-call. Cliente preenche antes da reunião. Reduz pré-venda em 70%.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto</strong>Contrato-padrão + NDA + política recebidos do advogado. Contábil contratado e regime fiscal decidido. 5 pacotes em PDF prontos no Drive. Briefing Forms publicado.</div>
+      <div class="dep"><strong>Depende de:</strong> Semana 1 (reunião com advogado + indicações de contábil).</div>
+    </div>
+  </div>
+
+  <!-- ===== FASE 3 ===== -->
+  <div class="phase">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Mês 2 · 16 Jun → 15 Jul/2026</span>
+        <span class="label">Ativação Comercial</span>
+      </div>
+      <h3>Transformar clientes atuais em recorrentes + reabrir conversas perdidas</h3>
+      <p class="focus">A maior alavanca de receita não está em lead novo — está em vender retainer aos 2 clientes que já confiam. E entender por que os 2 que não fecharam foram embora.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s3-1"><div class="task-text"><strong>Abrir CNPJ formalmente (MEI ou Simples, com base na decisão do contábil)</strong><small>Pré-requisito de qualquer fatura nova. Limite MEI R$ 81k/ano. Simples Anexo III com fator R recomendado se cogita ultrapassar.</small></div></li>
+        <li><input type="checkbox" data-id="s3-2"><div class="task-text"><strong>Conversa com Empresa de Baterias — propor Módulo SITE (R$ 1.500/mês)</strong><small>Argumento: site novo precisa de monitoramento + ajustes mensais, e você é o autor. 5h/mês. Bundle se quiserem outro módulo.</small></div></li>
+        <li><input type="checkbox" data-id="s3-3"><div class="task-text"><strong>Conversa com Agência de Growth — propor Módulo CRM ou SITE (R$ 2.500/mês)</strong><small>Agência de growth é ICP A perfeito para retainer recorrente. Maior probabilidade de aceitar.</small></div></li>
+        <li><input type="checkbox" data-id="s3-4"><div class="task-text"><strong>Pedir case study formal + autorização à Agência de Growth</strong><small>Vira munição central do LinkedIn ativo. Sem case formal, narrativa fica vaga.</small></div></li>
+        <li><input type="checkbox" data-id="s3-5"><div class="task-text"><strong>Post-mortem com lead E-commerce (proposta recusada)</strong><small>Mensagem: "Sem cobrança, só quero entender — o que faltou na proposta? Preço, escopo, timing?"</small></div></li>
+        <li><input type="checkbox" data-id="s3-6"><div class="task-text"><strong>Post-mortem com lead Real Estate (proposta recusada)</strong><small>Mesma mensagem. Quando pacote ICP C estiver pronto, reabrir conversa formalmente.</small></div></li>
+        <li><input type="checkbox" data-id="s3-7"><div class="task-text"><strong>Próximo projeto recebido: cronometrar com Toggl + aplicar contrato + cobrar com sinal</strong><small>Validar tabela de horas IRBIS contra realidade. Se exceder 20% do alvo, repreçar.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto</strong>CNPJ ativo + 1 fatura emitida + propostas de retainer enviadas a Baterias e Agência + post-mortems realizados + 1 case study formal autorizado.</div>
+      <div class="dep"><strong>Depende de:</strong> Semanas 2–4 (contrato + pacotes prontos).</div>
+    </div>
+  </div>
+
+  <!-- ===== FASE 4 ===== -->
+  <div class="phase">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Mês 3 · 16 Jul → 15 Ago/2026</span>
+        <span class="label">Canal Ativo</span>
+      </div>
+      <h3>Lançar aquisição além da indicação</h3>
+      <p class="focus">Indicação saudável funciona, mas tem teto. A IRBIS precisa diversificar sem perder qualidade. LinkedIn ativo + comunidades para Segmento A; indicação treinada para Segmento B.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s4-1"><div class="task-text"><strong>Construir página IRBIS mínima (site + manifesto + 2 cases + 5 pacotes)</strong><small>Você é dev — entrega própria. 1 semana de delivery. Vira ponto de chegada do LinkedIn.</small></div></li>
+        <li><input type="checkbox" data-id="s4-2"><div class="task-text"><strong>Reescrever perfil LinkedIn pessoal (bio + banner + headline)</strong><small>Ancorar no manifesto IRBIS. Posicionamento: "consultoria boutique de serviços digitais sob medida — sem template".</small></div></li>
+        <li><input type="checkbox" data-id="s4-3"><div class="task-text"><strong>Publicar 3 posts-âncora no LinkedIn (case técnico + case de growth + manifesto)</strong><small>Não inspiracional. Conteúdo técnico denso com aprendizado real.</small></div></li>
+        <li><input type="checkbox" data-id="s4-4"><div class="task-text"><strong>Iniciar cadência de 3–5 DMs/semana a CMOs/Heads de Growth de scale-ups</strong><small>Mensagem personalizada (não genérica). Meta: 16–20 DMs/mês com taxa de resposta ≥ 8%.</small></div></li>
+        <li><input type="checkbox" data-id="s4-5"><div class="task-text"><strong>Entrar em 2–3 comunidades (Slack Growth Hackers BR, ProductLed BR, etc)</strong><small>Não para vender — para responder dúvidas técnicas e ganhar reputação. Vendas vêm depois.</small></div></li>
+        <li><input type="checkbox" data-id="s4-6"><div class="task-text"><strong>Briefing escrito de ICP B enviado a 5–10 indicadores estratégicos</strong><small>WhatsApp/e-mail. Mensagem: "Este é o tipo de cliente IRBIS hoje — se cruzar com alguém assim, me avisa." Indicação treinada, não reativa.</small></div></li>
+        <li><input type="checkbox" data-id="s4-7"><div class="task-text"><strong>Publicar 1 post técnico/semana com cadência fixa</strong><small>Mesma cadência das DMs. Crescimento orgânico de seguidores qualificados.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto</strong>Site IRBIS no ar + perfil LinkedIn refeito + 16+ DMs enviadas com taxa de resposta medida + 1 conversa qualificada gerada via canal ativo.</div>
+      <div class="dep"><strong>Depende de:</strong> Mês 2 (case Agência autorizado para prova social).</div>
+    </div>
+  </div>
+
+  <!-- ===== FASE 5 ===== -->
+  <div class="phase">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Meses 4–6 · 16 Ago → 15 Nov/2026</span>
+        <span class="label">Estabilização</span>
+      </div>
+      <h3>Validar canal ativo e estabilizar retainers</h3>
+      <p class="focus">3 meses de canal ativo gera dados suficientes para decisão. Hora de promover 1 ICP a foco único, decidir destino do ICP C, e estabilizar 2 retainers ativos como base de receita.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s5-1"><div class="task-text"><strong>Auditar 90 dias de canal ativo — taxa de resposta + reuniões + propostas</strong><small>Se taxa de resposta ≥ 8% e ≥ 2 propostas geradas: dobra a aposta. Abaixo: pivotar para comunidades/parcerias.</small></div></li>
+        <li><input type="checkbox" data-id="s5-2"><div class="task-text"><strong>Decisão: promover 1 ICP a foco único OU continuar com 3 em paralelo</strong><small>Critério: qual gerou maior LTV/CAC + maior fechamento + maior NPS.</small></div></li>
+        <li><input type="checkbox" data-id="s5-3"><div class="task-text"><strong>Decisão: ICP C continua ou é matado</strong><small>Se pacote ICP C gerou ≥ 3 leads alinhados em 90 dias, mantém. Caso contrário, engaveta — sem culpa.</small></div></li>
+        <li><input type="checkbox" data-id="s5-4"><div class="task-text"><strong>Estabilizar 2 retainers ativos (Baterias + Agência ou novos)</strong><small>Meta: ≥ R$ 5k/mês recorrente garantido. Cobrir 2/3 do piso pessoal só com recorrência.</small></div></li>
+        <li><input type="checkbox" data-id="s5-5"><div class="task-text"><strong>Buscar 2–3 freelas validados (dev, designer, motion)</strong><small>Conversa exploratória, sem contrato formal ainda. Construir banco para quando precisar escalar capacidade.</small></div></li>
+        <li><input type="checkbox" data-id="s5-6"><div class="task-text"><strong>Estudar 2–3 referências de boutique digital (BR e internacionais)</strong><small>Você disse "não sigo o mercado". Sem referência, manifesto vira eco.</small></div></li>
+        <li><input type="checkbox" data-id="s5-7"><div class="task-text"><strong>Revisar templates 4, 5, 6, 11 do BMC com n ≥ 12 leads</strong><small>ICPs passam de hipótese para dado validado.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto</strong>≥ 2 retainers ativos · ≥ 30% pipeline via canal ativo · capacidade do sócio ≤ 80% · receita média ≥ R$ 15k/mês · LTV/CAC ≥ 2x · decisão registrada sobre ICP C.</div>
+      <div class="dep"><strong>Depende de:</strong> Mês 3 (canal ativo lançado + dados sendo coletados).</div>
+    </div>
+  </div>
+
+  <!-- ===== FASE 6 ===== -->
+  <div class="phase future">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Meses 6–9 · 16 Nov/2026 → 15 Fev/2027</span>
+        <span class="label">Preparar Base para Sócio</span>
+      </div>
+      <h3>Construir o terreno para a decisão societária</h3>
+      <p class="focus">Sócio de Growth não entra em casa fraca. Esses 3 meses são para consolidar método + receita recorrente + canal validado, de modo que a IRBIS seja um terreno digno de proposta societária.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s6-1"><div class="task-text"><strong>Estabilizar 3 retainers ativos há ≥ 3 meses</strong><small>Receita recorrente ≥ R$ 12k/mês. Base sólida.</small></div></li>
+        <li><input type="checkbox" data-id="s6-2"><div class="task-text"><strong>Validar canal ativo com dados maduros (90+ dias de prospecção)</strong><small>Métricas claras: CAC por canal, ticket por canal, LTV por canal.</small></div></li>
+        <li><input type="checkbox" data-id="s6-3"><div class="task-text"><strong>Documentar método IRBIS escrito (1 documento de 5–10 páginas)</strong><small>Como você qualifica, briefa, entrega. Vira playbook que um sócio entende em 1 hora.</small></div></li>
+        <li><input type="checkbox" data-id="s6-4"><div class="task-text"><strong>Conversas informais com 2–3 candidatos a sócio de Growth (sem compromisso)</strong><small>Café, almoço, ligação. Sente quem existe. O que cada um traria. Quem topa entrar.</small></div></li>
+        <li><input type="checkbox" data-id="s6-5"><div class="task-text"><strong>Estudar acordos de sócios reais (não modelos genéricos)</strong><small>Pedir ao advogado modelo de acordo de sócios com vesting + não-concorrência + drag/tag-along.</small></div></li>
+        <li><input type="checkbox" data-id="s6-6"><div class="task-text"><strong>Revisar BMC integralmente — versão 2.0</strong><small>Com n ≥ 12 e 6 meses de operação, hipóteses viram fatos. Refazer os 15 templates com dado real.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto</strong>≥ 3 retainers · canal ativo gerando ≥ 50% pipeline · método documentado · 2–3 candidatos a sócio identificados · BMC v2.0 atualizado.</div>
+      <div class="dep"><strong>Depende de:</strong> Meses 4–6 (estabilização e validação do canal).</div>
+    </div>
+  </div>
+
+  <!-- ===== FASE 7 ===== -->
+  <div class="phase future">
+    <div class="phase-card">
+      <div class="phase-head">
+        <span class="when">Meses 9–12 · 16 Fev → 15 Mai/2027</span>
+        <span class="label">Decisão Societária + North Star</span>
+      </div>
+      <h3>Decidir sobre sócio + atingir o North Star</h3>
+      <p class="focus">Se um candidato a sócio se mostrou aderente e a base está sólida, formalizar. Caso contrário, adiar mais 6 meses sem ressentimento. Em paralelo, fechar o ciclo de 12 meses com a IRBIS no patamar saudável projetado.</p>
+      <ul class="tasks">
+        <li><input type="checkbox" data-id="s7-1"><div class="task-text"><strong>Decidir formalmente: tem candidato a sócio aderente ou adiar?</strong><small>Critério: (a) acordo natural sobre valor IRBIS, (b) divisão de papéis clara, (c) confiança humana validada em ≥ 3 meses de relação.</small></div></li>
+        <li><input type="checkbox" data-id="s7-2"><div class="task-text"><strong>Se SIM: estruturar acordo societário com advogado especialista</strong><small>Vesting 4 anos com cliff 1 ano · não-concorrência · não-solicitação · drag/tag-along · deadlock · buyout. Investimento R$ 4–10k em advogado societário.</small></div></li>
+        <li><input type="checkbox" data-id="s7-3"><div class="task-text"><strong>Se NÃO: contratar 1 freela de Growth como CLT/PJ (test drive)</strong><small>6 meses de teste. Se funcionar, promover a sócio em 2027/2028.</small></div></li>
+        <li><input type="checkbox" data-id="s7-4"><div class="task-text"><strong>Atingir North Star: R$ 25k/mês recorrente + LTV/CAC ≥ 3:1 + ≥ 50% canal ativo + capacidade ≤ 70%</strong><small>Métrica primária do dashboard semanal. Se 3 de 4 forem atingidos, considera-se cumprido.</small></div></li>
+        <li><input type="checkbox" data-id="s7-5"><div class="task-text"><strong>Refazer o BMC v3.0 + Plano de Execução do próximo ano</strong><small>Novo horizonte 12 meses — provavelmente focado em crescimento + estrutura, não mais em fundação.</small></div></li>
+      </ul>
+      <div class="milestone"><strong>Marco de pronto · MAI/2027</strong>IRBIS opera em modo "saudável" · North Star atingido em ≥ 3 das 4 condições · decisão societária tomada (sim ou não, mas tomada) · novo plano de 12 meses traçado.</div>
+      <div class="dep"><strong>Depende de:</strong> Meses 6–9 (base sólida construída).</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- KPIs DE CONTROLE -->
+<!-- ============================================================ -->
+<div class="kpi-section">
+  <h2>KPIs de controle — para revisão semanal</h2>
+  <p style="color: var(--text-soft); font-size: 14px;">Toda segunda de manhã, abre este plano + a planilha de leads. Atualiza estes 6 números. Se 4+ estiverem na direção certa, segue. Caso contrário, ajusta.</p>
+  <table>
+    <thead><tr><th>KPI</th><th>Hoje</th><th>Meta 3m</th><th>Meta 6m</th><th>Meta 12m</th></tr></thead>
+    <tbody>
+      <tr><td><strong>% Capacidade do sócio em delivery</strong></td><td class="num">~100%</td><td class="num">≤ 80%</td><td class="num">≤ 75%</td><td class="num">≤ 70%</td></tr>
+      <tr><td>Leads/mês (todos canais)</td><td class="num">2</td><td class="num">6</td><td class="num">10</td><td class="num">15</td></tr>
+      <tr><td>% pipeline via canal ativo</td><td class="num">0%</td><td class="num">≥ 30%</td><td class="num">≥ 50%</td><td class="num">≥ 60%</td></tr>
+      <tr><td>Receita média/mês</td><td class="num">R$ 6k</td><td class="num">R$ 15k</td><td class="num">R$ 20k</td><td class="num">R$ 25k recorrente</td></tr>
+      <tr><td>Retainers ativos</td><td class="num">0</td><td class="num">2</td><td class="num">3</td><td class="num">3+</td></tr>
+      <tr><td>LTV/CAC tempo</td><td class="num">1,5x</td><td class="num">≥ 2x</td><td class="num">≥ 2,5x</td><td class="num">≥ 3x</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ============================================================ -->
+<!-- REGRAS DE EXECUÇÃO -->
+<!-- ============================================================ -->
+<div class="rules-section">
+  <h2>5 regras para não escorregar</h2>
+  <div class="rule"><span class="icon">⊘</span><div><strong>Nada de aceitar projeto sem contrato pronto.</strong> Mesmo um lead "muito quente". O contrato é a fundação — pisar antes, é fazer tudo de novo errado.</div></div>
+  <div class="rule"><span class="icon">⊘</span><div><strong>Nada de cobrar abaixo de R$ 200/h efetiva.</strong> Se o cálculo dá menos, reduz escopo ou recusa. Cobrar abaixo é pagar para trabalhar.</div></div>
+  <div class="rule"><span class="icon">⊘</span><div><strong>Nada de aceitar 100% de delivery comendo a semana.</strong> 8h/sem em Growth é a métrica primária. Se delivery ameaça, o que cai é projeto novo — não Growth.</div></div>
+  <div class="rule"><span class="icon">⊘</span><div><strong>Nada de improvisar pricing por carinho do cliente.</strong> Tabela de horas é interna, mas inviolável. Carinho não paga aluguel.</div></div>
+  <div class="rule go"><span class="icon">✓</span><div><strong>Revisão semanal toda segunda 9h.</strong> Abre este plano + planilha de leads + cockpit. 30 minutos. Atualiza os 6 KPIs. Define foco da semana. Sem isso, o plano vira ficção.</div></div>
+</div>
+
+<footer>
+  IRBIS — Plano de Execução · Maio/2026 → Maio/2027 · feito para uso pessoal de Nicolas · revisão integral prevista para mai/2027
+</footer>
+
+</div>
+
+<script>
+  document.querySelectorAll('.tasks input[type=checkbox]').forEach(cb => {
+    const id = cb.dataset.id;
+    const saved = localStorage.getItem('irbis-plan-' + id);
+    if (saved === '1') {
+      cb.checked = true;
+      cb.closest('li').classList.add('done');
+    }
+    cb.addEventListener('change', () => {
+      cb.closest('li').classList.toggle('done', cb.checked);
+      localStorage.setItem('irbis-plan-' + id, cb.checked ? '1' : '0');
+    });
+  });
+</script>
+
+</body>
+</html>

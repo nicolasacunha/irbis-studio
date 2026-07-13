@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Guide Completo — [MARCA]</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --abyss: #0C0C0E;
+    --onyx: #18181B;
+    --slate: #27272A;
+    --signal: #FF3D00;
+    --deep-signal: #E63900;
+    --light: #FAFAFA;
+    --muted: #71717A;
+    --dim: #52525B;
+  }
+  body { font-family: 'Sora', sans-serif; background: var(--abyss); color: var(--light); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  /* Navigation */
+  .nav { position: fixed; top: 0; left: 0; width: 100%; background: var(--abyss); border-bottom: 1px solid var(--slate); padding: 1rem 3rem; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--signal); font-weight: 600; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--signal); }
+
+  /* Sections */
+  .section { padding: 6rem 3rem 4rem; max-width: 1100px; margin: 0 auto; }
+  .section:first-of-type { padding-top: 8rem; }
+  .section-number { font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--signal); font-weight: 600; margin-bottom: 0.5rem; }
+  .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.15; }
+  .section-sub { font-size: 0.8rem; color: var(--muted); margin-bottom: 3rem; max-width: 600px; }
+
+  .divider { height: 1px; background: var(--slate); margin: 0 3rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+
+  /* Status badges */
+  .status { display: inline-block; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.25rem 0.7rem; font-weight: 600; margin-left: 0.5rem; vertical-align: middle; }
+  .status-done { background: #14532D; color: #4ADE80; }
+  .status-pending { background: #78350F; color: #FCD34D; }
+  .status-blocked { background: #7F1D1D; color: #FCA5A5; }
+
+  /* Cards */
+  .card { background: var(--onyx); border: 1px solid var(--slate); padding: 2rem; margin-bottom: 1.5rem; }
+  .card-accent { border-left: 3px solid var(--signal); }
+  .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; }
+  .card h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--signal); margin-bottom: 0.5rem; font-weight: 600; }
+  .card p { font-size: 0.85rem; color: #A1A1AA; line-height: 1.8; }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+
+  /* Color swatches */
+  .swatch-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .swatch-block { text-align: center; }
+  .swatch-circle { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 0.5rem; }
+  .swatch-circle-bordered { border: 1px solid var(--slate); }
+  .swatch-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.15rem; }
+  .swatch-hex { font-size: 0.6rem; font-family: monospace; color: var(--muted); }
+
+  /* Typography showcase */
+  .type-sample { margin-bottom: 2rem; }
+  .type-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--signal); margin-bottom: 0.3rem; font-weight: 600; }
+  .type-demo-xl { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.3rem; }
+  .type-demo-lg { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .type-demo-md { font-size: 1rem; font-weight: 400; color: #A1A1AA; }
+  .type-demo-sm { font-size: 0.8rem; font-weight: 300; color: var(--muted); }
+  .type-specs { font-size: 0.65rem; color: var(--dim); margin-top: 0.5rem; }
+
+  /* Manifesto */
+  .manifesto { background: var(--onyx); border: 1px solid var(--slate); padding: 3rem; margin-bottom: 2rem; }
+  .manifesto .anti-title { font-size: 1.8rem; font-weight: 800; color: var(--signal); margin-bottom: 1.5rem; }
+  .manifesto .anti-item { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.2rem; }
+  .manifesto .body-text { font-size: 0.9rem; color: #A1A1AA; line-height: 2; margin-top: 1.5rem; }
+  .manifesto .tagline { font-size: 1.2rem; font-weight: 800; color: var(--signal); margin-top: 1.5rem; }
+
+  /* FAQ */
+  .faq-item { margin-bottom: 2rem; }
+  .faq-q { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--light); }
+  .faq-a { font-size: 0.85rem; color: #A1A1AA; line-height: 1.8; }
+
+  /* Process */
+  .process-step { display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start; }
+  .step-number { width: 50px; height: 50px; background: var(--signal); display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 800; flex-shrink: 0; }
+  .step-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .step-content p { font-size: 0.82rem; color: #A1A1AA; line-height: 1.7; }
+
+  /* Checklist */
+  .checklist { list-style: none; }
+  .checklist li { padding: 0.7rem 0; border-bottom: 1px solid var(--slate); font-size: 0.82rem; display: flex; align-items: center; gap: 0.8rem; }
+  .check-done { color: #4ADE80; }
+  .check-pending { color: #FCD34D; }
+  .check-blocked { color: #FCA5A5; }
+  .check-icon { font-size: 1rem; flex-shrink: 0; }
+
+  /* Copy blocks */
+  .copy-block { background: var(--abyss); border: 1px solid var(--slate); padding: 1.5rem; margin-bottom: 1rem; font-size: 0.85rem; color: #D4D4D8; line-height: 1.8; }
+  .copy-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--signal); font-weight: 600; margin-bottom: 0.5rem; }
+
+  /* Table */
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
+  .info-table td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--slate); font-size: 0.82rem; vertical-align: top; }
+  .info-table td:first-child { color: var(--muted); width: 180px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* Service card */
+  .service-card { background: var(--onyx); border: 1px solid var(--slate); border-left: 3px solid var(--signal); padding: 2rem; margin-bottom: 1.5rem; }
+  .service-name { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--signal); font-weight: 600; margin-bottom: 0.3rem; }
+  .service-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.8rem; }
+  .service-desc { font-size: 0.85rem; color: #A1A1AA; line-height: 1.8; }
+
+  /* Hero preview */
+  .hero-preview { background: var(--abyss); border: 1px solid var(--slate); padding: 3rem; text-align: left; margin-bottom: 2rem; }
+  .hero-preview h2 { font-size: 2.5rem; font-weight: 800; line-height: 1.15; margin-bottom: 1rem; }
+  .hero-preview h2 span { color: var(--signal); }
+  .hero-preview p { font-size: 0.9rem; color: var(--muted); }
+  .hero-btn { display: inline-block; background: var(--signal); color: #fff; padding: 0.8rem 2rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; margin-top: 1.5rem; text-decoration: none; }
+
+  /* Mascot section */
+  .mascot-card { background: var(--onyx); border: 1px solid var(--slate); padding: 2.5rem; margin-bottom: 1.5rem; }
+  .mascot-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+
+  .mascot-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .mascot-spec { background: var(--abyss); padding: 1.2rem; border: 1px solid var(--slate); }
+  .mascot-spec h4 { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--signal); margin-bottom: 0.3rem; font-weight: 600; }
+  .mascot-spec p { font-size: 0.8rem; color: #A1A1AA; }
+
+  /* Pending section */
+  .pending-card { background: #1C1917; border: 1px solid #44403C; padding: 1.5rem; margin-bottom: 1rem; }
+  .pending-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; color: #FCD34D; }
+  .pending-card p { font-size: 0.8rem; color: #A8A29E; line-height: 1.7; }
+
+  /* Footer */
+  .footer { padding: 3rem; text-align: center; border-top: 1px solid var(--slate); margin-top: 4rem; }
+  .footer p { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--dim); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">IRBIS — Brand Guide</div>
+  <div class="nav-links">
+    <a href="#foundation">Foundation</a>
+    <a href="#voice">Voice</a>
+    <a href="#services">Services</a>
+    <a href="#visual">Visual</a>
+    <a href="#mascot">Mascot</a>
+    <a href="#copy">Copy</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pending">Pendentes</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════ -->
+<!-- COVER -->
+<!-- ═══════════════════════════════════ -->
+<div style="padding: 10rem 3rem 6rem; max-width: 1100px; margin: 0 auto;">
+  <div style="font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--signal); margin-bottom: 1rem; font-weight: 600;">Brand Guide Completo</div>
+  <h1 style="font-size: 4rem; font-weight: 800; line-height: 1.05; margin-bottom: 1rem;">IRBIS</h1>
+  <p style="font-size: 1.1rem; color: var(--muted); max-width: 500px; margin-bottom: 2rem;">Tudo que define a marca. O que foi decidido, o que falta decidir, e como tudo se conecta.</p>
+  <div style="display: flex; gap: 2rem; font-size: 0.7rem; color: var(--dim);">
+    <div><span style="color: var(--signal); font-weight: 600;">Founder</span> Nicolas Cunha</div>
+    <div><span style="color: var(--signal); font-weight: 600;">Data</span> Abril 2026</div>
+    <div><span style="color: var(--signal); font-weight: 600;">Versão</span> 1.0</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 01 — FOUNDATION -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="foundation">
+  <div class="section-number">01 — Foundation</div>
+  <div class="section-title">Quem somos</div>
+  <div class="section-sub">O DNA da marca. Posicionamento, público, diferencial e proposta de valor.</div>
+
+  <table class="info-table">
+    <tr><td>O que somos</td><td>Estúdio digital que cria experiências imersivas. Sites 3D com motion, web apps funcionais e branding digital. Design e código, uma cabeça, zero burocracia.</td></tr>
+    <tr><td>Público-alvo</td><td>Empresas com budget real (ticket R$ 15k–50k) que querem presença digital premium. Não é negócio local pequeno. É quem entende que digital é investimento.</td></tr>
+    <tr><td>Diferencial</td><td>Design + código na mesma pessoa. Com IA, entregamos em 2 semanas o que agências levam 3 meses. Resultado de agência grande, velocidade de startup.</td></tr>
+    <tr><td>Proposta de valor</td><td>Experiências digitais que fazem empresas parecerem 10x maiores do que são.</td></tr>
+    <tr><td>Modelo de preço</td><td>Sob consulta. Cada projeto é único, valor depende do escopo.</td></tr>
+    <tr><td>Formato</td><td>Solo operator com IA como multiplicador. Poucos clientes por vez, cada um com atenção total.</td></tr>
+  </table>
+
+  <div class="card card-accent">
+    <h4>Tagline</h4>
+    <h3 style="font-size: 1.8rem;">Design is dead. We build experiences.</h3>
+  </div>
+
+  <div class="grid-2">
+    <div class="card card-accent">
+      <h4>Pitch — 1 frase</h4>
+      <p>Crio experiências digitais que fazem empresas parecerem 10x maiores.</p>
+    </div>
+    <div class="card card-accent">
+      <h4>Elevator Pitch — 30s</h4>
+      <p>Design is dead. Sites bonitos não bastam mais. Eu construo experiências digitais completas — imersivas, funcionais, que convertem. Sites 3D com motion, web apps, branding. Design e código, uma pessoa, com IA. O tipo de coisa que faz seu concorrente perguntar quem fez.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 02 — MANIFESTO -->
+<!-- ═══════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">02 — Manifesto</div>
+  <div class="section-title">O que defendemos</div>
+  <div class="section-sub">A anti-identidade da marca. O que somos e o que recusamos ser.</div>
+
+  <div class="manifesto">
+    <div class="anti-title">We are;</div>
+    <div class="anti-item">Anti-agency.</div>
+    <div class="anti-item">Anti-template.</div>
+    <div class="anti-item">Anti-slow.</div>
+
+    <div class="body-text">
+      Agências cobram fortunas, demoram meses e entregam algo genérico. O designer sonha, o dev estraga, o cliente aceita porque já tá cansado. Isso é o mercado, e a gente não é o mercado.
+    </div>
+
+    <div class="body-text">
+      Aqui, design e código saem da mesma cabeça. A gente não faz sites, a gente constrói armas digitais. O tipo de experiência que faz seu concorrente parar e perguntar quem fez.
+    </div>
+
+    <div class="body-text">
+      O que agências tradicionais entregam em 3 meses, a gente entrega em 2 semanas. Não porque cortamos caminho. Porque IA nos torna absurdamente mais eficientes.
+    </div>
+
+    <div class="tagline">Design is dead. We build experiences.</div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card" style="text-align: center;">
+      <h4>Anti-agency</h4>
+      <p>Sem burocracia, sem reunião da reunião, sem 15 pessoas no projeto. Uma cabeça, resultado completo.</p>
+    </div>
+    <div class="card" style="text-align: center;">
+      <h4>Anti-template</h4>
+      <p>Zero WordPress genérico, zero Wix, zero template comprado. Tudo desenhado e codado do zero.</p>
+    </div>
+    <div class="card" style="text-align: center;">
+      <h4>Anti-slow</h4>
+      <p>IA como multiplicador de velocidade. 2 semanas, não 3 meses. Sem sacrificar qualidade.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 03 — VOICE -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="voice">
+  <div class="section-number">03 — Voice</div>
+  <div class="section-title">Tom de voz</div>
+  <div class="section-sub">Como a marca fala, escreve e se comporta em cada contexto.</div>
+
+  <table class="info-table">
+    <tr><td>Pessoa</td><td><strong>Nós / We.</strong> Mesmo sendo solo, a marca fala como estúdio.</td></tr>
+    <tr><td>Idioma base</td><td><strong>Português.</strong> Com inglês misturado naturalmente. Termos como craft, build, experience, branding, stack, deploy entram sem tradução.</td></tr>
+    <tr><td>Formalidade</td><td><strong>Casual estratégico.</strong> Site e propostas polidos. Redes sociais mais soltas e diretas.</td></tr>
+    <tr><td>Vibe</td><td><strong>Magnético, provocativo, ousado.</strong> Fala com confiança, não tem medo de ter opinião. Nunca arrogante, sempre competente.</td></tr>
+    <tr><td>Emojis</td><td><strong>Zero.</strong> Nunca. A tipografia e as palavras são suficientes.</td></tr>
+    <tr><td>Referência de copy</td><td><strong>Thingy & Thingy</strong> — anti-identidade, anti-bullshit, provocativa mas divertida. <strong>Locomotive</strong> — confiante, polida. <strong>ITAL/C</strong> — premium, clean.</td></tr>
+  </table>
+
+  <div class="grid-2">
+    <div class="card card-accent">
+      <h4>A marca faz</h4>
+      <p>Fala com confiança. Tem opinião. Usa inglês naturalmente. Vai direto ao ponto. Provoca o mercado. Mostra resultado, não promessa.</p>
+    </div>
+    <div class="card" style="border-left: 3px solid #7F1D1D;">
+      <h4>A marca não faz</h4>
+      <p>Não usa emoji. Não é corporativa. Não fala "soluções inovadoras". Não pede desculpa por cobrar caro. Não usa frases genéricas de AI. Não exagera nos claims.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 04 — SERVICES -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="services">
+  <div class="section-number">04 — Services</div>
+  <div class="section-title">O que entregamos</div>
+  <div class="section-sub">Três serviços core. Naming, descrição e escopo de cada um.</div>
+
+  <div class="service-card">
+    <div class="service-name">Serviço 01</div>
+    <div class="service-title">Immersive Web Design</div>
+    <div class="service-desc">Nada de template, nada de WordPress genérico. A gente constrói experiências web com 3D, motion e código real. O tipo de site que faz as pessoas pararem de scrollar, e o seu concorrente perguntar quem fez.</div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-name">Serviço 02</div>
+    <div class="service-title">Custom Digital Products</div>
+    <div class="service-desc">Web apps, dashboards, ferramentas. Se a sua ideia precisa virar software, a gente tira do papel em semanas. Design e código, tudo in-house. MVP funcional, bonito, pronto pra escalar.</div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-name">Serviço 03</div>
+    <div class="service-title">Brand DNA</div>
+    <div class="service-desc">Identidade visual, design system, direção criativa. Não é só logo bonitinho — é como sua marca se comporta em cada pixel, cada tela, cada interação. A gente cria presenças digitais que ninguém esquece.</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 05 — VISUAL IDENTITY -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="visual">
+  <div class="section-number">05 — Visual Identity</div>
+  <div class="section-title">Identidade visual</div>
+  <div class="section-sub">Paleta, tipografia, regras visuais e direção estética.</div>
+
+  <!-- Palette -->
+  <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem;">Paleta — Signal</h3>
+
+  <div class="swatch-row">
+    <div class="swatch-block">
+      <div class="swatch-circle swatch-circle-bordered" style="background: #0C0C0E;"></div>
+      <div class="swatch-name">Abyss</div>
+      <div class="swatch-hex">#0C0C0E</div>
+    </div>
+    <div class="swatch-block">
+      <div class="swatch-circle swatch-circle-bordered" style="background: #18181B;"></div>
+      <div class="swatch-name">Onyx</div>
+      <div class="swatch-hex">#18181B</div>
+    </div>
+    <div class="swatch-block">
+      <div class="swatch-circle" style="background: #27272A;"></div>
+      <div class="swatch-name">Slate</div>
+      <div class="swatch-hex">#27272A</div>
+    </div>
+    <div class="swatch-block">
+      <div class="swatch-circle" style="background: #FF3D00;"></div>
+      <div class="swatch-name">Signal</div>
+      <div class="swatch-hex">#FF3D00</div>
+    </div>
+    <div class="swatch-block">
+      <div class="swatch-circle" style="background: #E63900;"></div>
+      <div class="swatch-name">Deep Signal</div>
+      <div class="swatch-hex">#E63900</div>
+    </div>
+    <div class="swatch-block">
+      <div class="swatch-circle" style="background: #FAFAFA;"></div>
+      <div class="swatch-name">Light</div>
+      <div class="swatch-hex">#FAFAFA</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom: 3rem;">
+    <div class="card">
+      <h4>Uso das cores</h4>
+      <p><strong>Abyss (#0C0C0E)</strong> — Background principal, base de tudo.<br>
+      <strong>Onyx (#18181B)</strong> — Cards, containers, superfícies elevadas.<br>
+      <strong>Slate (#27272A)</strong> — Bordas, divisores, elementos sutis.<br>
+      <strong>Signal (#FF3D00)</strong> — Accent principal. CTAs, destaques, títulos de seção.<br>
+      <strong>Deep Signal (#E63900)</strong> — Hover states, variação do accent.<br>
+      <strong>Light (#FAFAFA)</strong> — Texto principal. Sempre branco.</p>
+    </div>
+    <div class="card">
+      <h4>Regras</h4>
+      <p>Texto principal sempre em branco (#FAFAFA). Nunca cinza no body text.<br><br>
+      Laranja (Signal) é accent, não domina. Usado em CTAs, labels, destaques e detalhes. Nunca como fundo de seção inteira.<br><br>
+      Contraste extremo. Ou é escuro ou é vibrante. Sem tons "mornos" ou meios-termos.</p>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem;">Tipografia — Sora</h3>
+
+  <div class="card" style="margin-bottom: 2rem;">
+    <div class="type-sample">
+      <div class="type-label">Display / H1</div>
+      <div class="type-demo-xl">Design is dead.</div>
+      <div class="type-specs">Sora ExtraBold (800) / 48–72px / Line-height 1.1</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-label">Heading / H2</div>
+      <div class="type-demo-lg">We build experiences.</div>
+      <div class="type-specs">Sora Bold (700) / 24–36px / Line-height 1.2</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-label">Body</div>
+      <div class="type-demo-md">Agências cobram fortunas, demoram meses e entregam algo genérico.</div>
+      <div class="type-specs">Sora Regular (400) / 14–16px / Line-height 1.7</div>
+    </div>
+    <div class="type-sample" style="margin-bottom: 0;">
+      <div class="type-label">Caption / Label</div>
+      <div class="type-demo-sm" style="letter-spacing: 0.15em; text-transform: uppercase;">Immersive Web Design</div>
+      <div class="type-specs">Sora SemiBold (600) / 10–12px / Letter-spacing 0.15em / Uppercase</div>
+    </div>
+  </div>
+
+  <!-- Visual direction -->
+  <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem;">Direção visual</h3>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>Estética</h4>
+      <p>Dark total com accent vibrante. Inspiração: NEXUM (dark + laranja + mascote animal + tipografia bold). Contraste extremo, sem meios-termos. O trabalho (portfólio) é a cor.</p>
+    </div>
+    <div class="card">
+      <h4>Referências</h4>
+      <p><strong>NEXUM</strong> — Dark + laranja, mascote animal, jovem, direto.<br>
+      <strong>Thingy & Thingy</strong> — Anti-identidade, mascote com personalidade, copy provocativa.<br>
+      <strong>Locomotive</strong> — Qualidade de dev, polida, premium.<br>
+      <strong>ITAL/C</strong> — Clean, premium, dark.</p>
+    </div>
+  </div>
+
+  <!-- Logo direction -->
+  <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1.5rem;">Logo — Direção <span class="status status-pending">Depende do nome</span></h3>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>Logo tipográfico</h4>
+      <p>Nome da marca em Sora ExtraBold. Clean, sem símbolo. Usado em contexts formais, nav do site, propostas, assinatura de email.</p>
+    </div>
+    <div class="card">
+      <h4>Ícone / Logomark</h4>
+      <p>Ícone da pantera simplificado. Usado como favicon, avatar de redes sociais, watermark em peças. Funciona sozinho sem o nome.</p>
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1.5rem;">Preview — Hero do site</h3>
+
+  <div class="hero-preview">
+    <h2>Design is dead.<br><span>We build experiences.</span></h2>
+    <p>Experiências digitais imersivas. Sites 3D, web apps, branding.</p>
+    <a href="#" class="hero-btn">Start your project</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 06 — MASCOT -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="mascot">
+  <div class="section-number">06 — Mascot</div>
+  <div class="section-title">A Pantera</div>
+  <div class="section-sub">Mascote oficial da marca. Aparece em tudo: site, posts, propostas, apresentações.</div>
+
+  <div class="mascot-card">
+    <h3>Direção do mascote</h3>
+    <div class="mascot-specs">
+      <div class="mascot-spec">
+        <h4>Estilo</h4>
+        <p>Render 3D realista. Iluminação cinematográfica. Qualidade de key visual premium.</p>
+      </div>
+      <div class="mascot-spec">
+        <h4>Personalidade</h4>
+        <p>Com acessórios e roupa. Estilosa, humanizada. Tipo o macaco do NEXUM com óculos e hoodie.</p>
+      </div>
+      <div class="mascot-spec">
+        <h4>Paleta</h4>
+        <p>Pantera preta com detalhes em Signal (#FF3D00). Olhos laranja, acessórios na cor accent. Fundo dark (Abyss).</p>
+      </div>
+      <div class="mascot-spec">
+        <h4>Uso</h4>
+        <p>Hero do site, posts de Instagram, propostas, apresentações, stickers, merch. A pantera É a marca visual.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>A pantera é</h4>
+      <p>Confiante. Elegante. Silenciosa mas imponente. Não precisa rugir pra impor respeito. Tem estilo, não força bruta.</p>
+    </div>
+    <div class="card">
+      <h4>A pantera não é</h4>
+      <p>Não é cartoon infantil. Não é clip art. Não é genérica. Não é agressiva/assustadora. É cool, não intimidadora.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top: 1rem;">
+    <h4>Iconografia</h4>
+    <p>A pantera funciona como ícone da marca. Versão simplificada pra favicon, avatar, watermark. Não usamos icon set genérico (Feather, Lucide, etc). O ícone da marca é a pantera.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 07 — COPY -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="copy">
+  <div class="section-number">07 — Copy</div>
+  <div class="section-title">Textos prontos</div>
+  <div class="section-sub">Copy aprovada pra cada canal e contexto. Placeholder [MARCA] onde entra o nome.</div>
+
+  <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem;">Perfis</h3>
+
+  <div class="copy-label">Instagram — Bio</div>
+  <div class="copy-block">Design is dead. We build experiences.</div>
+
+  <div class="copy-label">LinkedIn — Company Page — Headline</div>
+  <div class="copy-block">Design is dead. We build experiences.</div>
+
+  <div class="copy-label">LinkedIn — Company Page — Sobre</div>
+  <div class="copy-block">Criamos experiências digitais imersivas para empresas que querem dominar o digital. Sites 3D com motion, web apps, branding. Design e código, uma cabeça, resultado completo.</div>
+
+  <div class="copy-label">LinkedIn — Nicolas Cunha (pessoal) — Headline</div>
+  <div class="copy-block">Founder @ [MARCA] / Design + Code + AI</div>
+
+  <div class="copy-label">LinkedIn — Nicolas Cunha (pessoal) — Sobre</div>
+  <div class="copy-block">Construo experiências digitais que fazem empresas parecerem 10x maiores. Sites 3D, web apps, branding. O que agências entregam em 3 meses, eu entrego em 2 semanas com IA.</div>
+
+  <div class="copy-label">Site — Hero</div>
+  <div class="copy-block">
+    <strong style="color: var(--light);">H1:</strong> Design is dead. We build experiences.<br>
+    <strong style="color: var(--light);">Sub:</strong> Experiências digitais imersivas. Sites 3D, web apps, branding. Uma cabeça, zero burocracia.
+  </div>
+
+  <div style="margin-top: 1rem; font-size: 0.75rem; color: var(--dim); font-style: italic;">Nota: copy do site será refinada durante o desenvolvimento. Estes são os textos base aprovados.</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 08 — PROCESS -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="process">
+  <div class="section-number">08 — Process</div>
+  <div class="section-title">Como funciona</div>
+  <div class="section-sub">Do primeiro contato à entrega. 4 etapas, sem surpresas.</div>
+
+  <div class="process-step">
+    <div class="step-number">01</div>
+    <div class="step-content">
+      <h3>Discovery</h3>
+      <p>Cliente preenche o formulário no site. Analisamos e, se fizer sentido, marcamos uma conversa pra entender o projeto a fundo. Objetivo, público, referências, prazo, budget.</p>
+    </div>
+  </div>
+
+  <div class="process-step">
+    <div class="step-number">02</div>
+    <div class="step-content">
+      <h3>Design</h3>
+      <p>Criamos a direção visual completa. Layout, identidade, motion, 3D. O cliente vê tudo antes de uma linha de código ser escrita. Reuniões 2x por semana pra alinhar.</p>
+    </div>
+  </div>
+
+  <div class="process-step">
+    <div class="step-number">03</div>
+    <div class="step-content">
+      <h3>Build</h3>
+      <p>Design aprovado vira código. Front, back, integrações, responsividade. Cliente acompanha por updates diretos no WhatsApp e reuniões bissemanais. Sem surpresa na entrega.</p>
+    </div>
+  </div>
+
+  <div class="process-step">
+    <div class="step-number">04</div>
+    <div class="step-content">
+      <h3>Launch</h3>
+      <p>Testes finais, ajustes, deploy. Tudo no nome do cliente: domínio, hosting, repositório, acessos. Projeto pronto pra rodar e documentado pra qualquer dev dar continuidade.</p>
+    </div>
+  </div>
+
+  <div style="font-size: 0.75rem; color: var(--dim); font-style: italic; margin-top: 1rem;">Nota: copy do processo será refinada. Estrutura e etapas aprovadas.</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 09 — FAQ -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="faq">
+  <div class="section-number">09 — FAQ</div>
+  <div class="section-title">Objeções e respostas</div>
+  <div class="section-sub">As perguntas que clientes vão fazer. E como respondemos.</div>
+
+  <div class="faq-item">
+    <div class="faq-q">"Mas é só uma pessoa?"</div>
+    <div class="faq-a">Exatamente. E é por isso que funciona. Uma cabeça, uma visão, zero ruído. Sem designer brigando com dev, sem gerente de projeto atrasando cronograma. O que você aprova é o que vai pro ar, feito pela mesma pessoa do início ao fim.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">"E se você sumir / ficar indisponível?"</div>
+    <div class="faq-a">Todo código fica no repositório do cliente. Domínio, hosting, acessos: tudo no seu nome. Documentação clara o suficiente pra qualquer dev dar continuidade. Você nunca fica refém de ninguém.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">"Por que não pego um freelancer mais barato?"</div>
+    <div class="faq-a">Pode pegar. Aí quando o site sair torto, o 3D não rodar, o mobile quebrar e você gastar o dobro refazendo, a gente conversa. Barato sai caro. Aqui você paga uma vez e sai com algo que funciona.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">"Vocês usam IA? Então é tudo automático?"</div>
+    <div class="faq-a">IA é ferramenta, não substituto. A gente usa IA pra ser mais rápido, não pra cortar qualidade. Cada pixel e cada linha de código passa por mão humana. IA acelera. Quem decide é gente.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">"Quanto custa?"</div>
+    <div class="faq-a">Cada projeto é único, então o valor depende do escopo. Manda uma mensagem e a gente conversa sem compromisso.</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 10 — PENDENTES -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="pending">
+  <div class="section-number">10 — Pendentes</div>
+  <div class="section-title">O que falta</div>
+  <div class="section-sub">Tudo que ainda precisa ser definido ou produzido pra marca estar completa.</div>
+
+  <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem;">Status geral</h3>
+
+  <ul class="checklist">
+    <li><span class="check-icon check-done">&#10003;</span> Posicionamento (público, diferencial, proposta de valor)</li>
+    <li><span class="check-icon check-done">&#10003;</span> Tagline ("Design is dead. We build experiences.")</li>
+    <li><span class="check-icon check-done">&#10003;</span> Pitch curto + elevator pitch</li>
+    <li><span class="check-icon check-done">&#10003;</span> Tom de voz (casual estratégico, "nós", PT + EN, zero emoji)</li>
+    <li><span class="check-icon check-done">&#10003;</span> Manifesto / About</li>
+    <li><span class="check-icon check-done">&#10003;</span> Serviços — naming e descrição (Immersive Web Design, Custom Digital Products, Brand DNA)</li>
+    <li><span class="check-icon check-done">&#10003;</span> FAQ — 5 objeções com resposta</li>
+    <li><span class="check-icon check-done">&#10003;</span> Processo de trabalho — 4 etapas (Discovery, Design, Build, Launch)</li>
+    <li><span class="check-icon check-done">&#10003;</span> Copy para perfis (Instagram, LinkedIn company, LinkedIn pessoal, site hero)</li>
+    <li><span class="check-icon check-done">&#10003;</span> Paleta de cores — Signal (#0C0C0E, #18181B, #27272A, #FF3D00, #E63900, #FAFAFA)</li>
+    <li><span class="check-icon check-done">&#10003;</span> Tipografia — Sora (ExtraBold headlines, Regular body)</li>
+    <li><span class="check-icon check-done">&#10003;</span> Direção do mascote — Pantera das neves (snow leopard) 3D realista com acessórios</li>
+    <li><span class="check-icon check-done">&#10003;</span> Direção do logo — Tipográfico + ícone da pantera</li>
+    <li><span class="check-icon check-done">&#10003;</span> Iconografia — Pantera como ícone principal</li>
+    <li><span class="check-icon check-done">&#10003;</span> Referências visuais — NEXUM, Thingy & Thingy, Locomotive, ITAL/C</li>
+  </ul>
+
+  <h3 style="font-size: 1rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem;">Desbloqueado — nome definido</h3>
+
+  <div class="card card-accent">
+    <h4>Nome da marca</h4>
+    <h3>IRBIS</h3>
+    <p style="margin-top: 0.8rem;">Nome mongol para a pantera das neves (Panthera uncia) — "o fantasma das montanhas". Animal extremamente raro e esquivo, habita as montanhas da Ásia Central. Conecta diretamente com o mascote e a estética da marca.</p>
+  </div>
+
+  <div class="card card-accent">
+    <h4>Mascote — nova direção</h4>
+    <h3>Pantera das Neves</h3>
+    <p style="margin-top: 0.8rem;">O mascote evolui de pantera preta para snow leopard — esteticamente diferente, mais raro, mais premium. A pantera das neves é chamada de "fantasma das montanhas" por ser quase impossível de avistar. Reforça a ideia de um estúdio que aparece, entrega algo absurdo, e some. Alta altitude, isolamento, precisão.</p>
+  </div>
+
+  <div class="card card-accent">
+    <h4>Domínio</h4>
+    <p><strong>irbis.studio</strong> — confirmar disponibilidade no registrador (Namecheap ou Porkbun). irbis.com está tomado.</p>
+  </div>
+
+  <div class="card card-accent">
+    <h4>Instagram</h4>
+    <p><strong>@byirbis</strong> — confirmado disponível. ✅<br><br>
+    @irbis: tomado (influenciadora russa)<br>
+    @irbis.studio: conta fantasma, 0 posts<br>
+    @irbisstudio: tomado (empresa de couro)</p>
+  </div>
+
+  <div class="card card-accent">
+    <h4>Logo tipográfico</h4>
+    <p><strong>IRBIS</strong> em Sora ExtraBold. A produzir.</p>
+  </div>
+
+  <h3 style="font-size: 1rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem;">A produzir</h3>
+
+  <div class="pending-card">
+    <h4>Render 3D da pantera</h4>
+    <p>Mascote oficial. Render realista com acessórios/roupa na paleta Signal. Precisa de artista 3D ou geração via IA + refinamento. Formatos: hero do site (landscape), avatar (square), variações de pose.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Ícone da pantera (logomark)</h4>
+    <p>Versão simplificada do mascote. Silhueta ou forma minimalista da pantera pra usar como favicon, avatar, watermark.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Pilares de conteúdo</h4>
+    <p>Definir o que a marca posta nas redes sociais. Categorias, frequência, formatos. Será definido em fase posterior.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Site</h4>
+    <p>Design e desenvolvimento do site da marca. Estrutura sugerida: Hero + About (manifesto) + Services + Work (portfólio) + Process + Contact. Copy do site será refinada durante o desenvolvimento.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Posts de lançamento</h4>
+    <p>Peças visuais pra Instagram e LinkedIn anunciando a marca. Dependem do nome, logo e render da pantera.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Template de proposta comercial</h4>
+    <p>Atualizar o template de proposta (como o QG Dash) com a nova identidade visual.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Refinar copy geral</h4>
+    <p>O copy do processo de trabalho e das descrições de serviço foram aprovados em conteúdo mas precisam de refinamento no tom. Atual está "genérico de AI" em alguns trechos. Será retrabalhado com mais personalidade.</p>
+  </div>
+
+  <div class="pending-card">
+    <h4>Imagens sem mascote</h4>
+    <p>Ainda não foi definido o que aparece visualmente quando a pantera não está presente. Opções a explorar: mockups 3D dos projetos, prints de código estilizados, texturas dark abstratas, screenshots do portfólio.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>IRBIS — Brand Guide v1.1 — Abril 2026</p>
+  <p style="margin-top: 0.5rem;">Documento vivo. Atualizar conforme decisões forem tomadas.</p>
+</div>
+
+</body>
+</html>
