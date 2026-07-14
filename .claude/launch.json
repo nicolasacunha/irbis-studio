@@ -38,6 +38,12 @@
       "port": 8080
     },
     {
+      "name": "alison-lin",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4180", "--directory", "Testes/alison-lin"],
+      "port": 4180
+    },
+    {
       "name": "panda-concept",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "4173", "--directory", "02 - Projetos/Panda Storee/concept"],
