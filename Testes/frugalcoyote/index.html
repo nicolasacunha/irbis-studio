@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frugal Coyote — Nonprofit Thrift Shop in Borrego Springs · Concept</title>
+<meta name="description" content="Design concept: Frugal Coyote Boutique & Resale Shop, the nonprofit thrift store in Borrego Springs, CA. Every purchase funds local programs through the Borrego Valley Endowment Fund.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b34a1e'/%3E%3Cpath d='M12 54 C9 46 10 38 16 33 L24 30 L28 26 L34 14 L30 7 L36 10 L38 8 L50 3 L40 14 Q37 20 40 25 Q44 29 43 36 L43 54 L38 54 L38 40 Q30 42 24 44 L22 54 Z' fill='%23fdf8ec'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:wght@400;500;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="statusbar" id="statusbar">
+  <strong>Open Tue–Sat, 8am–4pm</strong> · The Center, 590 Palm Canyon Dr, Borrego Springs
+</div>
+
+<header class="hdr">
+  <div class="wrap hdr__inner">
+    <a class="brand" href="index.html" aria-label="Frugal Coyote home">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#e8a33d"/>
+        <g transform="translate(7 6) scale(0.82)" fill="#33220f"><path d="M12 54 C9 46 10 38 16 33 L24 30 L28 26 L34 14 L30 7 L36 10 L38 8 L50 3 L40 14 Q37 20 40 25 Q44 29 43 36 L43 54 L38 54 L38 40 Q30 42 24 44 L22 54 Z"/><path d="M14 35 C7 38 3 45 4 52 C7 47 11 42 17 39 Z"/></g>
+      </svg>
+      <span class="brand__name">Frugal Coyote
+        <span class="brand__sub">Boutique &amp; Resale · Borrego Springs</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav__anchor" href="#finds">The Finds</a>
+      <a class="nav__anchor" href="#impact">Where the Money Goes</a>
+      <a class="nav__phone" href="tel:+17607674608">(760) 767-4608</a>
+      <a class="nav__cta" href="visit.html">Visit &amp; Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ——— HERO ——— -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__inner">
+      <p class="stamp">Nonprofit thrift · est. in the Anza-Borrego desert</p>
+      <h1>The best <em>treasure hunt</em> in the desert.</h1>
+      <p class="hero__lede">Frugal Coyote is Borrego Springs' community thrift shop, stocked entirely by neighbors' donations. Come for the turquoise brooches and cast-iron pans. Every dollar you spend stays right here in Borrego.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--solid" href="visit.html">Plan your visit</a>
+        <a class="btn btn--ghost" href="visit.html#donate">Donate your treasures</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticker" aria-hidden="true">
+    <span><b>10%</b> off, every single day</span>
+  </div>
+
+  <!-- Desert scene -->
+  <svg class="hero__scene" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <!-- sun -->
+    <circle cx="1085" cy="86" r="52" fill="#f3c876"/>
+    <circle cx="1085" cy="86" r="70" fill="none" stroke="#e8a33d" stroke-width="2" stroke-dasharray="2 14" stroke-linecap="round"/>
+    <!-- far ridge -->
+    <path d="M0 196 L110 158 L250 188 L420 140 L560 184 L730 150 L880 190 L1030 158 L1200 196 L1330 172 L1440 190 V300 H0 Z" fill="#e2c48f"/>
+    <!-- mid ridge -->
+    <path d="M0 238 L170 206 L330 234 L520 196 L700 234 L890 206 L1070 240 L1260 216 L1440 234 V300 H0 Z" fill="#cf9a5c"/>
+    <!-- coyote on the mid ridge -->
+    <g transform="translate(940 152) scale(1.15)" fill="#33220f">
+      <path d="M12 54 C9 46 10 38 16 33 L24 30 L28 26 L34 14 L30 7 L36 10 L38 8 L50 3 L40 14 Q37 20 40 25 Q44 29 43 36 L43 54 L38 54 L38 40 Q30 42 24 44 L22 54 Z"/><path d="M14 35 C7 38 3 45 4 52 C7 47 11 42 17 39 Z"/>
+    </g>
+    <!-- near ground -->
+    <path d="M0 268 Q360 246 720 264 T1440 260 V300 H0 Z" fill="#a15f31"/>
+    <!-- ocotillo -->
+    <g stroke="#4a2c14" stroke-width="3.5" stroke-linecap="round" fill="none">
+      <path d="M150 288 C147 250 141 220 126 190"/>
+      <path d="M154 288 C155 246 152 214 146 182"/>
+      <path d="M158 288 C163 250 170 222 184 194"/>
+      <path d="M148 288 C141 256 130 234 112 214"/>
+      <path d="M161 288 C170 258 182 240 199 224"/>
+    </g>
+    <!-- agave -->
+    <g fill="#5c6b3c">
+      <path d="M1275 282 L1262 244 L1272 252 L1273 236 L1280 250 L1287 234 L1288 252 L1298 242 L1285 282 Z"/>
+    </g>
+    <!-- base band -->
+    <path d="M0 292 H1440 V300 H0 Z" fill="#7c4423"/>
+  </svg>
+</section>
+
+<!-- ——— MARQUEE ——— -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Turquoise jewelry</span><span>Cast-iron kitchenware</span><span>Vintage dresses</span><span>Hand tools</span><span>Vinyl records</span><span>Paperbacks by the shelf</span><span>Original paintings</span><span>Yarn by the bag</span><span>Glassware</span><span>Leather bags</span><span>Boots &amp; shoes</span><span>Furniture with stories</span>
+    <span>Turquoise jewelry</span><span>Cast-iron kitchenware</span><span>Vintage dresses</span><span>Hand tools</span><span>Vinyl records</span><span>Paperbacks by the shelf</span><span>Original paintings</span><span>Yarn by the bag</span><span>Glassware</span><span>Leather bags</span><span>Boots &amp; shoes</span><span>Furniture with stories</span>
+  </div>
+</div>
+
+<!-- ——— THE FINDS ——— -->
+<section class="finds" id="finds">
+  <div class="wrap">
+    <div class="finds__head reveal">
+      <p class="stamp">What you'll find</p>
+      <h2>Racks and shelves of gently loved everything.</h2>
+      <p>The shelves change with every donation drop-off, so no two visits match. Here's what the racks usually hold.</p>
+    </div>
+    <div class="tagwall">
+      <article class="tag reveal">
+        <h3>Closets full of clothing</h3>
+        <p>Men's and women's racks, refreshed constantly. Retro dresses, denim, desert-ready shirts.</p>
+        <span class="tag__note">vintage hiding on every rack</span>
+      </article>
+      <article class="tag reveal">
+        <h3>Kitchen &amp; housewares</h3>
+        <p>Pans, dishes, gadgets, and the serving platter you didn't know you needed.</p>
+      </article>
+      <article class="tag reveal">
+        <h3>Jewelry, bags &amp; shoes</h3>
+        <p>Costume sparkle, leather bags, boots barely broken in.</p>
+        <span class="tag__note">ask about the case!</span>
+      </article>
+      <article class="tag reveal">
+        <h3>Books, records &amp; DVDs</h3>
+        <p>Shelves of paperbacks, vinyl for the crate-diggers, movie nights for a song.</p>
+      </article>
+      <article class="tag reveal">
+        <h3>Tools &amp; yarn</h3>
+        <p>For the fixers and the makers. Hand tools, hardware, skeins by the bagful.</p>
+        <span class="tag__note">makers, this is your aisle</span>
+      </article>
+      <article class="tag reveal">
+        <h3>Furniture &amp; art</h3>
+        <p>Tables, lamps, and original paintings. The big scores go fast.</p>
+      </article>
+    </div>
+    <p class="finds__foot">…and whatever Borrego donated this week. That's the fun of it.</p>
+  </div>
+</section>
+
+<!-- ——— EVERY PURCHASE FUNDS BORREGO ——— -->
+<section class="loop" id="impact">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="stamp">Where the money goes</p>
+      <h2>Every purchase funds Borrego.</h2>
+      <p class="loop__lede">Frugal Coyote is a 501(c)(3) nonprofit run under the Borrego Valley Endowment Fund. The proceeds from your five-dollar find go to work a few blocks away.</p>
+    </div>
+    <div class="loop__flow reveal">
+      <div class="loop__step">
+        <h3>1. A neighbor donates</h3>
+        <p>Someone in Borrego drops off a box of things ready for a second life.</p>
+      </div>
+      <svg class="loop__arrow" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M2 12 H32 M26 5 L34 12 L26 19"/></svg>
+      <div class="loop__step">
+        <h3>2. You score a find</h3>
+        <p>That jacket, lamp, or stack of records rings up at the register.</p>
+      </div>
+      <svg class="loop__arrow" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M2 12 H32 M26 5 L34 12 L26 19"/></svg>
+      <div class="loop__step">
+        <h3>3. Borrego feels it</h3>
+        <p>Proceeds flow through the endowment fund into programs for kids, seniors, and neighbors in need.</p>
+      </div>
+    </div>
+    <div class="loop__beneficiaries reveal">
+      <h3>Proceeds support</h3>
+      <ul class="loop__list">
+        <li>Borrego Springs Youth &amp; Seniors Center</li>
+        <li>Children's Center Programs</li>
+        <li>Borrego Springs Community Resource Center</li>
+        <li class="is-more">+ other local causes</li>
+      </ul>
+      <p class="loop__credit">The Frugal Coyote and its charitable giving are managed by the <a href="https://www.bvefund.org" rel="noopener">Borrego Valley Endowment Fund</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ——— VISIT TEASER ——— -->
+<section class="teaser">
+  <div class="wrap teaser__grid">
+    <div class="reveal">
+      <p class="stamp">Come say hi</p>
+      <h2>In the heart of The Center, on Palm Canyon Drive.</h2>
+      <p>Five days a week, the Coyote's doors are open to hunters, browsers, and anyone escaping the afternoon sun. Bring a donation, leave with a find.</p>
+      <a class="btn btn--solid" href="visit.html">Visit &amp; Donate →</a>
+    </div>
+    <aside class="hourscard reveal">
+      <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> Shop hours</h3>
+      <table>
+        <tr><td>Tuesday – Saturday</td><td>8am – 4pm</td></tr>
+        <tr class="is-closed"><td>Sunday &amp; Monday</td><td>Closed</td></tr>
+      </table>
+      <p class="hourscard__addr">The Center · 590 Palm Canyon Drive, Borrego Springs, CA 92004 · <a href="tel:+17607674608">(760) 767-4608</a></p>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#e8a33d"/>
+            <g transform="translate(7 6) scale(0.82)" fill="#2c1a0d"><path d="M12 54 C9 46 10 38 16 33 L24 30 L28 26 L34 14 L30 7 L36 10 L38 8 L50 3 L40 14 Q37 20 40 25 Q44 29 43 36 L43 54 L38 54 L38 40 Q30 42 24 44 L22 54 Z"/><path d="M14 35 C7 38 3 45 4 52 C7 47 11 42 17 39 Z"/></g>
+          </svg>
+          <span class="brand__name">Frugal Coyote
+            <span class="brand__sub">Boutique &amp; Resale · Borrego Springs</span>
+          </span>
+        </a>
+        <p class="ftr__blurb">A nonprofit thrift shop where every purchase supports the Borrego Springs community.</p>
+      </div>
+      <div>
+        <h4>Around the shop</h4>
+        <ul>
+          <li><a href="#finds">What you'll find</a></li>
+          <li><a href="#impact">Where the money goes</a></li>
+          <li><a href="visit.html">Visit &amp; Donate</a></li>
+          <li><a href="https://www.bvefund.org" rel="noopener">Borrego Valley Endowment Fund</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>The Center<br>590 Palm Canyon Drive<br>Borrego Springs, CA 92004</li>
+          <li><a href="tel:+17607674608">(760) 767-4608</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <span>Frugal Coyote is a 501(c)(3) nonprofit managed by the Borrego Valley Endowment Fund.</span>
+      <span>Independent design concept by IRBIS Studio — not the official Frugal Coyote website.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Open/closed status — Tue–Sat, 8am–4pm, America/Los_Angeles
+(function () {
+  var el = document.getElementById('statusbar');
+  try {
+    var now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+    var day = now.getDay(), hr = now.getHours();
+    var open = day >= 2 && day <= 6 && hr >= 8 && hr < 16;
+    var msg = open
+      ? '<strong>Open now until 4pm</strong> · The Center, 590 Palm Canyon Dr, Borrego Springs'
+      : '<strong>Closed now — open Tue–Sat, 8am–4pm</strong> · The Center, 590 Palm Canyon Dr, Borrego Springs';
+    el.innerHTML = msg;
+  } catch (e) { /* keep static fallback */ }
+})();
+
+// Scroll reveal
+(function () {
+  var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function (n) { n.classList.add('is-in'); });
+    return;
+  }
+  function check() {
+    var vh = Math.max(window.innerHeight || 0, document.documentElement.clientHeight || 0, 600);
+    els = els.filter(function (n) {
+      if (n.getBoundingClientRect().top < vh * 0.94) {
+        n.classList.add('is-in');
+        return false;
+      }
+      return true;
+    });
+    if (!els.length && timer) { clearInterval(timer); timer = null; }
+  }
+  var timer = setInterval(check, 450);
+  window.addEventListener('scroll', check, { passive: true });
+  window.addEventListener('resize', check);
+  check();
+})();
+</script>
+
+</body>
+</html>
