@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Fleur — The Autumn Edit · QR Landing Concept</title>
+<meta name="description" content="Sample QR-code campaign landing page — a concept built for Orr Social by IRBIS Studio. Fictional brand.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#17100d">
+<meta property="og:title" content="Maison Fleur — The Autumn Edit · QR Landing Concept">
+<meta property="og:description" content="A sample QR-code campaign landing: instant load, one CTA, trackable. Concept for Orr Social by IRBIS Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232a1d18'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='15' fill='%23ecdcc8'%3EF%3C/text%3E%3C/svg%3E">
+<style>
+/* Zero external requests: system fonts only, everything inline.
+   This is the point of a QR landing — it opens before the customer
+   puts their phone down. */
+:root {
+  --noir: #241a15;
+  --noir-deep: #17100d;
+  --champagne: #f2e6d4;
+  --champagne-dim: #d9c8b2;
+  --blush: #c9a06d;
+  --serif: 'Didot', 'Bodoni MT', 'Playfair', Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: var(--sans);
+  background: var(--noir-deep);
+  color: var(--champagne);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- The landing itself (mobile canvas) ---- */
+.phone {
+  min-height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  background:
+    radial-gradient(140% 60% at 85% -5%, rgba(201,160,109,.22), transparent 55%),
+    linear-gradient(170deg, var(--noir) 0%, var(--noir-deep) 70%);
+  display: flex;
+  flex-direction: column;
+  padding: max(env(safe-area-inset-top), 1.4rem) 1.6rem max(env(safe-area-inset-bottom), 1.4rem);
+  position: relative;
+}
+.scan-chip {
+  align-self: center;
+  font-size: .62rem; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--champagne-dim);
+  border: 1px solid rgba(242,230,212,.25);
+  border-radius: 999px;
+  padding: .45em 1.1em;
+  margin-bottom: 8dvh;
+}
+.brand { text-align: center; }
+.brand__name {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 2.1rem; letter-spacing: .04em;
+}
+.brand__rule {
+  width: 34px; height: 1px; background: var(--blush);
+  margin: 1.1rem auto;
+}
+.offer { text-align: center; margin-top: 4dvh; flex: 1; }
+.offer__eyebrow {
+  font-size: .66rem; letter-spacing: .34em; text-transform: uppercase;
+  color: var(--blush); margin-bottom: 1rem;
+}
+.offer__title {
+  font-family: var(--serif); font-weight: 400; font-style: italic;
+  font-size: clamp(2.4rem, 11vw, 3.2rem); line-height: 1.08;
+}
+.offer__deal {
+  margin-top: 1.4rem; font-size: 1.02rem; color: var(--champagne-dim);
+  line-height: 1.55; max-width: 22rem; margin-inline: auto;
+}
+.offer__deal strong { color: var(--champagne); font-weight: 600; }
+.cta-zone { margin-top: 4.5dvh; text-align: center; }
+.cta {
+  display: block; width: 100%;
+  font-family: var(--sans); font-size: .84rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--noir-deep); background: var(--champagne);
+  border: none; border-radius: 999px;
+  padding: 1.15em 1em; cursor: pointer;
+  transition: transform .2s, background .2s;
+}
+.cta:active { transform: scale(.98); }
+.code {
+  display: none;
+  border: 1px dashed var(--blush); border-radius: 12px;
+  padding: 1.2rem 1rem;
+}
+.code.show { display: block; animation: pop .45s cubic-bezier(.2,.9,.3,1.2); }
+.cta-zone.claimed .cta { display: none; }
+@keyframes pop { from { opacity: 0; transform: scale(.92); } }
+.code__label { font-size: .62rem; letter-spacing: .3em; text-transform: uppercase; color: var(--champagne-dim); }
+.code__value {
+  font-family: var(--serif); font-size: 2.2rem; letter-spacing: .18em;
+  margin: .3rem 0 .4rem; color: var(--champagne);
+}
+.code__hint { font-size: .8rem; color: var(--champagne-dim); }
+.fineprint {
+  margin-top: 4dvh; text-align: center;
+  font-size: .68rem; line-height: 1.7; color: rgba(242,230,212,.62);
+}
+.fineprint a { color: rgba(242,230,212,.78); }
+
+/* ---- "Under the hood" for Kiana ---- */
+.hood {
+  max-width: 430px; margin: 0 auto; padding: 1.4rem 1.6rem 2.6rem;
+  border-top: 1px solid rgba(242,230,212,.12);
+}
+.hood summary {
+  cursor: pointer; list-style: none;
+  font-size: .66rem; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--champagne-dim);
+}
+.hood summary::-webkit-details-marker { display: none; }
+.hood summary::after { content: ' +'; color: var(--blush); }
+.hood[open] summary::after { content: ' −'; }
+.hood ul { margin: 1rem 0 0 1.1em; font-size: .82rem; line-height: 1.8; color: var(--champagne-dim); }
+.hood li strong { color: var(--champagne); font-weight: 600; }
+.hood code {
+  font-family: ui-monospace, Menlo, monospace; font-size: .92em;
+  color: var(--blush); word-break: break-all;
+}
+
+/* ---- Desktop: phone frame + real QR to scan ---- */
+.aside { display: none; }
+@media (min-width: 880px) {
+  body {
+    display: grid; grid-template-columns: auto auto;
+    align-items: center; justify-content: center; gap: 5rem;
+    min-height: 100vh; padding: 3rem 2rem;
+    background:
+      radial-gradient(80% 100% at 20% 0%, #221813, var(--noir-deep) 70%);
+  }
+  .stage { display: contents; }
+  .phone {
+    width: 400px; min-height: 780px; max-height: 84vh; overflow-y: auto;
+    border-radius: 44px;
+    border: 10px solid #0a0705;
+    box-shadow: 0 40px 90px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(242,230,212,.08);
+  }
+  .hood { display: none; }
+  .aside { display: block; max-width: 330px; }
+  .aside h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 1.9rem; line-height: 1.2; margin-bottom: .7rem;
+  }
+  .aside h2 em { color: var(--blush); }
+  .aside > p { font-size: .92rem; line-height: 1.7; color: var(--champagne-dim); margin-bottom: 2rem; }
+  .aside .qr {
+    width: 168px; height: 168px; padding: 14px;
+    background: var(--champagne); border-radius: 10px;
+    color: var(--noir-deep);
+  }
+  .aside .qr svg { display: block; width: 100%; height: 100%; }
+  .aside .qr-note {
+    margin-top: .9rem; font-size: .68rem; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--champagne-dim);
+  }
+  .aside .hood-desk { margin-top: 2.4rem; border-top: 1px solid rgba(242,230,212,.12); padding-top: 1.4rem; }
+  .aside .hood-desk h2 {
+    font-size: .66rem; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--champagne-dim); font-weight: 600; margin-bottom: .9rem;
+  }
+  .aside .hood-desk ul { margin-left: 1.1em; font-size: .84rem; line-height: 1.9; color: var(--champagne-dim); }
+  .aside .hood-desk li strong { color: var(--champagne); font-weight: 600; }
+  .aside .hood-desk code { font-family: ui-monospace, Menlo, monospace; font-size: .92em; color: var(--blush); word-break: break-all; }
+}
+@media (prefers-reduced-motion: reduce) { .code.show { animation: none; } }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="phone">
+    <p class="scan-chip" id="scan-chip">Scanned in store</p>
+
+    <header class="brand">
+      <p class="brand__name">Maison Fleur</p>
+      <div class="brand__rule" aria-hidden="true"></div>
+    </header>
+
+    <main class="offer">
+      <p class="offer__eyebrow">This weekend only</p>
+      <h1 class="offer__title">The Autumn<br>Edit</h1>
+      <p class="offer__deal"><strong>20% off your first visit</strong> — a thank-you for scanning. One tap, no forms, no app.</p>
+
+      <div class="cta-zone" id="cta-zone">
+        <button class="cta" id="claim">Claim my offer</button>
+        <div class="code" id="code" role="status">
+          <p class="code__label">Your code</p>
+          <p class="code__value">FLEUR20</p>
+          <p class="code__hint">Show this screen at the counter before Sunday.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fineprint">
+      <p>Maison Fleur is a fictional brand. Sample campaign landing —<br>
+      a concept for <a href="../">Orr Social</a> by IRBIS Studio.</p>
+    </footer>
+  </div>
+
+  <aside class="aside">
+    <h2>A landing page that lives <em>behind a QR code</em></h2>
+    <p>This page is built for a phone — the table tent, the mirror sticker, the package insert. Scan it where it belongs:</p>
+    <div class="qr" aria-label="QR code opening this page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" shape-rendering="crispEdges"><path d="M0 0h7v1H0zM8 0h1v1H8zM10 0h3v1H10zM14 0h4v1H14zM19 0h1v1H19zM28 0h3v1H28zM34 0h7v1H34zM0 1h1v1H0zM6 1h1v1H6zM10 1h7v1H10zM20 1h3v1H20zM25 1h2v1H25zM28 1h1v1H28zM32 1h1v1H32zM34 1h1v1H34zM40 1h1v1H40zM0 2h1v1H0zM2 2h3v1H2zM6 2h1v1H6zM8 2h1v1H8zM10 2h2v1H10zM16 2h2v1H16zM19 2h1v1H19zM22 2h1v1H22zM25 2h1v1H25zM27 2h1v1H27zM29 2h1v1H29zM31 2h1v1H31zM34 2h1v1H34zM36 2h3v1H36zM40 2h1v1H40zM0 3h1v1H0zM2 3h3v1H2zM6 3h1v1H6zM9 3h1v1H9zM11 3h3v1H11zM15 3h1v1H15zM19 3h2v1H19zM22 3h2v1H22zM25 3h3v1H25zM29 3h4v1H29zM34 3h1v1H34zM36 3h3v1H36zM40 3h1v1H40zM0 4h1v1H0zM2 4h3v1H2zM6 4h1v1H6zM10 4h2v1H10zM13 4h1v1H13zM15 4h3v1H15zM21 4h2v1H21zM25 4h2v1H25zM30 4h1v1H30zM34 4h1v1H34zM36 4h3v1H36zM40 4h1v1H40zM0 5h1v1H0zM6 5h1v1H6zM8 5h2v1H8zM12 5h1v1H12zM14 5h1v1H14zM17 5h2v1H17zM20 5h1v1H20zM22 5h1v1H22zM25 5h1v1H25zM28 5h3v1H28zM32 5h1v1H32zM34 5h1v1H34zM40 5h1v1H40zM0 6h7v1H0zM8 6h1v1H8zM10 6h1v1H10zM12 6h1v1H12zM14 6h1v1H14zM16 6h1v1H16zM18 6h1v1H18zM20 6h1v1H20zM22 6h1v1H22zM24 6h1v1H24zM26 6h1v1H26zM28 6h1v1H28zM30 6h1v1H30zM32 6h1v1H32zM34 6h7v1H34zM9 7h1v1H9zM13 7h1v1H13zM15 7h2v1H15zM20 7h1v1H20zM24 7h1v1H24zM26 7h1v1H26zM28 7h1v1H28zM30 7h1v1H30zM0 8h1v1H0zM2 8h1v1H2zM6 8h2v1H6zM9 8h1v1H9zM11 8h3v1H11zM16 8h1v1H16zM19 8h1v1H19zM23 8h2v1H23zM28 8h1v1H28zM31 8h2v1H31zM35 8h1v1H35zM38 8h1v1H38zM40 8h1v1H40zM0 9h3v1H0zM4 9h2v1H4zM7 9h1v1H7zM9 9h4v1H9zM16 9h1v1H16zM19 9h3v1H19zM23 9h3v1H23zM27 9h2v1H27zM30 9h6v1H30zM38 9h3v1H38zM3 10h1v1H3zM5 10h4v1H5zM10 10h1v1H10zM12 10h2v1H12zM18 10h4v1H18zM23 10h1v1H23zM27 10h1v1H27zM30 10h2v1H30zM34 10h1v1H34zM36 10h3v1H36zM40 10h1v1H40zM0 11h3v1H0zM4 11h1v1H4zM7 11h1v1H7zM10 11h1v1H10zM19 11h2v1H19zM22 11h1v1H22zM24 11h1v1H24zM26 11h3v1H26zM31 11h5v1H31zM37 11h1v1H37zM39 11h1v1H39zM0 12h1v1H0zM2 12h1v1H2zM4 12h1v1H4zM6 12h2v1H6zM9 12h3v1H9zM13 12h3v1H13zM20 12h2v1H20zM24 12h1v1H24zM26 12h1v1H26zM30 12h1v1H30zM32 12h1v1H32zM34 12h1v1H34zM0 13h1v1H0zM2 13h4v1H2zM8 13h2v1H8zM11 13h7v1H11zM20 13h1v1H20zM22 13h1v1H22zM25 13h1v1H25zM28 13h1v1H28zM31 13h2v1H31zM34 13h2v1H34zM37 13h1v1H37zM39 13h2v1H39zM4 14h1v1H4zM6 14h2v1H6zM9 14h1v1H9zM12 14h5v1H12zM20 14h2v1H20zM23 14h1v1H23zM25 14h1v1H25zM27 14h3v1H27zM31 14h1v1H31zM33 14h2v1H33zM36 14h1v1H36zM38 14h1v1H38zM40 14h1v1H40zM2 15h1v1H2zM4 15h1v1H4zM10 15h4v1H10zM18 15h3v1H18zM23 15h2v1H23zM26 15h3v1H26zM30 15h1v1H30zM32 15h3v1H32zM37 15h1v1H37zM39 15h1v1H39zM1 16h4v1H1zM6 16h1v1H6zM8 16h1v1H8zM10 16h1v1H10zM13 16h2v1H13zM20 16h1v1H20zM22 16h1v1H22zM24 16h1v1H24zM28 16h1v1H28zM32 16h3v1H32zM37 16h1v1H37zM2 17h4v1H2zM8 17h1v1H8zM12 17h1v1H12zM14 17h1v1H14zM17 17h1v1H17zM19 17h2v1H19zM23 17h2v1H23zM26 17h4v1H26zM31 17h5v1H31zM40 17h1v1H40zM1 18h6v1H1zM8 18h1v1H8zM11 18h6v1H11zM19 18h5v1H19zM25 18h1v1H25zM27 18h1v1H27zM29 18h3v1H29zM33 18h4v1H33zM38 18h1v1H38zM40 18h1v1H40zM0 19h1v1H0zM3 19h1v1H3zM8 19h2v1H8zM12 19h3v1H12zM16 19h2v1H16zM20 19h1v1H20zM22 19h1v1H22zM28 19h1v1H28zM30 19h3v1H30zM37 19h1v1H37zM39 19h2v1H39zM0 20h1v1H0zM2 20h1v1H2zM4 20h1v1H4zM6 20h1v1H6zM10 20h2v1H10zM14 20h2v1H14zM17 20h1v1H17zM19 20h1v1H19zM21 20h2v1H21zM27 20h2v1H27zM34 20h2v1H34zM39 20h2v1H39zM1 21h1v1H1zM3 21h2v1H3zM11 21h3v1H11zM15 21h2v1H15zM19 21h2v1H19zM22 21h4v1H22zM27 21h2v1H27zM30 21h6v1H30zM40 21h1v1H40zM0 22h1v1H0zM5 22h2v1H5zM10 22h1v1H10zM12 22h1v1H12zM17 22h1v1H17zM19 22h1v1H19zM21 22h1v1H21zM23 22h1v1H23zM25 22h3v1H25zM30 22h2v1H30zM34 22h1v1H34zM36 22h3v1H36zM40 22h1v1H40zM1 23h1v1H1zM4 23h1v1H4zM9 23h2v1H9zM13 23h2v1H13zM16 23h1v1H16zM18 23h3v1H18zM22 23h1v1H22zM24 23h1v1H24zM26 23h1v1H26zM28 23h1v1H28zM31 23h2v1H31zM36 23h2v1H36zM40 23h1v1H40zM0 24h1v1H0zM2 24h3v1H2zM6 24h1v1H6zM9 24h3v1H9zM13 24h3v1H13zM20 24h1v1H20zM23 24h2v1H23zM27 24h2v1H27zM32 24h1v1H32zM34 24h1v1H34zM37 24h1v1H37zM39 24h2v1H39zM1 25h2v1H1zM4 25h2v1H4zM7 25h1v1H7zM10 25h2v1H10zM13 25h3v1H13zM18 25h2v1H18zM21 25h1v1H21zM23 25h1v1H23zM25 25h1v1H25zM27 25h5v1H27zM34 25h2v1H34zM37 25h1v1H37zM40 25h1v1H40zM2 26h2v1H2zM5 26h2v1H5zM8 26h1v1H8zM10 26h2v1H10zM14 26h1v1H14zM16 26h1v1H16zM18 26h2v1H18zM23 26h2v1H23zM27 26h1v1H27zM29 26h1v1H29zM31 26h1v1H31zM35 26h1v1H35zM37 26h2v1H37zM40 26h1v1H40zM4 27h2v1H4zM10 27h1v1H10zM12 27h1v1H12zM14 27h1v1H14zM16 27h1v1H16zM18 27h3v1H18zM22 27h1v1H22zM24 27h1v1H24zM26 27h2v1H26zM30 27h3v1H30zM34 27h2v1H34zM37 27h1v1H37zM39 27h1v1H39zM1 28h1v1H1zM4 28h4v1H4zM9 28h2v1H9zM12 28h1v1H12zM15 28h1v1H15zM24 28h1v1H24zM26 28h3v1H26zM32 28h4v1H32zM39 28h2v1H39zM2 29h3v1H2zM7 29h5v1H7zM15 29h2v1H15zM22 29h3v1H22zM26 29h3v1H26zM31 29h5v1H31zM37 29h4v1H37zM0 30h3v1H0zM5 30h3v1H5zM10 30h4v1H10zM18 30h2v1H18zM23 30h1v1H23zM25 30h3v1H25zM29 30h1v1H29zM31 30h1v1H31zM33 30h1v1H33zM35 30h1v1H35zM37 30h4v1H37zM3 31h1v1H3zM7 31h2v1H7zM12 31h1v1H12zM15 31h1v1H15zM18 31h1v1H18zM24 31h1v1H24zM27 31h2v1H27zM32 31h1v1H32zM34 31h3v1H34zM39 31h1v1H39zM0 32h9v1H0zM12 32h2v1H12zM16 32h1v1H16zM19 32h1v1H19zM24 32h1v1H24zM32 32h6v1H32zM40 32h1v1H40zM8 33h2v1H8zM11 33h1v1H11zM19 33h6v1H19zM26 33h3v1H26zM31 33h2v1H31zM36 33h1v1H36zM40 33h1v1H40zM0 34h7v1H0zM8 34h2v1H8zM14 34h1v1H14zM16 34h4v1H16zM23 34h3v1H23zM27 34h1v1H27zM30 34h3v1H30zM34 34h1v1H34zM36 34h2v1H36zM40 34h1v1H40zM0 35h1v1H0zM6 35h1v1H6zM12 35h2v1H12zM15 35h2v1H15zM18 35h1v1H18zM20 35h2v1H20zM23 35h1v1H23zM26 35h1v1H26zM30 35h3v1H30zM36 35h1v1H36zM40 35h1v1H40zM0 36h1v1H0zM2 36h3v1H2zM6 36h1v1H6zM10 36h1v1H10zM12 36h1v1H12zM17 36h5v1H17zM23 36h1v1H23zM28 36h1v1H28zM31 36h7v1H31zM39 36h2v1H39zM0 37h1v1H0zM2 37h3v1H2zM6 37h1v1H6zM9 37h3v1H9zM15 37h1v1H15zM18 37h4v1H18zM23 37h2v1H23zM27 37h2v1H27zM31 37h1v1H31zM35 37h2v1H35zM40 37h1v1H40zM0 38h1v1H0zM2 38h3v1H2zM6 38h1v1H6zM8 38h3v1H8zM12 38h2v1H12zM19 38h1v1H19zM21 38h1v1H21zM23 38h1v1H23zM25 38h4v1H25zM30 38h1v1H30zM33 38h1v1H33zM36 38h1v1H36zM38 38h1v1H38zM40 38h1v1H40zM0 39h1v1H0zM6 39h1v1H6zM9 39h2v1H9zM18 39h2v1H18zM22 39h3v1H22zM26 39h1v1H26zM28 39h1v1H28zM32 39h1v1H32zM37 39h1v1H37zM0 40h7v1H0zM8 40h2v1H8zM11 40h1v1H11zM13 40h3v1H13zM17 40h4v1H17zM24 40h1v1H24zM27 40h1v1H27zM31 40h4v1H31zM36 40h2v1H36zM40 40h1v1H40z" fill="currentColor"/></svg>
+    </div>
+    <p class="qr-note">Scan with your phone camera</p>
+
+    <div class="hood-desk">
+      <h2>Under the hood</h2>
+      <ul>
+        <li><strong>Instant:</strong> one file, zero external requests — no fonts, no scripts, no images to wait for.</li>
+        <li><strong>One job:</strong> a single CTA. No menu, no detours between the scan and the offer.</li>
+        <li><strong>Trackable:</strong> every printed QR carries its own tags — <code>?utm_source=qr&amp;utm_medium=print&amp;utm_campaign=…</code> — so each table tent, sticker or insert reports scans separately in analytics.</li>
+        <li><strong>Measurable at the counter:</strong> the code (<code>FLEUR20</code>) ties redemptions back to the campaign.</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<details class="hood">
+  <summary>Under the hood</summary>
+  <ul>
+    <li><strong>Instant:</strong> one file, zero external requests — no fonts, no scripts, no images to wait for.</li>
+    <li><strong>One job:</strong> a single CTA. No menu, no detours between the scan and the offer.</li>
+    <li><strong>Trackable:</strong> every printed QR carries its own tags — <code>?utm_source=qr&amp;utm_medium=print&amp;utm_campaign=…</code> — so each placement reports scans separately in analytics.</li>
+    <li><strong>Measurable at the counter:</strong> the code (<code>FLEUR20</code>) ties redemptions back to the campaign.</li>
+  </ul>
+</details>
+
+<script>
+  const p = new URLSearchParams(location.search);
+  const src = p.get('utm_source'), med = p.get('utm_medium');
+  if (src) {
+    document.getElementById('scan-chip').textContent =
+      'Scanned via ' + src + (med ? ' · ' + med : '');
+  }
+  document.getElementById('claim').addEventListener('click', () => {
+    document.getElementById('cta-zone').classList.add('claimed');
+    document.getElementById('code').classList.add('show');
+  });
+</script>
+</body>
+</html>
