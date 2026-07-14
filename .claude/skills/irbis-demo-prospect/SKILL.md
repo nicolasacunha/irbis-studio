@@ -25,6 +25,8 @@ Falhou em qualquer item → registrar o motivo e parar. Demo para lead ruim é o
 
 Canal único de captação aprovado (decisão do Nicolas, 13/jul/2026): LinkedIn. Reddit descartado.
 
+Prompt de busca completo (queries PT + EN, critérios obrigatórios, formato de saída): `03 - Comercial/01 - Prospecção/prompt-captacao-leads-site.md`.
+
 Como buscar (em ordem de preferência):
 1. **Busca de posts no LinkedIn logado** — via claude-in-chrome (Chrome real do Nicolas, sessão logada) ou manualmente por ele. Buscar em "Publicações", filtro "Última semana", com queries de intenção:
    - PT: `"preciso de um site"`, `"indicação de alguém que faça sites"`, `"quem faz site"`, `"refazer meu site"`, `"indicação web designer"`
