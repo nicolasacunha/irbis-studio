@@ -407,9 +407,14 @@
     }
     .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
     .nav-cta:active { transform: scale(0.96); }
-    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; opacity:.75; transition:opacity .2s, transform .2s; }
     .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
-    .lang-toggle svg { display:block; width:100%; height:100%; }
+    .lang-toggle svg { display:block; width:100%; height:100%; border-radius:2px; }
+    /* área de toque ampliada (44px), sem efeito visual */
+    .lang-toggle, .cases-ver-todos, .prod-cta, .footer-nav a, .tap-area { position: relative; }
+    .lang-toggle::after, .cases-ver-todos::after, .prod-cta::after, .footer-nav a::after, .tap-area::after {
+      content: ''; position: absolute; inset: -16px -8px;
+    }
 
     /* ================================================================
        SECTION 01 — HERO
@@ -2103,7 +2108,7 @@
       </div>
       <div style="display:flex;gap:.75rem;align-items:center;flex-shrink:0">
         <a href="/en/call" class="cta-primary">START A PROJECT</a>
-        <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" style="font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--s2);padding-bottom:.15rem;transition:color .2s,border-color .2s" onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--s2)'">WHATSAPP →</a>
+        <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="tap-area" style="font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--s2);padding-bottom:.15rem;transition:color .2s,border-color .2s" onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--s2)'">WHATSAPP →</a>
       </div>
     </div>
 
