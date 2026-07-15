@@ -18,7 +18,10 @@
   function track(ev, params) {
     if (typeof window.gtag === 'function') window.gtag('event', ev, params || {});
   }
-  track('call_step_view', { step: 'form' });
+  track('call_step_view', { step: 'scheduling' });
+  loadAvailability();
+
+  function tzName() { return Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo'; }
 
   /* ---------- Decisor: nota condicional ---------- */
   document.querySelectorAll('input[name="decisor"]').forEach(function (r) {
@@ -118,9 +121,38 @@
     e.preventDefault();
     hideFormMsg();
     if (!validate()) return;
+    if (!selectedSlot) { backToSched(); return; }
 
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
+
+    // Agenda o horário já escolhido. Chamado depois do lead existir (ou direto, em retry).
+    function finishBook() {
+      fetch('/api/book', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ leadId: leadId, start: selectedSlot.start, tz: tzName() }),
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.body.error || 'fail');
+          track('call_booked', { day: selectedDay, slot: selectedSlot.label });
+          window.location.href = '/obrigado';
+        })
+        .catch(function (err) {
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = false;
+          if (String(err.message).indexOf('taken') > -1) {
+            showFormMsg('Esse horário acabou de ser preenchido. Escolhe outro, é rapidinho.');
+            loadAvailability();
+            backToSched();
+          } else {
+            showFormMsg('Não consegui confirmar agora. Tenta de novo ou me chama no WhatsApp.');
+          }
+        });
+    }
+
+    // Lead já criado numa tentativa anterior? Só reagenda (evita lead duplicado).
+    if (leadId) { finishBook(); return; }
 
     var payload = {};
     ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'canais', 'valorcliente', 'prazo', 'orcamento', 'livre', 'decisor']
@@ -130,7 +162,7 @@
       });
     payload.objetivo = collectMulti('objetivo');
     payload.incomodo = collectMulti('incomodo');
-    payload.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo';
+    payload.tz = tzName();
 
     encodeFiles(files).then(function (encoded) {
       payload.anexos = encoded;
@@ -144,7 +176,7 @@
       .then(function (res) {
         if (!res.ok || !res.body.leadId) throw new Error(res.body.error || 'fail');
         leadId = res.body.leadId;
-        goToScheduling();
+        finishBook();
       })
       .catch(function () {
         submitBtn.classList.remove('loading');
@@ -174,20 +206,38 @@
     );
   }
 
-  /* ---------- Transição para agendamento ---------- */
-  function goToScheduling() {
+  /* ---------- Transições entre etapas ---------- */
+  // Etapa 1 (horário) -> Etapa 2 (form)
+  function goToForm() {
+    if (!selectedSlot) return;
+    track('call_step_view', { step: 'form' });
+    document.getElementById('schedStep').classList.remove('show');
+    document.getElementById('formStep').classList.remove('hidden');
+    document.getElementById('progress').style.width = '100%';
+    document.getElementById('railEyebrow').textContent = 'Etapa 2 de 2';
+    document.getElementById('railText').textContent = '3 minutos aqui e eu chego na call com o diagnóstico do seu caso pronto.';
+    document.getElementById('stepDot1').className = 'step-item done';
+    document.getElementById('stepDot2').className = 'step-item active';
+    document.getElementById('formSlotSummary').innerHTML =
+      '<b>' + slotsByDay[selectedDay].full + '</b>, às <b>' + selectedSlot.label + '</b>';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Etapa 2 -> Etapa 1 (voltar pra trocar de horário)
+  function backToSched() {
     track('call_step_view', { step: 'scheduling' });
     document.getElementById('formStep').classList.add('hidden');
     document.getElementById('schedStep').classList.add('show');
-    document.getElementById('progress').style.width = '100%';
-    document.getElementById('railEyebrow').textContent = 'Etapa 2 de 2';
-    document.getElementById('railTitle').textContent = 'Última etapa';
-    document.getElementById('railText').textContent = 'Escolhe o melhor horário pra você. A call é de 1 hora, no Google Meet, direto comigo.';
-    document.getElementById('stepDot1').className = 'step-item done';
-    document.getElementById('stepDot2').className = 'step-item active';
+    document.getElementById('progress').style.width = '50%';
+    document.getElementById('railEyebrow').textContent = 'Etapa 1 de 2';
+    document.getElementById('railText').textContent = 'Primeiro o horário: escolhe quando a gente conversa (1 hora, no Google Meet, direto comigo). Depois, umas perguntas rápidas pra eu chegar na call com o seu caso na ponta da língua.';
+    document.getElementById('stepDot1').className = 'step-item active';
+    document.getElementById('stepDot2').className = 'step-item';
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    loadAvailability();
   }
+
+  document.getElementById('toFormBtn').addEventListener('click', goToForm);
+  document.getElementById('backToSched').addEventListener('click', function (e) { e.preventDefault(); backToSched(); });
 
   /* ---------- Disponibilidade ---------- */
   function loadAvailability() {
@@ -213,24 +263,28 @@
         '<div class="sched-empty">Sem horários abertos nos próximos dias. Me chama no WhatsApp que eu abro um encaixe.</div>';
       return;
     }
-    keys.forEach(function (key, idx) {
+    var selected = false;
+    keys.forEach(function (key) {
       var d = slotsByDay[key];
+      var freeCount = d.slots.filter(function (s) { return !s.taken; }).length;
       var el = document.createElement('div');
-      el.className = 'day' + (d.slots.length ? '' : ' empty');
+      el.className = 'day' + (freeCount ? '' : ' full');
       el.innerHTML = '<div class="dow">' + d.dow + '</div><div class="dnum">' + d.dnum + '</div><div class="dmon">' + d.dmon + '</div>';
       if (d.slots.length) {
         el.addEventListener('click', function () { selectDay(key, el); });
       }
       wrap.appendChild(el);
-      if (idx === 0 && d.slots.length) selectDay(key, el);
+      // Abre no primeiro dia com horário livre (não num dia lotado).
+      if (!selected && freeCount) { selected = true; selectDay(key, el); }
     });
+    if (!selected) selectDay(keys[0], wrap.firstChild);
   }
 
   function selectDay(key, el) {
     selectedDay = key; selectedSlot = null;
     document.querySelectorAll('.day').forEach(function (d) { d.classList.remove('active'); });
     el.classList.add('active');
-    updateBook();
+    updateContinue();
     renderSlots(slotsByDay[key].slots);
   }
 
@@ -239,20 +293,27 @@
     wrap.innerHTML = '';
     slots.forEach(function (s) {
       var b = document.createElement('button');
-      b.type = 'button'; b.className = 'slot'; b.textContent = s.label;
-      b.addEventListener('click', function () {
-        selectedSlot = s;
-        document.querySelectorAll('.slot').forEach(function (x) { x.classList.remove('active'); });
-        b.classList.add('active');
-        updateBook();
-        track('call_slot_selected', { day: selectedDay, slot: s.label });
-      });
+      b.type = 'button';
+      b.className = 'slot' + (s.taken ? ' taken' : '');
+      b.textContent = s.label;
+      if (s.taken) {
+        b.disabled = true;
+        b.setAttribute('aria-label', s.label + ' — já reservado');
+      } else {
+        b.addEventListener('click', function () {
+          selectedSlot = s;
+          document.querySelectorAll('.slot').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          updateContinue();
+          track('call_slot_selected', { day: selectedDay, slot: s.label });
+        });
+      }
       wrap.appendChild(b);
     });
   }
 
-  function updateBook() {
-    var btn = document.getElementById('bookBtn');
+  function updateContinue() {
+    var btn = document.getElementById('toFormBtn');
     var sum = document.getElementById('schedSummary');
     if (selectedSlot) {
       btn.disabled = false;
@@ -262,38 +323,6 @@
       sum.textContent = '';
     }
   }
-
-  /* ---------- Booking ---------- */
-  document.getElementById('bookBtn').addEventListener('click', function () {
-    if (!selectedSlot || !leadId) return;
-    var btn = document.getElementById('bookBtn');
-    btn.classList.add('loading'); btn.disabled = true;
-    hideBookMsg();
-
-    fetch('/api/book', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        leadId: leadId,
-        start: selectedSlot.start,
-        tz: Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo'
-      })
-    })
-      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
-      .then(function (res) {
-        if (!res.ok) throw new Error(res.body.error || 'fail');
-        track('call_booked', { day: selectedDay, slot: selectedSlot.label });
-        window.location.href = '/obrigado';
-      })
-      .catch(function (err) {
-        btn.classList.remove('loading'); btn.disabled = false;
-        if (String(err.message).indexOf('taken') > -1) {
-          showBookMsg('Esse horário acabou de ser preenchido. Escolhe outro?');
-          loadAvailability();
-        } else {
-          showBookMsg('Não consegui confirmar agora. Tenta de novo ou me chama no WhatsApp.');
-        }
-      });
-  });
 
   /* ---------- Mensagens ---------- */
   function showFormMsg(t) { formMsg.textContent = t; formMsg.classList.add('show'); }

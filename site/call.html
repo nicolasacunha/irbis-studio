@@ -277,6 +277,25 @@
     a.back { color: var(--dim); font-size: .85rem; text-decoration: none; transition: color .2s; }
     a.back:hover { color: var(--muted); }
 
+    /* Ocupado: risco, não some (percepção de escassez) */
+    .slot.taken {
+      background: transparent; border-color: var(--s2); color: var(--dim);
+      text-decoration: line-through; text-decoration-thickness: 1.5px;
+      cursor: not-allowed; opacity: .55;
+    }
+    .slot.taken:hover { border-color: var(--s2); color: var(--dim); }
+    .day.full { opacity: .5; }
+
+    /* Banner do horário escolhido, no topo do form (Etapa 2) */
+    .slot-banner {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap; margin-bottom: 2.5rem; padding: .85rem 1.1rem;
+      background: rgba(255,102,0,.07); border: 1px solid rgba(255,102,0,.25);
+      border-radius: 12px; font-size: .9rem;
+    }
+    .slot-banner .when { color: var(--muted); }
+    .slot-banner .when b { color: var(--text); font-weight: 600; }
+
     /* ---- Intro curtain (reveal na chegada, fecha a transição vinda do site) ---- */
     #curtain {
       position: fixed; inset: 0; height: 100dvh; min-height: 100dvh;
@@ -309,21 +328,25 @@
       <div class="brand">IR<span>B</span>IS <a href="/en/call" class="lang-toggle" aria-label="View in English" title="English"><svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g><rect width="2964" height="2100" fill="#3c3b6e"/></svg></a></div>
       <div class="eyebrow" id="railEyebrow">Etapa 1 de 2</div>
       <h1 id="railTitle">Antes da nossa conversa</h1>
-      <p id="railText">3 minutos aqui, e eu chego na call com o diagnóstico do seu caso pronto. Você sai da conversa com projeto e prazo definidos.</p>
+      <p id="railText">Primeiro o horário: escolhe quando a gente conversa (1 hora, no Google Meet, direto comigo). Depois, umas perguntas rápidas pra eu chegar na call com o seu caso na ponta da língua.</p>
 
       <div class="steps">
         <div class="step-item active" id="stepDot1">
-          <div class="step-num">1</div><span>Sobre o seu projeto</span>
+          <div class="step-num">1</div><span>Escolher o horário</span>
         </div>
         <div class="step-item" id="stepDot2">
-          <div class="step-num">2</div><span>Escolher o horário</span>
+          <div class="step-num">2</div><span>Sobre o seu projeto</span>
         </div>
       </div>
     </aside>
 
     <main class="panel">
-      <!-- STEP 1 — FORM -->
-      <form id="formStep" novalidate>
+      <!-- STEP 2 — FORM (mostrado após escolher o horário) -->
+      <form id="formStep" novalidate class="hidden">
+        <div class="slot-banner">
+          <span class="when">Sua call: <span id="formSlotSummary"></span></span>
+          <a href="#" class="back" id="backToSched">← escolher outro horário</a>
+        </div>
         <div class="block">
           <div class="block-label">Sobre você</div>
           <div class="field" data-req>
@@ -448,14 +471,14 @@
         </div>
 
         <button type="submit" class="cta" id="submitBtn">
-          <span class="label">Continuar pro horário</span>
+          <span class="label">Confirmar call</span>
           <span class="spin"></span>
         </button>
         <div class="form-msg" id="formMsg"></div>
       </form>
 
-      <!-- STEP 2 — SCHEDULING -->
-      <section class="sched" id="schedStep">
+      <!-- STEP 1 — SCHEDULING (mostrado primeiro) -->
+      <section class="sched show" id="schedStep">
         <div class="block-label">Escolha o dia</div>
         <div class="sched-tz" id="schedTz">Horários já no seu fuso.</div>
         <div class="days" id="days"></div>
@@ -464,8 +487,8 @@
           <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
         </div>
         <div class="sched-foot">
-          <button type="button" class="cta" id="bookBtn" disabled>
-            <span class="label">Confirmar call</span>
+          <button type="button" class="cta" id="toFormBtn" disabled>
+            <span class="label">Continuar</span>
             <span class="spin"></span>
           </button>
           <span class="sched-summary" id="schedSummary"></span>
