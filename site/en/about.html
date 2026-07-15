@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre · IRBIS Estúdio Digital</title>
-  <meta name="description" content="Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona, por que o modelo solo entrega mais rápido do que uma agência tradicional.">
-  <link rel="canonical" href="https://irbis.com.br/sobre">
+  <title>About · IRBIS Digital Studio</title>
+  <meta name="description" content="Nicolas Cunha, solo designer and developer. How IRBIS works and why the solo model ships faster than a traditional agency.">
+  <link rel="canonical" href="https://irbis.com.br/en/about">
   <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/sobre">
   <link rel="alternate" hreflang="en" href="https://irbis.com.br/en/about">
   <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/sobre">
   <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://irbis.com.br/sobre">
-  <meta property="og:title" content="Sobre Nicolas Cunha · IRBIS Estúdio Digital">
-  <meta property="og:description" content="Designer e desenvolvedor solo. Do briefing ao ar em 3 semanas. Sem gerente, sem repasse.">
+  <meta property="og:url" content="https://irbis.com.br/en/about">
+  <meta property="og:title" content="About Nicolas Cunha · IRBIS Digital Studio">
+  <meta property="og:description" content="Solo designer and developer. From brief to launch in 3 weeks. No manager, no handoffs.">
   <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="IRBIS Digital Studio">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sobre Nicolas Cunha · IRBIS">
-  <meta name="twitter:description" content="Designer e desenvolvedor solo. Do briefing ao ar em 3 semanas.">
+  <meta name="twitter:title" content="About Nicolas Cunha · IRBIS">
+  <meta name="twitter:description" content="Solo designer and developer. From brief to launch in 3 weeks.">
   <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
   <script type="application/ld+json">
   {
@@ -26,31 +26,31 @@
     "@graph": [
       {
         "@type": "ProfilePage",
-        "name": "Sobre Nicolas Cunha · IRBIS Estúdio Digital",
-        "description": "Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona e por que o modelo solo é mais rápido e direto que uma agência.",
-        "url": "https://irbis.com.br/sobre",
+        "name": "About Nicolas Cunha · IRBIS Digital Studio",
+        "description": "Nicolas Cunha, solo designer and developer. How IRBIS works and why the solo model is faster and more direct than an agency.",
+        "url": "https://irbis.com.br/en/about",
         "mainEntity": {
           "@type": "Person",
-          "@id": "https://irbis.com.br/sobre#nicolas",
+          "@id": "https://irbis.com.br/en/about#nicolas",
           "name": "Nicolas Cunha",
-          "jobTitle": "Designer e Desenvolvedor",
-          "worksFor": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
-          "url": "https://irbis.com.br/sobre",
-          "knowsAbout": ["Webdesign", "Landing Pages", "E-commerce", "SaaS", "Inteligência Artificial"]
+          "jobTitle": "Designer and Developer",
+          "worksFor": { "@type": "Organization", "@id": "https://irbis.com.br/#organization", "name": "IRBIS Digital Studio", "url": "https://irbis.com.br" },
+          "url": "https://irbis.com.br/en/about",
+          "knowsAbout": ["Web Design", "Landing Pages", "E-commerce", "SaaS"]
         },
-        "inLanguage": "pt-BR"
+        "inLanguage": "en"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://irbis.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://irbis.com.br/sobre" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://irbis.com.br/en" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://irbis.com.br/en/about" }
         ]
       }
     ]
   }
   </script>
-  <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -89,12 +89,16 @@
       transition: opacity .2s;
     }
     .s-nav-logo:hover { opacity: 1; }
+    .s-nav-right { display: flex; align-items: center; gap: 1.5rem; }
     .s-nav-back {
       font-size: .6rem; font-weight: 600; letter-spacing: .2em;
       text-transform: uppercase; color: var(--muted);
       transition: color .2s;
     }
     .s-nav-back:hover { color: var(--text); }
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
+    .lang-toggle svg { display:block; width:100%; height:100%; }
     @media (max-width: 600px) {
       #s-nav { padding: 1.5rem; }
     }
@@ -312,9 +316,6 @@
 
     /* ── ANIMATIONS ── */
     .reveal { opacity: 0; transform: translateY(28px); }
-      .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
-    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
-    .lang-toggle svg { display:block; width:100%; height:100%; }
   </style>
 <script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -328,19 +329,22 @@
 
   <!-- NAV -->
   <nav id="s-nav">
-    <a href="/" class="s-nav-logo">IRBIS</a>
-    <div style="display:flex;align-items:center;gap:.9rem"><a href="/" class="s-nav-back">← Voltar</a><a href="/en/about" class="lang-toggle" aria-label="View in English" title="English"><svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g><rect width="2964" height="2100" fill="#3c3b6e"/></svg></a></div>
+    <a href="/en" class="s-nav-logo">IRBIS</a>
+    <div class="s-nav-right">
+      <a href="/en" class="s-nav-back">← Back</a>
+      <a href="/sobre" class="lang-toggle" aria-label="Ver em português" title="Português"><svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="720" height="504" fill="#009c3b"/><path d="M360 66 666 252 360 438 54 252z" fill="#ffdf00"/><circle cx="360" cy="252" r="88" fill="#002776"/></svg></a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="s-hero">
     <div class="s-hero-num" aria-hidden="true">N</div>
-    <p class="s-hero-eyebrow reveal">Estúdio Digital · São Paulo</p>
+    <p class="s-hero-eyebrow reveal">Digital Studio · São Paulo</p>
     <h1 class="s-hero-title reveal">
-      Uma pessoa.<br>Sem<br><span class="acc">gerente.</span>
+      One person.<br>No<br><span class="acc">manager.</span>
     </h1>
     <p class="s-hero-desc reveal">
-      Você fala direto com quem projeta, desenvolve e entrega. Sem repasse, sem camadas, sem espera de aprovação interna.
+      You talk directly to the person who designs, builds and ships. No handoffs, no layers, no waiting on internal approval.
     </p>
   </section>
 
@@ -349,19 +353,19 @@
   <!-- BIO -->
   <div class="s-bio">
     <div class="s-bio-left">
-      <p class="s-bio-label reveal">Sobre</p>
+      <p class="s-bio-label reveal">About</p>
       <h2 class="s-bio-name reveal">Nicolas<br>Cunha</h2>
-      <p class="s-bio-role reveal">Designer · Desenvolvedor · Estrategista</p>
+      <p class="s-bio-role reveal">Designer · Developer · Strategist</p>
     </div>
     <div class="s-bio-right">
       <p class="s-bio-text reveal">
-        A IRBIS é um estúdio solo: você fala com a pessoa que vai executar o projeto do início ao fim. <strong>Sem AE passando briefing, sem dev interpretando o que o designer quis dizer, sem cliente aguardando alguém liberar agenda.</strong>
+        IRBIS is a solo studio: you talk to the person who will run your project from start to finish. <strong>No account exec relaying the brief, no dev interpreting what the designer meant, no waiting for someone to free up their calendar.</strong>
       </p>
       <p class="s-bio-text reveal">
-        Posicionamento, design e estratégia são meus, do primeiro rascunho ao deploy.
+        Positioning, design and strategy are mine, from first sketch to deploy.
       </p>
       <p class="s-bio-text reveal">
-        Formado em Design com especialização em desenvolvimento front-end. Atuei em webdesign, e-commerce e growth antes de abrir o estúdio. Hoje trabalho com founders e equipes em crescimento que precisam de landing pages, sites institucionais e e-commerce sem contratar uma agência.
+        Trained in Design with a specialization in front-end development. I worked in web design, e-commerce and growth before opening the studio. Today I work with founders and growing teams that need landing pages, business websites and e-commerce without hiring an agency.
       </p>
     </div>
   </div>
@@ -370,41 +374,41 @@
   <div class="s-numbers">
     <div class="s-num-item reveal">
       <div class="s-num-val"><span class="acc">0</span></div>
-      <div class="s-num-label">camadas entre você e quem constrói</div>
+      <div class="s-num-label">layers between you and the person who builds</div>
     </div>
     <div class="s-num-item reveal">
       <div class="s-num-val">3<span class="acc">–</span>6</div>
-      <div class="s-num-label">semanas do briefing ao ar, sem exceções</div>
+      <div class="s-num-label">weeks from brief to launch, no exceptions</div>
     </div>
     <div class="s-num-item reveal">
       <div class="s-num-val"><span class="acc">1</span></div>
-      <div class="s-num-label">pessoa respondendo pelo trabalho do início ao fim</div>
+      <div class="s-num-label">person accountable for the work from start to finish</div>
     </div>
   </div>
 
   <!-- APPROACH -->
   <section class="s-approach">
-    <p class="s-approach-eyebrow reveal">Como trabalho</p>
+    <p class="s-approach-eyebrow reveal">How I work</p>
     <ul class="s-approach-list">
       <li class="s-approach-item reveal">
         <span class="s-approach-n"></span>
         <div>
-          <h3 class="s-approach-h">Diagnóstico antes de tudo</h3>
-          <p class="s-approach-p">Antes de abrir o Figma ou escrever uma linha de código, entendo o negócio, o mercado e o que está travando. A maioria dos problemas digitais tem raiz estratégica, não estética.</p>
+          <h3 class="s-approach-h">Diagnosis before anything else</h3>
+          <p class="s-approach-p">Before opening Figma or writing a line of code, I dig into the business, the market and what is holding it back. Most digital problems have strategic roots, not aesthetic ones.</p>
         </div>
       </li>
       <li class="s-approach-item reveal">
         <span class="s-approach-n"></span>
         <div>
-          <h3 class="s-approach-h">Design e desenvolvimento no mesmo workflow</h3>
-          <p class="s-approach-p">Não existe handoff. Design e código evoluem juntos, o que elimina retrabalho e encurta o prazo.</p>
+          <h3 class="s-approach-h">Design and development in one workflow</h3>
+          <p class="s-approach-p">There is no handoff. Design and code evolve together, which cuts rework and shortens the timeline.</p>
         </div>
       </li>
       <li class="s-approach-item reveal">
         <span class="s-approach-n"></span>
         <div>
-          <h3 class="s-approach-h">Entrega com documentação</h3>
-          <p class="s-approach-p">Todo projeto sai com design system, guia de uso e handoff estruturado. Você não fica refém do estúdio para fazer alterações simples.</p>
+          <h3 class="s-approach-h">Delivery with documentation</h3>
+          <p class="s-approach-p">Every project ships with a design system, a usage guide and a structured handoff. You never depend on the studio for small changes.</p>
         </div>
       </li>
     </ul>
@@ -412,7 +416,7 @@
 
   <!-- CLIENTS -->
   <div class="s-clients">
-    <p class="s-clients-label reveal">Trabalhou com</p>
+    <p class="s-clients-label reveal">Worked with</p>
     <div class="s-clients-list">
       <span class="s-client-name reveal">Odery Drums</span>
       <span class="s-client-name reveal">Adash</span>
@@ -425,18 +429,18 @@
   <!-- CTA -->
   <section class="s-cta">
     <h2 class="s-cta-headline reveal">
-      Seu projeto<br>em boas<br><span class="acc">mãos.</span>
+      Your project<br>in good<br><span class="acc">hands.</span>
     </h2>
     <div class="s-cta-actions">
-      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="s-cta-btn">Iniciar conversa →</a>
-      <a href="/" class="s-cta-ghost">Ver cases</a>
+      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="s-cta-btn">Start a conversation →</a>
+      <a href="/en" class="s-cta-ghost">See cases</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="s-footer">
-    <span class="s-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
-    <a href="/" class="s-footer-back">← IRBIS</a>
+    <span class="s-footer-copy">©2026 IRBIS · São Paulo, Brazil</span>
+    <a href="/en" class="s-footer-back">← IRBIS</a>
   </footer>
 
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">

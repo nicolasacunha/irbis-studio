@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O Método · Como a IRBIS trabalha · IRBIS Estúdio Digital</title>
-  <meta name="description" content="Do primeiro contato ao produto no ar em 3 semanas. Sem gerente no meio. Como a IRBIS funciona na prática: diagnóstico, execução e entrega.">
-  <link rel="canonical" href="https://irbis.com.br/metodo">
+  <title>The Method · How IRBIS Works · IRBIS Digital Studio</title>
+  <meta name="description" content="From first contact to a live product in 3 weeks. No manager in between. How IRBIS works in practice: diagnosis, execution, delivery.">
+  <link rel="canonical" href="https://irbis.com.br/en/method">
   <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/metodo">
   <link rel="alternate" hreflang="en" href="https://irbis.com.br/en/method">
   <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/metodo">
 
   <!-- OG -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://irbis.com.br/metodo">
-  <meta property="og:title" content="O Método · Como a IRBIS trabalha">
-  <meta property="og:description" content="Sem fila, sem gerente, sem proposta de 40 slides. Do primeiro contato ao produto no ar em 3 semanas.">
+  <meta property="og:url" content="https://irbis.com.br/en/method">
+  <meta property="og:title" content="The Method · How IRBIS Works">
+  <meta property="og:description" content="No queue, no manager, no 40-slide proposal. From first contact to a live product in 3 weeks.">
   <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="IRBIS Digital Studio">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "O Método · Como a IRBIS trabalha",
-    "description": "Sem fila, sem gerente, sem proposta de 40 slides. Do primeiro contato ao produto no ar em 3 semanas.",
-    "url": "https://irbis.com.br/metodo",
-    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/sobre" },
-    "publisher": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" }
+    "name": "The Method · How IRBIS Works",
+    "description": "No queue, no manager, no 40-slide proposal. From first contact to a live product in 3 weeks.",
+    "url": "https://irbis.com.br/en/method",
+    "inLanguage": "en",
+    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/en/about" },
+    "publisher": { "@type": "Organization", "@id": "https://irbis.com.br/#organization", "name": "IRBIS Digital Studio", "url": "https://irbis.com.br" }
   }
   </script>
 
@@ -72,11 +73,15 @@
       transition: opacity .2s;
     }
     .m-nav-logo:hover { opacity: 1; }
+    .m-nav-right { display: flex; align-items: center; gap: 1.25rem; }
     .m-nav-back {
       font-size: .6rem; font-weight: 600; letter-spacing: .2em;
       text-transform: uppercase; color: var(--muted); transition: color .2s;
     }
     .m-nav-back:hover { color: var(--text); }
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
+    .lang-toggle svg { display:block; width:100%; height:100%; }
 
     /* ── PROGRESS BAR ── */
     #m-progress {
@@ -234,9 +239,6 @@
     @media (prefers-reduced-motion: reduce) {
       * { transition-duration: 0s !important; animation-duration: 0s !important; }
     }
-      .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
-    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
-    .lang-toggle svg { display:block; width:100%; height:100%; }
   </style>
 <script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -250,8 +252,11 @@
 
   <!-- NAV -->
   <nav id="m-nav">
-    <a href="/" class="m-nav-logo">IRBIS</a>
-    <div style="display:flex;align-items:center;gap:.9rem"><a href="/" class="m-nav-back">← Voltar</a><a href="/en/method" class="lang-toggle" aria-label="View in English" title="English"><svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g><rect width="2964" height="2100" fill="#3c3b6e"/></svg></a></div>
+    <a href="/en" class="m-nav-logo">IRBIS</a>
+    <div class="m-nav-right">
+      <a href="/en" class="m-nav-back">← Back</a>
+      <a href="/metodo" class="lang-toggle" aria-label="Ver em português" title="Português"><svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="720" height="504" fill="#009c3b"/><path d="M360 66 666 252 360 438 54 252z" fill="#ffdf00"/><circle cx="360" cy="252" r="88" fill="#002776"/></svg></a>
+    </div>
   </nav>
 
   <!-- PROGRESS -->
@@ -260,12 +265,12 @@
   <!-- HERO -->
   <header class="m-hero">
     <div class="m-hero-left">
-      <span class="m-hero-eyebrow">Método</span>
-      <h1 class="m-hero-title">Como a IRBIS<br>trabalha.</h1>
+      <span class="m-hero-eyebrow">Method</span>
+      <h1 class="m-hero-title">How IRBIS<br>works.</h1>
     </div>
     <div class="m-hero-right">
       <p class="m-hero-intro">
-        Do primeiro contato ao produto no ar em 3 semanas. Sem gerente no meio, sem proposta de 40 slides.
+        From first contact to a live product in 3 weeks. No manager in between, no 40-slide proposal.
       </p>
     </div>
   </header>
@@ -277,21 +282,21 @@
 
     <!-- 01 -->
     <section class="m-section">
-      <span class="m-section-num">01 · O primeiro contato</span>
-      <h2 class="m-h2">Uma mensagem.<br>Sem formulário.</h2>
+      <span class="m-section-num">01 · First contact</span>
+      <h2 class="m-h2">One message.<br>No forms.</h2>
       <p class="m-p">
-        WhatsApp ou e-mail. Sem formulário de briefing, sem cadastro em plataforma, sem pré-qualificação automática. Você manda uma mensagem descrevendo o problema, eu respondo.
+        WhatsApp or email. No briefing form, no platform signup, no automated pre-qualification. You send a message describing the problem, I reply.
       </p>
       <p class="m-p">
-        Em até 24 horas marcamos uma call rápida: <strong>30 minutos no máximo</strong>. O objetivo é entender o problema, calibrar o escopo e avaliar se faz sentido trabalharmos juntos.
+        Within 24 hours we book a quick call: <strong>30 minutes max</strong>. The goal is to understand the problem, calibrate the scope, and see whether working together makes sense.
       </p>
 
       <div class="m-quote">
-        <p class="m-quote-text">Se não fizer sentido, eu digo. Direto ao ponto, sem enrolação.</p>
+        <p class="m-quote-text">If it doesn't make sense, I say so. Straight to the point, no runaround.</p>
       </div>
 
       <p class="m-p">
-        Não aceito todo projeto. Se o seu problema não é algo que consigo resolver bem, seja por especialidade, por timing ou por fit, você sai da call sabendo disso, não depois de três semanas de proposta.
+        I don't take every project. If your problem isn't something I can solve well, whether by specialty, timing, or fit, you leave the call knowing that, not after three weeks of proposals.
       </p>
     </section>
 
@@ -299,22 +304,22 @@
 
     <!-- 02 -->
     <section class="m-section" style="padding-top:4rem;">
-      <span class="m-section-num">02 · O diagnóstico</span>
-      <h2 class="m-h2">Um documento.<br>Sem surpresas.</h2>
+      <span class="m-section-num">02 · The diagnosis</span>
+      <h2 class="m-h2">One document.<br>No surprises.</h2>
       <p class="m-p">
-        Depois da call: um brief escrito, enviado em até 48 horas. Um documento para você tomar uma decisão, não para encher reunião.
+        After the call: a written brief, delivered within 48 hours. A document made for you to reach a decision, not to fill a meeting.
       </p>
-      <p class="m-p">O brief tem:</p>
+      <p class="m-p">The brief covers:</p>
       <ul class="m-list">
-        <li><span class="m-list-marker">01</span><span>Problema identificado: como eu entendi o que precisa ser resolvido</span></li>
-        <li><span class="m-list-marker">02</span><span>Solução proposta: o que vou construir e por quê essa abordagem</span></li>
-        <li><span class="m-list-marker">03</span><span>Stack: tecnologias, plataformas e ferramentas envolvidas</span></li>
-        <li><span class="m-list-marker">04</span><span>Timeline: datas concretas, não estimativas vagas</span></li>
-        <li><span class="m-list-marker">05</span><span>Preço: valor final, sem componentes ocultos</span></li>
+        <li><span class="m-list-marker">01</span><span>Problem identified: how I understood what needs solving</span></li>
+        <li><span class="m-list-marker">02</span><span>Proposed approach: what I will build and why</span></li>
+        <li><span class="m-list-marker">03</span><span>Stack: the technologies, platforms and tools involved</span></li>
+        <li><span class="m-list-marker">04</span><span>Timeline: concrete dates, not vague estimates</span></li>
+        <li><span class="m-list-marker">05</span><span>Price: the final number, no hidden pieces</span></li>
       </ul>
 
       <p class="m-p">
-        <strong>Sem teatro de negociação.</strong> O preço reflete o escopo descrito. Se o escopo mudar, o preço muda. E a conversa sobre isso acontece antes de qualquer trabalho começar.
+        <strong>No negotiation theater.</strong> The price reflects the scope described. If the scope changes, the price changes. And that conversation happens before any work starts.
       </p>
     </section>
 
@@ -322,24 +327,24 @@
 
     <!-- 03 -->
     <section class="m-section" style="padding-top:4rem;">
-      <span class="m-section-num">03 · A execução</span>
-      <h2 class="m-h2">Pagamento confirmado.<br>Trabalho começa.</h2>
+      <span class="m-section-num">03 · The execution</span>
+      <h2 class="m-h2">Payment confirmed.<br>Work starts.</h2>
       <p class="m-p">
-        Pagamento único upfront. Ou 50/50 para projetos maiores. Sem parcelamento em 12x, sem "começa depois que fechar o contrato com assinatura digital em três vias".
+        One upfront payment. Or 50/50 for larger projects. No 12-month installment plans, no "we start once the contract is signed in triplicate".
       </p>
       <p class="m-p">
-        Confirmou o pagamento, o trabalho começa no próximo dia útil.
+        Payment confirmed, work starts the next business day.
       </p>
 
       <div class="m-quote">
-        <p class="m-quote-text">Atualizações semanais via WhatsApp. Sem status meeting. Sem apresentação de progresso com slides.</p>
+        <p class="m-quote-text">Weekly updates on WhatsApp. No status meetings. No progress decks.</p>
       </div>
 
       <p class="m-p">
-        Você recebe uma mensagem toda semana com o que foi feito, o que vem a seguir e se tem alguma decisão sua pendente. <strong>Comunicação assíncrona por padrão:</strong> eu trabalho, você não precisa estar disponível o tempo todo.
+        Every week you get a message with what got done, what comes next, and whether any decision is waiting on you. <strong>Async communication by default:</strong> I work, you don't need to be available around the clock.
       </p>
       <p class="m-p">
-        <strong>1 rodada de revisões incluída</strong> no escopo original. Mudanças de direção significativas: as que alteram o problema a ser resolvido, e não apenas como ele é resolvido, geram um novo brief antes de qualquer execução.
+        <strong>1 revision round included</strong> in the original scope. Major changes of direction: the kind that changes the problem being solved, not just how it gets solved, trigger a new brief before any execution.
       </p>
     </section>
 
@@ -347,23 +352,23 @@
 
     <!-- 04 -->
     <section class="m-section" style="padding-top:4rem;">
-      <span class="m-section-num">04 · A entrega</span>
-      <h2 class="m-h2">Deploy em produção.<br>Você é dono de tudo.</h2>
+      <span class="m-section-num">04 · The delivery</span>
+      <h2 class="m-h2">Deployed to production.<br>You own everything.</h2>
       <p class="m-p">
-        O projeto vai ao ar. Não para staging, não para "validação final antes do go-live". Para produção, com domínio, com SSL, com tudo funcionando.
+        The project goes live. Not to staging, not to "final validation before go-live". To production, with domain, with SSL, with everything working.
       </p>
       <p class="m-p">
-        Junto com o deploy: documentação de handoff: o suficiente para você (ou qualquer dev) entender o que foi construído e como alterar sem precisar de mim para cada ajuste pequeno.
+        Along with the deploy: handoff documentation, enough for you (or any dev) to understand what was built and how to change it without needing me for every small tweak.
       </p>
 
       <ul class="m-list">
-        <li><span class="m-list-marker">→</span><span><strong>30 dias de suporte pós-entrega</strong> para bugs no que foi entregue</span></li>
-        <li><span class="m-list-marker">→</span><span><strong>Sem lock-in de hospedagem.</strong> Você escolhe onde hospedar. Ou herda a infra que eu configurei e paga direto ao provedor</span></li>
-        <li><span class="m-list-marker">→</span><span><strong>O código é seu.</strong> Repositório, domínio, contas de serviço: tudo no seu nome ou transferido para você</span></li>
+        <li><span class="m-list-marker">→</span><span><strong>30 days of post-delivery support</strong> for bugs in what was shipped</span></li>
+        <li><span class="m-list-marker">→</span><span><strong>No hosting lock-in.</strong> You pick where to host. Or keep the infra I set up and pay the provider directly</span></li>
+        <li><span class="m-list-marker">→</span><span><strong>The code is yours.</strong> Repository, domain, service accounts: everything in your name or transferred to you</span></li>
       </ul>
 
       <div class="m-quote">
-        <p class="m-quote-text">Não crio dependência. Você não precisa da IRBIS para manter o que foi construído.</p>
+        <p class="m-quote-text">I don't build dependency. You don't need IRBIS to maintain what was built.</p>
       </div>
     </section>
 
@@ -373,21 +378,21 @@
 
   <!-- CTA -->
   <section class="m-cta">
-    <h2 class="m-cta-headline">Pronto pra<br>começar?</h2>
+    <h2 class="m-cta-headline">Ready to<br>start?</h2>
     <p class="m-cta-body">
-      Fala agora. Se der match, a gente tira do papel em 3 semanas.
+      Reach out now. If it's a match, your project goes live in 3 weeks.
     </p>
-    <p class="m-cta-note">Agenda limitada. Aceito no máximo 3 projetos simultâneos.</p>
-    <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="m-cta-btn">Falar no WhatsApp →</a>
+    <p class="m-cta-note">Limited slots. I take on 3 projects at a time, max.</p>
+    <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="m-cta-btn">Chat on WhatsApp →</a>
   </section>
 
   <!-- SITE FOOTER -->
   <footer class="m-site-footer">
-    <span class="m-site-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
+    <span class="m-site-footer-copy">©2026 IRBIS · São Paulo, Brazil</span>
     <nav class="m-site-footer-links">
-      <a href="/#cases">Cases</a>
-      <a href="/manifesto">Manifesto</a>
-      <a href="/sobre">Sobre</a>
+      <a href="/en#cases">Work</a>
+      <a href="/en/manifesto">Manifesto</a>
+      <a href="/en/about">About</a>
       <a href="https://wa.me/5519991591265" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
   </footer>

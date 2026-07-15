@@ -34,10 +34,10 @@
   <meta name="twitter:description" content="IRBIS builds websites. Only websites. Landing pages, business websites and e-commerce for founders. From briefing to live in weeks.">
   <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.png">
 
-  <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
-  <link rel="apple-touch-icon" href="/Design/icone/favicon_true.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Design/icone/favicon_true-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/favicon_true.png">
   <meta name="theme-color" content="#0C0C0E">
-  <link rel="preload" as="image" href="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp" imagesrcset="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, /Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-2560.webp 2560w" imagesizes="100vw" type="image/webp">
+  <link rel="preload" as="image" href="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp" imagesrcset="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, /Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1920.webp 1920w" imagesizes="100vw" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://unpkg.com">
@@ -1813,7 +1813,7 @@
       <li><a href="#como-opero">PROCESS</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:.75rem;">
-      <a href="/call" class="nav-cta">START A PROJECT</a>
+      <a href="/en/call" class="nav-cta">START A PROJECT</a>
       <a href="/" class="lang-toggle" aria-label="Ver em português" title="Português">
         <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="720" height="504" fill="#009c3b"/>
@@ -1834,7 +1834,7 @@
       <a href="#como-opero">Process</a>
       <a href="#faq">FAQ</a>
       <a href="#contato">Contact</a>
-      <a href="/sobre">About</a>
+      <a href="/en/about">About</a>
       <a href="/">Português 🇧🇷</a>
     </nav>
     <p class="mobile-nav-tagline">IRBIS · DIGITAL STUDIO</p>
@@ -1847,7 +1847,7 @@
     ================================================================ -->
     <section id="hero" aria-label="Hero">
       <picture>
-        <source type="image/webp" srcset="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, /Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-2560.webp 2560w" sizes="100vw">
+        <source type="image/webp" srcset="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, /Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1920.webp 1920w" sizes="100vw">
         <img class="hero-bg" src="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1600.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
       </picture>
       <div class="hero-deco" aria-hidden="true">IB</div>
@@ -1864,7 +1864,7 @@
         </p>
         <div class="hero-ctas">
           <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-primary">CHAT ON WHATSAPP</a>
-          <a href="/call" class="cta-ghost">BOOK A CALL →</a>
+          <a href="/en/call" class="cta-ghost">BOOK A CALL →</a>
         </div>
       </div>
     </section>
@@ -1878,10 +1878,10 @@
           <h2 class="cases-title">WORK</h2>
           <p class="cases-tagline">Real results, real deadlines. From brief to launch, no surprises along the way.</p>
         </div>
-        <a href="/cases" class="cases-ver-todos">View all →</a>
+        <a href="/en/cases" class="cases-ver-todos">View all →</a>
       </div>
 
-      <a class="case-featured" href="/eforce">
+      <a class="case-featured" href="/en/eforce">
         <div class="case-bg case-bg-eforce"></div>
         <div class="case-ghost">EF</div>
         <div class="case-top-bar">
@@ -2098,7 +2098,7 @@
         <p style="font-size:clamp(1.1rem,2.5vw,1.6rem);font-weight:800;letter-spacing:-.03em;text-transform:uppercase;line-height:1.15">Your project has a deadline.<br><span style="color:var(--accent)">So does the calendar.</span></p>
       </div>
       <div style="display:flex;gap:.75rem;align-items:center;flex-shrink:0">
-        <a href="/call" class="cta-primary">START A PROJECT</a>
+        <a href="/en/call" class="cta-primary">START A PROJECT</a>
         <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" style="font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--s2);padding-bottom:.15rem;transition:color .2s,border-color .2s" onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--s2)'">WHATSAPP →</a>
       </div>
     </div>
@@ -2219,7 +2219,7 @@
                 });
                 if (res.ok) {
                   try { sessionStorage.setItem('irbis_conv', 'contact_lead'); } catch (e) {}
-                  window.location.href = '/obrigado';
+                  window.location.href = '/en/thank-you';
                 } else {
                   throw new Error();
                 }
@@ -2247,14 +2247,14 @@
     </div>
     <div class="footer-nav">
       <a href="#cases">Work</a>
-      <a href="/manifesto">Manifesto</a>
-      <a href="/sobre">About</a>
-      <a href="/metodo">Method</a>
+      <a href="/en/manifesto">Manifesto</a>
+      <a href="/en/about">About</a>
+      <a href="/en/method">Method</a>
       <a href="#faq">FAQ</a>
-      <a href="/vs-agencia">IRBIS vs Agency</a>
-      <a href="/para/saas">For SaaS</a>
-      <a href="/para/startups">For Startups</a>
-      <a href="/blog">Blog</a>
+      <a href="/en/vs-agency">IRBIS vs Agency</a>
+      <a href="/en/for/saas">For SaaS</a>
+      <a href="/en/for/startups">For Startups</a>
+      <a href="/en/blog">Blog</a>
       <a href="#contato">Contact</a>
     </div>
     <div class="footer-right">
