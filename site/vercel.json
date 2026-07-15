@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    { "source": "/cases-hub",              "destination": "/cases",         "permanent": true },
+    { "source": "/cases-hub/eforce",       "destination": "/eforce",        "permanent": true },
+    { "source": "/cases-hub/adash",        "destination": "/adash",         "permanent": true },
+    { "source": "/cases-hub/design",       "destination": "/design",        "permanent": true },
+    { "source": "/cases-hub/design/:slug", "destination": "/design/:slug",  "permanent": true }
+  ],
   "rewrites": [
     { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
     { "source": "/adash-demo",      "destination": "/adash-demo/index.html" },
