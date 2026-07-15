@@ -1,6 +1,6 @@
-# Design — Funil: formulário de escopo + agendamento automático
+# Design — Funil: formulário de escopo + agendamento próprio
 
-**Data:** 14/jul/2026
+**Data:** 14/jul/2026 (rev. 2 — agenda própria no lugar do Calendly, decisão do Nicolas)
 **Status:** aprovado em conversa (14/jul), aguardando revisão final do spec
 **Dono:** Nicolas
 
@@ -8,8 +8,8 @@
 
 Depois que Nicolas qualifica um lead manualmente, ele envia um link do site da IRBIS.
 O lead preenche um formulário de escopo e, na mesma página, agenda a call de vendas
-nos horários reais do calendário pessoal do Nicolas. Nicolas chega na call com o
-diagnóstico pronto.
+nos horários reais do calendário pessoal do Nicolas — em uma agenda construída por
+nós, 100% na identidade IRBIS. Nicolas chega na call com o diagnóstico pronto.
 
 O formulário **substitui a call de diagnóstico de 15–20 min** do playbook para leads
 que passam por esse caminho. A call agendada é a **videochamada de vendas** (preço ao
@@ -24,11 +24,12 @@ vivo — conduzida com `irbis-call-de-vendas`).
 4. Ao enviar:
    - Respostas criam/atualizam card no CRM do Notion (via API) e disparam email
      para Nicolas com tudo (incluindo links dos anexos).
-   - Na mesma página, sem redirect, aparece o widget do Calendly com nome e email
-     pré-preenchidos.
-5. Lead escolhe horário → Calendly cria evento no Google Calendar do Nicolas +
-   convite ao lead → redirect para `/obrigado` (evento Lead GA4/Meta Pixel já
-   dispara lá hoje — tracking existente aproveitado sem retrabalho).
+   - Na mesma página, sem redirect, aparece a **grade de horários da IRBIS**
+     (agenda própria), já com os dados do lead carregados.
+5. Lead escolhe horário → o sistema cria o evento no Google Calendar pessoal do
+   Nicolas com link de Google Meet e convite para o email do lead → email de
+   confirmação → redirect para `/obrigado` (evento Lead GA4/Meta Pixel já dispara
+   lá hoje — tracking existente aproveitado sem retrabalho).
 
 ## O formulário — campos aprovados
 
@@ -60,19 +61,39 @@ vivo — conduzida com `irbis-call-de-vendas`).
 Copy final de todas as perguntas passa por `irbis-brand-voice` na fase de build
 (sem travessão, assina Nicolas, vocabulário leigo).
 
-## Agendamento (Calendly)
+## Agendamento — agenda própria (v1)
 
-- **Novo event type** dedicado: "Call de projeto — 45 min" (separado do link
-  genérico de 30 min usado nos CTAs do site).
-- Sincronização com Google Calendar pessoal: já nativa do Calendly (conta grátis
-  existente: `calendly.com/nicolas-cunhan-aluno`).
-- Embed inline na página do form, com prefill de nome/email via query params.
-- Redirect pós-agendamento: `/obrigado` (já configurado, dispara Lead no GA4/Meta).
-- **Limitação aceita:** widget tem visual do Calendly (plano grátis), não da IRBIS.
-- **Confirmações:** email de confirmação imediato é nativo. Véspera com micro-pauta
-  + reminder 1h30 antes (regra 8 do playbook) ficam **manuais no WhatsApp do
-  Nicolas**, usando as respostas do form como micro-pauta. Se virar gargalo,
-  upgrade do Calendly resolve.
+Decisão do Nicolas (14/jul): construir a agenda no próprio site em vez de embutir
+Calendly. Ganhos: visual 100% IRBIS e reminders automatizáveis. O que mantém o
+build em dias (escopo disciplinado da v1):
+
+- **Um único tipo de evento:** call de vendas, 45 min, Google Meet.
+- **Só o calendário pessoal do Nicolas** como fonte de conflitos.
+- **Disponibilidade por configuração** (não por UI de admin): janelas de
+  atendimento semanais, buffer entre calls, antecedência mínima (ex.: 12h) e
+  horizonte máximo (ex.: 14 dias). Valores exatos definidos com o Nicolas na
+  fase de build.
+- **Fuso:** slots gerados em America/Sao_Paulo; exibição convertida para o fuso
+  do navegador do lead (leads internacionais existem no pipeline).
+- **Sem remarcação/cancelamento self-service na v1** — lead responde o email de
+  confirmação ou chama no WhatsApp; Nicolas ajusta direto no Google Calendar.
+
+### Integração Google Calendar
+
+- Service account no Google Cloud com o calendário pessoal do Nicolas
+  compartilhado com ela (padrão para conta Gmail pessoal, sem OAuth por sessão).
+- Fluxo: free/busy do calendário + regras de disponibilidade → gera slots →
+  lead escolhe → API cria o evento (com Meet + convite ao lead) → revalida
+  conflito no momento da criação (dois leads não podem pegar o mesmo slot).
+
+### Confirmações e reminders
+
+- Email de confirmação imediato ao lead (com dados da call e link do Meet) e
+  notificação ao Nicolas.
+- Convite nativo do Google Calendar chega ao lead (aceitar/adicionar à agenda).
+- **Fase 2 (pós-v1):** cron diário para reminder de véspera por email; a
+  micro-pauta de véspera pelo WhatsApp segue manual (regra 8 do playbook, e é
+  mais pessoal). Reminder 1h30 antes: automatizável no mesmo cron.
 
 ## Técnica
 
@@ -82,26 +103,38 @@ Copy final de todas as perguntas passa por `irbis-brand-voice` na fase de build
   Clientes) + email para Nicolas.
 - **Anexos:** upload para storage (Vercel Blob ou similar — confirmar stack do site
   na fase de build); links dos arquivos vão no card do Notion e no email.
-- Pré-requisito: criar integração do Notion (token interno) com acesso ao CRM.
+- **Agenda:** endpoints de disponibilidade (gera slots) e de booking (cria evento),
+  falando com a API do Google Calendar via service account.
+- **Email transacional:** Resend ou SMTP do Zoho (definir na fase de build).
+- Pré-requisitos de setup: integração do Notion (token interno) com acesso ao CRM;
+  projeto no Google Cloud + service account + compartilhamento do calendário.
 
 ## Fases de construção
 
-1. **Copy do formulário** — fechar textos das perguntas e faixas de orçamento na
-   voz IRBIS (Nicolas aprova).
-2. **Calendly** — criar event type 45 min, redirect, prefill.
-3. **Página no site** — form + upload + integração Notion/email + embed Calendly.
-4. **Teste ponta a ponta** — lead fake preenche, anexa arquivo, agenda; verificar:
-   card no Notion, email recebido, evento no calendário, pixel disparando.
+1. **Copy do formulário** — fechar textos das perguntas, faixas de orçamento e
+   opções de prazo na voz IRBIS (Nicolas aprova).
+2. **Setup de acessos** — service account Google + compartilhamento do calendário;
+   token do Notion; provedor de email. (Passos de painel viram instruções leigas
+   para o Nicolas onde exigirem interação humana.)
+3. **Página no site** — form + upload + integração Notion/email.
+4. **Agenda própria** — endpoints de slots e booking + UI da grade de horários.
+5. **Teste ponta a ponta** — lead fake preenche, anexa arquivo, agenda; verificar:
+   card no Notion, email dos dois lados, evento com Meet no calendário, conflito
+   duplo bloqueado, pixel disparando em `/obrigado`.
+6. **(Fase 2, depois da v1 rodando)** — cron de reminders (véspera + 1h30 antes).
 
 ## Fora de escopo (por decisão)
 
 - Formulário como filtro de qualificação (lead já chega qualificado).
 - Página pública/aberta no menu do site.
-- Agenda própria via API do Google Calendar (semanas de trabalho vs. Calendly pronto).
-- Automação de reminders paga (Workflows do Calendly).
+- Calendly ou qualquer scheduler de terceiro (decisão de 14/jul: agenda própria).
+- Remarcação/cancelamento self-service (v1); múltiplos tipos de evento; UI de
+  admin de disponibilidade.
 
 ## Riscos e compromissos aceitos
 
-- Widget Calendly quebra parcialmente a estética IRBIS na página.
+- Agenda própria = manutenção nossa: bugs de slot/fuso são nossos para corrigir.
+  Mitigação: escopo v1 mínimo + teste ponta a ponta com casos de conflito.
 - Pergunta de sócio (campo 12) só avisa, não impede agendamento sem o decisor par.
 - Orçamento opcional pode vir vazio — a call de vendas segue cobrindo budget ao vivo.
+- Sem self-service de remarcação na v1, no-show/remarcação passam pelo WhatsApp.
