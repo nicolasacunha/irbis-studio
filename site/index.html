@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xmqsnmt3uv");
-  </script>
+  <!-- Analytics: GA4 + Meta Pixel + Clarity com carregamento adiado (1º gesto ou 3,5s).
+       Os stubs abaixo enfileiram comandos desde já, então nenhum evento se perde. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webdesign para Negócios que Querem Crescer | Landing Pages e Site Institucional | IRBIS</title>
@@ -45,16 +39,12 @@
   <link rel="preload" as="image" href="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp" imagesrcset="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1920.webp 1920w" imagesizes="100vw" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code (stub: enfileira; fbevents.js sobe no defer) -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  !function(f,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+  n.queue=[]}(window);
   fbq('init', '26926853710268489');
   fbq('track', 'PageView');
   </script>
@@ -63,13 +53,36 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M"></script>
+  <!-- Google tag (gtag.js): stub enfileira; gtag/js sobe no defer -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VKHL68G50M');
+  </script>
+
+  <!-- Carregamento adiado das bibliotecas de tracking (1º gesto OU 3,5s) -->
+  <script>
+  (function (w, d) {
+    var libs = [
+      'https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M',
+      'https://connect.facebook.net/en_US/fbevents.js',
+      'https://www.clarity.ms/tag/xmqsnmt3uv'
+    ];
+    var fired = false;
+    var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown', 'mousemove'];
+    function boot() {
+      if (fired) return; fired = true;
+      clearTimeout(timer);
+      evs.forEach(function (e) { w.removeEventListener(e, boot); });
+      libs.forEach(function (src) {
+        var s = d.createElement('script'); s.async = true; s.src = src;
+        d.head.appendChild(s);
+      });
+    }
+    evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
+    var timer = setTimeout(boot, 3500);
+  })(window, document);
   </script>
 
   <!-- Schema: Organization + WebSite + FAQPage + ProfessionalService -->
