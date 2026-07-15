@@ -14,6 +14,7 @@ module.exports = async function handler(req, res) {
   var f = {
     nome: str(body.nome), email: str(body.email), whatsapp: str(body.whatsapp),
     negocio: str(body.negocio), oquefaz: str(body.oquefaz), site: str(body.site),
+    canais: str(body.canais), valorcliente: str(body.valorcliente),
     prazo: str(body.prazo), orcamento: str(body.orcamento), livre: str(body.livre),
     decisor: str(body.decisor),
     objetivo: Array.isArray(body.objetivo) ? body.objetivo : [],

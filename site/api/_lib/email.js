@@ -23,6 +23,8 @@ async function notifyOwner(f, attachments) {
     ['WhatsApp', f.whatsapp],
     ['O que faz', f.oquefaz],
     ['Site atual', f.site || '—'],
+    ['De onde vêm os clientes', f.canais || '—'],
+    ['Valor de um cliente', f.valorcliente || '—'],
     ['Site precisa fazer', (f.objetivo || []).join(', ')],
     ['Incômodo', (f.incomodo || []).join(', ')],
     ['Prazo desejado', f.prazo],

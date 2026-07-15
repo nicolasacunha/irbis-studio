@@ -117,7 +117,7 @@
     submitBtn.disabled = true;
 
     var payload = {};
-    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'prazo', 'orcamento', 'livre', 'decisor']
+    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'canais', 'valorcliente', 'prazo', 'orcamento', 'livre', 'decisor']
       .forEach(function (n) {
         var el = form.querySelector('[name="' + n + '"]');
         payload[n] = el ? el.value.trim() : '';

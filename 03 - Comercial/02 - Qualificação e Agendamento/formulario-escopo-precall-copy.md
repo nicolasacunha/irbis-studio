@@ -38,6 +38,8 @@ ANTES DA NOSSA CONVERSA
 | Nome do negócio | Nome do negócio | | Sim |
 | Descrição | O que vocês fazem? | Apoio: "Uma ou duas linhas, do jeito que você explica pra um cliente." | Sim |
 | Site atual | Site atual, se existir | Apoio: "Não tem? Sem problema. É sobre isso que a gente vai conversar." | Não |
+| Canais de aquisição | De onde vêm seus clientes hoje? | Apoio: "Indicação, Instagram, Google, tráfego pago, ninguém sabe direito? Me conta como eles te acham." | **Sim** |
+| Valor do cliente | Quanto vale um cliente novo pra você? | Apoio: "Ticket médio, ou quanto um cliente deixa ao longo do tempo. Me ajuda a mostrar na call o retorno que o site precisa dar." | **Não** |
 
 ---
 

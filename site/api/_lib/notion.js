@@ -24,6 +24,8 @@ async function createLead(f) {
     'Origem': { select: { name: 'Site' } },
     'Prazo desejado': { rich_text: txt(f.prazo) },
     'Orçamento previsto': { rich_text: txt(f.orcamento) },
+    'Canais de aquisição': { rich_text: txt(f.canais) },
+    'Valor do cliente': { rich_text: txt(f.valorcliente) },
   };
   if (f.site) props['Site atual'] = { url: f.site };
   if (f.objetivo && f.objetivo.length) props['Site precisa fazer'] = { multi_select: multi(f.objetivo) };
