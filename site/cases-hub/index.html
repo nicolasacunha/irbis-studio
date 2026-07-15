@@ -39,9 +39,8 @@
     "inLanguage": "pt-BR"
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -155,6 +154,35 @@
       color: var(--muted);
     }
 
+    /* CTA FINAL */
+    .cta-final {
+      padding: 5rem 3rem 6rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-final-label {
+      font-size: .6rem; font-weight: 600; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .cta-final-title {
+      font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 800;
+      letter-spacing: -.03em; text-transform: uppercase; margin-bottom: 2rem;
+    }
+    .cta-final-title .acc { color: var(--accent); }
+    .cta-final-actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+    .cta-final-primary {
+      background: var(--accent); color: #0C0C0E;
+      font-size: .65rem; font-weight: 700; letter-spacing: .15em;
+      text-transform: uppercase; padding: .9rem 1.75rem; transition: opacity .2s;
+    }
+    .cta-final-primary:hover { opacity: .85; }
+    .cta-final-ghost {
+      border: 1px solid var(--border); color: inherit;
+      font-size: .65rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; padding: .9rem 1.75rem; transition: border-color .2s;
+    }
+    .cta-final-ghost:hover { border-color: var(--accent); }
+
     /* FOOTER */
     footer {
       padding: 2rem 3rem;
@@ -239,6 +267,15 @@
       </svg>
     </a>
 
+  </section>
+
+  <section class="cta-final">
+    <p class="cta-final-label">Seu projeto</p>
+    <h2 class="cta-final-title">O próximo case <span class="acc">pode ser o seu.</span></h2>
+    <div class="cta-final-actions">
+      <a class="cta-final-primary" href="/call">Agendar conversa →</a>
+      <a class="cta-final-ghost" href="https://wa.me/5519991591265" target="_blank" rel="noopener">WhatsApp →</a>
+    </div>
   </section>
 
   <footer>
