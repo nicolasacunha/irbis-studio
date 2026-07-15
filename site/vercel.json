@@ -34,6 +34,7 @@
     { "source": "/para/startups",       "destination": "/para/startups.html" },
     { "source": "/obrigado",            "destination": "/obrigado.html" },
     { "source": "/founder",             "destination": "/founder.html" },
-    { "source": "/call",                "destination": "/call.html" }
+    { "source": "/call",                "destination": "/call.html" },
+    { "source": "/en",                  "destination": "/en/index.html" }
   ]
 }
