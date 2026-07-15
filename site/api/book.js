@@ -18,6 +18,11 @@ module.exports = async function handler(req, res) {
   if (isNaN(start.getTime())) { res.status(400).json({ error: 'data' }); return; }
   var end = new Date(start.getTime() + cfg.DURATION_MIN * 60 * 1000);
 
+  // Guard: recusa horários recorrentes bloqueados (ex.: quarta 19h).
+  var sp = tzu.partsInTz(start, cfg.CALENDAR_TZ);
+  var spDow = new Date(Date.UTC(sp.year, sp.month - 1, sp.day)).getUTCDay();
+  if (cfg.isBlockedSlot(spDow, sp.hour)) { res.status(409).json({ error: 'taken' }); return; }
+
   // Recupera o lead do Notion (fonte confiável, não o cliente).
   var lead;
   try { lead = await notion.getLead(leadId); }

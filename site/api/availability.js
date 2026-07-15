@@ -64,6 +64,7 @@ function buildCandidates(minTime, horizon) {
     var lastStart = win.endHour - cfg.DURATION_MIN / 60; // última hora que a call pode começar
     for (var h = win.startHour; h <= lastStart; h += cfg.SLOT_STEP_MIN / 60) {
       var hour = Math.floor(h);
+      if (cfg.isBlockedSlot(dow, hour)) continue;
       var minute = Math.round((h - hour) * 60);
       var start = tzu.zonedWallToUtc(parts.year, parts.month, parts.day, hour, minute, cfg.CALENDAR_TZ);
       var end = new Date(start.getTime() + cfg.DURATION_MIN * 60 * 1000);

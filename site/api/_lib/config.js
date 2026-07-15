@@ -17,8 +17,22 @@ module.exports = {
     { from: '2026-09-01', startHour: 13, endHour: 22 },
   ],
 
+  /* Horários recorrentes bloqueados por dia da semana (hora de Brasília),
+     além do free/busy do calendário. dow: 0=dom, 1=seg ... 6=sáb.
+     Nicolas (15/jul): tirar toda quarta às 19h. */
+  BLOCKED_WEEKLY: [
+    { dow: 3, hour: 19 },
+  ],
+
   EVENT_TITLE: 'Call de projeto — IRBIS',
   ORGANIZER_NAME: 'Nicolas',
+};
+
+/* Slot recorrente bloqueado? (dia da semana + hora cheia, Brasília) */
+module.exports.isBlockedSlot = function (dow, hour) {
+  return module.exports.BLOCKED_WEEKLY.some(function (b) {
+    return b.dow === dow && b.hour === hour;
+  });
 };
 
 /* Retorna a janela {startHour, endHour} válida para uma data 'YYYY-MM-DD'. */
