@@ -4,7 +4,7 @@ Mapeado em 14/jul/2026 via busca indexada (Google/Tavily). Links e descrições 
 
 ## Regra de ouro (antes de qualquer post)
 
-1. **Nunca usar demo de prospect ativo** (Vento Manso, Del Sant, Panda Storee, ASPG, Holos etc.). Assets permitidos hoje: **case E-Force (site real entregue, +R$350k afirmável)** e irbis.com.br. Para post de nicho: demo FICTÍCIA construída antes (pedir ao Claude, 2-4h cada).
+1. **Nunca usar demo de marca real de prospect ativo** (Del Sant, Panda Storee, ASPG, Holos etc.). Assets permitidos hoje: **case E-Force (site real entregue, +R$350k afirmável)**, irbis.com.br e **Vento Manso** (verificado 14/jul: pousada fictícia por construção, com banner de conceito + disclosure de IA no próprio site — ressalva: apresentar à Nathalia antes de postar no grupo de pousadas, público dela). Para os demais nichos: demo FICTÍCIA construída antes (pedir ao Claude, 2-4h cada).
 2. Um grupo por vez; segundo post no mesmo grupo só semanas depois.
 3. Ler as regras do grupo ao entrar. Grupo que proíbe qualquer divulgação: participar 1 semana comentando antes de postar, ou pular.
 4. Responder TODO comentário (é isso que mantém o post vivo no algoritmo). Pedido de preço no privado: "depende do que seu site precisa fazer, te explico em 15 min de call".
@@ -15,7 +15,7 @@ Mapeado em 14/jul/2026 via busca indexada (Google/Tavily). Links e descrições 
 | # | Grupo | Link | Nicho | Por quê | Verificar logado | Asset do post |
 |---|---|---|---|---|---|---|
 | 1 | Donos de Negócios, Empresários e Empreendedores (Networking Brasil) | facebook.com/groups/403198411088667 | Donos em geral | Grupo explicitamente de donos p/ networking; posts de negócio circulam (vimos posts reais indexados) | Membros; se aceita post de serviço; frequência de posts | Case E-Force (real) — pode postar JÁ |
-| 2 | Donos de Pousadas, Hotéis e Camping | facebook.com/groups/donosdepousada | Pousada/hotelaria | Literalmente donos; descrição fala em "orientar e dar dicas a donos" | Membros; atividade; regras | Demo fictícia de pousada (construir antes; NÃO usar Vento Manso) |
+| 2 | Donos de Pousadas, Hotéis e Camping | facebook.com/groups/donosdepousada | Pousada/hotelaria | Literalmente donos; descrição fala em "orientar e dar dicas a donos" | Membros; atividade; regras | **Vento Manso** (fictícia por construção, liberada) — postar após apresentar à Nathalia |
 | 3 | Donos de Restaurantes e Bares | facebook.com/groups/101142643714 | Restaurante/bar/café | "Destinada aos empreendedores e proprietários... melhores práticas" — cobre a frente café/gastronomia | Membros; atividade | Demo fictícia de cafeteria/restaurante (NÃO usar Del Sant) |
 | 4 | Lojas Shopify do Brasil | facebook.com/groups/lojasshopifybrasil | E-commerce | Lojistas reais de Shopify (decisores); todo o aprendizado Panda Storee se aplica | Membros; se aceita post de serviço (grupos de plataforma costumam ser rígidos) | Demo fictícia de loja (NÃO usar Panda Storee) |
 | 5 | Tray E-commerce (GFV - LOJISTAS) | facebook.com/groups/trayecommerce | E-commerce (Tray) | Lojistas do interior do Brasil, perfil menos disputado que Shopify | Idem #4 | Demo fictícia de loja |
