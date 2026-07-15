@@ -62,7 +62,7 @@ module.exports = async function handler(req, res) {
 
   // Atualiza o CRM (best-effort).
   notion.markBooked(leadId, {
-    startISO: start.toISOString(),
+    startISO: tzu.toOffsetISO(start, cfg.CALENDAR_TZ),
     meetLink: ev.meetLink,
     htmlLink: ev.htmlLink,
   }).catch(function (e) { console.error('markBooked', e); });

@@ -55,9 +55,25 @@ function labelParts(date, tz) {
   };
 }
 
+/* Instante -> ISO com offset do fuso (ex.: 2026-07-16T10:00:00-03:00).
+   Usado pra gravar no Notion com o horário local visível, não em UTC. */
+function toOffsetISO(date, tz) {
+  var off = offsetMs(date, tz);
+  var local = new Date(date.getTime() + off);
+  var sign = off >= 0 ? '+' : '-';
+  var abs = Math.abs(off);
+  var oh = Math.floor(abs / 3600000);
+  var om = Math.floor((abs % 3600000) / 60000);
+  function p(n) { return (n < 10 ? '0' : '') + n; }
+  return local.getUTCFullYear() + '-' + p(local.getUTCMonth() + 1) + '-' + p(local.getUTCDate()) +
+    'T' + p(local.getUTCHours()) + ':' + p(local.getUTCMinutes()) + ':' + p(local.getUTCSeconds()) +
+    sign + p(oh) + ':' + p(om);
+}
+
 module.exports = {
   offsetMs: offsetMs,
   zonedWallToUtc: zonedWallToUtc,
   partsInTz: partsInTz,
   labelParts: labelParts,
+  toOffsetISO: toOffsetISO,
 };
