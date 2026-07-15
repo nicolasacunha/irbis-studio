@@ -24,13 +24,14 @@ module.exports = async function handler(req, res) {
   var days = {};
 
   candidates.forEach(function (slot) {
-    if (overlaps(slot.start, slot.end, busy)) return;
+    // Ocupado não some: entra marcado como taken (o front mostra riscado).
+    var taken = overlaps(slot.start, slot.end, busy);
     var lbl = tzu.labelParts(slot.start, viewerTz);
     var key = isoDay(slot.start, viewerTz);
     if (!days[key]) {
       days[key] = { dow: lbl.dow, dnum: lbl.dnum, dmon: lbl.dmon, full: lbl.full, slots: [] };
     }
-    days[key].slots.push({ start: slot.start.toISOString(), label: lbl.time });
+    days[key].slots.push({ start: slot.start.toISOString(), label: lbl.time, taken: taken });
   });
 
   // Remove dias sem slots e ordena.

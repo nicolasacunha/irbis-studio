@@ -5,7 +5,7 @@ module.exports = {
   DURATION_MIN: 60,           // duração da call (1 hora)
   SLOT_STEP_MIN: 60,          // de quanto em quanto tempo os horários começam
   MIN_NOTICE_HOURS: 12,       // antecedência mínima para agendar
-  HORIZON_DAYS: 14,           // até quantos dias à frente mostrar
+  HORIZON_DAYS: 7,            // até quantos dias à frente mostrar (1 semana)
   WORK_DAYS: [1, 2, 3, 4, 5], // 0=dom, 1=seg ... 6=sáb
 
   /* Janelas de atendimento que mudam por data (hora de Brasília).
