@@ -57,6 +57,7 @@
     { "source": "/en/process/adash",    "destination": "/en/process/adash.html" },
     { "source": "/en/process",          "destination": "/en/process/adash.html" },
     { "source": "/en/blog",             "destination": "/en/blog/index.html" },
-    { "source": "/en/blog/(.*)",        "destination": "/en/blog/$1.html" }
+    { "source": "/en/blog/(.*)",        "destination": "/en/blog/$1.html" },
+    { "source": "/en/design",           "destination": "/en/design.html" }
   ]
 }
