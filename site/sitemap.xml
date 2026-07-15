@@ -4,10 +4,11 @@
 
   <url>
     <loc>https://irbis.com.br/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/"/>
   </url>
 
@@ -117,6 +118,16 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/"/>
   </url>
 
 </urlset>

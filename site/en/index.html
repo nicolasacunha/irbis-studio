@@ -14,6 +14,9 @@
   <title>Web Design for Startups | Landing Pages and Business Websites | IRBIS</title>
   <meta name="description" content="IRBIS builds websites. Only websites. Landing pages, business websites and e-commerce for founders. From briefing to live in weeks. You talk directly to the person who builds.">
   <link rel="canonical" href="https://irbis.com.br/en">
+  <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/">
+  <link rel="alternate" hreflang="en" href="https://irbis.com.br/en">
+  <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/">
   <meta name="facebook-domain-verification" content="twsp7zbqg0fvr0ylejum8fcxkraq1m" />
 
   <!-- Open Graph -->
@@ -34,7 +37,7 @@
   <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
   <link rel="apple-touch-icon" href="/Design/icone/favicon_true.png">
   <meta name="theme-color" content="#0C0C0E">
-  <link rel="preload" as="image" href="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png">
+  <link rel="preload" as="image" href="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp" imagesrcset="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, /Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-2560.webp 2560w" imagesizes="100vw" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://unpkg.com">
@@ -209,7 +212,7 @@
   }
   </script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ================================================================
@@ -1045,7 +1048,7 @@
       .case-featured:hover .case-bg, .case-card:hover .case-bg { transform: scale(1.04); }
     }
     .case-bg-eforce {
-      background: url('cases-hub/eforce/assets/EFORCE-CASE.jpeg') center center / cover no-repeat;
+      background: url('/cases-hub/eforce/assets/EFORCE-CASE-1280.jpg') center center / cover no-repeat;
     }
     .case-bg-eforce::after {
       content: '';
@@ -1843,7 +1846,10 @@
          SECTION 01 — HERO
     ================================================================ -->
     <section id="hero" aria-label="Hero">
-      <img class="hero-bg" src="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
+      <picture>
+        <source type="image/webp" srcset="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, /Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-2560.webp 2560w" sizes="100vw">
+        <img class="hero-bg" src="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1600.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
+      </picture>
       <div class="hero-deco" aria-hidden="true">IB</div>
 
       <p class="hero-label">For businesses that want to grow</p>
