@@ -21,107 +21,104 @@
     padding: 72px 80px;
   }
 
-  /* Grid background */
-  body::before {
-    content: '';
+  /* Pantera (mascote) — espelhada: detalhe/olhos à direita, sombra à esquerda */
+  .pantera {
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-    background-size: 60px 60px;
+    z-index: 0;
+  }
+  .pantera img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 58% 42%;
+    transform: scaleX(-1);
   }
 
-  /* Accent glow */
-  body::after {
-    content: '';
+  /* Scrim: preto sólido à esquerda (área de texto) esvaindo para a fera à direita */
+  .scrim {
     position: absolute;
-    bottom: -80px;
-    right: -80px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(ellipse, rgba(255,61,0,.18) 0%, transparent 65%);
-    pointer-events: none;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(90deg,
+        #0C0C0E 0%,
+        #0C0C0E 32%,
+        rgba(12,12,14,.82) 47%,
+        rgba(12,12,14,.35) 68%,
+        rgba(12,12,14,0) 100%),
+      linear-gradient(0deg, rgba(12,12,14,.55) 0%, transparent 30%);
   }
 
   .top {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: 16px;
   }
-
   .logo {
     font-size: 18px;
     font-weight: 800;
     letter-spacing: .18em;
     text-transform: uppercase;
   }
-
   .logo-dot { color: #FF3D00; }
-
   .divider {
     width: 1px;
     height: 20px;
     background: rgba(255,255,255,.2);
   }
-
   .tagline {
     font-size: 11px;
     font-weight: 500;
     letter-spacing: .2em;
     text-transform: uppercase;
-    color: rgba(250,250,250,.4);
+    color: rgba(250,250,250,.45);
   }
 
   .center {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
-
   .headline {
-    font-size: 80px;
+    font-size: 76px;
     font-weight: 800;
     letter-spacing: -.04em;
     line-height: .9;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
-
   .headline .acc { color: #FF3D00; }
-
   .sub {
     font-size: 18px;
     font-weight: 300;
-    color: rgba(250,250,250,.5);
-    max-width: 540px;
+    color: rgba(250,250,250,.62);
+    max-width: 470px;
     line-height: 1.6;
   }
 
   .bottom {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
   .services {
     display: flex;
-    gap: 24px;
+    gap: 12px;
   }
-
   .service-tag {
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: .2em;
+    letter-spacing: .18em;
     text-transform: uppercase;
-    color: rgba(250,250,250,.3);
+    color: rgba(250,250,250,.5);
     padding: 6px 14px;
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(12,12,14,.35);
   }
-
   .cta {
     font-size: 12px;
     font-weight: 700;
@@ -129,29 +126,16 @@
     text-transform: uppercase;
     color: #FF3D00;
   }
-
-  /* Ghost text */
-  .ghost {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 320px;
-    font-weight: 800;
-    letter-spacing: -.08em;
-    color: rgba(250,250,250,.015);
-    text-transform: uppercase;
-    user-select: none;
-    pointer-events: none;
-    line-height: 1;
-  }
 </style>
 <script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
-  <div class="ghost">IR</div>
+  <div class="pantera">
+    <img src="/Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="">
+  </div>
+  <div class="scrim"></div>
 
   <div class="top">
     <span class="logo">IRBIS<span class="logo-dot">.</span></span>
@@ -161,17 +145,16 @@
 
   <div class="center">
     <h1 class="headline">
-      Sites, marcas<br>e sistemas<br><span class="acc">digitais.</span>
+      Sites que<br>seu negócio<br><span class="acc">merece.</span>
     </h1>
-    <p class="sub">Solo com IA. Do briefing ao ar, fala direto com quem construiu.</p>
+    <p class="sub">Do briefing ao ar em semanas. Você fala direto com quem constrói.</p>
   </div>
 
   <div class="bottom">
     <div class="services">
-      <span class="service-tag">Webdesign</span>
-      <span class="service-tag">Branding</span>
-      <span class="service-tag">Produto Digital</span>
-      <span class="service-tag">Estratégia</span>
+      <span class="service-tag">Landing Pages</span>
+      <span class="service-tag">Site Institucional</span>
+      <span class="service-tag">E-commerce</span>
     </div>
     <span class="cta">irbis.com.br</span>
   </div>

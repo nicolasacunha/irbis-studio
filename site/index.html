@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webdesign para Startups | Landing Page e Site Institucional | IRBIS</title>
+  <title>Webdesign para Startups | Landing Pages e Site Institucional | IRBIS</title>
   <meta name="description" content="A IRBIS faz só sites. Landing page, site institucional e e-commerce para founders. Do briefing ao ar em semanas. Você fala direto com quem executa.">
   <link rel="canonical" href="https://irbis.com.br/">
   <meta name="facebook-domain-verification" content="twsp7zbqg0fvr0ylejum8fcxkraq1m" />
@@ -162,7 +162,7 @@
             "name": "Você trabalha sozinho?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim. Pensamento estratégico, olho de design e visão de negócio são meus. Uso IA para amplificar execução técnica. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo."
+              "text": "Sim. Pensamento estratégico, olho de design e visão de negócio são meus, do briefing ao deploy. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo."
             }
           },
           {
@@ -250,12 +250,12 @@
     button { font-family: var(--f); cursor: none; border: none; background: none; touch-action: manipulation; }
 
     /* Anchor sections: offset for fixed nav */
-    #cases, #horizontal-section, #como-opero, #aumentado, #faq, #contato {
+    #cases, #horizontal-section, #como-opero, #faq, #contato {
       scroll-margin-top: 5rem;
     }
 
     /* Cobrir hero-bg fixo ao scroll */
-    #cases, #numeros, #clientes, #horizontal-section, #como-opero, #aumentado, #faq, #contato, footer {
+    #cases, #numeros, #clientes, #horizontal-section, #como-opero, #faq, #contato, footer {
       position: relative;
       z-index: 2;
       background: var(--bg);
@@ -1311,72 +1311,6 @@
     }
 
     /* ================================================================
-       IA POSITIONING
-    ================================================================ */
-    #aumentado {
-      padding: var(--sp-2xl) var(--sp-xl);
-      border-top: 1px solid var(--s2);
-    }
-    .aumentado-inner {
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-xl);
-    }
-    .aumentado-left {
-      position: static;
-    }
-    .aumentado-tag {
-      font-size: .6rem;
-      font-weight: 700;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: var(--accent);
-      display: block;
-      margin-bottom: var(--sp-md);
-    }
-    .aumentado-title {
-      font-size: clamp(4.5rem, 12vw, 12rem);
-      font-weight: 800;
-      letter-spacing: -.04em;
-      text-transform: uppercase;
-      line-height: .88;
-    }
-    .aumentado-right {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sp-lg);
-      padding-top: var(--sp-lg);
-      border-top: 1px solid var(--s2);
-    }
-    .aumentado-block {
-      border-bottom: 1px solid var(--s2);
-      padding-bottom: var(--sp-lg);
-    }
-    .aumentado-block:last-child { border-bottom: none; padding-bottom: 0; }
-    .aumentado-num {
-      font-size: .55rem;
-      font-weight: 700;
-      letter-spacing: .2em;
-      color: var(--accent);
-      display: block;
-      margin-bottom: .5rem;
-    }
-    .aumentado-block-title {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: -.02em;
-      text-transform: uppercase;
-      margin-bottom: .6rem;
-    }
-    .aumentado-block-desc {
-      font-size: .8rem;
-      font-weight: 300;
-      color: var(--muted);
-      line-height: 1.75;
-      max-width: 48ch;
-    }
-
-    /* ================================================================
        FAQ
     ================================================================ */
     #faq {
@@ -1456,8 +1390,7 @@
     }
 
     @media (max-width: 767px) {
-      .aumentado-right { grid-template-columns: 1fr; gap: var(--sp-lg); }
-      #faq, #aumentado { padding: 3rem 1.5rem; }
+      #faq { padding: 3rem 1.5rem; }
       #clientes { padding: 1.5rem 0; }
     }
 
@@ -1641,7 +1574,6 @@
 
       /* ── TÍTULOS GRANDES: evita overflow horizontal ── */
       .prod-name        { font-size: clamp(2.2rem, 6vw, 6.5rem); }
-      .aumentado-title  { font-size: clamp(2.2rem, 8vw, 4.5rem); }
 
       /* ── SERVIÇOS: evita clipping de conteúdo nos painéis ── */
       .h-panel-inner { overflow: visible; }
@@ -1898,7 +1830,7 @@
       <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
       <div class="hero-deco" aria-hidden="true">IB</div>
 
-      <p class="hero-label">Para founders de startups e negócios em crescimento</p>
+      <p class="hero-label">Para negócios que querem crescer mais</p>
 
       <h1 class="hero-title">
         O site que<br>seu negócio<br><span class="acc">merece ter.</span>
@@ -2014,8 +1946,8 @@
               <div>
                 <p class="prod-counter">001 / 003</p>
                 <span class="prod-tag">CONVERSÃO</span>
-                <h3 class="prod-name">LANDING<br>PAGE</h3>
-                <p class="prod-desc">Para founder que vai subir tráfego e precisa de uma página que converte antes de existir.</p>
+                <h3 class="prod-name">PACOTE DE<br>LANDING PAGES</h3>
+                <p class="prod-desc">Para founder que vai subir tráfego e precisa de páginas que convertem antes de existir.</p>
               </div>
               <div class="prod-footer">
                 <div class="prod-stats">
@@ -2137,36 +2069,7 @@
     </section>
 
     <!-- ================================================================
-         IA POSITIONING
-    ================================================================ -->
-    <section id="aumentado" aria-label="Aumentado por IA">
-      <div class="aumentado-inner">
-        <div class="aumentado-left reveal">
-          <span class="aumentado-tag">Vantagem estrutural</span>
-          <h2 class="aumentado-title">IA COMO<br>ALAVANCA,<br><span class="acc">NÃO MULETA.</span></h2>
-        </div>
-        <div class="aumentado-right">
-          <div class="aumentado-block reveal">
-            <span class="aumentado-num">01</span>
-            <div class="aumentado-block-title">Execução amplificada, estratégia intacta</div>
-            <p class="aumentado-block-desc">A visão estratégica, o olho de design e a leitura de negócio são meus. IA entra para amplificar execução: prototipagem rápida, variações, código. O que leva semanas numa agência tradicional, aqui leva dias.</p>
-          </div>
-          <div class="aumentado-block reveal">
-            <span class="aumentado-num">02</span>
-            <div class="aumentado-block-title">Output de equipe. Custo e velocidade de estúdio solo.</div>
-            <p class="aumentado-block-desc">Sem camadas de aprovação. Sem reunião de alinhamento interno. Você fala com quem vai executar. IA resolve escala. Eu resolvo o que importa.</p>
-          </div>
-          <div class="aumentado-block reveal">
-            <span class="aumentado-num">03</span>
-            <div class="aumentado-block-title">Agências que "também usam IA" ainda têm 20 pessoas de overhead</div>
-            <p class="aumentado-block-desc">O modelo nasceu assim, não foi adaptado depois. Mais rápido e mais barato, sem ceder em nível estratégico. IA a serviço do pensamento.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================================================
-         MID-PAGE CTA (após seção IA)
+         MID-PAGE CTA
     ================================================================ -->
     <div style="padding:var(--sp-2xl) var(--sp-xl);border-top:1px solid var(--s2);display:flex;justify-content:space-between;align-items:center;gap:var(--sp-lg);flex-wrap:wrap;position:relative;z-index:2;background:var(--bg);">
       <div>
@@ -2193,7 +2096,7 @@
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-a">
-          <p class="faq-a-inner">Sim. Pensamento estratégico, olho de design e visão de negócio são meus. Uso IA para amplificar execução técnica. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo.</p>
+          <p class="faq-a-inner">Sim. Pensamento estratégico, olho de design e visão de negócio são meus, do briefing ao deploy. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo.</p>
         </div>
       </div>
 
@@ -2317,7 +2220,7 @@
   <footer>
     <div class="footer-left">
       <div class="footer-logo">IRBIS<span class="acc">.</span></div>
-      <p class="footer-tagline">Landing Page · Site Institucional · E-commerce</p>
+      <p class="footer-tagline">Pacote de Landing Pages · Site Institucional · E-commerce</p>
     </div>
     <div class="footer-nav">
       <a href="#cases">Cases</a>
@@ -2496,7 +2399,7 @@
 
     /* ── SCROLL REVEALS — stagger siblings in grids ── */
     (function () {
-      const grids = ['.num-grid', '.opero-list', '.ret-grid', '.aumentado-right'];
+      const grids = ['.num-grid', '.opero-list', '.ret-grid'];
       const handled = new Set();
 
       grids.forEach(sel => {
@@ -2526,7 +2429,7 @@
     (function () {
       // Alvos: headers com border-bottom + seções com border-top visível
       const borderBottomTargets = ['.cases-header', '.opero-header', '.faq-header'];
-      const borderTopTargets    = ['#numeros', '#clientes', '#aumentado', '#faq', '#como-opero'];
+      const borderTopTargets    = ['#numeros', '#clientes', '#faq', '#como-opero'];
 
       borderBottomTargets.forEach(sel => {
         const el = document.querySelector(sel);
