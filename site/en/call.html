@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Antes da nossa conversa — IRBIS</title>
+  <title>Before our call | IRBIS</title>
+  <link rel="canonical" href="https://irbis.com.br/en/call">
+  <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/call">
+  <link rel="alternate" hreflang="en" href="https://irbis.com.br/en/call">
+  <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/call">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,8 +78,13 @@
     .brand {
       font-weight: 800; font-size: 1.05rem; letter-spacing: .28em;
       text-transform: uppercase; margin-bottom: 2.5rem;
+      display: flex; align-items: center; gap: .8rem;
     }
     .brand span { color: var(--accent); }
+
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
+    .lang-toggle svg { display:block; width:100%; height:100%; }
 
     .eyebrow {
       font-size: .68rem; font-weight: 600; letter-spacing: .18em;
@@ -274,9 +283,6 @@
     @keyframes curtainUp { to { transform: translateY(-100%); } }
     @keyframes curtainLogo { 0% { opacity: 0; } 22% { opacity: 1; } 65% { opacity: 1; } 100% { opacity: 0; } }
     @media (prefers-reduced-motion: reduce) { #curtain { display: none; } }
-      .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
-    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
-    .lang-toggle svg { display:block; width:100%; height:100%; }
   </style>
 </head>
 <body>
@@ -286,17 +292,17 @@
 
   <div class="wrap">
     <aside class="rail">
-      <div class="brand">IR<span>B</span>IS <a href="/en/call" class="lang-toggle" aria-label="View in English" title="English"><svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g><rect width="2964" height="2100" fill="#3c3b6e"/></svg></a></div>
-      <div class="eyebrow" id="railEyebrow">Etapa 1 de 2</div>
-      <h1 id="railTitle">Antes da nossa conversa</h1>
-      <p id="railText">3 minutos aqui, e eu chego na call com o diagnóstico do seu caso pronto. Você sai da conversa com projeto e prazo definidos.</p>
+      <div class="brand">IR<span>B</span>IS <a href="/call" class="lang-toggle" aria-label="Ver em português" title="Português"><svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="720" height="504" fill="#009c3b"/><path d="M360 66 666 252 360 438 54 252z" fill="#ffdf00"/><circle cx="360" cy="252" r="88" fill="#002776"/></svg></a></div>
+      <div class="eyebrow" id="railEyebrow">Step 1 of 2</div>
+      <h1 id="railTitle">Before our call</h1>
+      <p id="railText">3 minutes here, and I show up to the call with a diagnosis of your case ready. You leave the conversation with a defined project and timeline.</p>
 
       <div class="steps">
         <div class="step-item active" id="stepDot1">
-          <div class="step-num">1</div><span>Sobre o seu projeto</span>
+          <div class="step-num">1</div><span>About your project</span>
         </div>
         <div class="step-item" id="stepDot2">
-          <div class="step-num">2</div><span>Escolher o horário</span>
+          <div class="step-num">2</div><span>Pick a time</span>
         </div>
       </div>
     </aside>
@@ -305,130 +311,130 @@
       <!-- STEP 1 — FORM -->
       <form id="formStep" novalidate>
         <div class="block">
-          <div class="block-label">Sobre você</div>
+          <div class="block-label">About you</div>
           <div class="field" data-req>
-            <label>Seu nome <span class="req">*</span></label>
-            <input type="text" name="nome" autocomplete="name" placeholder="Nome e sobrenome" />
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <label>Your name <span class="req">*</span></label>
+            <input type="text" name="nome" autocomplete="name" placeholder="First and last name" />
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
           <div class="field" data-req data-email>
             <label>Email <span class="req">*</span></label>
-            <input type="email" name="email" autocomplete="email" placeholder="voce@suaempresa.com.br" />
-            <div class="field-err">Confere esse email? Parece incompleto.</div>
+            <input type="email" name="email" autocomplete="email" placeholder="you@yourcompany.com" />
+            <div class="field-err">Check that email? It looks incomplete.</div>
           </div>
           <div class="field" data-req>
             <label>WhatsApp <span class="req">*</span></label>
-            <input type="tel" name="whatsapp" autocomplete="tel" placeholder="(11) 99999-9999" />
-            <div class="help">É por aqui que eu confirmo a call.</div>
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <input type="tel" name="whatsapp" autocomplete="tel" placeholder="+1 (555) 123-4567" />
+            <div class="help">This is where I confirm the call.</div>
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
         </div>
 
         <div class="block">
-          <div class="block-label">Sobre o seu negócio</div>
+          <div class="block-label">About your business</div>
           <div class="field" data-req>
-            <label>Nome do negócio <span class="req">*</span></label>
+            <label>Business name <span class="req">*</span></label>
             <input type="text" name="negocio" placeholder="" />
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
           <div class="field" data-req>
-            <label>O que vocês fazem? <span class="req">*</span></label>
+            <label>What do you do? <span class="req">*</span></label>
             <textarea name="oquefaz" placeholder=""></textarea>
-            <div class="help">Uma ou duas linhas, do jeito que você explica pra um cliente.</div>
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <div class="help">One or two lines, the way you'd explain it to a customer.</div>
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
           <div class="field">
-            <label>Site atual <span class="opt">· se existir</span></label>
+            <label>Current website <span class="opt">· if you have one</span></label>
             <input type="url" name="site" placeholder="https://" />
-            <div class="help">Não tem? Sem problema. É sobre isso que a gente vai conversar.</div>
+            <div class="help">Don't have one? No problem. That's what we'll talk about.</div>
           </div>
           <div class="field" data-req>
-            <label>De onde vêm seus clientes hoje? <span class="req">*</span></label>
+            <label>Where do your customers come from today? <span class="req">*</span></label>
             <textarea name="canais" placeholder=""></textarea>
-            <div class="help">Indicação, Instagram, Google, tráfego pago, ninguém sabe direito? Me conta como eles te acham.</div>
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <div class="help">Referrals, Instagram, Google, paid traffic, nobody knows for sure? Tell me how they find you.</div>
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
           <div class="field" data-req>
-            <label>Quanto vale um cliente novo pra você? <span class="req">*</span></label>
+            <label>How much is a new customer worth to you? <span class="req">*</span></label>
             <textarea name="valorcliente" placeholder=""></textarea>
-            <div class="help">Ticket médio, ou quanto um cliente deixa ao longo do tempo. Um número aproximado já resolve. Me ajuda a mostrar na call o retorno que o site precisa dar.</div>
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <div class="help">Average ticket, or what a customer spends with you over time. A rough number works. It helps me show on the call the return the site needs to deliver.</div>
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
         </div>
 
         <div class="block">
-          <div class="block-label">Sobre o site que vamos construir</div>
+          <div class="block-label">About the site we will build</div>
 
           <div class="field" data-req-group="objetivo">
-            <label>O que o site precisa fazer pelo seu negócio? <span class="req">*</span></label>
+            <label>What does the site need to do for your business? <span class="req">*</span></label>
             <div class="choices" data-group="objetivo">
-              <label class="choice"><input type="checkbox" name="objetivo" value="Vender direto" /><span>Vender direto, com pagamento no site</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Orçamento/Contato" /><span>Gerar pedidos de orçamento e contato</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Agendamento" /><span>Agendar reuniões ou serviços</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Credibilidade" /><span>Apresentar a empresa com credibilidade</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Portfólio" /><span>Mostrar portfólio e trabalhos</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Vender direto" /><span>Sell directly, with payment on the site</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Orçamento/Contato" /><span>Generate quote requests and contacts</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Agendamento" /><span>Book meetings or services</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Credibilidade" /><span>Present the company with credibility</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Portfólio" /><span>Show portfolio and past work</span></label>
             </div>
-            <div class="field-err">Escolhe pelo menos uma.</div>
+            <div class="field-err">Pick at least one.</div>
           </div>
 
           <div class="field" style="margin-top:1.75rem" data-req-group="incomodo">
-            <label>O que mais te incomoda hoje? <span class="req">*</span></label>
+            <label>What bothers you most today? <span class="req">*</span></label>
             <div class="choices" data-group="incomodo">
-              <label class="choice"><input type="checkbox" name="incomodo" value="Não aparece no Google" /><span>Cliente não me acha no Google</span></label>
-              <label class="choice"><input type="checkbox" name="incomodo" value="Credibilidade" /><span>Não passa a credibilidade que meu negócio tem</span></label>
-              <label class="choice"><input type="checkbox" name="incomodo" value="Depende de indicação" /><span>Dependo de indicação e queria atrair sozinho</span></label>
+              <label class="choice"><input type="checkbox" name="incomodo" value="Não aparece no Google" /><span>Customers can't find me on Google</span></label>
+              <label class="choice"><input type="checkbox" name="incomodo" value="Credibilidade" /><span>It doesn't show the credibility my business has</span></label>
+              <label class="choice"><input type="checkbox" name="incomodo" value="Depende de indicação" /><span>I depend on referrals and want to attract clients on my own</span></label>
             </div>
-            <div class="field-err">Escolhe pelo menos uma.</div>
+            <div class="field-err">Pick at least one.</div>
           </div>
 
           <div class="field" style="margin-top:1.75rem" data-req>
-            <label>Pra quando você precisa do site no ar? <span class="req">*</span></label>
+            <label>When do you need the site live? <span class="req">*</span></label>
             <textarea name="prazo" placeholder=""></textarea>
-            <div class="help">Quanto mais contexto, melhor. Tem lançamento, campanha ou evento puxando essa data? Me conta.</div>
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+            <div class="help">The more context, the better. Is a launch, campaign or event driving that date? Tell me.</div>
+            <div class="field-err">I need this answer to move forward.</div>
           </div>
 
           <div class="field">
-            <label>Quanto você pretende investir no site? <span class="opt">· opcional</span></label>
+            <label>How much do you plan to invest in the site? <span class="opt">· optional</span></label>
             <textarea name="orcamento" placeholder=""></textarea>
-            <div class="help">Me ajuda a chegar na call com uma proposta no tamanho certo pro seu momento.</div>
+            <div class="help">It helps me show up to the call with a proposal sized for where you are right now.</div>
           </div>
 
           <div class="field">
-            <label>Já tem logo, fotos ou referências? <span class="opt">· opcional</span></label>
+            <label>Already have a logo, photos or references? <span class="opt">· optional</span></label>
             <div class="drop" id="drop">
               <div class="drop-icon">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
               </div>
-              <strong>Anexar arquivos</strong>
-              <small>Logo, prints e referências (até 3MB no total). Arquivos pesados a gente vê na call.</small>
+              <strong>Attach files</strong>
+              <small>Logo, screenshots and references (up to 3MB total). Heavy files we can go over on the call.</small>
               <input type="file" id="fileInput" multiple hidden accept="image/*,.pdf,.ai,.psd,.svg,.zip" />
             </div>
             <ul class="files" id="fileList"></ul>
           </div>
 
           <div class="field" style="margin-top:1.5rem" data-req>
-            <label>Quem decide esse projeto com você? <span class="req">*</span></label>
+            <label>Who decides this project with you? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
-              <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>Decido sozinho</span></label>
-              <label class="choice"><input type="radio" name="decisor" value="Sócio" /><span>Sócio</span></label>
-              <label class="choice"><input type="radio" name="decisor" value="Esposa/marido" /><span>Esposa ou marido</span></label>
-              <label class="choice"><input type="radio" name="decisor" value="Outra pessoa" /><span>Outra pessoa</span></label>
+              <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>I decide alone</span></label>
+              <label class="choice"><input type="radio" name="decisor" value="Sócio" /><span>Business partner</span></label>
+              <label class="choice"><input type="radio" name="decisor" value="Esposa/marido" /><span>Wife or husband</span></label>
+              <label class="choice"><input type="radio" name="decisor" value="Outra pessoa" /><span>Someone else</span></label>
             </div>
             <div class="conditional" id="decisorNote">
-              <div class="note">Então essa pessoa precisa estar na call. É o que faz a conversa valer pra vocês dois: decisão na hora, sem telefone sem fio.</div>
+              <div class="note">Then that person needs to be on the call. It's what makes the conversation worth it for both of you: a decision on the spot, no secondhand retelling.</div>
             </div>
-            <div class="field-err">Escolhe uma opção.</div>
+            <div class="field-err">Pick one option.</div>
           </div>
 
           <div class="field" style="margin-top:1.5rem">
-            <label>Algo que eu deva saber antes da nossa conversa? <span class="opt">· opcional</span></label>
+            <label>Anything I should know before our call? <span class="opt">· optional</span></label>
             <textarea name="livre" placeholder=""></textarea>
           </div>
         </div>
 
         <button type="submit" class="cta" id="submitBtn">
-          <span class="label">Continuar pro horário</span>
+          <span class="label">Continue to scheduling</span>
           <span class="spin"></span>
         </button>
         <div class="form-msg" id="formMsg"></div>
@@ -436,16 +442,16 @@
 
       <!-- STEP 2 — SCHEDULING -->
       <section class="sched" id="schedStep">
-        <div class="block-label">Escolha o dia</div>
-        <div class="sched-tz" id="schedTz">Horários já no seu fuso.</div>
+        <div class="block-label">Pick a day</div>
+        <div class="sched-tz" id="schedTz">Times shown in your time zone.</div>
         <div class="days" id="days"></div>
-        <div class="block-label">Escolha o horário</div>
+        <div class="block-label">Pick a time</div>
         <div class="slots" id="slots">
           <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
         </div>
         <div class="sched-foot">
           <button type="button" class="cta" id="bookBtn" disabled>
-            <span class="label">Confirmar call</span>
+            <span class="label">Confirm call</span>
             <span class="spin"></span>
           </button>
           <span class="sched-summary" id="schedSummary"></span>
@@ -455,6 +461,6 @@
     </main>
   </div>
 
-  <script src="/call.js"></script>
+  <script src="/en/call.js"></script>
 </body>
 </html>

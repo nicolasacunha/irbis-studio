@@ -8,6 +8,12 @@
       "port": 5173
     },
     {
+      "name": "irbis-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3012", "/Users/nicolascunha/Projects/Business/irbis/site"],
+      "port": 3012
+    },
+    {
       "name": "duarte-imoveis",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3010", "/Users/nicolascunha/Projects/Business/irbis/Testes/duarte-imoveis"],
