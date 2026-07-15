@@ -24,9 +24,9 @@ Mapeado em 14/jul/2026 via busca indexada (Google/Tavily). Links e descrições 
 
 | Grupo | Link | Nota honesta |
 |---|---|---|
-| Corretores de Imóveis - Brasil | facebook.com/groups/corretoresdeimoveisbr | Corretores são donos do próprio funil e compram site/LP, mas ticket varia muito; grupo aceita conteúdo do ramo |
-| CORRETORES IMOBILIÁRIOS BRASILEIROS | facebook.com/groups/486190334729794 | Descrição diz "divulgue seu serviço" = divulgação permitida, porém mais poluído |
-| Esteticistas de São Paulo | facebook.com/groups/1436159530011708 | Já tem gente vendendo site lá dentro (público compra, mas há concorrência visível); esteticista solo = ticket baixo, regra Tier 3 |
+| Corretores de Imóveis - Brasil | facebook.com/groups/corretoresdeimoveisbr | Corretores são donos do próprio funil e compram site/LP, mas ticket varia muito; grupo aceita conteúdo do ramo. **Asset PRONTO: duarte-imoveis.vercel.app (15/jul)** |
+| CORRETORES IMOBILIÁRIOS BRASILEIROS | facebook.com/groups/486190334729794 | Descrição diz "divulgue seu serviço" = divulgação permitida, porém mais poluído. **Asset PRONTO: duarte-imoveis.vercel.app** |
+| Esteticistas de São Paulo | facebook.com/groups/1436159530011708 | Já tem gente vendendo site lá dentro (público compra, mas há concorrência visível); esteticista solo = ticket baixo, regra Tier 3. **Asset PRONTO: helena-estetica.vercel.app (15/jul)** |
 | Beleza (geral) | — | Os grupos achados são de VAGAS ou compra/venda de equipamento — fracos para este formato. Melhor atacar beleza via Instagram (Frente C) |
 
 ## Formato do post
