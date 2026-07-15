@@ -207,6 +207,12 @@
   }
 
   /* ---------- Transições entre etapas ---------- */
+  function setRail(full, short) {
+    document.getElementById('railText').textContent = full;
+    var s = document.getElementById('railTextShort');
+    if (s) s.textContent = short;
+  }
+
   // Etapa 1 (horário) -> Etapa 2 (form)
   function goToForm() {
     if (!selectedSlot) return;
@@ -215,7 +221,7 @@
     document.getElementById('formStep').classList.remove('hidden');
     document.getElementById('progress').style.width = '100%';
     document.getElementById('railEyebrow').textContent = 'Etapa 2 de 2';
-    document.getElementById('railText').textContent = '3 minutos aqui e eu chego na call com o diagnóstico do seu caso pronto.';
+    setRail('3 minutos aqui e eu chego na call com o diagnóstico do seu caso pronto.', '3 minutos e eu chego com seu caso pronto.');
     document.getElementById('stepDot1').className = 'step-item done';
     document.getElementById('stepDot2').className = 'step-item active';
     document.getElementById('formSlotSummary').innerHTML =
@@ -230,7 +236,7 @@
     document.getElementById('schedStep').classList.add('show');
     document.getElementById('progress').style.width = '50%';
     document.getElementById('railEyebrow').textContent = 'Etapa 1 de 2';
-    document.getElementById('railText').textContent = 'Primeiro o horário: escolhe quando a gente conversa (1 hora, no Google Meet, direto comigo). Depois, umas perguntas rápidas pra eu chegar na call com o seu caso na ponta da língua.';
+    setRail('Primeiro o horário: escolhe quando a gente conversa (1 hora, no Google Meet, direto comigo). Depois, umas perguntas rápidas pra eu chegar na call com o seu caso na ponta da língua.', 'Escolhe o horário. Depois, umas perguntas rápidas.');
     document.getElementById('stepDot1').className = 'step-item active';
     document.getElementById('stepDot2').className = 'step-item';
     window.scrollTo({ top: 0, behavior: 'smooth' });
