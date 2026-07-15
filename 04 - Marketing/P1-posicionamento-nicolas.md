@@ -2,26 +2,42 @@
 
 > Documento vivo do Nicolas. Preenchido passo a passo na construção do P1 (JDP). Regra de copy: sem travessão, voz humana.
 
+## ⚡ DECISÃO DE ICP — 15/jul/2026 (palavra do dono, resolve a ambiguidade aberta desde 04/jul)
+
+**ICP oficial: empresas da economia real.** Declarado pelo Nicolas em 15/jul/2026: "mudei o meu público-alvo, agora meu público é empresas da economia real."
+
+- Substitui as duas hipóteses que coexistiam ("founders de startup" x "negócios locais premium"). A hipótese de negócios locais premium é absorvida; a de founder de startup/tech deixa de ser o alvo.
+- Impacto pendente (revisar item a item, nada reescrito ainda): bio pessoal ("+R$350k gerados pra founders"), bio da IRBIS ("Sites para founders. Nada mais."), site inteiro (fala com founder), LinkedIn, fixado 3 ("atendo founders"), roteiros em `roteiros-fixados-p1.md`.
+- Peça nova a partir de 15/jul mira empresa da economia real, salvo ordem contrária do dono.
+
 ## Parte 1 — A Fundação
 
-### 1. Big Idea (Frase de Tese) ✅ FECHADO
+### 1. Big Idea (Frase de Tese) ✅ FECHADO — v2 em 15/jul/2026
 
-**Frase de Tese:**
-> A maioria acha que pra ter site bonito e que vende tem que esperar meses e pagar agência. A verdade é que isso é problema da agência, não do trabalho. Com IA eu entrego bonito, rápido e vendendo. Sozinho, em semanas.
+**Frase de Tese (v2, aprovada pelo Nicolas em 15/jul/2026 — substitui a versão de jun):**
+> A maioria acredita que fazer site com IA virou fácil, que é só pedir pro ChatGPT ou pro Lovable e pronto: virou commodity. Mas a verdade é que a IA barateou a execução, não o critério. O que separa um site descartável de um site que vende é identidade e pensamento crítico, e isso não sai de prompt. É por isso que eu uso a IA pra executar na velocidade da máquina e a cabeça humana pra decidir cada escolha. Site humano, executado com IA.
 
-**Vilão do posicionamento (duas caras):**
-1. A **agência**: o jeito antigo, lento e caro, cheio de camadas.
-2. A **IA preguiçosa**: site genérico e mal feito, o jeito fácil.
+**Lógica água-diamante (Adam Smith), ângulo de conteúdo exclusivo da tese:** gerar site virou água (abundante, qualquer um faz, vale pouco). Identidade e pensamento crítico viraram o diamante (escassos, vêm de pessoa). O Nicolas entrega o diamante na velocidade da água.
 
-Posição do Nicolas: o terceiro caminho. IA do jeito certo. Bonito, sério, rápido e que vende.
+**Vilão do posicionamento (duas caras, repesadas na v2):**
+1. A **IA preguiçosa** (cara principal agora): o site-commodity, gerado em minutos, genérico, descartável.
+2. A **agência**: cobra preço de diamante por algo cuja execução virou água; camadas e meses pra entregar o que hoje se executa em semanas.
 
-**Versão falada (15s):**
-> Bonito, rápido e que vende. Falam que você escolhe dois. Eu entrego os três.
+Posição do Nicolas: o terceiro caminho. Critério humano + execução com IA.
+
+**Versões faladas (15s), as 3 registradas; usar a que soar natural no contexto:**
+> 1. "Todo mundo hoje consegue gerar um site com IA. Quase ninguém consegue fazer um site com identidade. A execução virou commodity. O critério, não."
+> 2. "Gerar site ficou fácil. Fazer site que parece gente continua difícil. Eu uso IA pra executar, mas o que você paga é o pensamento por trás."
+> 3. "Site virou água: todo mundo gera um em minutos e ele vale pouco. Identidade é o diamante. Eu entrego o diamante na velocidade da água."
 
 **Checagem dos 3 critérios:**
-- Discutível? Sim. Agência e parte do mercado discordam.
-- Tem vilão claro? Sim. A agência e o modelo antigo de fazer site.
-- Cabe em 15 segundos? Sim.
+- Discutível? Sim, por dois flancos opostos: o pessoal do "faz tudo no Lovable em 10 minutos" e o designer anti-IA.
+- Tem vilão claro? Sim, as duas caras seguem, com a IA preguiçosa na frente.
+- Cabe em 15 segundos? As 3 versões cabem.
+
+**Guarda-corpo da v2:** a tese é mais conceitual que a v1; "que vende" continua sendo a prova do critério (+R$350k é um site com identidade, não um commodity). Em peça de venda, o resultado vem na frente e a filosofia explica o porquê.
+
+**Tese v1 (histórico, jun/2026, substituída):** "A maioria acha que pra ter site bonito e que vende tem que esperar meses e pagar agência. A verdade é que isso é problema da agência, não do trabalho. Com IA eu entrego bonito, rápido e vendendo. Sozinho, em semanas." / Versão falada v1: "Bonito, rápido e que vende. Falam que você escolhe dois. Eu entrego os três."
 
 ### 2. Arco de 3 Atos ✅ FECHADO
 
