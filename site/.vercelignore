@@ -1,0 +1,4 @@
+.secrets/
+.env.local
+.env*.local
+.vercel
