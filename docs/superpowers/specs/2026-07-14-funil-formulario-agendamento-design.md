@@ -1,7 +1,7 @@
 # Design — Funil: formulário de escopo + agendamento próprio
 
-**Data:** 14/jul/2026 (rev. 2 — agenda própria no lugar do Calendly, decisão do Nicolas)
-**Status:** aprovado em conversa (14/jul), aguardando revisão final do spec
+**Data:** 14/jul/2026 (rev. 3 — call de 1h; rev. 2 — agenda própria no lugar do Calendly)
+**Status:** aprovado pelo Nicolas em 14/jul
 **Dono:** Nicolas
 
 ## Objetivo
@@ -67,7 +67,7 @@ Decisão do Nicolas (14/jul): construir a agenda no próprio site em vez de embu
 Calendly. Ganhos: visual 100% IRBIS e reminders automatizáveis. O que mantém o
 build em dias (escopo disciplinado da v1):
 
-- **Um único tipo de evento:** call de vendas, 45 min, Google Meet.
+- **Um único tipo de evento:** call de vendas, 1 hora, Google Meet.
 - **Só o calendário pessoal do Nicolas** como fonte de conflitos.
 - **Disponibilidade por configuração** (não por UI de admin): janelas de
   atendimento semanais, buffer entre calls, antecedência mínima (ex.: 12h) e
