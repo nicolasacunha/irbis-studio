@@ -33,6 +33,7 @@
     { "source": "/para/saas",           "destination": "/para/saas.html" },
     { "source": "/para/startups",       "destination": "/para/startups.html" },
     { "source": "/obrigado",            "destination": "/obrigado.html" },
-    { "source": "/founder",             "destination": "/founder.html" }
+    { "source": "/founder",             "destination": "/founder.html" },
+    { "source": "/call",                "destination": "/call.html" }
   ]
 }

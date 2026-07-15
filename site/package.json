@@ -1,0 +1,10 @@
+{
+  "name": "irbis-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Funções de API do funil /call — form + agenda própria",
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "nodemailer": "^6.9.16"
+  }
+}
