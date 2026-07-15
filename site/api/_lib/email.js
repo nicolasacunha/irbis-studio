@@ -55,6 +55,30 @@ async function notifyOwner(f, attachments) {
   });
 }
 
+/* Notifica o Nicolas de um contato inbound (form da home). */
+async function notifyInbound(f) {
+  var linhas = [
+    ['Nome / Marca', f.nome],
+    ['Email', f.email],
+    ['O que precisa', f.projeto || '—'],
+  ];
+  var rows = linhas.map(function (l) {
+    return '<tr><td style="padding:6px 14px 6px 0;color:#8A8A93;vertical-align:top;white-space:nowrap">' +
+      l[0] + '</td><td style="padding:6px 0;color:#111">' + esc(l[1] || '—') + '</td></tr>';
+  }).join('');
+  var html = '<div style="font-family:system-ui,Arial,sans-serif;max-width:520px">' +
+    '<p style="font-size:15px;color:#111">Novo contato pelo site (form da home).</p>' +
+    '<table style="border-collapse:collapse;font-size:14px">' + rows + '</table>' +
+    '<p style="font-size:13px;color:#8A8A93;margin-top:14px">Qualifica e manda o link do /call se fizer sentido.</p>' +
+    '</div>';
+  await transport().sendMail({
+    from: FROM(),
+    to: process.env.ZOHO_SMTP_USER || 'contato@irbis.com.br',
+    subject: 'Novo contato pelo site: ' + (f.nome || f.email),
+    html: html,
+  });
+}
+
 /* Confirmação para o lead após agendar. */
 async function confirmLead(f, info) {
   var quando = info.fullLabel + ', às ' + info.timeLabel;
@@ -85,4 +109,4 @@ function esc(s) {
 }
 function firstName(n) { return String(n || '').trim().split(/\s+/)[0] || ''; }
 
-module.exports = { notifyOwner: notifyOwner, confirmLead: confirmLead };
+module.exports = { notifyOwner: notifyOwner, notifyInbound: notifyInbound, confirmLead: confirmLead };

@@ -54,6 +54,37 @@ async function createLead(f) {
   return data.id;
 }
 
+/* Cria um lead de INBOUND do form da home (nome, email, o que precisa).
+   Estágio "Contato recebido" = topo de funil, ainda não qualificado. */
+async function createInboundLead(f) {
+  var props = {
+    'Negócio': { title: txt(f.nome || 'Contato sem nome') },
+    'Contato': { rich_text: txt(f.nome) },
+    'Email': { email: f.email || null },
+    'Estágio': { select: { name: 'Contato recebido' } },
+    'Origem': { select: { name: 'Site' } },
+  };
+  var children = [];
+  if (f.projeto) {
+    children.push({
+      object: 'block', type: 'callout',
+      callout: { rich_text: txt(f.projeto), icon: { emoji: '📥' } },
+    });
+  }
+  var res = await fetch(NOTION + '/pages', {
+    method: 'POST',
+    headers: headers({ 'Content-Type': 'application/json' }),
+    body: JSON.stringify({
+      parent: { database_id: process.env.NOTION_CRM_DB_ID },
+      properties: props,
+      children: children,
+    }),
+  });
+  var data = await res.json();
+  if (!res.ok) throw new Error('notion createInboundLead: ' + (data.message || res.status));
+  return data.id;
+}
+
 /* Marca o lead como Call agendada e grava data + link. */
 async function markBooked(pageId, info) {
   var props = {
@@ -132,4 +163,4 @@ async function getLead(pageId) {
   };
 }
 
-module.exports = { createLead: createLead, markBooked: markBooked, uploadFile: uploadFile, attachFiles: attachFiles, getLead: getLead };
+module.exports = { createLead: createLead, createInboundLead: createInboundLead, markBooked: markBooked, uploadFile: uploadFile, attachFiles: attachFiles, getLead: getLead };
