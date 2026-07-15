@@ -47,62 +47,19 @@ async function getBusy(timeMin, timeMax) {
    não tiver permissão, cria sem Meet e retorna meetLink: null. */
 async function createEvent(opts) {
   var cal = getCalendar();
-  // Sem attendees: uma service account sem Domain-Wide Delegation não pode
-  // convidar terceiros. O lead recebe os detalhes pelo email de confirmação.
-  var base = {
-    summary: opts.summary,
-    description: opts.description,
-    start: { dateTime: opts.startISO, timeZone: opts.tz },
-    end: { dateTime: opts.endISO, timeZone: opts.tz },
-  };
-
-  try {
-    var withMeet = await cal.events.insert({
-      calendarId: calendarId(),
-      conferenceDataVersion: 1,
-      requestBody: Object.assign({}, base, {
-        conferenceData: {
-          createRequest: {
-            requestId: 'irbis-' + opts.requestId,
-            conferenceSolutionKey: { type: 'hangoutsMeet' },
-          },
-        },
-      }),
-    });
-    return {
-      eventId: withMeet.data.id,
-      htmlLink: withMeet.data.htmlLink,
-      meetLink: extractMeet(withMeet.data) || staticMeet(),
-    };
-  } catch (e) {
-    // Fallback sem Meet (conta sem permissão de conferência).
-    var plain = await cal.events.insert({
-      calendarId: calendarId(),
-      requestBody: base,
-    });
-    return {
-      eventId: plain.data.id,
-      htmlLink: plain.data.htmlLink,
-      meetLink: staticMeet(),
-      meetFailed: true,
-    };
-  }
-}
-
-/* Link de sala fixa do Nicolas (fallback quando a conta não gera Meet). */
-function staticMeet() {
-  return process.env.MEET_LINK || null;
-}
-
-function extractMeet(data) {
-  if (data.hangoutLink) return data.hangoutLink;
-  var cd = data.conferenceData;
-  if (cd && cd.entryPoints) {
-    for (var i = 0; i < cd.entryPoints.length; i++) {
-      if (cd.entryPoints[i].entryPointType === 'video') return cd.entryPoints[i].uri;
-    }
-  }
-  return null;
+  // Sem attendees nem Meet automático: o Nicolas envia o link do Google Meet
+  // pelo WhatsApp na hora da call (parte do processo anti-no-show dele).
+  // O evento entra na agenda pessoal dele com todo o contexto do lead.
+  var ev = await cal.events.insert({
+    calendarId: calendarId(),
+    requestBody: {
+      summary: opts.summary,
+      description: opts.description,
+      start: { dateTime: opts.startISO, timeZone: opts.tz },
+      end: { dateTime: opts.endISO, timeZone: opts.tz },
+    },
+  });
+  return { eventId: ev.data.id, htmlLink: ev.data.htmlLink, meetLink: null };
 }
 
 module.exports = { getBusy: getBusy, createEvent: createEvent };

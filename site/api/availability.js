@@ -46,7 +46,8 @@ module.exports = async function handler(req, res) {
   res.status(200).json({ days: ordered, tz: viewerTz });
 };
 
-/* Gera todos os slots candidatos no horizonte, em horário de Brasília. */
+/* Gera todos os slots candidatos no horizonte, em horário de Brasília,
+   respeitando a janela de atendimento vigente para cada data. */
 function buildCandidates(minTime, horizon) {
   var out = [];
   var cursor = new Date();
@@ -56,12 +57,18 @@ function buildCandidates(minTime, horizon) {
     var dow = new Date(Date.UTC(parts.year, parts.month - 1, parts.day)).getUTCDay();
     if (cfg.WORK_DAYS.indexOf(dow) === -1) continue;
 
-    cfg.SLOT_STARTS.forEach(function (hhmm) {
-      var hm = hhmm.split(':');
-      var start = tzu.zonedWallToUtc(parts.year, parts.month, parts.day, +hm[0], +hm[1], cfg.CALENDAR_TZ);
+    var isoDay = parts.year + '-' + pad(parts.month) + '-' + pad(parts.day);
+    var win = cfg.windowForDate(isoDay);
+    if (!win) continue;
+
+    var lastStart = win.endHour - cfg.DURATION_MIN / 60; // última hora que a call pode começar
+    for (var h = win.startHour; h <= lastStart; h += cfg.SLOT_STEP_MIN / 60) {
+      var hour = Math.floor(h);
+      var minute = Math.round((h - hour) * 60);
+      var start = tzu.zonedWallToUtc(parts.year, parts.month, parts.day, hour, minute, cfg.CALENDAR_TZ);
       var end = new Date(start.getTime() + cfg.DURATION_MIN * 60 * 1000);
       if (start >= minTime && start <= horizon) out.push({ start: start, end: end });
-    });
+    }
   }
   return out;
 }

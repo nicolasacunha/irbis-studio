@@ -69,10 +69,10 @@ build em dias (escopo disciplinado da v1):
 
 - **Um único tipo de evento:** call de vendas, 1 hora, Google Meet.
 - **Só o calendário pessoal do Nicolas** como fonte de conflitos.
-- **Disponibilidade por configuração** (não por UI de admin): janelas de
-  atendimento semanais, buffer entre calls, antecedência mínima (ex.: 12h) e
-  horizonte máximo (ex.: 14 dias). Valores exatos definidos com o Nicolas na
-  fase de build.
+- **Disponibilidade por configuração** (não por UI de admin), em `api/_lib/config.js`.
+  Regras confirmadas pelo Nicolas (14/jul): seg–sex; **até 31/ago 9h–20h**,
+  **a partir de 01/set 13h–22h** (hora de Brasília); calls de hora em hora;
+  antecedência mínima 12h; horizonte 14 dias.
 - **Fuso:** slots gerados em America/Sao_Paulo; exibição convertida para o fuso
   do navegador do lead (leads internacionais existem no pipeline).
 - **Sem remarcação/cancelamento self-service na v1** — lead responde o email de
@@ -83,8 +83,12 @@ build em dias (escopo disciplinado da v1):
 - Service account no Google Cloud com o calendário pessoal do Nicolas
   compartilhado com ela (padrão para conta Gmail pessoal, sem OAuth por sessão).
 - Fluxo: free/busy do calendário + regras de disponibilidade → gera slots →
-  lead escolhe → API cria o evento (com Meet + convite ao lead) → revalida
-  conflito no momento da criação (dois leads não podem pegar o mesmo slot).
+  lead escolhe → API cria o evento na agenda pessoal → revalida conflito no
+  momento da criação (dois leads não podem pegar o mesmo slot).
+- **Meet: manual (decisão do Nicolas, 14/jul).** O evento é criado SEM convidado
+  e SEM Meet automático. O Nicolas envia o link do Google Meet pelo WhatsApp na
+  hora da call, como parte do processo anti-no-show dele. Isso também contorna a
+  limitação de a conta pessoal @gmail não ter Domain-Wide Delegation.
 
 ### Confirmações e reminders
 
