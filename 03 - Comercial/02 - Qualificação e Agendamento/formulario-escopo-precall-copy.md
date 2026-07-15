@@ -59,23 +59,14 @@ ANTES DA NOSSA CONVERSA
 - [ ] Dependo de indicação e queria atrair cliente sozinho
 - [ ] Outro: _________
 
-**P9. Pra quando você precisa do site no ar?** (escolha única, obrigatória)
-- ( ) Pra ontem. É urgente
-- ( ) Em até 1 mês
-- ( ) Em 1 a 2 meses
-- ( ) Tenho uma data específica: _________ (campo curto: evento, campanha, lançamento)
-- ( ) Sem data fechada, quero fazer bem feito
+**P9. Pra quando você precisa do site no ar?** (texto livre, obrigatório)
+Apoio: "Quanto mais contexto, melhor. Tem lançamento, campanha ou evento puxando essa data? Me conta."
 
-**P10. Quanto você pretende investir no site?** (escolha única, OPCIONAL)
+**P10. Quanto você pretende investir no site?** (texto livre, OPCIONAL)
 Apoio: "Opcional. Me ajuda a chegar na call com uma proposta no tamanho certo pro seu momento."
-- ( ) Até R$4 mil
-- ( ) R$4 mil a R$8 mil
-- ( ) R$8 mil a R$15 mil
-- ( ) Acima de R$15 mil
-- ( ) Prefiro falar na call
 
-> ⚠️ Faixas propostas pensando na régua interna (R$4.500 a R$7.500 no meio da
-> escala, com teto que abre espaço pra cima). Nicolas valida os números.
+> Decisão do Nicolas (14/jul): prazo e orçamento em texto livre, sem faixas.
+> Quanto mais o lead escreve, mais munição pra call.
 
 **P11. Já tem logo, fotos ou referências?** (upload, opcional)
 Apoio: "Manda aqui: logo, materiais da marca, sites que você admira, prints de referência. Tudo que me ajudar a chegar na call já com a sua marca na cabeça."

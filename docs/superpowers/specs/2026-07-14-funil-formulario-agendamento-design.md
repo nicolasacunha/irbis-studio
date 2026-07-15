@@ -52,8 +52,8 @@ vivo — conduzida com `irbis-call-de-vendas`).
 |---|---|---|---|
 | 7 | O que o site precisa fazer (múltipla escolha: vender direto, gerar contato/orçamento, agendar, apresentar portfólio…) | Sim | |
 | 8 | Maior incômodo hoje (Google, credibilidade, dependência de indicação — as 3 dores do quiz) | Sim | |
-| 9 | **Prazo desejado** | **Sim** | Pedido explícito do Nicolas: saber o prazo antes da call para surpreender com prazo menor |
-| 10 | **Previsão de orçamento** (faixas) | **Não** | Opcional para não ser invasivo. Faixas fazem ancoragem silenciosa; valores definidos na fase de copy alinhados à régua interna (R$4.500–7.500). Perguntar budget do lead NÃO viola a regra "preço só na call" — a regra protege o preço da IRBIS |
+| 9 | **Prazo desejado** (texto livre) | **Sim** | Pedido explícito do Nicolas: saber o prazo antes da call para surpreender com prazo menor. Texto livre, não faixas (decisão 14/jul): quanto mais o lead escreve, mais munição |
+| 10 | **Previsão de orçamento** (texto livre) | **Não** | Opcional para não ser invasivo. Texto livre, não faixas (decisão 14/jul). Perguntar budget do lead NÃO viola a regra "preço só na call" — a regra protege o preço da IRBIS |
 | 11 | **Anexos** (logo, referências, materiais) | Não | Upload direto no form; simplifica o onboarding |
 | 12 | Quem decide junto (sozinho / sócio / esposa / outra pessoa) | Sim | Regra 5 do playbook: decisor acompanhado → os dois na call. O form **avisa**, não bloqueia — Nicolas decide caso a caso |
 | 13 | Campo livre: "algo que eu deva saber antes da nossa conversa?" | Não | |
