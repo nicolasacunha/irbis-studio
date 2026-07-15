@@ -103,9 +103,11 @@ Apoio (aparece se marcar qualquer opção que não seja "sozinho"):
 
 ---
 
-## Confirmação (antes do redirect pra /obrigado)
+## Confirmação (email ao lead após agendar + redirect pra /obrigado)
 
-"Fechado. O convite com o link do Meet já está no seu email. Qualquer coisa antes da call, me chama no WhatsApp. Nicolas"
+"Fechado, {primeiro nome}. Nossa call está marcada. {data}, às {hora}. Duração: 1 hora, Google Meet. Te mando o link do Google Meet no WhatsApp um pouco antes da call. Qualquer coisa antes disso, me chama no WhatsApp. Nicolas"
+
+> Meet é manual (decisão do Nicolas 14/jul): ele envia o link na hora da call, como parte do processo anti-no-show. A confirmação não promete link no convite.
 
 ---
 
