@@ -256,9 +256,29 @@
 
     a.back { color: var(--dim); font-size: .85rem; text-decoration: none; transition: color .2s; }
     a.back:hover { color: var(--muted); }
+
+    /* ---- Intro curtain (reveal na chegada, fecha a transição vinda do site) ---- */
+    #curtain {
+      position: fixed; inset: 0; height: 100dvh; min-height: 100dvh;
+      background: var(--bg); z-index: 9990;
+      transform: translateY(0); pointer-events: none;
+      animation: curtainUp .8s var(--ease-out) .35s forwards;
+    }
+    #curtain-logo {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-size: clamp(2.4rem, 8vw, 5rem); font-weight: 800;
+      letter-spacing: -.055em; text-transform: uppercase; color: var(--text);
+      opacity: 0; animation: curtainLogo 1.15s var(--ease-out) forwards;
+    }
+    #curtain-logo .acc { color: var(--accent); }
+    @keyframes curtainUp { to { transform: translateY(-100%); } }
+    @keyframes curtainLogo { 0% { opacity: 0; } 22% { opacity: 1; } 65% { opacity: 1; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { #curtain { display: none; } }
   </style>
 </head>
 <body>
+  <div id="curtain" aria-hidden="true"><span id="curtain-logo">IR<span class="acc">B</span>IS</span></div>
+
   <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
 
   <div class="wrap">
