@@ -239,6 +239,15 @@
   document.getElementById('toFormBtn').addEventListener('click', goToForm);
   document.getElementById('backToSched').addEventListener('click', function (e) { e.preventDefault(); backToSched(); });
 
+  // Rota de fuga: mede quem prefere o WhatsApp (evento aditivo, não mexe nos 4 do funil).
+  ['wppEscape', 'wppEscapeFoot'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('click', function () {
+      var step = document.getElementById('schedStep').classList.contains('show') ? 'scheduling' : 'form';
+      track('call_whatsapp_click', { step: step });
+    });
+  });
+
   /* ---------- Disponibilidade ---------- */
   function loadAvailability() {
     var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo';
