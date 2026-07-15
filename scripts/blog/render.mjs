@@ -86,6 +86,22 @@ export function renderIndexHtml(posts) {
   <title>Blog | IRBIS</title>
   <meta name="description" content="Conteúdo sobre criação de site, conversão e presença digital — para quem decide sobre o site do próprio negócio.">
   <link rel="canonical" href="https://irbis.com.br/blog">
+  <script type="application/ld+json">
+${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Blog | IRBIS',
+    description: 'Conteúdo sobre criação de site, conversão e presença digital, para quem decide sobre o site do próprio negócio.',
+    url: 'https://irbis.com.br/blog',
+    publisher: { '@type': 'Organization', name: 'IRBIS', url: 'https://irbis.com.br' },
+    blogPost: sorted.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: `https://irbis.com.br/blog/${p.slug}`,
+      datePublished: p.dateISO,
+    })),
+  }, null, 2)}
+  </script>
   <link rel="icon" href="/Design/icone/favicon_true.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
