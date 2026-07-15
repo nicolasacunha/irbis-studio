@@ -65,6 +65,22 @@
       ],
       "coverImage": "/blog/assets/covers/cro-01.png",
       "readingTimeMin": 3
+    },
+    {
+      "slug": "site-bonito-nao-converte",
+      "title": "Site Bonito Que Não Converte: os 4 Buracos que o Elogio Esconde",
+      "description": "80,8% dos redesigns começam porque o site não converte. Veja os 4 buracos que separam um site bonito de um site que gera cliente.",
+      "dateISO": "2026-07-15",
+      "pilar": "erros-de-site",
+      "keywords": [
+        "site bonito que não converte",
+        "site não gera leads",
+        "design vs conversão",
+        "CTA site institucional",
+        "prova social site"
+      ],
+      "coverImage": "/blog/assets/covers/erros-site-01.png",
+      "readingTimeMin": 3
     }
   ]
 }

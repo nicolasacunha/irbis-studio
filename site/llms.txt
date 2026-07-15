@@ -28,6 +28,7 @@ IRBIS é um estúdio solo que usa IA como estrutura de execução — não como 
 
 ## Blog
 
+- [Site Bonito Que Não Converte: os 4 Buracos que o Elogio Esconde](https://irbis.com.br/blog/site-bonito-nao-converte): 80,8% dos redesigns começam porque o site não converte. Veja os 4 buracos que separam um site bonito de um site que gera cliente.
 - [Seu Site Converte Menos que a Média: o Motivo Provável é o Celular](https://irbis.com.br/blog/benchmark-conversao-mobile-2026): Micro-empresas convertem 1,87% em média, abaixo da mediana de 2,35%. Veja os números de 2026 sobre mobile e velocidade que explicam essa diferença.
 - [48% das Buscas no Google Já Não Geram Clique: Seu Site Aparece na Resposta?](https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio): Quase metade das buscas no Google já responde sem clique. Veja como estruturar seu site pra continuar sendo encontrado pela IA e por clientes.
 - [5 Sinais de que Já Passou da Hora de Trocar o Site do Seu Negócio](https://irbis.com.br/blog/sinais-hora-trocar-site): O visitante decide o que pensa do seu site em 50 milissegundos. Veja os sinais que aparecem antes do founder perceber que o site virou um problema.
