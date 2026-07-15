@@ -74,9 +74,14 @@
       if (fired) return; fired = true;
       clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src) {
-        var s = d.createElement('script'); s.async = true; s.src = src;
-        d.head.appendChild(s);
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
       });
     }
     evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
@@ -204,7 +209,7 @@
             "name": "Quanto custa um projeto na IRBIS?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais e e-commerce sob escopo — complexidade define o número. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura."
+              "text": "Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. E-commerce a partir de R$8k, em escopo simples. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura."
             }
           },
           {
@@ -2040,7 +2045,7 @@
                   </div>
                   <div class="prod-stat">
                     <span class="prod-stat-label">Ticket</span>
-                    <span class="prod-stat-val">Sob escopo</span>
+                    <span class="prod-stat-val">A partir de R$5k</span>
                   </div>
                 </div>
                 <a href="#contato" class="prod-cta">SOLICITAR →</a>
@@ -2068,7 +2073,7 @@
                   </div>
                   <div class="prod-stat">
                     <span class="prod-stat-label">Ticket</span>
-                    <span class="prod-stat-val">Sob escopo</span>
+                    <span class="prod-stat-val">A partir de R$8k</span>
                   </div>
                 </div>
                 <a href="#contato" class="prod-cta">SOLICITAR →</a>
@@ -2171,7 +2176,7 @@
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-a">
-          <p class="faq-a-inner">Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais e e-commerce sob escopo — complexidade define o número. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura. Na primeira conversa você já tem uma estimativa real.</p>
+          <p class="faq-a-inner">Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. E-commerce a partir de R$8k, em escopo simples. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura. Na primeira conversa você já tem uma estimativa real.</p>
         </div>
       </div>
 

@@ -71,7 +71,15 @@
       if (fired) return; fired = true;
       clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); });
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
+      });
     }
     evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
     var timer = setTimeout(boot, 3500);
@@ -196,7 +204,7 @@
             "name": "How much does a project cost at IRBIS?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No fixed price list, but there is logic. Each project is scoped on the call: complexity defines the number. Either way, less than an equivalent agency, without the structural overhead."
+              "text": "No fixed price list, but there is logic. Business websites start at $3k. E-commerce starts at $5k for a straightforward scope. Either way, less than an equivalent agency, without the structural overhead."
             }
           },
           {
@@ -2025,7 +2033,7 @@
                   </div>
                   <div class="prod-stat">
                     <span class="prod-stat-label">Pricing</span>
-                    <span class="prod-stat-val">Scoped per project</span>
+                    <span class="prod-stat-val">From $3k</span>
                   </div>
                 </div>
                 <a href="#contato" class="prod-cta">REQUEST →</a>
@@ -2053,7 +2061,7 @@
                   </div>
                   <div class="prod-stat">
                     <span class="prod-stat-label">Pricing</span>
-                    <span class="prod-stat-val">Scoped per project</span>
+                    <span class="prod-stat-val">From $5k</span>
                   </div>
                 </div>
                 <a href="#contato" class="prod-cta">REQUEST →</a>
@@ -2156,7 +2164,7 @@
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-a">
-          <p class="faq-a-inner">No fixed price list, but there is logic. Each project is scoped on the call: complexity defines the number. Either way, less than an equivalent agency, without the structural overhead. You get a real estimate on the first call.</p>
+          <p class="faq-a-inner">No fixed price list, but there is logic. Business websites start at $3k. E-commerce starts at $5k for a straightforward scope. Either way, less than an equivalent agency, without the structural overhead. You get a real estimate on the first call.</p>
         </div>
       </div>
 

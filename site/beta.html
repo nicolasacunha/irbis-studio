@@ -85,7 +85,15 @@
       if (fired) return; fired = true;
       clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); });
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
+      });
     }
     evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
     var timer = setTimeout(boot, 3500);

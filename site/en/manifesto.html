@@ -252,7 +252,15 @@
       if (fired) return; fired = true;
       clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); });
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
+      });
     }
     evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
     var timer = setTimeout(boot, 3500);
@@ -287,9 +295,9 @@
         <div class="m-inner">
           <h1 class="m-label" style="font-size:inherit;font-weight:inherit;letter-spacing:inherit">IRBIS · Manifesto</h1>
           <div class="m-block" id="s1">
-            <span class="m-line">IRBIS WAS BORN WITH A PURPOSE:</span>
-            <span class="m-line">TO SIMPLIFY THE PROCESS</span>
-            <span class="m-line">FOR COMPANIES THAT WANT TO GROW.</span>
+            <span class="m-line">A WEBSITE HAS ONE JOB:</span>
+            <span class="m-line">MAKING THE BUSINESS</span>
+            <span class="m-line">GROW.</span>
           </div>
         </div>
       </section>
@@ -298,8 +306,8 @@
       <section class="m-screen" data-s="2" data-bg="#FF3D00">
         <div class="m-inner">
           <div class="m-block" id="s2">
-            <span class="m-line">MOTION ISN'T A DETAIL.</span>
-            <span class="m-line">IT'S THE PRODUCT.</span>
+            <span class="m-line">EVERY MOVEMENT ON SCREEN</span>
+            <span class="m-line">HAS A JOB: SELLING.</span>
           </div>
         </div>
       </section>
@@ -312,7 +320,7 @@
             <span class="m-line light">without thinking about the business.</span>
             <span class="m-line light">Three months of process to deliver</span>
             <span class="m-line light">what should take three weeks.</span>
-            <span class="m-line heavy">WE DON'T OPERATE THAT WAY.</span>
+            <span class="m-line heavy">HERE, THREE WEEKS MEANS THREE WEEKS.</span>
           </div>
         </div>
       </section>
@@ -321,9 +329,9 @@
       <section class="m-screen" data-s="4" data-bg="#0C0C0E">
         <div class="m-inner">
           <div class="m-block" id="s4">
-            <span class="m-line heavy">SPEED AND EFFICIENCY</span>
-            <span class="m-line heavy">BECAUSE WE KNOW OUR CRAFT.</span>
-            <span class="m-line muted">Not speed for speed's sake.</span>
+            <span class="m-line heavy">FROM BRIEFING TO LIVE IN WEEKS.</span>
+            <span class="m-line heavy">ONE PERSON DECIDES AND SHIPS.</span>
+            <span class="m-line muted">No management layer in between.</span>
           </div>
         </div>
       </section>
@@ -332,7 +340,7 @@
       <section class="m-screen" data-s="5" data-bg="#FF3D00">
         <div class="m-inner">
           <div class="m-block" id="s5">
-            <span class="m-line regular">We work with companies</span>
+            <span class="m-line regular">I work with businesses</span>
             <span class="m-line regular">and founders building</span>
             <span class="m-line regular">something real.</span>
             <span class="m-line heavy">PEOPLE WHO WANT TO BE REMEMBERED.</span>
@@ -356,9 +364,9 @@
       <section class="m-screen" data-s="7" data-bg="#0C0C0E">
         <div class="m-inner">
           <div class="m-block" id="s7">
-            <span class="m-line muted">Confident in the result.</span>
-            <span class="m-line muted">Focused on what you need.</span>
-            <span class="m-line heavy">BUT THE WORK SPEAKS BEFORE WE DO.</span>
+            <span class="m-line muted">You talk to the person who builds.</span>
+            <span class="m-line muted">Open process, no black box.</span>
+            <span class="m-line heavy">THE WORK SPEAKS FIRST.</span>
           </div>
         </div>
       </section>
@@ -367,10 +375,10 @@
       <section class="m-screen" data-s="8" data-bg="#18181B">
         <div class="m-inner">
           <div class="m-block" id="s8-main">
-            <span class="m-line main">SOME PEOPLE START A BUSINESS</span>
-            <span class="m-line main">JUST TO GET A SITE BUILT HERE.</span>
+            <span class="m-line main">THREE WEEKS FROM BRIEFING TO LIVE.</span>
+            <span class="m-line main">R$350K IN SALES GENERATED.</span>
           </div>
-          <span class="m-line aside" id="s8-aside">That's the standard we chase.</span>
+          <span class="m-line aside" id="s8-aside">A real project, a named client: eforcedrums.com.</span>
         </div>
       </section>
 
@@ -379,7 +387,7 @@
         <div class="m-inner">
           <span class="s9-title" id="s9-title">IRBIS.</span>
           <span class="s9-sub" id="s9-sub">Built for brands people<br>want before they need them.</span>
-          <a class="s9-cta" id="s9-cta" href="https://irbis.com.br/en#contact">Start a project →</a>
+          <a class="s9-cta" id="s9-cta" href="https://irbis.com.br/en/#contato">Start a project →</a>
         </div>
       </section>
 

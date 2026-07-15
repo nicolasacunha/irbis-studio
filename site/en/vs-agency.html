@@ -40,7 +40,15 @@
       if (fired) return; fired = true;
       clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); });
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
+      });
     }
     evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
     var timer = setTimeout(boot, 3500);
@@ -497,7 +505,7 @@
     <h2>See a fit here?</h2>
     <p>Tell me what you need to build. If working together makes sense, you'll leave the first conversation with a clear path.</p>
     <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-btn">CHAT ON WHATSAPP →</a>
-    <a href="/en#contato" class="cta-btn" style="background:transparent;color:var(--text);border:1px solid var(--s2);margin-left:.75rem">SEE THE METHOD</a>
+    <a href="/en/call" class="cta-btn cta-btn-call" style="background:transparent;color:var(--text);border:1px solid var(--s2);margin-left:.75rem">BOOK A CALL →</a>
     <span class="cta-sub">Limited schedule · max 3 active projects</span>
   </div>
 </main>
@@ -517,6 +525,8 @@
     track('whatsapp_clicked', { location: 'vs_agencia_cta' }));
   document.querySelector('.nav-cta')?.addEventListener('click', () =>
     track('whatsapp_clicked', { location: 'vs_agencia_nav' }));
+  document.querySelector('.cta-btn-call')?.addEventListener('click', () =>
+    track('call_cta_clicked', { location: 'vs_agencia_cta' }));
 
   const depths = { 50: false, 90: false };
   window.addEventListener('scroll', () => {

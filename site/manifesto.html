@@ -252,7 +252,15 @@
       if (fired) return; fired = true;
       clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); });
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
+      });
     }
     evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
     var timer = setTimeout(boot, 3500);
@@ -284,9 +292,9 @@
         <div class="m-inner">
           <h1 class="m-label" style="font-size:inherit;font-weight:inherit;letter-spacing:inherit">IRBIS · Manifesto</h1>
           <div class="m-block" id="s1">
-            <span class="m-line">A IRBIS NASCEU COM PROPÓSITO:</span>
-            <span class="m-line">SIMPLIFICAR O PROCESSO</span>
-            <span class="m-line">DE EMPRESAS QUE QUEREM CRESCER.</span>
+            <span class="m-line">UM SITE SÓ TEM UM TRABALHO:</span>
+            <span class="m-line">FAZER O NEGÓCIO</span>
+            <span class="m-line">CRESCER.</span>
           </div>
         </div>
       </section>
@@ -295,8 +303,8 @@
       <section class="m-screen" data-s="2" data-bg="#FF3D00">
         <div class="m-inner">
           <div class="m-block" id="s2">
-            <span class="m-line">MOTION NÃO É DETALHE.</span>
-            <span class="m-line">É O PRODUTO.</span>
+            <span class="m-line">CADA MOVIMENTO NA TELA</span>
+            <span class="m-line">TEM UM TRABALHO: VENDER.</span>
           </div>
         </div>
       </section>
@@ -309,7 +317,7 @@
             <span class="m-line light">sem pensar no negócio.</span>
             <span class="m-line light">Três meses de processo pra entregar</span>
             <span class="m-line light">o que devia levar três semanas.</span>
-            <span class="m-line heavy">A GENTE NÃO OPERA ASSIM.</span>
+            <span class="m-line heavy">AQUI, TRÊS SEMANAS SÃO TRÊS SEMANAS.</span>
           </div>
         </div>
       </section>
@@ -318,9 +326,9 @@
       <section class="m-screen" data-s="4" data-bg="#0C0C0E">
         <div class="m-inner">
           <div class="m-block" id="s4">
-            <span class="m-line heavy">AGILIDADE E EFICIÊNCIA</span>
-            <span class="m-line heavy">PORQUE SABEMOS O QUE FAZEMOS.</span>
-            <span class="m-line muted">Não velocidade por velocidade.</span>
+            <span class="m-line heavy">DO BRIEFING AO AR EM SEMANAS.</span>
+            <span class="m-line heavy">UMA PESSOA DECIDE E EXECUTA.</span>
+            <span class="m-line muted">Sem camada de gerência no meio.</span>
           </div>
         </div>
       </section>
@@ -329,7 +337,7 @@
       <section class="m-screen" data-s="5" data-bg="#FF3D00">
         <div class="m-inner">
           <div class="m-block" id="s5">
-            <span class="m-line regular">Trabalhamos com empresas</span>
+            <span class="m-line regular">Trabalho com negócios</span>
             <span class="m-line regular">e founders que constroem</span>
             <span class="m-line regular">algo de verdade.</span>
             <span class="m-line heavy">COM QUEM QUER SER LEMBRADO.</span>
@@ -353,9 +361,9 @@
       <section class="m-screen" data-s="7" data-bg="#0C0C0E">
         <div class="m-inner">
           <div class="m-block" id="s7">
-            <span class="m-line muted">Confiantes no resultado.</span>
-            <span class="m-line muted">Atentos ao que você precisa.</span>
-            <span class="m-line heavy">MAS O RESULTADO FALA ANTES DA GENTE.</span>
+            <span class="m-line muted">Você fala direto com quem constrói.</span>
+            <span class="m-line muted">Processo aberto, sem caixa-preta.</span>
+            <span class="m-line heavy">O RESULTADO FALA PRIMEIRO.</span>
           </div>
         </div>
       </section>
@@ -364,10 +372,10 @@
       <section class="m-screen" data-s="8" data-bg="#18181B">
         <div class="m-inner">
           <div class="m-block" id="s8-main">
-            <span class="m-line main">TEM GENTE QUE ABRE UM NEGÓCIO</span>
-            <span class="m-line main">SÓ PRA TER UM SITE FEITO AQUI.</span>
+            <span class="m-line main">TRÊS SEMANAS DO BRIEFING AO AR.</span>
+            <span class="m-line main">R$350 MIL EM VENDAS GERADAS.</span>
           </div>
-          <span class="m-line aside" id="s8-aside">Esse é o nível que a gente busca.</span>
+          <span class="m-line aside" id="s8-aside">Projeto real, cliente com nome: eforcedrums.com.</span>
         </div>
       </section>
 
@@ -376,7 +384,7 @@
         <div class="m-inner">
           <span class="s9-title" id="s9-title">IRBIS.</span>
           <span class="s9-sub" id="s9-sub">Construído pra marcas que as pessoas<br>querem antes de precisar.</span>
-          <a class="s9-cta" id="s9-cta" href="https://irbis.com.br#contact">Iniciar um projeto →</a>
+          <a class="s9-cta" id="s9-cta" href="https://irbis.com.br/#contato">Iniciar um projeto →</a>
         </div>
       </section>
 
