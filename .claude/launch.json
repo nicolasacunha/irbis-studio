@@ -2,162 +2,22 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "tatiana-mareto",
+      "name": "eforce-site",
       "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "dev",
-        "--prefix",
-        "Testes/tatiana-mareto",
-        "--",
-        "--port",
-        "3009"
-      ],
-      "port": 3009
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/nicolascunha/Projects/Business/irbis/02 - Projetos/Odery Drums/EForce/eforce-site"],
+      "port": 5173
     },
     {
-      "name": "pousada-vento-manso",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "dev",
-        "--prefix",
-        "Testes/pousada-vento-manso",
-        "--",
-        "--port",
-        "3005"
-      ],
-      "port": 3005
-    },
-    {
-      "name": "delsantcoffee",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "dev",
-        "--prefix",
-        "Testes/delsantcoffee",
-        "--",
-        "--port",
-        "3007"
-      ],
-      "port": 3007
-    },
-    {
-      "name": "propropertyprojects",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "dev",
-        "--prefix",
-        "Testes/propropertyprojects"
-      ],
-      "port": 3000
-    },
-    {
-      "name": "Static Server (npx serve)",
+      "name": "duarte-imoveis",
       "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "serve",
-        ".",
-        "--listen",
-        "3002"
-      ],
-      "port": 3002
+      "runtimeArgs": ["serve", "-l", "3010", "/Users/nicolascunha/Projects/Business/irbis/Testes/duarte-imoveis"],
+      "port": 3010
     },
     {
-      "name": "Static Server (Python)",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "8080"
-      ],
-      "port": 8080
-    },
-    {
-      "name": "aspg-refresh",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4181",
-        "--directory",
-        "Testes/aspg-refresh"
-      ],
-      "port": 4181
-    },
-    {
-      "name": "newsletteroperator",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4183",
-        "--directory",
-        "Testes/newsletteroperator"
-      ],
-      "port": 4183
-    },
-    {
-      "name": "alison-lin",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4180",
-        "--directory",
-        "Testes/alison-lin"
-      ],
-      "port": 4180
-    },
-    {
-      "name": "holoslab",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4182",
-        "--directory",
-        "Testes/holoslab"
-      ],
-      "port": 4182
-    },
-    {
-      "name": "panda-concept",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4173",
-        "--directory",
-        "02 - Projetos/Panda Storee/concept"
-      ],
-      "port": 4173
-    },
-    {
-      "name": "orrsocial",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4185",
-        "--directory",
-        "Testes/orrsocial"
-      ],
-      "port": 4185
-    },
-    {
-      "name": "frugalcoyote",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4184",
-        "--directory",
-        "Testes/frugalcoyote"
-      ],
-      "port": 4184
+      "name": "helena-estetica",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3011", "/Users/nicolascunha/Projects/Business/irbis/Testes/helena-estetica"],
+      "port": 3011
     }
   ]
 }
