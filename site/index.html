@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xmqsnmt3uv");
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webdesign para Startups | Landing Pages e Site Institucional | IRBIS</title>
@@ -398,6 +406,9 @@
     }
     .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
     .nav-cta:active { transform: scale(0.96); }
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
+    .lang-toggle svg { display:block; width:100%; height:100%; }
 
     /* ================================================================
        SECTION 01 — HERO
@@ -1780,7 +1791,6 @@
       .h-scroll-hint-arrow { animation: none; }
     }
   </style>
-<script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
@@ -1803,6 +1813,17 @@
     </ul>
     <div style="display:flex;align-items:center;gap:.75rem;">
       <a href="/call" class="nav-cta">INICIAR PROJETO</a>
+      <a href="/en" class="lang-toggle" aria-label="View in English" title="English">
+        <svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="7410" height="3900" fill="#b22234"/>
+          <g fill="#fff">
+            <rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/>
+            <rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/>
+            <rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/>
+          </g>
+          <rect width="2964" height="2100" fill="#3c3b6e"/>
+        </svg>
+      </a>
       <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -1817,6 +1838,7 @@
       <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
       <a href="sobre.html">Sobre</a>
+      <a href="/en">English 🇺🇸</a>
     </nav>
     <p class="mobile-nav-tagline">IRBIS · ESTÚDIO DIGITAL</p>
   </div>
@@ -1897,16 +1919,16 @@
     <section id="numeros" aria-label="Resultados">
       <div class="num-grid">
         <div class="num-item reveal">
-          <span class="num-big"><span class="acc">1</span></span>
-          <span class="num-label">profissional. Acesso direto a quem pensa e executa.</span>
+          <span class="num-big" style="font-size:clamp(2rem,4vw,3.4rem)">+R$350<span class="acc">k</span></span>
+          <span class="num-label">em vendas geradas por um site que construí</span>
         </div>
         <div class="num-item reveal">
           <span class="num-big">3<span class="acc">sem.</span></span>
-          <span class="num-label">do briefing ao ar, em média</span>
+          <span class="num-label">do briefing ao site no ar</span>
         </div>
         <div class="num-item reveal">
           <span class="num-big" style="font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.02em;font-weight:800;color:var(--accent)">ZERO</span>
-          <span class="num-label">intermediários entre você e quem executa.</span>
+          <span class="num-label">intermediários. Você fala direto com quem constrói.</span>
         </div>
       </div>
       <div class="proof-quotes proof-single">
@@ -2190,12 +2212,13 @@
               btn.textContent = 'ENVIANDO...';
 
               try {
-                const res = await fetch('https://formspree.io/f/FORMSPREE_ID', {
+                const res = await fetch('/api/inbound', {
                   method: 'POST',
-                  body: new FormData(this),
-                  headers: { 'Accept': 'application/json' },
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ nome, email, projeto: intent }),
                 });
                 if (res.ok) {
+                  try { sessionStorage.setItem('irbis_conv', 'contact_lead'); } catch (e) {}
                   window.location.href = '/obrigado';
                 } else {
                   throw new Error();
@@ -2399,8 +2422,20 @@
 
     /* ── SCROLL REVEALS — stagger siblings in grids ── */
     (function () {
-      const grids = ['.num-grid', '.opero-list', '.ret-grid'];
+      const grids = ['.opero-list', '.ret-grid'];
       const handled = new Set();
+
+      /* Números da home: blur + foco (mesma pegada dos cases) */
+      const numGrid = document.querySelector('.num-grid');
+      if (numGrid) {
+        const nums = Array.from(numGrid.querySelectorAll('.reveal'));
+        nums.forEach(el => handled.add(el));
+        gsap.fromTo(nums,
+          { opacity: 0, filter: 'blur(14px)', scale: 0.92, y: 0 },
+          { opacity: 1, filter: 'blur(0px)', scale: 1, duration: 0.7, ease: 'power2.out',
+            stagger: 0.12, scrollTrigger: { trigger: numGrid, start: 'top 85%' } }
+        );
+      }
 
       grids.forEach(sel => {
         const parent = document.querySelector(sel);
