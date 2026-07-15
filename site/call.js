@@ -14,6 +14,18 @@
   var submitBtn = document.getElementById('submitBtn');
   var formMsg = document.getElementById('formMsg');
 
+  /* ---------- Cortina à prova de falha ----------
+     A cortina de intro sai por animação CSS. Em navegador in-app (WhatsApp) a
+     animação/dvh pode não rodar e a cortina preta fica cobrindo tudo ("não abriu").
+     Rede de segurança: some no fim da animação E depois de um teto de tempo. */
+  (function () {
+    var c = document.getElementById('curtain');
+    if (!c) return;
+    function kill() { c.style.display = 'none'; }
+    c.addEventListener('animationend', kill);
+    setTimeout(kill, 1600);
+  })();
+
   /* ---------- GA4 ---------- */
   function track(ev, params) {
     if (typeof window.gtag === 'function') window.gtag('event', ev, params || {});
