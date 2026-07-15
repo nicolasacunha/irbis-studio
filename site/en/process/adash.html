@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADASH em 3 semanas: como construí um dashboard SaaS do zero · IRBIS</title>
-  <meta name="description" content="Breakdown técnico completo: arquitetura, decisões de design, integração com IA e o que aprendi construindo um dashboard SaaS full-stack para operações de marketing e vendas em 3 semanas.">
-  <link rel="canonical" href="https://irbis.com.br/processo/adash">
+  <title>ADASH in 3 weeks: how I built a SaaS dashboard from scratch · IRBIS</title>
+  <meta name="description" content="Full technical breakdown: architecture, design decisions, AI integration and what I learned building a full-stack SaaS dashboard for marketing and sales operations in 3 weeks.">
+  <link rel="canonical" href="https://irbis.com.br/en/process/adash">
   <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/processo/adash">
   <link rel="alternate" hreflang="en" href="https://irbis.com.br/en/process/adash">
   <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/processo/adash">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://irbis.com.br/processo/adash">
-  <meta property="og:title" content="ADASH em 3 semanas: como construí um dashboard SaaS do zero">
-  <meta property="og:description" content="Breakdown técnico: arquitetura, decisões de design, integração com IA e o que aprendi construindo um SaaS full-stack em 3 semanas.">
+  <meta property="og:url" content="https://irbis.com.br/en/process/adash">
+  <meta property="og:title" content="ADASH in 3 weeks: how I built a SaaS dashboard from scratch">
+  <meta property="og:description" content="Technical breakdown: architecture, design decisions, AI integration and what I learned building a full-stack SaaS in 3 weeks.">
   <meta property="og:image" content="https://irbis.com.br/Design/og-image.png">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="IRBIS">
   <link rel="icon" type="image/png" href="/Design/icone/favicon_true.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "ADASH em 3 semanas: como construí um dashboard SaaS do zero",
-    "description": "Breakdown técnico completo: arquitetura, decisões de design, integração com IA e o que aprendi construindo um SaaS full-stack em 3 semanas.",
-    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/sobre" },
+    "headline": "ADASH in 3 weeks: how I built a SaaS dashboard from scratch",
+    "description": "Full technical breakdown: architecture, design decisions, AI integration and what I learned building a full-stack SaaS in 3 weeks.",
+    "inLanguage": "en",
+    "author": { "@type": "Person", "name": "Nicolas Cunha", "url": "https://irbis.com.br/en/about" },
     "publisher": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
     "datePublished": "2026-05-28",
     "dateModified": "2026-05-28",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://irbis.com.br/processo/adash" }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://irbis.com.br/en/process/adash" }
   }
   </script>
 
@@ -70,11 +71,15 @@
       transition: opacity .2s;
     }
     .p-nav-logo:hover { opacity: 1; }
+    .p-nav-right { display: flex; align-items: center; gap: 1.5rem; }
     .p-nav-back {
       font-size: .6rem; font-weight: 600; letter-spacing: .2em;
       text-transform: uppercase; color: var(--muted); transition: color .2s;
     }
     .p-nav-back:hover { color: var(--text); }
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
+    .lang-toggle svg { display:block; width:100%; height:100%; }
 
     /* ── PROGRESS BAR ── */
     #p-progress {
@@ -310,9 +315,6 @@
     @media (prefers-reduced-motion: reduce) {
       * { transition-duration: 0s !important; animation-duration: 0s !important; }
     }
-      .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
-    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
-    .lang-toggle svg { display:block; width:100%; height:100%; }
   </style>
 <script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -326,8 +328,11 @@
 
   <!-- NAV -->
   <nav id="p-nav">
-    <a href="/" class="p-nav-logo">IRBIS</a>
-    <div style="display:flex;align-items:center;gap:.9rem"><a href="/" class="p-nav-back">← Voltar</a><a href="/en/process/adash" class="lang-toggle" aria-label="View in English" title="English"><svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g><rect width="2964" height="2100" fill="#3c3b6e"/></svg></a></div>
+    <a href="/en" class="p-nav-logo">IRBIS</a>
+    <div class="p-nav-right">
+      <a href="/en" class="p-nav-back">← Back</a>
+      <a href="/processo/adash" class="lang-toggle" aria-label="Ver em português" title="Português"><svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="720" height="504" fill="#009c3b"/><path d="M360 66 666 252 360 438 54 252z" fill="#ffdf00"/><circle cx="360" cy="252" r="88" fill="#002776"/></svg></a>
+    </div>
   </nav>
 
   <!-- PROGRESS -->
@@ -337,15 +342,15 @@
   <header class="p-hero">
     <div class="p-hero-left">
       <div class="p-hero-meta">
-        <span class="p-hero-tag">Processo</span>
-        <span class="p-hero-date">Maio 2026</span>
-        <span class="p-hero-read">10 min de leitura</span>
+        <span class="p-hero-tag">Process</span>
+        <span class="p-hero-date">May 2026</span>
+        <span class="p-hero-read">10 min read</span>
       </div>
-      <h1 class="p-hero-title">ADASH em<br>3 semanas:<br>como construí<br>um SaaS<br><span class="acc">do zero.</span></h1>
+      <h1 class="p-hero-title">ADASH in<br>3 weeks:<br>how I built<br>a SaaS<br><span class="acc">from scratch.</span></h1>
     </div>
     <div class="p-hero-right">
       <p class="p-hero-intro">
-        Breakdown técnico e de design do ADASH, um dashboard SaaS full-stack para operações de marketing e vendas. Da arquitetura às decisões de UX, passando pela integração com IA e o que eu faria diferente se começasse hoje.
+        A technical and design breakdown of ADASH, a full-stack SaaS dashboard for marketing and sales operations. From architecture to UX decisions, through the AI integration and what I would do differently if I started today.
       </p>
     </div>
   </header>
@@ -355,167 +360,167 @@
   <!-- BODY -->
   <article class="p-body">
 
-    <!-- 1. O PROBLEMA -->
+    <!-- 1. THE PROBLEM -->
     <section class="p-section">
-      <span class="p-section-num">01 · O problema</span>
-      <h2 class="p-h2">Quatro ferramentas.<br>Nenhuma decisão boa.</h2>
+      <span class="p-section-num">01 · The problem</span>
+      <h2 class="p-h2">Four tools.<br>Not one good decision.</h2>
       <p class="p-p">
-        O cliente gerenciava toda a operação de marketing e vendas com um conjunto de ferramentas que nunca foram pensadas para trabalhar juntas: Meta Ads em um lugar, Google Ads em outro, CRM em planilha no Google Drive e relatórios exportados para o Excel toda semana.
+        The client ran their entire marketing and sales operation on a set of tools that were never meant to work together: Meta Ads in one place, Google Ads in another, a CRM living in a Google Drive spreadsheet, and reports exported to Excel every week.
       </p>
       <p class="p-p">
-        O problema visível era o tempo perdido. Mas o problema real era mais sutil: <strong>decisões de investimento sendo tomadas com dados que chegavam sempre atrasados</strong>. Quando você demora dois dias para consolidar o relatório da semana passada, você já está três dias atrasado.
+        The visible problem was lost time. The real problem was subtler: <strong>investment decisions being made on data that always arrived late</strong>. When it takes you two days to consolidate last week's report, you are already three days behind.
       </p>
 
       <div class="p-quote">
-        <p class="p-quote-text">"A solução óbvia seria conectar APIs e montar um painel genérico. A solução certa foi entender como o time tomava decisões e construir algo que seguisse essa lógica."</p>
+        <p class="p-quote-text">"The obvious move would be to connect APIs and assemble a generic panel. The right move was to understand how the team made decisions and build something that follows that logic."</p>
       </div>
 
       <p class="p-p">
-        O briefing inicial pedia um "dashboard de marketing". Depois de três horas de conversa, ficou claro que o que eles precisavam não era de um painel. Era de uma única fonte de verdade para toda a operação.
+        The initial brief asked for a "marketing dashboard". After three hours of conversation, it became clear that what they needed was not a panel. It was a single source of truth for the whole operation.
       </p>
     </section>
 
-    <!-- 2. DECISÃO DE ARQUITETURA -->
+    <!-- 2. ARCHITECTURE DECISION -->
     <section class="p-section">
-      <span class="p-section-num">02 · Decisão de arquitetura</span>
-      <h2 class="p-h2">Por que construir<br>do zero, não customizar.</h2>
+      <span class="p-section-num">02 · Architecture decision</span>
+      <h2 class="p-h2">Why build<br>from scratch, not customize.</h2>
       <p class="p-p">
-        A primeira pergunta que qualquer dev honesto faz nesse tipo de projeto: isso não resolve com Notion + Zapier + um bom template de Google Data Studio?
+        The first question any honest dev asks on this kind of project: wouldn't Notion + Zapier + a good Google Data Studio template cover this?
       </p>
       <p class="p-p">
-        Às vezes resolve. Nesse caso, não. Os motivos:
+        Sometimes it does. Not here. The reasons:
       </p>
       <ul class="p-list">
-        <li><span class="p-list-marker">01</span><span>O cliente tinha nomenclatura própria para estágios do funil. Ferramentas off-the-shelf não dobram para isso sem gambiarra que quebra quando você atualiza o plano.</span></li>
-        <li><span class="p-list-marker">02</span><span>A integração entre CRM e mídia paga precisava de lógica de negócio específica: atribuição, regras de estágio, alertas baseados em performance relativa, não absoluta.</span></li>
-        <li><span class="p-list-marker">03</span><span>O agente de IA não seria possível em cima de uma ferramenta de terceiro. Precisava de acesso direto aos dados, não a uma camada de exportação.</span></li>
-        <li><span class="p-list-marker">04</span><span>Custo de longo prazo: ferramentas SaaS empilhadas somam rápido. Uma solução própria tem custo de infraestrutura, não de licença por seat.</span></li>
+        <li><span class="p-list-marker">01</span><span>The client had their own naming for funnel stages. Off-the-shelf tools don't bend to that without hacks that break the moment you update your plan.</span></li>
+        <li><span class="p-list-marker">02</span><span>The integration between CRM and paid media needed specific business logic: attribution, stage rules, alerts based on relative performance, not absolute.</span></li>
+        <li><span class="p-list-marker">03</span><span>The AI agent would not be possible on top of a third-party tool. It needed direct access to the data, not an export layer.</span></li>
+        <li><span class="p-list-marker">04</span><span>Long-term cost: stacked SaaS tools add up fast. A custom build carries infrastructure cost, not per-seat license cost.</span></li>
       </ul>
       <p class="p-p">
-        Stack escolhido: <strong>React + TypeScript + Vite</strong> no front-end, integração direta com a API do Meta Ads e Google Ads, base de dados própria para o CRM, e Claude como motor do agente de IA.
+        Chosen stack: <strong>React + TypeScript + Vite</strong> on the front end, direct integration with the Meta Ads and Google Ads APIs, a dedicated database for the CRM, and Claude as the engine behind the AI agent.
       </p>
     </section>
 
-    <!-- 3. DECISÃO DE DESIGN -->
+    <!-- 3. DESIGN DECISION -->
     <section class="p-section">
-      <span class="p-section-num">03 · Decisão de design</span>
-      <h2 class="p-h2">Design de produto,<br>não de dashboard.</h2>
+      <span class="p-section-num">03 · Design decision</span>
+      <h2 class="p-h2">Product design,<br>not dashboard design.</h2>
       <p class="p-p">
-        A maioria dos dashboards falha por um motivo que não é técnico: <strong>eles são construídos como espelhos de banco de dados, não como ferramentas de decisão</strong>. Você vê os dados organizados da forma que o sistema os armazena, não da forma que você os usa para pensar.
+        Most dashboards fail for a reason that is not technical: <strong>they are built as mirrors of a database, not as decision tools</strong>. You see the data organized the way the system stores it, not the way you use it to think.
       </p>
       <p class="p-p">
-        Antes de abrir o Figma, mapeei o fluxo real de tomada de decisão do time. Que pergunta eles faziam primeiro quando abriam o computador de manhã? Com que frequência consultavam cada tipo de dado? Quando um número precisava de contexto de outro módulo para fazer sentido?
+        Before opening Figma, I mapped the team's real decision-making flow. What question did they ask first when they opened their computer in the morning? How often did they check each type of data? When did a number need context from another module to make sense?
       </p>
       <p class="p-p">
-        Três princípios guiaram o design:
+        Three principles guided the design:
       </p>
       <ul class="p-list">
-        <li><span class="p-list-marker">A</span><span><strong>Hierarquia de informação por frequência de uso</strong>, não por importância percebida. O que o time consultava toda manhã ficou no topo. O que consultava uma vez por semana ficou dois cliques atrás.</span></li>
-        <li><span class="p-list-marker">B</span><span><strong>Contexto cruzado visível sem navegação</strong>. Quando você está vendo performance de mídia, o funil de vendas desse mesmo período aparece colapsado ao lado, você expande se precisar, sem trocar de tela.</span></li>
-        <li><span class="p-list-marker">C</span><span><strong>Termos do negócio, não da ferramenta</strong>. O CRM não chamava "Lead" de lead: chamava pelo nome que eles usavam internamente. Soa óbvio, mas a maioria das ferramentas força você a aprender a nomenclatura delas.</span></li>
+        <li><span class="p-list-marker">A</span><span><strong>Information hierarchy by frequency of use</strong>, not by perceived importance. What the team checked every morning went to the top. What they checked once a week sat two clicks away.</span></li>
+        <li><span class="p-list-marker">B</span><span><strong>Cross-context visible without navigation</strong>. When you are looking at media performance, the sales funnel for that same period appears collapsed beside it. You expand it if you need to, without switching screens.</span></li>
+        <li><span class="p-list-marker">C</span><span><strong>The business's terms, not the tool's</strong>. The CRM didn't call a "Lead" a lead: it used the name the team used internally. Sounds obvious, but most tools force you to learn their naming instead.</span></li>
       </ul>
 
       <div class="p-callout">
-        <p class="p-callout-label">Insight de processo</p>
-        <p class="p-callout-text">Passei as primeiras duas semanas sem escrever uma linha de código. Só mapeando fluxos, fazendo perguntas e desenhando wireframes em papel. Essa foi a decisão que mais economizou tempo no final. Cada hora de descoberta que você pula vira dois dias de refatoração depois.</p>
+        <p class="p-callout-label">Process insight</p>
+        <p class="p-callout-text">I spent the first two weeks without writing a line of code. Just mapping flows, asking questions and sketching wireframes on paper. That was the decision that saved the most time in the end. Every hour of discovery you skip becomes two days of refactoring later.</p>
       </div>
     </section>
 
-    <!-- 4. A IA -->
+    <!-- 4. THE AI -->
     <section class="p-section">
-      <span class="p-section-num">04 · A integração com IA</span>
-      <h2 class="p-h2">IA que responde,<br>não que gera ruído.</h2>
+      <span class="p-section-num">04 · The AI integration</span>
+      <h2 class="p-h2">AI that answers,<br>not AI that adds noise.</h2>
       <p class="p-p">
-        O agente de IA foi o módulo mais delicado, não pela implementação técnica, mas pela definição de escopo. A pergunta errada é "o que a IA pode fazer?". A pergunta certa é "qual é a tarefa específica que o usuário faz hoje de forma manual que a IA resolve melhor do que qualquer interface?"
+        The AI agent was the most delicate module, not because of the technical implementation, but because of scope definition. The wrong question is "what can the AI do?". The right question is "which specific task does the user do manually today that AI handles better than any interface?"
       </p>
       <p class="p-p">
-        No caso do ADASH, a resposta era clara: <strong>interpretação de relatórios semanais</strong>. Toda sexta, alguém passava 45 minutos olhando para números e tentando articular o que eles significavam em linguagem natural para o time de vendas. Isso é exatamente o que um LLM faz bem.
+        For ADASH, the answer was clear: <strong>interpreting weekly reports</strong>. Every Friday, someone spent 45 minutes staring at numbers, trying to articulate what they meant in plain language for the sales team. That is exactly what an LLM does well.
       </p>
       <p class="p-p">
-        O agente tem acesso direto ao contexto da conta: métricas de mídia, estágios do funil, histórico de campanhas, e responde a perguntas em linguagem natural. Não é um chatbot genérico. Ele conhece o negócio.
+        The agent has direct access to the account's context: media metrics, funnel stages, campaign history, and it answers questions in natural language. It is not a generic chatbot. It knows the business.
       </p>
       <p class="p-p">
-        Três regras que guiaram a implementação:
+        Three rules guided the implementation:
       </p>
       <ul class="p-list">
-        <li><span class="p-list-marker">01</span><span>O agente só fala sobre o que ele sabe. Sem especulação. Se o dado não está no contexto, ele diz que não tem a informação.</span></li>
-        <li><span class="p-list-marker">02</span><span>Toda resposta vem com a fonte. O usuário pode verificar o número bruto se quiser. Confiança se constrói com transparência, não com respostas fluentes.</span></li>
-        <li><span class="p-list-marker">03</span><span>O agente não toma decisões. Ele apresenta contexto e indica implicações. A decisão fica com o humano.</span></li>
+        <li><span class="p-list-marker">01</span><span>The agent only talks about what it knows. No speculation. If the data is not in its context, it says it doesn't have the information.</span></li>
+        <li><span class="p-list-marker">02</span><span>Every answer comes with its source. The user can check the raw number if they want. Trust is built with transparency, not with fluent answers.</span></li>
+        <li><span class="p-list-marker">03</span><span>The agent doesn't make decisions. It presents context and points out implications. The decision stays with the human.</span></li>
       </ul>
     </section>
 
     <!-- 5. TIMELINE -->
     <section class="p-section">
-      <span class="p-section-num">05 · As 3 semanas</span>
-      <h2 class="p-h2">O que aconteceu<br>em cada semana.</h2>
+      <span class="p-section-num">05 · The 3 weeks</span>
+      <h2 class="p-h2">What happened<br>each week.</h2>
 
       <div class="p-timeline">
         <div class="p-tl-item">
-          <span class="p-tl-week">Sem. 1</span>
+          <span class="p-tl-week">Week 1</span>
           <div class="p-tl-content">
-            <p class="p-tl-title">Descoberta e arquitetura</p>
-            <p class="p-tl-desc">Mapeamento de fluxos, entrevistas com o time, definição de módulos, wireframes em papel. Decisão de stack e estrutura de dados. Aprovação do cliente antes de qualquer linha de código.</p>
+            <p class="p-tl-title">Discovery and architecture</p>
+            <p class="p-tl-desc">Flow mapping, interviews with the team, module definition, paper wireframes. Stack and data structure decisions. Client approval before a single line of code.</p>
           </div>
         </div>
         <div class="p-tl-item">
-          <span class="p-tl-week">Sem. 2</span>
+          <span class="p-tl-week">Week 2</span>
           <div class="p-tl-content">
-            <p class="p-tl-title">Módulos core: Performance + CRM + Conteúdo</p>
-            <p class="p-tl-desc">Integração com Meta Ads e Google Ads. Dashboard de performance em tempo real. CRM em kanban com pipeline customizado. Calendário editorial por canal. Design system implementado em paralelo no código.</p>
+            <p class="p-tl-title">Core modules: Performance + CRM + Content</p>
+            <p class="p-tl-desc">Meta Ads and Google Ads integration. Real-time performance dashboard. Kanban CRM with a custom pipeline. Editorial calendar per channel. Design system implemented in code in parallel.</p>
           </div>
         </div>
         <div class="p-tl-item">
-          <span class="p-tl-week">Sem. 3</span>
+          <span class="p-tl-week">Week 3</span>
           <div class="p-tl-content">
-            <p class="p-tl-title">QG Agent + Relatórios + Deploy</p>
-            <p class="p-tl-desc">Implementação do agente de IA, calibração de prompts com dados reais. Gerador de PDFs com identidade do cliente. Sessões de uso com o time, ajustes de UX, deploy em produção e handoff.</p>
+            <p class="p-tl-title">QG Agent + Reports + Deploy</p>
+            <p class="p-tl-desc">AI agent implementation, prompt calibration with real data. PDF generator with the client's identity. Usage sessions with the team, UX adjustments, production deploy and handoff.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. O QUE FARIA DIFERENTE -->
+    <!-- 6. WHAT I WOULD DO DIFFERENTLY -->
     <section class="p-section">
-      <span class="p-section-num">06 · O que eu faria diferente</span>
-      <h2 class="p-h2">Os erros<br>que valem documentar.</h2>
+      <span class="p-section-num">06 · What I would do differently</span>
+      <h2 class="p-h2">The mistakes<br>worth documenting.</h2>
       <p class="p-p">
-        Todo projeto tem pelo menos uma decisão que você tomaria diferente na segunda vez. No ADASH foram duas:
+        Every project has at least one decision you would make differently the second time. On ADASH there were two:
       </p>
 
-      <h3 class="p-h3">Comecei o módulo de relatórios cedo demais</h3>
+      <h3 class="p-h3">I started the reports module too early</h3>
       <p class="p-p">
-        Iniciei a implementação do gerador de PDF na semana 4, antes de ter o design final dos outros módulos consolidado. Resultado: tive que refatorar parte da estrutura de dados quando mudei o layout do dashboard na semana 5. Não foi crítico, mas custou meio dia que não estava no planejamento.
+        I began implementing the PDF generator in week 4, before the final design of the other modules had settled. Result: I had to refactor part of the data structure when I changed the dashboard layout in week 5. Not critical, but it cost half a day that wasn't in the plan.
       </p>
       <p class="p-p">
-        <strong>Lição:</strong> módulos de output (relatórios, exportações, notificações) devem ser os últimos a serem implementados, porque eles dependem de como os dados estão estruturados nos módulos de core.
+        <strong>Lesson:</strong> output modules (reports, exports, notifications) should be the last ones implemented, because they depend on how the data is structured in the core modules.
       </p>
 
-      <h3 class="p-h3">Subestimei o tempo de ajuste do agente</h3>
+      <h3 class="p-h3">I underestimated the agent's tuning time</h3>
       <p class="p-p">
-        Implementar o agente de IA tecnicamente levou dois dias. Fazer ele se comportar da forma certa, responder com o tom correto, não alucinar, saber quando dizer "não sei", e isso levou mais uma semana de ajustes de prompt e testes com dados reais.
+        Implementing the AI agent took two days on the technical side. Getting it to behave the right way, answer in the right tone, not hallucinate, know when to say "I don't know", took another week of prompt adjustments and tests with real data.
       </p>
       <p class="p-p">
-        <strong>Lição:</strong> em projetos com LLM, separe "implementação" de "calibração". São fases distintas. A calibração nunca está no escopo inicial e sempre cabe no prazo só se você reservar tempo para ela explicitamente.
+        <strong>Lesson:</strong> on LLM projects, separate "implementation" from "calibration". They are distinct phases. Calibration is never in the initial scope and only fits the deadline if you reserve time for it explicitly.
       </p>
 
       <div class="p-callout">
-        <p class="p-callout-label">Sobre o prazo</p>
-        <p class="p-callout-text">3 semanas é apertado para um SaaS com 5 módulos e IA integrada. Possível porque <strong>não existe camada de gerenciamento</strong>: quem projetou implementou, quem implementou testou, quem testou fez o deploy. Sem reunião de alinhamento entre design e dev, sem aprovação de gerente, sem sprint planning que duplica o tempo sem duplicar o output.</p>
+        <p class="p-callout-label">On the deadline</p>
+        <p class="p-callout-text">3 weeks is tight for a SaaS with 5 modules and integrated AI. It was possible because <strong>there is no management layer</strong>: the person who designed it implemented it, the person who implemented it tested it, the person who tested it deployed it. No alignment meetings between design and dev, no manager sign-off, no sprint planning that doubles the time without doubling the output.</p>
       </div>
     </section>
 
-    <!-- 7. CONCLUSÃO -->
+    <!-- 7. CONCLUSION -->
     <section class="p-section">
-      <span class="p-section-num">07 · O resultado</span>
-      <h2 class="p-h2">O que a equipe<br>tem hoje.</h2>
+      <span class="p-section-num">07 · The result</span>
+      <h2 class="p-h2">What the team<br>has today.</h2>
       <p class="p-p">
-        O ADASH está em produção há meses. O time usa todos os cinco módulos diariamente. O tempo de análise semanal passou de horas para menos de 20 minutos. O agente de IA é consultado antes de toda reunião de performance.
+        ADASH has been in production for months. The team uses all five modules daily. Weekly analysis time went from hours to under 20 minutes. The AI agent gets consulted before every performance meeting.
       </p>
       <p class="p-p">
-        Mas o resultado mais importante não está em nenhuma dessas métricas: <strong>eles pararam de usar planilha</strong>. Quando uma equipe migra permanentemente de um fluxo antigo para uma ferramenta nova, sem ser forçada a isso, é porque a ferramenta está resolvendo um problema real da forma certa.
+        But the most important result is not in any of those metrics: <strong>they stopped using spreadsheets</strong>. When a team permanently migrates from an old workflow to a new tool, without being forced to, it means the tool is solving a real problem the right way.
       </p>
       <p class="p-p">
-        Esse é o teste que uso para avaliar se um produto digital funcionou.
+        That is the test I use to judge whether a digital product worked.
       </p>
     </section>
 
@@ -526,24 +531,24 @@
   <!-- ARTICLE FOOTER -->
   <div class="p-footer">
     <div>
-      <p class="p-footer-author-label">Escrito por</p>
+      <p class="p-footer-author-label">Written by</p>
       <p class="p-footer-author-name">Nicolas Cunha</p>
-      <p class="p-footer-author-desc">Designer e desenvolvedor solo. Fundador da IRBIS Estúdio Digital. Constrói sites, dashboards e sistemas digitais para founders e early-stage teams.</p>
+      <p class="p-footer-author-desc">Solo designer and developer. Founder of IRBIS. Builds websites for founders and growing businesses.</p>
     </div>
     <div class="p-footer-cta">
-      <p class="p-footer-cta-text">Tem um projeto<br>parecido com<br><span class="acc">esse?</span></p>
-      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="p-footer-btn">Falar com a IRBIS →</a>
+      <p class="p-footer-cta-text">Have a project<br>like<br><span class="acc">this one?</span></p>
+      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="p-footer-btn">Talk to IRBIS →</a>
     </div>
   </div>
 
   <!-- SITE FOOTER -->
   <footer class="p-site-footer">
-    <span class="p-site-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
+    <span class="p-site-footer-copy">©2026 IRBIS · São Paulo, Brazil</span>
     <nav class="p-site-footer-links">
-      <a href="/">Home</a>
-      <a href="/sobre">Sobre</a>
-      <a href="/manifesto">Manifesto</a>
-      <a href="/#cases">Cases</a>
+      <a href="/en">Home</a>
+      <a href="/en/about">About</a>
+      <a href="/en/manifesto">Manifesto</a>
+      <a href="/en#cases">Cases</a>
     </nav>
   </footer>
 

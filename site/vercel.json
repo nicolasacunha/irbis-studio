@@ -44,6 +44,12 @@
     { "source": "/en/for/saas",         "destination": "/en/for/saas.html" },
     { "source": "/en/for/startups",     "destination": "/en/for/startups.html" },
     { "source": "/en/thank-you",        "destination": "/en/thank-you.html" },
-    { "source": "/en/call",             "destination": "/en/call.html" }
+    { "source": "/en/call",             "destination": "/en/call.html" },
+    { "source": "/en/eforce",           "destination": "/en/eforce.html" },
+    { "source": "/en/adash",            "destination": "/en/adash.html" },
+    { "source": "/en/process/adash",    "destination": "/en/process/adash.html" },
+    { "source": "/en/process",          "destination": "/en/process/adash.html" },
+    { "source": "/en/blog",             "destination": "/en/blog/index.html" },
+    { "source": "/en/blog/(.*)",        "destination": "/en/blog/$1.html" }
   ]
 }
