@@ -37,10 +37,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="Design/icone/favicon_true-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="Design/icone/favicon_true.png">
   <meta name="theme-color" content="#0C0C0E">
+  <link rel="preload" as="script" href="/vendor/gsap.min.js">
+  <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
+  <link rel="preload" as="script" href="/vendor/lenis.min.js">
+  <style>.no-motion #curtain{display:none!important}.no-motion body{overflow:auto!important}</style>
+  <script>window.__motionGuard=setTimeout(function(){if(!window.gsap||!window.Lenis)document.documentElement.classList.add('no-motion')},3000);</script>
   <link rel="preload" as="image" href="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp" imagesrcset="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1920.webp 1920w" imagesizes="100vw" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://unpkg.com">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -2284,13 +2287,14 @@
   <!-- ================================================================
        SCRIPTS
   ================================================================ -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
-  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="/vendor/gsap.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
+  <script src="/vendor/ScrollTrigger.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
+  <link rel="stylesheet" href="/vendor/lenis.css">
+  <script src="/vendor/lenis.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
+    if (window.__motionGuard) { clearTimeout(window.__motionGuard); document.documentElement.classList.remove('no-motion'); }
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) gsap.defaults({ duration: 0 });
@@ -2317,13 +2321,12 @@
 
       gsap.set(curtain, { height: '100dvh' });
 
-      gsap.timeline({ delay: 0.15 })
-        .to(logo,    { opacity: 1, duration: 0.5, ease: 'power2.out' })
-        .to({},      { duration: 1.0 })
-        .to(logo,    { opacity: 0, duration: 0.35, ease: 'power2.in' })
+      gsap.timeline({ delay: 0.1 })
+        .to(logo,    { opacity: 1, duration: 0.4, ease: 'power2.out' })
+        .to(logo,    { opacity: 0, duration: 0.3, ease: 'power2.in' }, '+=0.05')
         .to(curtain, {
           translateY: '-100%',
-          duration: 0.85,
+          duration: 0.65,
           ease: 'power3.inOut',
           onComplete() {
             gsap.set(curtain, { translateY: '100%', pointerEvents: 'none' });
@@ -2529,10 +2532,9 @@
 
     /* ── HERO REVEAL ── */
     gsap.set('.hero-bg', { opacity: 0, scaleX: -1.06, scaleY: 1.06 });
-    gsap.timeline({ delay: 2.4 })
+    gsap.timeline({ delay: 0.75 })
       .to('.hero-bg',      { opacity: 1.0, scaleX: -1, scaleY: 1, duration: 0.55, ease: 'power3.out' }, 0)
       .from('.hero-label', { opacity: 0, y: 16, duration: .5, ease: 'power3.out' }, 0.45)
-      .from('.hero-title', { opacity: 0, y: 30, duration: .7, ease: 'power4.out' }, 0.5)
       .to('.hero-bg',      { opacity: 0.85, duration: 0.7, ease: 'power2.inOut' }, 0.55)
       .from('.hero-bottom', { opacity: 0, y: 20, duration: .6, ease: 'power3.out' }, '-=.35');
 
