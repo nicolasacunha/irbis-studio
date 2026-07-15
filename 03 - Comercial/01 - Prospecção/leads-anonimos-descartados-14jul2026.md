@@ -1,5 +1,7 @@
 # Leads anônimos / cliente escondido — liberados por decisão do Nicolas (14/jul/2026)
 
+> **Status 15/jul:** DMs enviadas pelo Nicolas para a lista. Follow-up D+4 = sábado 19/jul; resposta interrompe a cadência. GetNinjas (seção B, item 5) DESCARTADO em 15/jul: plataforma cobra por lead.
+
 Decisão do Nicolas em 14/jul: "se esconde o cliente, se é anônimo, foda-se... me passa de qualquer forma". Este arquivo reúne TODOS os pedidos de comprador vistos nas varreduras de 13-14/jul que caíram nos filtros de rastro/anonimato/plataforma. A regra de qualificação não mudou para os Tier 1; estes aqui entram com o risco anotado e sem dossiê. Regras JDP seguem valendo na abordagem: sem preço na primeira mensagem, objetivo é conversa/reunião.
 
 ## A — Dinheiro visível (atacar primeiro)
