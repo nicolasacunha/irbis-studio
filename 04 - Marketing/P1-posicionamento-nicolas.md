@@ -134,6 +134,6 @@ Documentação 100% pronta. O que falta é aplicação manual no Instagram:
 - [ ] Atualizar a bio pra versão fechada (com o vilão), no item 5
 - [ ] Subir as 4 capas de destaque (Método → Cases → Me → Lifestyle) e reordenar
 - [ ] Salvar o card do Filtro no celular e aplicar em todo post
-- [ ] Produzir os 3 fixados (Tese / Prova / Caminho)
+- [ ] Produzir os 3 fixados (Tese / Prova / Caminho) → roteiros de gravação prontos em `roteiros-fixados-p1.md` (aguardando aprovação)
 - [ ] Roteiros de conteúdo e reels: fazer na P2 com o JDP
 - [ ] Agendar a P2
