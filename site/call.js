@@ -14,6 +14,12 @@
   var submitBtn = document.getElementById('submitBtn');
   var formMsg = document.getElementById('formMsg');
 
+  /* ---------- GA4 ---------- */
+  function track(ev, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', ev, params || {});
+  }
+  track('call_step_view', { step: 'form' });
+
   /* ---------- Decisor: nota condicional ---------- */
   document.querySelectorAll('input[name="decisor"]').forEach(function (r) {
     r.addEventListener('change', function () {
@@ -170,6 +176,7 @@
 
   /* ---------- Transição para agendamento ---------- */
   function goToScheduling() {
+    track('call_step_view', { step: 'scheduling' });
     document.getElementById('formStep').classList.add('hidden');
     document.getElementById('schedStep').classList.add('show');
     document.getElementById('progress').style.width = '100%';
@@ -238,6 +245,7 @@
         document.querySelectorAll('.slot').forEach(function (x) { x.classList.remove('active'); });
         b.classList.add('active');
         updateBook();
+        track('call_slot_selected', { day: selectedDay, slot: s.label });
       });
       wrap.appendChild(b);
     });
@@ -273,6 +281,7 @@
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
       .then(function (res) {
         if (!res.ok) throw new Error(res.body.error || 'fail');
+        track('call_booked', { day: selectedDay, slot: selectedSlot.label });
         window.location.href = '/obrigado';
       })
       .catch(function (err) {

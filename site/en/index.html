@@ -2725,15 +2725,16 @@
       document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
         el.addEventListener('click', () => {
           const loc = el.closest('#hero') ? 'hero'
-            : el.closest('#contato') ? 'contact'
+            : el.closest('#contato') ? 'contato_travou'
+            : el.closest('#como-opero') ? 'como_opero'
             : 'mid_page';
-          track('whatsapp_clicked', { location: loc });
+          track('cta_whatsapp_click', { location: loc });
         });
       });
 
       // Form submit
       document.getElementById('contato-form')?.addEventListener('submit', () => {
-        track('form_submitted', { form_type: 'contact' });
+        track('inbound_form_submit', { origin: location.pathname, form_type: 'contact' });
       });
 
       // Case card clicks
