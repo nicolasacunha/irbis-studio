@@ -1,5 +1,7 @@
 # Roteiros — 3 Fixados do perfil pessoal (P1 × P2)
 
+> ⚠️ OBSOLETO desde 15/jul/2026: escrito sobre a tese v1 e o ICP founder. Em 15/jul o Nicolas aprovou a tese v2 (commodity x critério) e mudou o ICP para empresas da economia real, e decidiu que os ganchos ficam em aberto até a produção. Usar só como referência de formato (tabela de tempo, cortes, checklist); o conteúdo precisa ser reescrito.
+
 > Rascunho para aprovação do Nicolas. Nada aqui é publicado sem "aprovado" explícito.
 > Fonte de posicionamento: `P1-posicionamento-nicolas.md` (13/jul). Estrutura de roteiro: P2 do JDP (PAS / ADP / Loop + Checklist Cara de Viral, nota mínima 6/7).
 > Regras aplicadas: sem travessão, prova social só "+R$350k em vendas", "3 semanas" citado apenas como prazo do case E-Force, sem preço, CTA único ("manda 'site' no direct").

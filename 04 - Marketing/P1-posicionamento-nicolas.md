@@ -98,19 +98,18 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 > foundermaxxing / Site bonito, rápido e que vende. Nem agência lenta, nem IA genérica. / +R$350k gerados pra founders. / Manda "site" no direct pra começar. / 🔗 irbis.com.br
 > Motivo da troca: "foundermaxxing" é código de bolha startup e o ICP virou empresa da economia real; a linha de valor era a tese v1.
 
-### 6. Posts Fixados ✅ FECHADO (estrutura)
+### 6. Posts Fixados ✅ FECHADO (estrutura) — re-ancorados na tese v2 em 15/jul/2026
 
-**Fixado 1 — A Tese.** Apresenta a Big Idea e ataca o vilão de duas caras.
-> Gancho: "Bonito, rápido e que vende: falam que você escolhe dois. Eu entrego os três."
-> Conteúdo: a crença (precisa de agência e meses), a virada (não é a qualidade que demora), o terceiro caminho (IA do jeito certo, não a IA genérica).
+Decisão do Nicolas (15/jul): os GANCHOS ficam em aberto até a produção; existem inúmeras possibilidades com a tese v2, gerar variações na hora de gravar e escolher pelo Checklist Cara de Viral (P2). O que está fechado é a estrutura e o ângulo de cada um:
 
-**Fixado 2 — A Prova.** A Virada (Ato 2) + um caso real que comprova a tese.
-> Gancho: "Dizem que site com IA é genérico. Esse aqui gerou R$350k."
-> Conteúdo: um projeto real e bonito feito com IA, com resultado. Quebra o preconceito na prática.
+**Fixado 1 — A Tese.** Apresenta a Big Idea v2 e ataca o vilão.
+> Conteúdo: a crença (site com IA virou fácil, virou commodity), a verdade (a IA barateou a execução, não o critério), o terceiro caminho (critério humano + velocidade da máquina). Imagem água/diamante disponível como fecho.
+
+**Fixado 2 — A Prova.** O Ato 2 do arco + case real.
+> Conteúdo: projeto E-Force. Em vez de pedir um site pra máquina, identidade, estratégia e critério na frente dela. +R$350k em vendas quebra o preconceito na prática.
 
 **Fixado 3 — O Caminho.** Pra quem é, como funciona, próximo passo.
-> Gancho: "Founder, é assim que sai o seu site (e por que ele vende)."
-> Conteúdo: quem atende (founders e negócios em crescimento), o processo (briefing, semanas, no ar), CTA (manda "site" no direct).
+> Conteúdo: quem atende (empresas da economia real), a dor (75% julgam a credibilidade pelo design, Stanford), o processo (briefing por call, proposta em 24h, no ar em semanas), CTA único (manda "site" no direct).
 
 ### 7. Destaques ✅ FECHADO
 Atuais: Método · Lifestyle · Me · Cases (capas pretas vazias, perfil novo).
