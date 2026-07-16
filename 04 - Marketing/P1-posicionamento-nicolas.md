@@ -53,15 +53,17 @@ Chave do arco v2: o "Antes" do Nicolas e a crença do mercado hoje são a MESMA 
 
 **Arco v1 (histórico, jun/2026, substituído):** Antes: "achava que site feito com IA era genérico e feio; na época era assim mesmo." · Virada: "o mercado de IA evoluiu e eu evoluí junto; a virada foi aprender a usar do jeito certo." · Missão: "não consigo ficar calado vendo a IA ser julgada pelo trabalho mal feito dos outros."
 
-### 3. Filtro Diário de Coerência ✅ FECHADO
+### 3. Filtro Diário de Coerência ✅ FECHADO — v2 em 15/jul/2026 (aprovado pelo Nicolas)
 
-10 segundos antes de qualquer post. Se travar em alguma, repensa o post.
+10 segundos antes de qualquer post. Se falhar em uma, reescreve e roda as 3 de novo.
 
-1. **Isso defende a minha tese?** (site bonito, rápido e que vende, com IA do jeito certo). Se contradiz, não posta.
-2. **Isso bate em alguma cara do meu vilão?** (a agência lenta e cara, ou a IA preguiçosa e genérica). Se não cutuca nenhuma das duas, é conteúdo neutro e só ocupa espaço.
-3. **Se a pessoa visse só esse post, saberia que eu acredito que IA bem feita entrega o que agência nenhuma entrega?** Se não, acha um jeito melhor de publicar.
+1. **Isso defende a minha tese?** (a IA barateou a execução, não o critério; identidade e pensamento crítico são o que separa site descartável de site que vende). Se contradiz, não posta.
+2. **Isso bate em alguma cara do meu vilão?** (o site-commodity gerado sem critério, ou a agência que cobra preço de diamante por execução que virou água). Se não cutuca nenhuma, é conteúdo neutro e só ocupa espaço.
+3. **Se a pessoa visse só esse post, saberia que eu acredito que o critério humano é o diamante e a execução virou água?** Se não, acha um jeito melhor de publicar.
 
-> ✅ Card de 1 página gerado (`filtro-diario.png`). Salvar no celular e aplicar em todo post.
+> ⚠️ O card `filtro-diario.png` no celular é da v1. Gerar card novo com o texto v2 (identidade IRBIS, preto e laranja) e trocar.
+
+**Filtro v1 (histórico, substituído):** perguntas ancoradas em "site bonito, rápido e que vende" e "IA bem feita entrega o que agência nenhuma entrega".
 
 ---
 
@@ -81,6 +83,7 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 ### 5. Bio ✅ FECHADO
 
 **Nome do perfil (mantém):** Nicolas Cunha / Web Design & IA
+> Reconfirmado pelo Nicolas em 15/jul/2026 já com o ICP "empresas da economia real": dono de empresa tradicional pesquisa "site" e "web design", o nome segue funcionando como campo de busca.
 
 **Bio:**
 > foundermaxxing
