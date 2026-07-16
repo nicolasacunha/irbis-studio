@@ -50,3 +50,63 @@ Protocolo da P2 (JDP) aplicado sobre a lista de 30 perfis de web design que o Ni
 | 28 | amandagrespan | 9.595 | SIM (lento: 9.46k → 9.6k em ~18d = ~1,4%; longe de 15%/90d) | 13/05 140 · 05/05 260 (8 estáticos nos 10; following 1.933 alto) | 47.975 | 0 | DESCARTA |
 | 29 | landingpagelabs | 4.589 | NÃO (1ª pesquisa) | 08/07 88 · 07/07 42 (8 estáticos nos 10; engajamento baixíssimo p/ 4.6k) | 22.945 | 0 | DESCARTA |
 | 30 | epicdigitaloficial | 8.651 | NÃO (1ª pesquisa) | nenhum post com views (todos estáticos, likes 18-97, 0 comments) | 43.255 | 0 | DESCARTA |
+## Rodada 2 — candidatos colhidos por busca (16/jul)
+
+Colheita via DuckDuckGo (site:instagram.com + queries do nicho). 17 candidatos entre ~800 e 100k seguidores, bio PT-BR, dedupe contra rodada 1.
+
+| # | @ | Seguidores | Histórico 90d NJA | Views recentes (data · views) | 5x threshold | Reels ≥5x (últimos 10) | Veredito |
+|---|---|---|---|---|---|---|---|
+| 31 | rodrigolamers | 8.826 | NÃO (1ª pesquisa) | nenhum post com views nos 10 últimos (só likes 20-125; último post 31/05) | 44.130 | 0 | DESCARTA |
+| 32 | leowebsites | 8.390 (snippet DDG) | — | — | — | — | NÃO ENCONTRADO no NJA ("This profile doesn't exist") |
+| 33 | pixcire | 12.693 | NÃO (1ª pesquisa) | quase inativo: último post 02/03/26 (fora da janela 90d); views só 162 (16/01) e 60 (17/05/25) | 63.465 | 0 | DESCARTA |
+| 34 | c2ti.sites | 9.117 | SIM (parcial: 27/06 8.863 → 16/07 9.117 = +2,9% em 19d ≈ +13%/90d extrapolado; abaixo de 15%) | 08/07 109 · 06/07 647 · 01/07 565 (demais estáticos) | 45.585 | 0 | DESCARTA (borderline: crescimento consistente ~13%/90d extrapolado) |
+| 35 | _agenciab2 | 4.917 | SIM (flat/encolhendo: 0 a -1/dia) | nenhum post com views; quase inativo (1 post desde nov/25, likes 1-38) | 24.585 | 0 | DESCARTA |
+| 36 | agenciacria.sites | 3.493 | NÃO (1ª pesquisa) | perfil inativo: último post 14/09/2022; views antigas 97-207 | 17.465 | 0 | DESCARTA |
+| 37 | criativawbdesigner | 1.725 | NÃO (1ª pesquisa) | 06/05 236 · 05/05 258 (demais estáticos, likes 3-13) | 8.625 | 0 | DESCARTA |
+| 38 | laohana | 1.811 | NÃO (1ª pesquisa) | inativa desde 08/09/25 (nenhum post na janela 90d); views antigas 163-518 | 9.055 | 0 | DESCARTA |
+| 39 | soueduardolima.web | 1.546 | NÃO (1ª pesquisa) | nenhum post com views nos 10 últimos (likes 1-15; 2 posts na janela 90d) | 7.730 | 0 | DESCARTA |
+| 40 | thecastro.webdesigner | 1.353 | NÃO (1ª pesquisa) | 08/07 59 · 04/06 129 · 04/06 101 · 04/06 50 · 03/06 2.603 | 6.765 | 0 | DESCARTA |
+| 41 | paperstreet_sites | 1.198 | NÃO (1ª pesquisa) | inativo: último post 08/12/25; nenhum post com views (likes 5-11) | 5.990 | 0 | DESCARTA |
+| 42 | fg.sites | 1.106 | NÃO (1ª pesquisa) | 13/06 2.233 (único com views; 01/06 estático com 364 likes/152 comments) | 5.530 | 0 | DESCARTA |
+| 43 | souigorribeiro | 1.032 | NÃO (1ª pesquisa) | inativo desde 29/09/25 (fora da janela); views antigas 419-3.520, conteúdo pessoal (casamento) | 5.160 | 0 | DESCARTA |
+| 44 | diogines_duarte | 1.093 | NÃO (1ª pesquisa) | inativo desde 21/10/25 (fora da janela); views antigas 226-347 | 5.465 | 0 | DESCARTA |
+| 45 | vinydesigner_ | 987 | NÃO (1ª pesquisa) | último post 24/03/26 (fora da janela 90d); views 242-594 | 4.935 | 0 | DESCARTA |
+| 46 | euvinicius.machado | 802 | NÃO (1ª pesquisa) | nenhum post com views (likes 5-43; últimos posts 11/05 e 07/05) | 4.010 | 0 | DESCARTA |
+| 47 | tigredesignerr | 1.019 (snippet DDG) | — | perfil com 1 post só — sem massa pra análise | — | — | DESCARTA (não analisado no NJA; 1 post) |
+| 48 | canalviverdesites | 3.244 | NÃO (1ª pesquisa) | inativo desde 03/02/25 (fora da janela); views antigas 226-2.063 | 16.220 | 0 | DESCARTA |
+| 49 | n9ne_digital | 2.141 | NÃO (1ª pesquisa) | só 7 posts; views 44 (13/05); likes 1-3 — engajamento quase nulo p/ 2.1k (seguidores comprados?) | 10.705 | 0 | DESCARTA |
+| 50 | henrique.designx | ? | — | — | — | — | NÃO ENCONTRADO no NJA ("We couldn't analyse this profile", 2 tentativas) |
+| 51 | webdeve.com.br | 1.364 | NÃO (1ª pesquisa) | nenhum post com views nos 10 últimos (likes 3-10; ativo, posta semanal) | 6.820 | 0 | DESCARTA |
+| 52 | descomplicandosites | 51.597 | SIM (lento: ~+10-20/dia, 51.3k → 51.6k em 30d ≈ +0,5%/mês; longe de 15%/90d) | 07/07 325 (único com views; demais estáticos, likes 34-697) | 257.985 | 0 | DESCARTA |
+| 53 | mathitobr | 8.151 | SIM (estagnado: 8.16k flat, dias negativos) | nenhum post com views nos 10 últimos (todos estáticos/carrosséis, likes 19-317; posta quase diário) | 40.755 | 0 | DESCARTA |
+| 54 | _gustavocampelo | 78.560 | SIM (forte: 17/06 72.552 → 16/07 78.560 = +8,3% em 29d, ~+200/dia constante ≈ +26%/90d; sem follow/unfollow) | 08/07 500 · 02/07 6.789 · 01/07 23.091 · 26/06 22.118 · antigos: 29/01 540.061 · 15/12 203.152 | 392.800 | 0 na janela (1 fora: 29/01) | ENTRA (15%/90d) — criador de conteúdo frontend/web design, 78k |
+| 55 | inovasitesbrasil.com.br | 3.324 (snippet DDG) | — | — | — | — | NÃO ENCONTRADO no NJA ("This profile doesn't exist") |
+| 56 | _ps_sites | 20.192 | NÃO (1ª pesquisa) | 01/07 217 · 21/06 24 · 20/06 28 · 18/06 283 · 10/06 1.037 (engajamento ínfimo p/ 20k) | 100.960 | 0 | DESCARTA |
+| 57 | webhubeducacao | 1.696 | NÃO (1ª pesquisa) | 14/07 s/views (1.013 likes!) · 08/07 500 · 06/07 992 · 02/07 s/views (4.197 likes!) · 16/06 59.641 (35x) · 10/06 2.094 | 8.480 | 1 confirmado (16/06); +2 prováveis (posts 02/07 e 14/07 com likes 4.197 e 1.013 — likes ≈ ou > nº de seguidores, views não exibidas pelo NJA) | ENTRA (5x, com ressalva: 1 confirmado + 2 inferidos por likes virais; avg likes 1.556 ≈ 92% dos seguidores) |
+| 58 | fernandagoncalves.mentoria | 1.556 (snippet DDG) | — | — | — | — | NÃO ENCONTRADO no NJA ("This profile doesn't exist") |
+| 59 | gabrieldosite | 0 (handle vazio no NJA) | — | — | — | — | DESCARTA (perfil vazio/handle errado) |
+| 60 | aescoladesites | 71.376 | SIM (encolhendo: -10 a -40/dia, 71.6k → 71.4k) | último post com data 18/11/25 no NJA; views antigas 171-726 (ínfimas p/ 71k) | 356.880 | 0 | DESCARTA |
+| 61 | umdesignerchato | 3.291 | NÃO (1ª pesquisa) | 14/05 862 · 06/05 1.528 · 02/05 1.433 · 01/05 13.227 · 29/04 24.218 · 27/04 1.537 · 09/04 12.404 (fora por 8d) | 16.455 | 1 (29/04 24.218; 01/05 13.227 = 4x ficou perto) | DESCARTA (borderline: 1 reel ≥5x + 2 reels ~4x; sem post desde 14/05) |
+| 62 | andrerodridesigner | ? | — | — | — | — | NÃO ENCONTRADO no NJA ("This profile doesn't exist") |
+| 63 | construsitebrasil | 16.786 | SIM (flat/encolhendo: -8 a +6/dia) | 07/07 23 views (único; likes 3-13 p/ 16.7k — engajamento morto) | 83.930 | 0 | DESCARTA |
+| 64 | johnelucas.webdesigner | 869 | NÃO (1ª pesquisa) | só 8 posts; 05/05 45 views; conteúdo misto (gym) | 4.345 | 0 | DESCARTA |
+| 65 | ramonsilva.webdesigner | 938 | NÃO (1ª pesquisa) | 07/07 111 · 03/07 70 · 02/07 40 · 01/07 46 · 25/06 526 · 15/05 93 · 06/05 182 | 4.690 | 0 | DESCARTA |
+| 66 | heitorferreira.web | 5.372 | NÃO (1ª pesquisa) | 24/04 4.586 · 23/04 442 · 22/04 327/439 · 15/04 1.888 (sem post desde 24/04) | 26.860 | 0 | DESCARTA |
+| 67 | landingpageprofissional_ | 6.060 (snippet DDG) | — | — | — | — | NÃO ENCONTRADO no NJA (handle com "_" final; 2 tentativas) |
+
+### Resumo Rodada 2 (16/jul)
+
+- Colhidos: 26 candidatos válidos (DuckDuckGo; Bing bloqueou com CAPTCHA — não resolvido, conforme protocolo).
+- Analisados no NJA: 30 entradas (#31-67), sendo 5 não encontrados/inválidos no NJA.
+- **ENTRA (2):**
+  - **@_gustavocampelo** (78,5k) — critério 15%/90d: +8,3% em 29 dias visíveis (~+200/dia constante, ≈+26%/90d), sem follow/unfollow. Criador de conteúdo frontend/web design.
+  - **@webhubeducacao** (1,7k) — critério 5x COM RESSALVA: 1 reel confirmado 59.641 views (35x) em 16/06 + 2 reels na janela com likes virais (4.197 e 1.013 ≈ ou > nº de seguidores) cujas views o NJA não exibiu. Avg likes 1.556 ≈ 92% dos seguidores. Recomenda-se conferir views desses 2 reels direto no Instagram.
+- **Borderlines:** c2ti.sites (+2,9% em 19d ≈ 13%/90d extrapolado, crescimento orgânico consistente); umdesignerchato (1 reel 24.218 = 7x + 2 reels ~4x, mas sem postar desde 14/05).
+- Aprovados acumulados (com rodada 1): adalalibera + _gustavocampelo + webhubeducacao = **3 de 5**.
+- Padrão do nicho: contas de serviço (agência/freela) são majoritariamente mortas ou sem views; os aprovados são criadores de CONTEÚDO (dicas/aulas de web design e frontend). Próxima rodada deve caçar direto criadores de conteúdo, não prestadores.
+
+### Pendentes de análise
+
+- @henrique.designx e @andrerodridesigner — NJA não conseguiu analisar ("We couldn't analyse this profile"); tentar de novo mais tarde ou direto no Instagram.
+- @landingpageprofissional_ e @fernandagoncalves.mentoria — NJA diz que não existem (handles com "_" ou "." podem quebrar a URL do NJA); conferir manualmente.
+- @leowebsites (8,4k, "Especialista em Sites") — não existe no NJA; perfil parece real no snippet, conferir no Instagram.
