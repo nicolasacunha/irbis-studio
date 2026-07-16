@@ -9,12 +9,31 @@ Protocolo da P2 (JDP) aplicado sobre a lista de 30 perfis de web design que o Ni
 - **27 DESCARTAM.** A lista atual é fraca em crescimento: perfis grandes estagnados (webdesign_786 78k, arthur_designer_canva 79k, _marsdesigner 22k, todos flat), perfis pequenos sem tração, e 2 com cheiro de seguidores comprados (omattheusmedeiros 11,2k seg com 9 likes médios; landingpagelabs 4,6k com 9 likes médios).
 - **Limitação da coleta:** 17 dos 30 perfis nunca tinham sido pesquisados no NJA, então não existia histórico de 90d; o rastreamento deles COMEÇOU agora com esta pesquisa. Re-checar em 2 a 4 semanas: aí o critério de 15% vira computável de verdade.
 
+## LISTA FINAL PROPOSTA (fechada em 16/jul/2026, após 3 rodadas e 75 análises)
+
+Aprovados estritos (3) + borderlines promovidos por falta de pool (2). Aguardando aprovação do Nicolas.
+
+| # | @ | Seg | Critério | Por que entra |
+|---|---|---|---|---|
+| 1 | adalalibera | 5,5k | 15% (janela 5d) | +26,9% em 5 dias rastreados; crescimento NÃO vem de reel: investigar motor (ads? colabs?) |
+| 2 | _gustavocampelo | 78,5k | 15%/90d | ~+200/dia constante; criador de conteúdo frontend/web design |
+| 3 | webhubeducacao | 1,7k | 5x | reel de 59.641 views = 35x os seguidores; conferir 2 reels sem views exibidas |
+| 4 | jorgedaweb | 4,4k | 5x relaxado | 3 reels ≥5x em 90d (578k/50k/48k), só 1 entre os 10 últimos posts |
+| 5 | canalsegredosdodigital | 97,8k | borderline | ~+5,5%/90d; dicas de "criar site com IA"; virais antigos de 200-300k views |
+
+Benchmark de formato FORA da faixa (não entra na lista, serve de referência): @inventormiguel (317k, ~+15%/mês, dicas de IA/criação de sites) e @oreidosites (211k, ~9%/90d).
+
 ## Próximos passos (protocolo P2)
 
-1. A lista final pede 5 perfis em crescimento; temos 1 (+1 borderline). Rodar a Etapa A do garimpo pra completar: lupa com 3 palavras-chave, "Sugestões para você" do maior concorrente, aba Reels >100k views do nicho.
-2. Dissecar os reels do @jorgedaweb (estrutura, 1º corte, gancho, música) — é o único da lista com viral recente comprovado no nicho.
+1. Validar a lista final com o Nicolas (2 dos 5 entraram por critério relaxado).
+2. Dissecar os reels do @jorgedaweb e do @webhubeducacao (estrutura, 1º corte, gancho, música): são os virais recentes do nicho na faixa.
 3. Entender o motor de crescimento do @adalalibera (não é reel; olhar stories, colabs, ads library).
-4. Re-rodar o NJA nos 30 em ~2 semanas com histórico acumulando.
+4. Re-rodar o NJA nos aprovados em ~2 semanas: o rastreamento de histórico começou agora, aí o critério de 15%/90d vira real.
+5. Se quiser engrossar o pool: as "Sugestões para você" do Instagram (seguindo os aprovados) e a aba Reels por palavra-chave exigem sessão logada; buscador externo esgotou.
+
+## Diagnóstico estratégico do nicho (3 rodadas)
+
+Prestador de serviço de web design BR está estagnado no Instagram quase em peso (portfólio estático, sem views). Quem cresce é quem ENSINA: criadores de conteúdo de dicas/aulas de sites, frontend e IA. Pro conteúdo do Nicolas: formato "dica/aula com opinião" tem tração; "portfólio" não.
 
 ## Tabela completa
 
@@ -110,3 +129,32 @@ Colheita via DuckDuckGo (site:instagram.com + queries do nicho). 17 candidatos e
 - @henrique.designx e @andrerodridesigner — NJA não conseguiu analisar ("We couldn't analyse this profile"); tentar de novo mais tarde ou direto no Instagram.
 - @landingpageprofissional_ e @fernandagoncalves.mentoria — NJA diz que não existem (handles com "_" ou "." podem quebrar a URL do NJA); conferir manualmente.
 - @leowebsites (8,4k, "Especialista em Sites") — não existe no NJA; perfil parece real no snippet, conferir no Instagram.
+## Rodada 3 — criadores de conteúdo (16/jul)
+
+| # | @ | Seguidores | Histórico 90d NJA | Views recentes (data · views) | 5x threshold | Reels ≥5x (últimos 10) | Veredito |
+|---|---|---|---|---|---|---|---|
+| 68 | henrique.designx | ? | — | — | — | — | NÃO ENCONTRADO no NJA ("We couldn't analyse this profile", 3ª tentativa) — desistir do NJA, conferir direto no IG |
+| 69 | andrerodridesigner | ? | — | — | — | — | NÃO EXISTE no NJA ("This profile doesn't exist", 2ª tentativa) — handle provavelmente errado |
+| 70 | oreidosites | 211.280 | SIM (+2,6% em 25d: 206k → 211k ≈ ~9%/90d) | 12/07 10.149 likes? (sem views claras); posts diários com 1-32k interações | — | — | DESCARTA (FORA DA FAIXA: >100k seguidores; crescimento ~9%/90d < 15% de todo modo) |
+| 71 | arielefront | ? | — | — | — | — | NÃO EXISTE no NJA ("This profile doesn't exist") |
+| 72 | webdini.dev | ? | — | — | — | — | NÃO EXISTE no NJA ("This profile doesn't exist"; perfil real no IG segundo DDG — conferir manualmente) |
+| 73 | wipsites.com.br | 3.852 | SIM (flat total: 0 seguidores/dia em todo o histórico visível) | nenhum post com views na janela 90d (likes 0-7; views antigas só de 2023) | 19.260 | 0 | DESCARTA |
+| 74 | sujeitoprogramador | 167.658 | SIM (flat: +133/mês ≈ +0,08%, com dias negativos) | 03/07 4.853 · 03/07 4.275 · 06/07 2.398 (demais sem views; likes 173-734 p/ 167k) | — | 0 | DESCARTA (FORA DA FAIXA: >100k; flat de todo modo) |
+| 75 | oprogramadordofuturo | 2 | — | — | — | — | DESCARTA (handle chutado p/ "O Programador Do Futuro" caiu em perfil vazio de 2 seguidores; reel original indisponível) |
+| 76 | riquelme.dev | 784 | NÃO (1ª pesquisa) | 07/06 145 · 06/02 1.294 (fora janela) · demais sem views (likes 19-77) | 3.920 | 0 | DESCARTA (abaixo de 800 seguidores; engajamento baixo) |
+| 77 | islamsousa | 6.001.433 | SIM (+8,5k/mês) | posts 7-28k likes | — | — | DESCARTA (FORA DA FAIXA: 6M seguidores; criador de dicas tech genérico) |
+| 78 | sjempreendedor.ia | 20.640 | NÃO (1ª pesquisa) | 06/07 1.880 · 03/07 1.556 · 20/06 786 · 30/05 453 · 29/05 771 (viral 696k em 09/02, FORA da janela) | 103.200 | 0 | DESCARTA (conteúdo é palestras/eventos locais, não web design) |
+| 79 | inventormiguel | 317.527 | SIM (crescendo forte: 275k → 317k em 23d ≈ +15%/mês) | posts diários, likes 200-3.800 | — | — | DESCARTA (FORA DA FAIXA: >100k; pena — cresce ~15%/mês, dicas de IA/sites) |
+| 80 | technatela | 337.085 | SIM (flat: +70/mês, dias negativos) | likes 19-1.438; nicho smartphone/iPhone | — | — | DESCARTA (FORA DA FAIXA: >100k; nicho tech genérico, flat) |
+| 81 | darlanevandro | 29.047 | SIM (quase flat: +5/dia ≈ +1,5%/90d) | nenhum post com views nos 10 últimos (likes 10-33; criador Canva/sites) | 145.235 | 0 | DESCARTA |
+| 82 | canalsegredosdodigital | 97.839 | SIM (lento: +836 em 14d ≈ +0,86% ≈ +5,5%/90d extrapolado) | nenhum post com views na janela (likes 10-320; virais 207k e 316k são de dez/24 e jan/25, FORA da janela) | 489.195 | 0 | DESCARTA (borderline fraco: crescimento ~5,5%/90d, na faixa 5-15%; dicas de ferramentas de IA/criar site com IA) |
+
+### Resumo Rodada 3 (16/jul)
+
+- Buscas DDG: 5/5 usadas; 2 renderam pouco. Fonte extra: página de tópico instagram.com/popular/como-criar-um-site-gratuito/ (lista criadores; atenção: número exibido é VIEWS do reel, não seguidores).
+- Análises NJA: 15 entradas (#68-82), sendo 5 não encontrados/inválidos e 5 FORA DA FAIXA (>100k: oreidosites 211k, sujeitoprogramador 167k, islamsousa 6M, inventormiguel 317k, technatela 337k).
+- **ENTRA: 0 nesta rodada.**
+- **Borderline:** canalsegredosdodigital (97,8k, na faixa; +5,5%/90d extrapolado; criador de dicas "criar site com IA" mas sem views na janela).
+- Nota: inventormiguel (317k) cresce ~15%/MÊS com dicas de IA/sites — fora da faixa de 800-100k, mas é a melhor referência de formato do subtipo que cresce.
+- Re-tentativas: henrique.designx (3ª falha no NJA) e andrerodridesigner (handle não existe) — abandonar via NJA.
+- Aprovados acumulados (rodadas 1-3): adalalibera + _gustavocampelo + webhubeducacao = 3 de 5.
