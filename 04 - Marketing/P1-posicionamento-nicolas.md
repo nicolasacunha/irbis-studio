@@ -39,15 +39,19 @@ Posição do Nicolas: o terceiro caminho. Critério humano + execução com IA.
 
 **Tese v1 (histórico, jun/2026, substituída):** "A maioria acha que pra ter site bonito e que vende tem que esperar meses e pagar agência. A verdade é que isso é problema da agência, não do trabalho. Com IA eu entrego bonito, rápido e vendendo. Sozinho, em semanas." / Versão falada v1: "Bonito, rápido e que vende. Falam que você escolhe dois. Eu entrego os três."
 
-### 2. Arco de 3 Atos ✅ FECHADO
+### 2. Arco de 3 Atos ✅ FECHADO — v2 em 15/jul/2026 (aprovado pelo Nicolas)
 
-**Ato 1 (Antes):** Quando comecei a estudar IA, eu também achava que site feito com IA era genérico e feio. E não tava errado: na época era assim mesmo.
+Chave do arco v2: o "Antes" do Nicolas e a crença do mercado hoje são a MESMA mentira em dois formatos. Ele achava que a ferramenta era o teto ("nunca vou fazer site bom com IA"); o mercado acha que a ferramenta é o atalho ("é só pedir"). Os dois atribuem o resultado à ferramenta, não ao critério.
 
-**Ato 2 (Virada):** O mercado de IA evoluiu rápido e eu evoluí junto. O que era genérico virou capaz de entregar site bonito, sério e que vende. A virada não foi a IA em si, foi aprender a usar do jeito certo.
+**Ato 1 (Antes):** Quando comecei a criar site com IA, saía tudo feio e genérico, e eu achava que nunca ia conseguir fazer um site bom desse jeito. Eu cometia o mesmo erro que o mercado comete hoje: achar que o resultado vem da ferramenta.
 
-**Ato 3 (Missão):** Me incomoda que muita gente ainda ache que site com IA é genérico e ultrapassado, quando o problema é não saber fazer direito. Não consigo ficar calado vendo a IA ser julgada pelo trabalho mal feito dos outros.
+**Ato 2 (Virada):** A virada foi o projeto da E-Force: em vez de pedir um site pra máquina, eu coloquei identidade, estratégia e critério na frente dela. Saiu um site que gerou mais de R$350 mil em vendas.
 
-> Vilão fechado na versão de duas caras (ver item 1).
+**Ato 3 (Missão):** Hoje a internet está inundando de site-commodity, e todo mundo acha que é isso que a IA entrega. Não consigo ficar calado: com pensamento humano na frente, a IA entrega site com identidade, e eu provo isso trabalhando.
+
+**Onde cada ato vive:** Antes → stories de conexão e abertura de sequência de aquecimento · Virada → fixado de prova e apresentação do método · Missão → bio, CTAs e conversa de venda.
+
+**Arco v1 (histórico, jun/2026, substituído):** Antes: "achava que site feito com IA era genérico e feio; na época era assim mesmo." · Virada: "o mercado de IA evoluiu e eu evoluí junto; a virada foi aprender a usar do jeito certo." · Missão: "não consigo ficar calado vendo a IA ser julgada pelo trabalho mal feito dos outros."
 
 ### 3. Filtro Diário de Coerência ✅ FECHADO
 
