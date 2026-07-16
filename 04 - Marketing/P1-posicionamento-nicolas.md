@@ -85,14 +85,18 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 **Nome do perfil (mantém):** Nicolas Cunha / Web Design & IA
 > Reconfirmado pelo Nicolas em 15/jul/2026 já com o ICP "empresas da economia real": dono de empresa tradicional pesquisa "site" e "web design", o nome segue funcionando como campo de busca.
 
-**Bio:**
-> foundermaxxing
-> Site bonito, rápido e que vende. Nem agência lenta, nem IA genérica.
-> +R$350k gerados pra founders.
-> Manda "site" no direct pra começar.
+**Bio v2 (aprovada pelo Nicolas em 15/jul/2026, opção A):**
+> Sites com identidade pra empresas da economia real.
+> A IA executa. O critério é meu.
+> +R$350k em vendas gerados pra clientes.
+> Manda "site" no direct.
 > 🔗 irbis.com.br
 
-**Lógica:** "foundermaxxing" fica como identidade/movimento (único, ninguém tem). A clareza do que ele faz vive no nome do perfil. A linha de valor carrega a tese e o vilão de duas caras. CTA por DM com gatilho ("site"), porque venda high-ticket fecha em conversa, não no site. O link (irbis.com.br) é a prova viva da tese.
+**Lógica:** linha 1 nomeia o ICP novo (empresas da economia real) na cara; linha 2 comprime a tese v2 em 7 palavras; linha 3 é a prova (+R$350k, único número afirmável); CTA por DM com gatilho ("site"), porque venda high-ticket fecha em conversa. Nota de precisão: "pra clientes" no plural segue o precedente da bio v1 ("gerados pra founders"); a grafia estrita seria "pra um cliente" (E-Force é o único case com número). Se o Nicolas quiser apertar, trocar só essa palavra.
+
+**Bio v1 (histórico, substituída em 15/jul/2026):**
+> foundermaxxing / Site bonito, rápido e que vende. Nem agência lenta, nem IA genérica. / +R$350k gerados pra founders. / Manda "site" no direct pra começar. / 🔗 irbis.com.br
+> Motivo da troca: "foundermaxxing" é código de bolha startup e o ICP virou empresa da economia real; a linha de valor era a tese v1.
 
 ### 6. Posts Fixados ✅ FECHADO (estrutura)
 
