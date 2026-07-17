@@ -14,7 +14,8 @@ Regras fixas do JDP (não adaptáveis): estruturas PAS / ADP / Loop Aberto; Chec
 1. Invoque a skill `irbis-guarda-pivot` (fatos afirmáveis) e a `irbis-brand-voice` (voz, camada P1).
 2. Leia `04 - Marketing/P1-posicionamento-nicolas.md` — tese v2 (commodity x critério, água x diamante), vilão de duas caras, Filtro Diário v2, pilares, ICP = **empresas da economia real** (decisão de 15/jul/2026).
 3. Leia `04 - Marketing/garimpo-concorrencia-p2.md` — lista final de modelagem (jorgedaweb, webhubeducacao, _gustavocampelo, adalalibera, canalsegredosdodigital) e o diagnóstico: no nicho, **quem ensina cresce; portfólio estático não**.
-4. Leia `04 - Marketing/roteiros-diarios/_indice.md` (se não existir, crie com cabeçalho de tabela: data | pilar | tema | estrutura). Ele evita repetição e controla o rodízio.
+4. Leia `04 - Marketing/banco-de-ganchos.md` — banco de 90+ ganchos virais reais do nicho (com métrica, mecanismo e fonte), regras transversais e Top 12 adaptado à tese. É a matéria-prima obrigatória dos ganchos do dia.
+5. Leia `04 - Marketing/roteiros-diarios/_indice.md` (se não existir, crie com cabeçalho de tabela: data | pilar | tema | estrutura). Ele evita repetição e controla o rodízio.
 
 Fatos duros que valem sempre: prova social só "+R$350k em vendas" (E-Force); "3 semanas" só amarrado ao case E-Force; NUNCA citar preço nem prazo médio; NUNCA "+500", "1,8x", Adash ou Eduboxs; CTA único: manda "site" no direct.
 
