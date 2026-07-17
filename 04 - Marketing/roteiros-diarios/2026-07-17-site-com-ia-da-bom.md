@@ -7,11 +7,13 @@
 - **Estrutura:** Loop Aberto (promessa no gancho, tensão em partes, fechamento + CTA)
 - **Duração alvo:** 40s · Formato: rosto na câmera + texto na tela (sem edição de imagens nesta edição)
 
-## Ganchos (escolher 1 na gravação)
+## Ganchos (escolher 1 na gravação; v2 com o regime de gancho liberado)
 
-1. "Dono de negócio me perguntou: site feito com IA dá bom? Depende de uma coisa só."
-2. "Todo mundo hoje consegue gerar um site em 10 minutos. E é esse o problema."
-3. "Dá pra saber em 5 segundos se um site saiu de IA preguiçosa. O seu cliente também percebe."
+1. **Primeira pessoa, pele em jogo:** "Eu faço site com IA. E tô te dizendo: a maioria dos sites feitos com IA é lixo."
+2. **Medo/status:** "Se o seu site parece que saiu do ChatGPT, o seu cliente percebeu antes de você."
+3. **Polêmica assumida:** "Site de IA tem cheiro. E o seu cliente sente em 5 segundos."
+4. **Inimigo dos dois lados:** "Agência cobrando caro e IA gerando de graça podem te entregar o MESMO site ruim."
+5. **Curiosidade/loop:** "Seu concorrente fez o site dele em 10 minutos. Isso é a melhor notícia do seu ano."
 
 ## Blocos
 

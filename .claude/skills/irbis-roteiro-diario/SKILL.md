@@ -34,7 +34,8 @@ Fatos duros que valem sempre: prova social só "+R$350k em vendas" (E-Force); "3
 
 1. Escolha a estrutura que melhor serve o argumento: **PAS** (dor nomeada com precisão → agitação → solução), **ADP** (antes com números → depois concreto → ponte) ou **Loop Aberto** (promessa nos 3s → tensão em partes → fechamento + CTA).
 2. Formato do roteiro: tabela de blocos com tempo (0-3s gancho, desenvolvimento, UMA virada no meio, CTA), fala completa, texto na tela, direção de corte (corte a cada frase nos primeiros 10s; 1º frame = rosto com emoção ou texto de impacto, nunca logo).
-3. **Ganchos: gere 3 variações** (decisão do Nicolas de 16/jul: ele escolhe na produção). Cada uma com número, pergunta ou afirmação polêmica, falável em 3s.
+3. **Ganchos: gere 5 variações em estilos DIFERENTES** (decisão do Nicolas de 16/jul: ele escolhe na produção): (a) polêmica assumida, (b) inimigo nomeado, (c) curiosidade/loop, (d) primeira pessoa com pele em jogo ("eu faço site com IA e tô te dizendo..."), (e) medo/status ("seu cliente percebeu antes de você"). Cada uma falável em 3s, com número, pergunta ou afirmação polêmica.
+   **⚠️ REGIME DO GANCHO (decisão do Nicolas, 17/jul/2026): o gancho é EXCEÇÃO às regras anti-slop de prosa.** No gancho (e só nele) são permitidos e desejados: contraste binário, extremos ("todo mundo", "ninguém"), drama, frase de efeito quotable. Gancho asséptico é gancho morto. O que permanece inegociável mesmo no gancho: número estatístico só com fonte real (número retórico de estrutura como "3 sinais" ou "5 segundos" é livre), prova social só +R$350k, sem preço/prazo, sem travessão no texto escrito, e o Filtro Diário v2.
 4. Legenda pronta (3 linhas: provocação/resultado · contexto · CTA discreto) e instrução de música (faixa de 10 mil a 500 mil usos; emoção: dinâmica pra dica, storytelling pra case).
 5. CTA único e específico. Nunca "curte, salva e compartilha".
 
