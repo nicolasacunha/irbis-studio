@@ -16,7 +16,7 @@
 - **Nenhum documento é enviado a terceiros sem aprovação explícita do Nicolas nesta conversa.** Os entregáveis são rascunhos prontos para aprovação.
 - Custo total da fase: **R$ 0**.
 - Decisão de IP (spec, decisão 1): **código do cliente após quitação total** + oferta de acompanhamento mensal em **2 pacotes**; valores dos pacotes NÃO são definidos neste plano (pricing precisa do aval do Nicolas; o contrato referencia "proposta comercial vigente").
-- Termos já fixados no caso QG OS: entrada antes de codar; manutenção cobre só ajuste/correção; hora excedente **R$ 180/h**; feature nova = aditivo.
+- Termos já fixados no caso QG OS: entrada antes de codar; manutenção cobre só ajuste/correção; feature nova = aditivo. **Valores: os do PDF ENVIADO ao cliente em 17/jul — setup R$ 2.997, manutenção R$ 197/mês, excedente R$ 127/h, prazo "10 dias úteis"** (corrigido em 20/jul após leitura do PDF na Task 2; escopo interno de 16/jul citava R$ 297/R$ 180 e está superado para fins de contrato; pendente confirmação do Nicolas de que a diferença foi intencional).
 - Commit ao fim de cada task (regra da casa; usar `/usr/bin/git`).
 - Fatos afirmados sobre a IRBIS passam pelo crivo da skill `irbis-guarda-pivot` (ex.: nada de "+500", "LTV 1,8x").
 
@@ -129,7 +129,7 @@
 - Consumes: Tasks 1, 2, 3, 5.
 
 - [ ] **Step 1: Redigir o checklist operacional** que o Nicolas executa no dia em que um cliente fundador disser sim: (1) preencher contrato com dados do cliente + anexar Anexo I do projeto; (2) enviar para revisão/assinatura via Gov.br (guia Task 5); (3) após assinado, cobrar a entrada (PIX + recibo RPA da Task 3, com a explicação para o contador do cliente); (4) confirmar entrada caiu → agendar kickoff em até 48h; (5) disparar gatilho da Fase 2 (abrir LTDA com a entrada) e da Fase 3 (kit de onboarding). Caso mãe: anexo de escopo dela ainda não existe; o checklist aponta a dependência (pesquisa do Nicolas → proposta → anexo).
-- [ ] **Step 2: Verificação de ponta a ponta (dry run):** simular o fluxo com o caso QG OS — todos os documentos referenciados existem no repo e os valores batem (R$ 2.997 entrada/setup, R$ 297/mês, R$ 180/h). Qualquer referência quebrada: corrigir antes do commit.
+- [ ] **Step 2: Verificação de ponta a ponta (dry run):** simular o fluxo com o caso QG OS — todos os documentos referenciados existem no repo e os valores batem com o PDF enviado ao cliente (R$ 2.997 setup, R$ 197/mês, R$ 127/h). O checklist deve mandar preencher TODOS os campos {{...}} do contrato (são 11, não só os 6 originais: incluem CPF/endereço do prestador, endereço do contratante, comarca e cidade). Qualquer referência quebrada: corrigir antes do commit.
 - [ ] **Step 3: Commit**
 
 ```bash
