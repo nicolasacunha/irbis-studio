@@ -39,7 +39,7 @@ Depois que os dois lados assinarem, confirme a validade das assinaturas em valid
 
 Conta nível bronze não assina documentos. Para subir de nível, o cliente tem três caminhos práticos:
 
-1. Pelo aplicativo Gov.br no celular, usando reconhecimento facial (o app compara o rosto com a foto do documento na base da Receita Federal).
+1. Pelo aplicativo Gov.br no celular, usando reconhecimento facial (o app compara seu rosto com a foto de um documento oficial que você já tem cadastrado).
 2. Pela conta do banco, se o banco do cliente é credenciado ao Gov.br (a maioria dos grandes bancos é). Nesse caso o cliente entra no app do banco e autoriza a validação da identidade por lá.
 3. Presencialmente, em uma unidade credenciada (Correios, banco ou órgão público que faça validação de identidade Gov.br).
 
