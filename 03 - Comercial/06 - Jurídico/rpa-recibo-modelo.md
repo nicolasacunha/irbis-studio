@@ -28,7 +28,7 @@ Este pagamento remunera um prestador pessoa física, sem CNPJ, contratado por me
 
 Pagamento a autônomo pessoa física costuma envolver retenções e encargos de responsabilidade da empresa tomadora, entre eles INSS, IRRF conforme a tabela vigente e ISS conforme a legislação do município da empresa. Este documento não calcula esses valores: quem apura alíquotas, bases de cálculo e obrigações acessórias é o contador da empresa tomadora, conforme o regime tributário e o município aplicáveis.
 
-O contrato de prestação de serviços que ampara este pagamento está disponível e pode ser encaminhado a pedido, para conferência de objeto, valor e partes.
+Nicolas envia o contrato de prestação de serviços que ampara este pagamento a pedido, para conferência de objeto, valor e partes.
 
 A partir da abertura do CNPJ do prestador (Fase 2 deste projeto), a empresa tomadora passa a pagar contra nota fiscal, e este modelo de recibo deixa de se aplicar.
 
