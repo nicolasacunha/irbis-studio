@@ -81,6 +81,23 @@
       ],
       "coverImage": "/blog/assets/covers/erros-site-01.png",
       "readingTimeMin": 3
+    },
+    {
+      "slug": "agentes-ia-compram-sozinhos-site-pronto",
+      "title": "Agentes de IA Já Compram Sozinhos: Seu Site Está Pronto pra Isso?",
+      "description": "Agentes como o ChatGPT Atlas e o Perplexity Comet já navegam e compram sozinhos. Veja se a estrutura do seu site deixa a tarefa travada ou completa.",
+      "dateISO": "2026-07-20",
+      "pilar": "tendencias",
+      "keywords": [
+        "agentes de IA",
+        "AI browser agents",
+        "site pronto para IA",
+        "agentic commerce",
+        "estrutura de site para agente",
+        "tendências de site 2026"
+      ],
+      "coverImage": "/blog/assets/covers/tendencias-01.png",
+      "readingTimeMin": 4
     }
   ]
 }
