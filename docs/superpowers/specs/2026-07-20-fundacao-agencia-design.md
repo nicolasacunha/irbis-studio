@@ -61,12 +61,12 @@
 
 Só inicia quando mãe E QG OS estiverem assinados (gate do council de 20/jul). Conteúdo: oferta empacotada de IA (pacotes, pricing, SLA), posicionamento, rebranding do site, prospecção estruturada no G4 pago. Se nenhum contrato assinar até ~19/ago, esta fase morre e o escopo de sites continua. Design detalhado desta fase será feito quando o gate abrir — não agora.
 
-## Decisões em aberto
+## Decisões (resolvidas pelo Nicolas em 20/jul/2026)
 
-1. **Propriedade intelectual do código** (Fase 1): (a) código do cliente após quitação total, ou (b) licença de uso perpétua e código da IRBIS (melhor para produtizar vertical depois, mais difícil de vender). Claude apresenta recomendação na redação do contrato; Nicolas decide.
-2. **Enquadramento tributário** — depende da resposta do contador (Fase 1).
-3. **Status da assinatura do Banco MCP** — define o modo de registro da Fase 2.
-4. **Portal do cliente robusto** — fica fora do escopo até a Fase 4; v1 é página estática por cliente.
+1. **Propriedade intelectual — DECIDIDO (opção a):** o código é do cliente após quitação total. A monetização recorrente vem do **acompanhamento mensal em 2 pacotes** (mesmo modelo de recorrência da IRBIS em `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`, adaptado a software: ajuste/correção + evolução). O contrato da Fase 1 reflete isso: cessão de código na quitação + oferta dos 2 pacotes de manutenção como cláusula/anexo.
+2. **Enquadramento tributário — ADIADO** por decisão do Nicolas: define com o contador quando a resposta da Fase 1 chegar.
+3. **Banco MCP — ATIVO e útil (dono, 20/jul):** registro da Fase 2 usa Open Finance/Banco MCP direto na conta PJ. Sai da lista de subtração.
+4. **Portal do cliente — trava confirmada:** v1 = página simples por cliente nas Fases 1–3; a versão robusta é objetivo declarado do Nicolas para a Fase 4 (candidata a fazer parte da oferta).
 
 ## Riscos nomeados
 
