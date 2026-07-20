@@ -83,9 +83,9 @@ Os itens abaixo não estão incluídos neste contrato. Se a QG quiser qualquer u
 
 ## Prazo
 
-Prazo estimado de entrega: 10 dias úteis, contados a partir da confirmação da entrada e do recebimento de tudo que depender da QG (acessos às contas de Vercel e Supabase, informações dos clientes e demais materiais necessários).
+Prazo estimado de entrega: 10 dias úteis, contados a partir da confirmação da entrada.
 
-Esse prazo segue a Cláusula 6 do contrato: sempre que a entrega parar à espera de algo da QG, o prazo fica pausado e volta a correr quando o item chega.
+O prazo segue a Cláusula 6 do contrato: sempre que a entrega parar à espera de algo da QG (acessos às contas de Vercel e Supabase, informações dos clientes e demais materiais necessários), o prazo fica pausado e volta a correr quando a pendência for resolvida.
 
 ## Entrega
 
