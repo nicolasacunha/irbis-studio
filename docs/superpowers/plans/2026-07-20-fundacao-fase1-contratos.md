@@ -64,11 +64,11 @@
 - Read: `02 - Projetos/QG Group/QG OS/escopo.md`
 
 **Interfaces:**
-- Consumes: campos do contrato da Task 1 (preenche `{{VALOR_SETUP}}` = R$ 2.997, `{{VALOR_HORA_EXCEDENTE}}` = R$ 180/h).
+- Consumes: campos do contrato da Task 1 (preenche `{{VALOR_SETUP}}` = R$ 2.997, `{{VALOR_HORA_EXCEDENTE}}` = R$ 127/h).
 - Produces: anexo pronto para o dia do "sim" do Pimentel.
 
 - [ ] **Step 1: Converter `escopo.md` em anexo contratual**: módulos 1 a 6 do escopo fechado (auth/permissões, kanban, dashboard, clientes + chat 5 canais, conteúdos, calendário simples SE confirmado), itens explicitamente **fora de escopo** (portal do cliente = Modelo 2/aditivo; integrações Trello/Discord/Ads), anexos permitidos (texto, imagem, documento, links; sem vídeo), notificação por badge. NÃO incluir o som de mensagem (presente-surpresa, fica fora do papel). Cronograma: proposto pelo Prestador conforme agenda, sem data rígida (posição do escopo de 16/jul).
-- [ ] **Step 2: Verificar** que nenhum item do anexo contradiz a proposta comercial enviada dia 17/jul (PDF `02 - Projetos/QG Group/QG OS/IRBIS — Proposta Comercial QG OS.pdf`): valores R$ 2.997 + R$ 297/mês + R$ 180/h idênticos.
+- [ ] **Step 2: Verificar** que nenhum item do anexo contradiz a proposta comercial enviada dia 17/jul (PDF `02 - Projetos/QG Group/QG OS/IRBIS — Proposta Comercial QG OS.pdf`): valores R$ 2.997 + R$ 197/mês + R$ 127/h idênticos (os do PDF enviado ao cliente).
 - [ ] **Step 3: Commit**
 
 ```bash

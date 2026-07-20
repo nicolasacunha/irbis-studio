@@ -6,7 +6,7 @@ Modelo IRBIS para a Fase 1, período em que Nicolas Cunha presta serviços de de
 
 ## Parte 1. Modelo de recibo
 
-Eu, **{{NOME_PRESTADOR}}**, portador do CPF nº {{CPF_PRESTADOR}}, residente e domiciliado em {{ENDERECO_PRESTADOR}}, inscrito no NIT/PIS sob nº {{NIT_PIS_PRESTADOR}} (quando houver), declaro ter recebido de **{{RAZAO_SOCIAL_TOMADOR}}**, pessoa jurídica inscrita no CNPJ sob nº {{CNPJ_TOMADOR}}, a quantia de {{VALOR_BRUTO}} ({{VALOR_BRUTO_POR_EXTENSO}}), referente a serviços de desenvolvimento de software conforme contrato de {{DATA_CONTRATO, formato DD/MM/AAAA}}.
+Eu, **{{NOME_PRESTADOR}}**, portador do CPF nº {{CPF_PRESTADOR}}, residente e domiciliado em {{ENDERECO_PRESTADOR}}, inscrito no NIT/PIS sob nº {{NIT_PIS_PRESTADOR}} (quando houver), declaro ter recebido de **{{RAZAO_SOCIAL_TOMADOR}}**, pessoa jurídica inscrita no CNPJ sob nº {{CNPJ_TOMADOR}}, a quantia de {{VALOR_BRUTO}} ({{VALOR_BRUTO_POR_EXTENSO}}), referente a serviços de desenvolvimento de software conforme contrato de {{DATA_CONTRATO}} (data no formato DD/MM/AAAA).
 
 Valor bruto, antes de qualquer retenção devida pela empresa tomadora.
 

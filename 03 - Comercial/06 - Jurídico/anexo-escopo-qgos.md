@@ -68,11 +68,11 @@ O sistema roda em contas de hospedagem no nome da QG, recomendação Vercel para
 
 ---
 
-## O que fica fora deste escopo (aditivo)
+## O que fica fora deste escopo
 
-Os itens abaixo não estão incluídos neste contrato. Se a QG quiser qualquer um deles, cada um é orçado e contratado à parte, conforme a Cláusula 4 do contrato.
+Os itens abaixo não estão incluídos neste contrato. Cada bullet indica seu próprio status.
 
-- **Portal do cliente final**: acesso próprio do cliente da QG ao sistema, com visão tipo "Trello do cliente" e aprovação de entregas.
+- **Portal do cliente final**: acesso próprio do cliente da QG ao sistema, com visão tipo "Trello do cliente" e aprovação de entregas. Possível via aditivo (Modelo 2), conforme a Cláusula 4 do contrato.
 - **Calendário com integração de agenda**: conexão com Google Agenda ou similar, reuniões e convites.
 - **Integração com Trello e Discord**: o QG OS substitui essas ferramentas, não se conecta a elas.
 - **Integração com Google Ads e Meta Ads**: o canal Campanha dentro de cada cliente é só um espaço de chat. Painel de anúncios não faz parte deste sistema.

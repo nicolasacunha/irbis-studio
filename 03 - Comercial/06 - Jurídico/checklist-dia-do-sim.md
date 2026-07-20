@@ -32,6 +32,8 @@ Depois de preencher os 11 campos, anexe o Anexo I do projeto (o documento de esc
 
 **Aviso sobre valores do caso QG OS.** Para o contrato do Arialdo/QG OS, use os valores do PDF da proposta comercial enviada a ele em 17/jul (pasta `02 - Projetos/QG Group/QG OS/`): `{{VALOR_SETUP}}` = R$ 2.997, manutenção mensal R$ 197 (vai na proposta comercial vigente, não no contrato), `{{VALOR_HORA_EXCEDENTE}}` = R$ 127/h, prazo 10 dias úteis a partir da confirmação da entrada. Não use os valores R$ 297/R$ 180 de um escopo interno anterior: estão superados para fins de contrato. Esses valores aguardam confirmação final do Nicolas antes de irem para o documento assinado.
 
+A proposta enviada oferece pagamento à vista, 50/50 ou parcelado, à escolha do cliente. Antes de preencher `{{MARCOS_PAGAMENTO}}`, Nicolas confirma com o cliente a modalidade escolhida e o valor exato da entrada.
+
 ## Passo 2. Enviar para assinatura via Gov.br
 
 Siga `guia-assinatura-govbr.md` de ponta a ponta:
@@ -65,7 +67,7 @@ O Prestador não começa nenhum desenvolvimento antes de a entrada cair na conta
 
 A entrada confirmada dispara duas ações fora deste checklist, cada uma com plano próprio:
 
-1. **Fase 2 (dinheiro limpo).** A entrada é o evento que autoriza abrir a LTDA e a conta PJ. Se `mensagem-contador.md` ainda não foi enviada ao contador do Nicolas, envie agora (com aprovação dele) para destravar a resposta sobre holding, Simples Nacional e abertura de LTDA. Essa fase é detalhada em `docs/superpowers/plans/2026-07-20-fundacao-fase1-contratos.md`.
+1. **Fase 2 (dinheiro limpo).** A entrada é o evento que autoriza abrir a LTDA e a conta PJ. Se `mensagem-contador.md` ainda não foi enviada ao contador do Nicolas, envie agora (com aprovação dele) para destravar a resposta sobre holding, Simples Nacional e abertura de LTDA. Essa fase é detalhada em `docs/superpowers/specs/2026-07-20-fundacao-agencia-design.md` (seção "Fase 2 - Dinheiro limpo").
 2. **Fase 3 (onboarding).** A primeira assinatura dispara o kit de onboarding pós-contrato (documento de boas-vindas, cadência de comunicação, kickoff, calls recorrentes). Esse kit ainda não existe como documento pronto: ganha plano próprio quando o gatilho disparar.
 
 Nenhuma das duas fases atrasa o kickoff do Passo 4. Elas correm em paralelo, puxadas pelo mesmo evento.
