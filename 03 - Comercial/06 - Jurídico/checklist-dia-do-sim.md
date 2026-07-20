@@ -30,7 +30,7 @@ Dados do Contratante e do projeto, específicos de cada cliente:
 
 Depois de preencher os 11 campos, anexe o Anexo I do projeto (o documento de escopo correspondente ao cliente) como parte integrante do contrato, conforme a Cláusula 2.
 
-**Aviso sobre valores do caso QG OS.** Para o contrato do Arialdo/QG OS, use os valores do PDF da proposta comercial enviada a ele em 17/jul (pasta `02 - Projetos/QG Group/QG OS/`): `{{VALOR_SETUP}}` = R$ 2.997, manutenção mensal R$ 197 (vai na proposta comercial vigente, não no contrato), `{{VALOR_HORA_EXCEDENTE}}` = R$ 127/h, prazo 10 dias úteis a partir da confirmação da entrada. Não use os valores R$ 297/R$ 180 de um escopo interno anterior: estão superados para fins de contrato. Esses valores aguardam confirmação final do Nicolas antes de irem para o documento assinado.
+**Aviso sobre valores do caso QG OS.** Para o contrato do Arialdo/QG OS, use os valores do PDF da proposta comercial enviada a ele em 17/jul (pasta `02 - Projetos/QG Group/QG OS/`): `{{VALOR_SETUP}}` = R$ 2.997, manutenção mensal R$ 197 (vai na proposta comercial vigente, não no contrato), `{{VALOR_HORA_EXCEDENTE}}` = R$ 127/h, prazo 10 dias úteis a partir da confirmação da entrada. Não use os valores R$ 297/R$ 180 de um escopo interno anterior: estão superados para fins de contrato. Nicolas confirmou em 20/jul/2026 que os valores do PDF são intencionais e valem para o documento assinado.
 
 A proposta enviada oferece pagamento à vista, 50/50 ou parcelado, à escolha do cliente. Antes de preencher `{{MARCOS_PAGAMENTO}}`, Nicolas confirma com o cliente a modalidade escolhida e o valor exato da entrada.
 

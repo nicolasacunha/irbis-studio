@@ -16,7 +16,7 @@
 - **Nenhum documento é enviado a terceiros sem aprovação explícita do Nicolas nesta conversa.** Os entregáveis são rascunhos prontos para aprovação.
 - Custo total da fase: **R$ 0**.
 - Decisão de IP (spec, decisão 1): **código do cliente após quitação total** + oferta de acompanhamento mensal em **2 pacotes**; valores dos pacotes NÃO são definidos neste plano (pricing precisa do aval do Nicolas; o contrato referencia "proposta comercial vigente").
-- Termos já fixados no caso QG OS: entrada antes de codar; manutenção cobre só ajuste/correção; feature nova = aditivo. **Valores: os do PDF ENVIADO ao cliente em 17/jul — setup R$ 2.997, manutenção R$ 197/mês, excedente R$ 127/h, prazo "10 dias úteis"** (corrigido em 20/jul após leitura do PDF na Task 2; escopo interno de 16/jul citava R$ 297/R$ 180 e está superado para fins de contrato; pendente confirmação do Nicolas de que a diferença foi intencional).
+- Termos já fixados no caso QG OS: entrada antes de codar; manutenção cobre só ajuste/correção; feature nova = aditivo. **Valores: os do PDF ENVIADO ao cliente em 17/jul — setup R$ 2.997, manutenção R$ 197/mês, excedente R$ 127/h, prazo "10 dias úteis"** (corrigido em 20/jul após leitura do PDF na Task 2; escopo interno de 16/jul citava R$ 297/R$ 180 e está superado para fins de contrato; Nicolas CONFIRMOU em 20/jul que os valores do PDF foram intencionais).
 - Commit ao fim de cada task (regra da casa; usar `/usr/bin/git`).
 - Fatos afirmados sobre a IRBIS passam pelo crivo da skill `irbis-guarda-pivot` (ex.: nada de "+500", "LTV 1,8x").
 
