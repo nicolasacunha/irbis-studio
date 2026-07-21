@@ -6,7 +6,7 @@ Modelo IRBIS. O escopo de cada projeto vive no Anexo I. Preencha os campos entre
 
 ## Cláusula 1. Partes
 
-**Prestador:** Nicolas Cunha, brasileiro, inscrito no CPF sob o nº 549.162.338-59, residente na Rua Oliveira Dias, 444, São Paulo/SP, CEP {{CEP_PRESTADOR}}, doravante "Prestador".
+**Prestador:** Nicolas Cunha, brasileiro, inscrito no CPF sob o nº 549.162.338-59, residente na Rua Oliveira Dias, 444, São Paulo/SP, CEP 01433-030, doravante "Prestador".
 
 **Contratante:** {{CONTRATANTE}}, pessoa jurídica inscrita no CNPJ sob o nº {{CNPJ_CONTRATANTE}}, com sede em {{ENDERECO_CONTRATANTE}}, doravante "Contratante".
 

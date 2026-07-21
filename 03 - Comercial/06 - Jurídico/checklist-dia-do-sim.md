@@ -11,19 +11,15 @@ Roteiro operacional para o dia em que um cliente fundador (Arialdo Pimentel / QG
 
 Abra `contrato-prestacao-software-modelo.md` e preencha **todos os campos entre chaves**. Não existe campo opcional: contrato incompleto não vai para assinatura.
 
-Dados fixos do Prestador (CPF, endereço, comarca São Paulo/SP e cidade de assinatura) já estão preenchidos no modelo desde 20/jul/2026. Resta um único campo fixo:
+Dados fixos do Prestador (CPF, endereço completo com CEP, comarca São Paulo/SP e cidade de assinatura) já estão TODOS preenchidos no modelo desde 21/jul/2026. Os campos restantes são só do cliente e do projeto:
 
-1. `{{CEP_PRESTADOR}}` (preencher uma vez, vale para todos os contratos)
-
-Dados do Contratante e do projeto, específicos de cada cliente:
-
-2. `{{CONTRATANTE}}`
-3. `{{CNPJ_CONTRATANTE}}`
-4. `{{ENDERECO_CONTRATANTE}}`
-5. `{{ANEXO_ESCOPO}}`
-6. `{{VALOR_SETUP}}`
-7. `{{MARCOS_PAGAMENTO}}`
-8. `{{VALOR_HORA_EXCEDENTE}}`
+1. `{{CONTRATANTE}}`
+2. `{{CNPJ_CONTRATANTE}}`
+3. `{{ENDERECO_CONTRATANTE}}`
+4. `{{ANEXO_ESCOPO}}`
+5. `{{VALOR_SETUP}}`
+6. `{{MARCOS_PAGAMENTO}}`
+7. `{{VALOR_HORA_EXCEDENTE}}`
 
 Depois de preencher os 11 campos, anexe o Anexo I do projeto (o documento de escopo correspondente ao cliente) como parte integrante do contrato, conforme a Cláusula 2.
 
