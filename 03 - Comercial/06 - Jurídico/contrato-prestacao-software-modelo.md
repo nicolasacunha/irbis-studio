@@ -6,7 +6,7 @@ Modelo IRBIS. O escopo de cada projeto vive no Anexo I. Preencha os campos entre
 
 ## Cláusula 1. Partes
 
-**Prestador:** Nicolas Cunha, brasileiro, inscrito no CPF sob o nº {{CPF_PRESTADOR}}, residente em {{ENDERECO_PRESTADOR}}, doravante "Prestador".
+**Prestador:** Nicolas Cunha, brasileiro, inscrito no CPF sob o nº 549.162.338-59, residente na Rua Oliveira Dias, 444, São Paulo/SP, CEP {{CEP_PRESTADOR}}, doravante "Prestador".
 
 **Contratante:** {{CONTRATANTE}}, pessoa jurídica inscrita no CNPJ sob o nº {{CNPJ_CONTRATANTE}}, com sede em {{ENDERECO_CONTRATANTE}}, doravante "Contratante".
 
@@ -118,19 +118,19 @@ A entrada não é reembolsável depois que o desenvolvimento começou.
 
 ## Cláusula 12. Foro
 
-As partes elegem o foro da comarca de {{COMARCA_FORO}} para resolver qualquer questão deste contrato, com renúncia a qualquer outro, por mais privilegiado que seja.
+As partes elegem o foro da comarca de São Paulo/SP para resolver qualquer questão deste contrato, com renúncia a qualquer outro, por mais privilegiado que seja.
 
 ---
 
 E, por estarem de acordo, as partes assinam este contrato.
 
-{{CIDADE_ASSINATURA}}, ______ de __________________ de ________.
+São Paulo, ______ de __________________ de ________.
 
 <br>
 
 ______________________________________
 **Nicolas Cunha (Prestador)**
-CPF {{CPF_PRESTADOR}}
+CPF 549.162.338-59
 
 <br>
 
@@ -166,7 +166,7 @@ Este é o primeiro modelo de contrato da IRBIS e traz só as 12 cláusulas de ba
 
 7. **Força maior e cessão do contrato (ausentes).** Não há cláusula de força maior nem regra sobre transferir o contrato a terceiros ou mudança de controle do Contratante. Avaliar se valem para este porte de contrato.
 
-8. **Campos a confirmar antes de assinar.** `{{COMARCA_FORO}}` e `{{CIDADE_ASSINATURA}}` dependem da cidade do Nicolas; `{{CPF_PRESTADOR}}` e `{{ENDERECO_PRESTADOR}}` são dados dele; `{{ENDERECO_CONTRATANTE}}` é do cliente. Não há campo de valor para os pacotes de manutenção porque eles vão pela proposta comercial vigente (Cláusula 5).
+8. **Campos a confirmar antes de assinar.** Dados fixos do Prestador (CPF, endereço, comarca São Paulo/SP e cidade de assinatura) preenchidos em 20/jul/2026 com informação do próprio Nicolas; falta só `{{CEP_PRESTADOR}}`. `{{ENDERECO_CONTRATANTE}}` é do cliente. Não há campo de valor para os pacotes de manutenção porque eles vão pela proposta comercial vigente (Cláusula 5).
 
 9. **Anexo I.** O contrato depende do Anexo I (Escopo), que é peça separada. Sem ele preenchido, o objeto fica em aberto.
 

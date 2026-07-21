@@ -8,7 +8,7 @@ Para a rotina matinal e qualquer sessão comercial: estes são os fios abertos d
 2. **Contrato modelo → revisão da mãe + amigo advogado.** Nicolas aprovou 20/jul e vai distribuir. Cobrar status: sem essa revisão nenhuma assinatura real acontece. Guia de leitura = seção "Notas para revisão da advogada" no fim do contrato.
 3. **Proposta do sistema da mãe.** Pesquisa avançou (questionário + benchmarks em sessão paralela, ver memória `project_ia-escritorio-mae`). Falta virar proposta com escopo e preço; a partir dela sai o Anexo I dela.
 4. **Breakup das 4 demos internacionais: quarta 23/jul.** Mensagem de encerramento pra quem não respondeu desde 13/jul (ver memória demos-outreach).
-5. **Dados fixos do contrato:** Nicolas precisa fornecer CPF, endereço, comarca e cidade de assinatura (4 campos {{...}} que ninguém pode preencher por ele).
+5. **Dados fixos do contrato: RESOLVIDO em 20/jul à noite** (CPF, endereço e comarca São Paulo/SP preenchidos no modelo). Resta só o `{{CEP_PRESTADOR}}` — pedir o CEP ao Nicolas quando surgir a oportunidade.
 
 ## Resolvido em 20/jul (não recobrar)
 
