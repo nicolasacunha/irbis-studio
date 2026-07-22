@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>{{PROJETO}} · Portal IRBIS</title>
+<link rel="icon" href="/Design/icone/favicon_true.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0C0C0E;
+    --surface: #18181B;
+    --border: #27272A;
+    --text: #FAFAFA;
+    --muted: #8A8A93;
+    --accent: #FF3D00;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Sora', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 40px 22px 56px;
+  }
+
+  /* ---------- tipografia base ---------- */
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  /* ---------- 1. header ---------- */
+  .header {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 36px;
+  }
+
+  .header .brand {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .header .meta {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ---------- blocos de seção ---------- */
+  section {
+    margin-bottom: 40px;
+  }
+
+  /* ---------- 2. status agora ---------- */
+  .status {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 22px;
+  }
+
+  .status .phase {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--accent);
+  }
+
+  .progress {
+    margin: 20px 0 16px;
+  }
+
+  .progress-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .progress-head .txt {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .progress-head .pct {
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .bar {
+    height: 8px;
+    width: 100%;
+    background: #0C0C0E;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .bar > span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    border-radius: 999px;
+  }
+
+  .status .summary {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  /* ---------- 3. marcos (timeline) ---------- */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .milestone {
+    position: relative;
+    padding-bottom: 26px;
+  }
+
+  .milestone:last-child {
+    padding-bottom: 0;
+  }
+
+  .milestone .dot {
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .milestone .name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .milestone .date {
+    margin-top: 3px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* estado: concluído */
+  .milestone.done .dot {
+    border-color: var(--border);
+    background: var(--surface);
+  }
+
+  .milestone.done .dot svg {
+    width: 9px;
+    height: 9px;
+    stroke: var(--muted);
+    stroke-width: 3;
+    fill: none;
+  }
+
+  .milestone.done .name {
+    color: var(--muted);
+  }
+
+  /* estado: em andamento */
+  .milestone.active .dot {
+    border-color: var(--accent);
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255, 61, 0, 0.14);
+  }
+
+  .milestone.active .name {
+    color: var(--text);
+    font-weight: 800;
+  }
+
+  .milestone.active .date {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* estado: futuro */
+  .milestone.future .dot {
+    border-color: var(--border);
+    background: var(--bg);
+  }
+
+  .milestone.future .name {
+    color: var(--text);
+  }
+
+  /* ---------- 4. aguardando você ---------- */
+  .waiting {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+  }
+
+  .waiting ul {
+    list-style: none;
+  }
+
+  .waiting li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .waiting li:last-child {
+    margin-bottom: 0;
+  }
+
+  .waiting li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .waiting .note {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .waiting .empty {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* ---------- 5. links úteis ---------- */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease;
+  }
+
+  .link-row:hover {
+    border-color: var(--muted);
+  }
+
+  .link-row .label {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .link-row .hint {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .link-row .arrow {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    stroke: var(--muted);
+    stroke-width: 2;
+    fill: none;
+  }
+
+  /* ---------- 6. próxima call ---------- */
+  .call {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 22px;
+  }
+
+  .call .date {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .call .desc {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* ---------- 7. rodapé ---------- */
+  .footer {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .footer .wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    padding: 15px 26px;
+    border-radius: 999px;
+  }
+
+  .footer .wa svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
+  .footer .sign {
+    margin-top: 22px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (min-width: 480px) {
+    .header h1 { font-size: 40px; }
+  }
+
+  /* ---------- desktop: dashboard ocupando a largura ---------- */
+  @media (min-width: 860px) {
+    .wrap {
+      max-width: 1240px;
+      padding: 60px 48px 76px;
+    }
+
+    /* topo: header e status lado a lado */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 52px;
+      align-items: center;
+      padding-bottom: 44px;
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero .header {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .hero > section {
+      margin-bottom: 0;
+    }
+
+    .header h1 { font-size: 50px; }
+
+    /* miolo: duas colunas equilibradas */
+    .masonry {
+      column-count: 2;
+      column-gap: 52px;
+    }
+
+    .masonry > section {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      margin-bottom: 40px;
+    }
+
+    .footer { margin-top: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+
+  <!-- 1. HEADER -->
+  <header class="header">
+    <span class="brand eyebrow">IRBIS</span>
+    <h1>{{PROJETO}}</h1>
+    <p class="meta">Portal de {{NOME_CLIENTE}} · atualizado em {{DATA_ATUALIZACAO}}</p>
+  </header>
+
+  <!-- 2. STATUS AGORA -->
+  <section>
+    <p class="section-label">Status agora</p>
+    <div class="status">
+      <p class="phase">{{FASE_ATUAL}}</p>
+      <div class="progress">
+        <div class="progress-head">
+          <span class="txt">Progresso do projeto</span>
+          <span class="pct">{{PERCENTUAL}}%</span>
+        </div>
+        <div class="bar"><span style="width: {{PERCENTUAL}}%"></span></div>
+      </div>
+      <p class="summary">{{RESUMO_DA_SEMANA}}</p>
+    </div>
+  </section>
+
+  </div><!-- /hero -->
+
+  <div class="masonry">
+
+  <!-- 3. MARCOS -->
+  <section class="m-marcos">
+    <p class="section-label">Marcos</p>
+    <div class="timeline">
+
+      <!-- MARCO concluído: classe "done" -->
+      <div class="milestone done">
+        <span class="dot">
+          <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg>
+        </span>
+        <p class="name">{{NOME_MARCO}}</p>
+        <p class="date">{{DATA}}</p>
+      </div>
+
+      <!-- MARCO em andamento: classe "active" -->
+      <div class="milestone active">
+        <span class="dot"></span>
+        <p class="name">{{NOME_MARCO}}</p>
+        <p class="date">{{DATA}}</p>
+      </div>
+
+      <!-- MARCO futuro: classe "future" -->
+      <div class="milestone future">
+        <span class="dot"></span>
+        <p class="name">{{NOME_MARCO}}</p>
+        <p class="date">{{DATA}}</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. AGUARDANDO VOCÊ -->
+  <section class="m-waiting">
+    <p class="section-label">Aguardando você</p>
+    <div class="waiting">
+
+      <!-- Se houver pendências, use a lista abaixo -->
+      <ul>
+        <!-- PENDÊNCIA: duplique este item -->
+        <li>{{PENDENCIA}}</li>
+      </ul>
+      <p class="note">Enquanto estes itens estiverem pendentes, o prazo fica pausado.</p>
+
+      <!-- Se NÃO houver pendências, apague o bloco acima e use só esta linha:
+      <p class="empty">Nada. A bola está comigo.</p>
+      -->
+
+    </div>
+  </section>
+
+  <!-- 5. LINKS ÚTEIS -->
+  <section>
+    <p class="section-label">Links úteis</p>
+    <div class="links">
+      <a class="link-row" href="{{LINK_PREVIEW}}" target="_blank" rel="noopener">
+        <span class="label">Ver o trabalho em construção
+          <span class="hint">O projeto no estado de hoje, ao vivo</span>
+        </span>
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <a class="link-row" href="{{LINK_ESCOPO}}" target="_blank" rel="noopener">
+        <span class="label">Escopo do projeto
+          <span class="hint">O que foi combinado, por escrito</span>
+        </span>
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <a class="link-row" href="{{LINK_MATERIAIS}}" target="_blank" rel="noopener">
+        <span class="label">Materiais e arquivos
+          <span class="hint">Textos, fotos e acessos que usamos</span>
+        </span>
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 6. PRÓXIMA CALL -->
+  <section>
+    <p class="section-label">Próxima call</p>
+    <div class="call">
+      <p class="date">{{DATA_PROXIMA_CALL}}</p>
+      <p class="desc">20 minutos: o que foi entregue, o que vem, e onde o projeto rende mais.</p>
+    </div>
+  </section>
+
+  </div><!-- /masonry -->
+
+  <!-- 7. RODAPÉ -->
+  <footer class="footer">
+    <a class="wa" href="https://wa.me/5519991591265" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.59.82 2.03.89 2.18.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.17-.19.7-.81.89-1.09.19-.28.37-.23.63-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.35z"/></svg>
+      Dúvida? Me chama no WhatsApp
+    </a>
+    <p class="sign">Nicolas · IRBIS</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

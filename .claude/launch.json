@@ -24,6 +24,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3011", "/Users/nicolascunha/Projects/Business/irbis/Testes/helena-estetica"],
       "port": 3011
+    },
+    {
+      "name": "portal-cliente",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3013", "/Users/nicolascunha/Projects/Business/irbis/docs"],
+      "port": 3013
     }
   ]
 }
