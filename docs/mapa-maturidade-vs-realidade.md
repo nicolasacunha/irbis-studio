@@ -10,9 +10,9 @@ Regra de trabalho combinada: fechar os ⬜ de um pilar por vez, sempre priorizan
 
 | Status | Itens | % |
 |---|---|---|
-| ✅ Feito | 8 | 19% |
+| ✅ Feito | 9 | 21% |
 | 🔄 Em curso | 18 | 43% |
-| ⬜ Falta | 8 | 19% |
+| ⬜ Falta | 7 | 17% |
 | ⏸ Adiar (time) | 8 | 19% |
 
 A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já está andando com gatilho definido, ou espera a primeira contratação.
@@ -21,7 +21,7 @@ A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já est
 
 | Item | Status | Evidência / o que falta |
 |---|---|---|
-| Visão e estratégia | ⬜ | Direção DECIDIDA (pivot atrás de caixa, council 20/jul) mas visão não está escrita. Falta: 1 página. Matéria-prima: transcript do council + metas de 90 dias + acervo (Manoel Lins, Ledson) |
+| Visão e estratégia | ✅ | `docs/visao-irbis.md` aprovada 21/jul: tese + ponto A/B (anos 1-2 firmes) + bifurcação de 5 anos com decisão em jul/2027 pelo caixa |
 | Planejamento estratégico | 🔄 | Existe em camadas: spec da fundação (4 fases), plano T3, metas 90 dias. Falta consolidar num plano único quando o pivot se resolver (~19/ago) |
 | Governança estruturada | ✅ | Adaptada pra solo: councils como registro de decisão (ADRs em negocios-geral/), decisões invioláveis documentadas, gates explícitos |
 | Traduzir estratégia em metas por área | 🔄 | Comercial tem (2 clientes/mês, R$4k/mês, 50 contatos/sem); conteúdo tem (1/dia). "Áreas" = chapéus do solo; formalizar junto com a visão |

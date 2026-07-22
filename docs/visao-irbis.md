@@ -1,6 +1,6 @@
 # Visão IRBIS — 1 página
 
-**Escrita:** 21/jul/2026, por Nicolas com apoio do Claude. **Status:** RASCUNHO aguardando aprovação do Nicolas.
+**Escrita:** 21/jul/2026, por Nicolas com apoio do Claude. **Status:** APROVADA pelo Nicolas em 21/jul/2026 (tese validada verbalmente; documento promovido com o aval dele).
 **Método:** Manoel Lins (ponto A → ponto B com recursos limitados; horizonte rolante, foco anos 1-2) + David Ledson (indicadores com dono e data; mais progresso, depois ordem) — acervo `estrategia/`.
 **Revisão:** anual (set-dez, ciclo do Manoel) ou quando um gatilho de decisão disparar.
 
