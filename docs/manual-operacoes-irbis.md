@@ -2,6 +2,8 @@
 
 **Criado:** 22/jul/2026. **Função:** um lugar só que aponta para TODOS os processos documentados da empresa. Quando um processo mudar, muda o documento dele; este índice só aponta. Novo documento de processo = nova linha aqui, no mesmo commit.
 
+**Versão navegável no Notion:** "Swipe File IRBIS" (board por categoria, dentro da página IRBIS): https://app.notion.com/p/b296bcf2ced54c35bd7e8d01a95cad2d — 27 cards em 6 colunas (Estratégia · Aquisição · Vendas · Entrega & Produto · Gestão · IA & Ferramentas). Regra: processo novo = linha aqui + card lá; divergência entre card e repo, o repo vence.
+
 Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
 ## 1. Estratégia (quem somos, pra onde vamos)
