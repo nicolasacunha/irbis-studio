@@ -16,6 +16,19 @@ Para a rotina matinal e qualquer sessão comercial: estes são os fios abertos d
 - Valores QG OS confirmados intencionais (R$ 197/mês, R$ 127/h).
 - Kit jurídico da Fase 1 completo em `03 - Comercial/06 - Jurídico/` (contrato, anexo QG OS, RPA, mensagem contador JÁ ENVIADA, guia Gov.br, checklist).
 
+## Fila de revisão da manhã (22/jul) — rascunhos noturnos aguardando o Nicolas
+
+Produzidos na madrugada de 21→22/jul a pedido dele ("tudo que não depende de mim, em texto, para todos os pilares"). Revisar nesta ordem (do mais estratégico ao mais operacional):
+
+1. `docs/valores-irbis.md` — os 5 valores (P2; visão já foi aprovada)
+2. `docs/metas-por-chapeu.md` — metas por chapéu com número e data (P1)
+3. `docs/roi-ia-irbis.md` — ROI de IA, ~27,5h/semana estimadas, CADA LINHA precisa do ok dele (P6)
+4. `04 - Marketing/plano-canais-e-medicao.md` — canais e medição input/output (P3)
+5. `03 - Comercial/04 - Entrega e Recorrência/processo-gestao-carteira.md` — carteira e upsell (P4)
+6. `03 - Comercial/04 - Entrega e Recorrência/voz-do-cliente.md` — satisfação, depoimento, feedback (P5)
+
+Fora da leva por gatilho travado (decisão do próprio Nicolas): plano consolidado (pós-19/ago), painel de métricas (pós-4 semanas de placar), personalização por segmento e rebranding (Fase 4).
+
 ## Backlog registrado (NÃO iniciar sem o Nicolas puxar)
 
 - Framework de maturidade em 6 pilares + dossiê de IA: `docs/backlog-maturidade-empresa.md`. Decisão do Nicolas em 20/jul: fica para o futuro.

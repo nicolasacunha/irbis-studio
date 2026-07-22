@@ -10,10 +10,12 @@ Regra de trabalho combinada: fechar os ⬜ de um pilar por vez, sempre priorizan
 
 | Status | Itens | % |
 |---|---|---|
-| ✅ Feito | 9 | 21% |
-| 🔄 Em curso | 18 | 43% |
-| ⬜ Falta | 7 | 17% |
+| ✅ Feito | 10 | 24% |
+| 🔄 Em curso | 23 | 55% |
+| ⬜ Falta | 1 | 2% |
 | ⏸ Adiar (time) | 8 | 19% |
+
+*Recontagem 21/jul (noite): visão aprovada; valores, satisfação, envolvimento do cliente e ROI de IA com rascunhos prontos aguardando revisão; metas por chapéu, plano de canais e gestão de carteira também rascunhados. O único ⬜ restante é personalização por segmento, travado de propósito atrás da Fase 4.*
 
 A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já está andando com gatilho definido, ou espera a primeira contratação.
 
@@ -33,7 +35,7 @@ A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já est
 
 | Item | Status | Evidência / o que falta |
 |---|---|---|
-| Valores da empresa | ⬜ | Brand guide tem voz e persona, não valores. Falta: 1 página. Matéria-prima: manual de copy (persona predador técnico) + Tallis (cultura por estágio) |
+| Valores da empresa | 🔄 | Rascunho pronto 21/jul (`docs/valores-irbis.md`, 5 valores extraídos de decisões reais) — aguarda revisão do Nicolas |
 | Desenvolver cultura | 🔄 | Versão solo = método da casa documentado (skills, regras de commit, gates de aprovação). Cultura de verdade nasce com gente — junto com a 1ª contratação |
 | Recrutamento e seleção | ⏸ | Sem contratação prevista |
 | Onboarding de colaborador | ⏸ | Idem |
@@ -73,9 +75,9 @@ A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já est
 | Personalizar por segmento | ⬜ | 2 segmentos nascendo (sites / IA). Cedo demais pra personalização formal; definir junto com a oferta da Fase 4 |
 | Canais e qualidade de atendimento | 🔄 | Kit de onboarding da Fase 3 define canais, cadência e tempo de resposta (especificado, aguarda 1ª assinatura) |
 | Jornada do 1º contato ao pós-venda | 🔄 | Funil documentado ponta a ponta: demo → call → proposta → contrato → dia do sim → onboarding → calls de estratégia. Falta rodar com cliente real |
-| Medir satisfação | ⬜ | Nada sistemático (1 depoimento). Falta: pergunta de satisfação pós-entrega + pedido de depoimento como etapa fixa |
+| Medir satisfação | 🔄 | Rascunho pronto 21/jul (`03 - Comercial/04 - Entrega e Recorrência/voz-do-cliente.md`: pulso 0-10 + Must-Have Score + depoimento) — aguarda revisão |
 | Monetizar a base / expandir receita | 🔄 | Pacotes de recorrência + auditoria mensal como gancho + upsell cruzado do pivot |
-| Envolver clientes na melhoria | ⬜ | Post-mortem de propostas existe; feedback estruturado de entrega, não. Falta: 3 perguntas no fim de cada projeto |
+| Envolver clientes na melhoria | 🔄 | Rascunho pronto 21/jul (mesmo `voz-do-cliente.md`: 3 perguntas de fim de projeto, com a "próxima dor" alimentando a carteira) — aguarda revisão |
 
 ## Pilar 6 — Inteligência Artificial
 
@@ -86,7 +88,7 @@ A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já est
 | Fluência em IA como cultura | ✅ | Operação solo 100% IA-nativa; acervo com digestão automatizada |
 | IA nos processos do dia a dia | ✅ | 13 rotinas automatizadas rodando (roteiro, blog ×3, prospecção, revisão, health check, backup, sync) |
 | IA na CX | 🔄 | Portal do cliente v1 (Fase 3) sem IA; versão com IA é candidata à oferta da Fase 4 |
-| Medir ROI das iniciativas de IA | ⬜ | Nunca medido. Falta: estimativa simples de horas/semana economizadas — vira argumento de venda também |
+| Medir ROI das iniciativas de IA | 🔄 | Rascunho pronto 21/jul (`docs/roi-ia-irbis.md`: ~27,5h/semana estimadas, TODAS a validar pelo Nicolas antes de uso externo) |
 | Ciclo de inovação e experimentação | 🔄 | Acontece informalmente (testes constantes de ferramenta); formalizar só se virar produto |
 
 ## Os 8 itens que faltam de verdade (backlog de construção)
