@@ -117,11 +117,15 @@
     submitBtn.disabled = true;
 
     var payload = {};
-    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'canais', 'valorcliente', 'prazo', 'orcamento', 'livre', 'decisor']
+    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'canais', 'valorcliente', 'prazo', 'orcamento', 'livre']
       .forEach(function (n) {
         var el = form.querySelector('[name="' + n + '"]');
         payload[n] = el ? el.value.trim() : '';
       });
+    ['tipo', 'decisor'].forEach(function (n) {
+      var el = form.querySelector('input[name="' + n + '"]:checked');
+      payload[n] = el ? el.value : '';
+    });
     payload.objetivo = collectMulti('objetivo');
     payload.incomodo = collectMulti('incomodo');
     payload.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo';

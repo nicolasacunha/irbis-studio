@@ -19,7 +19,7 @@ async function createLead(f) {
     'Contato': { rich_text: txt(f.nome) },
     'Email': { email: f.email || null },
     'WhatsApp': { phone_number: f.whatsapp || null },
-    'O que faz': { rich_text: txt(f.oquefaz) },
+    'O que faz': { rich_text: txt((f.tipo ? '[' + f.tipo + '] ' : '') + f.oquefaz) },
     'Estágio': { select: { name: 'Formulário preenchido' } },
     'Origem': { select: { name: 'Site' } },
     'Prazo desejado': { rich_text: txt(f.prazo) },

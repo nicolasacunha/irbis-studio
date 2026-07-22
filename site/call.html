@@ -455,16 +455,28 @@
         </div>
 
         <div class="block">
-          <div class="block-label">Sobre o site que vamos construir</div>
+          <div class="block-label">Sobre o projeto</div>
 
-          <div class="field" data-req-group="objetivo">
-            <label>O que o site precisa fazer pelo seu negócio? <span class="req">*</span></label>
+          <div class="field" data-req-group="tipo">
+            <label>O que você precisa? <span class="req">*</span></label>
+            <div class="choices" data-single="tipo">
+              <label class="choice"><input type="radio" name="tipo" value="Site" /><span>Um site</span></label>
+              <label class="choice"><input type="radio" name="tipo" value="Sistema com IA" /><span>Um sistema com IA pra minha operação</span></label>
+              <label class="choice"><input type="radio" name="tipo" value="Os dois" /><span>Os dois</span></label>
+            </div>
+            <div class="field-err">Escolhe uma opção.</div>
+          </div>
+
+          <div class="field" style="margin-top:1.75rem" data-req-group="objetivo">
+            <label>O que o projeto precisa fazer pelo seu negócio? <span class="req">*</span></label>
             <div class="choices" data-group="objetivo">
               <label class="choice"><input type="checkbox" name="objetivo" value="Vender direto" /><span>Vender direto, com pagamento no site</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Orçamento/Contato" /><span>Gerar pedidos de orçamento e contato</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Agendamento" /><span>Agendar reuniões ou serviços</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Credibilidade" /><span>Apresentar a empresa com credibilidade</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Portfólio" /><span>Mostrar portfólio e trabalhos</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Automatizar com IA" /><span>Automatizar trabalho manual com IA</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Organizar operação" /><span>Organizar a operação num sistema só</span></label>
             </div>
             <div class="field-err">Escolhe pelo menos uma.</div>
           </div>
@@ -475,19 +487,20 @@
               <label class="choice"><input type="checkbox" name="incomodo" value="Não aparece no Google" /><span>Cliente não me acha no Google</span></label>
               <label class="choice"><input type="checkbox" name="incomodo" value="Credibilidade" /><span>Não passa a credibilidade que meu negócio tem</span></label>
               <label class="choice"><input type="checkbox" name="incomodo" value="Depende de indicação" /><span>Dependo de indicação e queria atrair sozinho</span></label>
+              <label class="choice"><input type="checkbox" name="incomodo" value="Trabalho manual" /><span>Minha equipe perde horas em trabalho manual</span></label>
             </div>
             <div class="field-err">Escolhe pelo menos uma.</div>
           </div>
 
           <div class="field" style="margin-top:1.75rem" data-req>
-            <label>Pra quando você precisa do site no ar? <span class="req">*</span></label>
+            <label>Pra quando você precisa disso no ar? <span class="req">*</span></label>
             <textarea name="prazo" placeholder=""></textarea>
             <div class="help">Quanto mais contexto, melhor. Tem lançamento, campanha ou evento puxando essa data? Me conta.</div>
             <div class="field-err">Preciso dessa resposta pra seguir.</div>
           </div>
 
           <div class="field">
-            <label>Quanto você pretende investir no site? <span class="opt">· opcional</span></label>
+            <label>Quanto você pretende investir no projeto? <span class="opt">· opcional</span></label>
             <textarea name="orcamento" placeholder=""></textarea>
             <div class="help">Me ajuda a chegar na call com uma proposta no tamanho certo pro seu momento.</div>
           </div>
@@ -505,7 +518,7 @@
             <ul class="files" id="fileList"></ul>
           </div>
 
-          <div class="field" style="margin-top:1.5rem" data-req>
+          <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
             <label>Quem decide esse projeto com você? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
               <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>Decido sozinho</span></label>

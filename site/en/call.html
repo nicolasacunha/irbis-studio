@@ -363,16 +363,28 @@
         </div>
 
         <div class="block">
-          <div class="block-label">About the site we will build</div>
+          <div class="block-label">About the project</div>
 
-          <div class="field" data-req-group="objetivo">
-            <label>What does the site need to do for your business? <span class="req">*</span></label>
+          <div class="field" data-req-group="tipo">
+            <label>What do you need? <span class="req">*</span></label>
+            <div class="choices" data-single="tipo">
+              <label class="choice"><input type="radio" name="tipo" value="Site" /><span>A website</span></label>
+              <label class="choice"><input type="radio" name="tipo" value="Sistema com IA" /><span>An AI system for my operation</span></label>
+              <label class="choice"><input type="radio" name="tipo" value="Os dois" /><span>Both</span></label>
+            </div>
+            <div class="field-err">Pick one option.</div>
+          </div>
+
+          <div class="field" style="margin-top:1.75rem" data-req-group="objetivo">
+            <label>What does the project need to do for your business? <span class="req">*</span></label>
             <div class="choices" data-group="objetivo">
               <label class="choice"><input type="checkbox" name="objetivo" value="Vender direto" /><span>Sell directly, with payment on the site</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Orçamento/Contato" /><span>Generate quote requests and contacts</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Agendamento" /><span>Book meetings or services</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Credibilidade" /><span>Present the company with credibility</span></label>
               <label class="choice"><input type="checkbox" name="objetivo" value="Portfólio" /><span>Show portfolio and past work</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Automatizar com IA" /><span>Automate manual work with AI</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Organizar operação" /><span>Run the operation in one system</span></label>
             </div>
             <div class="field-err">Pick at least one.</div>
           </div>
@@ -383,19 +395,20 @@
               <label class="choice"><input type="checkbox" name="incomodo" value="Não aparece no Google" /><span>Customers can't find me on Google</span></label>
               <label class="choice"><input type="checkbox" name="incomodo" value="Credibilidade" /><span>It doesn't show the credibility my business has</span></label>
               <label class="choice"><input type="checkbox" name="incomodo" value="Depende de indicação" /><span>I depend on referrals and want to attract clients on my own</span></label>
+              <label class="choice"><input type="checkbox" name="incomodo" value="Trabalho manual" /><span>My team loses hours to manual work</span></label>
             </div>
             <div class="field-err">Pick at least one.</div>
           </div>
 
           <div class="field" style="margin-top:1.75rem" data-req>
-            <label>When do you need the site live? <span class="req">*</span></label>
+            <label>When do you need this live? <span class="req">*</span></label>
             <textarea name="prazo" placeholder=""></textarea>
             <div class="help">The more context, the better. Is a launch, campaign or event driving that date? Tell me.</div>
             <div class="field-err">I need this answer to move forward.</div>
           </div>
 
           <div class="field">
-            <label>How much do you plan to invest in the site? <span class="opt">· optional</span></label>
+            <label>How much do you plan to invest in the project? <span class="opt">· optional</span></label>
             <textarea name="orcamento" placeholder=""></textarea>
             <div class="help">It helps me show up to the call with a proposal sized for where you are right now.</div>
           </div>
@@ -413,7 +426,7 @@
             <ul class="files" id="fileList"></ul>
           </div>
 
-          <div class="field" style="margin-top:1.5rem" data-req>
+          <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
             <label>Who decides this project with you? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
               <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>I decide alone</span></label>
