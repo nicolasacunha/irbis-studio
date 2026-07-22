@@ -1,6 +1,6 @@
 # Voz do cliente — satisfação, depoimento e feedback (Pilar 5)
 
-**Escrito:** noite de 21/jul/2026. **Status:** RASCUNHO aguardando revisão do Nicolas.
+**Escrito:** noite de 21/jul/2026. **Status:** APROVADO pelo Nicolas em 22/jul/2026. Estreia com os clientes fundadores.
 **Método:** playbook de growth (`growth-aquisicao/_playbook.md`): Must-Have Score mede insubstituibilidade ("como você se sentiria SEM?"), que é diferente de satisfação (NPS); cliente envolvido na melhoria compra a próxima camada. Regra da casa: prova social só com fato verificado.
 
 Três instrumentos, todos curtos, todos por WhatsApp (onde o cliente já fala com o Nicolas). Nada de formulário formal nesta fase.

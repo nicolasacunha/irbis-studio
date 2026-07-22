@@ -10,12 +10,12 @@ Regra de trabalho combinada: fechar os ⬜ de um pilar por vez, sempre priorizan
 
 | Status | Itens | % |
 |---|---|---|
-| ✅ Feito | 10 | 24% |
-| 🔄 Em curso | 23 | 55% |
+| ✅ Feito | 15 | 36% |
+| 🔄 Em curso | 18 | 43% |
 | ⬜ Falta | 1 | 2% |
 | ⏸ Adiar (time) | 8 | 19% |
 
-*Recontagem 21/jul (noite): visão aprovada; valores, satisfação, envolvimento do cliente e ROI de IA com rascunhos prontos aguardando revisão; metas por chapéu, plano de canais e gestão de carteira também rascunhados. O único ⬜ restante é personalização por segmento, travado de propósito atrás da Fase 4.*
+*Recontagem 22/jul (manhã): Nicolas aprovou em revisão os 6 documentos da leva noturna: valores, metas por chapéu (com esclarecimentos de ritual e "entrada"), ROI de IA (metodologia; números em validação por 4 semanas), plano de canais, voz do cliente e gestão de carteira. O único ⬜ restante é personalização por segmento, travado de propósito atrás da Fase 4. Os 🔄 restantes são itens com gatilho (fases da fundação, painel, rebranding) ou que dependem de rodar com cliente real.*
 
 A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já está andando com gatilho definido, ou espera a primeira contratação.
 

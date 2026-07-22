@@ -1,6 +1,6 @@
 # ROI de IA na IRBIS (Pilar 6)
 
-**Escrito:** noite de 21/jul/2026. **Status:** RASCUNHO. Todas as horas abaixo são ESTIMATIVAS do Claude aguardando validação do Nicolas — nenhum número daqui pode ir para material externo antes dessa validação (valor 2: só afirmamos o que aconteceu).
+**Escrito:** noite de 21/jul/2026. **Status:** metodologia APROVADA pelo Nicolas em 22/jul/2026; números EM VALIDAÇÃO (4 semanas de placar antes de uso externo). Todas as horas abaixo são ESTIMATIVAS do Claude aguardando validação do Nicolas — nenhum número daqui pode ir para material externo antes dessa validação (valor 2: só afirmamos o que aconteceu).
 
 ## Por que medir
 

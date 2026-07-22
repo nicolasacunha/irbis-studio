@@ -1,6 +1,6 @@
 # Valores IRBIS — 1 página
 
-**Escrita:** 21/jul/2026. **Status:** RASCUNHO aguardando aprovação do Nicolas.
+**Escrita:** 21/jul/2026. **Status:** APROVADO pelo Nicolas em 22/jul/2026.
 **Método:** Tallis Gomes (acervo `gente-e-gestao/`): valores são o que NÃO muda quando a cultura operacional mudar; cultura é framework de decisão — quanto mais claro, mais qualquer pessoa (ou agente de IA) decide como o dono decidiria. Estes 5 valores foram extraídos de decisões reais do Nicolas, não inventados: cada um cita a decisão que o originou.
 
 Teste de validade: os 5 precisam continuar verdadeiros nas três rotas da bifurcação (solo premium, time enxuto, empresa de produto). Se um valor só funciona numa rota, é cultura, não valor.

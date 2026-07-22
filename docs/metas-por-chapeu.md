@@ -1,6 +1,6 @@
 # Metas por chapéu — IRBIS (Pilar 1, item 4)
 
-**Escrito:** noite de 21/jul/2026. **Status:** RASCUNHO aguardando revisão do Nicolas.
+**Escrito:** noite de 21/jul/2026. **Status:** APROVADO pelo Nicolas em 22/jul/2026, com dois esclarecimentos incorporados (ritual semanal e definição de "entrada confirmada").
 **Método:** Manoel Lins (empresa de um dono usa a mesma estrutura trocando o "chapéu"; cada KR precisa de dono e data, ligado a uma dor real) + David Ledson (menos indicadores é mais; cada um com data, entrega definida e dono). Fontes: acervo `estrategia/`.
 
 A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regra do Ledson contra a "bolchitagem" de indicador), todas derivadas da visão (`docs/visao-irbis.md`) e das dores mapeadas (auditoria de julho + council).
@@ -25,7 +25,7 @@ A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regr
 
 | Meta | Número | Prazo | Fonte da dor |
 |---|---|---|---|
-| Kickoff em até 48h de cada entrada confirmada | 100% | Por evento | Checklist dia do sim |
+| Kickoff em até 48h de cada entrada confirmada* | 100% | Por evento | Checklist dia do sim |
 | Prazo prometido cumprido (ou pausa formalizada por dependência) | 100% | Por projeto | Cláusula 6 do contrato |
 | Case documentado com número ao fim de cada projeto | 1 por projeto | Por evento | Valor "só afirmamos o que aconteceu" |
 
@@ -36,6 +36,18 @@ A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regr
 | Fases da fundação disparadas no gatilho certo (2: entrada; 3: assinatura; 4: duas assinaturas) | Sem atraso > 1 semana do gatilho | Por evento | Spec da fundação |
 | Ritual semanal cumprido (placar + revisão de sexta) | 4/4 semanas no mês | Contínuo | Manoel: ciclo mensal de revisão |
 | Decisão de rota da bifurcação tomada com dado | 1x | Jul/2027 | Visão aprovada |
+
+*"Entrada confirmada" definida: entrada é o pagamento inicial do contrato, aquele que o cliente paga ANTES de qualquer desenvolvimento começar (Cláusula 3). "Confirmada" é o dinheiro compensado na conta, visto no extrato, não o "vou pagar" nem o comprovante enviado. O relógio das 48h do kickoff começa nesse momento.
+
+## O ritual semanal, definido
+
+O ritual são três momentos que já existem, encadeados:
+
+1. **Durante a semana:** o placar (`03 - Comercial/_rotina-diaria/placar-semana-*.md`) é alimentado por evento: publicou vídeo, manda o print e o Claude lança; proposta enviada, call marcada, o Claude registra na conversa do dia.
+2. **Sexta 17h:** a rotina automática de revisão comercial consolida funil + conteúdo e aponta o gargalo da semana segundo os números.
+3. **Reunião do JDP:** Nicolas chega com o placar preenchido (tarefa 7.5 do plano: número na mão, não achismo). O que estourou ganha 1 linha de causa; o que funcionou vira padrão.
+
+É isso. Nenhuma reunião nova foi criada: o ritual é usar o que já roda, toda semana, sem pular.
 
 ## Regras de uso
 

@@ -1,6 +1,6 @@
 # Plano de canais e medição — IRBIS (Pilar 3)
 
-**Escrito:** noite de 21/jul/2026. **Status:** RASCUNHO aguardando revisão do Nicolas.
+**Escrito:** noite de 21/jul/2026. **Status:** APROVADO pelo Nicolas em 22/jul/2026 (canais, produção e medição).
 **Método:** playbook de growth do acervo (`growth-aquisicao/_playbook.md`): sequência mercado→produto→canal; 70/20/10; input vs output; funil invertido (comunidade antes de alcance); multicanal como resiliência (Ledson: casa em terreno alheio).
 
 ## A sequência validada (bloco 0 do playbook)

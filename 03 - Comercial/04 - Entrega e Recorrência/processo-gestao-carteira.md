@@ -1,6 +1,6 @@
 # Processo de gestão de carteira — IRBIS (Pilar 4)
 
-**Escrito:** noite de 21/jul/2026. **Status:** RASCUNHO aguardando revisão do Nicolas.
+**Escrito:** noite de 21/jul/2026. **Status:** APROVADO pelo Nicolas em 22/jul/2026. Estreia com os clientes fundadores.
 **Método:** playbook de growth (`growth-aquisicao/_playbook.md`): retenção > aquisição ("não adianta trazer cliente que vai embora"); recorrência como indicador nº 1; upsell quase de graça para quem já confia. Ledson: vender camadas para quem já comprou é mais barato que adquirir cliente novo.
 
 ## O princípio
