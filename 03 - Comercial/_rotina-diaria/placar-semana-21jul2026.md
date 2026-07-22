@@ -6,7 +6,7 @@ Atualizar ao longo da semana; a rotina de sexta (17h) consolida e o Nicolas leva
 
 | Dia | Publicado? | Vídeo | Views | Gancho usado |
 |---|---|---|---|---|
-| Seg 21/jul | ✅ | Vídeo 1 (primeiro do perfil reformado) | A PREENCHER | A PREENCHER |
+| Seg 21/jul | ✅ | Vídeo 1: AWS investe US$ 1 bi pra implantar IA nas empresas (instagram.com/p/DbEguJ0Rajr) | ~200 (3h após publicar; atualizar sexta) | "O problema da tua empresa não é tecnologia" + notícia AWS; CTA único "comenta AWS" |
 | Ter 22/jul | | | | |
 | Qua 23/jul | | | | |
 | Qui 24/jul | | | | |
@@ -26,7 +26,7 @@ Atualizar ao longo da semana; a rotina de sexta (17h) consolida e o Nicolas leva
 | Propostas ativas aguardando resposta | 1 | QG OS (Arialdo, enviada 17/jul; escada de follow-up ativa, msg 1 em 20/jul) |
 | Propostas em construção | 1 | Sistema IA escritório da mãe (pesquisa de processos ✅; aguarda pricing dos fornecedores) |
 | Follow-ups disparados na semana | 5 | Msg 1 Pimentel (20/jul) + breakup das 4 demos internacionais (21/jul) |
-| Calls confirmadas | A PREENCHER | Status MGITECH / conversas do G4: confirmar com o Nicolas (tarefa 1.5 do plano) |
+| Calls confirmadas | 1 | MGITECH: call MARCADA ✅ (data a registrar). Yamaho (Bruno Máximo): sem call ainda, Nicolas cobra ter 22/jul. Rodrigo: vácuo. Segunda conversa da Yamaho: retomada em 21/jul |
 | Reuniões realizadas | 0 | |
 | Contratos assinados | 0 | Modelo em revisão jurídica (mãe + advogado amigo) desde 21/jul |
 | Receita na conta na semana | R$ 0 | |
