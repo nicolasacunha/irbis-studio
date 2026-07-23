@@ -5,18 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>MINUTA · Portal IRBIS</title>
-<link rel="icon" href="/Design/icone/favicon_true.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
+<link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
 <style>
   :root {
-    --bg: #0C0C0E;
-    --surface: #18181B;
-    --border: #27272A;
-    --text: #FAFAFA;
-    --muted: #8A8A93;
-    --accent: #FF3D00;
+    --bg: #21201B;
+    --surface: #26251F;
+    --surface-2: #2A2822;
+    --border: #38362D;
+    --text: #F2EFE9;
+    --muted: #9C998A;
+    --accent: #8FA987;
+    --f: 'Archivo', system-ui, sans-serif;
+    --f-serif: 'Besley', Georgia, serif;
   }
 
   * {
@@ -32,7 +36,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Sora', system-ui, sans-serif;
+    font-family: var(--f);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -72,14 +76,22 @@
   }
 
   .header .brand {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
     margin-bottom: 20px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
   }
 
   .header h1 {
-    font-size: 34px;
+    font-family: var(--f-serif);
+    font-size: 38px;
     font-weight: 800;
-    line-height: 1.08;
+    line-height: 1.05;
     letter-spacing: -0.02em;
     text-transform: uppercase;
   }
@@ -105,7 +117,8 @@
   }
 
   .status .phase {
-    font-size: 22px;
+    font-family: var(--f-serif);
+    font-size: 23px;
     font-weight: 800;
     line-height: 1.2;
     color: var(--accent);
@@ -142,7 +155,7 @@
   .bar {
     height: 8px;
     width: 100%;
-    background: #0C0C0E;
+    background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 999px;
     overflow: hidden;
@@ -235,7 +248,7 @@
   .milestone.active .dot {
     border-color: var(--accent);
     background: var(--accent);
-    box-shadow: 0 0 0 4px rgba(255, 61, 0, 0.14);
+    box-shadow: 0 0 0 4px rgba(143, 169, 135, 0.2);
   }
 
   .milestone.active .name {
@@ -364,7 +377,8 @@
   }
 
   .call .date {
-    font-size: 22px;
+    font-family: var(--f-serif);
+    font-size: 23px;
     font-weight: 800;
     line-height: 1.2;
   }
@@ -389,7 +403,7 @@
     align-items: center;
     gap: 10px;
     background: var(--accent);
-    color: #FAFAFA;
+    color: var(--bg);
     text-decoration: none;
     font-weight: 800;
     font-size: 15px;
@@ -478,7 +492,7 @@
 
   <!-- 1. HEADER -->
   <header class="header">
-    <span class="brand eyebrow">IRBIS</span>
+    <span class="brand"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</span>
     <h1>MINUTA</h1>
     <p class="meta">Portal de Ana Cunha · atualizado em 22 de julho de 2026</p>
   </header>

@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre · IRBIS Estúdio Digital</title>
-  <meta name="description" content="Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona, por que o modelo solo entrega mais rápido do que uma agência tradicional.">
+  <title>Sobre · IRBIS — Sites + Sistemas com IA</title>
+  <meta name="description" content="Nicolas Cunha, fundador da IRBIS. Um estúdio solo que constrói sites que vendem e sistemas com IA que trabalham. Você fala direto com quem projeta e entrega.">
   <link rel="canonical" href="https://irbis.com.br/sobre">
   <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/sobre">
   <link rel="alternate" hreflang="en" href="https://irbis.com.br/en/about">
   <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/sobre">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://irbis.com.br/sobre">
-  <meta property="og:title" content="Sobre Nicolas Cunha · IRBIS Estúdio Digital">
-  <meta property="og:description" content="Designer e desenvolvedor solo. Do briefing ao ar em 3 semanas. Sem gerente, sem repasse.">
+  <meta property="og:title" content="Sobre Nicolas Cunha · IRBIS">
+  <meta property="og:description" content="Fundador da IRBIS. O site vende, a IA trabalha. Do briefing ao ar em semanas, sem gerente e sem repasse.">
   <meta property="og:image" content="https://irbis.com.br/Design/og-image.jpg">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta property="og:site_name" content="IRBIS">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sobre Nicolas Cunha · IRBIS">
-  <meta name="twitter:description" content="Designer e desenvolvedor solo. Do briefing ao ar em 3 semanas.">
+  <meta name="twitter:description" content="Fundador da IRBIS. O site vende, a IA trabalha. Do briefing ao ar em semanas.">
   <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.jpg">
   <script type="application/ld+json">
   {
@@ -26,17 +26,17 @@
     "@graph": [
       {
         "@type": "ProfilePage",
-        "name": "Sobre Nicolas Cunha · IRBIS Estúdio Digital",
-        "description": "Nicolas Cunha, designer e desenvolvedor solo. Como a IRBIS funciona e por que o modelo solo é mais rápido e direto que uma agência.",
+        "name": "Sobre Nicolas Cunha · IRBIS",
+        "description": "Nicolas Cunha, fundador da IRBIS. Um estúdio solo que constrói sites que vendem e sistemas com IA que trabalham.",
         "url": "https://irbis.com.br/sobre",
         "mainEntity": {
           "@type": "Person",
           "@id": "https://irbis.com.br/sobre#nicolas",
           "name": "Nicolas Cunha",
-          "jobTitle": "Designer e Desenvolvedor",
-          "worksFor": { "@type": "Organization", "name": "IRBIS Estúdio Digital", "url": "https://irbis.com.br" },
+          "jobTitle": "Fundador da IRBIS",
+          "worksFor": { "@type": "Organization", "name": "IRBIS", "url": "https://irbis.com.br" },
           "url": "https://irbis.com.br/sobre",
-          "knowsAbout": ["Webdesign", "Landing Pages", "E-commerce", "SaaS", "Inteligência Artificial"]
+          "knowsAbout": ["Webdesign", "Landing Pages", "Site Institucional", "Sistemas com IA", "Automação", "Inteligência Artificial"]
         },
         "inLanguage": "pt-BR"
       },
@@ -50,272 +50,254 @@
     ]
   }
   </script>
-  <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
+  <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
+  <meta name="theme-color" content="#F2EFE9">
+  <link rel="preload" as="script" href="/vendor/gsap.min.js">
+  <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
   <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg:     #F2EFE9;
-      --text:   #26251F;
+      --s1:     #FAF8F4;
+      --s2:     #E1DCD0;
       --accent: #4A5D43;
+      --text:   #26251F;
       --muted:  #6E6C60;
-      --mid:    #FAF8F4;
       --f:      'Archivo', sans-serif;
       --f-serif: 'Besley', Georgia, serif;
+      --sp-xs:.5rem; --sp-sm:1rem; --sp-md:1.5rem; --sp-lg:2.5rem; --sp-xl:4rem; --sp-2xl:6rem;
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-press: cubic-bezier(0.2, 0, 0, 1);
     }
-
-    html { font-family: var(--f); font-size: 16px; scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); overflow-x: hidden; }
-    a { text-decoration: none; color: inherit; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { overflow-x: hidden; scroll-behavior: smooth; color-scheme: light; }
+    body {
+      font-family: var(--f); background: var(--bg); color: var(--text);
+      cursor: none; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
     ::selection { background: var(--accent); color: var(--bg); }
+    a { text-decoration: none; color: inherit; touch-action: manipulation; }
+    ul { list-style: none; }
+    button { font-family: var(--f); cursor: none; border: none; background: none; touch-action: manipulation; }
     ::-webkit-scrollbar { width: 3px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-    /* ── NAV ── */
-    #s-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.75rem 3rem;
+    /* ── INTRO CURTAIN ── */
+    #curtain {
+      --bg: #21201B; --text: #F2EFE9;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; min-height: 100dvh;
+      background: var(--bg); z-index: 9990; transform: translateY(0%); pointer-events: all;
     }
-    .s-nav-logo {
-      font-size: .75rem; font-weight: 800; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--text); opacity: .8;
-      transition: opacity .2s;
+    #curtain-logo {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-family: var(--f-serif); font-size: clamp(3rem, 10vw, 8rem); font-weight: 800;
+      letter-spacing: -.055em; text-transform: uppercase; color: var(--text); opacity: 0; will-change: transform;
     }
-    .s-nav-logo:hover { opacity: 1; }
-    .s-nav-back {
-      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--muted);
-      transition: color .2s;
+    #curtain-logo .acc { color: #8FA987; position: relative; left: .08em; }
+    #curtain-ball {
+      position: absolute; top: 50%; left: 50%;
+      width: clamp(90px, 11vw, 140px); height: clamp(90px, 11vw, 140px);
+      margin: calc(clamp(90px, 11vw, 140px) / -2) 0 0 calc(clamp(90px, 11vw, 140px) / -2);
+      background: #FAF8F4; border-radius: 50%; opacity: 0; transform: scale(0); will-change: transform;
     }
-    .s-nav-back:hover { color: var(--text); }
-    @media (max-width: 600px) {
-      #s-nav { padding: 1.5rem; }
-    }
+    body.intro-lock { overflow: hidden; }
 
-    /* ── HERO BLOCK ── */
+    /* ── CURSOR ── */
+    #cur-dot {
+      position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: var(--text);
+      border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: opacity .2s;
+    }
+    #cur-ring {
+      position: fixed; top: 0; left: 0; width: 32px; height: 32px; border: 1px solid rgba(38,37,31,.4);
+      border-radius: 50%; pointer-events: none; z-index: 9997; transform: translate(-50%, -50%);
+      transition: transform .2s, border-color .2s, opacity .2s;
+    }
+    body.is-hovering #cur-ring { transform: translate(-50%, -50%) scale(1.5); border-color: var(--accent); }
+
+    /* ── NAV (interior: escura sobre creme) ── */
+    nav {
+      position: fixed; top: 1.75rem; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 3rem; color: #26251F;
+      transition: top .3s ease, padding .3s ease, background .3s ease;
+    }
+    nav.nav-scrolled {
+      top: 0; padding: 1rem 3rem;
+      background: rgba(242,239,233,.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(38,37,31,.06);
+    }
+    .nav-logo { font-family: var(--f-serif); font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .nav-links {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      display: flex; gap: var(--sp-lg); list-style: none;
+    }
+    .nav-links a {
+      font-size: .65rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(38,37,31,.6); transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      border: 1px solid rgba(38,37,31,.25); padding: .55rem 1.25rem;
+      transition: border-color .2s, color .2s, transform .12s var(--ease-press);
+    }
+    .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-cta:active { transform: scale(0.96); }
+    .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; opacity:.75; transition:opacity .2s, transform .2s; }
+    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
+    .lang-toggle svg { display:block; width:100%; height:100%; border-radius:2px; }
+    .lang-toggle, .footer-nav a, .tap-area { position: relative; }
+    .lang-toggle::after, .footer-nav a::after, .tap-area::after { content: ''; position: absolute; inset: -16px -8px; }
+
+    /* ── HERO ── */
     .s-hero {
-      min-height: 100dvh;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 8rem 3rem 4rem;
-      position: relative; overflow: hidden;
+      min-height: 100dvh; display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 9rem var(--sp-xl) var(--sp-2xl); position: relative; overflow: hidden;
     }
-    .s-hero-num {
-      position: absolute; top: 50%; right: 3rem;
-      transform: translateY(-50%);
-      font-size: clamp(14rem, 28vw, 26rem); font-weight: 800; line-height: 1;
-      letter-spacing: -.06em; text-transform: uppercase;
-      color: transparent; -webkit-text-stroke: 1px rgba(38,37,31,.045);
+    .s-hero-ghost {
+      position: absolute; top: 50%; right: 3rem; transform: translateY(-50%);
+      font-family: var(--f-serif); font-size: clamp(16rem, 30vw, 28rem); font-weight: 800; line-height: 1;
+      letter-spacing: -.04em; color: transparent; -webkit-text-stroke: 1px rgba(38,37,31,.06);
       user-select: none; pointer-events: none;
     }
     .s-hero-eyebrow {
-      font-size: .6rem; font-weight: 600; letter-spacing: .3em;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: 2.5rem;
+      font-size: .6rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: .7rem;
     }
+    .s-hero-eyebrow::before { content: ''; width: 2.2rem; height: 1px; background: var(--accent); }
     .s-hero-title {
-      font-size: clamp(3rem, 8vw, 7.5rem); font-weight: 800;
-      line-height: .93; letter-spacing: -.04em; text-transform: uppercase;
-      max-width: 14ch;
+      font-family: var(--f-serif); font-size: clamp(3rem, 8vw, 7rem); font-weight: 700;
+      line-height: 1.02; letter-spacing: -.015em; max-width: 15ch; text-wrap: balance;
     }
     .s-hero-title .acc { color: var(--accent); }
     .s-hero-desc {
-      margin-top: 2.5rem;
-      font-size: clamp(.9rem, 1.3vw, 1.05rem); font-weight: 300;
-      line-height: 1.65; color: rgba(38,37,31,.65);
-      max-width: 44ch;
+      margin-top: 2rem; font-size: clamp(.95rem, 1.3vw, 1.1rem); font-weight: 300;
+      line-height: 1.7; color: rgba(38,37,31,.68); max-width: 46ch; text-wrap: pretty;
     }
-    @media (max-width: 768px) {
-      .s-hero { padding: 6rem 1.5rem 3rem; }
-      .s-hero-num { font-size: 40vw; right: 1.5rem; opacity: .5; }
-    }
+    .s-hero-desc strong { color: var(--text); font-weight: 500; }
 
-    /* ── DIVIDER ── */
-    .s-divider {
-      height: 1px; background: rgba(38,37,31,.08);
-      margin: 0 3rem;
-    }
-    @media (max-width: 768px) { .s-divider { margin: 0 1.5rem; } }
-
-    /* ── BIO BLOCK ── */
-    .s-bio {
-      display: grid; grid-template-columns: 1fr 1.5fr;
-      gap: 4rem; padding: 6rem 3rem;
-      align-items: start;
-    }
+    /* ── BIO ── */
+    .s-bio { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(2rem,5vw,5rem); padding: var(--sp-2xl) var(--sp-xl); align-items: start; border-top: 1px solid var(--s2); }
     .s-bio-left { position: sticky; top: 8rem; }
-    .s-bio-label {
-      font-size: .58rem; font-weight: 700; letter-spacing: .3em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
-    }
-    .s-bio-name {
-      font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800;
-      letter-spacing: -.04em; text-transform: uppercase; line-height: 1;
-    }
-    .s-bio-role {
-      font-size: .8rem; font-weight: 300; color: var(--muted);
-      margin-top: .75rem; letter-spacing: .05em;
-    }
-    .s-bio-right {}
-    .s-bio-text {
-      font-size: clamp(.9rem, 1.2vw, 1rem); font-weight: 300;
-      line-height: 1.75; color: rgba(38,37,31,.7);
-      max-width: 58ch;
-    }
+    .s-bio-label { font-size: .58rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
+    .s-bio-name { font-family: var(--f-serif); font-size: clamp(2.2rem, 4.5vw, 3.8rem); font-weight: 700; letter-spacing: -.015em; line-height: 1; }
+    .s-bio-role { font-size: .8rem; font-weight: 300; color: var(--muted); margin-top: 1rem; letter-spacing: .05em; }
+    .s-bio-text { font-size: clamp(1rem, 1.3vw, 1.15rem); font-weight: 300; line-height: 1.8; color: rgba(38,37,31,.75); max-width: 58ch; }
     .s-bio-text + .s-bio-text { margin-top: 1.5rem; }
     .s-bio-text strong { color: var(--text); font-weight: 600; }
-    @media (max-width: 900px) {
-      .s-bio { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
-      .s-bio-left { position: static; }
-    }
 
-    /* ── NUMBERS STRIP ── */
-    .s-numbers {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid rgba(38,37,31,.08);
-      border-bottom: 1px solid rgba(38,37,31,.08);
-    }
-    .s-num-item {
-      padding: 3.5rem 3rem;
-      border-right: 1px solid rgba(38,37,31,.08);
-    }
-    .s-num-item:last-child { border-right: none; }
-    .s-num-val {
-      font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800;
-      letter-spacing: -.04em; line-height: 1;
-    }
+    /* ── NUMBERS ── */
+    .s-numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--s2); border-top: 1px solid var(--s2); border-bottom: 1px solid var(--s2); }
+    .s-num-item { padding: var(--sp-xl) var(--sp-lg); background: var(--bg); }
+    .s-num-val { font-family: var(--f-serif); font-size: clamp(2.5rem, 5vw, 4.2rem); font-weight: 700; letter-spacing: -.02em; line-height: 1; }
     .s-num-val .acc { color: var(--accent); }
-    .s-num-label {
-      font-size: .7rem; font-weight: 300; color: var(--muted);
-      margin-top: .75rem; line-height: 1.4;
-    }
-    @media (max-width: 768px) {
-      .s-numbers { grid-template-columns: 1fr 1fr; }
-      .s-num-item { padding: 2.5rem 1.5rem; }
-      .s-num-item:nth-child(2) { border-right: none; }
-      .s-num-item:nth-child(3) { border-top: 1px solid rgba(38,37,31,.08); border-right: 1px solid rgba(38,37,31,.08); }
-    }
+    .s-num-label { font-size: .62rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; line-height: 1.5; max-width: 22ch; }
 
-    /* ── APPROACH BLOCK ── */
-    .s-approach {
-      padding: 6rem 3rem;
+    /* ── APPROACH (fases) ── */
+    .s-approach { padding: var(--sp-2xl) var(--sp-xl); }
+    .s-sec-head { display: flex; align-items: baseline; gap: 1rem; padding-bottom: var(--sp-sm); margin-bottom: var(--sp-lg); border-bottom: 1px solid var(--s2); }
+    .s-sec-idx { font-family: var(--f-serif); font-size: 1rem; font-weight: 700; color: var(--accent); }
+    .s-sec-title { font-family: var(--f-serif); font-size: clamp(1.1rem, 2.5vw, 1.8rem); font-weight: 700; letter-spacing: -.015em; }
+    .s-sec-rotulo { margin-left: auto; font-size: .6rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    .fases { list-style: none; }
+    .fase {
+      position: relative; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 42ch);
+      align-items: baseline; gap: clamp(1rem, 3vw, 3rem); padding: 1.6rem 0; overflow: hidden;
     }
-    .s-approach-eyebrow {
-      font-size: .58rem; font-weight: 700; letter-spacing: .3em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 3.5rem;
+    .fase + .fase { border-top: 1px solid var(--s2); }
+    .fase::before { content: ''; position: absolute; inset: 0; background: var(--s1); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease-out); }
+    .fase > * { position: relative; transition: transform .25s var(--ease-out); }
+    @media (hover: hover) and (pointer: fine) {
+      .fase:hover::before { transform: scaleX(1); }
+      .fase:hover > * { transform: translateX(.75rem); }
     }
-    .s-approach-list { list-style: none; counter-reset: ap; }
-    .s-approach-item {
-      counter-increment: ap;
-      display: grid; grid-template-columns: 3rem 1fr;
-      gap: 2rem; padding: 2.5rem 0;
-      border-top: 1px solid rgba(38,37,31,.08);
-    }
-    .s-approach-item:last-child { border-bottom: 1px solid rgba(38,37,31,.08); }
-    .s-approach-n {
-      font-size: .65rem; font-weight: 700; letter-spacing: .15em;
-      color: var(--accent); padding-top: .3rem;
-    }
-    .s-approach-n::before { content: counter(ap, decimal-leading-zero); }
-    .s-approach-h {
-      font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700;
-      letter-spacing: -.02em; margin-bottom: .75rem;
-    }
-    .s-approach-p {
-      font-size: .85rem; font-weight: 300; line-height: 1.7;
-      color: rgba(38,37,31,.6); max-width: 52ch;
-    }
-    @media (max-width: 768px) {
-      .s-approach { padding: 4rem 1.5rem; }
-      .s-approach-item { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
-    }
+    .fase-num { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+    .fase-nome { font-family: var(--f-serif); font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 700; letter-spacing: -.015em; line-height: 1.05; }
+    .fase-desc { font-size: .88rem; font-weight: 300; color: var(--muted); line-height: 1.7; }
 
     /* ── CLIENTS ── */
-    .s-clients {
-      padding: 5rem 3rem;
-      background: var(--mid);
-    }
-    .s-clients-label {
-      font-size: .58rem; font-weight: 700; letter-spacing: .3em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem;
-    }
-    .s-clients-list {
-      display: flex; flex-wrap: wrap; gap: 1.5rem 3rem;
-      align-items: center;
-    }
-    .s-client-name {
-      font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 800;
-      letter-spacing: -.03em; text-transform: uppercase;
-      color: rgba(38,37,31,.35); transition: color .25s;
-    }
+    .s-clients { padding: var(--sp-2xl) var(--sp-xl); background: var(--s1); }
+    .s-clients-list { display: flex; flex-wrap: wrap; gap: 1.5rem 3.5rem; align-items: center; margin-top: var(--sp-lg); }
+    .s-client-name { font-family: var(--f-serif); font-size: clamp(1.3rem, 2.4vw, 1.9rem); font-weight: 700; letter-spacing: -.015em; color: rgba(38,37,31,.32); transition: color .25s; }
     .s-client-name:hover { color: var(--text); }
-    @media (max-width: 768px) {
-      .s-clients { padding: 3.5rem 1.5rem; }
-      .s-clients-list { gap: 1rem 2rem; }
-    }
 
-    /* ── CTA BLOCK ── */
-    .s-cta {
-      padding: 7rem 3rem;
-      display: flex; flex-direction: column; gap: 3rem;
+    /* ── CTA (cartão escuro) ── */
+    #cta { padding: var(--sp-2xl) clamp(.625rem, 1.5vw, 1.125rem) clamp(.625rem, 1.5vw, 1.125rem); }
+    .cta-cartao {
+      --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+      background: #21201B; color: var(--text); border-radius: clamp(16px, 2vw, 28px);
+      border: 1px solid rgba(255,255,255,.06); padding: clamp(2.75rem, 8vw, 6rem);
+      display: flex; flex-direction: column; gap: 2rem; align-items: flex-start;
     }
-    .s-cta-headline {
-      font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 800;
-      letter-spacing: -.04em; line-height: .93; text-transform: uppercase;
-      max-width: 14ch;
-    }
-    .s-cta-headline .acc { color: var(--accent); }
-    .s-cta-actions {
-      display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center;
-    }
-    .s-cta-btn {
-      display: inline-flex; align-items: center; gap: .75rem;
-      padding: 1rem 2rem; background: var(--accent);
-      font-size: .7rem; font-weight: 700; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--bg);
-      transition: opacity .2s;
-    }
-    .s-cta-btn:hover { opacity: .85; }
-    .s-cta-ghost {
-      font-size: .7rem; font-weight: 600; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--muted);
-      border-bottom: 1px solid rgba(38,37,31,.25);
-      padding-bottom: .15rem; transition: color .2s, border-color .2s;
-    }
-    .s-cta-ghost:hover { color: var(--text); border-color: var(--text); }
-    @media (max-width: 768px) {
-      .s-cta { padding: 5rem 1.5rem; }
-    }
+    .cta-eyebrow { font-size: .6rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+    .cta-headline { font-family: var(--f-serif); font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 700; letter-spacing: -.015em; line-height: 1.02; max-width: 16ch; }
+    .cta-headline .acc { color: var(--accent); }
+    .cta-actions { display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; margin-top: .5rem; }
+    .cta-btn { display: inline-flex; align-items: center; gap: .6rem; padding: 1rem 2rem; background: #F2EFE9; color: #26251F; font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, transform .12s var(--ease-press); }
+    .cta-btn:hover { background: #8FA987; color: #21201B; }
+    .cta-btn:active { transform: scale(.97); }
+    .cta-ghost { font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #9C998A; border-bottom: 1px solid rgba(250,248,244,.3); padding-bottom: .2rem; transition: color .2s, border-color .2s; }
+    .cta-ghost:hover { color: #F2EFE9; border-color: #8FA987; }
 
     /* ── FOOTER ── */
-    .s-footer {
-      padding: 2rem 3rem;
-      border-top: 1px solid rgba(38,37,31,.08);
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
-    }
-    .s-footer-copy { font-size: .6rem; color: var(--muted); letter-spacing: .1em; }
-    .s-footer-back {
-      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--muted); transition: color .2s;
-    }
-    .s-footer-back:hover { color: var(--text); }
-    @media (max-width: 768px) {
-      .s-footer { padding: 2rem 1.5rem; }
+    footer { padding: var(--sp-xl) var(--sp-xl); display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr); align-items: center; gap: var(--sp-lg); border-top: 1px solid var(--s2); }
+    .footer-left { display: flex; flex-direction: column; gap: .3rem; }
+    .footer-logo { font-family: var(--f-serif); font-size: .75rem; font-weight: 800; letter-spacing: .18em; }
+    .footer-logo .acc { color: var(--accent); }
+    .footer-tagline { max-width: 34ch; line-height: 1.7; font-size: .5rem; font-weight: 400; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: var(--sp-md) var(--sp-lg); justify-content: center; }
+    .footer-nav a { font-size: .58rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); transition: color .2s; }
+    .footer-nav a:hover { color: var(--text); }
+    .footer-right { display: flex; flex-direction: column; gap: .3rem; text-align: right; }
+    .footer-right span { white-space: nowrap; font-size: .5rem; font-weight: 400; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+
+    /* ── HAMBURGER + MOBILE NAV ── */
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 2.5rem; height: 2.5rem; padding: .4rem; flex-shrink: 0; }
+    .nav-hamburger span { display: block; width: 20px; height: 1px; background: #26251F; transition: transform .3s ease, opacity .2s ease; transform-origin: center; }
+    .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    #mobile-nav-overlay { position: fixed; inset: 0; background: var(--bg); z-index: 9000; opacity: 0; pointer-events: none; display: flex; flex-direction: column; justify-content: center; padding: 3rem 2rem; }
+    .mobile-nav-links { display: flex; flex-direction: column; gap: 2.5rem; }
+    .mobile-nav-links a { font-family: var(--f-serif); font-size: clamp(2.2rem, 10vw, 3rem); font-weight: 700; letter-spacing: -.02em; color: var(--text); opacity: 0; transform: translateY(20px); display: block; transition: color .2s; }
+    .mobile-nav-links a:hover { color: var(--accent); }
+    .mobile-nav-tagline { margin-top: 3rem; font-size: .7rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(24px); }
+    html.no-motion .reveal, html.static .reveal { opacity: 1; transform: none; }
+    html.static #curtain { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
     }
 
-    /* ── ANIMATIONS ── */
-    .reveal { opacity: 0; transform: translateY(28px); }
-      .lang-toggle { display:inline-flex; align-items:center; justify-content:center; width:22px; height:16px; border-radius:2px; overflow:hidden; opacity:.75; transition:opacity .2s, transform .2s; }
-    .lang-toggle:hover { opacity:1; transform:translateY(-1px); }
-    .lang-toggle svg { display:block; width:100%; height:100%; }
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .s-bio { grid-template-columns: 1fr; gap: 2rem; }
+      .s-bio-left { position: static; }
+    }
+    @media (max-width: 767px) {
+      body { cursor: auto; } button { cursor: pointer; } #cur-dot, #cur-ring { display: none; }
+      nav { top: 1rem; padding: 0 1.5rem; } .nav-links { display: none; } .nav-cta { display: none; } .nav-hamburger { display: flex; }
+      .s-hero { padding: 7rem 1.5rem 3rem; } .s-hero-ghost { display: none; }
+      .s-bio { padding: 3.5rem 1.5rem; }
+      .s-numbers { grid-template-columns: 1fr; }
+      .s-approach { padding: 3.5rem 1.5rem; }
+      .fase { grid-template-columns: 2.5rem 1fr; row-gap: .4rem; }
+      .fase-desc { grid-column: 2; }
+      .s-clients { padding: 3.5rem 1.5rem; }
+      #cta { padding: 3rem .625rem .625rem; } .cta-cartao { padding: 2.5rem 1.5rem; }
+      footer { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: var(--sp-lg); }
+      .footer-nav { justify-content: flex-start; } .footer-right { text-align: left; }
+    }
   </style>
   <!-- Contentsquare: carregamento adiado (1o gesto OU 3,5s) -->
   <script>
@@ -324,15 +306,11 @@
     var fired = false;
     var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown', 'mousemove'];
     function boot() {
-      if (fired) return; fired = true;
-      clearTimeout(timer);
+      if (fired) return; fired = true; clearTimeout(timer);
       evs.forEach(function (e) { w.removeEventListener(e, boot); });
       libs.forEach(function (src, i) {
         setTimeout(function () {
-          var go = function () {
-            var s = d.createElement('script'); s.async = true; s.src = src;
-            d.head.appendChild(s);
-          };
+          var go = function () { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); };
           ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
         }, i * 900);
       });
@@ -341,198 +319,250 @@
     var timer = setTimeout(boot, 3500);
   })(window, document);
   </script>
-<script defer src="/_vercel/insights/script.js"></script>
-  <style>
-    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
-    .s-hero-title, .s-bio-name, .s-cta-headline, .s-num-val, .s-hero-num { font-family: var(--f-serif); }
-    .s-hero-title, .s-bio-name, .s-cta-headline { font-weight: 700; text-transform: none; letter-spacing: -.015em; line-height: 1.05; }
-    .s-num-val, .s-hero-num { font-weight: 700; }
-    .s-nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
-    .s-cta-btn { background: #26251F; color: #F2EFE9; transition: background .2s; }
-    .s-cta-btn:hover { background: #4A5D43; opacity: 1; }
-  </style>
+  <script>if (new URLSearchParams(location.search).has('static')) document.documentElement.classList.add('static');</script>
+  <script>
+  /* helper de verificação: ?at=<id> isola a seção no topo (dev-only, inócuo em prod) */
+  addEventListener('DOMContentLoaded', function () {
+    var at = new URLSearchParams(location.search).get('at');
+    if (!at) return;
+    var target = document.getElementById(at);
+    if (!target) return;
+    var nav = document.querySelector('nav'); if (nav) nav.style.display = 'none';
+    var node = target;
+    while (node && node !== document.body) {
+      var sib = node.previousElementSibling;
+      while (sib) { if (['SCRIPT','STYLE','LINK'].indexOf(sib.tagName) < 0) sib.style.display = 'none'; sib = sib.previousElementSibling; }
+      node = node.parentElement;
+    }
+  });
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
 
-  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
-    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
+  <div id="curtain" aria-hidden="true">
+    <span id="curtain-logo">IRBIS<span class="acc">.</span></span>
+    <div id="curtain-ball"></div>
   </div>
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
 
   <!-- NAV -->
-  <nav id="s-nav">
-    <a href="/" class="s-nav-logo">IRBIS</a>
-    <div style="display:flex;align-items:center;gap:.9rem"><a href="/" class="s-nav-back">← Voltar</a><a href="/en/about" class="lang-toggle" aria-label="View in English" title="English"><svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g><rect width="2964" height="2100" fill="#3c3b6e"/></svg></a></div>
+  <nav>
+    <a href="/" class="nav-logo" style="display:inline-flex;align-items:center;gap:.5em"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</a>
+    <ul class="nav-links">
+      <li><a href="/cases">CASES</a></li>
+      <li><a href="/#horizontal-section">SERVIÇOS</a></li>
+      <li><a href="/#como-opero">PROCESSO</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <a href="/call" class="nav-cta">INICIAR PROJETO</a>
+      <a href="/en/about" class="lang-toggle" aria-label="View in English" title="English">
+        <svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="7410" height="3900" fill="#b22234"/>
+          <g fill="#fff"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g>
+          <rect width="2964" height="2100" fill="#3c3b6e"/>
+        </svg>
+      </a>
+      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="s-hero">
-    <div class="s-hero-num" aria-hidden="true">N</div>
-    <p class="s-hero-eyebrow reveal">Estúdio Digital · São Paulo</p>
-    <h1 class="s-hero-title reveal">
-      Uma pessoa. <br>Sem <br><span class="acc">gerente.</span>
-    </h1>
-    <p class="s-hero-desc reveal">
-      Você fala direto com quem projeta, desenvolve e entrega. Sem repasse, sem camadas, sem espera de aprovação interna.
-    </p>
-  </section>
-
-  <div class="s-divider"></div>
-
-  <!-- BIO -->
-  <div class="s-bio">
-    <div class="s-bio-left">
-      <p class="s-bio-label reveal">Sobre</p>
-      <h2 class="s-bio-name reveal">Nicolas <br>Cunha</h2>
-      <p class="s-bio-role reveal">Designer · Desenvolvedor · Estrategista</p>
-    </div>
-    <div class="s-bio-right">
-      <p class="s-bio-text reveal">
-        A IRBIS é um estúdio solo: você fala com a pessoa que vai executar o projeto do início ao fim. <strong>Sem AE passando briefing, sem dev interpretando o que o designer quis dizer, sem cliente aguardando alguém liberar agenda.</strong>
-      </p>
-      <p class="s-bio-text reveal">
-        Posicionamento, design e estratégia são meus, do primeiro rascunho ao deploy.
-      </p>
-      <p class="s-bio-text reveal">
-        Formado em Design com especialização em desenvolvimento front-end. Atuei em webdesign, e-commerce e growth antes de abrir o estúdio. Hoje trabalho com founders e equipes em crescimento que precisam de landing pages, sites institucionais e e-commerce sem contratar uma agência.
-      </p>
-    </div>
+  <div id="mobile-nav-overlay" aria-hidden="true">
+    <nav class="mobile-nav-links">
+      <a href="/cases">Cases</a>
+      <a href="/#horizontal-section">Serviços</a>
+      <a href="/#como-opero">Processo</a>
+      <a href="/manifesto">Manifesto</a>
+      <a href="/call">Iniciar projeto</a>
+      <a href="/en/about">English 🇺🇸</a>
+    </nav>
+    <p class="mobile-nav-tagline">IRBIS · SITES + SISTEMAS COM IA</p>
   </div>
 
-  <!-- NUMBERS -->
-  <div class="s-numbers">
-    <div class="s-num-item reveal">
-      <div class="s-num-val"><span class="acc">0</span></div>
-      <div class="s-num-label">camadas entre você e quem constrói</div>
-    </div>
-    <div class="s-num-item reveal">
-      <div class="s-num-val">3<span class="acc">–</span>6</div>
-      <div class="s-num-label">semanas do briefing ao ar, sem exceções</div>
-    </div>
-    <div class="s-num-item reveal">
-      <div class="s-num-val"><span class="acc">1</span></div>
-      <div class="s-num-label">pessoa respondendo pelo trabalho do início ao fim</div>
-    </div>
-  </div>
+  <main>
 
-  <!-- APPROACH -->
-  <section class="s-approach">
-    <p class="s-approach-eyebrow reveal">Como trabalho</p>
-    <ul class="s-approach-list">
-      <li class="s-approach-item reveal">
-        <span class="s-approach-n"></span>
-        <div>
-          <h3 class="s-approach-h">Diagnóstico antes de tudo</h3>
-          <p class="s-approach-p">Antes de abrir o Figma ou escrever uma linha de código, entendo o negócio, o mercado e o que está travando. A maioria dos problemas digitais tem raiz estratégica, não estética.</p>
-        </div>
-      </li>
-      <li class="s-approach-item reveal">
-        <span class="s-approach-n"></span>
-        <div>
-          <h3 class="s-approach-h">Design e desenvolvimento no mesmo workflow</h3>
-          <p class="s-approach-p">Não existe handoff. Design e código evoluem juntos, o que elimina retrabalho e encurta o prazo.</p>
-        </div>
-      </li>
-      <li class="s-approach-item reveal">
-        <span class="s-approach-n"></span>
-        <div>
-          <h3 class="s-approach-h">Entrega com documentação</h3>
-          <p class="s-approach-p">Todo projeto sai com design system, guia de uso e handoff estruturado. Você não fica refém do estúdio para fazer alterações simples.</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+    <!-- HERO -->
+    <section class="s-hero" id="hero">
+      <div class="s-hero-ghost" aria-hidden="true">N</div>
+      <p class="s-hero-eyebrow reveal">Estúdio solo · São Paulo</p>
+      <h1 class="s-hero-title reveal">Você fala com quem <span class="acc">constrói.</span></h1>
+      <p class="s-hero-desc reveal">Quando você me manda uma mensagem, quem responde é a mesma pessoa que vai desenhar as telas e escrever o código do seu site. <strong>Não passa por gerente nem por fila de aprovação interna.</strong></p>
+    </section>
 
-  <!-- CLIENTS -->
-  <div class="s-clients">
-    <p class="s-clients-label reveal">Trabalhou com</p>
-    <div class="s-clients-list">
-      <span class="s-client-name reveal">Odery Drums</span>
-      <span class="s-client-name reveal">Adash</span>
-      <span class="s-client-name reveal">Eduboxs</span>
-      <span class="s-client-name reveal">Zumo</span>
-      <span class="s-client-name reveal">Zapfy</span>
-    </div>
-  </div>
+    <!-- BIO -->
+    <section class="s-bio" id="bio">
+      <div class="s-bio-left">
+        <p class="s-bio-label reveal">Quem faz</p>
+        <h2 class="s-bio-name reveal">Nicolas <br>Cunha</h2>
+        <p class="s-bio-role reveal">Fundador · Design · Desenvolvimento · IA</p>
+      </div>
+      <div class="s-bio-right">
+        <p class="s-bio-text reveal">A IRBIS sou eu, um estúdio de uma pessoa só. Na prática, isso quer dizer que a pessoa que te apresenta o projeto é a mesma que abre o Figma, escreve o código e sobe o site no ar. <strong>Nada se perde na tradução entre o comercial, o designer e o dev, porque é tudo a mesma cabeça.</strong></p>
+        <p class="s-bio-text reveal">Faço as duas coisas que fazem um negócio crescer online. Primeiro o <strong>site que traz o cliente pra dentro</strong>. Depois o <strong>sistema com IA que cuida dele quando chega</strong>, respondendo no WhatsApp, montando o orçamento e marcando o horário. Estratégia, design, código e automação saem da mesma mão, do primeiro rascunho até o dia em que entra no ar.</p>
+        <p class="s-bio-text reveal">Trabalho com donos de negócio que já faturam bem mas ainda tocam muita coisa na mão, e que perderam a paciência tanto com a agência que demora seis meses quanto com a IA genérica que não resolve nada. A própria IRBIS roda com <strong>treze rotinas de IA por dentro, todo dia</strong>. Só ofereço pro cliente aquilo que eu já uso aqui e sei que funciona.</p>
+      </div>
+    </section>
 
-  <!-- CTA -->
-  <section class="s-cta">
-    <h2 class="s-cta-headline reveal">
-      Seu projeto <br>em boas <br><span class="acc">mãos.</span>
-    </h2>
-    <div class="s-cta-actions">
-      <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="s-cta-btn">Iniciar conversa →</a>
-      <a href="/" class="s-cta-ghost">Ver cases</a>
+    <!-- NUMBERS -->
+    <div class="s-numbers">
+      <div class="s-num-item reveal"><div class="s-num-val"><span class="acc">0</span></div><div class="s-num-label">camadas entre você e quem constrói</div></div>
+      <div class="s-num-item reveal"><div class="s-num-val">3<span class="acc">–</span>6</div><div class="s-num-label">semanas do briefing até o site no ar</div></div>
+      <div class="s-num-item reveal"><div class="s-num-val">13</div><div class="s-num-label"><span class="acc">rotinas de IA</span> operando a própria IRBIS</div></div>
     </div>
-  </section>
+
+    <!-- APPROACH -->
+    <section class="s-approach" id="processo">
+      <div class="s-sec-head">
+        <span class="s-sec-idx">01</span>
+        <span class="s-sec-title">Como trabalho</span>
+        <span class="s-sec-rotulo">Sem handoff</span>
+      </div>
+      <ul class="fases">
+        <li class="fase reveal">
+          <span class="fase-num" aria-hidden="true">01</span>
+          <h3 class="fase-nome">Diagnóstico antes de tudo</h3>
+          <p class="fase-desc">Antes de desenhar qualquer tela, passo um tempo entendendo o que está travando as vendas. Na maioria das vezes o site é só o sintoma, e o problema de verdade está no posicionamento ou na oferta.</p>
+        </li>
+        <li class="fase reveal">
+          <span class="fase-num" aria-hidden="true">02</span>
+          <h3 class="fase-nome">Site e sistema na mesma mão</h3>
+          <p class="fase-desc">O design e o código crescem juntos no mesmo projeto, então não existe aquele momento em que o designer entrega um arquivo e torce pra outra pessoa montar direito. Você também não precisa de uma agência pro site e uma empresa de tecnologia pro sistema, porque as duas coisas saem daqui.</p>
+        </li>
+        <li class="fase reveal">
+          <span class="fase-num" aria-hidden="true">03</span>
+          <h3 class="fase-nome">Entrega sem dependência</h3>
+          <p class="fase-desc">No fim, tudo é seu: o código, os acessos e a documentação de como mexer em cada parte. Você não fica preso a um contrato de manutenção só pra trocar uma foto. Se quiser seguir comigo depois, ótimo, mas porque você quis.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CLIENTS -->
+    <div class="s-clients" id="clientes">
+      <div class="s-sec-head" style="border:none;margin:0;padding:0;">
+        <span class="s-sec-idx">02</span>
+        <span class="s-sec-title">Quem construiu com a IRBIS</span>
+      </div>
+      <div class="s-clients-list">
+        <span class="s-client-name reveal">Odery Drums</span>
+        <span class="s-client-name reveal">EForce</span>
+        <span class="s-client-name reveal">A.Cunha Advocacia</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section id="cta">
+      <div class="cta-cartao reveal">
+        <p class="cta-eyebrow">Contato direto</p>
+        <h2 class="cta-headline">Me conta o que<br><span class="acc">está te travando.</span></h2>
+        <div class="cta-actions">
+          <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-btn tap-area">Falar no WhatsApp →</a>
+          <a href="/call" class="cta-ghost">Agendar conversa</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="s-footer">
-    <span class="s-footer-copy">©2026 IRBIS · São Paulo, Brasil</span>
-    <a href="/" class="s-footer-back">← IRBIS</a>
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo" style="display:inline-flex;align-items:center;gap:.5em"><svg viewBox="24 30 84 60" style="height:1.15em;width:auto;fill:currentColor;flex-shrink:0" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS<span class="acc">.</span></div>
+      <p class="footer-tagline">Sites · Landing Pages · Sistemas com IA</p>
+    </div>
+    <div class="footer-nav">
+      <a href="/cases">Cases</a>
+      <a href="/manifesto">Manifesto</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/metodo">Método</a>
+      <a href="/vs-agencia">IRBIS vs Agência</a>
+      <a href="/blog">Blog</a>
+      <a href="/call">Contato</a>
+    </div>
+    <div class="footer-right">
+      <span>São Paulo · Brasil</span>
+      <span>©2026 IRBIS</span>
+    </div>
   </footer>
 
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
-  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <button id="scroll-top" aria-label="Voltar ao topo" style="position:fixed;bottom:2rem;left:4rem;width:34px;height:34px;border:1px solid var(--s2);background:none;color:var(--muted);font-size:.7rem;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s,border-color .2s,color .2s;pointer-events:none;z-index:90">↑</button>
+
+  <script src="/vendor/gsap.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
+  <script src="/vendor/ScrollTrigger.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
   <script>
-    const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, smoothWheel: true });
-    function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
+  if (window.gsap && !document.documentElement.classList.contains('static')) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.ticker.lagSmoothing(0);
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) gsap.defaults({ duration: 0 });
 
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      gsap.registerPlugin(ScrollTrigger);
+    /* ── INTRO CURTAIN ── */
+    (function () {
+      const curtain = document.getElementById('curtain');
+      const ball = document.getElementById('curtain-ball');
+      const logo = document.getElementById('curtain-logo');
+      document.body.classList.add('intro-lock');
+      gsap.timeline({ delay: 0.1 })
+        .to(logo, { opacity: 1, duration: 0.35, ease: 'power2.out' })
+        .to(logo, { scaleX: 0.05, scaleY: 0.85, opacity: 0, duration: 0.4, ease: 'power3.in' }, '+=0.2')
+        .to(ball, { opacity: 1, scale: 1, duration: 0.32, ease: 'power3.out' }, '-=0.16')
+        .to(ball, { scale: 26, duration: 0.6, ease: 'power3.inOut' }, '+=0.08')
+        .to(curtain, { opacity: 0, duration: 0.28, ease: 'power2.out', onComplete() {
+          gsap.set(curtain, { opacity: 1, translateY: '100%', pointerEvents: 'none' });
+          gsap.set(ball, { scale: 0, opacity: 0 });
+          gsap.set(logo, { opacity: 0, scaleX: 1, scaleY: 1 });
+          document.body.classList.remove('intro-lock');
+          ScrollTrigger.refresh();
+        } }, '-=0.2');
+    })();
 
-      gsap.from('#s-nav', { opacity: 0, y: -20, duration: 0.6, ease: 'power3.out' });
+    /* ── CURSOR ── */
+    const curDot = document.getElementById('cur-dot'), curRing = document.getElementById('cur-ring');
+    let mX = innerWidth/2, mY = innerHeight/2, rX = mX, rY = mY;
+    document.addEventListener('mousemove', e => { mX = e.clientX; mY = e.clientY; curDot.style.left = mX+'px'; curDot.style.top = mY+'px'; });
+    (function loop(){ rX += (mX-rX)*0.1; rY += (mY-rY)*0.1; curRing.style.left = rX+'px'; curRing.style.top = rY+'px'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('is-hovering'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering'));
+    });
 
-      document.querySelectorAll('.reveal').forEach((el, i) => {
-        const parent = el.closest('.s-hero, .s-hero-eyebrow') ? el : null;
-        if (el.closest('.s-hero')) {
-          gsap.from(el, { opacity: 0, y: 30, duration: 0.7, ease: 'power3.out', delay: 0.15 + i * 0.12 });
-        } else {
-          gsap.from(el, {
-            opacity: 0, y: 28, duration: 0.65, ease: 'power3.out',
-            scrollTrigger: { trigger: el, start: 'top 88%', once: true }
-          });
-        }
-      });
-    } else {
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.style.opacity = 1; el.style.transform = 'none';
-      });
-    }
+    /* ── REVEALS ── */
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.closest('.s-hero')) {
+        gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 1.5 });
+      } else {
+        gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+      }
+    });
 
-    // Fallback: força visibilidade após 2s caso animações não disparem
-    setTimeout(() => {
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.style.opacity = 1; el.style.transform = 'none';
-      });
-    }, 2000);
+    /* ── NAV SCROLL FLIP ── */
+    (function () {
+      const nav = document.querySelector('nav');
+      function onScroll() { nav.classList.toggle('nav-scrolled', scrollY > 40); }
+      addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    })();
+
+    /* ── SCROLL TOP ── */
+    (function () {
+      const btn = document.getElementById('scroll-top');
+      ScrollTrigger.create({ trigger: '.s-bio', start: 'top top', onEnter: () => { btn.style.opacity=1; btn.style.transform='none'; btn.style.pointerEvents='all'; }, onLeaveBack: () => { btn.style.opacity=0; btn.style.pointerEvents='none'; } });
+      btn.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+
+    window.addEventListener('load', () => ScrollTrigger.refresh());
 
     /* ── PAGE TRANSITIONS ── */
     (function () {
-      const curtain = document.getElementById('pg-curtain');
-      const logo    = curtain ? curtain.querySelector('span') : null;
-      if (!curtain) return;
-
-      // Entrance: curtain slides up on load
-      gsap.timeline()
-        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
-        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
-
-      // Exit: curtain slides down on navigate
+      const curtain = document.getElementById('curtain'), logo = document.getElementById('curtain-logo');
       function navigate(href) {
-        lenis.stop();
-        document.body.style.overflow = 'hidden';
-        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
-        gsap.set(logo,    { opacity: 0 });
+        document.body.classList.add('intro-lock');
         gsap.timeline()
+          .set(curtain, { pointerEvents: 'all' })
           .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
-          .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
-          .add(() => { window.location.href = href; }, '+=0.15');
+          .to(logo, { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { location.href = href; }, '+=0.15');
       }
-
       document.querySelectorAll('a[href]').forEach(a => {
         if (a.target === '_blank') return;
         const href = a.getAttribute('href');
@@ -540,8 +570,24 @@
         a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
       });
     })();
-  </script>
+  }
 
+  /* ── HAMBURGER (roda sempre) ── */
+  (function () {
+    const btn = document.querySelector('.nav-hamburger'), overlay = document.getElementById('mobile-nav-overlay');
+    if (!btn || !overlay) return;
+    const links = overlay.querySelectorAll('a');
+    let open = false;
+    const anim = window.gsap && !document.documentElement.classList.contains('static');
+    function openMenu(){ open=true; btn.setAttribute('aria-expanded','true'); btn.classList.add('is-open'); overlay.style.pointerEvents='all'; overlay.setAttribute('aria-hidden','false'); document.body.classList.add('intro-lock');
+      if(anim){ gsap.to(overlay,{opacity:1,duration:.3,ease:'power2.out'}); gsap.fromTo(links,{opacity:0,y:24},{opacity:1,y:0,duration:.45,ease:'power3.out',stagger:.07,delay:.1}); } else { overlay.style.opacity=1; links.forEach(l=>{l.style.opacity=1;l.style.transform='none';}); } }
+    function closeMenu(){ open=false; btn.setAttribute('aria-expanded','false'); btn.classList.remove('is-open'); overlay.setAttribute('aria-hidden','true'); document.body.classList.remove('intro-lock');
+      if(anim){ gsap.to(overlay,{opacity:0,duration:.25,ease:'power2.in',onComplete(){overlay.style.pointerEvents='none';}}); gsap.to(links,{opacity:0,y:16,duration:.2}); } else { overlay.style.opacity=0; overlay.style.pointerEvents='none'; } }
+    btn.addEventListener('click', () => open ? closeMenu() : openMenu());
+    addEventListener('keydown', e => { if (e.key === 'Escape' && open) closeMenu(); });
+    links.forEach(l => l.addEventListener('click', () => closeMenu()));
+  })();
+  </script>
 
 </body>
 </html>

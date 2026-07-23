@@ -3,52 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1080, height=1080" />
+  <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png" />
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
   <style>
     @font-face {
-      font-family: 'Sora';
-      font-weight: 300;
-      src: local('Sora Light'), local('SoraLight'), url('fonts/Sora-Regular.woff2') format('woff2');
+      font-family: 'Archivo';
+      font-weight: 100 900;
+      src: url('fonts/Archivo.woff2') format('woff2');
       font-display: block;
     }
     @font-face {
-      font-family: 'Sora';
-      font-weight: 700 800;
-      src: local('Sora Bold'), local('SoraBold'), url('fonts/Sora-Bold.woff2') format('woff2');
+      font-family: 'Besley';
+      font-weight: 400 900;
+      src: url('fonts/Besley.woff2') format('woff2');
       font-display: block;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
       margin: 0; width: 1080px; height: 1080px;
-      overflow: hidden; background: #0C0C0E;
-      font-family: 'Sora', sans-serif;
+      overflow: hidden; background: #21201B;
+      font-family: 'Archivo', sans-serif;
     }
 
     /* ── SHARED ── */
     .clip { position: absolute; }
 
     /* Beat 1 — Hero Headline */
-    #beat1-bg { inset: 0; background: #0C0C0E; }
+    #beat1-bg { inset: 0; background: #21201B; }
     #beat1-line1 {
       top: 340px; left: 80px;
-      font-size: 88px; font-weight: 800; letter-spacing: -.04em;
-      text-transform: uppercase; color: #FAFAFA; line-height: 1;
+      font-family: 'Besley', Georgia, serif;
+      font-size: 88px; font-weight: 800; letter-spacing: -.02em;
+      text-transform: uppercase; color: #F2EFE9; line-height: 1;
     }
     #beat1-line2 {
       top: 450px; left: 80px;
-      font-size: 88px; font-weight: 800; letter-spacing: -.04em;
+      font-family: 'Besley', Georgia, serif;
+      font-size: 88px; font-weight: 800; letter-spacing: -.02em;
       text-transform: uppercase; line-height: 1;
-      color: #FAFAFA;
+      color: #F2EFE9;
     }
-    #beat1-accent { color: #FF3D00; }
+    #beat1-accent { color: #8FA987; }
     #beat1-dot {
       top: 436px; left: 80px;
       width: 12px; height: 12px; border-radius: 50%;
-      background: #FF3D00;
+      background: #8FA987;
     }
 
     /* Beat 2 — Stat */
-    #beat2-bg { inset: 0; background: #18181B; }
+    #beat2-bg { inset: 0; background: #2A2823; }
     #beat2-label {
       top: 300px; left: 80px;
       font-size: 22px; font-weight: 700; letter-spacing: .28em;
@@ -57,59 +61,63 @@
     #beat2-num {
       top: 350px; left: 80px;
       font-size: 240px; font-weight: 800; letter-spacing: -.06em;
-      color: #FF3D00; line-height: 1; font-variant-numeric: tabular-nums;
+      color: #8FA987; line-height: 1; font-variant-numeric: tabular-nums;
     }
     #beat2-unit {
       top: 570px; left: 90px;
-      font-size: 52px; font-weight: 300; color: #FAFAFA;
+      font-size: 52px; font-weight: 300; color: #F2EFE9;
       letter-spacing: -.02em;
     }
     #beat2-bar {
       bottom: 120px; left: 80px; right: 80px; height: 2px;
-      background: #27272A; overflow: hidden;
+      background: #3A382F; overflow: hidden;
     }
-    #beat2-bar-fill { height: 100%; width: 0%; background: #FF3D00; }
+    #beat2-bar-fill { height: 100%; width: 0%; background: #8FA987; }
 
     /* Beat 3 — Diferencial */
-    #beat3-bg { inset: 0; background: #0C0C0E; }
+    #beat3-bg { inset: 0; background: #21201B; }
     #beat3-line1 {
       top: 380px; left: 80px;
-      font-size: 80px; font-weight: 800; letter-spacing: -.04em;
-      text-transform: uppercase; color: #FAFAFA; line-height: 1;
+      font-family: 'Besley', Georgia, serif;
+      font-size: 80px; font-weight: 800; letter-spacing: -.02em;
+      text-transform: uppercase; color: #F2EFE9; line-height: 1;
     }
     #beat3-line2 {
       top: 470px; left: 80px;
-      font-size: 80px; font-weight: 800; letter-spacing: -.04em;
-      text-transform: uppercase; color: #FF3D00; line-height: 1;
+      font-family: 'Besley', Georgia, serif;
+      font-size: 80px; font-weight: 800; letter-spacing: -.02em;
+      text-transform: uppercase; color: #8FA987; line-height: 1;
     }
     #beat3-rule {
       top: 580px; left: 80px;
-      width: 0px; height: 2px; background: #FF3D00;
+      width: 0px; height: 2px; background: #8FA987;
     }
 
     /* Beat 4 — Serviços */
-    #beat4-bg { inset: 0; background: #0C0C0E; }
+    #beat4-bg { inset: 0; background: #21201B; }
     .svc {
       left: 100px;
       font-size: 62px; font-weight: 800; letter-spacing: -.03em;
-      text-transform: uppercase; color: #FAFAFA; line-height: 1;
+      text-transform: uppercase; color: #F2EFE9; line-height: 1;
     }
     #svc-1 { top: 300px; }
     #svc-2 { top: 390px; }
     #svc-3 { top: 480px; }
     #svc-bar {
       top: 300px; left: 80px;
-      width: 4px; height: 240px; background: #FF3D00;
+      width: 4px; height: 240px; background: #8FA987;
     }
 
     /* Beat 5 — Logo */
-    #beat5-bg { inset: 0; background: #0C0C0E; }
+    #beat5-bg { inset: 0; background: #21201B; }
     #beat5-logo {
       top: 50%; left: 50%; transform: translate(-50%, -50%);
-      font-size: 160px; font-weight: 800; letter-spacing: -.05em;
-      text-transform: uppercase; color: #FAFAFA; white-space: nowrap;
+      display: flex; align-items: center; gap: .12em;
+      font-family: 'Besley', Georgia, serif;
+      font-size: 160px; font-weight: 800; letter-spacing: -.03em;
+      text-transform: uppercase; color: #F2EFE9; white-space: nowrap;
     }
-    #beat5-dot { color: #FF3D00; }
+    #beat5-dot { color: #8FA987; }
     #beat5-url {
       top: 620px; left: 50%; transform: translateX(-50%);
       font-size: 24px; font-weight: 300; letter-spacing: .18em;
@@ -175,7 +183,7 @@
 
     <!-- Beat 5 · 18–20s -->
     <div id="beat5-bg"  class="clip" data-start="18" data-duration="2" data-track-index="1"></div>
-    <div id="beat5-logo" class="clip" data-start="18" data-duration="2" data-track-index="2">IRBIS<span id="beat5-dot">.</span></div>
+    <div id="beat5-logo" class="clip" data-start="18" data-duration="2" data-track-index="2"><svg viewBox="24 30 84 60" style="height:.92em;width:auto;fill:currentColor;flex-shrink:0" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg><span>IRBIS<span id="beat5-dot">.</span></span></div>
     <div id="beat5-url"  class="clip" data-start="18" data-duration="2" data-track-index="3">irbis.com.br</div>
 
   </div>
