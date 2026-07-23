@@ -26,6 +26,7 @@ Atualizar ao longo da semana; a rotina de sexta (17h) consolida e o Nicolas leva
 |---|---|---|
 | Propostas ativas aguardando resposta | 1 | QG OS (Arialdo, enviada 17/jul; escada de follow-up ativa, msg 1 em 20/jul) |
 | Propostas em construção | 1 | Sistema IA escritório da mãe (pesquisa de processos ✅; aguarda pricing dos fornecedores) |
+| Leads novos na semana | 1 | INBOUND de sistemas via WhatsApp (DDD 19, 22/jul) — dossiê aberto em 01 - Prospecção; qualificação em curso |
 | Follow-ups disparados na semana | 5 | Msg 1 Pimentel (20/jul) + breakup das 4 demos internacionais (21/jul) |
 | Calls confirmadas | 1 | MGITECH: call MARCADA ✅ (data a registrar). Yamaho (Bruno Máximo): sem call ainda, Nicolas cobra ter 22/jul. Rodrigo: vácuo. Segunda conversa da Yamaho: retomada em 21/jul |
 | Reuniões realizadas | 0 | |
