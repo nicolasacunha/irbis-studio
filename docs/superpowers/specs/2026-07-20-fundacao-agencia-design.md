@@ -61,6 +61,8 @@
 
 Só inicia quando mãe E QG OS estiverem assinados (gate do council de 20/jul). Conteúdo: oferta empacotada de IA (pacotes, pricing, SLA), posicionamento, rebranding do site, prospecção estruturada no G4 pago. Se nenhum contrato assinar até ~19/ago, esta fase morre e o escopo de sites continua. Design detalhado desta fase será feito quando o gate abrir — não agora.
 
+**Reafirmado pelo Nicolas em 22/jul/2026:** ele considerou antecipar o rebranding do site (que ainda fala só de sites) e DECIDIU esperar — "vamos esperar as duas assinaturas saírem, ou pelo menos uma delas". NÃO preparar o rebranding nem num branch no escuro; NÃO agendar; NÃO oferecer proativamente até a 1ª assinatura sair. Gatilho de abertura: primeira assinatura (mãe OU Arialdo). Ajustes "ponte" que refletem a realidade atual (bio, form /call, correção de incoerências pré-pivot como o llms.txt) seguem permitidos e são distintos do rebranding — mas exigem pedido explícito, não iniciativa.
+
 ## Decisões (resolvidas pelo Nicolas em 20/jul/2026)
 
 1. **Propriedade intelectual — DECIDIDO (opção a):** o código é do cliente após quitação total. A monetização recorrente vem do **acompanhamento mensal em 2 pacotes** (mesmo modelo de recorrência da IRBIS em `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`, adaptado a software: ajuste/correção + evolução). O contrato da Fase 1 reflete isso: cessão de código na quitação + oferta dos 2 pacotes de manutenção como cláusula/anexo.
