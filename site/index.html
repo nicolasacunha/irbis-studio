@@ -30,7 +30,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="Design/icone/favicon_true-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="Design/icone/favicon_true.png">
-  <meta name="theme-color" content="#0C0C0E">
+  <meta name="theme-color" content="#F7F5F1">
   <link rel="preload" as="script" href="/vendor/gsap.min.js">
   <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
   <link rel="preload" as="script" href="/vendor/lenis.min.js">
@@ -243,12 +243,12 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg:     #0C0C0E;
-      --s1:     #18181B;
-      --s2:     #27272A;
+      --bg:     #F7F5F1;
+      --s1:     #FFFFFF;
+      --s2:     #E6E3DC;
       --accent: #FF6600;
-      --text:   #FAFAFA;
-      --muted:  #8A8A93;
+      --text:   #17171A;
+      --muted:  #5F5F68;
       --f:      'Sora', sans-serif;
 
       --sp-xs:  .5rem;
@@ -264,7 +264,7 @@
       --ease-press:   cubic-bezier(0.2, 0, 0, 1);
     }
 
-    html { overflow-x: hidden; scroll-behavior: auto; color-scheme: dark; }
+    html { overflow-x: hidden; scroll-behavior: auto; color-scheme: light; }
 
     body {
       font-family: var(--f);
@@ -302,6 +302,7 @@
        INTRO CURTAIN
     ================================================================ */
     #curtain {
+      --bg: #0C0C0E; --text: #FAFAFA;
       position: fixed;
       top: 0; left: 0;
       width: 100%;
@@ -346,7 +347,7 @@
     #cur-ring {
       position: fixed; top: 0; left: 0;
       width: 32px; height: 32px;
-      border: 1px solid rgba(250,250,250,.4);
+      border: 1px solid rgba(23,23,26,.4);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9997;
@@ -392,7 +393,23 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 3rem;
+      color: #FAFAFA;
+      transition: top .3s ease, padding .3s ease, background .3s ease, color .3s ease;
     }
+    nav .nav-hamburger span { background: #FAFAFA; }
+    nav.nav-scrolled {
+      top: 0;
+      padding: 1rem 3rem;
+      background: rgba(247,245,241,.88);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      color: #17171A;
+      border-bottom: 1px solid rgba(23,23,26,.06);
+    }
+    nav.nav-scrolled .nav-links a { color: rgba(23,23,26,.65); }
+    nav.nav-scrolled .nav-links a:hover { color: #17171A; }
+    nav.nav-scrolled .nav-cta { border-color: rgba(23,23,26,.25); }
+    nav.nav-scrolled .nav-hamburger span { background: #17171A; }
     .nav-links {
       position: absolute;
       left: 50%;
@@ -442,6 +459,9 @@
        SECTION 01 — HERO
     ================================================================ */
     #hero {
+      --bg: #0C0C0E; --s1: #18181B; --s2: #27272A; --text: #FAFAFA; --muted: #8A8A93;
+      background-color: var(--bg);
+      color: var(--text);
       --frame: clamp(.625rem, 1.5vw, 1.125rem);
       min-height: calc(100dvh - var(--frame) * 2);
       margin: var(--frame);
@@ -646,7 +666,7 @@
       bottom: 2rem; left: 50%;
       transform: translateX(-50%);
       width: 160px; height: 1px;
-      background: rgba(255,255,255,.1);
+      background: rgba(0,0,0,.12);
       z-index: 10;
     }
     #h-progress-fill {
@@ -729,7 +749,7 @@
       font-weight: 800;
       letter-spacing: -.06em;
       line-height: 1;
-      color: rgba(250,250,250,.45);
+      color: rgba(23,23,26,.45);
       pointer-events: none;
       user-select: none;
       line-height: 0.85;
@@ -954,7 +974,7 @@
       right: 3rem;
       font-size: clamp(10rem, 18vw, 16rem);
       font-weight: 800;
-      color: rgba(250,250,250,.03);
+      color: rgba(23,23,26,.045);
       letter-spacing: -.06em;
       pointer-events: none;
       user-select: none;
@@ -1289,7 +1309,7 @@
       font-size: clamp(.95rem, 1.5vw, 1.2rem);
       font-weight: 300;
       line-height: 1.65;
-      color: rgba(250,250,250,.8);
+      color: rgba(23,23,26,.85);
       max-width: 44ch;
     }
     .proof-from {
@@ -1783,8 +1803,8 @@
       font-weight: 600;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: rgba(250,250,250,.55);
-      background: rgba(12,12,14,.55);
+      color: rgba(23,23,26,.55);
+      background: rgba(255,255,255,.6);
       padding: .4rem .85rem;
       border-radius: 999px;
       backdrop-filter: blur(8px);
@@ -2456,9 +2476,9 @@
             const fill = document.getElementById('h-progress-fill');
             if (fill) fill.style.transform = 'scaleX(' + self.progress + ')';
           },
-          onEnter()     { gsap.to('body', { backgroundColor: '#18181B', duration: .4, overwrite: true }); },
-          onLeaveBack() { gsap.to('body', { backgroundColor: '#0C0C0E', duration: .4, overwrite: true }); },
-          onLeave()     { gsap.to('body', { backgroundColor: '#0C0C0E', duration: .4, overwrite: true }); },
+          onEnter()     { gsap.to('body', { backgroundColor: '#EFECE6', duration: .4, overwrite: true }); },
+          onLeaveBack() { gsap.to('body', { backgroundColor: '#F7F5F1', duration: .4, overwrite: true }); },
+          onLeave()     { gsap.to('body', { backgroundColor: '#F7F5F1', duration: .4, overwrite: true }); },
         },
       });
     })();
@@ -2722,7 +2742,19 @@
       });
     })();
 
-/* ── RESIZE ── */
+/* ── NAV: flip claro depois do hero ── */
+    (function () {
+      const nav = document.querySelector('nav');
+      const hero = document.getElementById('hero');
+      if (!nav || !hero) return;
+      function onScroll() {
+        nav.classList.toggle('nav-scrolled', window.scrollY > hero.offsetHeight - 96);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* ── RESIZE ── */
     let rsTimer;
     window.addEventListener('resize', () => {
       clearTimeout(rsTimer);
