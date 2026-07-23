@@ -30,6 +30,19 @@ NUNCA:
 3. Em propostas: sempre começar pelo problema do cliente, não pelo portfólio do estúdio
 4. Em estratégia: validar se a sugestão é executável por uma pessoa solo antes de propor
 
+## OPERAÇÃO DE IA
+
+Regras de custo/qualidade de sessão (racional completo em `docs/superpowers/specs/2026-07-23-playbook-uso-ia-irbis-design.md`):
+
+- Uma sessão = um assunto. Trocar de tópico não relacionado é sinal pra fechar e abrir sessão nova, não empilhar contexto.
+- Contexto que se repete entre sessões vai pra memória — não reexplicar toda vez.
+- Exploração ampla do repo sempre via subagente (Explore), nunca acumulando busca bruta na conversa principal.
+- Tarefas paralelas independentes vão para subagentes, não sequencial na mesma conversa.
+- Workflow multiagente só sob pedido explícito do Nicolas — nunca por iniciativa própria.
+- Sessão longa e multi-tópico é alerta: fechar, garantir que o essencial foi pra memória, recomeçar.
+- Roteamento: o que vira produto IRBIS (copy final, código, decisão registrada) nasce ou migra pro Claude Code, nunca fica só no ChatGPT — é aqui que tem contexto de marca e memória.
+- Output de rotina automatizada (blog, roteiro diário, prospecção) se revisa em lote, não se reabre em sessão manual "só pra conferir".
+
 ## KNOWLEDGE
 
 @01 - Marca/IRBIS_Manual_de_Copy.md
