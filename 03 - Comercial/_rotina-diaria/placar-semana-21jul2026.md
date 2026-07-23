@@ -7,7 +7,7 @@ Atualizar ao longo da semana; a rotina de sexta (17h) consolida e o Nicolas leva
 | Dia | Publicado? | Vídeo | Views | Gancho usado |
 |---|---|---|---|---|
 | Seg 21/jul | ✅ | Vídeo 1: AWS investe US$ 1 bi pra implantar IA nas empresas (instagram.com/p/DbEguJ0Rajr) | ~200 (3h após publicar; atualizar sexta) | "O problema da tua empresa não é tecnologia" + notícia AWS; CTA único "comenta AWS" |
-| Ter 22/jul | | | | |
+| Ter 22/jul | ✅ | Vídeo 2 (reel DbGsUI1pg1A) | A PREENCHER | Gancho com número: "...que você faz R$250 em menos..." |
 | Qua 23/jul | | | | |
 | Qui 24/jul | | | | |
 | Sex 25/jul | | | | |
@@ -17,7 +17,8 @@ Atualizar ao longo da semana; a rotina de sexta (17h) consolida e o Nicolas leva
 - Vídeo enviado ao grupo JDP pra feedback (tarefa 6.5): EM ANDAMENTO (Nicolas disse que vai enviar, 21/jul)
 - Bio reformada (tarefa 2.2): ✅ 21/jul ("Sites e IA para empresas da economia real")
 - Garimpo (dia 5): pré-pesquisa ✅ · sessão de lupa PENDENTE · prints → mapa de formato PENDENTE
-- Seguidores no início da semana: 7 (21/jul) → fim da semana: ___
+- Seguidores no início da semana: 7 (21/jul) → 16 em 22/jul (+9 em 1 dia) → fim da semana: ___
+- Vídeo 1 (AWS): ~200 views nas primeiras 3h; 3 curtidas + 1 comentário em 22/jul
 
 ## Comercial
 
