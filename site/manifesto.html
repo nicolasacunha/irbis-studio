@@ -63,6 +63,8 @@
       opacity: 0; pointer-events: none;
     }
     #m-nav a, #m-nav span { pointer-events: all; }
+    #m-nav { transition: color .45s ease; }
+    #m-nav.nav-on-accent { color: #F2EFE9; }
     .nav-back {
       font-size: .6rem; font-weight: 600; letter-spacing: .2em;
       text-transform: uppercase; color: var(--text);
@@ -411,6 +413,9 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
+      const mNav = document.getElementById('m-nav');
+      function setNavTone(bg) { if (mNav) mNav.classList.toggle('nav-on-accent', bg === '#4A5D43'); }
+
     const isMobile = window.innerWidth < 768;
     const rm       = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -513,7 +518,7 @@
             const idx = Math.min(Math.floor(self.progress * 9 + .12), 8);
             if (idx !== lastIdx) {
               lastIdx = idx;
-              gsap.to('body', { backgroundColor: screenColors[idx], duration: .55, overwrite: true, ease: 'power2.out' });
+              gsap.to('body', { backgroundColor: screenColors[idx], duration: .55, overwrite: true, ease: 'power2.out' }); setNavTone(screenColors[idx]);
             }
 
             /* Text reveals based on active screen */
@@ -544,8 +549,8 @@
         const bg = screen.dataset.bg;
         ScrollTrigger.create({
           trigger: screen, start: 'top 50%', end: 'bottom 50%',
-          onEnter:     () => gsap.to('body', { backgroundColor: bg, duration: .7, ease: 'power2.out' }),
-          onEnterBack: () => gsap.to('body', { backgroundColor: bg, duration: .7, ease: 'power2.out' }),
+          onEnter:     () => { gsap.to('body', { backgroundColor: bg, duration: .7, ease: 'power2.out' }); setNavTone(bg); },
+          onEnterBack: () => { gsap.to('body', { backgroundColor: bg, duration: .7, ease: 'power2.out' }); setNavTone(bg); },
         });
       });
 
