@@ -30,8 +30,8 @@ Atualizar ao longo da semana; a rotina de sexta (17h) consolida e o Nicolas leva
 | Follow-ups disparados na semana | 5 | Msg 1 Pimentel (20/jul) + breakup das 4 demos internacionais (21/jul) |
 | Calls confirmadas | 1 | MGITECH: call MARCADA ✅ (data a registrar). Yamaho (Bruno Máximo): sem call ainda, Nicolas cobra ter 22/jul. Rodrigo: vácuo. Segunda conversa da Yamaho: retomada em 21/jul |
 | Reuniões realizadas | 0 | |
-| Contratos assinados | 0 | Modelo em revisão jurídica (mãe + advogado amigo) desde 21/jul |
-| Receita na conta na semana | R$ 0 | |
+| Contratos assinados | 1 | **Matheus Utrabo / clínica Casa Paes** — FECHOU e pagou 1ª parcela 22/jul. 1º projeto: 1 LP com form (escopo enxuto; site+LPs viram aditivo). 1º CLIENTE PAGANTE DA IRBIS. |
+| Receita na conta na semana | 1ª parcela do Casa Paes | Valor a registrar; dispara Fase 2 (LTDA) |
 
 ## Infra da semana (não vai pro grupo, é interno)
 

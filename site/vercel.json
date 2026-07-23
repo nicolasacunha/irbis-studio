@@ -79,6 +79,7 @@
     { "source": "/en/blog/(.*)",        "destination": "/en/blog/$1.html" },
     { "source": "/en/design",           "destination": "/en/design.html" },
     { "source": "/portal-acunha/(.*)", "destination": "/portal-acunha/$1" },
-    { "source": "/portal-acunha",      "destination": "/portal-acunha/index.html" }
+    { "source": "/portal-acunha",      "destination": "/portal-acunha/index.html" },
+    { "source": "/portal-casa-paes",   "destination": "/p/casa-paes.html" }
   ]
 }
