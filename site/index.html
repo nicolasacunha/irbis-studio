@@ -802,6 +802,20 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   object-fit: cover;
   transition: transform .6s var(--ease-out);
 }
+/* variante: plate escuro com a logo do cliente centralizada */
+.case-ed-foto.is-logo {
+  background: #21201B;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 11;
+  background-image: radial-gradient(ellipse 80% 70% at 50% 45%, rgba(143,169,135,.07) 0%, transparent 70%);
+}
+.case-ed-foto.is-logo img {
+  width: 52%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
 @media (hover: hover) and (pointer: fine) {
   .case-ed-foto:hover img { transform: scale(1.03); }
 }
@@ -1700,8 +1714,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
           </ul>
           <a class="case-ed-link" href="/eforce">Ver o case →</a>
         </div>
-        <a class="case-ed-foto" href="/eforce" aria-label="Ver o case EForce Drums">
-          <img src="cases-hub/eforce/assets/EFORCE-CASE-1280.jpg" alt="Site da EForce Drums" loading="lazy" width="1280" height="880">
+        <a class="case-ed-foto is-logo" href="/eforce" aria-label="Ver o case EForce Drums">
+          <img src="Design/clientes/eforce.webp" alt="EForce Drums" loading="lazy" width="2400" height="706">
         </a>
       </article>
     </section>
