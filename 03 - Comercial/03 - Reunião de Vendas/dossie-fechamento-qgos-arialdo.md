@@ -21,7 +21,7 @@
 | **Proposta enviada** | 17/jul (PDF em `02 - Projetos/QG Group/QG OS/`) |
 | **No "sim"** | `../06 - Jurídico/checklist-dia-do-sim.md`, Passo 1. Assinatura real depende da revisão do contrato pela mãe. |
 
-> ⚠️ **Valores travados (confirmados pelo Nicolas em 20/jul).** Use R$ 2.997 / R$ 197 / R$ 127. Ignore R$ 297 ou R$ 180 de escopos internos anteriores, estão superados. Confirme contra o PDF de 17/jul antes de citar qualquer número a ele.
+> ✅ **Valores confirmados e definidos na proposta enviada:** R$ 2.997 setup / R$ 197 mês / R$ 127 hora. O que a manutenção cobre já está definido na proposta. Cite direto, sem rejustificar.
 
 ---
 
@@ -29,18 +29,16 @@
 
 Princípio: cada degrau sobe o pedido de compromisso e adiciona um motivo real (a agenda de agosto fechando), nunca pressão barata, e sempre dá saída limpa. Preço não se repete nem se rejustifica, já foi na proposta.
 
-> ⚠️ **Estado incerto no repo:** o relatório de 22/jul não confirma se a **msg 2 já saiu** (diz "confirme no WhatsApp"). Por isso os dois degraus seguintes estão prontos abaixo. **Cheque o WhatsApp e dispare o que faltou, nunca os dois no mesmo dia.**
-
-| Degrau | Quando | Função | Já saiu? |
+| Degrau | Quando | Função | Status |
 |---|---|---|---|
-| **Msg 1** | 20/jul (à noite) | Reabrir: "conseguiu ler a proposta?" | ✅ Saiu |
-| **Msg 2** | 21/jul (à noite) previsto | Motivo + escassez leve + saída limpa | ❓ Conferir no WhatsApp |
-| **Msg 3** | hoje/23/jul, só se seguir silêncio | Ultimato limpo, binário: vamos ou não | ⬜ Pendente |
+| **Msg 1** | 20/jul | Reabrir: "conseguiu ler a proposta?" | ✅ Saiu |
+| **Msg 2** | 21/jul | Motivo + escassez leve + saída limpa | ✅ Saiu |
+| **Msg 3** | hoje/23/jul, se seguir o silêncio | Ultimato limpo, binário: vamos ou não | 🔜 **É a próxima** |
 
-**Regra de disparo:**
-- Se a **msg 2 NÃO saiu** → dispare a **Msg 2 afiada** (item 4A). Espera 1-2 dias.
-- Se a **msg 2 já saiu e ele segue em silêncio** → dispare a **Msg 3 (ultimato)** (item 4B). É a última da escada.
-- Se ele responder **SIM** em qualquer ponto → para a escada, confirma modalidade de pagamento + valor da entrada, entra no `checklist-dia-do-sim.md`.
+**Regra de disparo (msg 1 e 2 já saíram):**
+- Se ele **segue em silêncio** → dispare o **ultimato (Msg 3, item 4B)**. É a última da escada. Não repita a msg 2.
+- Se ele responder **SIM** → para a escada, confirma modalidade de pagamento + valor da entrada, entra no `checklist-dia-do-sim.md`.
+- A Msg 2 afiada (4A) fica no arquivo só como referência do que já foi a estratégia do degrau 2.
 
 ---
 
@@ -74,7 +72,7 @@ Faz sentido a pergunta. O que você paga não é a ferramenta, é parar de perde
 O setup é o sistema pronto e teu. O R$ 197 é o que mantém ele no ar, atualizado e com suporte, num sistema que teu time abre todo dia pra trabalhar. Não é assinatura pra usar, o sistema é da QG. É a manutenção de uma ferramenta que vira a espinha da operação. Se preferir, a gente conversa sobre a modalidade de pagamento do setup (à vista, 50/50 ou parcelado) pra caber melhor no teu fluxo.
 ```
 
-> ⚠️ **Campo a confirmar:** o R$ 197/mês cobre exatamente o quê (hospedagem? correções? evolução?). Alinhe a descrição do que a mensalidade inclui antes de usar essa resposta, pra não prometer suporte além do combinado.
+> O que a manutenção cobre já está descrito na proposta. Mantenha a resposta fiel ao que está lá, sem prometer além.
 
 ---
 
@@ -91,7 +89,7 @@ Previsto. O escopo fecha nos 6 módulos que estão no anexo, então você sabe e
 
 > Sem travessão, sem palavra banida, sem preço no corpo (já foi na proposta), assina "Nicolas". **Nada aprovado até seu "pode mandar".**
 
-### 4A. Msg 2 afiada — motivo + escassez real + saída limpa (dispare se a msg 2 ainda não saiu)
+### 4A. Msg 2 afiada — referência (JÁ SAIU em 21/jul, não redisparar)
 
 ```
 Pimentel, sobre a proposta do QG OS: qualquer dúvida eu te respondo em 5 minutos por áudio, se for mais fácil que ler. Tô montando a agenda de agosto essa semana e queria te reservar a janela. Consegue me dar um retorno até quinta? Se agosto não for teu momento, sem problema, só me avisa que eu remanejo.
@@ -102,7 +100,7 @@ Nicolas
 
 ---
 
-### 4B. Msg 3 — ultimato limpo (dispare só se a msg 2 já saiu e ele seguiu em silêncio)
+### 4B. Msg 3 — ultimato limpo (🔜 É A PRÓXIMA, dispare se ele seguir em silêncio)
 
 > Verbatim do que já estava planejado (`../_rotina-diaria/2026-07-22.md` §3.1). Última da escada.
 
@@ -117,6 +115,5 @@ Nicolas
 
 ## 5. Decisões suas (não executo sozinho)
 
-1. A **msg 2 saiu no WhatsApp**? Sim → o próximo é o ultimato (4B). Não → dispare a msg 2 afiada (4A).
-2. O **R$ 197/mês cobre o quê**, exatamente? Confirme antes de usar a resposta da Objeção 3.
-3. Qual **modalidade de entrada** você quer puxar no "sim" (à vista, 50/50, parcelado)?
+1. **Próximo passo definido:** msg 1 e 2 já saíram. Se ele seguir mudo, o disparo é o **ultimato (4B)**.
+2. Qual **modalidade de entrada** você quer puxar no "sim" (à vista, 50/50, parcelado)?

@@ -10,8 +10,8 @@
 | Campo | Valor |
 |---|---|
 | **Quem indicou** | Maurício Odery (pai do Nicolas; cliente E-Force) |
-| **Quem foi indicado** | Michele, +55 19 99618-6951 |
-| **O que ela quer** | Sistema de CRM com IA ("dar uma organizada") |
+| **Quem foi indicado** | Michele, fisioterapeuta, +55 19 99618-6951 |
+| **O que ela quer** | Sistema de gestão de pacientes com IA ("dar uma organizada") |
 | **Como chegou** | Maurício falou à Michele que o Nicolas "tem feito isso com IA" e passou o contato |
 | **Data da indicação** | ~21/jul/2026 (1º contato do Nicolas em 21/jul 20h52) |
 | **Status atual** | Call de diagnóstico proposta em 22/jul, aguardando a Michele marcar |
@@ -39,7 +39,7 @@ Maurício é indicador recorrente em potencial: é seu pai, é cliente E-Force s
 
 **Opção A (logo após o 1º contato com a Michele dar certo):**
 ```
-Pai, valeu por ter passado meu contato pra Michele. Já falei com ela, ela quer montar um CRM com IA e a gente vai marcar uma call essa semana. Fico te devendo essa. Qualquer pessoa que você lembrar que tá precisando organizar o negócio com sistema ou IA, pode mandar pra mim que eu cuido.
+Pai, valeu por ter passado meu contato pra Michele. Já falei com ela, ela quer organizar o consultório com um sistema e a gente vai marcar uma call essa semana. Fico te devendo essa. Qualquer pessoa que você lembrar que tá precisando organizar o negócio com sistema ou IA, pode mandar pra mim que eu cuido.
 ```
 
 **Opção B (mais curta, se você prefere direto):**

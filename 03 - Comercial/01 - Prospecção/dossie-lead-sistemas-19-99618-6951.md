@@ -5,8 +5,8 @@
 
 ## Quem é
 
-- **Michele** — contato indicado pelo pai do Nicolas (**Maurício Odery**, E-Force). O pai contou a ela que o Nicolas "tem feito isso com IA".
-- Negócio/empresa dela: **A CONFIRMAR na call** (pergunta obrigatória: qual o negócio, tamanho, e o CRM organiza o quê).
+- **Michele** — **fisioterapeuta**. Contato indicado pelo pai do Nicolas (**Maurício Odery**, E-Force). O pai contou a ela que o Nicolas "tem feito isso com IA".
+- Negócio: clínica/consultório de fisioterapia. O "CRM" dela é gestão de pacientes (agenda, retorno, evolução/prontuário, follow-up de quem sumiu). **A confirmar na call:** tamanho (só ela x com equipe), particular x convênio, e qual dor pesa mais. Dado de paciente = dado de saúde, LGPD sensível.
 
 ## O que ela quer (palavras dela, 22/jul 7h39)
 
