@@ -30,6 +30,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3013", "/Users/nicolascunha/Projects/Business/irbis/docs"],
       "port": 3013
+    },
+    {
+      "name": "explore-olho-aceso",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3014", "/Users/nicolascunha/Projects/Business/irbis/explore"],
+      "port": 3014
     }
   ]
 }
