@@ -48,17 +48,19 @@
     "inLanguage": "pt-BR"
   }
   </script>
-  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
   <style>
     :root {
-      --bg:     #0C0C0E;
-      --s1:     #18181B;
-      --s2:     #27272A;
-      --accent: #FF3D00;
-      --text:   #FAFAFA;
-      --muted:  #8A8A93;
-      --f:      'Sora', sans-serif;
+      --bg:     #F2EFE9;
+      --s1:     #FAF8F4;
+      --s2:     #E1DCD0;
+      --accent: #4A5D43;
+      --text:   #26251F;
+      --muted:  #6E6C60;
+      --f:      'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
     }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { background: var(--bg); }
@@ -74,7 +76,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.75rem 3rem;
-      background: linear-gradient(to bottom, rgba(12,12,14,.85) 0%, transparent 100%);
+      background: linear-gradient(to bottom, rgba(242,239,233,.85) 0%, transparent 100%);
     }
     .nav-logo { font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
     .nav-logo span { color: var(--accent); }
@@ -87,6 +89,9 @@
 
     /* ── CASE HERO ── */
     .case-hero {
+      --bg: #21201B; --s1: #2A2822; --s2: #3A372E; --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+      background-color: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       position: relative;
       display: flex;
@@ -170,13 +175,13 @@
       padding: 0 3rem 0;
     }
     .case-browser {
-      background: #1c1c1e;
+      background: #21201B;
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 10px;
       overflow: hidden;
     }
     .case-browser-bar {
-      background: #2a2a2c;
+      background: #2A2822;
       padding: .6rem 1rem;
       display: flex; align-items: center; gap: .75rem;
       border-bottom: 1px solid rgba(255,255,255,.06);
@@ -191,9 +196,9 @@
     .case-browser-dot:nth-child(2) { background: #febc2e; }
     .case-browser-dot:nth-child(3) { background: #28c840; }
     .case-browser-url {
-      flex: 1; background: #3a3a3c;
+      flex: 1; background: #3A372E;
       border-radius: 4px; padding: .25rem .75rem;
-      font-family: 'Sora', monospace; font-size: .55rem;
+      font-family: 'Archivo', monospace; font-size: .55rem;
       color: rgba(255,255,255,.4); letter-spacing: .04em;
     }
     .case-browser img {
@@ -323,7 +328,7 @@
     /* ── FOOTER ── */
     footer {
       padding: 2rem 3rem;
-      border-top: 1px solid rgba(255,255,255,.06);
+      border-top: 1px solid rgba(38,37,31,.08);
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
     }
     .footer-brand { font-size: .6rem; font-weight: 700; letter-spacing: .2em; color: var(--muted); }
@@ -378,6 +383,13 @@
   })(window, document);
   </script>
 <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    .case-hero-title, .case-cenario-headline, .case-nav-name, .entrega-num, .case-testimonial-quote { font-family: var(--f-serif); }
+    .case-hero-title, .case-cenario-headline { font-weight: 700; text-transform: none; letter-spacing: -.015em; line-height: 1.05; }
+    .case-nav-name, .entrega-num { font-weight: 700; }
+    .nav-logo { font-family: var(--f-serif); font-weight: 800; }
+  </style>
 </head>
 <body>
 

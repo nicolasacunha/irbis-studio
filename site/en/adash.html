@@ -52,17 +52,19 @@
     "inLanguage": "en"
   }
   </script>
-  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
   <style>
     :root {
-      --bg:     #0C0C0E;
-      --s1:     #18181B;
-      --s2:     #27272A;
-      --accent: #FF3D00;
-      --text:   #FAFAFA;
-      --muted:  #8A8A93;
-      --f:      'Sora', sans-serif;
+      --bg:     #F2EFE9;
+      --s1:     #FAF8F4;
+      --s2:     #E1DCD0;
+      --accent: #4A5D43;
+      --text:   #26251F;
+      --muted:  #6E6C60;
+      --f:      'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
     }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { background: var(--bg); }
@@ -78,7 +80,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.75rem 3rem;
-      background: linear-gradient(to bottom, rgba(12,12,14,.85) 0%, transparent 100%);
+      background: linear-gradient(to bottom, rgba(242,239,233,.85) 0%, transparent 100%);
     }
     .nav-logo { font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
     .nav-back {
@@ -92,6 +94,9 @@
 
     /* HERO */
     .case-hero {
+      --bg: #21201B; --s1: #2A2822; --s2: #3A372E; --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+      background-color: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       position: relative;
       display: flex;
@@ -102,20 +107,20 @@
     }
     .case-hero-bg {
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, #0a0a0f 0%, #0f1118 35%, #0d1020 65%, #0a0a0f 100%);
+      background: linear-gradient(135deg, #1B1A16 0%, #24221D 35%, #2A2822 65%, #1B1A16 100%);
     }
     .case-hero-bg::after {
       content: '';
       position: absolute;
       bottom: 0; right: 0;
       width: 65%; height: 80%;
-      background: radial-gradient(ellipse at 75% 90%, rgba(255,61,0,.12) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 75% 90%, rgba(143,169,135,.12) 0%, transparent 60%);
     }
     .case-hero-glow {
       position: absolute;
       top: 10%; left: 40%;
       width: 50%; height: 50%;
-      background: radial-gradient(ellipse at 50% 50%, rgba(30,60,120,.18) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 50% 50%, rgba(143,169,135,.14) 0%, transparent 65%);
       pointer-events: none;
     }
     .case-hero-ghost {
@@ -221,13 +226,15 @@
     .case-next-ver:hover { color: var(--accent); border-color: var(--accent); }
     .case-next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
     .case-next-card {
+      --bg: #21201B; --s1: #2A2822; --s2: #3A372E; --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+      color: var(--text);
       display: block; position: relative; overflow: hidden; aspect-ratio: 16/8; background: var(--s1);
     }
     .case-next-bg { position: absolute; inset: 0; transition: transform .5s ease; }
     .case-next-card:hover .case-next-bg { transform: scale(1.04); }
     .case-next-bottom {
       position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;
-      background: linear-gradient(to top, rgba(12,12,14,.85) 0%, transparent 100%);
+      background: linear-gradient(to top, rgba(24,23,19,.85) 0%, transparent 100%);
       display: flex; justify-content: space-between; align-items: flex-end;
     }
     .case-next-name { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 800; letter-spacing: -.03em; text-transform: uppercase; }
@@ -235,7 +242,7 @@
     .case-next-arrow { color: var(--muted); transition: color .2s, transform .2s; }
     .case-next-card:hover .case-next-arrow { color: var(--accent); transform: translate(4px, -4px); }
     .case-next-card::after { content: ''; position: absolute; inset: 0; border: 1px solid transparent; transition: border-color .3s; pointer-events: none; }
-    .case-next-card:hover::after { border-color: rgba(255,61,0,.22); }
+    .case-next-card:hover::after { border-color: rgba(143,169,135,.22); }
 
     /* CTA */
     .case-cta {
@@ -246,11 +253,11 @@
     .case-cta-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -.04em; text-transform: uppercase; line-height: 1; }
     .case-cta-sub { font-size: .82rem; font-weight: 300; color: var(--muted); line-height: 1.7; margin-top: 1rem; max-width: 42ch; }
     .case-cta-btn {
-      display: inline-block; background: var(--accent); color: var(--bg);
+      display: inline-block; background: #26251F; color: #F2EFE9;
       font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
       padding: 1.1rem 2.5rem; flex-shrink: 0; transition: opacity .2s;
     }
-    .case-cta-btn:hover { opacity: .85; }
+    .case-cta-btn:hover { background: #4A5D43; }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -283,14 +290,14 @@
 
     /* ── BROWSER MOCKUP ── */
     .case-browser {
-      background: #1c1c1e;
+      background: #21201B;
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 10px;
       overflow: hidden;
       margin: 0 3rem;
     }
     .case-browser-bar {
-      background: #2a2a2c;
+      background: #2A2822;
       padding: .6rem 1rem;
       display: flex; align-items: center; gap: .75rem;
       border-bottom: 1px solid rgba(255,255,255,.06);
@@ -301,9 +308,9 @@
     .case-browser-dot:nth-child(2) { background: #febc2e; }
     .case-browser-dot:nth-child(3) { background: #28c840; }
     .case-browser-url {
-      flex: 1; background: #3a3a3c;
+      flex: 1; background: #3A372E;
       border-radius: 4px; padding: .25rem .75rem;
-      font-family: 'Sora', monospace; font-size: .55rem;
+      font-family: 'Archivo', monospace; font-size: .55rem;
       color: rgba(255,255,255,.4); letter-spacing: .04em;
     }
     .case-browser img { width: 100%; display: block; }
@@ -336,11 +343,18 @@
   })(window, document);
   </script>
 <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    .case-hero-title, .case-cenario-headline, .case-desafios-headline, .case-resultados-headline, .case-cta-headline, .case-next-name, .case-stat-num { font-family: var(--f-serif); }
+    .case-hero-title, .case-cenario-headline, .case-desafios-headline, .case-resultados-headline, .case-cta-headline { font-weight: 700; text-transform: none; letter-spacing: -.015em; line-height: 1.05; }
+    .case-stat-num, .case-next-name { font-weight: 700; }
+    .nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
+  </style>
 </head>
 <body>
 
-<div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
-  <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+<div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+  <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
 </div>
 
 <!-- NAV -->
@@ -561,8 +575,8 @@
   <div class="case-next-grid">
 
     <a class="case-next-card" href="/en/eforce">
-      <div class="case-next-bg" style="background:linear-gradient(135deg,#0f0f14 0%,#1a1a2e 50%,#0f0f14 100%);">
-        <div style="position:absolute;top:0;right:0;width:60%;height:60%;background:radial-gradient(ellipse at 70% 20%,rgba(255,61,0,.10) 0%,transparent 65%);"></div>
+      <div class="case-next-bg" style="background:linear-gradient(135deg,#1B1A16 0%,#2A2822 50%,#1B1A16 100%);">
+        <div style="position:absolute;top:0;right:0;width:60%;height:60%;background:radial-gradient(ellipse at 70% 20%,rgba(143,169,135,.10) 0%,transparent 65%);"></div>
       </div>
       <div class="case-next-bottom">
         <div>
@@ -574,8 +588,8 @@
     </a>
 
     <a class="case-next-card" href="/en#contato">
-      <div class="case-next-bg" style="background:linear-gradient(135deg,#111113 0%,#1d1d20 100%);">
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(3rem,6vw,5rem);font-weight:800;letter-spacing:-.06em;color:rgba(255,61,0,.06);text-transform:uppercase;user-select:none">IRBIS</div>
+      <div class="case-next-bg" style="background:linear-gradient(135deg,#21201B 0%,#2A2822 100%);">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(3rem,6vw,5rem);font-weight:800;letter-spacing:-.06em;color:rgba(143,169,135,.06);text-transform:uppercase;user-select:none">IRBIS</div>
       </div>
       <div class="case-next-bottom">
         <div>

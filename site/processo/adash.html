@@ -31,20 +31,22 @@
   }
   </script>
 
-  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:     #0C0C0E;
-      --text:   #FAFAFA;
-      --accent: #FF3D00;
-      --muted:  #8A8A93;
-      --mid:    #18181B;
-      --s2:     rgba(250,250,250,.08);
-      --f:      'Sora', sans-serif;
+      --bg:     #F2EFE9;
+      --text:   #26251F;
+      --accent: #4A5D43;
+      --muted:  #6E6C60;
+      --mid:    #FAF8F4;
+      --s2:     rgba(38,37,31,.08);
+      --f:      'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
     }
 
     html { font-family: var(--f); font-size: 16px; }
@@ -107,7 +109,7 @@
     .p-hero-tag {
       font-size: .55rem; font-weight: 700; letter-spacing: .25em;
       text-transform: uppercase; color: var(--accent);
-      border: 1px solid rgba(255,61,0,.3); padding: .3rem .8rem;
+      border: 1px solid rgba(74,93,67,.3); padding: .3rem .8rem;
     }
     .p-hero-date {
       font-size: .58rem; font-weight: 400; letter-spacing: .12em;
@@ -125,7 +127,7 @@
     .p-hero-title .acc { color: var(--accent); }
     .p-hero-intro {
       font-size: clamp(1rem, 1.4vw, 1.15rem); font-weight: 300;
-      line-height: 1.75; color: rgba(250,250,250,.7);
+      line-height: 1.75; color: rgba(38,37,31,.7);
     }
 
     /* ── DIVIDER ── */
@@ -161,7 +163,7 @@
 
     .p-p {
       font-size: clamp(.875rem, 1.1vw, 1rem); font-weight: 300;
-      line-height: 1.8; color: rgba(250,250,250,.7);
+      line-height: 1.8; color: rgba(38,37,31,.7);
       max-width: 62ch; margin-bottom: 1.25rem;
     }
     .p-p strong { color: var(--text); font-weight: 600; }
@@ -187,7 +189,7 @@
       display: flex; gap: 1rem; align-items: flex-start;
       padding: .75rem 0; border-bottom: 1px solid var(--s2);
       font-size: clamp(.875rem, 1.1vw, 1rem); font-weight: 300;
-      line-height: 1.6; color: rgba(250,250,250,.7);
+      line-height: 1.6; color: rgba(38,37,31,.7);
     }
     .p-list li:first-child { border-top: 1px solid var(--s2); }
     .p-list-marker {
@@ -198,7 +200,7 @@
 
     /* Code block */
     .p-code {
-      background: #111113; padding: 1.5rem 2rem; margin: 1.5rem 0;
+      background: #21201B; padding: 1.5rem 2rem; margin: 1.5rem 0;
       font-family: 'Courier New', monospace; font-size: .78rem;
       line-height: 1.7; color: rgba(250,250,250,.6); overflow-x: auto;
     }
@@ -232,7 +234,7 @@
 
     /* Callout */
     .p-callout {
-      background: rgba(255,61,0,.07);
+      background: rgba(74,93,67,.07);
       padding: 1.75rem 2rem; margin: 2rem 0;
     }
     .p-callout-label {
@@ -241,7 +243,7 @@
     }
     .p-callout-text {
       font-size: .9rem; font-weight: 300; line-height: 1.7;
-      color: rgba(250,250,250,.75);
+      color: rgba(38,37,31,.75);
     }
     .p-callout-text strong { color: var(--text); font-weight: 600; }
 
@@ -273,11 +275,11 @@
     .p-footer-cta-text .acc { color: var(--accent); }
     .p-footer-btn {
       display: inline-flex; align-items: center; gap: .75rem;
-      padding: .9rem 2rem; background: var(--accent);
+      padding: .9rem 2rem; background: #26251F;
       font-size: .65rem; font-weight: 700; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--bg); transition: opacity .2s;
+      text-transform: uppercase; color: #F2EFE9; transition: background .2s;
     }
-    .p-footer-btn:hover { opacity: .85; }
+    .p-footer-btn:hover { background: #4A5D43; }
 
     /* ── SITE FOOTER ── */
     .p-site-footer {
@@ -338,12 +340,19 @@
   })(window, document);
   </script>
 <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    .p-hero-title, h2.p-h2, .p-footer-cta-text, .p-footer-author-name { font-family: var(--f-serif); font-weight: 700; text-transform: none; letter-spacing: -.015em; }
+    .p-hero-title, h2.p-h2 { line-height: 1.05; }
+    .p-quote-text { font-family: var(--f-serif); }
+    .p-nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
+  </style>
 </head>
 
 <body>
 
-  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
-    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
   </div>
 
   <!-- NAV -->
