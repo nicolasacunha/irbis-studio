@@ -36,30 +36,31 @@
     ]
   }
   </script>
-  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root{--bg:#0C0C0E;--s1:#18181B;--s2:#27272A;--accent:#FF3D00;--text:#FAFAFA;--muted:#8A8A93;--f:'Sora',sans-serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
-    html{background:var(--bg);color:var(--text);font-family:var(--f);-webkit-font-smoothing:antialiased;color-scheme:dark}
+    :root{--bg:#F2EFE9;--s1:#FAF8F4;--s2:#E1DCD0;--accent:#4A5D43;--text:#26251F;--muted:#6E6C60;--f:'Archivo',sans-serif;--f-serif:'Besley',Georgia,serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
+    html{background:var(--bg);color:var(--text);font-family:var(--f);-webkit-font-smoothing:antialiased;color-scheme:light}
     a{text-decoration:none;color:inherit}
     ::selection{background:var(--accent);color:var(--bg)}
-    nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 3rem;background:rgba(12,12,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--s2)}
+    nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 3rem;background:rgba(242,239,233,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--s2)}
     .nav-logo{font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-    .nav-cta{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(250,250,250,.2);padding:.5rem 1.1rem;transition:border-color .2s,color .2s,transform .12s var(--ease-out);touch-action:manipulation}
+    .nav-cta{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(38,37,31,.25);padding:.5rem 1.1rem;transition:border-color .2s,color .2s,transform .12s var(--ease-out);touch-action:manipulation}
     .nav-cta:hover{border-color:var(--accent);color:var(--accent)}
     .nav-cta:active{transform:scale(0.96)}
     main{max-width:800px;margin:0 auto;padding:5rem 2rem 8rem}
     .eyebrow{font-size:.55rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1.25rem}
     h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;text-wrap:balance;margin-bottom:1.5rem}
-    .lead{font-size:clamp(.9rem,1.4vw,1rem);font-weight:300;color:rgba(250,250,250,.7);line-height:1.8;max-width:55ch;text-wrap:pretty;margin-bottom:4rem}
+    .lead{font-size:clamp(.9rem,1.4vw,1rem);font-weight:300;color:rgba(38,37,31,.7);line-height:1.8;max-width:55ch;text-wrap:pretty;margin-bottom:4rem}
     .stages{display:flex;flex-direction:column;gap:1px;background:var(--s2);margin-bottom:4rem}
     .stage{background:var(--bg);padding:1.75rem 2rem;display:flex;gap:2rem;align-items:flex-start}
     .stage-num{font-size:.55rem;font-weight:700;letter-spacing:.2em;color:var(--accent);flex-shrink:0;margin-top:.15rem}
     .stage-content h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.4rem}
     .stage-content p{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.65;margin:0}
     h2{font-size:clamp(1.1rem,2.5vw,1.6rem);font-weight:800;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:1rem;text-wrap:balance}
-    p{font-size:.88rem;font-weight:300;line-height:1.8;color:rgba(250,250,250,.75);margin-bottom:1rem}
+    p{font-size:.88rem;font-weight:300;line-height:1.8;color:rgba(38,37,31,.75);margin-bottom:1rem}
     p strong{color:var(--text);font-weight:600}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--s2);margin:3rem 0}
     .stat{background:var(--bg);padding:1.75rem;display:flex;flex-direction:column;gap:.4rem}
@@ -106,6 +107,17 @@
   })(window, document);
   </script>
 <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    h1, h2, .stat-val, .stage-content h3 { font-family: var(--f-serif); }
+    h1, h2 { font-weight: 700; text-transform: none; letter-spacing: -.015em; }
+    h1 { line-height: 1.05; }
+    .stat-val { font-weight: 700; }
+    .stage-content h3 { font-weight: 700; text-transform: none; letter-spacing: -.01em; }
+    .nav-logo { font-family: var(--f-serif); font-weight: 800; }
+    .cta-btn { background: #26251F; color: #F2EFE9; transition: background .2s, transform .12s var(--ease-out); }
+    .cta-btn:hover { background: #4A5D43; opacity: 1; }
+  </style>
 </head>
 <body>
 <nav>

@@ -51,19 +51,21 @@
   }
   </script>
   <link rel="icon" type="image/png" href="Design/icone/favicon_true.png">
-  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:     #0C0C0E;
-      --text:   #FAFAFA;
-      --accent: #FF3D00;
-      --muted:  #8A8A93;
-      --mid:    #18181B;
-      --f:      'Sora', sans-serif;
+      --bg:     #F2EFE9;
+      --text:   #26251F;
+      --accent: #4A5D43;
+      --muted:  #6E6C60;
+      --mid:    #FAF8F4;
+      --f:      'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
     }
 
     html { font-family: var(--f); font-size: 16px; scroll-behavior: smooth; }
@@ -110,7 +112,7 @@
       transform: translateY(-50%);
       font-size: clamp(14rem, 28vw, 26rem); font-weight: 800; line-height: 1;
       letter-spacing: -.06em; text-transform: uppercase;
-      color: transparent; -webkit-text-stroke: 1px rgba(250,250,250,.06);
+      color: transparent; -webkit-text-stroke: 1px rgba(38,37,31,.045);
       user-select: none; pointer-events: none;
     }
     .s-hero-eyebrow {
@@ -127,7 +129,7 @@
     .s-hero-desc {
       margin-top: 2.5rem;
       font-size: clamp(.9rem, 1.3vw, 1.05rem); font-weight: 300;
-      line-height: 1.65; color: rgba(250,250,250,.65);
+      line-height: 1.65; color: rgba(38,37,31,.65);
       max-width: 44ch;
     }
     @media (max-width: 768px) {
@@ -137,7 +139,7 @@
 
     /* ── DIVIDER ── */
     .s-divider {
-      height: 1px; background: rgba(250,250,250,.08);
+      height: 1px; background: rgba(38,37,31,.08);
       margin: 0 3rem;
     }
     @media (max-width: 768px) { .s-divider { margin: 0 1.5rem; } }
@@ -164,7 +166,7 @@
     .s-bio-right {}
     .s-bio-text {
       font-size: clamp(.9rem, 1.2vw, 1rem); font-weight: 300;
-      line-height: 1.75; color: rgba(250,250,250,.7);
+      line-height: 1.75; color: rgba(38,37,31,.7);
       max-width: 58ch;
     }
     .s-bio-text + .s-bio-text { margin-top: 1.5rem; }
@@ -177,12 +179,12 @@
     /* ── NUMBERS STRIP ── */
     .s-numbers {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid rgba(250,250,250,.08);
-      border-bottom: 1px solid rgba(250,250,250,.08);
+      border-top: 1px solid rgba(38,37,31,.08);
+      border-bottom: 1px solid rgba(38,37,31,.08);
     }
     .s-num-item {
       padding: 3.5rem 3rem;
-      border-right: 1px solid rgba(250,250,250,.08);
+      border-right: 1px solid rgba(38,37,31,.08);
     }
     .s-num-item:last-child { border-right: none; }
     .s-num-val {
@@ -198,7 +200,7 @@
       .s-numbers { grid-template-columns: 1fr 1fr; }
       .s-num-item { padding: 2.5rem 1.5rem; }
       .s-num-item:nth-child(2) { border-right: none; }
-      .s-num-item:nth-child(3) { border-top: 1px solid rgba(250,250,250,.08); border-right: 1px solid rgba(250,250,250,.08); }
+      .s-num-item:nth-child(3) { border-top: 1px solid rgba(38,37,31,.08); border-right: 1px solid rgba(38,37,31,.08); }
     }
 
     /* ── APPROACH BLOCK ── */
@@ -214,9 +216,9 @@
       counter-increment: ap;
       display: grid; grid-template-columns: 3rem 1fr;
       gap: 2rem; padding: 2.5rem 0;
-      border-top: 1px solid rgba(250,250,250,.08);
+      border-top: 1px solid rgba(38,37,31,.08);
     }
-    .s-approach-item:last-child { border-bottom: 1px solid rgba(250,250,250,.08); }
+    .s-approach-item:last-child { border-bottom: 1px solid rgba(38,37,31,.08); }
     .s-approach-n {
       font-size: .65rem; font-weight: 700; letter-spacing: .15em;
       color: var(--accent); padding-top: .3rem;
@@ -228,7 +230,7 @@
     }
     .s-approach-p {
       font-size: .85rem; font-weight: 300; line-height: 1.7;
-      color: rgba(250,250,250,.6); max-width: 52ch;
+      color: rgba(38,37,31,.6); max-width: 52ch;
     }
     @media (max-width: 768px) {
       .s-approach { padding: 4rem 1.5rem; }
@@ -251,7 +253,7 @@
     .s-client-name {
       font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 800;
       letter-spacing: -.03em; text-transform: uppercase;
-      color: rgba(250,250,250,.35); transition: color .25s;
+      color: rgba(38,37,31,.35); transition: color .25s;
     }
     .s-client-name:hover { color: var(--text); }
     @media (max-width: 768px) {
@@ -284,7 +286,7 @@
     .s-cta-ghost {
       font-size: .7rem; font-weight: 600; letter-spacing: .18em;
       text-transform: uppercase; color: var(--muted);
-      border-bottom: 1px solid rgba(250,250,250,.2);
+      border-bottom: 1px solid rgba(38,37,31,.25);
       padding-bottom: .15rem; transition: color .2s, border-color .2s;
     }
     .s-cta-ghost:hover { color: var(--text); border-color: var(--text); }
@@ -295,7 +297,7 @@
     /* ── FOOTER ── */
     .s-footer {
       padding: 2rem 3rem;
-      border-top: 1px solid rgba(250,250,250,.08);
+      border-top: 1px solid rgba(38,37,31,.08);
       display: flex; justify-content: space-between; align-items: center;
       flex-wrap: wrap; gap: 1rem;
     }
@@ -340,12 +342,21 @@
   })(window, document);
   </script>
 <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    .s-hero-title, .s-bio-name, .s-cta-headline, .s-num-val, .s-hero-num { font-family: var(--f-serif); }
+    .s-hero-title, .s-bio-name, .s-cta-headline { font-weight: 700; text-transform: none; letter-spacing: -.015em; line-height: 1.05; }
+    .s-num-val, .s-hero-num { font-weight: 700; }
+    .s-nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
+    .s-cta-btn { background: #26251F; color: #F2EFE9; transition: background .2s; }
+    .s-cta-btn:hover { background: #4A5D43; opacity: 1; }
+  </style>
 </head>
 
 <body>
 
-  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#0C0C0E;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
-    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FAFAFA;opacity:1">IRBIS<span style="color:#FF3D00">.</span></span>
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
   </div>
 
   <!-- NAV -->
