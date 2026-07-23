@@ -325,6 +325,16 @@
     }
 
     #curtain-logo .acc { color: var(--accent); position: relative; left: .08em; }
+    #curtain-ball {
+      position: absolute; top: 50%; left: 50%;
+      width: clamp(120px, 16vw, 190px); height: clamp(120px, 16vw, 190px);
+      margin: calc(clamp(120px, 16vw, 190px) / -2) 0 0 calc(clamp(120px, 16vw, 190px) / -2);
+      background: #FAF8F4; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 60px rgba(0,0,0,.35);
+      opacity: 0; transform: scale(.82);
+    }
+    #curtain-ball svg { width: 56%; height: auto; opacity: 0; }
 
     body.intro-lock { overflow: hidden; }
 
@@ -1867,7 +1877,13 @@
 <body>
   <!-- Intro curtain -->
   <div id="curtain" aria-hidden="true">
-    <span id="curtain-logo">IRBIS<span class="acc">.</span></span>
+    <div id="curtain-ball">
+      <svg id="curtain-eye" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M18 78 C40 30, 96 10, 164 24 C176 26, 184 22, 190 16 C186 34, 176 44, 160 50 C120 96, 60 106, 22 92 C14 89, 16 82, 18 78 Z" fill="#26251F"/>
+        <ellipse cx="92" cy="52" rx="9" ry="24" fill="#FAF8F4" transform="rotate(-8 92 52)"/>
+        <path d="M46 74 C78 96, 122 92, 150 62" fill="none" stroke="#FAF8F4" stroke-width="9" stroke-linecap="round"/>
+      </svg>
+    </div>
   </div>
   <div id="cur-dot"></div>
   <div id="cur-ring"></div>
@@ -2362,27 +2378,31 @@
     /* ── INTRO CURTAIN ── */
     (function () {
       const curtain = document.getElementById('curtain');
-      const logo    = document.getElementById('curtain-logo');
+      const ball    = document.getElementById('curtain-ball');
+      const eye     = document.getElementById('curtain-eye');
 
       document.body.classList.add('intro-lock');
       lenis.stop();
 
-      gsap.set(curtain, { height: '100dvh' });
+      gsap.set(curtain, { height: '100dvh', clipPath: 'circle(150% at 50% 50%)' });
 
       gsap.timeline({ delay: 0.1 })
-        .to(logo,    { opacity: 1, duration: 0.4, ease: 'power2.out' })
-        .to(logo,    { opacity: 0, duration: 0.3, ease: 'power2.in' }, '+=0.05')
+        .to(ball,    { opacity: 1, scale: 1, duration: 0.35, ease: 'power3.out' })
+        .to(eye,     { opacity: 1, duration: 0.25, ease: 'power2.out' }, '-=0.12')
+        .to(ball,    { scale: 0, opacity: 0, duration: 0.55, ease: 'power3.in' }, '+=0.28')
         .to(curtain, {
-          translateY: '-100%',
+          clipPath: 'circle(0% at 50% 50%)',
           duration: 0.65,
           ease: 'power3.inOut',
           onComplete() {
-            gsap.set(curtain, { translateY: '100%', pointerEvents: 'none' });
+            gsap.set(curtain, { clipPath: 'none', translateY: '100%', pointerEvents: 'none' });
+            gsap.set(ball, { scale: .82, opacity: 0 });
+            gsap.set(eye,  { opacity: 0 });
             document.body.classList.remove('intro-lock');
             lenis.start();
             ScrollTrigger.refresh();
           }
-        }, '-=0.1');
+        }, '-=0.45');
     })();
 
     /* ── NAV LOGO CLICK → CURTAIN ── */
@@ -2391,7 +2411,8 @@
       if (window.scrollY < 10) return;
 
       const curtain = document.getElementById('curtain');
-      const logo    = document.getElementById('curtain-logo');
+      const ball    = document.getElementById('curtain-ball');
+      const eye     = document.getElementById('curtain-eye');
 
       lenis.stop();
       document.body.classList.add('intro-lock');
@@ -2399,12 +2420,14 @@
       gsap.timeline()
         .set(curtain,  { pointerEvents: 'all' })
         .to(curtain,   { translateY: '0%', duration: 0.6, ease: 'power3.inOut' })
-        .to(logo,      { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.1')
+        .to(ball,      { opacity: 1, scale: 1, duration: 0.35, ease: 'power3.out' }, '-=0.1')
+        .to(eye,       { opacity: 1, duration: 0.25 }, '-=0.1')
         .add(() => { window.scrollTo(0, 0); lenis.scrollTo(0, { immediate: true }); })
-        .to(logo,      { opacity: 0, duration: 0.3, ease: 'power2.in' }, '+=0.5')
+        .to([ball, eye], { opacity: 0, duration: 0.3, ease: 'power2.in' }, '+=0.4')
         .to(curtain,   { translateY: '-100%', duration: 0.7, ease: 'power3.inOut',
           onComplete() {
             gsap.set(curtain, { translateY: '100%', pointerEvents: 'none' });
+            gsap.set(ball, { scale: .82, opacity: 0 });
             document.body.classList.remove('intro-lock');
             lenis.start();
             ScrollTrigger.refresh();
@@ -2655,7 +2678,8 @@
     /* ── PAGE TRANSITIONS ── */
     (function () {
       const curtain = document.getElementById('curtain');
-      const logo    = document.getElementById('curtain-logo');
+      const ballT   = document.getElementById('curtain-ball');
+      const eyeT    = document.getElementById('curtain-eye');
       if (!curtain) return;
 
       function navigate(href) {
@@ -2664,7 +2688,8 @@
         gsap.timeline()
           .set(curtain,  { pointerEvents: 'all' })
           .to(curtain,   { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
-          .to(logo,      { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .to(ballT,     { opacity: 1, scale: 1, duration: 0.3, ease: 'power3.out' }, '-=0.05')
+          .to(eyeT,      { opacity: 1, duration: 0.2 }, '-=0.08')
           .add(() => { window.location.href = href; }, '+=0.15');
       }
 
