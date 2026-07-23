@@ -30,7 +30,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="Design/icone/favicon_true-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="Design/icone/favicon_true.png">
-  <meta name="theme-color" content="#F7F5F1">
+  <meta name="theme-color" content="#F2EFE9">
   <link rel="preload" as="script" href="/vendor/gsap.min.js">
   <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
   <link rel="preload" as="script" href="/vendor/lenis.min.js">
@@ -233,8 +233,9 @@
     ]
   }
   </script>
-  <link rel="preload" href="/Design/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url('/Design/fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}</style>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
 
   <style>
     /* ================================================================
@@ -243,13 +244,14 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg:     #F7F5F1;
-      --s1:     #FFFFFF;
-      --s2:     #E6E3DC;
-      --accent: #FF6600;
-      --text:   #17171A;
-      --muted:  #5F5F68;
-      --f:      'Sora', sans-serif;
+      --bg:     #F2EFE9;
+      --s1:     #FAF8F4;
+      --s2:     #E1DCD0;
+      --accent: #4A5D43;
+      --text:   #26251F;
+      --muted:  #6E6C60;
+      --f:      'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
 
       --sp-xs:  .5rem;
       --sp-sm:  1rem;
@@ -302,7 +304,7 @@
        INTRO CURTAIN
     ================================================================ */
     #curtain {
-      --bg: #0C0C0E; --text: #FAFAFA;
+      --bg: #21201B; --text: #F2EFE9;
       position: fixed;
       top: 0; left: 0;
       width: 100%;
@@ -347,7 +349,7 @@
     #cur-ring {
       position: fixed; top: 0; left: 0;
       width: 32px; height: 32px;
-      border: 1px solid rgba(23,23,26,.4);
+      border: 1px solid rgba(38,37,31,.4);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9997;
@@ -400,16 +402,16 @@
     nav.nav-scrolled {
       top: 0;
       padding: 1rem 3rem;
-      background: rgba(247,245,241,.88);
+      background: rgba(242,239,233,.9);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
-      color: #17171A;
-      border-bottom: 1px solid rgba(23,23,26,.06);
+      color: #26251F;
+      border-bottom: 1px solid rgba(38,37,31,.06);
     }
-    nav.nav-scrolled .nav-links a { color: rgba(23,23,26,.65); }
-    nav.nav-scrolled .nav-links a:hover { color: #17171A; }
-    nav.nav-scrolled .nav-cta { border-color: rgba(23,23,26,.25); }
-    nav.nav-scrolled .nav-hamburger span { background: #17171A; }
+    nav.nav-scrolled .nav-links a { color: rgba(38,37,31,.65); }
+    nav.nav-scrolled .nav-links a:hover { color: #26251F; }
+    nav.nav-scrolled .nav-cta { border-color: rgba(38,37,31,.25); }
+    nav.nav-scrolled .nav-hamburger span { background: #26251F; }
     .nav-links {
       position: absolute;
       left: 50%;
@@ -459,7 +461,7 @@
        SECTION 01 — HERO
     ================================================================ */
     #hero {
-      --bg: #0C0C0E; --s1: #18181B; --s2: #27272A; --text: #FAFAFA; --muted: #8A8A93;
+      --bg: #21201B; --s1: #2A2822; --s2: #3A372E; --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
       background-color: var(--bg);
       color: var(--text);
       --frame: clamp(.625rem, 1.5vw, 1.125rem);
@@ -749,7 +751,7 @@
       font-weight: 800;
       letter-spacing: -.06em;
       line-height: 1;
-      color: rgba(23,23,26,.45);
+      color: rgba(38,37,31,.45);
       pointer-events: none;
       user-select: none;
       line-height: 0.85;
@@ -974,7 +976,7 @@
       right: 3rem;
       font-size: clamp(10rem, 18vw, 16rem);
       font-weight: 800;
-      color: rgba(23,23,26,.045);
+      color: rgba(38,37,31,.045);
       letter-spacing: -.06em;
       pointer-events: none;
       user-select: none;
@@ -1309,7 +1311,7 @@
       font-size: clamp(.95rem, 1.5vw, 1.2rem);
       font-weight: 300;
       line-height: 1.65;
-      color: rgba(23,23,26,.85);
+      color: rgba(38,37,31,.85);
       max-width: 44ch;
     }
     .proof-from {
@@ -1803,7 +1805,7 @@
       font-weight: 600;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: rgba(23,23,26,.55);
+      color: rgba(38,37,31,.55);
       background: rgba(255,255,255,.6);
       padding: .4rem .85rem;
       border-radius: 999px;
@@ -1849,6 +1851,22 @@
     }
   </style>
 <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    .hero-title, .cases-title, .num-big, .prod-name, .opero-title, .faq-title, .contato-heading, .case-n, .proof-text {
+      font-family: var(--f-serif);
+    }
+    .hero-title, .cases-title, .prod-name, .opero-title, .contato-heading {
+      font-weight: 700; text-transform: none; letter-spacing: -.015em;
+    }
+    .hero-title { line-height: 1.05; font-size: clamp(3rem, 7.5vw, 6.5rem); }
+    .num-big, .case-n { font-weight: 700; }
+    .nav-logo, #curtain-logo, .footer-logo { font-family: var(--f-serif); font-weight: 800; }
+    .cta-primary { background: #26251F; color: #F2EFE9; }
+    .cta-primary:hover { background: #4A5D43; }
+    #hero .cta-primary { background: #F2EFE9; color: #26251F; }
+    #hero .cta-primary:hover { background: #8FA987; color: #21201B; }
+  </style>
 </head>
 
 <body>
@@ -2476,9 +2494,9 @@
             const fill = document.getElementById('h-progress-fill');
             if (fill) fill.style.transform = 'scaleX(' + self.progress + ')';
           },
-          onEnter()     { gsap.to('body', { backgroundColor: '#EFECE6', duration: .4, overwrite: true }); },
-          onLeaveBack() { gsap.to('body', { backgroundColor: '#F7F5F1', duration: .4, overwrite: true }); },
-          onLeave()     { gsap.to('body', { backgroundColor: '#F7F5F1', duration: .4, overwrite: true }); },
+          onEnter()     { gsap.to('body', { backgroundColor: '#E6E2D8', duration: .4, overwrite: true }); },
+          onLeaveBack() { gsap.to('body', { backgroundColor: '#F2EFE9', duration: .4, overwrite: true }); },
+          onLeave()     { gsap.to('body', { backgroundColor: '#F2EFE9', duration: .4, overwrite: true }); },
         },
       });
     })();
