@@ -7,3 +7,4 @@
 | 2026-07-17 (ed. 2) | Site que vende | "Por que meu site não vende?" + case E-Force vitrine parada → +R$350k | ADP |
 | 2026-07-21 | O terceiro caminho | "Por que agência demora meses pra entregar um site" (demora = estrutura/fila, não o trabalho) | Loop Aberto |
 | 2026-07-22 | IA do jeito certo | "Por que todo site feito com IA tem a mesma cara" (genericidade = falta de critério, não a ferramenta) | PAS |
+| 2026-07-23 | Site que vende | "Seu site lento tá queimando a venda que já era sua" (velocidade = venda perdida; raiz é critério, não plugin; 53% abandono >3s, Google 2016) | PAS |
