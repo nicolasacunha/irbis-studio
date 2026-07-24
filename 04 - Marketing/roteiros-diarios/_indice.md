@@ -8,3 +8,4 @@
 | 2026-07-21 | O terceiro caminho | "Por que agência demora meses pra entregar um site" (demora = estrutura/fila, não o trabalho) | Loop Aberto |
 | 2026-07-22 | IA do jeito certo | "Por que todo site feito com IA tem a mesma cara" (genericidade = falta de critério, não a ferramenta) | PAS |
 | 2026-07-23 | Site que vende | "Seu site lento tá queimando a venda que já era sua" (velocidade = venda perdida; raiz é critério, não plugin; 53% abandono >3s, Google 2016) | PAS |
+| 2026-07-24 | O terceiro caminho | "Na agência, quem faz o seu site nunca falou com você" (fila de intermediários dilui o negócio → sai template; vilão = agência; 75% julgam pela aparência, Stanford 2002) | ADP |
