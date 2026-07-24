@@ -32,6 +32,12 @@
       "port": 3013
     },
     {
+      "name": "lp-casa-paes",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3015", "/Users/nicolascunha/Projects/Business/irbis/02 - Projetos/Casa Paes/lp"],
+      "port": 3015
+    },
+    {
       "name": "explore-olho-aceso",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3014", "/Users/nicolascunha/Projects/Business/irbis/explore"],

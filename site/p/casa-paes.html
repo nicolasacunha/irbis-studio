@@ -66,6 +66,9 @@
   .bar { height: 8px; width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
   .bar > span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 999px; }
   .status .summary { font-size: 15px; color: var(--text); line-height: 1.55; }
+  .status .view-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 800; font-size: 14px; padding: 12px 22px; border-radius: 999px; letter-spacing: 0.01em; transition: filter .15s ease; }
+  .status .view-btn:hover { filter: brightness(1.08); }
+  .status .view-btn svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2.5; fill: none; }
 
   .timeline { position: relative; padding-left: 30px; }
   .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
@@ -137,15 +140,16 @@
   <section>
     <p class="section-label">Status agora</p>
     <div class="status">
-      <p class="phase">Aguardando materiais</p>
+      <p class="phase">Aprovação do design</p>
       <div class="progress">
         <div class="progress-head">
           <span class="txt">Progresso do projeto</span>
-          <span class="pct">25%</span>
+          <span class="pct">70%</span>
         </div>
-        <div class="bar"><span style="width: 25%"></span></div>
+        <div class="bar"><span style="width: 70%"></span></div>
       </div>
-      <p class="summary">Kickoff feito, briefing fechado. Agora só preciso dos materiais pra começar a construir. Assim que a logo e as imagens chegarem, o relógio dos 3 dias úteis começa a contar.</p>
+      <p class="summary">A primeira versão da sua página está pronta. Dá uma olhada e me diz o que achou. Assim que você aprovar, faço os ajustes finais e coloco no ar.</p>
+      <a class="view-btn" href="https://casa-paes-lp.vercel.app/" target="_blank" rel="noopener">Acompanhar o projeto <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
     </div>
   </section>
 
@@ -170,28 +174,28 @@
         <p class="date">Feito</p>
       </div>
 
+      <div class="milestone done">
+        <span class="dot"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span>
+        <p class="name">Materiais e conteúdo</p>
+        <p class="date">Recebido</p>
+      </div>
+
+      <div class="milestone done">
+        <span class="dot"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></span>
+        <p class="name">Design da landing page</p>
+        <p class="date">Primeira versão pronta</p>
+      </div>
+
       <div class="milestone active">
         <span class="dot"></span>
-        <p class="name">Materiais e conteúdo</p>
-        <p class="date">Aguardando você</p>
+        <p class="name">Sua aprovação</p>
+        <p class="date">É agora</p>
       </div>
 
       <div class="milestone future">
         <span class="dot"></span>
-        <p class="name">Estrutura e textos da página</p>
-        <p class="date">Assim que os materiais chegarem</p>
-      </div>
-
-      <div class="milestone future">
-        <span class="dot"></span>
-        <p class="name">Design da landing page</p>
-        <p class="date">Em seguida</p>
-      </div>
-
-      <div class="milestone future">
-        <span class="dot"></span>
-        <p class="name">Sua revisão</p>
-        <p class="date">Antes de publicar</p>
+        <p class="name">Ajustes finais</p>
+        <p class="date">Depois do seu retorno</p>
       </div>
 
       <div class="milestone future">
@@ -208,14 +212,10 @@
     <p class="section-label">Aguardando você</p>
     <div class="waiting">
       <ul>
-        <!-- PENDÊNCIA: duplique este item conforme o projeto -->
-        <li>Logo da Casa Paes</li>
-        <li>O nome que vai na página</li>
-        <li>Referências de imagem e o antes/depois (com autorização)</li>
-        <li>O número de WhatsApp que recebe os contatos</li>
-        <li>A referência da calculadora que você quer replicar</li>
+        <li>Dar uma olhada na primeira versão da página (botão acima)</li>
+        <li>Me dizer o que gostou e o que quer mudar</li>
       </ul>
-      <p class="note">Enquanto estes itens estiverem pendentes, o prazo fica pausado. Manda na ordem que ficarem prontos, na pasta de materiais aqui embaixo ou no WhatsApp. Não precisa esperar juntar tudo.</p>
+      <p class="note">Pode mandar seu retorno aqui no WhatsApp, na ordem que for vendo. Anota tudo que te incomodar que eu ajusto de uma vez.</p>
     </div>
   </section>
 
@@ -242,8 +242,8 @@
   <section>
     <p class="section-label">Próximo passo</p>
     <div class="call">
-      <p class="date">Você me manda os materiais</p>
-      <p class="desc">Assim que a logo e as imagens chegarem, eu monto a primeira versão da página e te mostro pra aprovar. Do começo ao ar em 3 dias úteis.</p>
+      <p class="date">Sua aprovação do design</p>
+      <p class="desc">Vê a página no botão lá em cima e me manda seu retorno. Com o seu ok, faço os ajustes finais e coloco no ar.</p>
     </div>
   </section>
 
