@@ -14,6 +14,7 @@ Paths relativos à raiz `Business/irbis/`, têm espaços — sempre use aspas.
 | Tarefa | Skill certa |
 |---|---|
 | Conduzir a videochamada de vendas (~45 min, preço ao vivo, objeções, fechamento) | `irbis-call-de-vendas` |
+| Preparar uma reunião JÁ MARCADA (auditoria pré-call, munição de SPIN, rapport de dever de casa) | `irbis-precall` |
 | Pós-fechamento: briefing, entrega, repitch MRR, pedir indicação a cliente | `irbis-entrega-e-recorrencia` |
 | Escrever copy externa (post, bio, DM nova) com a voz da marca | `irbis-brand-voice` |
 | Decidir o que é canônico vs pré-pivot; vocabulário proibido; case Adash | `irbis-guarda-pivot` |
@@ -21,11 +22,14 @@ Paths relativos à raiz `Business/irbis/`, têm espaços — sempre use aspas.
 | Regras da casa, RTK, fluxo superpowers, commit por fase | `workbench-metodo-da-casa` |
 | Prioridades do portfólio e metas de 90 dias | `portfolio-mapa-e-decisoes` |
 
-Esta skill gera a reunião. O que acontece DENTRO da videochamada é `irbis-call-de-vendas`.
+Esta skill gera a reunião. Preparar a reunião marcada é `irbis-precall`; o que acontece DENTRO da videochamada é `irbis-call-de-vendas`.
 
 ## Contexto mínimo (leia antes de agir)
 
-- IRBIS faz **exclusivamente sites** desde 01/jun/2026 (`irbis/CLAUDE.md` — ⚠️ raiz do projeto irbis; `Business/CLAUDE.md` não existe). Nicolas opera **solo**. Nunca prospecte branding, identidade, dashboard ou app.
+- **Escopo: em transição documentada — confirme antes de prospectar IA.** O escopo canônico de 01/jun/2026 é **exclusivamente sites** (`irbis/CLAUDE.md` — ⚠️ raiz do projeto irbis; `Business/CLAUDE.md` não existe), e é isso que `irbis-guarda-pivot` ainda aplica (checklist pergunta 1: "oferece algo além de site? corte a oferta"). Porém `docs/visao-irbis.md`, **aprovada pelo dono em 21/jul/2026** — portanto posterior às respostas de 04/jul que sustentam o guarda —, estabelece o pivot **sites + IA**: "site é a porta; sistema com IA é o que mora dentro", com 2 clientes fundadores de IA em negociação e rebranding condicionado ao fechamento até ~19/ago/2026.
+  - **Regra operacional até o guarda-pivot ser atualizado:** prospecte sites livremente. Para prospectar ou diagnosticar IA, **pergunte ao dono caso a caso** — não presuma nenhum dos dois lados nem produza peça que ofereça IA sem confirmação. Pela hierarquia de verdade do guarda (resposta do dono vence doc), a visão de 21/jul é a fonte mais recente; a contradição é de **documentação, não de decisão**, e a atualização do `irbis-guarda-pivot` e do `CLAUDE.md` é pendência aberta para o dono.
+  - Segue proibido em qualquer cenário: branding, identidade visual, app, dashboard avulso, Web3.
+- Nicolas opera **solo** — nenhuma estratégia pode exigir time.
 - Operação comercial de junho/2026 **adaptada do Grupo JDP** (mentoria; aulas fora do repo). **Regras JDP são fixas** (dono, 04/jul/2026: "Regras deles sao fixas") — não adapte o método. "Ajusta conforme sua realidade" (`kpis-comercial-irbis.md:3`) vale só para escolher o NÍVEL de meta (N1/N2/N3).
 - Meta de 90 dias (dono, 04/jul/2026): "irbis tendo pelo menos 2 clientes por mes" = N1 dos KPIs (2 sites/mês ≈ R$9k).
 - **Pipeline real: Notion "Grupo JDP <> IRBIS STUDIO", fora do repo** (`03 - Comercial/README.md:55`). ⚠️ Link e estrutura de colunas não documentados — peça ambos ao dono antes de consultar. Trackers do repo 100% vazios (☐/⬜) — vazio ≠ nada feito. **Nunca reporte status comercial a partir dos trackers**; pergunte ao dono ou peça print/export do Notion.
@@ -110,19 +114,20 @@ Esta skill gera a reunião. O que acontece DENTRO da videochamada é `irbis-call
 
 Verificação rápida antes de publicar qualquer peça reaproveitada: `grep -rn "1,8x\|+500" "03 - Comercial" "04 - Marketing" --include="*.md"` — se retornar qualquer linha, remova antes de publicar.
 
-## ICP: EM ABERTO — as duas frentes coexistem
+## ICP: definido em 21/jul/2026 — economia real
 
-Resposta do dono (04/jul/2026): "Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito." Não há ICP oficial.
+**Atualização (21/jul/2026):** o ICP deixou de estar em aberto. `docs/visao-irbis.md` (aprovada pelo dono) e `docs/mapa-maturidade-vs-realidade.md` (Pilar 3, marcado ✅) fixam: **economia real — empresário que fatura 6 a 7 dígitos por ano, com baixo domínio digital, que "paga caro por aquilo que trabalha dentro dele"**. Frase oficial do plano JDP.
 
-| Hipótese | Evidência | Canal onde vive |
-|---|---|---|
-| Founders de startup (SaaS, fintech, creator economy) | Site fala com founder; outbound de 01/jun (SolarZ, Conty, Elephan.AI, Vitrify); bio "Sites para founders" | LinkedIn outbound + inbound do site |
-| Negócios locais premium (odonto, estética, barbearia, arquitetura, advocacia, imobiliária alto padrão) | Virada das listas em 15/jun; dossiê de cold call 23/jun; verticais do CSV atual | Cold call + WhatsApp |
+Isso **supera** a resposta de 04/jul/2026 ("Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito"), que segue registrada em `irbis-guarda-pivot` como "EM ABERTO" — a atualização daquela skill é pendência do dono. Em conflito, vale a fonte mais recente aprovada por ele (21/jul).
 
-**Checklist antes de criar qualquer peça nova (lista, script, lead magnet, página):**
-1. Pergunte ao dono: "Esta peça serve founders (LinkedIn) ou negócios locais (cold call/WhatsApp)?"
-2. Sem resposta → não produza a peça travada num ICP só; aguarde.
-3. Dentro de uma frente já existente, use o tom daquela frente (founder ↔ LinkedIn; dono local ↔ telefone/WhatsApp) sem reperguntar.
+Consequência para as frentes históricas:
+
+| Frente | Status sob o ICP de 21/jul |
+|---|---|
+| Negócios locais premium (odonto, estética, arquitetura, advocacia, imobiliária alto padrão) | **Dentro do ICP** — é a leitura direta de "economia real". Frente A (cold call) e C (WhatsApp) seguem válidas |
+| Founders de startup (SaaS, fintech, creator economy) | **Fora do ICP declarado.** Não descarte listas e material existentes, mas não produza peça nova mirando founder sem confirmar com o dono se a Frente B (LinkedIn) continua ativa como canal secundário |
+
+**Antes de criar peça nova:** escreva para dono de negócio da economia real, no tom da frente/canal onde a peça vive (telefone/WhatsApp para local). Só pergunte ao dono se a peça mirar founder — aí a dúvida é real.
 
 ---
 
