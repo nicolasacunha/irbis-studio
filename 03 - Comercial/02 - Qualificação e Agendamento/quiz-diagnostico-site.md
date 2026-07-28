@@ -60,8 +60,11 @@
 > Tá no começo, e fazer o site certo agora evita retrabalho caro lá na frente. Vale a gente alinhar o caminho numa conversa de 20 minutos, sem compromisso.
 
 **CTA final (todas):**
-> 👉 Agenda aqui: [link do calendário]
+> 👉 Agenda aqui: https://irbis.com.br/call
 > Ou volta no meu direct e manda "bora" que eu te passo os horários.
+
+> **Regra de uso do link (28/jul/2026):** o `/call` é `noindex` e fora do menu **por design** — ele não é destino público. Mande o link **só depois** da leitura do quiz (3+ 🔥 = lead quente). Para 1–2 🔥, não mande: siga em nutrição/follow-up. Quem preenche o formulário do `/call` cai direto na sua agenda, então o link é o último passo da qualificação, não o primeiro.
+> Verificado em produção em 28/jul: a página responde, a grade puxa horários reais do Google Calendar, e o agendamento cria o evento. Substitui o placeholder "[link do calendário]" que travava esta etapa desde 25/jun.
 
 ---
 

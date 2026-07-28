@@ -14,6 +14,7 @@ Paths relativos à raiz `Business/irbis/`, têm espaços — sempre use aspas.
 | Tarefa | Skill certa |
 |---|---|
 | Conduzir a videochamada de vendas (~45 min, preço ao vivo, objeções, fechamento) | `irbis-call-de-vendas` |
+| Preparar uma reunião JÁ MARCADA (auditoria pré-call, munição de SPIN, rapport de dever de casa) | `irbis-precall` |
 | Pós-fechamento: briefing, entrega, repitch MRR, pedir indicação a cliente | `irbis-entrega-e-recorrencia` |
 | Escrever copy externa (post, bio, DM nova) com a voz da marca | `irbis-brand-voice` |
 | Decidir o que é canônico vs pré-pivot; vocabulário proibido; case Adash | `irbis-guarda-pivot` |
@@ -21,11 +22,14 @@ Paths relativos à raiz `Business/irbis/`, têm espaços — sempre use aspas.
 | Regras da casa, RTK, fluxo superpowers, commit por fase | `workbench-metodo-da-casa` |
 | Prioridades do portfólio e metas de 90 dias | `portfolio-mapa-e-decisoes` |
 
-Esta skill gera a reunião. O que acontece DENTRO da videochamada é `irbis-call-de-vendas`.
+Esta skill gera a reunião. Preparar a reunião marcada é `irbis-precall`; o que acontece DENTRO da videochamada é `irbis-call-de-vendas`.
 
 ## Contexto mínimo (leia antes de agir)
 
-- IRBIS faz **exclusivamente sites** desde 01/jun/2026 (`irbis/CLAUDE.md` — ⚠️ raiz do projeto irbis; `Business/CLAUDE.md` não existe). Nicolas opera **solo**. Nunca prospecte branding, identidade, dashboard ou app.
+- **Escopo: em transição documentada — confirme antes de prospectar IA.** O escopo canônico de 01/jun/2026 é **exclusivamente sites** (`irbis/CLAUDE.md` — ⚠️ raiz do projeto irbis; `Business/CLAUDE.md` não existe), e é isso que `irbis-guarda-pivot` ainda aplica (checklist pergunta 1: "oferece algo além de site? corte a oferta"). Porém `docs/visao-irbis.md`, **aprovada pelo dono em 21/jul/2026** — portanto posterior às respostas de 04/jul que sustentam o guarda —, estabelece o pivot **sites + IA**: "site é a porta; sistema com IA é o que mora dentro", com 2 clientes fundadores de IA em negociação e rebranding condicionado ao fechamento até ~19/ago/2026.
+  - **Regra operacional (alinhada com `irbis-guarda-pivot` e `CLAUDE.md`, atualizados em 28/jul/2026):** prospecte **sites e sistemas com IA** livremente — as duas frentes são upsell mútuo. O que segue congelado é a **comunicação pública**: reposicionar a marca como "IA para a economia real" (site, deck, bio, anúncio) depende do gatilho das 2 assinaturas até ~19/ago e de aprovação explícita do dono.
+  - Segue proibido em qualquer cenário: branding, identidade visual avulsa, app/dashboard avulso, SaaS próprio para terceiros, Web3, consultoria avulsa.
+- Nicolas opera **solo** — nenhuma estratégia pode exigir time.
 - Operação comercial de junho/2026 **adaptada do Grupo JDP** (mentoria; aulas fora do repo). **Regras JDP são fixas** (dono, 04/jul/2026: "Regras deles sao fixas") — não adapte o método. "Ajusta conforme sua realidade" (`kpis-comercial-irbis.md:3`) vale só para escolher o NÍVEL de meta (N1/N2/N3).
 - Meta de 90 dias (dono, 04/jul/2026): "irbis tendo pelo menos 2 clientes por mes" = N1 dos KPIs (2 sites/mês ≈ R$9k).
 - **Pipeline real: Notion "Grupo JDP <> IRBIS STUDIO", fora do repo** (`03 - Comercial/README.md:55`). ⚠️ Link e estrutura de colunas não documentados — peça ambos ao dono antes de consultar. Trackers do repo 100% vazios (☐/⬜) — vazio ≠ nada feito. **Nunca reporte status comercial a partir dos trackers**; pergunte ao dono ou peça print/export do Notion.
@@ -110,19 +114,20 @@ Esta skill gera a reunião. O que acontece DENTRO da videochamada é `irbis-call
 
 Verificação rápida antes de publicar qualquer peça reaproveitada: `grep -rn "1,8x\|+500" "03 - Comercial" "04 - Marketing" --include="*.md"` — se retornar qualquer linha, remova antes de publicar.
 
-## ICP: EM ABERTO — as duas frentes coexistem
+## ICP: definido em 21/jul/2026 — economia real
 
-Resposta do dono (04/jul/2026): "Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito." Não há ICP oficial.
+**Atualização (21/jul/2026):** o ICP deixou de estar em aberto. `docs/visao-irbis.md` (aprovada pelo dono) e `docs/mapa-maturidade-vs-realidade.md` (Pilar 3, marcado ✅) fixam: **economia real — empresário que fatura 6 a 7 dígitos por ano, com baixo domínio digital, que "paga caro por aquilo que trabalha dentro dele"**. Frase oficial do plano JDP.
 
-| Hipótese | Evidência | Canal onde vive |
-|---|---|---|
-| Founders de startup (SaaS, fintech, creator economy) | Site fala com founder; outbound de 01/jun (SolarZ, Conty, Elephan.AI, Vitrify); bio "Sites para founders" | LinkedIn outbound + inbound do site |
-| Negócios locais premium (odonto, estética, barbearia, arquitetura, advocacia, imobiliária alto padrão) | Virada das listas em 15/jun; dossiê de cold call 23/jun; verticais do CSV atual | Cold call + WhatsApp |
+Isso **supera** a resposta de 04/jul/2026 ("Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito"). `irbis-guarda-pivot` foi atualizado em 28/jul/2026 e já registra o ICP definido — as duas skills estão alinhadas.
 
-**Checklist antes de criar qualquer peça nova (lista, script, lead magnet, página):**
-1. Pergunte ao dono: "Esta peça serve founders (LinkedIn) ou negócios locais (cold call/WhatsApp)?"
-2. Sem resposta → não produza a peça travada num ICP só; aguarde.
-3. Dentro de uma frente já existente, use o tom daquela frente (founder ↔ LinkedIn; dono local ↔ telefone/WhatsApp) sem reperguntar.
+Consequência para as frentes históricas:
+
+| Frente | Status sob o ICP de 21/jul |
+|---|---|
+| Negócios locais premium (odonto, estética, arquitetura, advocacia, imobiliária alto padrão) | **Dentro do ICP** — é a leitura direta de "economia real". Frente A (cold call) e C (WhatsApp) seguem válidas |
+| Founders de startup (SaaS, fintech, creator economy) | **Fora do ICP declarado.** Não descarte listas e material existentes, mas não produza peça nova mirando founder sem confirmar com o dono se a Frente B (LinkedIn) continua ativa como canal secundário |
+
+**Antes de criar peça nova:** escreva para dono de negócio da economia real, no tom da frente/canal onde a peça vive (telefone/WhatsApp para local). Só pergunte ao dono se a peça mirar founder — aí a dúvida é real.
 
 ---
 
@@ -217,7 +222,8 @@ Máximo 2 tentativas após o DM. Modelos completos da leva de junho (SolarZ, Con
 2. ⚠️ Automação: ManyChat citado como "ou similar" — **contratação NÃO confirmada no repo**. Não prometa funil automatizado sem confirmar com o dono se a ferramenta está de fato ativa.
 3. Quiz de 5 perguntas qualifica (site hoje? traz cliente? momento do negócio? maior incômodo? decisor pronto?). Alternativas 🔥 = sinal quente.
 4. Diagnóstico personalizado (3 variações por perfil, definidas em `quiz-diagnostico-site.md`, mesma seção do quiz — ⚠️ path não confirmado por leitura direta nesta reescrita; se não estiverem nesse arquivo, é o único doc de `02 - Qualificação e Agendamento/` com "variações" no nome ou conteúdo) → CTA agendar a reunião de diagnóstico.
-   ⚠️ **O link do calendário no doc (`quiz-diagnostico-site.md:63`) é o texto literal "[link do calendário]" — placeholder sem URL real.** **PARE antes de ativar este funil ou mandar esse link a qualquer prospect: pergunte ao dono a URL real do calendário (Calendly/Google Agenda ou similar) e só prossiga com a URL confirmada.** Sem URL real, ofereça agendamento manual por WhatsApp em vez do link.
+   ✅ **RESOLVIDO em 28/jul/2026 — o link real é `https://irbis.com.br/call`.** O placeholder "[link do calendário]" foi substituído no doc. Funil verificado em produção: a página responde, a grade puxa horários reais do Google Calendar e o agendamento cria o evento (teste ponta a ponta em 28/jul).
+   ⚠️ **Regra de uso:** o `/call` é `noindex` e fora do menu **por design** — não é destino público e não deve ser divulgado em post, bio ou anúncio. Mande **só depois** da leitura do quiz (3+ 🔥). Para 1–2 🔥, siga em nutrição — quem abre o link cai direto na agenda do Nicolas.
 5. Leitura: 3+ 🔥 = lead quente → puxar para call em até 24h. 1–2 🔥 = nutrição/follow-up.
 
 Roteiros de conteúdo são da P2 do JDP (fora do repo); plano de posts vigente: `plano-conteudo-instagram.md` (10/jun). Copy de post = `irbis-brand-voice`.

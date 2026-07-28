@@ -424,12 +424,12 @@
       padding: 60px 48px 76px;
     }
 
-    /* topo: header e status lado a lado */
+    /* topo: header e status lado a lado, alinhados pelo topo */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1.05fr;
       gap: 52px;
-      align-items: center;
+      align-items: start;
       padding-bottom: 44px;
       margin-bottom: 44px;
       border-bottom: 1px solid var(--border);
@@ -447,17 +447,24 @@
 
     .header h1 { font-size: 50px; }
 
-    /* miolo: duas colunas equilibradas */
+    /* miolo: grid 2x2, tópicos alinhados linha a linha */
     .masonry {
-      column-count: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       column-gap: 52px;
+      row-gap: 40px;
+      align-items: start;
+      grid-template-areas:
+        "marcos links"
+        "waiting call";
     }
 
-    .masonry > section {
-      break-inside: avoid;
-      -webkit-column-break-inside: avoid;
-      margin-bottom: 40px;
-    }
+    .masonry > section { margin-bottom: 0; }
+
+    .m-marcos  { grid-area: marcos; }
+    .m-waiting { grid-area: waiting; }
+    .m-links   { grid-area: links; }
+    .m-call    { grid-area: call; }
 
     .footer { margin-top: 12px; }
   }
@@ -547,7 +554,7 @@
   </section>
 
   <!-- 5. LINKS ÚTEIS -->
-  <section>
+  <section class="m-links">
     <p class="section-label">Links úteis</p>
     <div class="links">
       <a class="link-row" href="{{LINK_PREVIEW}}" target="_blank" rel="noopener">
@@ -572,7 +579,7 @@
   </section>
 
   <!-- 6. PRÓXIMA CALL -->
-  <section>
+  <section class="m-call">
     <p class="section-label">Próxima call</p>
     <div class="call">
       <p class="date">{{DATA_PROXIMA_CALL}}</p>

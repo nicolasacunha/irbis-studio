@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>IRBIS — laboratório de símbolo</title>
+<style>
+@font-face{font-family:'Besley';font-weight:400 900;font-display:swap;src:url('/fonts/besley-latin.woff2') format('woff2')}
+@font-face{font-family:'Archivo';font-weight:100 900;font-display:swap;src:url('/fonts/archivo-latin.woff2') format('woff2')}
+:root{--ink:#26251F;--cream:#F2EFE9;--char:#21201B;--sage:#4A5D43;--sage-l:#8FA987;--f:'Archivo',sans-serif;--fs:'Besley',Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--f);background:#E6E2D8;color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:clamp(2rem,5vw,5rem) clamp(1.2rem,4vw,3rem)}
+h1{font-family:var(--fs);font-weight:700;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:-.02em;margin-bottom:.4rem}
+.sub{font-size:.85rem;color:#6E6C60;max-width:60ch;line-height:1.6;margin-bottom:2.5rem}
+.band{border-radius:18px;padding:clamp(1.5rem,4vw,3rem);margin-bottom:1.5rem}
+.band.light{background:var(--cream);color:var(--ink)}
+.band.dark{background:var(--char);color:var(--cream)}
+.band-label{font-family:'Archivo';font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.5;margin-bottom:2rem}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,3vw,2.5rem)}
+.cell{display:flex;flex-direction:column;align-items:center;gap:1.4rem;text-align:center}
+.cname{font-family:var(--fs);font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
+.tag{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:-1rem}
+.sizes{display:flex;align-items:flex-end;gap:1.4rem;justify-content:center}
+.sizes .s{display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.sizes .px{font-size:.55rem;letter-spacing:.1em;opacity:.4;font-variant-numeric:tabular-nums}
+svg{display:block;color:currentColor}
+.big svg{width:120px;height:120px}
+.mid svg{width:48px;height:48px}
+.sm svg{width:16px;height:16px}
+.grid-note{font-size:.7rem;opacity:.5;line-height:1.5;max-width:30ch}
+/* favicon mock */
+.tabmock{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,0,0,.06);border-radius:8px 8px 0 0;padding:.5rem .8rem;font-size:.72rem}
+.band.dark .tabmock{background:rgba(255,255,255,.07)}
+.tabmock svg{width:16px;height:16px}
+.constr{background:#fff;border-radius:14px;padding:1.5rem;margin-top:1rem}
+.constr svg{width:100%;max-width:280px;margin:0 auto;display:block}
+.lock{display:flex;align-items:center;gap:.9rem}
+.lock svg{width:44px;height:44px}
+.wm{font-family:var(--fs);font-weight:800;font-size:1.9rem;letter-spacing:.02em}
+.wm .dot{color:var(--sage)}
+.band.dark .wm .dot{color:var(--sage-l)}
+@media(max-width:760px){.row{grid-template-columns:1fr;gap:2.5rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>IRBIS — símbolo, 3 reduções</h1>
+  <p class="sub">O olho do leopardo reduzido ao mínimo geométrico. Monocromático (sem cor, sem gradiente), do favicon 16px ao gigante, em fundo claro e escuro. Escolhida uma, monto o sistema completo (símbolo + wordmark + variações).</p>
+
+  <!-- Defs: os 3 símbolos como <symbol> reutilizáveis -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- A · A FENDA — olho redondo, corpo cheio + fenda grande -->
+      <symbol id="sym-a" viewBox="0 0 120 120">
+        <path fill-rule="evenodd" d="M24 60 C36 33 84 33 96 60 C84 87 36 87 24 60 Z M60 37 C71 49 71 71 60 83 C49 71 49 49 60 37 Z"/>
+      </symbol>
+      <!-- B · O PREDADOR — evolução do mark atual: corpo redondo, ponta superior-direita, curva da roseta -->
+      <symbol id="sym-b" viewBox="0 0 120 120">
+        <path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z M34 67 C50 81 72 79 86 66 C72 75 50 76 34 67 Z"/>
+      </symbol>
+      <!-- C · O CORTE — a fenda sozinha, lâmina vertical -->
+      <symbol id="sym-c" viewBox="0 0 120 120">
+        <path d="M60 22 C82 46 82 74 60 98 C38 74 38 46 60 22 Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- FUNDO CLARO -->
+  <div class="band light">
+    <div class="band-label">Tinta sobre creme · uma cor</div>
+    <div class="row">
+      <div class="cell">
+        <div class="sizes">
+          <div class="s big"><svg><use href="#sym-a"/></svg><span class="px">128</span></div>
+          <div class="s mid"><svg><use href="#sym-a"/></svg><span class="px">48</span></div>
+          <div class="s sm"><svg><use href="#sym-a"/></svg><span class="px">16</span></div>
+        </div>
+        <div class="cname">A · A Fenda</div>
+        <div class="tag">refinada · equilibrada</div>
+      </div>
+      <div class="cell">
+        <div class="sizes">
+          <div class="s big"><svg><use href="#sym-b"/></svg><span class="px">128</span></div>
+          <div class="s mid"><svg><use href="#sym-b"/></svg><span class="px">48</span></div>
+          <div class="s sm"><svg><use href="#sym-b"/></svg><span class="px">16</span></div>
+        </div>
+        <div class="cname cname">B · O Predador</div>
+        <div class="tag">feroz · herda o mark atual</div>
+      </div>
+      <div class="cell">
+        <div class="sizes">
+          <div class="s big"><svg><use href="#sym-c"/></svg><span class="px">128</span></div>
+          <div class="s mid"><svg><use href="#sym-c"/></svg><span class="px">48</span></div>
+          <div class="s sm"><svg><use href="#sym-c"/></svg><span class="px">16</span></div>
+        </div>
+        <div class="cname cname">C · O Corte</div>
+        <div class="tag">mínima · lâmina</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FUNDO ESCURO -->
+  <div class="band dark">
+    <div class="band-label">Creme sobre carvão · uma cor</div>
+    <div class="row">
+      <div class="cell">
+        <div class="sizes">
+          <div class="s big"><svg><use href="#sym-a"/></svg><span class="px">128</span></div>
+          <div class="s mid"><svg><use href="#sym-a"/></svg><span class="px">48</span></div>
+          <div class="s sm"><svg><use href="#sym-a"/></svg><span class="px">16</span></div>
+        </div>
+        <div class="cname cname">A · A Fenda</div>
+        <div class="tabmock"><svg><use href="#sym-a"/></svg><span>IRBIS</span></div>
+      </div>
+      <div class="cell">
+        <div class="sizes">
+          <div class="s big"><svg><use href="#sym-b"/></svg><span class="px">128</span></div>
+          <div class="s mid"><svg><use href="#sym-b"/></svg><span class="px">48</span></div>
+          <div class="s sm"><svg><use href="#sym-b"/></svg><span class="px">16</span></div>
+        </div>
+        <div class="cname cname">B · O Predador</div>
+        <div class="tabmock"><svg><use href="#sym-b"/></svg><span>IRBIS</span></div>
+      </div>
+      <div class="cell">
+        <div class="sizes">
+          <div class="s big"><svg><use href="#sym-c"/></svg><span class="px">128</span></div>
+          <div class="s mid"><svg><use href="#sym-c"/></svg><span class="px">48</span></div>
+          <div class="s sm"><svg><use href="#sym-c"/></svg><span class="px">16</span></div>
+        </div>
+        <div class="cname cname">C · O Corte</div>
+        <div class="tabmock"><svg><use href="#sym-c"/></svg><span>IRBIS</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCKUP PREVIEW (wordmark Besley + símbolo) -->
+  <div class="band light">
+    <div class="band-label">Prévia de lockup · wordmark Besley (ajuste fino vem depois)</div>
+    <div class="row" style="grid-template-columns:1fr 1fr 1fr;align-items:center">
+      <div class="cell"><div class="lock"><svg style="color:var(--ink)"><use href="#sym-a"/></svg><span class="wm">IRBIS<span class="dot">.</span></span></div></div>
+      <div class="cell"><div class="lock"><svg style="color:var(--ink)"><use href="#sym-b"/></svg><span class="wm">IRBIS<span class="dot">.</span></span></div></div>
+      <div class="cell"><div class="lock"><svg style="color:var(--ink)"><use href="#sym-c"/></svg><span class="wm">IRBIS<span class="dot">.</span></span></div></div>
+    </div>
+  </div>
+
+  <!-- CONSTRUÇÃO (grade da A) -->
+  <div class="band light">
+    <div class="band-label">Construção · grade de círculos (símbolo A)</div>
+    <div class="constr">
+      <svg viewBox="0 0 120 120">
+        <g fill="none" stroke="#C9C4B6" stroke-width="0.6">
+          <circle cx="60" cy="60" r="46"/><circle cx="60" cy="60" r="23"/>
+          <line x1="60" y1="6" x2="60" y2="114"/><line x1="6" y1="60" x2="114" y2="60"/>
+          <circle cx="14" cy="60" r="2"/><circle cx="106" cy="60" r="2"/>
+        </g>
+        <path fill="#26251F" fill-rule="evenodd" opacity="0.92" d="M24 60 C36 33 84 33 96 60 C84 87 36 87 24 60 Z M60 37 C71 49 71 71 60 83 C49 71 49 49 60 37 Z"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

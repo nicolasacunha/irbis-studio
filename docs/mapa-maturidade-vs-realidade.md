@@ -51,7 +51,7 @@ A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já est
 | Definição de cliente (ICP) | ✅ | Economia real, frase oficial do plano JDP (empresário 6-7 dígitos/ano, baixo domínio digital) |
 | Canais digitais | 🔄 | IG pessoal (1/dia começou 21/jul), site + blog automático semanal, LinkedIn com cadência definida. Falta constância, não definição |
 | Estratégia de conteúdo | ✅ | P1 (3 pilares + filtro diário) + rotina de roteiro às 3h + garimpo em andamento |
-| Experiência digital do cliente | 🔄 | Site 95/99, funil /call validado. Falta: env de produção do funil (tarefa minha) |
+| Experiência digital do cliente | 🔄 | Site 95/99. **Funil /call NO AR e funcionando** (verificado 28/jul: `/call` responde 200; `/api/availability` devolve slots reais do Google Calendar; as 8 env vars de produção estão na Vercel desde ~15/jul). Teste ponta a ponta feito em 28/jul e **aprovado**: submit-form cria o card no Notion, book cria o evento, o slot passa a `taken` e a proteção anti-corrida devolve 409. Falta: (a) notificação de lead novo para o Nicolas — bug corrigido no commit `8cf4d29` (remetente e destinatário eram o mesmo endereço), **aguarda `OWNER_EMAIL` na Vercel + deploy**; (b) **decidido em 28/jul:** o inbound do conteúdo NÃO aponta para o `/call`. Caminho oficial = Frente C ("manda SITE no direct" → quiz de 5 perguntas → 3+ 🔥 → link do `/call`). O `/call` segue `noindex` e por link pessoal, como último passo da qualificação |
 | Diversificação de aquisição | ⏸* | Decisão consciente da auditoria: NÃO diversificar até receita própria ≥ R$4k/mês (Ads volta depois). *Adiar por decisão, não por time |
 | Medir resultados de campanha | 🔄 | Analytics stack completo no site; placar cobre conteúdo. Sem campanha paga ativa pra medir |
 

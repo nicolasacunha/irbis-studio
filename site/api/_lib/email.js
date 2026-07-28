@@ -14,6 +14,15 @@ var FROM = function () {
   return 'IRBIS <' + (process.env.ZOHO_SMTP_USER || 'contato@irbis.com.br') + '>';
 };
 
+/* Destinatário das notificações internas (lead novo, contato do site).
+   Precisa ser DIFERENTE do ZOHO_SMTP_USER: quando remetente e destinatário são
+   o mesmo endereço, o Zoho entrega em "Enviados" ou marca como spam, e a
+   notificação não chega na caixa de entrada (diagnosticado em 28/jul/2026 —
+   o email do lead chegava, o do dono não). Configure OWNER_EMAIL na Vercel. */
+var OWNER = function () {
+  return process.env.OWNER_EMAIL || process.env.ZOHO_SMTP_USER || 'contato@irbis.com.br';
+};
+
 /* Notifica o Nicolas que um lead preencheu o formulário. */
 async function notifyOwner(f, attachments) {
   var linhas = [
@@ -46,7 +55,7 @@ async function notifyOwner(f, attachments) {
 
   await transport().sendMail({
     from: FROM(),
-    to: process.env.ZOHO_SMTP_USER || 'contato@irbis.com.br',
+    to: OWNER(),
     subject: 'Novo lead: ' + (f.negocio || f.nome),
     html: html,
     attachments: (attachments || []).map(function (a) {
@@ -73,7 +82,7 @@ async function notifyInbound(f) {
     '</div>';
   await transport().sendMail({
     from: FROM(),
-    to: process.env.ZOHO_SMTP_USER || 'contato@irbis.com.br',
+    to: OWNER(),
     subject: 'Novo contato pelo site: ' + (f.nome || f.email),
     html: html,
   });

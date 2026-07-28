@@ -1,239 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Analytics: GA4 + Meta Pixel + Clarity com carregamento adiado (1º gesto ou 3,5s).
-       Os stubs abaixo enfileiram comandos desde já, então nenhum evento se perde. -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sites + Sistemas com IA para Negócios que Querem Crescer | IRBIS</title>
-  <meta name="description" content="O site vende, a IA trabalha. Sites que trazem cliente e sistemas com IA que atendem, orçam e agendam pelo seu negócio. Do briefing ao ar em semanas.">
-  <link rel="canonical" href="https://irbis.com.br/">
-  <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/">
-  <link rel="alternate" hreflang="en" href="https://irbis.com.br/en">
-  <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/">
-  <meta name="facebook-domain-verification" content="twsp7zbqg0fvr0ylejum8fcxkraq1m" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Sites + Sistemas com IA para negócios que querem crescer | IRBIS · protótipo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2321201B'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='%23FAF8F4'/%3E%3C/svg%3E">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://irbis.com.br/">
-  <meta property="og:title" content="IRBIS | Sites + IA para negócios que querem crescer">
-  <meta property="og:description" content="O site vende, a IA trabalha. Sites que trazem cliente e sistemas com IA que atendem, orçam e agendam pelo seu negócio. Do briefing ao ar em semanas.">
-  <meta property="og:image" content="https://irbis.com.br/Design/og-image.jpg">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="IRBIS">
+<link rel="preload" href="fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}
+@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}
 
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IRBIS | Sites + IA para negócios que querem crescer">
-  <meta name="twitter:description" content="O site vende, a IA trabalha. Sites e sistemas com IA para negócios que querem crescer. Do briefing ao ar em semanas.">
-  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.jpg">
-
-  <link rel="icon" type="image/svg+xml" href="Design/icone/favicon-eye.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="Design/icone/favicon-eye-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Design/icone/favicon-eye-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="Design/icone/apple-touch-icon.png">
-  <meta name="theme-color" content="#E6E5E1">
-  <link rel="preload" as="script" href="/vendor/gsap.min.js">
-  <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
-  <style>.no-motion #curtain{display:none!important}.no-motion body{overflow:auto!important}</style>
-  <script>window.__motionGuard=setTimeout(function(){if(!window.gsap)document.documentElement.classList.add('no-motion')},3000);</script>
-  <link rel="preload" as="image" href="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp" imagesrcset="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1920.webp 1920w" imagesizes="100vw" type="image/webp">
-
-  <!-- Meta Pixel Code (stub: enfileira; fbevents.js sobe no defer) -->
-  <script>
-  !function(f,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[]}(window);
-  fbq('init', '26926853710268489');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" alt="" style="display:none"
-  src="https://www.facebook.com/tr?id=26926853710268489&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
-  <!-- Google tag (gtag.js): stub enfileira; gtag/js sobe no defer -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VKHL68G50M');
-  </script>
-
-  <!-- Carregamento adiado das bibliotecas de tracking (1º gesto OU 3,5s) -->
-  <script>
-  (function (w, d) {
-    var libs = [
-      'https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M',
-      'https://connect.facebook.net/en_US/fbevents.js',
-      'https://www.clarity.ms/tag/xmqsnmt3uv'
-    ];
-    var fired = false;
-    var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown', 'mousemove'];
-    function boot() {
-      if (fired) return; fired = true;
-      clearTimeout(timer);
-      evs.forEach(function (e) { w.removeEventListener(e, boot); });
-      libs.forEach(function (src, i) {
-        setTimeout(function () {
-          var go = function () {
-            var s = d.createElement('script'); s.async = true; s.src = src;
-            d.head.appendChild(s);
-          };
-          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
-        }, i * 900);
-      });
-    }
-    evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
-    var timer = setTimeout(boot, 3500);
-  })(window, document);
-  </script>
-
-  <!-- Schema: Organization + WebSite + FAQPage + ProfessionalService -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://irbis.com.br/#organization",
-        "name": "IRBIS",
-        "url": "https://irbis.com.br",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://irbis.com.br/Design/icone/favicon_true.png"
-        },
-        "description": "Sites e sistemas com IA para negócios que querem crescer. Landing pages, sites institucionais e automação de atendimento e operação. Do briefing ao ar em semanas.",
-        "foundingDate": "2024",
-        "areaServed": "BR",
-        "priceRange": "A partir de R$3.000",
-        "founder": {
-          "@type": "Person",
-          "@id": "https://irbis.com.br/sobre#nicolas",
-          "name": "Nicolas Cunha",
-          "jobTitle": "Designer e Desenvolvedor",
-          "url": "https://irbis.com.br/sobre"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "sales",
-          "url": "https://wa.me/5519991591265",
-          "availableLanguage": "Portuguese"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Serviços IRBIS",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Institucional" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas com IA" } }
-          ]
-        },
-        "sameAs": ["https://irbis.com.br"],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://irbis.com.br/sobre#nicolas",
-        "name": "Nicolas Cunha",
-        "jobTitle": "Fundador da IRBIS",
-        "worksFor": {"@id": "https://irbis.com.br/#organization"},
-        "url": "https://irbis.com.br/sobre"
-      },
-      {
-        "@type": "Service",
-        "name": "Landing Page",
-        "provider": {"@id": "https://irbis.com.br/#organization"},
-        "description": "Landing pages de alta conversão para negócios que querem crescer. Entrega em 1–2 semanas. A partir de R$3k.",
-        "areaServed": "BR",
-        "offers": {"@type": "Offer", "price": "3000", "priceCurrency": "BRL"}
-      },
-      {
-        "@type": "Service",
-        "name": "Site Institucional",
-        "provider": {"@id": "https://irbis.com.br/#organization"},
-        "description": "Sites institucionais para startups e empresas em crescimento. Entrega em 2-3 semanas.",
-        "areaServed": "BR"
-      },
-      {
-        "@type": "Service",
-        "name": "Sistemas com IA para Atendimento e Operação",
-        "provider": {"@id": "https://irbis.com.br/#organization"},
-        "description": "Atendimento 24h no WhatsApp, orçamentos automáticos, agenda que se confirma e retaguarda sem digitação. Escopo definido no diagnóstico.",
-        "areaServed": "BR"
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://irbis.com.br/#website",
-        "url": "https://irbis.com.br",
-        "name": "IRBIS Estúdio Digital",
-        "publisher": { "@id": "https://irbis.com.br/#organization" },
-        "inLanguage": "pt-BR"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://irbis.com.br/#webpage",
-        "url": "https://irbis.com.br/",
-        "name": "IRBIS | Sites + IA para negócios que querem crescer",
-        "description": "Sites e sistemas com IA para negócios que querem crescer.",
-        "isPartOf": { "@id": "https://irbis.com.br/#website" },
-        "about": { "@id": "https://irbis.com.br/#organization" },
-        "inLanguage": "pt-BR"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Você trabalha sozinho?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sim. Pensamento estratégico, olho de design e visão de negócio são meus, do briefing ao deploy. Você tem acesso a capacidade de equipe com custo e agilidade de estúdio solo." }
-          },
-          {
-            "@type": "Question",
-            "name": "O que é um sistema com IA, na prática?",
-            "acceptedAnswer": { "@type": "Answer", "text": "O WhatsApp do seu site respondido em minutos, o orçamento calculado e enviado na hora, a agenda confirmada sem ninguém digitar. Não é chatbot de menu: é a parte repetitiva da operação rodando sozinha, com você no controle do que sai." }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto tempo leva um projeto?",
-            "acceptedAnswer": { "@type": "Answer", "text": "O escopo define o prazo. Landing pages saem em 1–2 semanas. Sites institucionais, em 2–3 semanas. Sistemas com IA, a primeira conversa define uma estimativa real." }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto custa um projeto na IRBIS?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. Sistemas com IA: o escopo sai do diagnóstico, na primeira conversa. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura." }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona depois que o projeto é entregue?",
-            "acceptedAnswer": { "@type": "Answer", "text": "O projeto é seu: código, arquivos, acessos, tudo. Não crio dependência. Você tem autonomia total para continuar, ajustar ou trazer outro profissional. Continuar trabalhando juntos é sua escolha." }
-          },
-          {
-            "@type": "Question",
-            "name": "O que eu preciso pra começar?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Um problema claro o suficiente pra descrever. Conta o que está travando." }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
-
-  <script defer src="/_vercel/insights/script.js"></script>
-  <style>
 :root {
-  --bg:     #E6E5E1;
-  --s1:     #EEEDEA;
-  --s2:     #D3D2CC;
+  --bg:     #F2EFE9;
+  --s1:     #FAF8F4;
+  --s2:     #E1DCD0;
   --accent: #4A5D43;
   --text:   #26251F;
   --muted:  #6E6C60;
@@ -594,7 +379,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   opacity: .55;
 }
 .logo-grupo img.logo-alta { height: 40px; }
-.logo-grupo img.logo-larga { height: 20px; }
 @media (prefers-reduced-motion: reduce) { .logo-track { animation-play-state: paused; } }
 
 .hero-deco {
@@ -804,20 +588,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   aspect-ratio: 16 / 11;
   object-fit: cover;
   transition: transform .6s var(--ease-out);
-}
-/* variante: plate escuro com a logo do cliente centralizada */
-.case-ed-foto.is-logo {
-  background: #21201B;
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 11;
-  background-image: radial-gradient(ellipse 80% 70% at 50% 45%, rgba(143,169,135,.07) 0%, transparent 70%);
-}
-.case-ed-foto.is-logo img {
-  width: 52%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
 }
 @media (hover: hover) and (pointer: fine) {
   .case-ed-foto:hover img { transform: scale(1.03); }
@@ -1385,13 +1155,14 @@ footer {
 }
 .footer-nav a:hover { color: var(--text); }
 .footer-right { display: flex; flex-direction: column; gap: .3rem; text-align: right; }
-.footer-location, .footer-copy {
+.footer-location, .footer-copy, .footer-proto {
   font-size: .5rem;
   font-weight: 400;
   letter-spacing: .12em;
   color: var(--muted);
   text-transform: uppercase;
 }
+.footer-proto { color: var(--accent); font-weight: 700; }
 
 /* ── SCROLL TO TOP ── */
 #scroll-top {
@@ -1522,7 +1293,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
   .hero-clientes { margin-top: var(--sp-md); }
   .logo-grupo img { height: 22px; }
   .logo-grupo img.logo-alta { height: 32px; }
-  .logo-grupo img.logo-larga { height: 15px; }
 
   #tese { padding: 3rem 1.5rem; }
   .tese-grid { grid-template-columns: 1fr; }
@@ -1591,15 +1361,15 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
 
   <!-- ── NAV ── -->
   <nav>
-    <div class="nav-logo" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.45em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</div>
+    <div class="nav-logo">IRBIS</div>
     <ul class="nav-links">
       <li><a href="#cases">CASES</a></li>
       <li><a href="#horizontal-section">SERVIÇOS</a></li>
       <li><a href="#como-opero">PROCESSO</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:.75rem;">
-      <a href="/call" class="nav-cta">INICIE O PROJETO</a>
-      <a href="/en" class="lang-toggle" aria-label="View in English" title="English">
+      <a href="https://irbis.com.br/call" class="nav-cta">INICIAR PROJETO</a>
+      <a href="https://irbis.com.br/en" class="lang-toggle" aria-label="View in English" title="English">
         <svg viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="7410" height="3900" fill="#b22234"/>
           <g fill="#fff">
@@ -1623,8 +1393,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
       <a href="#como-opero">Processo</a>
       <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="/en">English 🇺🇸</a>
     </nav>
     <p class="mobile-nav-tagline">IRBIS · SITES + SISTEMAS COM IA</p>
   </div>
@@ -1636,24 +1404,24 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     ================================================================ -->
     <section id="hero" aria-label="Hero">
       <picture>
-        <source type="image/webp" srcset="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1280.webp 1280w, Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1920.webp 1920w" sizes="100vw">
-        <img class="hero-bg" src="Design/mascote/aprovados/irbis_mascote_olhos_hero_v1-1600.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
+        <source type="image/webp" srcset="img/irbis_mascote_olhos_hero_v1-1280.webp 1280w, img/irbis_mascote_olhos_hero_v1-1920.webp 1920w" sizes="100vw">
+        <img class="hero-bg" src="img/irbis_mascote_olhos_hero_v1-1600.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="900">
       </picture>
       <div class="hero-deco" aria-hidden="true">IB</div>
 
       <p class="hero-label">Sites <span class="acc">+ sistemas com IA</span> · para negócios que querem crescer mais</p>
 
       <h1 class="hero-title">
-        O site vende, <br><span class="acc">a IA trabalha.</span>
+        O site vende. <br><span class="acc">A IA trabalha.</span>
       </h1>
 
       <div class="hero-bottom">
         <p class="hero-desc">
-          Landing page e site institucional que trazem cliente. <strong>Sistemas com IA que atendem, orçam e agendam por você</strong>, do briefing ao ar em semanas.
+          Landing page e site institucional que trazem cliente. <strong>Sistemas com IA que atendem, orçam e agendam por você.</strong> Do briefing ao ar em semanas.
         </p>
         <div class="hero-ctas">
-          <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-primary">FALE NO WHATSAPP</a>
-          <a href="/call" class="cta-ghost">AGENDE UMA CONVERSA →</a>
+          <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-primary">FALAR NO WHATSAPP</a>
+          <a href="https://irbis.com.br/call" class="cta-ghost">AGENDAR CONVERSA →</a>
         </div>
       </div>
 
@@ -1662,10 +1430,9 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         <div class="logo-marquee" aria-hidden="true">
           <div class="logo-track" id="logo-track">
             <div class="logo-grupo">
-              <img src="Design/clientes/odery.png" alt="">
-              <img src="Design/clientes/eforce.webp" alt="">
-              <img src="Design/clientes/casa-paes.svg" alt="" class="logo-larga">
-              <img src="Design/clientes/acunha.png" alt="" class="logo-alta">
+              <img src="img/logo-odery.png" alt="">
+              <img src="img/logo-eforce.webp" alt="">
+              <img src="img/logo-acunha.png" alt="" class="logo-alta">
             </div>
           </div>
         </div>
@@ -1680,12 +1447,12 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         <div class="tese-half reveal">
           <span class="tese-label">01 · A porta</span>
           <p class="tese-frase">Sites que fazem o cliente entrar.</p>
-          <p class="tese-apoio">Landing page e site institucional construídos pra vender, no ar em semanas.</p>
+          <p class="tese-apoio">Landing page e site institucional. Construídos pra vender, no ar em semanas.</p>
         </div>
         <div class="tese-half reveal">
           <span class="tese-label">02 · O que mora dentro</span>
           <p class="tese-frase">Sistemas com IA que devolvem horas.</p>
-          <p class="tese-apoio">Atendimento, orçamento, agenda e cobrança rodando sozinhos, de dia e de madrugada.</p>
+          <p class="tese-apoio">Atendimento, orçamento, agenda e cobrança rodando sozinhos — de dia e de madrugada.</p>
         </div>
       </div>
       <div class="tese-racao reveal">
@@ -1703,7 +1470,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
           <h2 class="cases-title">CASES</h2>
           <p class="cases-tagline">Resultado real, prazo real. Do brief ao ar, sem surpresa no meio do caminho.</p>
         </div>
-        <a href="/cases" class="cases-ver-todos">Veja todos →</a>
+        <a href="https://irbis.com.br/cases" class="cases-ver-todos">Ver todos →</a>
       </div>
 
       <article class="case-ed">
@@ -1717,10 +1484,10 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <li><span class="n">3 sem.</span><span class="l">do briefing ao ar</span></li>
             <li><span class="n">6</span><span class="l">idiomas no design system</span></li>
           </ul>
-          <a class="case-ed-link" href="/eforce">Veja o case →</a>
+          <a class="case-ed-link" href="https://irbis.com.br/eforce">Ver o case →</a>
         </div>
-        <a class="case-ed-foto is-logo" href="/eforce" aria-label="Ver o case EForce Drums">
-          <img src="Design/clientes/eforce.webp" alt="EForce Drums" loading="lazy" width="2400" height="706">
+        <a class="case-ed-foto" href="https://irbis.com.br/eforce" aria-label="Ver o case EForce Drums">
+          <img src="img/EFORCE-CASE-1280.jpg" alt="Site da EForce Drums" loading="lazy" width="1280" height="880">
         </a>
       </article>
     </section>
@@ -1876,17 +1643,17 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         <li class="fase reveal">
           <span class="fase-num" aria-hidden="true">01</span>
           <h3 class="fase-nome">Escuta</h3>
-          <p class="fase-desc">Entendo o negócio antes de qualquer proposta.</p>
+          <p class="fase-desc">Entender o negócio antes de qualquer proposta.</p>
         </li>
         <li class="fase reveal">
           <span class="fase-num" aria-hidden="true">02</span>
           <h3 class="fase-nome">Diagnóstico</h3>
-          <p class="fase-desc">Mapeio o que está travando com dados, não achismo.</p>
+          <p class="fase-desc">Mapear o que está travando. Dados, não achismo.</p>
         </li>
         <li class="fase reveal">
           <span class="fase-num" aria-hidden="true">03</span>
           <h3 class="fase-nome">Estratégia</h3>
-          <p class="fase-desc">Decido o que não fazer tanto quanto o que fazer.</p>
+          <p class="fase-desc">Decidir o que não fazer é tão importante quanto o que fazer.</p>
         </li>
         <li class="fase reveal">
           <span class="fase-num" aria-hidden="true">04</span>
@@ -1907,7 +1674,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     <div class="mid-cta">
       <p class="mid-cta-frase">Seu projeto tem prazo.<br><span class="acc">A agenda também.</span></p>
       <div class="mid-cta-acts">
-        <a href="/call" class="cta-primary">INICIE O PROJETO</a>
+        <a href="https://irbis.com.br/call" class="cta-primary">INICIAR PROJETO</a>
         <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="mid-wpp tap-area">WHATSAPP →</a>
       </div>
     </div>
@@ -1971,7 +1738,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p class="faq-a-inner">O projeto é seu: código, arquivos, acessos, tudo. Não crio dependência. Você tem autonomia total para continuar, ajustar ou trazer outro profissional. Continuar trabalhando juntos é sua escolha.</p>
+            <p class="faq-a-inner">O projeto é seu. Código, arquivos, acessos. Tudo. Não crio dependência. Você tem autonomia total para continuar, ajustar ou trazer outro profissional. Continuar trabalhando juntos é sua escolha.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -2033,24 +1800,21 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
   ================================================================ -->
   <footer id="rodape">
     <div class="footer-left">
-      <div class="footer-logo" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1.15em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.45em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS<span class="acc">.</span></div>
+      <div class="footer-logo">IRBIS<span class="acc">.</span></div>
       <p class="footer-tagline">Sites · Landing Pages · Sistemas com IA</p>
     </div>
     <div class="footer-nav">
       <a href="#cases">Cases</a>
-      <a href="manifesto.html">Manifesto</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="metodo.html">Método</a>
+      <a href="https://irbis.com.br/manifesto.html">Manifesto</a>
+      <a href="https://irbis.com.br/sobre.html">Sobre</a>
+      <a href="https://irbis.com.br/metodo.html">Método</a>
       <a href="#faq">FAQ</a>
-      <a href="vs-agencia.html">IRBIS vs Agência</a>
-      <a href="para/saas.html">Para SaaS</a>
-      <a href="para/startups.html">Para Startups</a>
-      <a href="/blog">Blog</a>
       <a href="#contato">Contato</a>
     </div>
     <div class="footer-right">
       <span class="footer-location">São Paulo · Brasil</span>
       <span class="footer-copy">©2026 IRBIS</span>
+      <span class="footer-proto">Protótipo de exploração · não publicado</span>
     </div>
   </footer>
 
@@ -2062,8 +1826,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
   <script>
     if (new URLSearchParams(location.search).has('static')) document.documentElement.classList.add('static');
   </script>
-  <script src="/vendor/gsap.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
-  <script src="/vendor/ScrollTrigger.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
+  <script src="vendor/gsap.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
+  <script src="vendor/ScrollTrigger.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
   <script>
   if (window.gsap && !document.documentElement.classList.contains('static')) {
     gsap.registerPlugin(ScrollTrigger);
@@ -2178,8 +1942,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             if (fillEl) fillEl.style.background = self.progress > 0.62 ? '#8FA987' : '#4A5D43';
           },
           onEnter()     { gsap.to('body', { backgroundColor: '#E6E2D8', duration: .4, overwrite: true }); },
-          onLeaveBack() { gsap.to('body', { backgroundColor: '#E6E5E1', duration: .4, overwrite: true }); },
-          onLeave()     { gsap.to('body', { backgroundColor: '#E6E5E1', duration: .4, overwrite: true }); },
+          onLeaveBack() { gsap.to('body', { backgroundColor: '#F2EFE9', duration: .4, overwrite: true }); },
+          onLeave()     { gsap.to('body', { backgroundColor: '#F2EFE9', duration: .4, overwrite: true }); },
         },
       });
     })();
@@ -2363,27 +2127,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
       rsTimer = setTimeout(() => ScrollTrigger.refresh(), 260);
     });
     window.addEventListener('load', () => ScrollTrigger.refresh());
-
-    /* ── PAGE TRANSITIONS ── */
-    (function () {
-      const curtain = document.getElementById('curtain');
-      const logo    = document.getElementById('curtain-logo');
-      if (!curtain) return;
-      function navigate(href) {
-        document.body.classList.add('intro-lock');
-        gsap.timeline()
-          .set(curtain,  { pointerEvents: 'all' })
-          .to(curtain,   { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
-          .to(logo,      { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
-          .add(() => { window.location.href = href; }, '+=0.15');
-      }
-      document.querySelectorAll('a[href]').forEach(a => {
-        if (a.target === '_blank') return;
-        const href = a.getAttribute('href');
-        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
-        a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
-      });
-    })();
   }
 
   /* ── MODO ?at=<id>: verificação por seção (esconde o que vem antes) ── */
@@ -2460,8 +2203,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     });
   })();
 
-  /* ── FORM → /api/inbound ── */
-  document.getElementById('contato-form').addEventListener('submit', async function (e) {
+  /* ── FORM (protótipo: sem backend) ── */
+  document.getElementById('contato-form').addEventListener('submit', function (e) {
     e.preventDefault();
     const nome   = document.getElementById('f-name').value.trim();
     const email  = document.getElementById('f-email').value.trim();
@@ -2471,67 +2214,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     err.style.display = 'none';
     const btn = this.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.textContent = 'ENVIANDO...';
-    try {
-      const res = await fetch('/api/inbound', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email, projeto: intent }),
-      });
-      if (res.ok) {
-        try { sessionStorage.setItem('irbis_conv', 'contact_lead'); } catch (e) {}
-        window.location.href = '/obrigado';
-      } else { throw new Error(); }
-    } catch {
-      err.textContent = 'ERRO AO ENVIAR. TENTE NOVAMENTE.';
-      err.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'ENVIAR BRIEFING';
-    }
+    btn.textContent = 'RECEBIDO — PROTÓTIPO SEM ENVIO';
   });
-
-  /* ── GA4 EVENTS ── */
-  (function () {
-    if (typeof gtag !== 'function') return;
-    function track(event, params) { gtag('event', event, params); }
-    document.querySelectorAll('.hero-ctas a').forEach(el => {
-      el.addEventListener('click', () => track('cta_clicked', { button_text: el.textContent.trim(), location: 'hero' }));
-    });
-    document.querySelectorAll('.mid-cta a').forEach(el => {
-      el.addEventListener('click', () => track('cta_clicked', { button_text: el.textContent.trim(), location: 'mid_page' }));
-    });
-    document.querySelector('.nav-cta')?.addEventListener('click', () => {
-      track('cta_clicked', { button_text: 'INICIE O PROJETO', location: 'nav' });
-    });
-    document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
-      el.addEventListener('click', () => {
-        const loc = el.closest('#hero') ? 'hero'
-          : el.closest('#contato') ? 'contato_travou'
-          : el.closest('#faq') ? 'faq'
-          : 'mid_page';
-        track('cta_whatsapp_click', { location: loc });
-      });
-    });
-    document.getElementById('contato-form')?.addEventListener('submit', () => {
-      track('inbound_form_submit', { origin: location.pathname, form_type: 'contact' });
-    });
-    document.querySelectorAll('.case-ed-foto, .case-ed-link, .cases-ver-todos').forEach(el => {
-      el.addEventListener('click', () => track('case_viewed', { case_name: 'EForce Drums' }));
-    });
-    document.querySelectorAll('.faq-q').forEach(el => {
-      el.addEventListener('click', () => {
-        const q = (el.querySelector('.faq-q-txt')?.textContent || '').trim().slice(0, 60);
-        track('faq_opened', { question: q });
-      });
-    });
-    const depths = { 25: false, 50: false, 75: false, 90: false };
-    window.addEventListener('scroll', () => {
-      const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      Object.keys(depths).forEach(d => {
-        if (pct >= d && !depths[d]) { depths[d] = true; track('scroll_depth', { depth: d + '%' }); }
-      });
-    }, { passive: true });
-  })();
   </script>
 </body>
 </html>
