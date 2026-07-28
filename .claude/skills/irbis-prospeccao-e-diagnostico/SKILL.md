@@ -361,7 +361,7 @@ Vendas (mês):
 
 - **Trackers do repo vazios ≠ nada aconteceu.** Estado comercial vive no Notion. Nunca conclua "nunca foi enviado" só pelo ☐.
 - **`phantom-buscas-*.csv` são QUERIES, não leads.** Resultados raspados: 3 CSVs na raiz do repo.
-- **Docs pré-pivot (< 01/jun/2026) não são referência**, exceto o corte SAM ≥R$8k, re-citado pelo dossiê de 23/jun. Resto de `05 - Análise de Growth/` (ICP Web3/SaaS, tickets R$18–45k) está morto — ver `irbis-guarda-pivot`.
+- **Docs pré-pivot (< 01/jun/2026) não são referência**, exceto o corte SAM ≥R$8k, re-citado pelo dossiê de 23/jun. Resto de `05 - Growth/` (ICP Web3/SaaS, tickets R$18–45k) está morto — ver `irbis-guarda-pivot`.
 - **Números banidos ainda nos docs** ("1,8x", "+500") — remova ao reutilizar trecho; paths na seção Prova social.
 - **Paths com espaços** — sempre aspas.
 - **Commit a cada fase** (dono: "Acumular nao da. Tem que ter commit a cada fase de trabalho."). Docs comerciais não eram commitados historicamente — commite ao fim de cada fase. Repo sem remote — recomende remote privado no GitHub. Método: `workbench-metodo-da-casa`.
@@ -375,7 +375,7 @@ Vendas (mês):
 Comandos de re-verificação (rode a partir de `Business/irbis/`; se divergir, a skill driftou). ⚠️ Hook RTK reescreve `grep` e dá falso-zero com padrões contendo `R$` — se retornar 0 inesperado, use `/usr/bin/grep`. Testados em 04/jul/2026, reconferidos em 06/07/2026:
 
 - Preço proibido na ligação? → `grep -n "Preço NUNCA" "03 - Comercial/01 - Prospecção/dossie-cold-call-leva1-junho2026.md"` (linha 6)
-- Corte SAM ≥R$8k? → `/usr/bin/grep -n "8k/projeto" "05 - Análise de Growth/IRBIS — Business Model Canvas/11_Relatorio_Segmentacao_Growth_IRBIS.md"` (linha 87)
+- Corte SAM ≥R$8k? → `/usr/bin/grep -n "8k/projeto" "05 - Growth/IRBIS — Business Model Canvas/11_Relatorio_Segmentacao_Growth_IRBIS.md"` (linha 87)
 - Faixa da call de diagnóstico 4.500–7.500? → `/usr/bin/grep -n "4.500 a" "03 - Comercial/02 - Qualificação e Agendamento/roteiro-call-diagnostico-irbis.md"` (linha 61)
 - KPIs os mesmos? → `sed -n '14,42p' "03 - Comercial/00 - Planejamento/kpis-comercial-irbis.md"`
 - Tracker do outbound vazio? → `/usr/bin/grep -c "| pendente |" "03 - Comercial/01 - Prospecção/outbound-scripts-junho-2026.md"` (4 = intocado; sem os pipes conta 5, pega "independente" na linha 58)

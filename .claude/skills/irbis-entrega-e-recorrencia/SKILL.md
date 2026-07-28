@@ -77,7 +77,7 @@ Regra (`script-call-comercial-junho-2026.md` linha 268, verbatim): **"Fechou: te
 
 1. **Termo de aceite.**
    - Não existe template `.md` no repo. Único exemplar: PDF do caso ADash em `03 - Comercial/Propostas Em Espera/QG/IRBIS · Termo de Aceite · ADash_signed.pdf` (cliente que desistiu — serve só de modelo de FORMATO, não de case de sucesso; path não verificado como aplicável a novo cliente — confira se o PDF ainda existe nesse path antes de usar como referência).
-   - Não existe contrato formal no repo (pendência conhecida: "Contrato formal: Nenhum — proposta + e-mail", `05 - Análise de Growth/IRBIS — Business Model Canvas/11_Relatorio_Segmentacao_Growth_IRBIS.md` linha 38, doc pré-pivot mas regime segue sem contrato).
+   - Não existe contrato formal no repo (pendência conhecida: "Contrato formal: Nenhum — proposta + e-mail", `05 - Growth/IRBIS — Business Model Canvas/11_Relatorio_Segmentacao_Growth_IRBIS.md` linha 38, doc pré-pivot mas regime segue sem contrato).
    - ⚠️ PERGUNTE AO DONO antes de criar ou enviar qualquer contrato/termo novo.
 2. **Condição de pagamento.**
    - Doc de MRR: "Parcelamento (TMB): parte à vista, resto em boleto parcelado."

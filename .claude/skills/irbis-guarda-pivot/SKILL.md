@@ -1,6 +1,6 @@
 ---
 name: irbis-guarda-pivot
-description: Use quando for afirmar qualquer fato sobre a IRBIS — serviços, escopo, clientes, cases, números, prazos, preço, ICP — em call, proposta, copy, deck ou site; quando aparecer branding, identidade visual, dashboard, Web3, Adash, Eduboxs, Lumenform, "+500", "R$350k", "LTV 1,8x"; quando um doc (site/llms.txt, docs/voice-agent/, "05 - Análise de Growth/") contradisser o CLAUDE.md; ou antes de reaproveitar qualquer documento anterior a 01/jun/2026.
+description: Use quando for afirmar qualquer fato sobre a IRBIS — serviços, escopo, clientes, cases, números, prazos, preço, ICP — em call, proposta, copy, deck ou site; quando aparecer branding, identidade visual, dashboard, Web3, Adash, Eduboxs, Lumenform, "+500", "R$350k", "LTV 1,8x"; quando um doc (site/llms.txt, docs/voice-agent/, "05 - Growth/") contradisser o CLAUDE.md; ou antes de reaproveitar qualquer documento anterior a 01/jun/2026.
 ---
 
 # IRBIS — Guarda do Pivot
@@ -97,7 +97,7 @@ A recusa é ARGUMENTO DE VENDA — nunca ofereça um item proibido "de brinde" p
 | `"03 - Comercial/"` (subpastas 00–05) | Funil comercial — quase tudo de jun/2026 |
 | `"04 - Marketing/copy-arsenal-irbis.md"`, `linkedin-perfil-nicolas.md`, `content-strategy-instagram.md`, `ads-plan-irbis.md` | Reescritos em 01/jun |
 | `"04 - Marketing/P1-posicionamento-nicolas.md"` (25/jun) | Posicionamento pessoal (JDP = Grupo JDP, mentoria comercial do dono). ⚠️ Contém "R$350k" (linhas 68,81,93,101,122 — OK usar) E "Odery 1,8x" (linha 93,122 — BANIDO, não use, mesmo estando neste doc canônico — ver nota de resolução de conflito na tabela "Prova social") |
-| `"05 - Análise de Growth/gtm-plano-90-dias.md"` e `seo-auditoria-irbis.md` | Únicas exceções da pasta Growth — criados em 01/jun, pós-pivot |
+| `"05 - Growth/gtm-plano-90-dias.md"` e `seo-auditoria-irbis.md` | Únicas exceções da pasta Growth — criados em 01/jun, pós-pivot |
 
 ### Obsoleto / contaminado — não use como fonte de escopo ou prova
 
@@ -109,7 +109,7 @@ A recusa é ARGUMENTO DE VENDA — nunca ofereça um item proibido "de brinde" p
 | `docs/comercial-assets.md` | Script de prospecção linha 13: "Trabalho com produto, marca e dashboard" | Script WhatsApp pré-pivot, não usar |
 | `site/video/irbis-promo/SCRIPT.md` | Linha 12 (beat 4, 14-18s): "Webdesign · Branding · Sistemas Digitais" | Vídeo promo renderizado com escopo morto — não reusar sem re-renderizar |
 | `"01 - Marca/IRBIS_AdIdeasBank.md"` | "Gerado em Maio 2026 · Uso interno IRBIS Estúdio Digital" | Conceitos da era pré-pivot, não usar como estão |
-| `"05 - Análise de Growth/"` (exceto os 2 arquivos canônicos acima) | Segmentação Web3/SaaS, tickets R$15-40k, "Sprint de CRM/Dashboard R$18-28k" — tudo de 19-29/mai. Inclui subpasta `"IRBIS — Business Model Canvas/"` (15 templates, 25/mai) | Não usar |
+| `"05 - Growth/"` (exceto os 2 arquivos canônicos acima) | Segmentação Web3/SaaS, tickets R$15-40k, "Sprint de CRM/Dashboard R$18-28k" — tudo de 19-29/mai. Inclui subpasta `"IRBIS — Business Model Canvas/"` (15 templates, 25/mai) | Não usar |
 | `"01 - Marca/IRBIS_Manual_de_Copy.md"` | v1.0 de abril/2026, descreve serviços pré-pivot | ⚠️ RESSALVA: vale pela VOZ (fórmulas, tom, palavras banidas — é referência de KNOWLEDGE citada em `CLAUDE.md:35`), NÃO pelo escopo de serviços. Use só para tom, nunca para "o que vender" |
 | `docs/superpowers/specs/2026-06-02-funil-nicolas-cunha-design.md` | Linhas 21-22 oferecem "site, LP ou identidade visual · R$5k – R$45k+" — contradiz o pivot de 1 dia antes | Spec do funil /founder, não usar como fonte de escopo |
 | `site/founder.html` | Linhas 7, 894, 921 oferecem "identidade visual"; linha 963 tem formulário Formspree com placeholder `f/XXXXX` (não funcional); linha 931 mostra Adash como case | Arquivo existe no disco (35,6K) e está UNTRACKED no git (`git status --porcelain` mostra `??`). Se houver deploy manual fora do git, o conteúdo pode estar no ar sem estar versionado — confira com o dono antes de publicar ou de assumir que está fora do ar |
