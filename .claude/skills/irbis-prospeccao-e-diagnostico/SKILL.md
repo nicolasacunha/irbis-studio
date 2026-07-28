@@ -222,7 +222,8 @@ Máximo 2 tentativas após o DM. Modelos completos da leva de junho (SolarZ, Con
 2. ⚠️ Automação: ManyChat citado como "ou similar" — **contratação NÃO confirmada no repo**. Não prometa funil automatizado sem confirmar com o dono se a ferramenta está de fato ativa.
 3. Quiz de 5 perguntas qualifica (site hoje? traz cliente? momento do negócio? maior incômodo? decisor pronto?). Alternativas 🔥 = sinal quente.
 4. Diagnóstico personalizado (3 variações por perfil, definidas em `quiz-diagnostico-site.md`, mesma seção do quiz — ⚠️ path não confirmado por leitura direta nesta reescrita; se não estiverem nesse arquivo, é o único doc de `02 - Qualificação e Agendamento/` com "variações" no nome ou conteúdo) → CTA agendar a reunião de diagnóstico.
-   ⚠️ **O link do calendário no doc (`quiz-diagnostico-site.md:63`) é o texto literal "[link do calendário]" — placeholder sem URL real.** **PARE antes de ativar este funil ou mandar esse link a qualquer prospect: pergunte ao dono a URL real do calendário (Calendly/Google Agenda ou similar) e só prossiga com a URL confirmada.** Sem URL real, ofereça agendamento manual por WhatsApp em vez do link.
+   ✅ **RESOLVIDO em 28/jul/2026 — o link real é `https://irbis.com.br/call`.** O placeholder "[link do calendário]" foi substituído no doc. Funil verificado em produção: a página responde, a grade puxa horários reais do Google Calendar e o agendamento cria o evento (teste ponta a ponta em 28/jul).
+   ⚠️ **Regra de uso:** o `/call` é `noindex` e fora do menu **por design** — não é destino público e não deve ser divulgado em post, bio ou anúncio. Mande **só depois** da leitura do quiz (3+ 🔥). Para 1–2 🔥, siga em nutrição — quem abre o link cai direto na agenda do Nicolas.
 5. Leitura: 3+ 🔥 = lead quente → puxar para call em até 24h. 1–2 🔥 = nutrição/follow-up.
 
 Roteiros de conteúdo são da P2 do JDP (fora do repo); plano de posts vigente: `plano-conteudo-instagram.md` (10/jun). Copy de post = `irbis-brand-voice`.
