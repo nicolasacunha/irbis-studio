@@ -52,6 +52,6 @@ Regras de custo/qualidade de sessão (racional completo em `docs/superpowers/spe
 
 ## KNOWLEDGE
 
-@01 - Marca/IRBIS_Manual_de_Copy.md
+@01 - Marca/IRBIS_Manual_de_Copy_v2.md
 @01 - Marca/brand_guide_completo.html
 @03 - Comercial/01 - Prospecção/outbound-scripts-junho-2026.md
