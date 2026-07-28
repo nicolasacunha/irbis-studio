@@ -27,8 +27,8 @@ Esta skill gera a reunião. Preparar a reunião marcada é `irbis-precall`; o qu
 ## Contexto mínimo (leia antes de agir)
 
 - **Escopo: em transição documentada — confirme antes de prospectar IA.** O escopo canônico de 01/jun/2026 é **exclusivamente sites** (`irbis/CLAUDE.md` — ⚠️ raiz do projeto irbis; `Business/CLAUDE.md` não existe), e é isso que `irbis-guarda-pivot` ainda aplica (checklist pergunta 1: "oferece algo além de site? corte a oferta"). Porém `docs/visao-irbis.md`, **aprovada pelo dono em 21/jul/2026** — portanto posterior às respostas de 04/jul que sustentam o guarda —, estabelece o pivot **sites + IA**: "site é a porta; sistema com IA é o que mora dentro", com 2 clientes fundadores de IA em negociação e rebranding condicionado ao fechamento até ~19/ago/2026.
-  - **Regra operacional até o guarda-pivot ser atualizado:** prospecte sites livremente. Para prospectar ou diagnosticar IA, **pergunte ao dono caso a caso** — não presuma nenhum dos dois lados nem produza peça que ofereça IA sem confirmação. Pela hierarquia de verdade do guarda (resposta do dono vence doc), a visão de 21/jul é a fonte mais recente; a contradição é de **documentação, não de decisão**, e a atualização do `irbis-guarda-pivot` e do `CLAUDE.md` é pendência aberta para o dono.
-  - Segue proibido em qualquer cenário: branding, identidade visual, app, dashboard avulso, Web3.
+  - **Regra operacional (alinhada com `irbis-guarda-pivot` e `CLAUDE.md`, atualizados em 28/jul/2026):** prospecte **sites e sistemas com IA** livremente — as duas frentes são upsell mútuo. O que segue congelado é a **comunicação pública**: reposicionar a marca como "IA para a economia real" (site, deck, bio, anúncio) depende do gatilho das 2 assinaturas até ~19/ago e de aprovação explícita do dono.
+  - Segue proibido em qualquer cenário: branding, identidade visual avulsa, app/dashboard avulso, SaaS próprio para terceiros, Web3, consultoria avulsa.
 - Nicolas opera **solo** — nenhuma estratégia pode exigir time.
 - Operação comercial de junho/2026 **adaptada do Grupo JDP** (mentoria; aulas fora do repo). **Regras JDP são fixas** (dono, 04/jul/2026: "Regras deles sao fixas") — não adapte o método. "Ajusta conforme sua realidade" (`kpis-comercial-irbis.md:3`) vale só para escolher o NÍVEL de meta (N1/N2/N3).
 - Meta de 90 dias (dono, 04/jul/2026): "irbis tendo pelo menos 2 clientes por mes" = N1 dos KPIs (2 sites/mês ≈ R$9k).
@@ -118,7 +118,7 @@ Verificação rápida antes de publicar qualquer peça reaproveitada: `grep -rn 
 
 **Atualização (21/jul/2026):** o ICP deixou de estar em aberto. `docs/visao-irbis.md` (aprovada pelo dono) e `docs/mapa-maturidade-vs-realidade.md` (Pilar 3, marcado ✅) fixam: **economia real — empresário que fatura 6 a 7 dígitos por ano, com baixo domínio digital, que "paga caro por aquilo que trabalha dentro dele"**. Frase oficial do plano JDP.
 
-Isso **supera** a resposta de 04/jul/2026 ("Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito"), que segue registrada em `irbis-guarda-pivot` como "EM ABERTO" — a atualização daquela skill é pendência do dono. Em conflito, vale a fonte mais recente aprovada por ele (21/jul).
+Isso **supera** a resposta de 04/jul/2026 ("Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito"). `irbis-guarda-pivot` foi atualizado em 28/jul/2026 e já registra o ICP definido — as duas skills estão alinhadas.
 
 Consequência para as frentes históricas:
 

@@ -7,7 +7,7 @@ description: Use quando for afirmar qualquer fato sobre a IRBIS — serviços, e
 
 Skill anti-catástrofe. Impede 3 erros que destroem a credibilidade da IRBIS:
 
-1. **Vender escopo morto** — branding, identidade visual, app, dashboard, SaaS, Web3. A IRBIS não vende nada disso desde 01/jun/2026.
+1. **Vender escopo morto** — branding, identidade visual avulsa, app/dashboard avulso, SaaS próprio para terceiros, Web3. A IRBIS não vende nada disso desde 01/jun/2026. ⚠️ **Sistema com IA acoplado à operação do cliente NÃO é escopo morto desde 21/jul/2026** — ver seção de escopo abaixo.
 2. **Citar case fictício** — Adash nunca foi entregue; Eduboxs não tem site feito.
 3. **Citar número inventado** — só "+R$350k em vendas" (E-Force, grafado "EForce" sem hífen no site e nos docs — busque pelos dois) é real. "+500" e "LTV 1,8x" são inventados.
 
@@ -15,7 +15,8 @@ Skill anti-catástrofe. Impede 3 erros que destroem a credibilidade da IRBIS:
 
 **Hierarquia de verdade (da mais forte para a mais fraca):**
 
-1. Respostas do dono (Nicolas), 04/jul/2026 — citadas nesta skill. Vencem qualquer doc do repo, INCLUSIVE o `.claude/brand-context.md` do item 2 — nunca use o brand-context para contradizer uma resposta citada aqui (ex.: preço, prova social, ICP).
+0. **`docs/visao-irbis.md` (aprovada pelo dono em 21/jul/2026) e `docs/mapa-maturidade-vs-realidade.md` (21-22/jul)** — são a fonte mais recente aprovada por ele e vencem, **apenas nos pontos que tratam** (escopo sites + IA, ICP economia real, ponto A/B, bifurcação de 5 anos), as respostas de 04/jul do item 1. Em tudo o que a visão NÃO trata — prova social, cases, preço, deploy, Adash/Eduboxs —, o item 1 continua valendo integralmente.
+1. Respostas do dono (Nicolas), 04/jul/2026 — citadas nesta skill. Vencem qualquer doc do repo, INCLUSIVE o `.claude/brand-context.md` do item 2 — nunca use o brand-context para contradizer uma resposta citada aqui (ex.: preço, prova social).
 2. `CLAUDE.md` (raiz) + `.claude/brand-context.md`, só nos pontos em que esta skill não registra uma resposta do dono. O brand-context tem mudança não commitada — use sempre a versão do disco (working tree), não a do último commit.
 3. Docs de `"03 - Comercial/"` e `"04 - Marketing/"` datados de jun/2026.
 4. Todo o resto: suspeite. `CLAUDE.md:22` (bloco NUNCA): "Tratar documentos anteriores ao pivot como referência atual — estão desatualizados".
@@ -28,20 +29,31 @@ Se a resposta a qualquer pergunta for "não sei", PARE e rode o comando de verif
 
 | # | Pergunta | Se a resposta for SIM → faça isto |
 |---|---|---|
-| 1 | A frase oferece algo além de SITE (landing page, institucional, e-commerce)? | Corte a oferta. Escopo é só sites, definitivo desde 01/jun/2026 |
+| 1 | A frase oferece algo além de SITE (landing page, institucional, e-commerce) **ou de SISTEMA COM IA acoplado à operação do cliente**? | Corte a oferta. Esses dois são o escopo inteiro — ver seção de escopo. Branding, identidade avulsa, app/dashboard avulso, SaaS para terceiros e Web3 seguem cortados |
+| 1b | A peça é **comunicação externa** (site, deck, post, anúncio, bio) que reposiciona a IRBIS como empresa de IA? | PARE. O rebranding público está condicionado às 2 assinaturas até ~19/ago/2026. Vender IA em call/proposta já está liberado; **mudar a comunicação pública, não** — precisa do gatilho e da aprovação da pergunta 6 |
 | 2 | Estou citando número de resultado de cliente? | Só "+R$350k em vendas" (E-Force) é afirmável. "+500" e "LTV 1,8x": NUNCA use. "3 semanas de média" como afirmação geral: NÃO afirme — mas pode citar "3 semanas" como o prazo específico do case E-Force (está na página do case) |
 | 3 | Estou citando cliente ou case? | Só E-Force (via pai) e Odery Drums são clientes reais. Adash = fictício, não use. Eduboxs = sem site feito, não use como prova. Lumenform e demais `design/*` = conceitos internos — nunca chame de "cliente" |
 | 4 | O doc de onde tirei o fato é anterior a 01/jun/2026? | Não use como referência (`CLAUDE.md:22`). Confira a tabela "Obsoleto" abaixo |
-| 5 | A peça mira founder ou negócio local premium (ICP)? | ICP está EM ABERTO. Pergunte ao dono usando o script da seção ICP antes de escrever qualquer coisa que pressuponha um dos dois |
+| 5 | A peça mira **founder de startup**? | ICP definido em 21/jul é **economia real** — founder ficou fora. Confirme com o dono antes de escrever. Peça mirando negócio da economia real (incl. locais premium) segue sem precisar perguntar |
 | 6 | Vou publicar, deployar, remover case ou enviar algo para fora (cliente, ar, redes)? | PARE — bloqueio absoluto, não uma sugestão. Deploy, remoção de case (incluindo Adash/Eduboxs), preço público e qualquer publicação externa exigem aprovação explícita do dono ANTES de qualquer ação; "pergunte antes" nesta skill é sempre subordinado a este PARE, nunca uma via alternativa mais permissiva. Ação correta: descreva a mudança proposta e peça a decisão do dono; não edite/publique nada nesse meio-tempo. Só depois de editar (com aprovação), faça commit antes de qualquer deploy (regra de 04/jul/2026, ver seção Git) |
 
 ---
 
-## O pivot de 01/jun/2026 — único escopo válido
+## Escopo válido — duas camadas (01/jun/2026 + 21/jul/2026)
 
-Fonte: `docs/superpowers/specs/2026-06-01-irbis-posicionamento-design.md` (Status: Aprovado) + `docs/superpowers/plans/2026-06-01-irbis-posicionamento.md`. Consolidado em `CLAUDE.md:7`: "A IRBIS faz **exclusivamente criação de sites**. Nada além disso — sem branding, sem SaaS, sem Web3, sem identidade visual avulsa."
+**Camada 1 — Sites (01/jun/2026, segue integralmente válida).** Fonte: `docs/superpowers/specs/2026-06-01-irbis-posicionamento-design.md` (Aprovado) + `docs/superpowers/plans/2026-06-01-irbis-posicionamento.md`.
 
-Tagline (`.claude/brand-context.md` §07, confirmado): "A IRBIS faz só sites." Hero aprovado: "BRANDING? NÃO. / APP? NÃO. / IDENTIDADE? NÃO. / SITE? SIM."
+**Camada 2 — Sistemas com IA (21/jul/2026).** Fonte: `docs/visao-irbis.md`, aprovada pelo dono. Tese: **"Empresas da economia real pagam caro por aquilo que trabalha dentro delas. Site é a porta; sistema com IA é o que mora dentro."** Sites e IA são upsell mútuo. Estado em 21/jul: 2 clientes fundadores de IA em negociação (escritório A. Cunha + QG OS), com fechamento alvo até ~19/ago/2026.
+
+**A distinção que evita os dois erros opostos:**
+
+| Ação | Liberado? |
+|---|---|
+| Oferecer sistema com IA em call, proposta ou diagnóstico | **Sim**, desde 21/jul |
+| Prospectar cliente com a frente de IA | **Sim** |
+| Reposicionar publicamente a marca como "IA para a economia real" (site, deck, bio, anúncio) | **Não até o gatilho** — condicionado às 2 assinaturas até ~19/ago; depois disso ainda exige aprovação explícita (pergunta 6) |
+
+⚠️ **Material de marca ainda descreve só a camada 1** e não foi reescrito: tagline `.claude/brand-context.md` §07 ("A IRBIS faz só sites") e hero aprovado ("BRANDING? NÃO. / APP? NÃO. / IDENTIDADE? NÃO. / SITE? SIM."). Isso **não é contradição a corrigir sozinho** — é a comunicação pública esperando o gatilho do rebranding. Não reescreva nenhuma peça externa por conta própria.
 
 ### Os 3 produtos que a IRBIS vende
 
@@ -57,9 +69,11 @@ Regra: **não afirme nenhum dos dois valores como definitivo sem perguntar ao do
 
 ### O que a IRBIS NÃO vende (proibido oferecer)
 
-Branding, identidade visual, apps, dashboards, SaaS, Web3, sistemas internos, direção criativa, motion avulso, gestão de redes sociais, consultoria avulsa. Fonte: spec do pivot ("A recusa é parte do posicionamento") + `.claude/brand-context.md` §06.
+Branding, identidade visual avulsa, app ou dashboard avulso, SaaS próprio para terceiros, Web3, direção criativa, motion avulso, gestão de redes sociais, consultoria avulsa. Fonte: spec do pivot ("A recusa é parte do posicionamento") + `.claude/brand-context.md` §06.
 
-A recusa é ARGUMENTO DE VENDA — nunca ofereça um desses itens "de brinde" para fechar negócio.
+**A linha que separa** — o teste é a âncora, não a tecnologia: sistema **acoplado à operação do cliente**, que resolve uma dor dele e que a IRBIS entrega e acompanha, está dentro. Software genérico, produto próprio vendido a terceiros, dashboard solto sem processo por trás, ou "consultoria de IA" sem entregável, está fora. Na dúvida, pergunte ao dono — não amplie o escopo sozinho.
+
+A recusa é ARGUMENTO DE VENDA — nunca ofereça um item proibido "de brinde" para fechar negócio.
 
 ---
 
@@ -156,16 +170,20 @@ Existem 2 exports PDF divergentes: `"IRBIS — Apresentação Comercial.pdf"` na
 
 ---
 
-## ICP — oficialmente EM ABERTO (dono, 04/jul/2026)
+## ICP — DEFINIDO em 21/jul/2026: economia real
 
-Dono verbatim: "Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito." As duas hipóteses coexistem — nenhuma peça nova pode travar num só ICP sem perguntar.
+**Atualização de 21/jul/2026 (supera a resposta de 04/jul).** `docs/visao-irbis.md` (aprovada pelo dono) e `docs/mapa-maturidade-vs-realidade.md` (Pilar 3, marcado ✅) fixam o ICP: **economia real — empresário que fatura 6 a 7 dígitos por ano, com baixo domínio digital, que "paga caro por aquilo que trabalha dentro dele"**. É a frase oficial do plano JDP.
 
-| Hipótese | Evidência no repo | Canal |
-|---|---|---|
-| Founders de startup/negócio em crescimento | Site inteiro fala com founder (`site/index.html:7,14-15`); `.claude/brand-context.md` §02; `gtm-plano-90-dias.md` (01/jun); outbound LinkedIn de 01/jun (SolarZ, Conty, Elephan.AI, Vitrify) | Site, Instagram, LinkedIn outbound |
-| Negócios locais premium (odonto, estética, barbearia em SP/Curitiba/Floripa/POA) | `"03 - Comercial/01 - Prospecção/dossie-cold-call-leva1-junho2026.md"` (23/jun); CSVs PhantomBuster de 15/jun mirando "clínica de estética Itaim Bibi"; guard-rail SAM ≥R$8k/projeto | Cold call |
+Isso encerra o "EM ABERTO" registrado aqui em 04/jul ("Ainda nao consegui definir meu ICP perfeitamente pq nao vendi direito") — a resposta de 21/jul é do mesmo dono, posterior, e está em documento aprovado.
 
-**Passo a seguir quando a tarefa exigir decidir ICP:** pergunte ao dono ANTES de escrever qualquer coisa que pressuponha um ICP — não existe fallback autorizado, nenhuma hipótese pode ser assumida sozinha, mesmo temporariamente. Use este texto (EXATO — cite literalmente, não é um exemplo para adaptar): "Essa peça/copy/script vai mirar founder de startup ou negócio local premium? As duas hipóteses seguem em aberto, não posso travar sozinho." Se o dono não responder a tempo, a tarefa espera — registre a pendência e não publique/decida no lugar dele.
+| Frente histórica | Status sob o ICP de 21/jul |
+|---|---|
+| Negócios locais premium (odonto, estética, arquitetura, advocacia, imobiliária alto padrão) | **Dentro do ICP** — leitura direta de "economia real". Cold call e WhatsApp seguem válidos |
+| Founders de startup (SaaS, fintech, creator economy) | **Fora do ICP declarado.** Material existente não precisa ser destruído, mas **peça nova mirando founder exige confirmação do dono** — pergunte antes |
+
+⚠️ **O site inteiro ainda fala com founder** (`site/index.html:7,14-15`; `.claude/brand-context.md` §02). Assim como a tagline "só sites", isso é comunicação pública esperando o gatilho do rebranding — **não reescreva nada disso sozinho** (pergunta 6 do checklist). Anote como pendência e leve ao dono.
+
+**Quando a peça mirar founder, use este texto:** "Essa peça mira founder de startup? O ICP definido em 21/jul é economia real — founder ficou fora. Confirma antes de eu escrever?"
 
 Meta de 90 dias (dono, 04/jul/2026, verbatim): "Sucesso em 90 dias seria zapfy aprovado e irbis tendo pelo menos 2 clientes por mes. Regras deles sao fixas." Para a IRBIS: ≥2 clientes novos/mês até ~out/2026. As regras do Grupo JDP (mentoria comercial do dono) são FIXAS — não adapte. Contexto completo do portfólio: skill `portfolio-mapa-e-decisoes`.
 
@@ -183,7 +201,7 @@ Nenhum item tem decisão registrada. Regra única para todos: não decida por co
 | Preço público da LP: R$3k ou R$5k? | Seção "O pivot de 01/jun/2026", tabela de preço |
 | Funil /founder vai ao ar? | Tabela "Obsoleto", linha `site/founder.html` |
 | Voice agent Vapi em produção com escopo morto? | Tabela "Obsoleto", linha `docs/voice-agent/system-prompt.md` |
-| ICP: founder ou negócio local? | Seção ICP |
+| Rebranding: as 2 assinaturas fecharam até ~19/ago? Liberar reescrita da comunicação pública (tagline, hero, site que fala com founder)? | Seção "Escopo válido — duas camadas" + seção ICP |
 | Números finais do deck (prazos médios) | Seção "Prova social" |
 | Rótulo "Cliente" no case Lumenform | Seção "Prova social", linha Lumenform |
 
@@ -222,13 +240,14 @@ Esta skill é o FILTRO que roda antes das outras: as skills irmãs assumem que v
 
 ## Proveniência e manutenção
 
-**Escrita em:** 04/jul/2026, revisada em 06/jul/2026. Baseada em (a) respostas diretas de Nicolas em 04/jul/2026 (prova social, Eduboxs, Adash, ICP, regra de commit, metas de 90 dias); (b) verificação arquivo a arquivo no repo em 04/jul/2026, com re-checagem em 06/jul/2026; (c) dossiês de descoberta de 02/jul/2026 (`skills-library-discovery/irbis-business.md` e `irbis-history-tooling.md`, usados como mapa, cada fato re-verificado direto no repo).
+**Escrita em:** 04/jul/2026, revisada em 06/jul/2026 e em **28/jul/2026** (revisão de escopo e ICP: incorpora `docs/visao-irbis.md` de 21/jul — camada 2 de IA e ICP economia real —, com o rebranding público mantido congelado atrás do gatilho de ~19/ago. Prova social, cases, preço, Adash/Eduboxs e regras de deploy **não** foram alterados). Baseada em (a) respostas diretas de Nicolas em 04/jul/2026 (prova social, Eduboxs, Adash, ICP, regra de commit, metas de 90 dias); (b) verificação arquivo a arquivo no repo em 04/jul/2026, com re-checagem em 06/jul/2026; (c) dossiês de descoberta de 02/jul/2026 (`skills-library-discovery/irbis-business.md` e `irbis-history-tooling.md`, usados como mapa, cada fato re-verificado direto no repo).
 
 **Fontes principais:** `CLAUDE.md` · `.claude/brand-context.md` · `docs/superpowers/specs/2026-06-01-irbis-posicionamento-design.md` · `"03 - Comercial/05 - Indicação/sistema-indicacao-base-irbis.md"` · `"03 - Comercial/05 - Indicação/dia1-indicacao-mensagens.md"` · `"03 - Comercial/03 - Reunião de Vendas/script-call-comercial-junho-2026.md"` · `"03 - Comercial/00 - Planejamento/todo-plano-7dias.md"` · `"03 - Comercial/01 - Prospecção/dossie-cold-call-leva1-junho2026.md"` · `site/` (greps completos em 06/jul/2026).
 
 **Re-verificação (rode da raiz do projeto `irbis/`; 1 comando por fato que pode driftar):**
 
-- Escopo ainda "só sites"? → `grep -n "exclusivamente criação de sites" CLAUDE.md`
+- Escopo do `CLAUDE.md` já reflete as duas camadas? → `grep -n "sites e sistemas com IA" CLAUDE.md` (se voltar vazio e aparecer "exclusivamente criação de sites", o arquivo regrediu para a versão pré-21/jul — avise o dono)
+- Rebranding disparou? → procure decisão datada pós-19/ago sobre as 2 assinaturas em `docs/` e `"03 - Comercial/"`; sem registro, a comunicação pública segue congelada na camada 1
 - Adash ainda no site? → `grep -rli adash site/ | grep -vE '\.(jpg|jpeg|png|webp)$'`
 - Eduboxs ainda no site? → `grep -rni eduboxs site/` (confirmado 06/jul/2026: aparece em `site/index.html:1988-1991`, dentro do marquee "ODERY DRUMS · EFORCE · ADASH · EDUBOXS". Use sempre `-i`/case-insensitive e rode a partir da raiz do repo `irbis/` — um grep sem `-i` ou rodado do diretório errado pode falhar em achar o termo e sugerir falsamente que foi removido)
 - "+500" voltou a alguma peça? → `grep -rn '+500\|500 VENDAS' "03 - Comercial" "04 - Marketing" site/`
@@ -244,4 +263,4 @@ Esta skill é o FILTRO que roda antes das outras: as skills irmãs assumem que v
 - Lumenform ainda rotulado como "Cliente"? → `grep -n "Cliente" site/cases-hub/lumeform/index.html`
 - Remote de git criado? → `/usr/bin/git remote -v` (vazio = ainda sem backup)
 - Git voltou a andar? → `/usr/bin/git log -1 --format="%h %ad %s" --date=short && /usr/bin/git status --porcelain | wc -l`
-- ICP foi decidido? → procure decisão datada pós-04/jul em `"03 - Comercial/"` e `"04 - Marketing/"`; sem registro novo, trate como EM ABERTO e pergunte ao dono
+- ICP ainda é economia real? → `grep -n "economia real" docs/visao-irbis.md` (definido em 21/jul; se aparecer decisão datada posterior em `docs/`, `"03 - Comercial/"` ou `"04 - Marketing/"`, a mais recente vence)
