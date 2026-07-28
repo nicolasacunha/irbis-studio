@@ -28,7 +28,7 @@
 
   <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
-  <meta name="theme-color" content="#F2EFE9">
+  <meta name="theme-color" content="#E6E5E1">
   <link rel="preload" as="script" href="/vendor/gsap.min.js">
   <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
   <link rel="preload" as="script" href="/vendor/lenis.min.js">
@@ -239,9 +239,9 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg:     #F2EFE9;
-      --s1:     #FAF8F4;
-      --s2:     #E1DCD0;
+      --bg:     #E6E5E1;
+      --s1:     #EEEDEA;
+      --s2:     #D3D2CC;
       --accent: #4A5D43;
       --text:   #26251F;
       --muted:  #6E6C60;
@@ -2495,8 +2495,8 @@
             if (fill) fill.style.transform = 'scaleX(' + self.progress + ')';
           },
           onEnter()     { gsap.to('body', { backgroundColor: '#E6E2D8', duration: .4, overwrite: true }); },
-          onLeaveBack() { gsap.to('body', { backgroundColor: '#F2EFE9', duration: .4, overwrite: true }); },
-          onLeave()     { gsap.to('body', { backgroundColor: '#F2EFE9', duration: .4, overwrite: true }); },
+          onLeaveBack() { gsap.to('body', { backgroundColor: '#E6E5E1', duration: .4, overwrite: true }); },
+          onLeave()     { gsap.to('body', { backgroundColor: '#E6E5E1', duration: .4, overwrite: true }); },
         },
       });
     })();
