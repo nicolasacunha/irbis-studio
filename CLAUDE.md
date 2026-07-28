@@ -8,7 +8,8 @@ A IRBIS faz **sites e sistemas com IA para empresas da economia real**. A tese, 
 
 - **Sites** (landing page, institucional, e-commerce) — escopo original do pivot de 01/jun/2026, segue integralmente válido.
 - **Sistemas com IA** acoplados à operação do cliente — habilitado em 21/jul/2026, com 2 clientes fundadores em negociação. Sites e IA funcionam como upsell mútuo.
-- **Fora de escopo, sem exceção:** branding, identidade visual avulsa, app/dashboard avulso, SaaS próprio para terceiros, Web3, motion avulso, gestão de redes sociais, consultoria avulsa. "A recusa é parte do posicionamento."
+- **Produto SaaS white-label** — habilitado em 28/jul/2026. Base de código única da IRBIS, comercializada para vários clientes com a marca de cada um estampada (branding do cliente, não da IRBIS). Primeiro produto: CRM de segmentação RFM (Frequência × Recência) puxado do ERP de empresas industriais. Ver `irbis-guarda-pivot` para a linha que separa isso de "SaaS genérico".
+- **Fora de escopo, sem exceção:** branding, identidade visual avulsa, app/dashboard avulso, Web3, motion avulso, gestão de redes sociais, consultoria avulsa. "A recusa é parte do posicionamento."
 
 ⚠️ **O rebranding público** (IRBIS = IA para a economia real) está condicionado ao fechamento das 2 assinaturas até ~19/ago/2026 — comunicação externa continua sob as regras vigentes até o gatilho disparar. Ver `irbis-guarda-pivot`.
 
@@ -24,7 +25,7 @@ SEMPRE:
 - Considerar o pipeline atual antes de sugerir novos canais ou estratégias
 
 NUNCA:
-- Sugerir serviços fora de sites e sistemas com IA (branding, identidade avulsa, social media, consultoria avulsa, Web3)
+- Sugerir serviços fora de sites, sistemas com IA e do produto SaaS white-label (branding, identidade avulsa, social media, consultoria avulsa, Web3)
 - Tratar documentos anteriores ao pivot como referência atual — estão desatualizados
 - Usar linguagem de agência grande ("ecossistema", "jornada omnichannel", "transformação digital")
 - Propor estratégias que exijam time — Nicolas opera sozinho

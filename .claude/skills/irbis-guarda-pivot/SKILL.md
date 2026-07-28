@@ -7,7 +7,7 @@ description: Use quando for afirmar qualquer fato sobre a IRBIS — serviços, e
 
 Skill anti-catástrofe. Impede 3 erros que destroem a credibilidade da IRBIS:
 
-1. **Vender escopo morto** — branding, identidade visual avulsa, app/dashboard avulso, SaaS próprio para terceiros, Web3. A IRBIS não vende nada disso desde 01/jun/2026. ⚠️ **Sistema com IA acoplado à operação do cliente NÃO é escopo morto desde 21/jul/2026** — ver seção de escopo abaixo.
+1. **Vender escopo morto** — branding, identidade visual avulsa, app/dashboard avulso, Web3. A IRBIS não vende nada disso desde 01/jun/2026. ⚠️ **Sistema com IA acoplado à operação do cliente NÃO é escopo morto desde 21/jul/2026, e produto SaaS white-label NÃO é escopo morto desde 28/jul/2026** — ver seção de escopo abaixo.
 2. **Citar case fictício** — Adash nunca foi entregue; Eduboxs não tem site feito.
 3. **Citar número inventado** — só "+R$350k em vendas" (E-Force, grafado "EForce" sem hífen no site e nos docs — busque pelos dois) é real. "+500" e "LTV 1,8x" são inventados.
 
@@ -29,7 +29,7 @@ Se a resposta a qualquer pergunta for "não sei", PARE e rode o comando de verif
 
 | # | Pergunta | Se a resposta for SIM → faça isto |
 |---|---|---|
-| 1 | A frase oferece algo além de SITE (landing page, institucional, e-commerce) **ou de SISTEMA COM IA acoplado à operação do cliente**? | Corte a oferta. Esses dois são o escopo inteiro — ver seção de escopo. Branding, identidade avulsa, app/dashboard avulso, SaaS para terceiros e Web3 seguem cortados |
+| 1 | A frase oferece algo além de SITE (landing page, institucional, e-commerce), **SISTEMA COM IA acoplado à operação do cliente** ou **PRODUTO SAAS WHITE-LABEL** (código único da IRBIS, marca do cliente estampada)? | Corte a oferta. Esses três são o escopo inteiro — ver seção de escopo. Branding, identidade avulsa, app/dashboard avulso e Web3 seguem cortados |
 | 1b | A peça é **comunicação externa** (site, deck, post, anúncio, bio) que reposiciona a IRBIS como empresa de IA? | PARE. O rebranding público está condicionado às 2 assinaturas até ~19/ago/2026. Vender IA em call/proposta já está liberado; **mudar a comunicação pública, não** — precisa do gatilho e da aprovação da pergunta 6 |
 | 2 | Estou citando número de resultado de cliente? | Só "+R$350k em vendas" (E-Force) é afirmável. "+500" e "LTV 1,8x": NUNCA use. "3 semanas de média" como afirmação geral: NÃO afirme — mas pode citar "3 semanas" como o prazo específico do case E-Force (está na página do case) |
 | 3 | Estou citando cliente ou case? | Só E-Force (via pai) e Odery Drums são clientes reais. Adash = fictício, não use. Eduboxs = sem site feito, não use como prova. Lumenform e demais `design/*` = conceitos internos — nunca chame de "cliente" |
@@ -39,18 +39,22 @@ Se a resposta a qualquer pergunta for "não sei", PARE e rode o comando de verif
 
 ---
 
-## Escopo válido — duas camadas (01/jun/2026 + 21/jul/2026)
+## Escopo válido — três camadas (01/jun/2026 + 21/jul/2026 + 28/jul/2026)
 
 **Camada 1 — Sites (01/jun/2026, segue integralmente válida).** Fonte: `docs/superpowers/specs/2026-06-01-irbis-posicionamento-design.md` (Aprovado) + `docs/superpowers/plans/2026-06-01-irbis-posicionamento.md`.
 
 **Camada 2 — Sistemas com IA (21/jul/2026).** Fonte: `docs/visao-irbis.md`, aprovada pelo dono. Tese: **"Empresas da economia real pagam caro por aquilo que trabalha dentro delas. Site é a porta; sistema com IA é o que mora dentro."** Sites e IA são upsell mútuo. Estado em 21/jul: 2 clientes fundadores de IA em negociação (escritório A. Cunha + QG OS), com fechamento alvo até ~19/ago/2026.
 
-**A distinção que evita os dois erros opostos:**
+**Camada 3 — Produto SaaS white-label (28/jul/2026).** Fonte: decisão direta do dono em conversa (28/jul/2026), sem doc de spec ainda escrito — **esta entrada da skill é o registro primário até que um doc formal exista**. Modelo: a IRBIS constrói UM produto (código único, mantido pela IRBIS) e o comercializa a múltiplos clientes, cada um com sua própria marca estampada no produto (white-label) — não uma plataforma com a marca IRBIS visível ao usuário final do cliente. Primeiro produto: CRM de segmentação RFM (Frequência × Recência, escala 1–5 cada eixo) que ingere dados de ERP de empresas industriais e organiza em 4 quadrantes (baixo F/baixo R → reativar; baixo F/alto R → novos a reter; alto F/médio-alto R → reter; alto F/alto R → upsell/cross-sell). Dono, verbatim: "eu construo a porra toda... vai ser um produto comercializado para os clientes de forma personalizada. O produto é o mesmo, mas os clientes tem ele com sua marca estampada e compram o mesmo." Isso substitui a proibição anterior de "SaaS próprio para terceiros" — ver nota na seção "O que a IRBIS NÃO vende" abaixo.
+
+**A distinção que evita os erros opostos:**
 
 | Ação | Liberado? |
 |---|---|
 | Oferecer sistema com IA em call, proposta ou diagnóstico | **Sim**, desde 21/jul |
 | Prospectar cliente com a frente de IA | **Sim** |
+| Oferecer o produto SaaS white-label (CRM RFM) a clientes de indústria | **Sim**, desde 28/jul |
+| Construir o produto como plataforma multi-tenant com a marca "IRBIS" visível ao usuário final (não white-label) | **Não perguntado ainda ao dono** — a descrição dele foi explicitamente white-label (marca do cliente); se surgir uma variante sem white-label, confirme antes |
 | Reposicionar publicamente a marca como "IA para a economia real" (site, deck, bio, anúncio) | **Não até o gatilho** — condicionado às 2 assinaturas até ~19/ago; depois disso ainda exige aprovação explícita (pergunta 6) |
 
 ⚠️ **Material de marca ainda descreve só a camada 1** e não foi reescrito: tagline `.claude/brand-context.md` §07 ("A IRBIS faz só sites") e hero aprovado ("BRANDING? NÃO. / APP? NÃO. / IDENTIDADE? NÃO. / SITE? SIM."). Isso **não é contradição a corrigir sozinho** — é a comunicação pública esperando o gatilho do rebranding. Não reescreva nenhuma peça externa por conta própria.
@@ -69,9 +73,13 @@ Regra: **não afirme nenhum dos dois valores como definitivo sem perguntar ao do
 
 ### O que a IRBIS NÃO vende (proibido oferecer)
 
-Branding, identidade visual avulsa, app ou dashboard avulso, SaaS próprio para terceiros, Web3, direção criativa, motion avulso, gestão de redes sociais, consultoria avulsa. Fonte: spec do pivot ("A recusa é parte do posicionamento") + `.claude/brand-context.md` §06.
+Branding, identidade visual avulsa, app ou dashboard avulso, Web3, direção criativa, motion avulso, gestão de redes sociais, consultoria avulsa. Fonte: spec do pivot ("A recusa é parte do posicionamento") + `.claude/brand-context.md` §06. ⚠️ **"SaaS próprio para terceiros" saiu desta lista em 28/jul/2026** — virou Camada 3 (produto SaaS white-label), decisão direta do dono. Não cite mais essa proibição como válida.
 
-**A linha que separa** — o teste é a âncora, não a tecnologia: sistema **acoplado à operação do cliente**, que resolve uma dor dele e que a IRBIS entrega e acompanha, está dentro. Software genérico, produto próprio vendido a terceiros, dashboard solto sem processo por trás, ou "consultoria de IA" sem entregável, está fora. Na dúvida, pergunte ao dono — não amplie o escopo sozinho.
+**A linha que separa (atualizada 28/jul/2026) — agora são dois modelos legítimos, não um só:**
+1. **Sistema acoplado (Camada 2):** sob medida para um cliente específico, código não reaproveitado como produto, a IRBIS entrega e acompanha aquela instância.
+2. **Produto SaaS white-label (Camada 3):** código único da IRBIS, vendido a múltiplos clientes, cada um com a própria marca estampada no produto.
+
+O que continua fora: dashboard solto sem processo por trás, "consultoria de IA" sem entregável, e qualquer produto que exponha a marca IRBIS ao usuário final do cliente em vez da marca dele (isso não foi perguntado ao dono — confirme antes se surgir). Na dúvida sobre um caso novo que não se encaixe nos dois modelos acima, pergunte ao dono — não amplie o escopo sozinho.
 
 A recusa é ARGUMENTO DE VENDA — nunca ofereça um item proibido "de brinde" para fechar negócio.
 
@@ -240,7 +248,7 @@ Esta skill é o FILTRO que roda antes das outras: as skills irmãs assumem que v
 
 ## Proveniência e manutenção
 
-**Escrita em:** 04/jul/2026, revisada em 06/jul/2026 e em **28/jul/2026** (revisão de escopo e ICP: incorpora `docs/visao-irbis.md` de 21/jul — camada 2 de IA e ICP economia real —, com o rebranding público mantido congelado atrás do gatilho de ~19/ago. Prova social, cases, preço, Adash/Eduboxs e regras de deploy **não** foram alterados). Baseada em (a) respostas diretas de Nicolas em 04/jul/2026 (prova social, Eduboxs, Adash, ICP, regra de commit, metas de 90 dias); (b) verificação arquivo a arquivo no repo em 04/jul/2026, com re-checagem em 06/jul/2026; (c) dossiês de descoberta de 02/jul/2026 (`skills-library-discovery/irbis-business.md` e `irbis-history-tooling.md`, usados como mapa, cada fato re-verificado direto no repo).
+**Escrita em:** 04/jul/2026, revisada em 06/jul/2026 e duas vezes em **28/jul/2026**: (1) revisão de escopo e ICP, incorpora `docs/visao-irbis.md` de 21/jul — camada 2 de IA e ICP economia real —, com o rebranding público mantido congelado atrás do gatilho de ~19/ago; (2) adição da **Camada 3 — produto SaaS white-label**, decisão direta do dono em conversa (sem doc de spec formal ainda — pendência: escrever um `docs/visao-saas-whitelabel.md` se o produto avançar). Prova social, cases, preço, Adash/Eduboxs e regras de deploy **não** foram alterados nessas revisões. Baseada em (a) respostas diretas de Nicolas em 04/jul/2026 (prova social, Eduboxs, Adash, ICP, regra de commit, metas de 90 dias); (b) verificação arquivo a arquivo no repo em 04/jul/2026, com re-checagem em 06/jul/2026; (c) dossiês de descoberta de 02/jul/2026 (`skills-library-discovery/irbis-business.md` e `irbis-history-tooling.md`, usados como mapa, cada fato re-verificado direto no repo).
 
 **Fontes principais:** `CLAUDE.md` · `.claude/brand-context.md` · `docs/superpowers/specs/2026-06-01-irbis-posicionamento-design.md` · `"03 - Comercial/05 - Indicação/sistema-indicacao-base-irbis.md"` · `"03 - Comercial/05 - Indicação/dia1-indicacao-mensagens.md"` · `"03 - Comercial/03 - Reunião de Vendas/script-call-comercial-junho-2026.md"` · `"03 - Comercial/00 - Planejamento/todo-plano-7dias.md"` · `"03 - Comercial/01 - Prospecção/dossie-cold-call-leva1-junho2026.md"` · `site/` (greps completos em 06/jul/2026).
 
@@ -264,3 +272,4 @@ Esta skill é o FILTRO que roda antes das outras: as skills irmãs assumem que v
 - Remote de git criado? → `/usr/bin/git remote -v` (vazio = ainda sem backup)
 - Git voltou a andar? → `/usr/bin/git log -1 --format="%h %ad %s" --date=short && /usr/bin/git status --porcelain | wc -l`
 - ICP ainda é economia real? → `grep -n "economia real" docs/visao-irbis.md` (definido em 21/jul; se aparecer decisão datada posterior em `docs/`, `"03 - Comercial/"` ou `"04 - Marketing/"`, a mais recente vence)
+- Camada 3 (SaaS white-label) ainda vale? → `grep -n "Produto SaaS white-label" CLAUDE.md` (se voltar vazio, o CLAUDE.md regrediu — avise o dono. Procure também por um doc de spec formal em `docs/` que possa ter sido escrito depois de 28/jul/2026 e que deva substituir esta entrada como fonte primária)
