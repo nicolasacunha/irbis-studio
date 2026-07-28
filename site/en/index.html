@@ -2680,6 +2680,21 @@
           .add(() => { window.location.href = href; }, '+=0.15');
       }
 
+
+      /* Voltar pelo navegador restaura o DOM do bfcache com a cortina ainda
+         descida, e nenhum script roda de novo — devolve ela ao estado escondido. */
+      window.addEventListener('pageshow', e => {
+        if (!e.persisted) return;
+        gsap.set(curtain, { translateY: '100%', opacity: 1, pointerEvents: 'none' });
+        if (logo) gsap.set(logo, { opacity: 0, scaleX: 1, scaleY: 1 });
+        const ball = document.getElementById('curtain-ball');
+        if (ball) gsap.set(ball, { scale: 0, opacity: 0 });
+        document.body.classList.remove('intro-lock');
+        document.body.style.overflow = '';
+        if (typeof lenis !== 'undefined') lenis.start();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+      });
+
       document.querySelectorAll('a[href]').forEach(a => {
         if (a.target === '_blank') return;
         const href = a.getAttribute('href');
