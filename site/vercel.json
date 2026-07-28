@@ -60,6 +60,7 @@
     { "source": "/founder",             "destination": "/founder.html" },
     { "source": "/guia-IA",             "destination": "/guia-ia.html" },
     { "source": "/guia-ia",             "destination": "/guia-ia.html" },
+    { "source": "/raio-x-cultura",      "destination": "/raio-x-cultura.html" },
     { "source": "/call",                "destination": "/call.html" },
     { "source": "/en",                  "destination": "/en/index.html" },
     { "source": "/en/about",            "destination": "/en/about.html" },
