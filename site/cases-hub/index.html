@@ -247,10 +247,14 @@
     /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
     .hero-title, .case-name, .cta-final-title { font-family: var(--f-serif); font-weight: 700; text-transform: none; letter-spacing: -.015em; }
     .hero-title { line-height: 1.05; }
-    .nav-logo { font-family: var(--f-serif); font-weight: 800; }
+    .nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
   </style>
 </head>
 <body>
+
+<div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+  <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
+</div>
 
   <nav>
     <a class="nav-logo" href="/" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.45em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS<span>.</span></a>
@@ -399,6 +403,44 @@
         }
       });
     }
+
+    /* ── PAGE TRANSITIONS (cortina) ── */
+    (function () {
+      const curtain = document.getElementById('pg-curtain');
+      const logo    = curtain ? curtain.querySelector('span') : null;
+      if (!curtain) return;
+
+      gsap.timeline()
+        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+
+      function navigate(href) {
+        lenis.stop();
+        document.body.style.overflow = 'hidden';
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+        gsap.set(logo,    { opacity: 0 });
+        gsap.timeline()
+          .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+          .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+          .add(() => { window.location.href = href; }, '+=0.15');
+      }
+
+      window.addEventListener('pageshow', e => {
+        if (!e.persisted) return;
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'none' });
+        if (logo) gsap.set(logo, { opacity: 0 });
+        document.body.style.overflow = '';
+        if (typeof lenis !== 'undefined') lenis.start();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+      });
+
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (a.target === '_blank') return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
+      });
+    })();
   </script>
 </body>
 </html>
