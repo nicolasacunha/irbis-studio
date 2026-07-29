@@ -52,7 +52,7 @@
   </script>
   <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
-  <meta name="theme-color" content="#F2EFE9">
+  <meta name="theme-color" content="#E6E5E1">
   <link rel="preload" as="script" href="/vendor/gsap.min.js">
   <link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
   <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -61,9 +61,9 @@
 
   <style>
     :root {
-      --bg:     #F2EFE9;
-      --s1:     #FAF8F4;
-      --s2:     #E1DCD0;
+      --bg:     #E6E5E1;
+      --s1:     #EEEDEA;
+      --s2:     #D3D2CC;
       --accent: #4A5D43;
       --text:   #26251F;
       --muted:  #6E6C60;
@@ -563,6 +563,21 @@
           .to(logo, { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
           .add(() => { location.href = href; }, '+=0.15');
       }
+
+      /* Voltar pelo navegador restaura o DOM do bfcache com a cortina ainda
+         descida, e nenhum script roda de novo — devolve ela ao estado escondido. */
+      window.addEventListener('pageshow', e => {
+        if (!e.persisted) return;
+        gsap.set(curtain, { translateY: '100%', opacity: 1, pointerEvents: 'none' });
+        if (logo) gsap.set(logo, { opacity: 0, scaleX: 1, scaleY: 1 });
+        const ball = document.getElementById('curtain-ball');
+        if (ball) gsap.set(ball, { scale: 0, opacity: 0 });
+        document.body.classList.remove('intro-lock');
+        document.body.style.overflow = '';
+        if (typeof lenis !== 'undefined') lenis.start();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+      });
+
       document.querySelectorAll('a[href]').forEach(a => {
         if (a.target === '_blank') return;
         const href = a.getAttribute('href');

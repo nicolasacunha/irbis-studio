@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odery ERP: Sistema de Gestão com IA · Case IRBIS</title>
+  <meta name="description" content="Como a IRBIS construiu o ERP da Odery Drums: CRM comercial, catálogo integrado ao Sankhya, importação internacional e IA no atendimento.">
+  <link rel="canonical" href="https://irbis.com.br/odery-erp">
+  <link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-erp">
+  <link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-erp">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://irbis.com.br/odery-erp">
+  <meta property="og:title" content="Odery ERP: Sistema de Gestão com IA · Case IRBIS">
+  <meta property="og:description" content="CRM comercial, catálogo integrado ao Sankhya, importação internacional e IA no atendimento: o sistema que a IRBIS construiu para a Odery Drums.">
+  <meta property="og:image" content="https://irbis.com.br/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Odery ERP: Case · IRBIS">
+  <meta name="twitter:description" content="CRM comercial, catálogo integrado ao Sankhya, importação internacional e IA no atendimento.">
+  <meta name="twitter:image" content="https://irbis.com.br/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg">
+  <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://irbis.com.br/odery-erp#webpage",
+    "url": "https://irbis.com.br/odery-erp",
+    "name": "Odery ERP: Sistema de Gestão com IA · Case IRBIS",
+    "description": "Como a IRBIS construiu o ERP da Odery Drums: CRM comercial, catálogo integrado ao Sankhya, importação internacional e IA no atendimento.",
+    "isPartOf": { "@id": "https://irbis.com.br/#website" },
+    "datePublished": "2026-07-29",
+    "dateModified": "2026-07-29",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "IRBIS", "item": "https://irbis.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Cases", "item": "https://irbis.com.br/cases" },
+        { "@type": "ListItem", "position": 3, "name": "Odery ERP", "item": "https://irbis.com.br/odery-erp" }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Odery ERP",
+      "applicationCategory": "BusinessApplication",
+      "description": "Sistema de gestão sob medida para a Odery Drums: CRM comercial, catálogo integrado ao Sankhya, importação internacional (COMEX), pós-venda, equipe e marketing num único sistema, com IA integrada.",
+      "creator": { "@id": "https://irbis.com.br/#organization" },
+      "dateCreated": "2026",
+      "keywords": ["ERP", "CRM", "sistema com IA", "Odery Drums", "Sankhya", "COMEX", "importação"]
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
+  <style>
+    :root {
+      --bg:     #E6E5E1;
+      --s1:     #EEEDEA;
+      --s2:     #D3D2CC;
+      --accent: #4A5D43;
+      --text:   #26251F;
+      --muted:  #6E6C60;
+      --f:      'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { background: var(--bg); }
+    body { font-family: var(--f); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.75rem 3rem;
+      background: linear-gradient(to bottom, rgba(242,239,233,.85) 0%, transparent 100%);
+    }
+    .nav-logo {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .nav-back {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* ── CASE HERO ── */
+    .case-hero {
+      --bg: #21201B; --s1: #2A2822; --s2: #3A372E; --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 3rem 4rem;
+      overflow: hidden;
+    }
+    .case-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #1B1A16 0%, #2A2822 35%, #3A372E 65%, #1B1A16 100%);
+    }
+    .case-hero-bg::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 60%; height: 75%;
+      background: radial-gradient(ellipse at 80% 90%, rgba(143,169,135,.15) 0%, transparent 60%);
+    }
+    .case-hero-ghost {
+      position: absolute;
+      bottom: -2rem; right: 2rem;
+      font-size: clamp(12rem, 25vw, 22rem);
+      font-weight: 800;
+      letter-spacing: -.08em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,.03);
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+    .case-hero-label {
+      position: absolute;
+      top: 7rem; left: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      z-index: 2;
+    }
+    .case-hero-client {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .case-hero-type {
+      font-size: .52rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,.35);
+    }
+    .case-hero-title {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(3.5rem, 9vw, 9rem);
+      font-weight: 800;
+      letter-spacing: -.05em;
+      text-transform: uppercase;
+      line-height: .92;
+      margin-bottom: 3rem;
+    }
+    .case-hero-meta {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(250,250,250,.1);
+    }
+    .case-meta-key {
+      font-size: .48rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .case-meta-val {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+    }
+
+    /* ── INTRO ── */
+    .case-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      padding: 5rem 3rem;
+      border-bottom: 1px solid var(--s2);
+    }
+    .case-intro-body {
+      font-size: clamp(.9rem, 1.3vw, 1.05rem);
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .case-intro-body strong { color: var(--text); font-weight: 600; }
+    .case-intro-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-left: 4rem;
+      border-left: 1px solid var(--s2);
+    }
+    .case-spec-key {
+      font-size: .48rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .case-spec-val {
+      font-size: .8rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* ── BROWSER MOCKUP (borda de macOS) ── */
+    .case-browser {
+      background: #21201B;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 3rem 1.5rem;
+    }
+    .case-browser-bar {
+      background: #2A2822;
+      padding: .6rem 1rem;
+      display: flex; align-items: center; gap: .75rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .case-browser-dots { display: flex; gap: .35rem; }
+    .case-browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .case-browser-dot:nth-child(1) { background: #ff5f57; }
+    .case-browser-dot:nth-child(2) { background: #febc2e; }
+    .case-browser-dot:nth-child(3) { background: #28c840; }
+    .case-browser-url {
+      flex: 1; background: #3A372E;
+      border-radius: 4px; padding: .25rem .75rem;
+      font-family: 'Archivo', monospace; font-size: .55rem;
+      color: rgba(255,255,255,.4); letter-spacing: .04em;
+    }
+    .case-browser img { width: 100%; display: block; }
+    @media (max-width: 767px) { .case-browser { margin: 0 1.5rem 1.5rem; } }
+
+    /* ── CENÁRIO ── */
+    .case-cenario {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+      padding: 6rem 3rem;
+    }
+    .case-cenario-label {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: .4rem;
+    }
+    .case-cenario-headline {
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: .95;
+      margin-bottom: 2rem;
+    }
+    .case-cenario-headline .acc { color: var(--accent); }
+    .case-cenario-body {
+      font-size: clamp(.85rem, 1.2vw, 1rem);
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 60ch;
+    }
+
+    /* ── DESAFIOS ── */
+    .case-desafios {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      padding: 6rem 3rem;
+      background: var(--s1);
+    }
+    .case-desafios-eyebrow {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .case-desafios-headline {
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+    .case-desafio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--s2);
+    }
+    .case-desafio-item:first-child { border-top: 1px solid var(--s2); }
+    .case-desafio-num {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--accent);
+      min-width: 2rem;
+      padding-top: .2rem;
+    }
+    .case-desafio-text {
+      font-size: .85rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .case-desafio-text strong { color: var(--text); font-weight: 600; }
+
+    /* ── RESULTADOS ── */
+    .case-resultados {
+      padding: 6rem 3rem;
+    }
+    .case-resultados-eyebrow {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .case-resultados-headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2rem;
+      max-width: 24ch;
+    }
+    .case-resultados-body {
+      font-size: clamp(.85rem, 1.2vw, 1rem);
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 60ch;
+    }
+
+    /* ── NEXT CASES ── */
+    .case-next {
+      padding: 4rem 3rem 6rem;
+      border-top: 1px solid var(--s2);
+    }
+    .case-next-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2rem;
+    }
+    .case-next-title {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .case-next-ver {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--s2);
+      padding-bottom: .1rem;
+      transition: color .2s, border-color .2s;
+    }
+    .case-next-ver:hover { color: var(--accent); border-color: var(--accent); }
+    .case-next-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+    }
+    .case-next-card {
+      --bg: #21201B; --s1: #2A2822; --s2: #3A372E; --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+      color: var(--text);
+      display: block;
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/8;
+      background: var(--s1);
+    }
+    .case-next-bg {
+      position: absolute;
+      inset: 0;
+      transition: transform .5s ease;
+    }
+    .case-next-card:hover .case-next-bg { transform: scale(1.04); }
+    .case-next-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(24,23,19,.85) 0%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .case-next-name {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+    }
+    .case-next-type {
+      font-size: .52rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+    .case-next-arrow {
+      color: var(--muted);
+      transition: color .2s, transform .2s;
+    }
+    .case-next-card:hover .case-next-arrow { color: var(--accent); transform: translate(4px, -4px); }
+    .case-next-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      transition: border-color .3s;
+      pointer-events: none;
+    }
+    .case-next-card:hover::after { border-color: rgba(143,169,135,.22); }
+
+    /* ── CTA ── */
+    .case-cta {
+      background: var(--s1);
+      padding: 6rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+    }
+    .case-cta-eyebrow {
+      font-size: .52rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .case-cta-headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .case-cta-sub {
+      font-size: .82rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 1rem;
+      max-width: 42ch;
+    }
+    .case-cta-btn {
+      display: inline-block;
+      background: #26251F;
+      color: #F2EFE9;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      flex-shrink: 0;
+      transition: opacity .2s;
+    }
+    .case-cta-btn:hover { background: #4A5D43; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .case-hero { padding: 0 1.5rem 3rem; }
+      .case-hero-label { left: 1.5rem; top: 6rem; }
+      .case-hero-ghost { display: none; }
+      .case-hero-meta { gap: 1.5rem; }
+      .case-intro { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .case-intro-right { padding-left: 0; border-left: none; border-top: 1px solid var(--s2); padding-top: 2rem; }
+      .case-cenario { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 1.5rem; }
+      .case-desafios { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
+      .case-resultados { padding: 4rem 1.5rem; }
+      .case-next { padding: 3rem 1.5rem 4rem; }
+      .case-next-grid { grid-template-columns: 1fr; }
+      .case-cta { flex-direction: column; align-items: flex-start; padding: 4rem 1.5rem; }
+    }
+
+    @media (max-width: 767px) {
+      .case-hero-meta { flex-wrap: wrap; gap: 1.25rem; }
+      .case-cta-btn { width: 100%; text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0s !important; animation-duration: 0s !important; }
+    }
+    .lqip { filter: blur(12px); transform: scale(1.02); transition: filter .5s ease, transform .5s ease; }
+    .lqip.loaded { filter: none; transform: scale(1); }
+  </style>
+  <!-- Contentsquare: carregamento adiado (1o gesto OU 3,5s) -->
+  <script>
+  (function (w, d) {
+    var libs = ['https://t.contentsquare.net/uxa/f628ebc890c4d.js'];
+    var fired = false;
+    var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown', 'mousemove'];
+    function boot() {
+      if (fired) return; fired = true;
+      clearTimeout(timer);
+      evs.forEach(function (e) { w.removeEventListener(e, boot); });
+      libs.forEach(function (src, i) {
+        setTimeout(function () {
+          var go = function () {
+            var s = d.createElement('script'); s.async = true; s.src = src;
+            d.head.appendChild(s);
+          };
+          ('requestIdleCallback' in w) ? w.requestIdleCallback(go, { timeout: 1500 }) : go();
+        }, i * 900);
+      });
+    }
+    evs.forEach(function (e) { w.addEventListener(e, boot, { passive: true }); });
+    var timer = setTimeout(boot, 3500);
+  })(window, document);
+  </script>
+<script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* D2 Grafite & Sálvia: títulos em serifa, sentence case */
+    .case-hero-title, .case-cenario-headline, .case-desafios-headline, .case-resultados-headline, .case-cta-headline, .case-next-name { font-family: var(--f-serif); }
+    .case-hero-title, .case-cenario-headline, .case-desafios-headline, .case-resultados-headline, .case-cta-headline { font-weight: 700; text-transform: none; letter-spacing: -.015em; line-height: 1.05; }
+    .case-next-name { font-weight: 700; }
+    .nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
+  </style>
+</head>
+<body>
+
+<div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+  <span style="font-size:1.2rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.45em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</a>
+  <a href="/cases" class="nav-back">← Cases</a>
+</nav>
+
+
+<!-- 1. HERO -->
+<section class="case-hero">
+  <div class="case-hero-bg"></div>
+  <div class="case-hero-ghost">OE</div>
+
+  <div class="case-hero-label">
+    <span class="case-hero-client">Odery Drums</span>
+    <span class="case-hero-type">Sistema · CRM & ERP · 2026</span>
+  </div>
+
+  <h1 class="case-hero-title">Odery <br>ERP</h1>
+
+  <div class="case-hero-meta">
+    <div>
+      <span class="case-meta-key">Ano</span>
+      <span class="case-meta-val">2026</span>
+    </div>
+    <div>
+      <span class="case-meta-key">Serviço</span>
+      <span class="case-meta-val">Product Design + Dev + IA</span>
+    </div>
+    <div>
+      <span class="case-meta-key">Integrações</span>
+      <span class="case-meta-val">Sankhya · Importação (COMEX)</span>
+    </div>
+    <div>
+      <span class="case-meta-key">Entregável</span>
+      <span class="case-meta-val">ERP/CRM sob medida</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2. INTRO -->
+<div class="case-intro">
+  <p class="case-intro-body">
+    A <strong>Odery Drums</strong> roda comercial, catálogo, importação internacional e pós-venda ao mesmo tempo, com o volume de uma das maiores fabricantes de baterias do mundo. Cada área tem sua própria lógica: o funil comercial precisa saber o que está no catálogo, o catálogo vem do <strong>Sankhya</strong>, a importação tem câmbio, ICMS e prazo de desembaraço próprios. O <strong>Odery ERP</strong> coloca as seis áreas dentro do mesmo sistema, com IA na camada de atendimento.
+  </p>
+  <div class="case-intro-right">
+    <div>
+      <span class="case-spec-key">Cliente</span>
+      <span class="case-spec-val">Odery Drums</span>
+    </div>
+    <div>
+      <span class="case-spec-key">Integrações</span>
+      <span class="case-spec-val">Sankhya · Importação/COMEX</span>
+    </div>
+    <div>
+      <span class="case-spec-key">Áreas do sistema</span>
+      <span class="case-spec-val">CRM Comercial · Catálogo & Estoque · COMEX · Pós-venda · Gestão · Marketing</span>
+    </div>
+    <div>
+      <span class="case-spec-key">Escopo</span>
+      <span class="case-spec-val">Product Design, Dev full-stack, IA integrada</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- 3. IMAGEM: EQUIPE -->
+<div class="case-browser">
+  <div class="case-browser-bar">
+    <div class="case-browser-dots">
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+    </div>
+    <div class="case-browser-url">Odery ERP · Equipe</div>
+  </div>
+  <img src="/cases-hub/odery-erp/assets/ODERY-ERP-EQUIPE-lq.jpg" data-src="/cases-hub/odery-erp/assets/ODERY-ERP-EQUIPE.jpg" alt="Odery ERP: painel de gestão de equipe, perfis e permissões" class="lqip" style="width:100%;height:auto;display:block;" fetchpriority="high" decoding="async">
+</div>
+
+
+<!-- 4. O CENÁRIO -->
+<section class="case-cenario">
+  <span class="case-cenario-label">O Cenário</span>
+  <div>
+    <h2 class="case-cenario-headline">Seis áreas. <br>Um sistema <br><span class="acc">só.</span></h2>
+    <p class="case-cenario-body">
+      Poderíamos ter conectado o Sankhya a um CRM pronto de prateleira. Seria mais rápido. Em vez disso, o Odery ERP foi construído em torno da operação real: comercial, catálogo, importação, pós-venda, equipe e marketing compartilhando a mesma base de dados, com permissão por perfil e histórico que não se perde entre setores. Cada área com a interface que o time daquela área realmente usa no dia a dia, não uma tela genérica de sistema de gestão.
+    </p>
+  </div>
+</section>
+
+
+<!-- 5. IMAGEM: AGENDA -->
+<div class="case-browser">
+  <div class="case-browser-bar">
+    <div class="case-browser-dots">
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+    </div>
+    <div class="case-browser-url">Odery ERP · Agenda</div>
+  </div>
+  <img src="/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA-lq.jpg" data-src="/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg" alt="Odery ERP: agenda semanal por prioridade de contato" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+</div>
+
+
+<!-- 6. IMAGEM: FUNIL -->
+<div class="case-browser">
+  <div class="case-browser-bar">
+    <div class="case-browser-dots">
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+    </div>
+    <div class="case-browser-url">Odery ERP · Funil</div>
+  </div>
+  <img src="/cases-hub/odery-erp/assets/ODERY-ERP-FUNIL-lq.jpg" data-src="/cases-hub/odery-erp/assets/ODERY-ERP-FUNIL.jpg" alt="Odery ERP: funil comercial em quadro, por etapa e responsável" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+</div>
+
+
+<!-- 7. O QUE RESOLVEMOS -->
+<section class="case-desafios">
+  <div>
+    <span class="case-desafios-eyebrow">O que resolvemos</span>
+    <h3 class="case-desafios-headline">Tudo que a <br>operação precisava <br>resolver.</h3>
+  </div>
+  <div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">01</span>
+      <p class="case-desafio-text"><strong>CRM comercial em quadro</strong>, com funil por etapa, responsável, previsão de fechamento e histórico de cada negócio.</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">02</span>
+      <p class="case-desafio-text"><strong>Catálogo integrado ao Sankhya</strong>, sem recadastrar produto e preço em duas ferramentas diferentes.</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">03</span>
+      <p class="case-desafio-text"><strong>Módulo de importação (COMEX)</strong> com câmbio, ICMS, prazo de embarque, desembaraço e chegada, processo por processo.</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">04</span>
+      <p class="case-desafio-text"><strong>Pós-venda e gestão de equipe</strong> no mesmo sistema, com permissão por perfil e acompanhamento de tarefa por pessoa.</p>
+    </div>
+    <div class="case-desafio-item">
+      <span class="case-desafio-num">05</span>
+      <p class="case-desafio-text"><strong>IA na camada de atendimento:</strong> registrar um contato por voz vira tarefa sozinho, e uma pergunta busca a resposta em qualquer conversa já registrada.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 8. IMAGEM: COMEX -->
+<div class="case-browser" style="margin-top:4rem;">
+  <div class="case-browser-bar">
+    <div class="case-browser-dots">
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+    </div>
+    <div class="case-browser-url">Odery ERP · COMEX / Importações</div>
+  </div>
+  <img src="/cases-hub/odery-erp/assets/ODERY-ERP-COMEX-lq.jpg" data-src="/cases-hub/odery-erp/assets/ODERY-ERP-COMEX.jpg" alt="Odery ERP: controle de importação, câmbio e desembaraço" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+</div>
+
+
+<!-- 9. IMAGEM: IA NO ATENDIMENTO -->
+<div class="case-browser">
+  <div class="case-browser-bar">
+    <div class="case-browser-dots">
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+      <div class="case-browser-dot"></div>
+    </div>
+    <div class="case-browser-url">Odery ERP · Negócio + IA</div>
+  </div>
+  <img src="/cases-hub/odery-erp/assets/ODERY-ERP-IA-lq.jpg" data-src="/cases-hub/odery-erp/assets/ODERY-ERP-IA.jpg" alt="Odery ERP: registro de contato por voz e busca por IA no histórico do cliente" class="lqip" style="width:100%;height:auto;display:block;" loading="lazy" decoding="async">
+</div>
+
+
+<!-- 10. RESULTADOS -->
+<section class="case-resultados">
+  <span class="case-resultados-eyebrow">Resultados</span>
+  <h3 class="case-resultados-headline">Uma operação <br>que roda <br><span class="acc">num lugar só.</span></h3>
+
+  <p class="case-resultados-body">
+    Comercial, catálogo, importação, pós-venda, equipe e marketing operam dentro do mesmo sistema, com a mesma base de dados. O catálogo não precisa ser recadastrado porque já vem do Sankhya. A importação tem cada processo rastreado do pedido ao estoque. E a IA fica encostada em cada etapa: registra o que foi dito numa ligação, transforma em tarefa, e responde quando alguém no time pergunta o que já foi combinado com um cliente.
+  </p>
+</section>
+
+
+<!-- 11. MAIS CASES -->
+<div class="case-next">
+  <div class="case-next-header">
+    <span class="case-next-title">Mais projetos</span>
+    <a href="/cases" class="case-next-ver">Ver todos →</a>
+  </div>
+  <div class="case-next-grid">
+
+    <a class="case-next-card" href="/eforce">
+      <div class="case-next-bg" style="background:linear-gradient(135deg,#1B1A16 0%,#2A2822 50%,#1B1A16 100%);">
+        <div style="position:absolute;top:0;right:0;width:60%;height:60%;background:radial-gradient(ellipse at 70% 20%,rgba(143,169,135,.10) 0%,transparent 65%);"></div>
+      </div>
+      <div class="case-next-bottom">
+        <div>
+          <div class="case-next-name">EForce Drums</div>
+          <div class="case-next-type">Webdesign · Motion · 2026</div>
+        </div>
+        <span class="case-next-arrow">↗</span>
+      </div>
+    </a>
+
+    <a class="case-next-card" href="/call">
+      <div class="case-next-bg" style="background:linear-gradient(135deg,#21201B 0%,#2A2822 100%);">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(3rem,6vw,5rem);font-weight:800;letter-spacing:-.06em;color:rgba(143,169,135,.06);text-transform:uppercase;user-select:none">IRBIS</div>
+      </div>
+      <div class="case-next-bottom">
+        <div>
+          <div class="case-next-name">Seu Projeto</div>
+          <div class="case-next-type">Iniciar conversa</div>
+        </div>
+        <span class="case-next-arrow">↗</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- 12. CTA -->
+<section class="case-cta">
+  <div>
+    <span class="case-cta-eyebrow">Próximo passo</span>
+    <h2 class="case-cta-headline">Sua operação <br>merece <br>isso.</h2>
+    <p class="case-cta-sub">Não precisa ter tudo mapeado. Conta o que tá travando e a gente constrói junto.</p>
+  </div>
+  <a href="https://wa.me/5519991591265" class="case-cta-btn">Iniciar conversa →</a>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  const lenis = new Lenis({ lerp: 0.07, wheelMultiplier: 0.9, touchMultiplier: 1.0, smoothWheel: true });
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('nav', { opacity: 0, y: -20, duration: 0.6, ease: 'power3.out' });
+    gsap.from('.case-hero-label', { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out', delay: 0.2 });
+
+    (function() {
+      const h1 = document.querySelector('.case-hero-title');
+      if (!h1) return;
+      const parts = h1.innerHTML.split(/<br\s*\/?>/i);
+      h1.innerHTML = parts.map(t =>
+        `<span style="display:block;overflow:hidden"><span class="li" style="display:block">${t}</span></span>`
+      ).join('');
+      gsap.set('.li', { y: '105%' });
+      gsap.to('.li', { y: '0%', duration: 0.8, ease: 'power4.out', stagger: 0.1, delay: 0.35 });
+    })();
+
+    gsap.from('.case-hero-meta > div', { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out', stagger: 0.08, delay: 0.7 });
+
+    ['.case-intro-body', '.case-intro-right', '.case-cenario-label',
+     '.case-cenario-headline', '.case-cenario-body', '.case-desafios-eyebrow',
+     '.case-desafios-headline', '.case-resultados-eyebrow', '.case-resultados-headline',
+     '.case-resultados-body'].forEach(function(sel) {
+      gsap.from(sel, {
+        opacity: 0, y: 30, duration: 0.65, ease: 'power3.out',
+        scrollTrigger: { trigger: sel, start: 'top 88%', once: true }
+      });
+    });
+
+    gsap.from('.case-desafio-item', {
+      opacity: 0, y: 20, duration: 0.5, ease: 'power3.out', stagger: 0.08,
+      scrollTrigger: { trigger: '.case-desafios', start: 'top 80%', once: true }
+    });
+
+    gsap.utils.toArray('.case-browser').forEach(function(el) {
+      gsap.from(el, {
+        opacity: 0, y: 30, duration: 0.6, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+      });
+    });
+
+    gsap.from('.case-next-card', {
+      opacity: 0, y: 30, duration: 0.6, ease: 'power3.out', stagger: 0.12,
+      scrollTrigger: { trigger: '.case-next-grid', start: 'top 85%', once: true }
+    });
+
+    gsap.from('.case-cta > div, .case-cta-btn', {
+      opacity: 0, y: 30, duration: 0.6, ease: 'power3.out', stagger: 0.12,
+      scrollTrigger: { trigger: '.case-cta', start: 'top 85%', once: true }
+    });
+  }
+
+  /* ── PAGE TRANSITIONS ── */
+  (function () {
+    const curtain = document.getElementById('pg-curtain');
+    const logo    = curtain ? curtain.querySelector('span') : null;
+    if (!curtain) return;
+
+    gsap.timeline()
+      .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+      .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+
+    function navigate(href) {
+      lenis.stop();
+      document.body.style.overflow = 'hidden';
+      gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+      gsap.set(logo,    { opacity: 0 });
+      gsap.timeline()
+        .to(curtain, { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
+        .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
+        .add(() => { window.location.href = href; }, '+=0.15');
+    }
+
+    window.addEventListener('pageshow', e => {
+      if (!e.persisted) return;
+      gsap.set(curtain, { translateY: '-100%', pointerEvents: 'none' });
+      if (logo) gsap.set(logo, { opacity: 0 });
+      document.body.classList.remove('intro-lock');
+      document.body.style.overflow = '';
+      if (typeof lenis !== 'undefined') lenis.start();
+      if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    });
+
+    document.querySelectorAll('a[href]').forEach(a => {
+      if (a.target === '_blank') return;
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+      a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
+    });
+  })();
+</script>
+<script>
+  document.querySelectorAll('img.lqip[data-src]').forEach(img => {
+    const hi = new Image();
+    hi.onload = () => { img.src = hi.src; img.classList.add('loaded'); };
+    hi.src = img.dataset.src;
+  });
+</script>
+</body>
+</html>

@@ -42,12 +42,12 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:     #F2EFE9;
+      --bg:     #E6E5E1;
       --text:   #26251F;
       --accent: #4A5D43;
       --muted:  #6E6C60;
-      --mid:    #FAF8F4;
-      --s2:     #E1DCD0;
+      --mid:    #EEEDEA;
+      --s2:     #D3D2CC;
       --f:      'Archivo', sans-serif;
       --f-serif: 'Besley', Georgia, serif;
     }
@@ -489,6 +489,19 @@
           .to(logo,    { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
           .add(() => { window.location.href = href; }, '+=0.15');
       }
+
+
+      /* Voltar pelo navegador restaura o DOM do bfcache com a cortina ainda
+         descida, e nenhum script roda de novo — devolve ela ao estado escondido. */
+      window.addEventListener('pageshow', e => {
+        if (!e.persisted) return;
+        gsap.set(curtain, { translateY: '-100%', pointerEvents: 'none' });
+        if (logo) gsap.set(logo, { opacity: 0 });
+        document.body.classList.remove('intro-lock');
+        document.body.style.overflow = '';
+        if (typeof lenis !== 'undefined') lenis.start();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+      });
 
       document.querySelectorAll('a[href]').forEach(a => {
         if (a.target === '_blank') return;

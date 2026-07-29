@@ -47,7 +47,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:     #F2EFE9;
+      --bg:     #E6E5E1;
       --text:   #26251F;
       --muted:  #6E6C60;
       --accent: #4A5D43;
@@ -113,6 +113,12 @@
       border: none; border-top: 1px solid var(--border);
       margin-bottom: 0;
     }
+    .cases-group-label {
+      font-size: .6rem; font-weight: 700; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--accent);
+      padding: 3rem 0 1rem;
+    }
+    .cases-group:first-of-type .cases-group-label { padding-top: 2rem; }
 
     .case-item {
       display: flex; align-items: center; gap: 2rem;
@@ -260,29 +266,46 @@
   <section class="cases">
     <hr class="cases-divider">
 
-    <a class="case-item" href="/eforce">
-      <span class="case-idx">01</span>
-      <div class="case-body">
-        <h2 class="case-name">Eforce Drums</h2>
-        <span class="case-meta">Webdesign · Motion</span>
-      </div>
-      <span class="case-year">2026</span>
-      <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+      <a class="case-item" href="/eforce">
+        <span class="case-idx">01</span>
+        <div class="case-body">
+          <h2 class="case-name">Eforce Drums</h2>
+          <span class="case-meta">Webdesign · Motion</span>
+        </div>
+        <span class="case-year">2026</span>
+        <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
 
-    <a class="case-item" href="/design">
-      <span class="case-idx">02</span>
-      <div class="case-body">
-        <h2 class="case-name">Design Cases</h2>
-        <span class="case-meta">Portfólio de Design · 6 Projetos</span>
-      </div>
-      <span class="case-year">2026</span>
-      <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+      <a class="case-item" href="/design">
+        <span class="case-idx">02</span>
+        <div class="case-body">
+          <h2 class="case-name">Design Cases</h2>
+          <span class="case-meta">Portfólio de Design · 6 Projetos</span>
+        </div>
+        <span class="case-year">2026</span>
+        <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="cases-group">
+      <p class="cases-group-label">Plataforma</p>
+
+      <a class="case-item" href="/odery-erp">
+        <span class="case-idx">01</span>
+        <div class="case-body">
+          <h2 class="case-name">Odery ERP</h2>
+          <span class="case-meta">Sistema · CRM & ERP</span>
+        </div>
+        <span class="case-year">2026</span>
+        <svg class="case-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
 
   </section>
 

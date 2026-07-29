@@ -32,3 +32,6 @@ build/
 
 # === Downloads brutos ===
 /docs/drive/
+
+# === Credenciais do Sistema OS (Fase 0) ===
+/irbis-os/.secrets/
