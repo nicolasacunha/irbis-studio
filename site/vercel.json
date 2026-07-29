@@ -21,7 +21,8 @@
     { "source": "/cases-hub/eforce",       "destination": "/eforce",        "permanent": true },
     { "source": "/cases-hub/adash",        "destination": "/adash",         "permanent": true },
     { "source": "/cases-hub/design",       "destination": "/design",        "permanent": true },
-    { "source": "/cases-hub/design/:slug", "destination": "/design/:slug",  "permanent": true }
+    { "source": "/cases-hub/design/:slug", "destination": "/design/:slug",  "permanent": true },
+    { "source": "/cases-hub/odery-erp",    "destination": "/odery-erp",     "permanent": true }
   ],
   "rewrites": [
     { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
@@ -81,6 +82,8 @@
     { "source": "/en/design",           "destination": "/en/design.html" },
     { "source": "/portal-acunha/(.*)", "destination": "/portal-acunha/$1" },
     { "source": "/portal-acunha",      "destination": "/portal-acunha/index.html" },
-    { "source": "/portal-casa-paes",   "destination": "/p/casa-paes.html" }
+    { "source": "/portal-casa-paes",   "destination": "/p/casa-paes.html" },
+    { "source": "/odery-erp/(.*)",     "destination": "/cases-hub/odery-erp/$1" },
+    { "source": "/odery-erp",          "destination": "/cases-hub/odery-erp/index.html" }
   ]
 }
