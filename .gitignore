@@ -4,6 +4,9 @@
 .vercel
 .windsurf/
 .claude/worktrees/
+# temporários deixados por sync/FUSE (Drive, iCloud) ao remover arquivo aberto
+.fuse_hidden*
+**/.fuse_hidden*
 
 # === Dependências e builds ===
 node_modules/
