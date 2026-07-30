@@ -34,30 +34,34 @@ conciliação. Esse conector fica ignorado, sem assinatura.
 
 **Painel web (Fase 3, construído em 28/jul depois de aprovação explícita "vercel vc consegue
 fazer q eu sei"):** Next.js 16 + Supabase Auth (magic link), deployado em produção na Vercel:
-**https://irbis-os-painel.vercel.app**. Código em `irbis-os/painel/`. Login travado por dois
-mecanismos: usuário pré-criado no Supabase Auth só pra `nicolas.cunhan@aluno.lsb.com.br`, e o
-`proxy.ts` (middleware) desloga na hora qualquer sessão com e-mail diferente. As 6 telas
-(Aprovações, Pipeline, Semana, Travas, Financeiro, Carteira) leem o Supabase real — vão
-aparecer vazias até a migração do CRM. Aprovações lê/escreve na tabela `aprovacoes` de
-verdade (aprovar/editar/descartar já funciona). Testado ponta a ponta: login por magic link
-mandou o e-mail de verdade pra sua caixa de entrada.
+**https://os.irbis.com.br** (domínio próprio, projeto `irbis-os-painel` na Vercel — mesma
+conta/domínio do irbis.com.br, projeto separado do site estático; URL antiga
+`irbis-os-painel.vercel.app` continua funcionando). Código em `irbis-os/painel/`. Login
+travado por dois mecanismos: usuário pré-criado no Supabase Auth só pra
+`nicolas.cunhan@aluno.lsb.com.br`, e o `proxy.ts` (middleware) desloga na hora qualquer
+sessão com e-mail diferente. 7 telas: Aprovações, Pipeline, **Projetos (Kanban nativo)**,
+Semana, Travas, Financeiro, Carteira — todas lendo o Supabase real com os 5 leads migrados.
+Aprovações lê/escreve em `aprovacoes` de verdade. Testado ponta a ponta, inclusive
+`/pos-reuniao` com lead fake (criado e apagado na mesma sessão).
+
+**Redesign do painel em andamento (29/jul):** aplicando a identidade real da IRBIS (modo
+Papel, Besley+Archivo, vocabulário de cartão do site) — spec em
+`docs/superpowers/specs/2026-07-28-painel-sistema-os-redesign-design.md`. Implementação tela
+por tela, com aprovação no navegador a cada uma.
 
 **Discord:** removido do escopo a pedido do Nicolas (28/jul) — nem os 5 webhooks da Fase 0
-nem o bot com threads da Fase 3 vão ser construídos. O painel web passa a ser a superfície
-principal de aprovação.
+nem o bot com threads da Fase 3 vão ser construídos.
 
-**Trello (Fase 3):** Nicolas confirmou que quer o espelho construído, mas não passei ainda
-por credenciais — sem board/API key do Trello eu não tenho como começar. Fica como próximo
-passo assim que ele mandar.
+**Trello:** substituído por completo pelo board Kanban nativo em `/projetos` — Nicolas não
+quis link externo ("quero as mesmas funcionalidades do trello mas no meu OS"). Sem segunda
+fonte de verdade: mover um card no painel já escreve direto no Supabase.
 
 ## O que ficou pendente, e o que cada pendência trava
 
 | Pendência | Trava | Quem resolve |
 |---|---|---|
-| Migrar CRM IRBIS (Notion) → Supabase | todo o sistema (painel incluso) opera sobre banco vazio até isso acontecer | Nicolas decide quando |
-| Conectar Google Calendar nesta sessão do Claude | `irbis-vigia-reunioes` inteira (dossiê T-24h, confirmação, reminder) | Nicolas, via configurações de conector |
-| Credenciais do Trello (board + API key) | espelho do Trello (Fase 3) não pode começar sem isso | Nicolas manda |
-| Domínio próprio pro painel (opcional) | hoje é `irbis-os-painel.vercel.app`, funcional mas genérico | Nicolas decide se quer domínio custom |
+| ~~Conectar Google Calendar~~ | **RESOLVIDO 28/jul à noite** — conector ativo e testado (`list_calendars` retornou a agenda da conta operacional). `irbis-vigia-reunioes` está destravada; falta só agendar a rotina recorrente dela quando o Nicolas quiser | feito |
+| Redesign visual do painel | telas ainda no dark mode genérico até a implementação tela-a-tela terminar | em andamento |
 
 ## Rotina de manutenção (spec pediu, ainda não agendada)
 
