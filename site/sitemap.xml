@@ -378,4 +378,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-erp"/>
   </url>
 
+  <url>
+    <loc>https://irbis.com.br/claude-skills</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/claude-skills"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/claude-skills"/>
+  </url>
+
 </urlset>

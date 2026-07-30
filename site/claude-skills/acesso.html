@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Suas 5 Skills do Claude | IRBIS</title>
+  <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
+  <style>
+    :root {
+      --bg: #E6E5E1;
+      --text: #26251F;
+      --muted: #6E6C60;
+      --accent: #4A5D43;
+      --s1: #EEEDEA;
+      --s2: #D3D2CC;
+      --f: 'Archivo', sans-serif;
+      --f-serif: 'Besley', Georgia, serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: var(--bg); color: var(--text); font-family: var(--f); -webkit-font-smoothing: antialiased; color-scheme: light; }
+    body { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0 2.5rem; border-bottom: 1px solid var(--s2); margin-bottom: 2.5rem; }
+    .nav-logo { font-family: var(--f-serif); font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; text-decoration: none; color: var(--text); }
+    .nav-cta { font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--text); border: 1px solid var(--s2); padding: .55rem .9rem; text-decoration: none; transition: border-color .2s; white-space: nowrap; }
+    .nav-cta:hover { border-color: var(--accent); }
+
+    .meta { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+    h1 { font-family: var(--f-serif); font-weight: 700; letter-spacing: -.015em; line-height: 1.15; font-size: clamp(1.6rem, 6.5vw, 2.3rem); margin-bottom: 1rem; }
+    .intro { font-size: .95rem; font-weight: 300; color: rgba(38,37,31,.82); line-height: 1.75; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--s2); }
+
+    .all-zip { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: #26251F; color: #F2EFE9; padding: 1.1rem 1.25rem; margin-bottom: 2.5rem; }
+    .all-zip span { font-size: .85rem; font-weight: 500; }
+    .all-zip a { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #F2EFE9; border-bottom: 1px solid rgba(242,239,233,.4); text-decoration: none; white-space: nowrap; }
+    .all-zip a:hover { border-color: #F2EFE9; }
+
+    .skill { margin: 1.75rem 0; padding-bottom: 1.75rem; border-bottom: 1px solid var(--s2); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem .75rem; }
+    .skill:last-of-type { border-bottom: none; }
+    .skill-head { flex: 1 1 auto; min-width: 200px; }
+    h2 { font-family: var(--f-serif); font-weight: 700; letter-spacing: -.015em; font-size: 1.1rem; margin-bottom: .4rem; display: flex; align-items: baseline; gap: .55rem; }
+    h2 span.n { color: var(--accent); font-size: .75rem; font-weight: 700; }
+    h2 code { font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 1rem; font-weight: 600; letter-spacing: -.01em; }
+    .skill p { font-size: .85rem; font-weight: 300; line-height: 1.65; color: rgba(38,37,31,.85); }
+    .skill-dl { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text); border-bottom: 1px solid var(--s2); text-decoration: none; padding-bottom: 2px; white-space: nowrap; }
+    .skill-dl:hover { border-color: var(--accent); color: var(--accent); }
+    .skill-dl.manual { color: var(--muted); border-bottom-style: dashed; cursor: default; }
+
+    h3.tut-title { font-family: var(--f-serif); font-weight: 700; letter-spacing: -.015em; font-size: 1.25rem; margin: 3rem 0 1.5rem; }
+    .method { margin-bottom: 1.5rem; }
+    .method h4 { font-size: .78rem; font-weight: 700; letter-spacing: .04em; margin-bottom: .35rem; }
+    .method h4 span { color: var(--accent); }
+    .method p { font-size: .85rem; font-weight: 300; line-height: 1.65; color: rgba(38,37,31,.85); }
+    .method a { color: var(--text); border-bottom: 1px solid var(--s2); text-decoration: none; }
+    .method a:hover { border-color: var(--accent); }
+
+    .credit { font-size: .78rem; color: var(--muted); margin: 2.5rem 0; line-height: 1.7; }
+    .credit a { color: var(--text); border-bottom: 1px solid var(--s2); text-decoration: none; }
+    .credit a:hover { border-color: var(--accent); }
+
+    .cta-box { background: var(--s1); border: 1px solid var(--s2); padding: 1.75rem 1.25rem; margin: 2.5rem 0 0; }
+    .cta-box h3 { font-family: var(--f-serif); font-weight: 700; letter-spacing: -.015em; font-size: 1.1rem; margin-bottom: .6rem; }
+    .cta-box p { font-size: .85rem; font-weight: 300; line-height: 1.65; color: rgba(38,37,31,.85); margin-bottom: 1.1rem; }
+    .cta-btn { display: inline-block; background: #26251F; color: #F2EFE9; font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: .8rem 1.4rem; text-decoration: none; }
+    .cta-btn:hover { background: var(--accent); }
+
+    footer { border-top: 1px solid var(--s2); padding-top: 2rem; margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+    footer a { font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (min-width: 640px) {
+      body { padding: 2.5rem 1.5rem 6rem; }
+      nav { padding: 1.5rem 0 3rem; }
+      .skill { flex-wrap: nowrap; }
+    }
+  </style>
+  <!-- Meta Pixel: Lead -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '26926853710268489');
+  fbq('track', 'PageView');
+  fbq('track', 'Lead');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=26926853710268489&ev=Lead&noscript=1"
+  /></noscript>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VKHL68G50M');
+    gtag('event', 'generate_lead', { event_category: 'claude_skills_download' });
+  </script>
+  <script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="https://irbis.com.br" class="nav-logo" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.4em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS.</a>
+  <a href="https://irbis.com.br/call" class="nav-cta">Falar com a IRBIS</a>
+</nav>
+
+<main>
+
+  <p class="meta">Acesso liberado</p>
+  <h1>As 5 skills, prontas pra baixar</h1>
+  <div class="intro">
+    <p>Baixe cada uma direto ou pegue o pacote completo. Depois é só instalar no Claude com um dos três métodos abaixo.</p>
+  </div>
+
+  <div class="all-zip">
+    <span>Pacote com as 5 skills</span>
+    <a href="https://www.novitckii.com/lib/content-skills/content-skills-all.zip" target="_blank" rel="noopener">Baixar tudo (.zip) →</a>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <h2><span class="n">01</span> <code>dumbify</code></h2>
+      <p>Nível de leitura de 8ª série, sem perder a ideia.</p>
+    </div>
+    <a class="skill-dl" href="https://www.novitckii.com/lib/content-skills/dumbify.zip" target="_blank" rel="noopener">dumbify.zip</a>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <h2><span class="n">02</span> <code>storytelling</code></h2>
+      <p>Estrutura narrativa que segura a atenção do início ao fim.</p>
+    </div>
+    <a class="skill-dl" href="https://www.novitckii.com/lib/content-skills/storytelling.zip" target="_blank" rel="noopener">storytelling.zip</a>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <h2><span class="n">03</span> <code>viral-hooks</code></h2>
+      <p>Audita o gancho contra os quatro motivos que fazem alguém parar de ler.</p>
+    </div>
+    <a class="skill-dl" href="https://www.novitckii.com/lib/content-skills/viral-hooks.zip" target="_blank" rel="noopener">viral-hooks.zip</a>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <h2><span class="n">04</span> <code>anti-ai-writing</code></h2>
+      <p>Remove as marcas que entregam texto feito por IA.</p>
+    </div>
+    <a class="skill-dl" href="https://www.novitckii.com/lib/content-skills/anti-ai-writing.zip" target="_blank" rel="noopener">anti-ai-writing.zip</a>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <h2><span class="n">05</span> <code>voice-dna</code></h2>
+      <p>Não vem em .zip: você monta com o prompt incluso no repositório, usando ~20 transcrições reais suas.</p>
+    </div>
+    <span class="skill-dl manual">Montagem manual</span>
+  </div>
+
+  <h3 class="tut-title">Como instalar</h3>
+
+  <div class="method">
+    <h4><span>01</span> Copiar e colar</h4>
+    <p>Abra o arquivo do skill, copie o conteúdo e cole direto num chat do Claude. Funciona até no plano gratuito.</p>
+  </div>
+  <div class="method">
+    <h4><span>02</span> Upload único</h4>
+    <p>Suba o arquivo em Configurações → Skills. Exige plano Pro ou Max com execução de código habilitada.</p>
+  </div>
+  <div class="method">
+    <h4><span>03</span> Claude Code</h4>
+    <p>Instale via linha de comando com o script do repositório: veja o passo a passo no <a href="https://github.com/artemnovitckii/content-skills" target="_blank" rel="noopener">README do GitHub</a>.</p>
+  </div>
+
+  <p class="credit">Skills desenvolvidas por <a href="https://www.novitckii.com/about/" target="_blank" rel="noopener">Artem Novitckii</a>, código aberto sob licença MIT · <a href="https://github.com/artemnovitckii/content-skills" target="_blank" rel="noopener">repositório no GitHub</a>.</p>
+
+  <div class="cta-box">
+    <h3>Quer isso rodando no seu negócio, não só no texto?</h3>
+    <p>A IRBIS constrói sites e sistemas com IA acoplados na operação de negócios da economia real. Se o gargalo não é a escrita, mas o site ou o atendimento, fala com a gente.</p>
+    <a href="https://irbis.com.br/call" class="cta-btn">Falar com a IRBIS →</a>
+  </div>
+
+</main>
+
+<footer>
+  <a href="https://irbis.com.br">← Voltar para irbis.com.br</a>
+  <a href="https://irbis.com.br/claude-skills">Ver a página de novo</a>
+</footer>
+
+</body>
+</html>

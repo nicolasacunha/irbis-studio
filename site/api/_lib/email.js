@@ -111,6 +111,22 @@ async function confirmLead(f, info) {
   });
 }
 
+/* Notifica o Nicolas de um download de lead magnet (form do /claude-skills). */
+async function notifyContentLead(f) {
+  var html = '<div style="font-family:system-ui,Arial,sans-serif;max-width:520px">' +
+    '<p style="font-size:15px;color:#111">Novo download: 5 Claude Skills.</p>' +
+    '<table style="border-collapse:collapse;font-size:14px">' +
+    '<tr><td style="padding:6px 14px 6px 0;color:#8A8A93;vertical-align:top;white-space:nowrap">Nome</td><td style="padding:6px 0;color:#111">' + esc(f.nome) + '</td></tr>' +
+    '<tr><td style="padding:6px 14px 6px 0;color:#8A8A93;vertical-align:top;white-space:nowrap">Email</td><td style="padding:6px 0;color:#111">' + esc(f.email) + '</td></tr>' +
+    '</table></div>';
+  await transport().sendMail({
+    from: FROM(),
+    to: OWNER(),
+    subject: 'Novo download: Claude Skills — ' + f.nome,
+    html: html,
+  });
+}
+
 function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
@@ -118,4 +134,4 @@ function esc(s) {
 }
 function firstName(n) { return String(n || '').trim().split(/\s+/)[0] || ''; }
 
-module.exports = { notifyOwner: notifyOwner, notifyInbound: notifyInbound, confirmLead: confirmLead };
+module.exports = { notifyOwner: notifyOwner, notifyInbound: notifyInbound, confirmLead: confirmLead, notifyContentLead: notifyContentLead };
