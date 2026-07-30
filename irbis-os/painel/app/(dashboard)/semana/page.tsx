@@ -1,5 +1,6 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 import { FronteiraDados } from "@/lib/fronteira";
+import { PageTitle } from "@/lib/page-title";
 
 export const dynamic = "force-dynamic";
 
@@ -31,52 +32,89 @@ export default async function SemanaPage() {
 
   const erro = marcos.error || financeiro.error || propostas.error;
 
-  type Item = { data: string; texto: string };
+  type Item = { data: string; tipo: string; texto: string };
   const itens: Item[] = [
     ...(marcos.data ?? []).map((m) => {
       const proj = m.projetos as unknown as { nome: string } | { nome: string }[] | null;
       const nomeProj = Array.isArray(proj) ? proj[0]?.nome : proj?.nome;
-      return { data: m.data_planejada!, texto: `marco "${m.nome}" · ${nomeProj ?? "projeto"}` };
+      return {
+        data: m.data_planejada!,
+        tipo: "marco",
+        texto: `${m.nome} · ${nomeProj ?? "projeto"}`,
+      };
     }),
     ...(financeiro.data ?? []).map((f) => {
-      const proj = f.projetos as unknown as { nome: string; pessoas: { nome: string } | { nome: string }[] | null } | { nome: string; pessoas: { nome: string } | { nome: string }[] | null }[] | null;
+      const proj = f.projetos as unknown as
+        | { nome: string; pessoas: { nome: string } | { nome: string }[] | null }
+        | { nome: string; pessoas: { nome: string } | { nome: string }[] | null }[]
+        | null;
       const p = Array.isArray(proj) ? proj[0] : proj;
       const pessoas = p?.pessoas;
       const nomeCliente = Array.isArray(pessoas) ? pessoas[0]?.nome : pessoas?.nome;
-      return { data: f.vencimento, texto: `parcela R$${f.valor} · ${nomeCliente ?? "cliente"}` };
+      return {
+        data: f.vencimento,
+        tipo: "parcela",
+        texto: `R$ ${Number(f.valor).toLocaleString("pt-BR")} · ${nomeCliente ?? "cliente"}`,
+      };
     }),
     ...(propostas.data ?? []).map((p) => {
       const pessoas = p.pessoas as unknown as { nome: string } | { nome: string }[] | null;
       const nome = Array.isArray(pessoas) ? pessoas[0]?.nome : pessoas?.nome;
-      return { data: p.validade!, texto: `validade da proposta · ${nome ?? "lead"}` };
+      return { data: p.validade!, tipo: "validade", texto: `proposta · ${nome ?? "lead"}` };
     }),
   ].sort((a, b) => a.data.localeCompare(b.data));
 
   return (
     <div>
+      <PageTitle
+        titulo="Semana"
+        nota={erro ? undefined : `${itens.length} ${itens.length === 1 ? "item" : "itens"} em 7 dias`}
+      />
+
       <FronteiraDados
         leituras={[
           {
-            fonte: "Supabase — marcos, financeiro, propostas",
+            fonte: "supabase/marcos+financeiro+propostas",
             status: erro ? "falhou" : "lido",
-            detalhe: erro ? erro.message : `${itens.length} itens nos próximos 7 dias`,
+            detalhe: erro ? erro.message : `${itens.length}`,
           },
         ]}
       />
-      <h1 className="mb-4 text-base font-medium text-neutral-100">O que vence essa semana</h1>
-      {erro && <p className="text-sm text-red-400">estou cego: {erro.message}</p>}
+
+      {erro && <p className="text-[15px] text-alerta">estou cego: {erro.message}</p>}
       {!erro && itens.length === 0 && (
-        <p className="text-sm text-neutral-500">nada vencendo nos próximos 7 dias, ou banco ainda vazio.</p>
+        <div className="rounded-2xl border border-dashed border-superficie-2 px-6 py-16 text-center">
+          <div className="mx-auto mb-4 h-2.5 w-2.5 rounded-full bg-salvia" />
+          <p className="text-[15px] text-suave">nada vencendo nos próximos 7 dias.</p>
+        </div>
       )}
-      <div className="space-y-2">
-        {itens.map((item, i) => (
-          <div key={i} className="flex gap-3 rounded-md border border-neutral-800 bg-neutral-900/40 p-3 text-sm">
-            <span className="w-16 shrink-0 text-neutral-500">
-              {new Date(item.data + "T00:00:00").toLocaleDateString("pt-BR", { weekday: "short" })}
-            </span>
-            <span className="text-neutral-200">{item.texto}</span>
-          </div>
-        ))}
+
+      <div className="space-y-2.5">
+        {itens.map((item, i) => {
+          const d = new Date(item.data + "T00:00:00");
+          return (
+            <div
+              key={i}
+              className="rise flex items-center gap-4 rounded-xl border border-superficie-2 bg-superficie px-4 py-3.5"
+              style={{ animationDelay: `${i * 50}ms` }}
+            >
+              <div className="w-14 shrink-0 text-center">
+                <div className="font-mono text-[11px] uppercase text-suave">
+                  {d.toLocaleDateString("pt-BR", { weekday: "short" }).replace(".", "")}
+                </div>
+                <div className="font-mono text-[20px] font-medium tabular-nums leading-tight">
+                  {d.getDate()}
+                </div>
+              </div>
+              <div className="min-w-0">
+                <div className="truncate text-[15px] font-medium tracking-tight">{item.texto}</div>
+                <div className="mt-0.5 font-mono text-[11px] uppercase tracking-wide text-suave">
+                  {item.tipo}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
