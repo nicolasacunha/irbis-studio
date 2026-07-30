@@ -1,36 +1,50 @@
-import Link from "next/link";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { LogoutButton } from "./logout-button";
+import { NavLinks } from "./nav-links";
 
-const NAV = [
-  { href: "/aprovacoes", label: "Aprovações" },
-  { href: "/pipeline", label: "Pipeline" },
-  { href: "/semana", label: "Semana" },
-  { href: "/travas", label: "Travas" },
-  { href: "/financeiro", label: "Financeiro" },
-  { href: "/carteira", label: "Carteira" },
-];
+export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
+  const supabase = createAdminClient();
+  const { count } = await supabase
+    .from("aprovacoes")
+    .select("id", { count: "exact", head: true })
+    .eq("status", "parado");
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+  const hoje = new Date().toLocaleDateString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+  });
+
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
-      <header className="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/95 backdrop-blur">
-        <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
-          <span className="text-sm font-medium text-neutral-300">Sistema OS · IRBIS</span>
+    <div className="grid-paper min-h-screen bg-papel text-tinta lg:grid lg:grid-cols-[13.5rem_1fr]">
+      {/* ── sidebar (desktop) ─────────────────────────────── */}
+      <aside className="sticky top-0 hidden h-screen flex-col border-r border-superficie-2 bg-superficie/80 px-4 py-5 backdrop-blur lg:flex">
+        <div className="mb-8 px-2">
+          <div className="font-serif text-[13px] font-extrabold tracking-[0.18em]">
+            SISTEMA&nbsp;OS
+          </div>
+          <div className="mt-0.5 text-[11px] uppercase tracking-[0.14em] text-suave">irbis</div>
+        </div>
+        <NavLinks aprovacoesPendentes={count ?? 0} />
+        <div className="mt-auto space-y-2 px-2">
+          <div className="font-mono text-[10px] uppercase tracking-wide text-suave">{hoje}</div>
           <LogoutButton />
         </div>
-        <nav className="mx-auto flex max-w-3xl gap-1 overflow-x-auto px-4 pb-2 text-sm">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="whitespace-nowrap rounded-md px-2.5 py-1 text-neutral-400 hover:bg-neutral-900 hover:text-neutral-100"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      </header>
-      <main className="mx-auto max-w-3xl px-4 py-6">{children}</main>
+      </aside>
+
+      {/* ── chrome mobile ─────────────────────────────────── */}
+      <div className="sticky top-0 z-10 border-b border-superficie-2 bg-papel/90 backdrop-blur lg:hidden">
+        <div className="flex items-center justify-between px-4 pb-1 pt-3">
+          <span className="font-serif text-[12px] font-extrabold tracking-[0.18em]">
+            SISTEMA&nbsp;OS <span className="font-sans font-normal text-suave">· irbis</span>
+          </span>
+          <LogoutButton />
+        </div>
+        <NavLinks aprovacoesPendentes={count ?? 0} mobile />
+      </div>
+
+      <main className="w-full px-4 py-6 lg:px-10 lg:py-8">{children}</main>
     </div>
   );
 }

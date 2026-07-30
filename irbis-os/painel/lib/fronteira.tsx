@@ -4,31 +4,38 @@ export type LeituraFonte = {
   detalhe: string;
 };
 
+/* Barra de status de sistema: um dot por fonte, verde sálvia = lido, terracota = cego.
+   É chrome, não prosa — lê-se pelos dots; o detalhe fica em mono, discreto. */
 export function FronteiraDados({ leituras }: { leituras: LeituraFonte[] }) {
-  const hora = new Date().toLocaleString("pt-BR", {
+  const hora = new Date().toLocaleTimeString("pt-BR", {
     timeZone: "America/Sao_Paulo",
-    dateStyle: "short",
-    timeStyle: "short",
+    hour: "2-digit",
+    minute: "2-digit",
   });
   const algumaFalhou = leituras.some((l) => l.status === "falhou");
 
   return (
-    <div className="mb-6 rounded-md border border-neutral-800 bg-neutral-900/50 px-3 py-2 text-xs">
-      <div className="mb-1 text-neutral-500">FRONTEIRA DOS DADOS · {hora}</div>
-      <div className="flex flex-col gap-0.5">
+    <div className="mb-6 rounded-lg border border-superficie-2 bg-superficie/70 px-3 py-2">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11px] text-suave">
+        <span className="uppercase tracking-[0.1em]">fronteira</span>
         {leituras.map((l) => (
-          <div
-            key={l.fonte}
-            className={l.status === "lido" ? "text-neutral-400" : "text-red-400"}
-          >
-            {l.status === "lido" ? "✅ LIDO" : "❌ FALHOU"} {l.fonte} — {l.detalhe}
-          </div>
+          <span key={l.fonte} className="inline-flex items-center gap-1.5">
+            <span
+              className={`h-1.5 w-1.5 rounded-full ${
+                l.status === "falhou" ? "animate-pulse bg-alerta" : "bg-salvia"
+              }`}
+            />
+            <span className={l.status === "falhou" ? "text-alerta" : ""}>
+              {l.fonte} · {l.detalhe}
+            </span>
+          </span>
         ))}
+        <span className="ml-auto tabular-nums">{hora}</span>
       </div>
       {algumaFalhou && (
-        <div className="mt-1 text-red-400">
-          consequência: os dados dependentes da fonte que falhou estão cegos, não vazios.
-        </div>
+        <p className="mt-1 font-mono text-[11px] text-alerta">
+          o que depende da fonte cega não é vazio: é desconhecido.
+        </p>
       )}
     </div>
   );

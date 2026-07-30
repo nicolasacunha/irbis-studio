@@ -13,7 +13,7 @@ export function LogoutButton() {
         router.push("/login");
         router.refresh();
       }}
-      className="text-xs text-neutral-500 hover:text-neutral-300"
+      className="text-xs text-suave transition-colors hover:text-tinta"
     >
       sair
     </button>

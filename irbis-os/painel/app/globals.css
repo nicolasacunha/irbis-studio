@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Fontes reais do site irbis.com.br, self-hosted (copiadas de site/Design/fonts/). */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/archivo-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Besley";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/fonts/besley-latin.woff2") format("woff2");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Tokens da identidade D2 Grafite & Sálvia, modo Papel — extraídos de site/index.html.
+   Alerta: terracota da direção Cobre & Osso (#B4552D), não é vermelho Tailwind. */
+@theme {
+  --color-papel: #e6e5e1;
+  --color-superficie: #eeedea;
+  --color-superficie-2: #d3d2cc;
+  --color-tinta: #26251f;
+  --color-suave: #6e6c60;
+  --color-salvia: #4a5d43;
+  --color-alerta: #b4552d;
+  --font-sans: "Archivo", sans-serif;
+  --font-serif: "Besley", Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum";
+}
+
+::selection {
+  background: var(--color-salvia);
+  color: var(--color-papel);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-salvia);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* papel milimetrado: textura de fundo do espaço de trabalho */
+.grid-paper {
+  background-image: radial-gradient(color-mix(in srgb, var(--color-tinta) 7%, transparent) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* nav horizontal rola no mobile sem mostrar a barra */
+.nav-scroll {
+  scrollbar-width: none;
+}
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* entrada escalonada dos itens de lista */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise 0.35s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* modal do card de projeto */
+@keyframes veu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.modal-veu {
+  animation: veu 0.18s ease-out both;
+}
+.modal-painel {
+  animation: surgir 0.32s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}
+
+/* tecla de atalho — só aparece em dispositivo com mouse/teclado */
+.kbd {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.15rem;
+    height: 1.15rem;
+    padding: 0 0.25rem;
+    border-radius: 4px;
+    border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    line-height: 1;
+    opacity: 0.75;
+  }
 }
