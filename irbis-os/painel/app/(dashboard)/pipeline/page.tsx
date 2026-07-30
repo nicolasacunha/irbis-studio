@@ -1,5 +1,7 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 import { FronteiraDados } from "@/lib/fronteira";
+import { PageTitle } from "@/lib/page-title";
+import { PipelineView, type CardPipeline } from "./pipeline-view";
 
 export const dynamic = "force-dynamic";
 
@@ -13,82 +15,74 @@ const TETO_POR_ESTAGIO: Record<string, number> = {
 
 function diasDesde(data: string | null) {
   if (!data) return null;
-  const ms = Date.now() - new Date(data).getTime();
-  return Math.floor(ms / 86_400_000);
+  return Math.floor((Date.now() - new Date(data).getTime()) / 86_400_000);
 }
 
 export default async function PipelinePage() {
   const supabase = createAdminClient();
   const { data, error } = await supabase
     .from("pipeline")
-    .select("id, estagio, valor_min, valor_max, temperatura, proximo_passo, ultimo_contato_real, degrau_escada, pessoas(nome)")
-    .order("estagio");
+    .select(
+      "id, pessoa_id, estagio, valor_min, valor_max, temperatura, tipo_projeto, proximo_passo, data_proximo_toque, ultimo_contato_real, pessoas(nome, empresa, email, telefone)"
+    );
 
-  const porEstagio = new Map<string, typeof data>();
-  data?.forEach((row) => {
-    const lista = porEstagio.get(row.estagio) ?? [];
-    lista.push(row);
-    porEstagio.set(row.estagio, lista as never);
+  type Pessoa = { nome: string; empresa: string | null; email: string | null; telefone: string | null };
+
+  const cards: CardPipeline[] = (data ?? []).map((c) => {
+    const pessoas = c.pessoas as unknown as Pessoa | Pessoa[] | null;
+    const p = Array.isArray(pessoas) ? pessoas[0] : pessoas;
+    const dias = diasDesde(c.ultimo_contato_real);
+    const teto = TETO_POR_ESTAGIO[c.estagio];
+    return {
+      id: c.id,
+      pessoaId: c.pessoa_id,
+      estagio: c.estagio,
+      valor_min: c.valor_min,
+      valor_max: c.valor_max,
+      temperatura: c.temperatura,
+      tipo_projeto: c.tipo_projeto,
+      proximo_passo: c.proximo_passo,
+      data_proximo_toque: c.data_proximo_toque,
+      dias,
+      parado: dias !== null && teto !== undefined && dias > teto,
+      nome: p?.nome ?? "sem nome",
+      empresa: p?.empresa ?? null,
+      email: p?.email ?? null,
+      telefone: p?.telefone ?? null,
+    };
   });
+
+  const parados = cards.filter((c) => c.parado).length;
 
   return (
     <div>
+      <PageTitle
+        titulo="Pipeline"
+        nota={
+          error
+            ? undefined
+            : `${cards.length} card${cards.length === 1 ? "" : "s"}${parados > 0 ? ` · ${parados} além do teto` : ""}`
+        }
+      />
+
       <FronteiraDados
         leituras={[
           {
-            fonte: "Supabase — pipeline",
+            fonte: "supabase/pipeline",
             status: error ? "falhou" : "lido",
-            detalhe: error ? error.message : `${data?.length ?? 0} cards`,
+            detalhe: error ? error.message : `${cards.length}`,
           },
         ]}
       />
-      <h1 className="mb-4 text-base font-medium text-neutral-100">Funil</h1>
-      {error && <p className="text-sm text-red-400">estou cego: {error.message}</p>}
-      {!error && (data?.length ?? 0) === 0 && (
-        <p className="text-sm text-neutral-500">
-          pipeline vazio — migração do CRM (Notion) ainda pendente.
-        </p>
-      )}
-      <div className="space-y-6">
-        {Array.from(porEstagio.entries()).map(([estagio, cards]) => (
-          <div key={estagio}>
-            <h2 className="mb-2 text-sm font-medium text-neutral-300">
-              {estagio} · {cards?.length ?? 0}
-            </h2>
-            <div className="space-y-2">
-              {cards?.map((c) => {
-                const pessoas = c.pessoas as unknown as { nome: string } | { nome: string }[] | null;
-                const nome = Array.isArray(pessoas) ? pessoas[0]?.nome : pessoas?.nome;
-                const dias = diasDesde(c.ultimo_contato_real);
-                const teto = TETO_POR_ESTAGIO[estagio];
-                const parado = dias !== null && teto !== undefined && dias > teto;
-                return (
-                  <div
-                    key={c.id}
-                    className={`rounded-md border p-3 text-sm ${
-                      parado ? "border-red-900 bg-red-950/30" : "border-neutral-800 bg-neutral-900/40"
-                    }`}
-                  >
-                    <div className="flex justify-between text-neutral-200">
-                      <span>{nome ?? "sem nome"}</span>
-                      <span className="text-neutral-500">
-                        {c.valor_min ? `R$${c.valor_min}-${c.valor_max}` : "faixa não definida"}
-                      </span>
-                    </div>
-                    <div className="mt-1 text-xs text-neutral-500">
-                      {dias === null ? "sem contato registrado" : `${dias}d desde o último contato (cobertos: e-mail, LinkedIn · cegos: WhatsApp, telefone)`}
-                      {parado && " · além do teto do estágio"}
-                    </div>
-                    <div className="mt-1 text-xs text-neutral-600">
-                      próximo passo: {c.proximo_passo}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </div>
+
+      {error && <p className="text-[15px] text-alerta">estou cego: {error.message}</p>}
+      {!error && cards.length === 0 && <p className="text-[15px] text-suave">pipeline vazio.</p>}
+      {!error && cards.length > 0 && <PipelineView cards={cards} />}
+
+      <p className="mt-6 text-[11px] text-suave">
+        contagem de dias cobre e-mail e LinkedIn · WhatsApp e telefone são canais cegos, entram
+        só via /registrar
+      </p>
     </div>
   );
 }
