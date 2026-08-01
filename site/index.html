@@ -196,18 +196,18 @@
           },
           {
             "@type": "Question",
-            "name": "O que é um sistema com IA, na prática?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Do WhatsApp ao ERP: a IA entra na operação do seu negócio, não só no atendimento. Pode ser um CRM que cruza com seu sistema de gestão, uma triagem de cliente quente, um catálogo integrado. Você define onde ela atua, com você no controle do que sai." }
+            "name": "O que são Soluções de IA e Plataformas de Gestão, na prática?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Soluções de IA: atendimento automatizado, triagem de cliente quente, orçamento pelo WhatsApp. Plataformas de Gestão: CRM, ERP, catálogo integrado num sistema só. Você define onde a IA atua, com você no controle do que sai." }
           },
           {
             "@type": "Question",
             "name": "Quanto tempo leva um projeto?",
-            "acceptedAnswer": { "@type": "Answer", "text": "O escopo define o prazo. Landing pages saem em 1–2 semanas. Sites institucionais, em 2–3 semanas. Sistemas com IA, a primeira conversa define uma estimativa real." }
+            "acceptedAnswer": { "@type": "Answer", "text": "O escopo define o prazo. Landing pages saem em 1–2 semanas. Sites institucionais, em 2–3 semanas. Soluções de IA e Plataformas de Gestão, a primeira conversa define uma estimativa real." }
           },
           {
             "@type": "Question",
             "name": "Quanto custa um projeto na IRBIS?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. Sistemas com IA: o escopo sai do diagnóstico, na primeira conversa. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. Soluções de IA e Plataformas de Gestão: o escopo sai do diagnóstico, na primeira conversa. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura." }
           },
           {
             "@type": "Question",
@@ -245,7 +245,7 @@
   --sp-md:  1.5rem;
   --sp-lg:  2.5rem;
   --sp-xl:  4rem;
-  --sp-2xl: 6rem;
+  --sp-2xl: 5rem;
 
   --ease-out:     cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out:  cubic-bezier(0.77, 0, 0.175, 1);
@@ -270,8 +270,8 @@ a { text-decoration: none; color: inherit; touch-action: manipulation; }
 ul { list-style: none; }
 button { font-family: var(--f); cursor: none; border: none; background: none; touch-action: manipulation; }
 
-#cases, #horizontal-section, #como-opero, #faq, #contato { scroll-margin-top: 5rem; }
-#tese, #cases, #prova, #como-opero, #faq, #contato, footer {
+#cases, #horizontal-section, #faq, #contato { scroll-margin-top: 5rem; }
+#tese, #cases, #prova, #faq, #contato, footer {
   position: relative;
   z-index: 2;
   background: var(--bg);
@@ -629,13 +629,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   gap: var(--sp-md);
 }
 .tese-half:first-child { padding-left: 0; }
-.tese-label {
-  font-size: .6rem;
-  font-weight: 700;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
 .tese-frase {
   font-family: var(--f-serif);
   font-size: clamp(1.6rem, 3.2vw, 2.8rem);
@@ -845,21 +838,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   text-transform: uppercase;
   color: var(--accent);
 }
-.prova-fatos {
-  margin-top: var(--sp-xl);
-  padding-top: var(--sp-md);
-  border-top: 1px solid var(--s2);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: .9rem 2rem;
-  font-size: .6rem;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.pdot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
 /* ================================================================
    SERVIÇOS — HORIZONTAL SCROLL (5 painéis: 3 sites + 2 sistemas)
@@ -926,14 +904,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   color: rgba(38,37,31,.08);
   pointer-events: none;
   user-select: none;
-}
-.prod-counter {
-  font-size: .55rem;
-  font-weight: 700;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: rgba(110,108,96,.85);
-  margin-bottom: var(--sp-xl);
 }
 .prod-tag {
   display: inline-block;
@@ -1042,77 +1012,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 @keyframes hint-pulse {
   0%, 100% { transform: translateX(0); opacity: .5; }
   50%      { transform: translateX(4px); opacity: 1; }
-}
-
-/* ================================================================
-   COMO OPERO
-================================================================ */
-#como-opero { padding: var(--sp-2xl) var(--sp-xl); }
-.opero-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: var(--sp-xl);
-  padding-bottom: var(--sp-sm);
-  border-bottom: 1px solid var(--s2);
-}
-.opero-title {
-  font-family: var(--f-serif);
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
-  font-weight: 700;
-  letter-spacing: -.015em;
-}
-.opero-sub {
-  font-size: .65rem;
-  font-weight: 400;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.fases { list-style: none; }
-.fase {
-  position: relative;
-  display: grid;
-  grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 40ch);
-  align-items: baseline;
-  gap: clamp(1rem, 3vw, 3rem);
-  padding: 1.5rem 0;
-  overflow: hidden;
-}
-.fase + .fase { border-top: 1px solid var(--s2); }
-.fase::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--s1);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .3s var(--ease-out);
-}
-.fase > * { position: relative; transition: transform .25s var(--ease-out); }
-@media (hover: hover) and (pointer: fine) {
-  .fase:hover::before { transform: scaleX(1); }
-  .fase:hover > * { transform: translateX(.75rem); }
-}
-.fase-num {
-  font-family: var(--f-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-}
-.fase-nome {
-  font-family: var(--f-serif);
-  font-size: clamp(1.7rem, 3.2vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -.015em;
-  line-height: 1.05;
-}
-.fase-desc {
-  font-size: .85rem;
-  font-weight: 300;
-  color: var(--muted);
-  line-height: 1.65;
 }
 
 /* ================================================================
@@ -1524,44 +1423,39 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
   .logo-grupo img.logo-alta { height: 32px; }
   .logo-grupo img.logo-larga { height: 15px; }
 
-  #tese { padding: 3rem 1.5rem; }
+  #tese { padding: 2rem 1.5rem; }
   .tese-grid { grid-template-columns: 1fr; }
-  .tese-half { padding: var(--sp-lg) 0; }
-  .tese-racao { flex-direction: column; gap: .75rem; }
+  .tese-half { padding: var(--sp-md) 0; }
+  .tese-racao { flex-direction: column; gap: .75rem; margin-top: var(--sp-lg); }
 
-  #cases { padding: 3rem 1.5rem; }
-  .cases-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+  #cases { padding: 2rem 1.5rem; }
+  .cases-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
   .case-ed { grid-template-columns: 1fr; gap: 2rem; align-items: start; }
   .case-ed-ghost { display: none; }
   .case-ed-fatos li { grid-template-columns: 6rem 1fr; }
 
-  #prova { padding: 3rem 1.5rem; }
-  .prova-fatos { gap: .7rem 1.2rem; }
+  #prova { padding: 2rem 1.5rem; }
 
   #horizontal-section { height: auto; overflow: visible; }
   #h-progress-bar { display: none; }
   .h-scroll-hint { display: none; }
   .h-track { flex-direction: column; width: 100%; height: auto; }
   .h-panel { width: 100%; height: auto; }
-  .h-panel-inner { height: auto; padding: 4rem 1.5rem 3rem; overflow: visible; }
+  .h-panel-inner { height: auto; padding: 2.5rem 1.5rem 2rem; overflow: visible; }
   .prod-name { font-size: clamp(2.2rem, 9vw, 3.4rem); }
   .prod-stats { gap: var(--sp-lg); }
   .prod-footer { flex-wrap: wrap; gap: 1.25rem; }
   .panel-divisa { display: none; }
 
-  #como-opero { padding: 4rem 1.5rem; }
-  .fase { grid-template-columns: 2.5rem 1fr; row-gap: .4rem; }
-  .fase-desc { grid-column: 2; }
+  .mid-cta { padding: 2rem 1.5rem; }
 
-  .mid-cta { padding: 3rem 1.5rem; }
-
-  #faq { padding: 3rem 1.5rem; }
+  #faq { padding: 2rem 1.5rem; }
   .faq-grid { grid-template-columns: 1fr; gap: 2rem; }
   .faq-intro { position: static; }
   .faq-q { grid-template-columns: 2.2rem 1fr 1.2rem; gap: .6rem; }
   .faq-a-inner { padding-left: 2.8rem; }
 
-  #contato { padding: 3rem .625rem .625rem; }
+  #contato { padding: 2rem .625rem .625rem; }
   .contato-cartao { padding: 2.25rem 1.25rem; }
   .contato-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .contato-heading { font-size: clamp(2.6rem, 12vw, 4rem); }
@@ -1595,7 +1489,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     <ul class="nav-links">
       <li><a href="#cases">CASES</a></li>
       <li><a href="#horizontal-section">SERVIÇOS</a></li>
-      <li><a href="#como-opero">PROCESSO</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:.75rem;">
       <a href="/call" class="nav-cta">INICIE O PROJETO</a>
@@ -1620,7 +1514,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     <nav class="mobile-nav-links">
       <a href="#cases">Cases</a>
       <a href="#horizontal-section">Serviços</a>
-      <a href="#como-opero">Processo</a>
       <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
       <a href="sobre.html">Sobre</a>
@@ -1641,15 +1534,15 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
       </picture>
       <div class="hero-deco" aria-hidden="true">IB</div>
 
-      <p class="hero-label">Sistemas com IA · <span class="acc">para negócios da economia real</span></p>
+      <p class="hero-label">Soluções de IA · <span class="acc">para negócios da economia real</span></p>
 
       <h1 class="hero-title">
-        Sistemas que escalam <br><span class="acc">negócios.</span>
+        Soluções de IA que <br><span class="acc">escalam negócios.</span>
       </h1>
 
       <div class="hero-bottom">
         <p class="hero-desc">
-          Plataformas e sistemas com IA implementada na operação do seu negócio, <strong>do CRM ao ERP</strong>. Do briefing ao ar em semanas.
+          Soluções de IA e plataformas de gestão implementadas na operação do seu negócio, <strong>do atendimento ao ERP</strong>. Do briefing ao ar em semanas.
         </p>
         <div class="hero-ctas">
           <a href="https://wa.me/5519991591265" target="_blank" rel="noopener" class="cta-primary">FALE NO WHATSAPP</a>
@@ -1678,12 +1571,10 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     <section id="tese" aria-label="O que a IRBIS constrói">
       <div class="tese-grid">
         <div class="tese-half reveal">
-          <span class="tese-label">01 · A porta</span>
           <p class="tese-frase">Sites que fazem o cliente entrar.</p>
           <p class="tese-apoio">Landing page e site institucional construídos pra vender, no ar em semanas.</p>
         </div>
         <div class="tese-half reveal">
-          <span class="tese-label">02 · O que mora dentro</span>
           <p class="tese-frase">Sistemas com IA que devolvem horas.</p>
           <p class="tese-apoio">CRM, ERP, catálogo integrado: a IA entra na operação, não só no chat.</p>
         </div>
@@ -1731,9 +1622,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     <section id="prova" aria-label="Prova">
       <blockquote class="prova-quote">"Sem palavras pra agradecer pelo site impressionante. Moderníssimo, em 6 línguas diferentes, efeitos alucinantes. Ficou realmente sensacional e muito profissional."</blockquote>
       <p class="prova-de">Mauricio Odery · EForce Drums · eforcedrums.com</p>
-      <p class="prova-fatos" aria-label="Resultados">
-        <span>+R$350k em vendas geradas</span><span class="pdot" aria-hidden="true"></span><span>3 semanas do briefing ao ar</span><span class="pdot" aria-hidden="true"></span><span>Zero intermediários</span>
-      </p>
     </section>
 
     <!-- ================================================================
@@ -1748,7 +1636,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <div class="prod-layout">
               <span class="prod-ghost" aria-hidden="true">01</span>
               <div>
-                <p class="prod-counter">001 / 004 — A PORTA</p>
                 <span class="prod-tag">CONVERSÃO</span>
                 <h3 class="prod-name">PACOTE DE <br>LANDING PAGES</h3>
                 <p class="prod-desc">Para quem vai subir tráfego e precisa de páginas que convertem antes de existir.</p>
@@ -1776,7 +1663,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <div class="prod-layout">
               <span class="prod-ghost" aria-hidden="true">02</span>
               <div>
-                <p class="prod-counter">002 / 004 — A PORTA</p>
                 <span class="prod-tag">PRESENÇA</span>
                 <h3 class="prod-name">SITE <br>INSTITUCIONAL</h3>
                 <p class="prod-desc">O site completo da empresa. Para quem captou, fechou contrato, ou lançou produto — e o site atual não representa mais.</p>
@@ -1805,9 +1691,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <div class="prod-layout">
               <span class="prod-ghost" aria-hidden="true">03</span>
               <div>
-                <p class="prod-counter">003 / 004 — O QUE MORA DENTRO</p>
-                <span class="prod-tag">IA · IMPLEMENTAÇÃO</span>
-                <h3 class="prod-name">IMPLEMENTAÇÃO <br>DE IA</h3>
+                <span class="prod-tag">IA · SOLUÇÕES</span>
+                <h3 class="prod-name">SOLUÇÕES <br>DE IA</h3>
                 <p class="prod-desc">A IA entra na operação do seu negócio: <strong>atende, orça e filtra cliente quente de curioso</strong>, sem depender de você online.</p>
               </div>
               <div class="prod-footer">
@@ -1833,10 +1718,9 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <div class="prod-layout">
               <span class="prod-ghost" aria-hidden="true">04</span>
               <div>
-                <p class="prod-counter">004 / 004 — O QUE MORA DENTRO</p>
-                <span class="prod-tag">IA · PLATAFORMA</span>
-                <h3 class="prod-name">PLATAFORMAS <br>E SISTEMAS</h3>
-                <p class="prod-desc">CRM, ERP, catálogo integrado ao seu sistema de gestão. <strong>A operação inteira roda num lugar só</strong>, com IA em cada etapa.</p>
+                <span class="prod-tag">IA · GESTÃO</span>
+                <h3 class="prod-name">PLATAFORMAS <br>DE GESTÃO</h3>
+                <p class="prod-desc">CRM, ERP, catálogo integrado num único sistema. <strong>A operação inteira roda num lugar só</strong>, com IA em cada etapa.</p>
               </div>
               <div class="prod-footer">
                 <div class="prod-stats">
@@ -1862,43 +1746,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
       <div class="h-scroll-hint" id="h-scroll-hint" aria-hidden="true">
         SCROLL <span class="h-scroll-hint-arrow">→</span>
       </div>
-    </section>
-
-    <!-- ================================================================
-         COMO OPERO
-    ================================================================ -->
-    <section id="como-opero" aria-label="Como opero">
-      <div class="opero-header">
-        <h2 class="opero-title">COMO OPERO</h2>
-        <span class="opero-sub">PROCESSO // 5 FASES</span>
-      </div>
-      <ol class="fases">
-        <li class="fase reveal">
-          <span class="fase-num" aria-hidden="true">01</span>
-          <h3 class="fase-nome">Escuta</h3>
-          <p class="fase-desc">Entendo o negócio antes de qualquer proposta.</p>
-        </li>
-        <li class="fase reveal">
-          <span class="fase-num" aria-hidden="true">02</span>
-          <h3 class="fase-nome">Diagnóstico</h3>
-          <p class="fase-desc">Mapeio o que está travando com dados, não achismo.</p>
-        </li>
-        <li class="fase reveal">
-          <span class="fase-num" aria-hidden="true">03</span>
-          <h3 class="fase-nome">Estratégia</h3>
-          <p class="fase-desc">Decido o que não fazer tanto quanto o que fazer.</p>
-        </li>
-        <li class="fase reveal">
-          <span class="fase-num" aria-hidden="true">04</span>
-          <h3 class="fase-nome">Execução</h3>
-          <p class="fase-desc">Velocidade e precisão. Sem terceirização de responsabilidade.</p>
-        </li>
-        <li class="fase reveal">
-          <span class="fase-num" aria-hidden="true">05</span>
-          <h3 class="fase-nome">Ritual</h3>
-          <p class="fase-desc">Acompanhamento mensal para projetos que precisam crescer depois de ir ao ar.</p>
-        </li>
-      </ol>
     </section>
 
     <!-- ================================================================
@@ -1937,11 +1784,11 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             <span class="faq-n" aria-hidden="true">02</span>
-            <span class="faq-q-txt">O que é um sistema com IA, na prática?</span>
+            <span class="faq-q-txt">O que são Soluções de IA e Plataformas de Gestão, na prática?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p class="faq-a-inner">Do WhatsApp ao ERP: a IA entra na operação do seu negócio, não só no atendimento. Pode ser um CRM que cruza com seu sistema de gestão, uma triagem de cliente quente, um catálogo integrado. Você define onde ela atua, com você no controle do que sai.</p>
+            <p class="faq-a-inner">Soluções de IA: atendimento automatizado, triagem de cliente quente, orçamento pelo WhatsApp. Plataformas de Gestão: CRM, ERP, catálogo integrado num sistema só. Você define onde a IA atua, com você no controle do que sai.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -1951,7 +1798,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p class="faq-a-inner">O escopo define o prazo. Landing pages saem em 1–2 semanas. Sites institucionais, em 2–3 semanas. Sistemas com IA, a primeira conversa define uma estimativa real.</p>
+            <p class="faq-a-inner">O escopo define o prazo. Landing pages saem em 1–2 semanas. Sites institucionais, em 2–3 semanas. Soluções de IA e Plataformas de Gestão, a primeira conversa define uma estimativa real.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -1961,7 +1808,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p class="faq-a-inner">Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. Sistemas com IA: o escopo sai do diagnóstico, na primeira conversa. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura.</p>
+            <p class="faq-a-inner">Sem tabela fixa, mas existe lógica. Landing pages a partir de R$3k. Sites institucionais a partir de R$5k. Soluções de IA e Plataformas de Gestão: o escopo sai do diagnóstico, na primeira conversa. Em todos os casos: menos que uma agência equivalente, sem overhead de estrutura.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -2188,18 +2035,8 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
     (function () {
       const handled = new Set();
 
-      /* Prova: fatos com blur + foco */
-      const fatos = document.querySelector('.prova-fatos');
-      if (fatos) {
-        gsap.fromTo(fatos,
-          { opacity: 0, filter: 'blur(14px)', scale: 0.97 },
-          { opacity: 1, filter: 'blur(0px)', scale: 1, duration: 0.7, ease: 'power2.out',
-            scrollTrigger: { trigger: fatos, start: 'top 88%' } }
-        );
-      }
-
       /* Grids com stagger */
-      ['.fases', '.tese-grid'].forEach(sel => {
+      ['.tese-grid'].forEach(sel => {
         const parent = document.querySelector(sel);
         if (!parent) return;
         const siblings = Array.from(parent.querySelectorAll('.reveal'));
@@ -2224,7 +2061,7 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
 
     /* ── ANIMATED RULES — hairlines crescem da esquerda ── */
     (function () {
-      const borderBottomTargets = ['.cases-header', '.opero-header'];
+      const borderBottomTargets = ['.cases-header'];
       const borderTopTargets    = ['#prova', '#faq'];
 
       borderBottomTargets.forEach(sel => {
@@ -2377,10 +2214,16 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
           .to(logo,      { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
           .add(() => { window.location.href = href; }, '+=0.15');
       }
+      /* Só as páginas de destino abaixo têm a cortina de abertura própria
+         (curtain + intro timeline). Animar o fechamento e navegar para
+         qualquer outra página deixa a cortina "presa": ela cobre a tela,
+         mas a página seguinte não tem o script que a reabre. */
+      const CURTAIN_PAGES = ['sobre.html', '/sobre', '/call', 'call.html', '/en'];
       document.querySelectorAll('a[href]').forEach(a => {
         if (a.target === '_blank') return;
         const href = a.getAttribute('href');
         if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+        if (!CURTAIN_PAGES.includes(href)) return;
         a.addEventListener('click', e => { e.preventDefault(); navigate(href); });
       });
 
