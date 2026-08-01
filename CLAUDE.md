@@ -24,6 +24,9 @@ SEMPRE:
 - Quando propor copy ou estratégia, seguir o Manual de Copy da marca
 - Considerar o pipeline atual antes de sugerir novos canais ou estratégias
 
+- Em projeto de cliente, cobrar o gate da fase atual antes de deixar avançar (Lei 1 do método de entrega): escopo não aprovado por escrito não vira construção; sem termo de aceite não existe entrega
+- Transformar "até ficar bom" / "ajustes ilimitados" em número antes de qualquer coisa ir pro contrato ou pra proposta
+
 NUNCA:
 - Sugerir serviços fora de sites, sistemas com IA e do produto SaaS white-label (branding, identidade avulsa, social media, consultoria avulsa, Web3)
 - Tratar documentos anteriores ao pivot como referência atual — estão desatualizados
@@ -36,6 +39,7 @@ NUNCA:
 2. Consultar o manual de copy e brand guide antes de escrever qualquer comunicação externa
 3. Em propostas: sempre começar pelo problema do cliente, não pelo portfólio do estúdio
 4. Em estratégia: validar se a sugestão é executável por uma pessoa solo antes de propor
+5. **Em entrega (qualquer projeto de cliente, do "sim" ao encerramento): ler `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` ANTES de sugerir qualquer passo.** É a espinha obrigatória — 7 fases com gate binário, artefato obrigatório por fase e 3 botões de adaptação. Nunca inventar um passo a passo novo por projeto; instanciar o método. `processo-entrega-padrao-irbis.md` é só o perfil SITE dele.
 
 ## OPERAÇÃO DE IA
 

@@ -43,12 +43,13 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
 | Processo/documento | Onde | Status |
 |---|---|---|
-| Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | Vigente (sites) |
+| **Método de entrega (espinha de TODO projeto: 7 fases + gates)** | `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` | **Vigente desde 01/ago — manda sobre os processos de entrega abaixo** |
+| Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | Vigente; agora é o **perfil SITE** instanciado do método |
 | Repitch MRR + pedido de indicação | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` | Vigente |
 | Planos de recorrência (2 pacotes) | `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md` | Vigente; versão software junto da proposta da mãe |
 | Gestão de carteira (ciclo, upsell, 4 campos no CRM) | `03 - Comercial/04 - Entrega e Recorrência/processo-gestao-carteira.md` | Aprovado 22/jul; estreia com fundadores |
 | Voz do cliente (pulso, depoimento, feedback) | `03 - Comercial/04 - Entrega e Recorrência/voz-do-cliente.md` | Aprovado 22/jul; estreia com fundadores |
-| Kit de onboarding pós-assinatura | não existe ainda | ⚠️ LACUNA: dispara na 1ª assinatura (Fase 3) |
+| Kit de onboarding pós-assinatura | `metodo-entrega-irbis.md` (Fases 0, 1 e 2) | ✅ FECHADA em 01/ago: o kit é o arranque + imersão + plano de entrega do método |
 
 ## 5. CRM e ferramentas
 
@@ -69,4 +70,6 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
 ## As 3 lacunas nomeadas (todas com dono e gatilho)
 
-1. **Escada de follow-up como doc próprio** + 2. **Proposta-modelo** + 3. **Kit de onboarding** — os três são entregáveis da **Fase 3 da fundação**, que dispara na primeira assinatura. Não são esquecimento: são fila.
+1. **Escada de follow-up como doc próprio** + 2. **Proposta-modelo** + ~~3. Kit de onboarding~~ — restam duas. As duas são entregáveis da **Fase 3 da fundação**, que dispara na primeira assinatura. Não são esquecimento: são fila.
+
+**Atualização 01/ago/2026:** a lacuna 3 (kit de onboarding) foi fechada pelo `metodo-entrega-irbis.md`, que virou a espinha de entrega de todo projeto — 7 fases com gate binário, artefato obrigatório por fase e 3 botões de adaptação por perfil (site, sistema/IA, conteúdo).

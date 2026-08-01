@@ -1,9 +1,56 @@
 ---
 name: irbis-entrega-e-recorrencia
-description: "Use quando um cliente da IRBIS fechou e o trabalho é a camada comercial do pós-venda: termo de aceite, condição de pagamento, prazos prometidos, checkpoint semanal com o cliente, reunião de entrega, handoff, plano de sustentação, MRR, recorrência, upsell, repitch, indicação, reativação da base (E-Force, Odery, Eduboxs), processo-entrega-padrao, processo-entrega-mrr-indicacao, sistema-indicacao-base-irbis. Para produzir o site em si (código, design, QA), veja irbis-producao-de-site."
+description: "DISPARE SEMPRE que o Nicolas anunciar que um cliente fechou — 'fechei o projeto X', 'o cliente X fechou', 'fechamos com X', 'assinou', 'caiu a entrada', 'vou começar o projeto do X', 'como começo o projeto X' — e em qualquer trabalho de entrega ou pós-venda de cliente da IRBIS: escopo congelado, critério de aceite, kickoff, onboarding, plano de entrega, ciclos, demo, homologação, termo de aceite, virada, treinamento, garantia, estabilização, encerramento, post-mortem, condição de pagamento, prazos prometidos, handoff, plano de sustentação, MRR, recorrência, upsell, repitch, indicação, reativação da base (E-Force, Odery, Eduboxs), metodo-entrega-irbis, processo-entrega-padrao, processo-entrega-mrr-indicacao, sistema-indicacao-base-irbis. Para produzir o site em si (código, design, QA), veja irbis-producao-de-site."
 ---
 
 # IRBIS — Entrega e Recorrência (do sim ao MRR)
+
+---
+
+## 🔒 PORTÃO 0 — LEIA ANTES DE QUALQUER OUTRA COISA (bloqueante, sem exceção)
+
+**Adicionado em 01/ago/2026. Manda sobre todo o resto deste arquivo.**
+
+A espinha de QUALQUER entrega da IRBIS é o **Método de Entrega**:
+`03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md`
+
+### Se o Nicolas acabou de dizer que um cliente fechou
+
+Não responda com conselho solto, não improvise passo a passo, não pergunte "o que você quer fazer primeiro". **Abra o método, leia, e conduza o F0 → F1 → F2 com ele nesta sessão**, na ordem, um passo por vez:
+
+1. Confirme em que ponto o projeto está usando o checklist de bolso abaixo. Se ele não souber dizer, o projeto está em **F0**.
+2. Rode o gate da fase atual. **Gate não cumprido = não avança**, mesmo que ele peça pra pular.
+3. Crie/complete a pasta `02 - Projetos/<Cliente>/` com as 8 subpastas do método e produza o artefato da fase.
+4. Só então siga pro que este runbook diz sobre MRR, indicação e recorrência (isso é F7, não é agora).
+
+### Checklist de bolso (o mapa das fases — sempre disponível, mesmo sem abrir o método)
+
+```
+F0  entrada compensada + pasta criada + kickoff em 48h
+F1  escopo congelado + critérios de aceite + decisor único   → "aprovado" por escrito
+F2  ciclos + datas + dependências do cliente com dono e data → cliente confirmou
+F3  [loop] ciclo aberto → construção → demo → fila classificada → resumo enviado
+F4  roteiro de testes → cliente testa 3 dias → call de aceite item a item
+    → 1 rodada de ajuste (5 dias úteis) → TERMO DE ACEITE 100% ✅
+F5  produção nas contas do cliente + acessos documentados + treinamento gravado
+    → cliente executa o fluxo sozinho na sua frente
+F6  chamados registrados + pulso de satisfação + resultado medido → call de 30 dias
+F7  post-mortem + 3 perguntas + repitch MRR + indicação → 4 campos da carteira
+```
+
+### As 5 leis (cobre o Nicolas nelas, mesmo quando ele não pedir)
+
+1. **Nada avança sem gate.** Critério binário, nunca "achei que tava pronto".
+2. **Fase sem artefato não aconteceu.** Reunião boa sem arquivo = fase não cumprida.
+3. **"Até ficar bom" é proibido.** Todo "até" vira número antes de entrar em proposta ou contrato.
+4. **Pedido novo não entra no ciclo em curso.** Vai pra `fila.md` → escopo ou aditivo cotado.
+5. **Dependência do cliente pausa o relógio, por escrito, no dia.**
+
+### Relação com o resto deste arquivo
+
+Este runbook (checkpoint semanal, reunião de entrega, handoff, MRR, indicação) continua válido, mas **como detalhe do perfil SITE** dentro do método — F3 a F7. Onde os dois divergirem, **o método vence**. Em projeto que não é site (sistema, agente de IA, SaaS), use os botões de adaptação do método (seção 4 dele) e ignore os prazos e a ordem "Estratégia → Design → Copy → Código" daqui.
+
+---
 
 Runbook do pós-venda: do "sim" do prospect até virar receita recorrente + indicações. Princípio do dono (verbatim, `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` linha 3): **"O site é a porta de entrada; a recorrência é o ativo."**
 
@@ -47,7 +94,8 @@ Se um passo abaixo não tiver critério objetivo, **NÃO decida sozinho**: pare 
 
 | Doc | mtime | Papel |
 |---|---|---|
-| `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | 18/jun/2026 | Processo de entrega real ("o Arthur avalia se a entrega está à altura de um projeto de R$4,5–5k") |
+| **`03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md`** | **01/ago/2026** | **FONTE MESTRA. 7 fases com gate binário + 3 botões de adaptação. Manda sobre todas as linhas abaixo.** |
+| `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | 18/jun/2026 | Perfil SITE instanciado do método ("o Arthur avalia se a entrega está à altura de um projeto de R$4,5–5k") |
 | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` | 18/jun/2026 | Preço + planos MRR + 2 pontos de oferta |
 | `03 - Comercial/05 - Indicação/sistema-indicacao-base-irbis.md` | 18/jun/2026 | Sistema F4: mapa da base, gatilhos, script, mensagens |
 | `03 - Comercial/05 - Indicação/dia1-indicacao-mensagens.md` | 14/jun/2026 | Mensagens de reativação prontas (com correções obrigatórias, ver Base atual) |
