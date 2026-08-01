@@ -370,6 +370,15 @@
   </url>
 
   <url>
+    <loc>https://irbis.com.br/blog/schema-markup-nao-aumenta-citacao-ia</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/schema-markup-nao-aumenta-citacao-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/schema-markup-nao-aumenta-citacao-ia"/>
+  </url>
+
+  <url>
     <loc>https://irbis.com.br/odery-erp</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>yearly</changefreq>

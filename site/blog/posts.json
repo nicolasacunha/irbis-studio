@@ -115,6 +115,23 @@
       ],
       "coverImage": "/blog/assets/covers/trocar-site-02.png",
       "readingTimeMin": 3
+    },
+    {
+      "slug": "schema-markup-nao-aumenta-citacao-ia",
+      "title": "Marcar Schema no Site Não Aumenta a Chance de Ser Citado pela IA, Mostra Estudo com 1.006 Páginas",
+      "description": "Um estudo de 2026 com 1.006 páginas não achou relação entre schema markup e citação por IA. Veja o que checar no robots.txt do seu site.",
+      "dateISO": "2026-08-01",
+      "pilar": "seo-geo",
+      "keywords": [
+        "schema markup IA",
+        "GEO generative engine optimization",
+        "robots.txt para IA",
+        "citação por IA",
+        "SEO para IA 2026",
+        "AI crawlers site"
+      ],
+      "coverImage": "/blog/assets/covers/seo-geo-02.png",
+      "readingTimeMin": 4
     }
   ]
 }
