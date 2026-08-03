@@ -43,6 +43,10 @@ gostou nela}}
 {{item obrigatório citado pelo cliente na call — ex: depoimento de tal cliente, CTA de
 WhatsApp}}
 
+## O que fica de fora
+
+{{item que o cliente mencionou mas que fica fora deste escopo — combinado na própria call}}
+
 ---
 
 ## Nota de uso (não faz parte do documento em si)
@@ -52,3 +56,5 @@ WhatsApp}}
   diferentes, pare e force a escolha de uma antes de fechar a call.
 - Este brief é insumo da etapa Estratégia (primeira da ordem fixa) — Design não começa sem ele
   preenchido.
+- Depois de preenchido, salve em `01-escopo/` — é onde a Lei 2 do método reserva o artefato
+  desta fase.
