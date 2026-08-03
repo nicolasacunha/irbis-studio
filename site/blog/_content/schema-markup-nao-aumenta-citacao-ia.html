@@ -1,0 +1,35 @@
+  <div class="intro">
+    <p>Boa parte do mercado de SEO vende schema markup como o ajuste técnico que garante aparecer nas respostas do ChatGPT e do Gemini. Um estudo publicado em fevereiro de 2026 testou essa promessa com dados reais e não a confirmou.</p>
+    <p>O trabalho cruzou 730 citações de IA com 1.006 páginas analisadas, controlando por outros fatores que também pesam na disputa. Schema markup, isolado, não teve efeito estatístico sobre a chance de uma página ser citada.</p>
+    <p>Isso muda onde vale investir. Enquanto uma parte do mercado vende JSON-LD como o hack de "GEO" (Generative Engine Optimization), a base técnica do seu site pode estar bloqueando, sem querer, o próprio robô que decide se você aparece ou não.</p>
+  </div>
+
+  <h2><span>01</span> — O estudo que testou o hack de schema markup</h2>
+  <p>A pesquisa "Does Schema Markup Predict AI Citation?", do pesquisador Kurt Fischman, coletou 730 citações do ChatGPT (com navegação web) e do Gemini (com busca ativada) em 75 buscas comerciais, cobrindo categorias como SaaS, saúde, finanças, serviços profissionais e conteúdo de como fazer. Os 10 primeiros resultados orgânicos do Google nas mesmas buscas entraram como grupo de controle, somando 1.006 páginas analisadas.</p>
+  <p>Uma primeira leitura dos dados até sugeria uma associação negativa entre schema e citação. Depois de corrigir uma falha no método (o efeito de agrupamento por busca, tratado com um modelo estatístico mais rigoroso), esse resultado caiu: schema markup não teve relação significativa com a chance de citação.</p>
+  <div class="example">
+    <strong>Dado de referência</strong>
+    Fischman, K., "Does Schema Markup Predict AI Citation? A Cross-Platform Empirical Study of Structured Data and Generative Engine Optimization", publicado em 20/fev/2026 (SSRN). Após correção estatística: nenhuma associação significativa entre presença de schema e citação por IA (OR = 0,678, p = 0,296).
+  </div>
+
+  <h2><span>02</span> — O robots.txt mal configurado é o risco real</h2>
+  <p>Desde julho de 2025, toda conta nova na Cloudflare passou a bloquear rastreadores de IA por padrão. Em agosto do mesmo ano, mais de 2,5 milhões de sites já tinham escolhido bloquear completamente o treinamento de IA por meio dessa ferramenta.</p>
+  <p>Existem dois tipos de robô diferentes: os que treinam modelo (como o GPTBot) e os que buscam em tempo real pra responder uma pergunta agora (como o OAI-SearchBot ou o PerplexityBot). Um robots.txt configurado às pressas, ou herdado de um template genérico, costuma bloquear os dois juntos. Isso tira sua página da disputa por citação antes de qualquer fator de conteúdo entrar em jogo.</p>
+  <div class="example">
+    <strong>Consequência prática</strong>
+    No 1º trimestre de 2026, o GPTBot já era o robô de IA mais bloqueado em regras de robots.txt (5,52% das regras de disallow analisadas pela Cloudflare), à frente de CCBot, ClaudeBot e Google-Extended. Vale checar se esse bloqueio foi escolha sua, ou herança de uma configuração que ninguém revisou.
+  </div>
+
+  <h2><span>03</span> — O que pesa na disputa</h2>
+  <p>No mesmo estudo, a citação apareceu associada a dois fatores: boa posição orgânica no Google e autoridade de domínio reconhecida. Schema markup ficou fora dessa lista. O mesmo trabalho de sempre (conteúdo direto, estrutura clara, site tecnicamente saudável) sustenta a disputa por espaço nas respostas de IA. Instalar um plugin de schema às pressas não substitui esse trabalho.</p>
+  <p>Isso é uma notícia boa pra quem já leva site a sério. Se o seu processo de criação já passa por uma estrutura técnica cuidada desde o início, como no <a href="https://irbis.com.br/metodo">método</a> da IRBIS, essa base já está resolvida. O erro é pagar por um "pacote de GEO" achando que ele substitui isso.</p>
+
+  <h2><span>04</span> — Checklist de 10 minutos pra rodar agora</h2>
+  <p>Abra <strong>seusite.com/robots.txt</strong> direto no navegador. Se aparecer uma lista de <code>User-agent: GPTBot</code>, <code>User-agent: ClaudeBot</code>, <code>User-agent: PerplexityBot</code> com <code>Disallow: /</code> embaixo de cada um, seu robots.txt está barrando na porta o robô que poderia te citar numa resposta.</p>
+  <p><strong>Regra prática:</strong> bloquear treinamento é escolha legítima, se for essa a sua intenção. Bloquear busca em tempo real sem perceber é deixar dinheiro na mesa. Antes de pagar por qualquer "otimização pra IA", confirme se o vendedor entrega isso, ou só recicla o mesmo mito do schema markup.</p>
+
+  <div class="cta-box">
+    <h3>Quer saber se seu robots.txt está barrando a IA sem você saber?</h3>
+    <p>Manda o link do seu site por mensagem. Eu confirmo em minutos se os robôs certos estão liberados.</p>
+    <a href="https://wa.me/5519991591265?text=Oi%20Nicolas%2C%20quero%20saber%20se%20meu%20site%20est%C3%A1%20bloqueando%20a%20IA%20sem%20querer" class="cta-btn">Falar sobre o meu site →</a>
+  </div>

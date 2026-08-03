@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "campos-formulario-conversao-site",
+      "title": "De 13,4% pra 3,6%: Cada Campo a Mais no Formulário do Site Tira Cliente",
+      "description": "Um levantamento com 1,4 milhão de formulários mostra a queda exata na conversão a cada campo a mais. Veja quantos o seu site pode cortar.",
+      "dateISO": "2026-08-03",
+      "pilar": "conversao-cro",
+      "keywords": [
+        "conversão de formulário",
+        "CRO formulário de contato",
+        "redução de campos formulário",
+        "abandono de formulário",
+        "otimização de conversão site",
+        "formulário de orçamento"
+      ],
+      "coverImage": "/blog/assets/covers/cro-02.png",
+      "readingTimeMin": 3
+    },
+    {
       "slug": "erros-site-startup",
       "title": "7 Erros de Site que Afastam Clientes antes da Primeira Conversa",
       "description": "Auditei 13 sites de startups brasileiras em uma semana. Os mesmos erros aparecem em quase todos. Veja o que está custando leads antes de você perceber.",
@@ -115,6 +132,23 @@
       ],
       "coverImage": "/blog/assets/covers/trocar-site-02.png",
       "readingTimeMin": 3
+    },
+    {
+      "slug": "schema-markup-nao-aumenta-citacao-ia",
+      "title": "Marcar Schema no Site Não Aumenta a Chance de Ser Citado pela IA, Mostra Estudo com 1.006 Páginas",
+      "description": "Um estudo de 2026 com 1.006 páginas não achou relação entre schema markup e citação por IA. Veja o que checar no robots.txt do seu site.",
+      "dateISO": "2026-08-01",
+      "pilar": "seo-geo",
+      "keywords": [
+        "schema markup IA",
+        "GEO generative engine optimization",
+        "robots.txt para IA",
+        "citação por IA",
+        "SEO para IA 2026",
+        "AI crawlers site"
+      ],
+      "coverImage": "/blog/assets/covers/seo-geo-02.png",
+      "readingTimeMin": 4
     }
   ]
 }
