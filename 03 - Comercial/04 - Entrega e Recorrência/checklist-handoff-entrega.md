@@ -3,12 +3,12 @@ peça: Checklist de handoff
 versão: v1.0
 data: 2026-08-03
 mudou da anterior: primeira versão
-sai quando: na reunião de apresentação, Fase 3 do método de entrega
+sai quando: na reunião de apresentação/treinamento, Fase 5 (Virada e transferência) do método de entrega
 ---
 
 # Checklist de handoff — {{projeto}}
 
-{{primeiro_nome}}, este documento confirma o que foi entregue nesta reunião. Cada item marcado
+{{primeiro_nome}}, este documento confirma o que você recebeu nesta reunião. Cada item marcado
 é seu — sem depender de mim pra acessar ou trocar de fornecedor no futuro.
 
 | Item | Entregue | Onde/como acessar |
@@ -38,7 +38,7 @@ ______________________________________
 ## Nota de uso (não faz parte do documento enviado ao cliente)
 
 - Preencha "Guia de edição" só depois de confirmar com o dono se esse bônus entra no projeto
-  (pendência aberta em `metodo-entrega-irbis.md`, Fase 3) — nunca marque "sim" por padrão.
+  (pendência aberta em `metodo-entrega-irbis.md`, F5 — Virada e transferência) — nunca marque "sim" por padrão.
 - Formalizar com assinatura é opcional, mesmo critério de risco da Fase 1 (cliente
   grande/corporativo → formalize; cliente pequeno/direto → registre em mensagem já basta).
-- Este documento não substitui o handoff falado — é o registro de que ele aconteceu.
+- Este documento registra que o handoff falado aconteceu.
