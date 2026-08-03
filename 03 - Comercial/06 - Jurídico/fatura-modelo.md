@@ -1,8 +1,8 @@
 # Fatura de Cobrança — Modelo IRBIS
 
 Modelo IRBIS para formalizar uma cobrança **antes** do pagamento, enquanto Nicolas Cunha presta
-serviço como pessoa física, sem CNPJ. Este documento **não é nota fiscal** — é a fatura que
-antecede o pagamento. Depois que o valor cair, o documento que formaliza o recebimento é o
+serviço como pessoa física, sem CNPJ. Este documento **não é nota fiscal**: formaliza a cobrança
+antes do pagamento cair. Depois que o valor cair, o documento que formaliza o recebimento é o
 recibo RPA (`rpa-recibo-modelo.md`). Quando o CNPJ existir, este modelo é substituído por fatura
 com nota fiscal atrelada, e deixa de ser usado como está.
 
@@ -36,7 +36,7 @@ orientação ao contador do cliente.
 ## Nota de uso (não faz parte do documento enviado ao cliente)
 
 - Nunca cite cláusula, multa, juros ou rescisão nesta fatura — mesma regra do `irbis-cobrar`
-  (Passo 0): fatura só afirma o fato (o quê, quanto, quando), nunca ameaça.
+  (seção Proibições): fatura só afirma o fato (o quê, quanto, quando), nunca ameaça.
 - Antes de enviar, confira no Open Finance se já não existe um crédito não conciliado do mesmo
   valor (mesma trava anti-cobrar-quem-pagou do `irbis-cobrar`, Passo 1) — não emita fatura pra
   quem já pagou.
