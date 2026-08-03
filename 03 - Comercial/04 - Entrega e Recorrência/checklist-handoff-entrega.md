@@ -39,6 +39,5 @@ ______________________________________
 
 - Preencha "Guia de edição" só depois de confirmar com o dono se esse bônus entra no projeto
   (pendência aberta em `metodo-entrega-irbis.md`, F5 — Virada e transferência) — nunca marque "sim" por padrão.
-- Formalizar com assinatura é opcional, mesmo critério de risco da Fase 1 (cliente
-  grande/corporativo → formalize; cliente pequeno/direto → registre em mensagem já basta).
+- Formalizar com assinatura é opcional, mesmo critério de risco da Fase 1 do perfil SITE (`processo-entrega-padrao-irbis.md`): cliente grande/corporativo → formalize; cliente pequeno/direto → registrar em mensagem já basta.
 - Este documento registra que o handoff falado aconteceu.
