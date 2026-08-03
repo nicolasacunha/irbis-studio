@@ -8,10 +8,17 @@ A IRBIS faz **sites e sistemas com IA para empresas da economia real**. A tese, 
 
 - **Sites** (landing page, institucional, e-commerce) — escopo original do pivot de 01/jun/2026, segue integralmente válido.
 - **Sistemas com IA** acoplados à operação do cliente — habilitado em 21/jul/2026, com 2 clientes fundadores em negociação. Sites e IA funcionam como upsell mútuo.
-- **Produto SaaS white-label** — habilitado em 28/jul/2026. Base de código única da IRBIS, comercializada para vários clientes com a marca de cada um estampada (branding do cliente, não da IRBIS). Primeiro produto: CRM de segmentação RFM (Frequência × Recência) puxado do ERP de empresas industriais. Ver `irbis-guarda-pivot` para a linha que separa isso de "SaaS genérico".
+- **Produto SaaS white-label** — habilitado em 28/jul/2026. Base de código única da IRBIS, comercializada para vários clientes com a marca de cada um estampada (branding do cliente, não da IRBIS). Primeiro produto: **CRM de cliente esquecido** — segmentação **RFV (Recência, Frequência, Valor: três scores, NÃO "Frequência × Recência" em quatro quadrantes)** sobre o histórico de compra.
+  - **Alvo é quem já comprou e parou de comprar** — não lead que nunca fechou. Lead sem histórico zera F e V, e a matriz não diz nada sobre ele. Lead esquecido fica como camada 2, só depois de haver cliente pagando e base limpa.
+  - **A IRBIS não faz ERP nem integra com ERP pesado** (TOTVS, Sankhya, Protheus). A fonte de dado é a **API de sistemas de venda leves — Bling, Tiny, Omie e afins** — uma integração servindo muitos clientes. Ler a API de um sistema não é ser um ERP. O dado precisa fluir sozinho: upload manual de planilha vira relatório, e relatório não sustenta assinatura.
+  - **ICP primário: indústria, distribuição e atacado.** Ticket variável e recompra longa são o que faz o eixo Valor carregar sinal; serviço de ticket plano (ex.: clínica) está fora — ali RFV é RF com uma coluna morta.
+  - Decidido em 03/ago/2026, substitui a redação anterior *"CRM de segmentação RFM (Frequência × Recência) puxado do ERP de empresas industriais"*. **Pendente:** verificar estado atual das APIs Bling/Tiny/Omie antes de fechar escopo de build.
+  - Ver `irbis-guarda-pivot` para a linha que separa isso de "SaaS genérico".
 - **Fora de escopo, sem exceção:** branding, identidade visual avulsa, app/dashboard avulso, Web3, motion avulso, gestão de redes sociais, consultoria avulsa. "A recusa é parte do posicionamento."
 
-⚠️ **O rebranding público** (IRBIS = IA para a economia real) está condicionado ao fechamento das 2 assinaturas até ~19/ago/2026 — comunicação externa continua sob as regras vigentes até o gatilho disparar. Ver `irbis-guarda-pivot`.
+⚠️ **O rebranding público** (IRBIS = IA para a economia real) está condicionado ao fechamento das **2 assinaturas fundadoras — A. Cunha + QG OS, que são build + acompanhamento mensal** — até ~19/ago/2026. Comunicação externa continua sob as regras vigentes até o gatilho disparar.
+
+**MRR do SaaS white-label é meta separada, com data própria, e NÃO destrava o rebranding** (separado em 03/ago/2026). Motivo: o produto tem zero linha de código, então amarrar o gatilho nele travaria o rebranding por tempo indefinido. As duas metas não se substituem — "assinatura" no contexto de 19/ago significa build + acompanhamento, não MRR de produto. Ver `irbis-guarda-pivot`.
 
 O estúdio é operado por Nicolas solo. Decisões são rápidas, execução é direta.
 
