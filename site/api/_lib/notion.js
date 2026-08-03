@@ -10,7 +10,6 @@ function headers(extra) {
 }
 
 function txt(s) { return [{ type: 'text', text: { content: (s || '').slice(0, 1900) } }]; }
-function multi(arr) { return (arr || []).map(function (v) { return { name: v }; }); }
 
 /* Cria o card do lead. Retorna o pageId. */
 async function createLead(f) {
@@ -23,22 +22,10 @@ async function createLead(f) {
     'Estágio': { select: { name: 'Formulário preenchido' } },
     'Origem': { select: { name: 'Site' } },
     'Prazo desejado': { rich_text: txt(f.prazo) },
-    'Orçamento previsto': { rich_text: txt(f.orcamento) },
-    'Canais de aquisição': { rich_text: txt(f.canais) },
-    'Valor do cliente': { rich_text: txt(f.valorcliente) },
   };
   if (f.site) props['Site atual'] = { url: f.site };
-  if (f.objetivo && f.objetivo.length) props['Site precisa fazer'] = { multi_select: multi(f.objetivo) };
-  if (f.incomodo && f.incomodo.length) props['Incômodo'] = { multi_select: multi(f.incomodo) };
   if (f.decisor) props['Decisor'] = { select: { name: f.decisor } };
-
-  var children = [];
-  if (f.livre) {
-    children.push({
-      object: 'block', type: 'callout',
-      callout: { rich_text: txt(f.livre), icon: { emoji: '💬' } },
-    });
-  }
+  if (f.faturamento) props['Faturamento anual'] = { select: { name: f.faturamento } };
 
   var res = await fetch(NOTION + '/pages', {
     method: 'POST',
@@ -46,7 +33,6 @@ async function createLead(f) {
     body: JSON.stringify({
       parent: { database_id: process.env.NOTION_CRM_DB_ID },
       properties: props,
-      children: children,
     }),
   });
   var data = await res.json();

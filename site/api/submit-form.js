@@ -14,11 +14,8 @@ module.exports = async function handler(req, res) {
   var f = {
     nome: str(body.nome), email: str(body.email), whatsapp: str(body.whatsapp),
     negocio: str(body.negocio), oquefaz: str(body.oquefaz), site: str(body.site),
-    canais: str(body.canais), valorcliente: str(body.valorcliente),
-    prazo: str(body.prazo), orcamento: str(body.orcamento), livre: str(body.livre),
+    faturamento: str(body.faturamento), prazo: str(body.prazo),
     decisor: str(body.decisor), tipo: str(body.tipo),
-    objetivo: Array.isArray(body.objetivo) ? body.objetivo : [],
-    incomodo: Array.isArray(body.incomodo) ? body.incomodo : [],
   };
 
   if (!f.nome || !f.email || !f.whatsapp || !f.negocio) {

@@ -358,22 +358,20 @@
             <div class="help">One or two lines, the way you'd explain it to a customer.</div>
             <div class="field-err">I need this answer to move forward.</div>
           </div>
+          <div class="field" data-req-group="faturamento">
+            <label>Approximate annual revenue <span class="req">*</span></label>
+            <div class="choices" data-single="faturamento">
+              <label class="choice"><input type="radio" name="faturamento" value="até R$500 mil" /><span>up to R$500k</span></label>
+              <label class="choice"><input type="radio" name="faturamento" value="R$500 mil a R$2 milhões" /><span>R$500k to R$2M</span></label>
+              <label class="choice"><input type="radio" name="faturamento" value="R$2 a R$10 milhões" /><span>R$2M to R$10M</span></label>
+              <label class="choice"><input type="radio" name="faturamento" value="Acima de R$10 milhões" /><span>Above R$10M</span></label>
+            </div>
+            <div class="field-err">Pick one option.</div>
+          </div>
           <div class="field">
             <label>Current website <span class="opt">· if you have one</span></label>
             <input type="url" name="site" placeholder="https://" />
             <div class="help">Don't have one? No problem. That's what we'll talk about.</div>
-          </div>
-          <div class="field" data-req>
-            <label>Where do your customers come from today? <span class="req">*</span></label>
-            <textarea name="canais" placeholder=""></textarea>
-            <div class="help">Referrals, Instagram, Google, paid traffic, nobody knows for sure? Tell me how they find you.</div>
-            <div class="field-err">I need this answer to move forward.</div>
-          </div>
-          <div class="field" data-req>
-            <label>How much is a new customer worth to you? <span class="req">*</span></label>
-            <textarea name="valorcliente" placeholder=""></textarea>
-            <div class="help">Average ticket, or what a customer spends with you over time. A rough number works. It helps me show on the call the return the site needs to deliver.</div>
-            <div class="field-err">I need this answer to move forward.</div>
           </div>
         </div>
 
@@ -390,55 +388,10 @@
             <div class="field-err">Pick one option.</div>
           </div>
 
-          <div class="field" style="margin-top:1.75rem" data-req-group="objetivo">
-            <label>What does the project need to do for your business? <span class="req">*</span></label>
-            <div class="choices" data-group="objetivo">
-              <label class="choice"><input type="checkbox" name="objetivo" value="Vender direto" /><span>Sell directly, with payment on the site</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Orçamento/Contato" /><span>Generate quote requests and contacts</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Agendamento" /><span>Book meetings or services</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Credibilidade" /><span>Present the company with credibility</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Portfólio" /><span>Show portfolio and past work</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Automatizar com IA" /><span>Automate manual work with AI</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Organizar operação" /><span>Run the operation in one system</span></label>
-            </div>
-            <div class="field-err">Pick at least one.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.75rem" data-req-group="incomodo">
-            <label>What bothers you most today? <span class="req">*</span></label>
-            <div class="choices" data-group="incomodo">
-              <label class="choice"><input type="checkbox" name="incomodo" value="Não aparece no Google" /><span>Customers can't find me on Google</span></label>
-              <label class="choice"><input type="checkbox" name="incomodo" value="Credibilidade" /><span>It doesn't show the credibility my business has</span></label>
-              <label class="choice"><input type="checkbox" name="incomodo" value="Depende de indicação" /><span>I depend on referrals and want to attract clients on my own</span></label>
-              <label class="choice"><input type="checkbox" name="incomodo" value="Trabalho manual" /><span>My team loses hours to manual work</span></label>
-            </div>
-            <div class="field-err">Pick at least one.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.75rem" data-req>
-            <label>When do you need this live? <span class="req">*</span></label>
+          <div class="field" style="margin-top:1.75rem">
+            <label>When do you need this live? <span class="opt">· optional</span></label>
             <textarea name="prazo" placeholder=""></textarea>
-            <div class="help">The more context, the better. Is a launch, campaign or event driving that date? Tell me.</div>
-            <div class="field-err">I need this answer to move forward.</div>
-          </div>
-
-          <div class="field">
-            <label>How much do you plan to invest in the project? <span class="opt">· optional</span></label>
-            <textarea name="orcamento" placeholder=""></textarea>
-            <div class="help">It helps me show up to the call with a proposal sized for where you are right now.</div>
-          </div>
-
-          <div class="field">
-            <label>Already have a logo, photos or references? <span class="opt">· optional</span></label>
-            <div class="drop" id="drop">
-              <div class="drop-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-              </div>
-              <strong>Attach files</strong>
-              <small>Logo, screenshots and references (up to 3MB total). Heavy files we can go over on the call.</small>
-              <input type="file" id="fileInput" multiple hidden accept="image/*,.pdf,.ai,.psd,.svg,.zip" />
-            </div>
-            <ul class="files" id="fileList"></ul>
+            <div class="help">Is a launch, campaign or event driving that date? Tell me.</div>
           </div>
 
           <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
@@ -453,11 +406,6 @@
               <div class="note">Then that person needs to be on the call. It's what makes the conversation worth it for both of you: a decision on the spot, no secondhand retelling.</div>
             </div>
             <div class="field-err">Pick one option.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.5rem">
-            <label>Anything I should know before our call? <span class="opt">· optional</span></label>
-            <textarea name="livre" placeholder=""></textarea>
           </div>
         </div>
 

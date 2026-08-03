@@ -2,9 +2,6 @@
 (function () {
   'use strict';
 
-  var MAX_FILE_MB = 3;
-  var MAX_TOTAL_MB = 3;
-  var files = [];
   var leadId = null;
   var selectedDay = null;
   var selectedSlot = null;
@@ -42,56 +39,6 @@
       note.classList.toggle('show', r.value !== 'Sozinho' && r.checked);
     });
   });
-
-  /* ---------- Upload ---------- */
-  var drop = document.getElementById('drop');
-  var fileInput = document.getElementById('fileInput');
-  var fileList = document.getElementById('fileList');
-
-  drop.addEventListener('click', function () { fileInput.click(); });
-  drop.addEventListener('dragover', function (e) { e.preventDefault(); drop.classList.add('over'); });
-  drop.addEventListener('dragleave', function () { drop.classList.remove('over'); });
-  drop.addEventListener('drop', function (e) {
-    e.preventDefault(); drop.classList.remove('over');
-    addFiles(e.dataTransfer.files);
-  });
-  fileInput.addEventListener('change', function () { addFiles(fileInput.files); fileInput.value = ''; });
-
-  function addFiles(fl) {
-    Array.prototype.forEach.call(fl, function (f) {
-      if (f.size > MAX_FILE_MB * 1024 * 1024) {
-        showFormMsg('Esse arquivo "' + f.name + '" passou de ' + MAX_FILE_MB + 'MB. Comprime ou manda um link no campo livre.');
-        return;
-      }
-      var total = files.reduce(function (s, x) { return s + x.size; }, 0) + f.size;
-      if (total > MAX_TOTAL_MB * 1024 * 1024) {
-        showFormMsg('O total de anexos passou de ' + MAX_TOTAL_MB + 'MB. Manda os principais agora, o resto na call.');
-        return;
-      }
-      files.push(f);
-    });
-    renderFiles();
-  }
-
-  function renderFiles() {
-    fileList.innerHTML = '';
-    files.forEach(function (f, i) {
-      var li = document.createElement('li');
-      var name = document.createElement('span'); name.className = 'fname'; name.textContent = f.name;
-      var size = document.createElement('span'); size.className = 'fsize'; size.textContent = fmtSize(f.size);
-      var btn = document.createElement('button'); btn.type = 'button'; btn.innerHTML = '&times;';
-      btn.setAttribute('aria-label', 'Remover ' + f.name);
-      btn.addEventListener('click', function () { files.splice(i, 1); renderFiles(); });
-      li.appendChild(name); li.appendChild(size); li.appendChild(btn);
-      fileList.appendChild(li);
-    });
-  }
-
-  function fmtSize(b) {
-    if (b < 1024) return b + ' B';
-    if (b < 1048576) return Math.round(b / 1024) + ' KB';
-    return (b / 1048576).toFixed(1) + ' MB';
-  }
 
   /* ---------- Validação ---------- */
   function validate() {
@@ -167,26 +114,21 @@
     if (leadId) { finishBook(); return; }
 
     var payload = {};
-    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'canais', 'valorcliente', 'prazo', 'orcamento', 'livre']
+    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'prazo']
       .forEach(function (n) {
         var el = form.querySelector('[name="' + n + '"]');
         payload[n] = el ? el.value.trim() : '';
       });
-    ['tipo', 'decisor'].forEach(function (n) {
+    ['tipo', 'decisor', 'faturamento'].forEach(function (n) {
       var el = form.querySelector('input[name="' + n + '"]:checked');
       payload[n] = el ? el.value : '';
     });
-    payload.objetivo = collectMulti('objetivo');
-    payload.incomodo = collectMulti('incomodo');
     payload.tz = tzName();
 
-    encodeFiles(files).then(function (encoded) {
-      payload.anexos = encoded;
-      return fetch('/api/submit-form', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+    fetch('/api/submit-form', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
     })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
       .then(function (res) {
@@ -200,27 +142,6 @@
         showFormMsg('Algo falhou aqui do meu lado. Tenta de novo ou me chama no WhatsApp.');
       });
   });
-
-  function encodeFiles(list) {
-    return Promise.all(list.map(function (f) {
-      return new Promise(function (resolve) {
-        var reader = new FileReader();
-        reader.onload = function () {
-          var s = String(reader.result);
-          resolve({ filename: f.name, mime: f.type || 'application/octet-stream', data: s.split(',')[1] || '' });
-        };
-        reader.onerror = function () { resolve(null); };
-        reader.readAsDataURL(f);
-      });
-    })).then(function (arr) { return arr.filter(Boolean); });
-  }
-
-  function collectMulti(name) {
-    return Array.prototype.map.call(
-      document.querySelectorAll('input[name="' + name + '"]:checked'),
-      function (i) { return i.value; }
-    );
-  }
 
   /* ---------- Transições entre etapas ---------- */
   function setRail(full, short) {

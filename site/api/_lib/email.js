@@ -32,14 +32,9 @@ async function notifyOwner(f, attachments) {
     ['WhatsApp', f.whatsapp],
     ['O que faz', f.oquefaz],
     ['Site atual', f.site || '—'],
-    ['De onde vêm os clientes', f.canais || '—'],
-    ['Valor de um cliente', f.valorcliente || '—'],
-    ['Site precisa fazer', (f.objetivo || []).join(', ')],
-    ['Incômodo', (f.incomodo || []).join(', ')],
-    ['Prazo desejado', f.prazo],
-    ['Orçamento previsto', f.orcamento || '—'],
+    ['Faturamento anual', f.faturamento || '—'],
+    ['Prazo desejado', f.prazo || '—'],
     ['Decisor', f.decisor],
-    ['Observações', f.livre || '—'],
   ];
   var rows = linhas.map(function (l) {
     return '<tr><td style="padding:6px 14px 6px 0;color:#8A8A93;vertical-align:top;white-space:nowrap">' +
