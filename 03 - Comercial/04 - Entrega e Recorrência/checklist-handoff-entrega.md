@@ -38,6 +38,6 @@ ______________________________________
 ## Nota de uso (não faz parte do documento enviado ao cliente)
 
 - Preencha "Guia de edição" só depois de confirmar com o dono se esse bônus entra no projeto
-  (pendência aberta em `metodo-entrega-irbis.md`, F5 — Virada e transferência) — nunca marque "sim" por padrão.
-- Formalizar com assinatura é opcional, mesmo critério de risco da Fase 1 do perfil SITE (`processo-entrega-padrao-irbis.md`): cliente grande/corporativo → formalize; cliente pequeno/direto → registrar em mensagem já basta.
+  (pendência aberta em `processo-entrega-padrao-irbis.md`, seção 'Pontos a definir antes do checkpoint') — nunca marque "sim" por padrão.
+- Formalizar com assinatura é opcional, mesmo critério de risco de `.claude/skills/irbis-entrega-e-recorrencia/SKILL.md` (Fase 1 — Call de briefing): cliente grande/corporativo → formalize; cliente pequeno/direto → registrar em mensagem já basta.
 - Este documento registra que o handoff falado aconteceu.
