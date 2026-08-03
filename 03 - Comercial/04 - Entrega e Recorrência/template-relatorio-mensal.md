@@ -3,7 +3,7 @@ peça: Relatório mensal
 versão: v1.0
 data: 2026-08-03
 mudou da anterior: primeira versão
-sai quando: todo dia {{dia fixo combinado, ex: 5}} do mês, para clientes nos planos Pro e Premium
+sai quando: todo dia {{dia fixo combinado, ex: 5}} do mês, para clientes no plano Pro
 ---
 
 # Relatório mensal — {{projeto}} · {{mês}}/{{ano}}
@@ -17,14 +17,15 @@ sai quando: todo dia {{dia fixo combinado, ex: 5}} do mês, para clientes nos pl
 | {{descrição do pedido 1}} | {{data}} | {{feito/em fila}} |
 | {{descrição do pedido 2}} | {{data}} | {{feito/em fila}} |
 
-Rodadas do pacote usadas: {{n}} de {{limite do plano}}.
+Pedidos atendidos no mês: {{n}} · fila atual: {{n}} · prazo de resposta combinado: 48h úteis.
 
 ## Números do site
 
-{{Se o site tem GA4 configurado: preencher a tabela abaixo com os eventos canônicos
-(call_booked, call_step_view, inbound_form_submit). Se o site não tem GA4 configurado: apagar
-a tabela e escrever só a frase "Analytics ainda não configurado neste site — sem números pra
-reportar este mês."}}
+{{Se o site do cliente tem GA4 configurado: preencher a tabela abaixo com os eventos de
+contato configurados naquele site (ex.: clique em WhatsApp, envio de formulário — variam por
+projeto, não são os mesmos da IRBIS). Se o site não tem GA4 configurado: apagar a tabela e
+escrever só a frase "Analytics ainda não configurado neste site — sem números pra reportar
+este mês."}}
 
 | Métrica | Este mês | Mês anterior | Variação |
 |---|---|---|---|
@@ -55,3 +56,6 @@ Qualquer ajuste ou dúvida, me chama pelo canal combinado.
   mesmo sem números.
 - Guarde uma cópia de cada relatório enviado — é a munição do D+30/D+90/D+150 e do pedido de
   indicação (F7 do método de entrega).
+- Onde guardar a cópia mensal ainda não tem pasta definida no esqueleto do método
+  (`02-plano/` a `07-encerramento/` cobrem o ciclo de entrega, não a recorrência pós-carteira)
+  — decidir com o dono antes do primeiro envio real.
