@@ -7,7 +7,8 @@ description: Use quando for afirmar qualquer fato sobre a IRBIS — serviços, e
 
 Skill anti-catástrofe. Impede 3 erros que destroem a credibilidade da IRBIS:
 
-1. **Vender escopo morto** — branding, identidade visual avulsa, app/dashboard avulso, Web3. A IRBIS não vende nada disso desde 01/jun/2026. ⚠️ **Sistema com IA acoplado à operação do cliente NÃO é escopo morto desde 21/jul/2026, e produto SaaS white-label NÃO é escopo morto desde 28/jul/2026** — ver seção de escopo abaixo.
+0. ⚠️⚠️ **ATUALIZAÇÃO CRÍTICA 04/ago/2026 — SITES SAÍRAM DO ESCOPO.** O dono decidiu, verbatim: "não vou mais oferecer sites nem landing pages". Isso substitui TUDO que esta skill diz sobre "Camada 1 — Sites" abaixo (que era "integralmente válida" até 03/ago). Escopo vendável agora, ponto final: **Soluções com IA** (automações/chatbots/agentes), **Consultoria de IA** (diagnóstico de uso + caminho) e **Sistemas** (CRM/ERP/qualquer sistema sob medida, absorve o antigo "sistema com IA acoplado" e o SaaS white-label). Detalhe completo: memória `project_pivot-sistemas-e-ia-sem-sites-04ago.md`. Pendente sem resposta do dono: preço de cada frente, e destino dos cases de site já entregues (EForce, Odery) — não decida nenhum dos dois sozinho.
+1. **Vender escopo morto** — branding, identidade visual avulsa, app/dashboard avulso, Web3, **e agora sites/landing pages (desde 04/ago/2026)**. ⚠️ Sistemas (CRM/ERP/IA sob medida) e Consultoria de IA são o escopo vendável, não escopo morto — ver item 0 e seção de escopo abaixo.
 2. **Citar case fictício** — Adash nunca foi entregue; Eduboxs não tem site feito.
 3. **Citar número inventado** — só "+R$350k em vendas" (E-Force, grafado "EForce" sem hífen no site e nos docs — busque pelos dois) é real. "+500" e "LTV 1,8x" são inventados.
 
@@ -15,6 +16,7 @@ Skill anti-catástrofe. Impede 3 erros que destroem a credibilidade da IRBIS:
 
 **Hierarquia de verdade (da mais forte para a mais fraca):**
 
+-1. **Decisão do dono de 04/ago/2026 (ver item 0 do bloco acima) — vence TUDO abaixo, inclusive o item 0.** Sites saíram do escopo; a "Camada 1 — Sites" descrita no item 0 e na seção de escopo está morta.
 0. **`docs/visao-irbis.md` (aprovada pelo dono em 21/jul/2026) e `docs/mapa-maturidade-vs-realidade.md` (21-22/jul)** — são a fonte mais recente aprovada por ele e vencem, **apenas nos pontos que tratam** (escopo sites + IA, ICP economia real, ponto A/B, bifurcação de 5 anos), as respostas de 04/jul do item 1. Em tudo o que a visão NÃO trata — prova social, cases, preço, deploy, Adash/Eduboxs —, o item 1 continua valendo integralmente.
 1. Respostas do dono (Nicolas), 04/jul/2026 — citadas nesta skill. Vencem qualquer doc do repo, INCLUSIVE o `.claude/brand-context.md` do item 2 — nunca use o brand-context para contradizer uma resposta citada aqui (ex.: preço, prova social).
 2. `CLAUDE.md` (raiz) + `.claude/brand-context.md`, só nos pontos em que esta skill não registra uma resposta do dono. O brand-context tem mudança não commitada — use sempre a versão do disco (working tree), não a do último commit.
@@ -29,8 +31,9 @@ Se a resposta a qualquer pergunta for "não sei", PARE e rode o comando de verif
 
 | # | Pergunta | Se a resposta for SIM → faça isto |
 |---|---|---|
-| 1 | A frase oferece algo além de SITE (landing page, institucional, e-commerce), **SISTEMA COM IA acoplado à operação do cliente** ou **PRODUTO SAAS WHITE-LABEL** (código único da IRBIS, marca do cliente estampada)? | Corte a oferta. Esses três são o escopo inteiro — ver seção de escopo. Branding, identidade avulsa, app/dashboard avulso e Web3 seguem cortados |
-| 1b | A peça é **comunicação externa** (site, deck, post, anúncio, bio) que reposiciona a IRBIS como empresa de IA? | PARE. O rebranding público está condicionado às 2 assinaturas até ~19/ago/2026. Vender IA em call/proposta já está liberado; **mudar a comunicação pública, não** — precisa do gatilho e da aprovação da pergunta 6 |
+| 1 | A frase oferece SITE ou LANDING PAGE (qualquer variação: institucional, e-commerce)? | Corte a oferta, sempre. Sites saíram do escopo em 04/ago/2026 — ver item 0 acima. Não é mais upsell, não é mais produto |
+| 1c | A frase oferece algo além de **Soluções com IA** (automação/chatbot/agente), **Consultoria de IA** (diagnóstico + caminho) ou **Sistemas** (CRM/ERP/qualquer sistema sob medida)? | Corte a oferta. Essas três são o escopo inteiro desde 04/ago/2026. Branding, identidade avulsa, app/dashboard avulso (fora de Sistemas) e Web3 seguem cortados |
+| 1b | A peça é **comunicação externa** (site, deck, post, anúncio, bio) que reposiciona a IRBIS como empresa de IA/sistemas? | Na prática, liberado — o gatilho de ~19/ago existia pra proteger a venda de sites, que não são mais oferecidos. Ainda assim, confirme com o dono antes de qualquer publicação em massa (pergunta 6) |
 | 2 | Estou citando número de resultado de cliente? | Só "+R$350k em vendas" (E-Force) é afirmável. "+500" e "LTV 1,8x": NUNCA use. "3 semanas de média" como afirmação geral: NÃO afirme — mas pode citar "3 semanas" como o prazo específico do case E-Force (está na página do case) |
 | 3 | Estou citando cliente ou case? | Só E-Force (via pai) e Odery Drums são clientes reais. Adash = fictício, não use. Eduboxs = sem site feito, não use como prova. Lumenform e demais `design/*` = conceitos internos — nunca chame de "cliente" |
 | 4 | O doc de onde tirei o fato é anterior a 01/jun/2026? | Não use como referência (`CLAUDE.md:22`). Confira a tabela "Obsoleto" abaixo |
