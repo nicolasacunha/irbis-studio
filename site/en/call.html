@@ -352,22 +352,6 @@
             <input type="text" name="negocio" placeholder="" />
             <div class="field-err">I need this answer to move forward.</div>
           </div>
-          <div class="field" data-req>
-            <label>What do you do? <span class="req">*</span></label>
-            <textarea name="oquefaz" placeholder=""></textarea>
-            <div class="help">One or two lines, the way you'd explain it to a customer.</div>
-            <div class="field-err">I need this answer to move forward.</div>
-          </div>
-          <div class="field" data-req-group="faturamento">
-            <label>Approximate annual revenue <span class="req">*</span></label>
-            <div class="choices" data-single="faturamento">
-              <label class="choice"><input type="radio" name="faturamento" value="até R$500 mil" /><span>up to R$500k</span></label>
-              <label class="choice"><input type="radio" name="faturamento" value="R$500 mil a R$2 milhões" /><span>R$500k to R$2M</span></label>
-              <label class="choice"><input type="radio" name="faturamento" value="R$2 a R$10 milhões" /><span>R$2M to R$10M</span></label>
-              <label class="choice"><input type="radio" name="faturamento" value="Acima de R$10 milhões" /><span>Above R$10M</span></label>
-            </div>
-            <div class="field-err">Pick one option.</div>
-          </div>
           <div class="field">
             <label>Current website <span class="opt">· if you have one</span></label>
             <input type="url" name="site" placeholder="https://" />
@@ -378,23 +362,7 @@
         <div class="block">
           <div class="block-label">About the project</div>
 
-          <div class="field" data-req-group="tipo">
-            <label>What do you need? <span class="req">*</span></label>
-            <div class="choices" data-single="tipo">
-              <label class="choice"><input type="radio" name="tipo" value="Site" /><span>A website</span></label>
-              <label class="choice"><input type="radio" name="tipo" value="Sistema com IA" /><span>An AI system for my operation</span></label>
-              <label class="choice"><input type="radio" name="tipo" value="Os dois" /><span>Both</span></label>
-            </div>
-            <div class="field-err">Pick one option.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.75rem">
-            <label>When do you need this live? <span class="opt">· optional</span></label>
-            <textarea name="prazo" placeholder=""></textarea>
-            <div class="help">Is a launch, campaign or event driving that date? Tell me.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
+          <div class="field" data-req-group="decisor">
             <label>Who decides this project with you? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
               <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>I decide alone</span></label>
@@ -403,7 +371,13 @@
               <label class="choice"><input type="radio" name="decisor" value="Outra pessoa" /><span>Someone else</span></label>
             </div>
             <div class="conditional" id="decisorNote">
-              <div class="note">Then that person needs to be on the call. It's what makes the conversation worth it for both of you: a decision on the spot, no secondhand retelling.</div>
+              <div class="note">That person needs to be on the call. It's what makes the conversation worth it for both of you: a decision on the spot, no secondhand retelling.</div>
+              <div class="field" style="margin-top:1rem" data-req>
+                <label>That person's name and contact <span class="req">*</span></label>
+                <input type="text" name="decisorContato" placeholder="Name, email or WhatsApp" />
+                <div class="help">I'll use this to include them in the call invite.</div>
+                <div class="field-err">I need this answer to lock in a time for both of you.</div>
+              </div>
             </div>
             <div class="field-err">Pick one option.</div>
           </div>

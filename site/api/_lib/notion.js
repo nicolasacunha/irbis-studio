@@ -18,14 +18,19 @@ async function createLead(f) {
     'Contato': { rich_text: txt(f.nome) },
     'Email': { email: f.email || null },
     'WhatsApp': { phone_number: f.whatsapp || null },
-    'O que faz': { rich_text: txt((f.tipo ? '[' + f.tipo + '] ' : '') + f.oquefaz) },
     'Estágio': { select: { name: 'Formulário preenchido' } },
     'Origem': { select: { name: 'Site' } },
-    'Prazo desejado': { rich_text: txt(f.prazo) },
   };
   if (f.site) props['Site atual'] = { url: f.site };
   if (f.decisor) props['Decisor'] = { select: { name: f.decisor } };
-  if (f.faturamento) props['Faturamento anual'] = { select: { name: f.faturamento } };
+
+  var children = [];
+  if (f.decisorContato) {
+    children.push({
+      object: 'block', type: 'callout',
+      callout: { rich_text: txt('Decisor adicional: ' + f.decisorContato), icon: { emoji: '🤝' } },
+    });
+  }
 
   var res = await fetch(NOTION + '/pages', {
     method: 'POST',
@@ -33,6 +38,7 @@ async function createLead(f) {
     body: JSON.stringify({
       parent: { database_id: process.env.NOTION_CRM_DB_ID },
       properties: props,
+      children: children,
     }),
   });
   var data = await res.json();

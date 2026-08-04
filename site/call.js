@@ -36,7 +36,14 @@
   document.querySelectorAll('input[name="decisor"]').forEach(function (r) {
     r.addEventListener('change', function () {
       var note = document.getElementById('decisorNote');
-      note.classList.toggle('show', r.value !== 'Sozinho' && r.checked);
+      var show = r.value !== 'Sozinho' && r.checked;
+      note.classList.toggle('show', show);
+      if (!show) {
+        var contato = note.querySelector('[name="decisorContato"]');
+        if (contato) contato.value = '';
+        var field = note.querySelector('.field');
+        if (field) field.classList.remove('invalid');
+      }
     });
   });
 
@@ -45,6 +52,8 @@
     var ok = true, firstBad = null;
 
     form.querySelectorAll('[data-req]').forEach(function (field) {
+      var hiddenParent = field.closest('.conditional:not(.show)');
+      if (hiddenParent) { field.classList.remove('invalid'); return; }
       var input = field.querySelector('input, textarea');
       var val = input ? input.value.trim() : '';
       var bad = !val;
@@ -114,12 +123,12 @@
     if (leadId) { finishBook(); return; }
 
     var payload = {};
-    ['nome', 'email', 'whatsapp', 'negocio', 'oquefaz', 'site', 'prazo']
+    ['nome', 'email', 'whatsapp', 'negocio', 'site', 'decisorContato']
       .forEach(function (n) {
         var el = form.querySelector('[name="' + n + '"]');
         payload[n] = el ? el.value.trim() : '';
       });
-    ['tipo', 'decisor', 'faturamento'].forEach(function (n) {
+    ['decisor'].forEach(function (n) {
       var el = form.querySelector('input[name="' + n + '"]:checked');
       payload[n] = el ? el.value : '';
     });

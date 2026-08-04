@@ -30,12 +30,12 @@ async function notifyOwner(f, attachments) {
     ['Contato', f.nome],
     ['Email', f.email],
     ['WhatsApp', f.whatsapp],
-    ['O que faz', f.oquefaz],
     ['Site atual', f.site || '—'],
-    ['Faturamento anual', f.faturamento || '—'],
-    ['Prazo desejado', f.prazo || '—'],
     ['Decisor', f.decisor],
   ];
+  if (f.decisor && f.decisor !== 'Sozinho') {
+    linhas.push(['Contato do decisor', f.decisorContato || '—']);
+  }
   var rows = linhas.map(function (l) {
     return '<tr><td style="padding:6px 14px 6px 0;color:#8A8A93;vertical-align:top;white-space:nowrap">' +
       l[0] + '</td><td style="padding:6px 0;color:#111">' + esc(l[1] || '—') + '</td></tr>';

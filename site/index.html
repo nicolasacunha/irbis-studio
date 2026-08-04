@@ -857,11 +857,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 .proc-item:last-child { border-bottom: none; }
 .proc-item:nth-child(even) .proc-body { transform: translateX(.85rem); }
 
-.proc-ghost {
-  position: absolute; top: .3rem; left: -.3rem;
-  font-family: var(--f-serif); font-weight: 700; font-size: 4.5rem; line-height: 1;
-  color: rgba(38,37,31,.07); z-index: 0; user-select: none; pointer-events: none;
-}
 .proc-ring { width: 4.75rem; height: 4.75rem; position: relative; z-index: 1; flex-shrink: 0; }
 .proc-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .proc-ring .track { fill: none; stroke: var(--s2); stroke-width: 2.5; }
@@ -884,7 +879,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   .proc-item { grid-template-columns: 3.5rem 1fr; gap: .9rem; }
   .proc-ring { width: 3.5rem; height: 3.5rem; }
   .proc-ring .n { font-size: .95rem; }
-  .proc-ghost { font-size: 3rem; }
   .proc-item:nth-child(even) .proc-body { transform: none; }
 }
 
@@ -1821,7 +1815,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
 
       <div class="proc-list">
         <div class="proc-item reveal">
-          <span class="proc-ghost">01</span>
           <div class="proc-ring">
             <svg viewBox="0 0 60 60"><circle class="track" cx="30" cy="30" r="24"/><circle class="fill" cx="30" cy="30" r="24" stroke-dasharray="150.8" stroke-dashoffset="120.6"/></svg>
             <span class="n">01</span>
@@ -1834,7 +1827,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         </div>
 
         <div class="proc-item reveal">
-          <span class="proc-ghost">02</span>
           <div class="proc-ring">
             <svg viewBox="0 0 60 60"><circle class="track" cx="30" cy="30" r="24"/><circle class="fill" cx="30" cy="30" r="24" stroke-dasharray="150.8" stroke-dashoffset="90.5"/></svg>
             <span class="n">02</span>
@@ -1847,7 +1839,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         </div>
 
         <div class="proc-item reveal">
-          <span class="proc-ghost">03</span>
           <div class="proc-ring">
             <svg viewBox="0 0 60 60"><circle class="track" cx="30" cy="30" r="24"/><circle class="fill" cx="30" cy="30" r="24" stroke-dasharray="150.8" stroke-dashoffset="60.3"/></svg>
             <span class="n">03</span>
@@ -1860,7 +1851,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         </div>
 
         <div class="proc-item reveal">
-          <span class="proc-ghost">04</span>
           <div class="proc-ring">
             <svg viewBox="0 0 60 60"><circle class="track" cx="30" cy="30" r="24"/><circle class="fill" cx="30" cy="30" r="24" stroke-dasharray="150.8" stroke-dashoffset="30.2"/></svg>
             <span class="n">04</span>
@@ -1873,7 +1863,6 @@ html.static #h-progress-bar, html.static .h-scroll-hint { display: none; }
         </div>
 
         <div class="proc-item reveal">
-          <span class="proc-ghost">05</span>
           <div class="proc-ring">
             <svg viewBox="0 0 60 60"><circle class="track" cx="30" cy="30" r="24"/><circle class="fill" cx="30" cy="30" r="24" stroke-dasharray="150.8" stroke-dashoffset="0"/><circle class="center-dot" cx="30" cy="30" r="3.5"/></svg>
             <span class="n">05</span>

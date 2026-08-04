@@ -440,22 +440,6 @@
             <input type="text" name="negocio" placeholder="" />
             <div class="field-err">Preciso dessa resposta pra seguir.</div>
           </div>
-          <div class="field" data-req>
-            <label>O que vocês fazem? <span class="req">*</span></label>
-            <textarea name="oquefaz" placeholder=""></textarea>
-            <div class="help">Uma ou duas linhas, do jeito que você explica pra um cliente.</div>
-            <div class="field-err">Preciso dessa resposta pra seguir.</div>
-          </div>
-          <div class="field" data-req-group="faturamento">
-            <label>Faturamento anual aproximado <span class="req">*</span></label>
-            <div class="choices" data-single="faturamento">
-              <label class="choice"><input type="radio" name="faturamento" value="até R$500 mil" /><span>até R$500 mil</span></label>
-              <label class="choice"><input type="radio" name="faturamento" value="R$500 mil a R$2 milhões" /><span>R$500 mil a R$2 milhões</span></label>
-              <label class="choice"><input type="radio" name="faturamento" value="R$2 a R$10 milhões" /><span>R$2 a R$10 milhões</span></label>
-              <label class="choice"><input type="radio" name="faturamento" value="Acima de R$10 milhões" /><span>Acima de R$10 milhões</span></label>
-            </div>
-            <div class="field-err">Escolhe uma opção.</div>
-          </div>
           <div class="field">
             <label>Site atual <span class="opt">· se existir</span></label>
             <input type="url" name="site" placeholder="https://" />
@@ -466,23 +450,7 @@
         <div class="block">
           <div class="block-label">Sobre o projeto</div>
 
-          <div class="field" data-req-group="tipo">
-            <label>O que você precisa? <span class="req">*</span></label>
-            <div class="choices" data-single="tipo">
-              <label class="choice"><input type="radio" name="tipo" value="Site" /><span>Um site</span></label>
-              <label class="choice"><input type="radio" name="tipo" value="Sistema com IA" /><span>Um sistema com IA pra minha operação</span></label>
-              <label class="choice"><input type="radio" name="tipo" value="Os dois" /><span>Os dois</span></label>
-            </div>
-            <div class="field-err">Escolhe uma opção.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.75rem">
-            <label>Pra quando você precisa disso no ar? <span class="opt">· opcional</span></label>
-            <textarea name="prazo" placeholder=""></textarea>
-            <div class="help">Tem lançamento, campanha ou evento puxando essa data? Me conta.</div>
-          </div>
-
-          <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
+          <div class="field" data-req-group="decisor">
             <label>Quem decide esse projeto com você? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
               <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>Decido sozinho</span></label>
@@ -491,7 +459,13 @@
               <label class="choice"><input type="radio" name="decisor" value="Outra pessoa" /><span>Outra pessoa</span></label>
             </div>
             <div class="conditional" id="decisorNote">
-              <div class="note">Então essa pessoa precisa estar na call. É o que faz a conversa valer pra vocês dois: decisão na hora, sem telefone sem fio.</div>
+              <div class="note">Essa pessoa precisa estar na call: é o que faz a conversa valer pra vocês dois, decisão na hora, sem telefone sem fio.</div>
+              <div class="field" style="margin-top:1rem" data-req>
+                <label>Nome e contato dessa pessoa <span class="req">*</span></label>
+                <input type="text" name="decisorContato" placeholder="Nome, email ou WhatsApp" />
+                <div class="help">Uso isso pra já incluir ela no convite da call.</div>
+                <div class="field-err">Preciso dessa resposta pra travar o horário com os dois.</div>
+              </div>
             </div>
             <div class="field-err">Escolhe uma opção.</div>
           </div>
