@@ -450,7 +450,14 @@
         <div class="block">
           <div class="block-label">Sobre o projeto</div>
 
-          <div class="field" data-req-group="decisor">
+          <div class="field" data-req>
+            <label>Qual a principal dor que você quer resolver? <span class="req">*</span></label>
+            <textarea name="dor" placeholder=""></textarea>
+            <div class="help">Uma ou duas linhas já ajudam. Me conta o que está travando.</div>
+            <div class="field-err">Preciso dessa resposta pra seguir.</div>
+          </div>
+
+          <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
             <label>Quem decide esse projeto com você? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
               <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>Decido sozinho</span></label>

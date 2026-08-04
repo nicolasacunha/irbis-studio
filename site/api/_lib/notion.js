@@ -22,6 +22,7 @@ async function createLead(f) {
     'Origem': { select: { name: 'Site' } },
   };
   if (f.site) props['Site atual'] = { url: f.site };
+  if (f.dor) props['Dor principal'] = { rich_text: txt(f.dor) };
   if (f.decisor) props['Decisor'] = { select: { name: f.decisor } };
 
   var children = [];

@@ -362,7 +362,14 @@
         <div class="block">
           <div class="block-label">About the project</div>
 
-          <div class="field" data-req-group="decisor">
+          <div class="field" data-req>
+            <label>What's the main pain point you want to solve? <span class="req">*</span></label>
+            <textarea name="dor" placeholder=""></textarea>
+            <div class="help">One or two lines already help. Tell me what's holding you back.</div>
+            <div class="field-err">I need this answer to move forward.</div>
+          </div>
+
+          <div class="field" style="margin-top:1.5rem" data-req-group="decisor">
             <label>Who decides this project with you? <span class="req">*</span></label>
             <div class="choices" data-single="decisor">
               <label class="choice"><input type="radio" name="decisor" value="Sozinho" /><span>I decide alone</span></label>

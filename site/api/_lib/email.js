@@ -31,6 +31,7 @@ async function notifyOwner(f, attachments) {
     ['Email', f.email],
     ['WhatsApp', f.whatsapp],
     ['Site atual', f.site || '—'],
+    ['Dor principal', f.dor],
     ['Decisor', f.decisor],
   ];
   if (f.decisor && f.decisor !== 'Sozinho') {

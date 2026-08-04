@@ -13,11 +13,11 @@ module.exports = async function handler(req, res) {
 
   var f = {
     nome: str(body.nome), email: str(body.email), whatsapp: str(body.whatsapp),
-    negocio: str(body.negocio), site: str(body.site),
+    negocio: str(body.negocio), site: str(body.site), dor: str(body.dor),
     decisor: str(body.decisor), decisorContato: str(body.decisorContato),
   };
 
-  if (!f.nome || !f.email || !f.whatsapp || !f.negocio) {
+  if (!f.nome || !f.email || !f.whatsapp || !f.negocio || !f.dor) {
     res.status(400).json({ error: 'campos obrigatórios' }); return;
   }
   if (f.decisor && f.decisor !== 'Sozinho' && !f.decisorContato) {
