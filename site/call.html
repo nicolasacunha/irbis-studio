@@ -440,6 +440,16 @@
             <input type="text" name="negocio" placeholder="" />
             <div class="field-err">Preciso dessa resposta pra seguir.</div>
           </div>
+          <div class="field" data-req-group="faturamento">
+            <label>Faturamento anual aproximado <span class="req">*</span></label>
+            <div class="choices" data-single="faturamento">
+              <label class="choice"><input type="radio" name="faturamento" value="até R$500 mil" /><span>até R$500 mil</span></label>
+              <label class="choice"><input type="radio" name="faturamento" value="R$500 mil a R$2 milhões" /><span>R$500 mil a R$2 milhões</span></label>
+              <label class="choice"><input type="radio" name="faturamento" value="R$2 a R$10 milhões" /><span>R$2 a R$10 milhões</span></label>
+              <label class="choice"><input type="radio" name="faturamento" value="Acima de R$10 milhões" /><span>Acima de R$10 milhões</span></label>
+            </div>
+            <div class="field-err">Escolhe uma opção.</div>
+          </div>
           <div class="field">
             <label>Site atual <span class="opt">· se existir</span></label>
             <input type="url" name="site" placeholder="https://" />

@@ -78,7 +78,7 @@
         var el = form.querySelector('[name="' + n + '"]');
         payload[n] = el ? el.value.trim() : '';
       });
-    ['decisor'].forEach(function (n) {
+    ['decisor', 'faturamento'].forEach(function (n) {
       var el = form.querySelector('input[name="' + n + '"]:checked');
       payload[n] = el ? el.value : '';
     });

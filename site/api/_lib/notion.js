@@ -23,6 +23,7 @@ async function createLead(f) {
   };
   if (f.site) props['Site atual'] = { url: f.site };
   if (f.dor) props['Dor principal'] = { rich_text: txt(f.dor) };
+  if (f.faturamento) props['Faturamento anual'] = { select: { name: f.faturamento } };
   if (f.decisor) props['Decisor'] = { select: { name: f.decisor } };
 
   var children = [];
