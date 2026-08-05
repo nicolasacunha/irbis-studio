@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F2EFE9">
+  <title>Contato recebido · IRBIS</title>
+  <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
+
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Besley'; font-style: normal; font-weight: 400 900; font-display: swap;
+      src: url('/Design/fonts/besley-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-display: swap;
+      src: url('/Design/fonts/archivo-latin.woff2') format('woff2');
+    }
+
+    :root {
+      --paper: #F2EFE9;
+      --ink: #26251F;
+      --muted: #6E6C60;
+      --line: #D9D5CB;
+      --green: #4A5D43;
+      --green-dark: #35452F;
+      --soft: #E6E5E1;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--paper); }
+    body {
+      min-height: 100svh; margin: 0; background: var(--paper); color: var(--ink);
+      font-family: 'Archivo', sans-serif; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+
+    .page {
+      min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto;
+      padding: clamp(24px, 3vw, 44px) clamp(22px, 5vw, 78px) clamp(22px, 3vw, 38px);
+    }
+    .topbar, .footer {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: .52rem; text-decoration: none;
+      font-family: 'Besley', serif; font-size: 1rem; font-weight: 800; letter-spacing: .17em;
+    }
+    .brand svg { width: 1.35rem; height: 1rem; fill: currentColor; }
+    .top-status, .footer {
+      color: var(--muted); font-size: .75rem; font-weight: 700; letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .top-status { display: inline-flex; align-items: center; gap: .65rem; }
+    .top-status::before { content: ''; width: .55rem; height: .55rem; border-radius: 50%; background: var(--green); }
+
+    .confirmation {
+      width: min(100%, 1220px); margin: auto; display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+      gap: clamp(56px, 9vw, 150px); align-items: end;
+      padding: clamp(70px, 10vh, 128px) 0 clamp(56px, 8vh, 94px);
+    }
+    h1 {
+      max-width: 830px; margin: 0; font-family: 'Besley', serif;
+      font-size: clamp(3.55rem, 8.2vw, 8.9rem); font-weight: 760; line-height: .88;
+      letter-spacing: -.055em; text-wrap: balance;
+    }
+    h1 .dot { color: var(--green); }
+    .lead {
+      max-width: 580px; margin: clamp(30px, 4vw, 52px) 0 0;
+      color: var(--muted); font-size: clamp(1.05rem, 1.35vw, 1.32rem); line-height: 1.58;
+    }
+    .lead strong { color: var(--ink); font-weight: 650; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 38px; }
+    .action-primary, .action-secondary {
+      min-height: 48px; display: inline-flex; align-items: center; justify-content: center;
+      font-size: .75rem; font-weight: 750; letter-spacing: .11em; text-transform: uppercase;
+      text-decoration: none; transition: transform .24s cubic-bezier(.22, 1, .36, 1), background-color .24s, color .24s;
+    }
+    .action-primary { padding: 0 1.35rem; border-radius: 7px; background: var(--ink); color: var(--paper); }
+    .action-secondary { border-bottom: 1px solid var(--line); }
+    .action-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .action-secondary:hover { color: var(--green-dark); transform: translateX(3px); }
+    .action-primary:focus-visible, .action-secondary:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+
+    .next {
+      align-self: center; border-top: 1px solid var(--ink); padding-top: 18px;
+    }
+    .next-title {
+      margin: 0 0 30px; color: var(--muted); font-size: .75rem; font-weight: 800;
+      letter-spacing: .17em; text-transform: uppercase;
+    }
+    .next ol { list-style: none; margin: 0; padding: 0; }
+    .next li {
+      display: grid; grid-template-columns: 34px 1fr; gap: 14px;
+      padding: 20px 0; border-bottom: 1px solid var(--line);
+    }
+    .step-number { padding-top: .18rem; color: var(--green); font-family: 'Besley', serif; font-size: .75rem; font-weight: 750; }
+    .step-copy { margin: 0; font-size: 1rem; line-height: 1.5; }
+    .step-copy strong { display: block; margin-bottom: .24rem; font-weight: 650; }
+    .step-copy span { color: var(--muted); }
+    .response-time {
+      display: inline-flex; align-items: center; gap: .55rem; margin-top: 26px;
+      color: var(--green-dark); font-size: .75rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase;
+    }
+    .response-time::before { content: ''; width: 26px; height: 1px; background: var(--green); }
+
+    .footer { padding-top: 20px; border-top: 1px solid var(--line); }
+    .footer span:last-child { text-align: right; }
+
+    .message, .next { animation: enter .72s cubic-bezier(.22, 1, .36, 1) both; }
+    .next { animation-delay: .12s; }
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 22px 20px 24px; }
+      .top-status { font-size: .75rem; }
+      .confirmation {
+        grid-template-columns: 1fr; gap: 58px; align-items: start;
+        padding: clamp(66px, 10vh, 104px) 0 60px;
+      }
+      h1 { font-size: clamp(3.5rem, 17vw, 5.4rem); }
+      .lead { margin-top: 28px; }
+      .actions { align-items: flex-start; flex-direction: column; }
+      .action-primary { width: 100%; }
+      .next { align-self: auto; }
+      .footer { align-items: flex-end; font-size: .75rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .message, .next { animation: none; }
+      .action-primary, .action-secondary { transition: none; }
+    }
+  </style>
+
+  <!-- Meta Pixel · lead de contato -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','26926853710268489');fbq('track','PageView');fbq('track','Lead');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=26926853710268489&ev=Lead&noscript=1"></noscript>
+
+  <!-- GA4 · lead de contato -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKHL68G50M"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+    gtag('js',new Date());gtag('config','G-VKHL68G50M');
+    gtag('event','generate_lead',{event_category:'inbound_contact'});
+  </script>
+  <script src="https://t.contentsquare.net/uxa/f628ebc890c4d.js" defer></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="IRBIS, voltar ao site">
+        <svg viewBox="24 30 84 60" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"></path></svg>
+        IRBIS
+      </a>
+      <span class="top-status">Contato recebido</span>
+    </header>
+
+    <section class="confirmation" aria-labelledby="confirmation-title">
+      <div class="message">
+        <h1 id="confirmation-title">Recebi o<br>contexto<span class="dot">.</span></h1>
+        <p class="lead">Vou revisar o que você enviou e <strong>te chamar no WhatsApp em até 1 dia útil.</strong> A próxima mensagem vem direto de mim, Nicolas.</p>
+        <div class="actions">
+          <a class="action-primary" href="/">Voltar ao site</a>
+          <a class="action-secondary" href="https://wa.me/5519991591265" target="_blank" rel="noopener">Falar agora no WhatsApp →</a>
+        </div>
+      </div>
+
+      <aside class="next" aria-label="O que acontece agora">
+        <p class="next-title">O que acontece agora</p>
+        <ol>
+          <li>
+            <span class="step-number">01</span>
+            <p class="step-copy"><strong>Eu reviso o gargalo.</strong><span>Leio o contexto e o tamanho da operação.</span></p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <p class="step-copy"><strong>Você recebe o próximo passo.</strong><span>Respondo no WhatsApp que informou.</span></p>
+          </li>
+        </ol>
+        <span class="response-time">Resposta em até 1 dia útil</span>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>Sistemas · Automação · IA</span>
+      <span>São Paulo · Brasil</span>
+    </footer>
+  </main>
+</body>
+</html>

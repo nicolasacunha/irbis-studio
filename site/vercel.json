@@ -62,6 +62,7 @@
     { "source": "/para/saas",           "destination": "/para/saas.html" },
     { "source": "/para/startups",       "destination": "/para/startups.html" },
     { "source": "/obrigado",            "destination": "/obrigado.html" },
+    { "source": "/recebido",            "destination": "/recebido.html" },
     { "source": "/founder",             "destination": "/founder.html" },
     { "source": "/guia-IA",             "destination": "/guia-ia.html" },
     { "source": "/guia-ia",             "destination": "/guia-ia.html" },
