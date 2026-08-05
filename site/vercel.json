@@ -27,6 +27,7 @@
     { "source": "/cases-hub/odery-erp",    "destination": "/odery-erp",     "permanent": true }
   ],
   "rewrites": [
+    { "source": "/jarvis", "destination": "/jarvis/index.html" },
     { "source": "/odery-crm/(.*)",  "destination": "/cases-hub/odery-crm/$1" },
     { "source": "/odery-crm",       "destination": "/cases-hub/odery-crm/index.html" },
     { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
