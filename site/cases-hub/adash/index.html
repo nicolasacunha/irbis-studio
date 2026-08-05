@@ -362,12 +362,14 @@
     .case-hero-title, .case-cenario-headline, .case-desafios-headline, .case-resultados-headline, .case-cta-headline { font-weight: 700; text-transform: none; letter-spacing: -.015em; line-height: 1.05; }
     .case-stat-num, .case-next-name { font-weight: 700; }
     .nav-logo, #pg-curtain span { font-family: var(--f-serif); font-weight: 800; }
+    .pg-curtain-logo { font-size: clamp(3rem, 10vw, 8rem) !important; line-height: 1; letter-spacing: -.055em !important; }
+    .pg-curtain-logo .acc { position: relative; left: .08em; color: #8FA987; }
   </style>
 </head>
 <body>
 
 <div id="pg-curtain" aria-hidden="true" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
-  <span style="font-size:1.8rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span style="color:#8FA987">.</span></span>
+  <span class="pg-curtain-logo" style="text-transform:uppercase;color:#F2EFE9;opacity:1">IRBIS<span class="acc">.</span></span>
 </div>
 
 <!-- NAV -->
@@ -709,10 +711,23 @@
       return;
     }
 
-    // Entrance: curtain slides up on load
-    gsap.timeline()
-      .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
-      .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+    let handoff = false;
+    try {
+      handoff = sessionStorage.getItem('irbis:case-curtain') === '1';
+      sessionStorage.removeItem('irbis:case-curtain');
+    } catch (error) {}
+
+    // Entrance: the handoff continues the same curtain started on the home page.
+    const entrance = gsap.timeline();
+    if (handoff) {
+      entrance
+        .to(logo,    { opacity: 0, duration: 0.14, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.5, ease: 'power3.inOut' }, '-=0.02');
+    } else {
+      entrance
+        .to(logo,    { opacity: 0, duration: 0.25, ease: 'power2.in' })
+        .to(curtain, { translateY: '-100%', duration: 0.65, ease: 'power3.inOut' }, '+=0.05');
+    }
 
     // Exit: curtain slides down on navigate
     function navigate(href) {

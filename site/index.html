@@ -1355,16 +1355,35 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 ================================================================ */
 #contato { padding: var(--sp-2xl) clamp(.625rem, 1.5vw, 1.125rem) clamp(.625rem, 1.5vw, 1.125rem); background: transparent; }
 .contato-cartao {
-  --bg: #21201B; --s1: #2A2822; --s2: rgba(250,248,244,.16); --text: #F2EFE9; --muted: #9C998A; --accent: #8FA987;
+  --bg: #E6E5E1; --s1: #EEEDEA; --s2: #D3D2CC; --text: #26251F; --muted: #5F5D53; --accent: #4A5D43;
   background: var(--bg);
   color: var(--text);
   border-radius: clamp(16px, 2vw, 28px);
-  border: 1px solid rgba(255,255,255,.06);
+  border: 1px solid var(--s2);
   padding: clamp(2.25rem, 6vw, 5rem);
 }
-.contato-cartao .form-input { color: var(--text); }
-.contato-cartao .form-submit { color: #26251F; background: #F2EFE9; }
+.contato-cartao .form-row { margin-bottom: 1.5rem; }
+.contato-cartao .form-label {
+  color: var(--text); font-size: .9rem; font-weight: 500; letter-spacing: 0;
+}
+.contato-cartao .form-input {
+  min-height: auto; padding: .8rem .95rem; color: var(--text); background: var(--s1);
+  border: 1.5px solid var(--s2); border-radius: 10px;
+  transition: border-color .25s, background .25s;
+}
+.contato-cartao textarea.form-input { min-height: 92px; }
+.contato-cartao .form-input::placeholder { color: #8B887B; font-weight: 400; }
+.contato-cartao .form-input:focus { border-color: var(--accent); background: #FFFEFB; }
+.contato-cartao .form-input:focus-visible { outline: none; }
+.contato-cartao .form-submit {
+  display: inline-flex; width: auto; min-height: auto; padding: .95rem 1.8rem; margin-top: .25rem;
+  border-radius: 10px; color: #F2EFE9; background: #26251F;
+  font-size: .95rem; letter-spacing: .01em; text-transform: none;
+  transition: transform .15s var(--ease-press), background .25s;
+}
 .contato-cartao .form-submit:hover { background: var(--accent); opacity: 1; }
+.contato-cartao .form-input[aria-invalid="true"] { border-color: #A92B33; }
+.contato-cartao .form-field-error { color: #A92B33; }
 .contato-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2193,7 +2212,7 @@ html.no-motion .h-scroll-hint { display: none; }
               <p class="form-field-error" id="f-intent-error">Descreva o processo ou trabalho que está travando.</p>
             </div>
             <p id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
-            <button class="form-submit" type="submit">ENVIAR CONTEXTO</button>
+            <button class="form-submit" type="submit">Enviar contexto</button>
             <p class="contato-promessa" id="form-promise">Nicolas responde em até 1 dia útil e indica o próximo passo.</p>
           </form>
         </div>
@@ -2556,12 +2575,17 @@ html.no-motion .h-scroll-hint { display: none; }
       const logo    = document.getElementById('curtain-logo');
       if (!curtain) return;
       function navigate(href) {
+        const isCaseHandoff = href.includes('odery-crm') || href.includes('adash');
+        try {
+          if (isCaseHandoff) sessionStorage.setItem('irbis:case-curtain', '1');
+          else sessionStorage.removeItem('irbis:case-curtain');
+        } catch (error) {}
         document.body.classList.add('intro-lock');
         gsap.timeline()
           .set(curtain,  { pointerEvents: 'all' })
-          .to(curtain,   { translateY: '0%', duration: 0.55, ease: 'power3.inOut' })
-          .to(logo,      { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.05')
-          .add(() => { window.location.href = href; }, '+=0.15');
+          .to(curtain,   { translateY: '0%', duration: 0.5, ease: 'power3.inOut' })
+          .to(logo,      { opacity: 1, duration: 0.18, ease: 'power2.out' }, '-=0.18')
+          .add(() => { window.location.href = href; });
       }
       /* Só as páginas de destino abaixo têm a cortina de abertura própria
          (curtain + intro timeline). Animar o fechamento e navegar para
