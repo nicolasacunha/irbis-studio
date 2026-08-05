@@ -38,3 +38,7 @@ build/
 
 # === Credenciais do Sistema OS (Fase 0) ===
 /irbis-os/.secrets/
+
+# === Estado local da rotina pSEO ===
+/.pseo/
+**/__pycache__/

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "irbis-13-rotinas",
+      "claim": "13 rotinas de IA operam a própria IRBIS.",
+      "sourceUrl": "https://irbis.com.br/",
+      "status": "public_verified",
+      "tags": ["automacao-com-ia", "tarefas-repetitivas", "empresa-servicos-b2b"],
+      "limitations": "É uma contagem operacional, não uma promessa de economia, receita ou ROI."
+    },
+    {
+      "id": "odery-crm-entrega",
+      "claim": "A IRBIS desenvolveu para a Odery Drums um CRM comercial com funil, agenda, histórico e IA para registro e consulta de contatos.",
+      "sourceUrl": "https://irbis.com.br/odery-crm",
+      "status": "public_verified",
+      "tags": ["crm-sob-medida", "industria", "follow-up-comercial", "registro-de-contatos"],
+      "limitations": "O case comprova a entrega e o mecanismo. Não há resultado financeiro público medido."
+    },
+    {
+      "id": "adash-entrega",
+      "claim": "A IRBIS desenvolveu o Adash para reunir mídia, CRM, conteúdo, relatórios e agente de IA na operação da QG Group.",
+      "sourceUrl": "https://irbis.com.br/adash",
+      "status": "public_verified",
+      "tags": ["sistema-com-ia", "agencia-marketing", "follow-up-comercial"],
+      "limitations": "O case comprova escopo e produto entregue. Não usar como promessa de performance financeira."
+    },
+    {
+      "id": "minuta-em-desenvolvimento",
+      "claim": "O MINUTA está em desenvolvimento para apoiar a A. Cunha Advocacia na geração de peças com fontes conferíveis e revisão humana obrigatória.",
+      "sourceUrl": "https://irbis.com.br/",
+      "status": "public_work_in_progress",
+      "tags": ["sistema-com-ia", "escritorio-advocacia", "geracao-propostas"],
+      "limitations": "Obra em andamento. Não afirmar ganho de tempo, qualidade ou resultado jurídico."
+    }
+  ]
+}

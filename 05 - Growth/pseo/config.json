@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "brand": "IRBIS",
+  "siteUrl": "https://irbis.com.br",
+  "language": "pt-BR",
+  "publishMode": "review_required",
+  "maxAttempts": 3,
+  "parents": [
+    { "id": "sistema-ia", "name": "sistema com IA", "weight": 100, "tags": ["sistema-com-ia"] },
+    { "id": "automacao-ia", "name": "automação com IA", "weight": 95, "tags": ["automacao-com-ia"] },
+    { "id": "crm-sob-medida", "name": "CRM sob medida", "weight": 92, "tags": ["crm-sob-medida"] },
+    { "id": "consultoria-ia", "name": "consultoria de IA", "weight": 78, "tags": ["consultoria-ia"] }
+  ],
+  "verticals": [
+    { "id": "escritorio-advocacia", "name": "escritório de advocacia", "weight": 100, "tags": ["escritorio-advocacia"] },
+    { "id": "industria", "name": "indústria", "weight": 98, "tags": ["industria"] },
+    { "id": "agencia-marketing", "name": "agência de marketing", "weight": 94, "tags": ["agencia-marketing"] },
+    { "id": "distribuidora", "name": "distribuidora", "weight": 82, "tags": ["distribuidora"] },
+    { "id": "escritorio-contabilidade", "name": "escritório de contabilidade", "weight": 80, "tags": ["escritorio-contabilidade"] },
+    { "id": "empresa-servicos-b2b", "name": "empresa de serviços B2B", "weight": 76, "tags": ["empresa-servicos-b2b"] }
+  ],
+  "problems": [
+    { "id": "follow-up-comercial", "name": "o follow-up comercial", "manual": "planilha de follow-up comercial", "weight": 100, "tags": ["follow-up-comercial"] },
+    { "id": "atendimento-whatsapp", "name": "o atendimento no WhatsApp", "manual": "atendimento manual no WhatsApp", "weight": 98, "tags": ["atendimento-whatsapp"] },
+    { "id": "registro-contatos", "name": "o registro de contatos", "manual": "planilha de contatos", "weight": 94, "tags": ["registro-de-contatos"] },
+    { "id": "geracao-propostas", "name": "a geração de propostas", "manual": "modelo manual de proposta", "weight": 90, "tags": ["geracao-propostas"] },
+    { "id": "tarefas-repetitivas", "name": "tarefas repetitivas", "manual": "processo operacional manual", "weight": 86, "tags": ["tarefas-repetitivas"] }
+  ],
+  "patterns": [
+    { "id": "cost", "template": "quanto custa {parent} para {vertical}", "intent": "transacional", "weight": 100 },
+    { "id": "for-vertical", "template": "{parent} para {vertical}", "intent": "comercial", "weight": 84 },
+    { "id": "automate-problem", "template": "como automatizar {problem} em {vertical}", "intent": "comercial", "weight": 96 },
+    { "id": "manual-alternative", "template": "alternativa a {manual} para {vertical}", "intent": "comercial", "weight": 92 },
+    { "id": "best-way", "template": "melhor forma de automatizar {problem} em {vertical}", "intent": "comercial", "weight": 82 },
+    { "id": "system-for-problem", "template": "sistema para automatizar {problem} em {vertical}", "intent": "comercial", "weight": 88 },
+    { "id": "local-service", "template": "{parent} em {location}", "intent": "comercial-local", "weight": 86 }
+  ],
+  "locations": [
+    {
+      "id": "sao-paulo",
+      "name": "São Paulo",
+      "weight": 100,
+      "tags": ["sao-paulo", "atendimento-presencial"],
+      "address": "Avenida Brigadeiro Luís Antônio, 5083, São Paulo - SP",
+      "serviceMode": "Atendimento presencial mediante agendamento."
+    }
+  ],
+  "locationPolicy": "Usar intenção local somente para São Paulo, onde existe atendimento presencial mediante agendamento. Não criar variações para bairros ou cidades sem presença real e não apresentar o endereço como sede ou escritório exclusivo.",
+  "platforms": [
+    { "id": "owned_blog", "name": "Blog IRBIS", "enabled": true, "mode": "review_required" },
+    { "id": "medium", "name": "Medium", "enabled": false, "mode": "draft_only", "reason": "Conta e política editorial ainda não conectadas." },
+    { "id": "substack", "name": "Substack", "enabled": false, "mode": "draft_only", "reason": "Conta e política editorial ainda não conectadas." },
+    { "id": "youtube", "name": "YouTube", "enabled": false, "mode": "draft_only", "reason": "Exige adaptação para roteiro e publicação autenticada." },
+    { "id": "github", "name": "GitHub", "enabled": false, "mode": "draft_only", "reason": "Só será usado quando o conteúdo tiver utilidade técnica real." }
+  ],
+  "qualityGates": {
+    "minimumWords": 900,
+    "minimumSources": 2,
+    "minimumSourceTypes": 2,
+    "minimumFaqItems": 3,
+    "minimumInternalLinks": 1,
+    "requireQuotableSummary": true,
+    "requireFirstPartyEvidence": true,
+    "requireImageKeyword": true,
+    "requireHumanReview": true,
+    "requirePublicUrlVerification": true
+  }
+}

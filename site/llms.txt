@@ -1,43 +1,45 @@
-# IRBIS Estúdio Digital
+# IRBIS · Sistemas, Automação e IA
 
-> Estúdio de webdesign e produto digital localizado no Brasil. Solo com IA integrada — webdesign, branding, dashboards, sistemas digitais e estratégia de negócio entregues por quem executa, sem intermediários.
+> A IRBIS constrói sistemas, automações e operações com IA para empresas da economia real. Nicolas Cunha conduz o diagnóstico, a construção, a validação e a entrega diretamente.
+
+## O que a IRBIS faz
+
+- Soluções com IA: automações, chatbots e agentes aplicados ao atendimento e à operação.
+- Consultoria de IA: diagnóstico do uso atual e plano de ação para a empresa.
+- Sistemas: CRM, ERP e sistemas sob medida, com IA quando ela melhora o processo.
+
+Sites, landing pages, branding, identidade visual, social media, Web3 e motion avulso não fazem parte da oferta atual.
 
 ## Páginas principais
 
-- [Home](https://irbis.com.br/): Estúdio digital solo com IA. Webdesign, branding e sistemas digitais.
-- [Manifesto](https://irbis.com.br/manifesto): Filosofia e posicionamento do estúdio — por que solo com IA e o que isso significa na prática.
-- [O Método](https://irbis.com.br/metodo): Como a IRBIS trabalha — processo, uso de IA, modelo solo e o que o cliente recebe.
-- [Cases](https://irbis.com.br/cases): Portfólio — trabalhos selecionados.
-- [EForce Drums](https://irbis.com.br/eforce): Case — webdesign e motion para a linha EForce da Odery Drums (maior fabricante de baterias do Brasil).
-- [ADASH](https://irbis.com.br/adash): Case — dashboard SaaS full-stack com IA integrada para operações de marketing e vendas.
-- [Sobre](https://irbis.com.br/sobre): Nicolas Cunha — quem executa, como trabalha, clientes e abordagem do estúdio.
-- [ADASH em 3 semanas](https://irbis.com.br/processo/adash): Breakdown técnico completo — arquitetura, decisões de design, integração com IA e aprendizados de construir um SaaS do zero em 3 semanas.
+- [Home](https://irbis.com.br/): oferta atual, processo, cases, FAQ e formulário de contato.
+- [Sobre](https://irbis.com.br/sobre): Nicolas Cunha, responsável pela IRBIS.
+- [Manifesto](https://irbis.com.br/manifesto): princípios de operação da IRBIS.
+- [Método](https://irbis.com.br/metodo): como os projetos avançam do escopo à garantia.
+- [Cases](https://irbis.com.br/cases): índice dos projetos publicados.
 
-## Serviços
+## Cases de sistemas e IA
 
-- Diagnósticos estratégicos: análise de posicionamento, canais e produto
-- Webdesign e desenvolvimento front-end: sites, landing pages, produtos digitais
-- Product design e desenvolvimento de dashboards e SaaS
-- Identidade visual e branding
-- Projetos integrados: da marca ao sistema digital completo
-- Acompanhamento contínuo: presença e resultado ao longo do tempo
+- [Odery CRM](https://irbis.com.br/odery-crm): CRM comercial para a Odery Drums com funil, agenda, histórico e IA para registro e consulta de contatos.
+- [Adash](https://irbis.com.br/adash): sistema que reúne mídia, CRM, conteúdo, relatórios e agente de IA na operação da QG Group.
+- MINUTA: sistema em desenvolvimento para a A. Cunha Advocacia, com geração de peças, fontes conferíveis e revisão humana obrigatória. O projeto ainda não tem resultado público medido.
 
-## Diferencial
+## Evidência e limitações
 
-IRBIS é um estúdio solo que usa IA como estrutura de execução — não como substituto do pensamento estratégico. O resultado é velocidade de agência com custo e comunicação de freelancer. O cliente fala direto com quem constrói.
+- 13 rotinas de IA operam a própria IRBIS. É uma contagem operacional, não uma promessa de ROI.
+- Os cases Odery CRM e Adash comprovam escopo e entrega. A IRBIS não publica ganho financeiro desses sistemas sem medição verificável.
+- O MINUTA está em desenvolvimento. A IRBIS não atribui ganho de tempo, qualidade jurídica ou resultado processual antes da validação.
 
-## Blog
+## Conteúdo
 
-- [60% dos Consumidores Confiam Menos numa Empresa com Site Desatualizado, Aponta Pesquisa de 2026](https://irbis.com.br/blog/confianca-site-desatualizado-pesquisa-2026): Pesquisa com 1.201 consumidores nos EUA mostra que 60% confiam menos numa empresa com site desatualizado. Veja o que muda pro seu negócio.
-- [Agentes de IA Já Compram Sozinhos: Seu Site Está Pronto pra Isso?](https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto): Agentes como o ChatGPT Atlas e o Perplexity Comet já navegam e compram sozinhos. Veja se a estrutura do seu site deixa a tarefa travada ou completa.
-- [Site Bonito Que Não Converte: os 4 Buracos que o Elogio Esconde](https://irbis.com.br/blog/site-bonito-nao-converte): 80,8% dos redesigns começam porque o site não converte. Veja os 4 buracos que separam um site bonito de um site que gera cliente.
-- [Seu Site Converte Menos que a Média: o Motivo Provável é o Celular](https://irbis.com.br/blog/benchmark-conversao-mobile-2026): Micro-empresas convertem 1,87% em média, abaixo da mediana de 2,35%. Veja os números de 2026 sobre mobile e velocidade que explicam essa diferença.
-- [48% das Buscas no Google Já Não Geram Clique: Seu Site Aparece na Resposta?](https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio): Quase metade das buscas no Google já responde sem clique. Veja como estruturar seu site pra continuar sendo encontrado pela IA e por clientes.
-- [5 Sinais de que Já Passou da Hora de Trocar o Site do Seu Negócio](https://irbis.com.br/blog/sinais-hora-trocar-site): O visitante decide o que pensa do seu site em 50 milissegundos. Veja os sinais que aparecem antes do founder perceber que o site virou um problema.
-- [7 Erros de Site que Afastam Clientes antes da Primeira Conversa](https://irbis.com.br/blog/erros-site-startup): Auditei 13 sites de startups brasileiras em uma semana. Os mesmos erros aparecem em quase todos. Veja o que está custando leads antes de você perceber.
+- [Blog](https://irbis.com.br/blog): arquivo de artigos. Parte do acervo anterior a 04/ago/2026 trata de sites e não representa a oferta atual.
+- [Agentes de IA já compram sozinhos](https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto): estrutura digital para agentes de navegação.
+- [Como clientes encontram empresas por IA](https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio): SEO e busca generativa.
 
 ## Contato
 
+- [Diagnóstico](https://irbis.com.br/call)
+- [WhatsApp](https://wa.me/5519991591265)
 - Site: https://irbis.com.br
-- WhatsApp: https://wa.me/5519991591265
-- Localização: Brasil
+- Atendimento remoto para qualquer região.
+- Atendimento presencial mediante agendamento: Avenida Brigadeiro Luís Antônio, 5083, São Paulo - SP.
