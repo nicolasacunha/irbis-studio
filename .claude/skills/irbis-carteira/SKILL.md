@@ -92,8 +92,11 @@ Quando um desses marcos vence (`data_planejada <= hoje` e `data_real` ainda nulo
 rascunho correspondente:
 - **Repitch:** oferta dos 2 pacotes (Básico "Cuidado", Pro "Evolução") como etapa fixa do
   processo, nunca como venda improvisada.
-- **Pulso de satisfação:** duas perguntas de nota. Nota alta → abre janela de depoimento.
-  Nota baixa → uma pergunta a mais, só: "o que faltou pra ser 10?".
+- **Pulso de satisfação:** não gere o rascunho aqui — delegue pra `irbis-pulso-satisfacao`, que
+  executa esse momento (as duas perguntas, o processamento da nota, a ramificação). Delegar,
+  não duplicar: as duas skills gravando o mesmo rascunho em `aprovacoes` gera o risco real do
+  Nicolas aprovar e mandar o pulso duas vezes pro mesmo cliente (achado da revisão de
+  05/ago/2026).
 - **Fim da garantia:** segunda oferta, com dado real: "neste mês você precisou de {{n}}
   ajustes" (conte em `interacoes`, canal relacionado a suporte, se existir; sem dado, omita a
   linha em vez de inventar).

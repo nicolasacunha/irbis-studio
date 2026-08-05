@@ -7,14 +7,25 @@ description: "Provisiona, mantém e desativa o portal público de status do clie
 
 A página pública já existe e está no ar: `irbis-os/painel/app/portal/[slug]/page.tsx`, servida
 em `portal.irbis.com.br/{slug}` via rewrite em `proxy.ts`. Ela lê a tabela `portais` (`id`,
-`pessoa_id`, `slug`, `ativo`, `mensagem`) e, a partir do `pessoa_id`, todos os `projetos` da
-pessoa com seus `marcos`. Esta skill não mexe na página — cuida do que hoje é manual/ad-hoc:
-abrir a linha, manter `mensagem`/`marcos` batendo com a realidade, e fechar quando o cliente sai.
+`pessoa_id`, `slug`, `ativo`, `mensagem`, `titulo`, `url_externa`) e, a partir do `pessoa_id`,
+todos os `projetos` da pessoa com seus `marcos`. Esta skill não mexe na página — cuida do que
+hoje é manual/ad-hoc: abrir a linha, manter `mensagem`/`marcos` batendo com a realidade, e
+fechar quando o cliente sai.
 
-Conexão: `irbis-os/CONEXAO-SUPABASE.md`. Schema:
-`irbis-os/supabase/migrations/20260729010000_portais.sql` — **1 portal por pessoa** (índice
-único em `pessoa_id`), então o portal cobre TODOS os projetos daquela pessoa, não um por
-projeto.
+Conexão: `irbis-os/CONEXAO-SUPABASE.md`. Schema: `20260729010000_portais.sql` (base) +
+`20260729020000_portal_editavel.sql` (`titulo`, `projetos.visivel_portal`) +
+`20260729030000_portal_externo.sql` (`url_externa`) — **1 portal por pessoa** (índice único em
+`pessoa_id`), então o portal cobre TODOS os projetos daquela pessoa, não um por projeto.
+
+**`url_externa` primeiro, sempre.** Antes de tocar em `mensagem`, confira
+`GET /rest/v1/portais?id=eq.<uuid>&select=url_externa`. Se preenchido, o portal dessa pessoa
+NÃO é a página interna gerada — é um link externo anexado (caso real: A. Cunha ADV, página
+estática em `irbis.com.br/portal-acunha`, feita à mão). `page.tsx` hoje **não trata
+`url_externa`** (bug pré-existente registrado à parte, fora do escopo desta skill corrigir) —
+na prática isso significa que atualizar `mensagem` de um portal com `url_externa` preenchido
+não aparece pro cliente em lugar nenhum. Pra esses casos: não atualize `mensagem` por rotina,
+avise no relatório "portal de {{pessoa}} é link externo (`{{url_externa}}`) — atualização de
+status é manual, fora desta skill até o bug do `page.tsx` ser corrigido", e pare.
 
 ## 1. Quando provisionar
 
