@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+<rect width="1080" height="1080" fill="#f7f0e5"/>
+<text x="44" y="92" font-family="Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="7" fill="#2365b8">03 + 04 / TESTE E DEIXE RODAR</text>
+<text x="40" y="260" font-family="Georgia,serif" font-size="110" fill="#1e1e1e">Feche o ciclo.</text>
+<text x="40" y="376" font-family="Georgia,serif" font-size="110" fill="#2365b8">Acompanhe.</text>
+<text x="46" y="490" font-family="Arial,sans-serif" font-size="32" fill="#3b3b3b">Teste com casos reais. Ajuste o que falhar.</text>
+<text x="46" y="535" font-family="Arial,sans-serif" font-size="32" fill="#3b3b3b">Depois, conecte ao ritmo do seu dia.</text>
+<image x="390" y="480" width="760" height="760" preserveAspectRatio="xMidYMid slice" xlink:href="rede-3d.png"/>
+<text x="42" y="970" font-family="cursive" font-size="32" fill="#222">Quatro etapas. Um sistema que continua aprendendo →</text>
+</svg>

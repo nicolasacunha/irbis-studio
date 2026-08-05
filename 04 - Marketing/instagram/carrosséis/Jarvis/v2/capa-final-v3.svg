@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+<image x="0" y="0" width="1080" height="1350" preserveAspectRatio="xMidYMid slice" xlink:href="../assets/capa-fundo-v3.png"/>
+<rect x="0" y="0" width="1080" height="455" fill="#f5efe5" fill-opacity=".96"/>
+<text x="540" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="9" fill="#2867b8">O BUILD EM 4 ETAPAS</text>
+<text x="42" y="238" font-family="Georgia,serif" font-size="142" fill="#151515">Construa seu</text>
+<text x="36" y="382" font-family="Georgia,serif" font-size="157" fill="#2867b8">JARVIS OS</text>
+<path d="M42 407 C300 402 730 412 1038 407" fill="none" stroke="#2867b8" stroke-width="4"/>
+<path d="M42 419 C300 414 730 424 1038 419" fill="none" stroke="#2867b8" stroke-width="3"/>
+<rect x="0" y="435" width="1080" height="72" fill="#f5efe5" fill-opacity=".94"/>
+<text x="540" y="470" text-anchor="middle" font-family="cursive" font-size="30" fill="#171717">no último passo, ele cuida do seu dia inteiro →</text>
+<g font-family="Arial,sans-serif" fill="#1b1b1b"><text x="350" y="590" font-size="25" font-weight="700">CLAUDE CODE</text><text x="350" y="620" font-size="22" fill="#777">o motor</text><text x="350" y="710" font-size="25" font-weight="700">OBSIDIAN</text><text x="350" y="740" font-size="22" fill="#777">a memória</text><text x="350" y="830" font-size="25" font-weight="700">VOZ LOCAL</text><text x="350" y="860" font-size="22" fill="#777">ouvidos + boca</text><text x="350" y="950" font-size="25" font-weight="700">HUD ÚNICO</text><text x="350" y="980" font-size="22" fill="#777">o rosto</text></g>
+<rect x="44" y="1278" width="992" height="40" fill="#f5efe5" fill-opacity=".9"/>
+<text x="540" y="1307" text-anchor="middle" font-family="monospace" font-size="19" letter-spacing="2" fill="#222">FALE. ROTEIE. LEMBRE. REPITA.</text>
+</svg>

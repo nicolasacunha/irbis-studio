@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+<rect width="1080" height="1080" fill="#f7f0e5"/>
+<text x="44" y="92" font-family="Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="7" fill="#2365b8">01 / DEFINA O TRABALHO</text>
+<text x="42" y="260" font-family="Georgia,serif" font-size="112" fill="#1e1e1e">Comece pelo</text>
+<text x="40" y="375" font-family="Georgia,serif" font-size="112" fill="#2365b8">resultado.</text>
+<text x="46" y="490" font-family="Arial,sans-serif" font-size="32" fill="#3b3b3b">Diga o que precisa acontecer,</text>
+<text x="46" y="535" font-family="Arial,sans-serif" font-size="32" fill="#3b3b3b">com que frequência e para quem.</text>
+<g fill="none" stroke="#2365b8" stroke-width="4"><rect x="72" y="690" width="240" height="116"/><rect x="420" y="620" width="240" height="116"/><rect x="768" y="550" width="240" height="116"/><path d="M312 748h108M660 678h108"/></g>
+<g font-family="Arial,sans-serif" font-size="24" fill="#222"><text x="104" y="740">ENTRADA</text><text x="104" y="774" fill="#777">o pedido</text><text x="452" y="670">PROCESSO</text><text x="452" y="704" fill="#777">as regras</text><text x="800" y="600">SAÍDA</text><text x="800" y="634" fill="#777">o resultado</text></g>
+<text x="42" y="995" font-family="cursive" font-size="32" fill="#222">Um bom agente começa com um trabalho claro →</text>
+</svg>

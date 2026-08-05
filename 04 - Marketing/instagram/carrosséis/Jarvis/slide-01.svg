@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+<rect width="1080" height="1080" fill="#f7f0e5"/>
+<text x="540" y="92" text-anchor="middle" font-family="Arial,sans-serif" font-size="29" font-weight="700" letter-spacing="10" fill="#2365b8">O BUILD EM 4 ETAPAS</text>
+<text x="22" y="300" font-family="Georgia,serif" font-size="176" fill="#1e1e1e">Construa</text>
+<text x="15" y="475" font-family="Georgia,serif" font-size="172" fill="#2365b8">seu agente</text>
+<line x1="16" y1="522" x2="1060" y2="522" stroke="#2365b8" stroke-width="4"/>
+<text x="30" y="598" font-family="cursive" font-size="29" fill="#171717">até a última etapa, ele trabalha o dia inteiro →</text>
+<image x="410" y="520" width="760" height="760" preserveAspectRatio="xMidYMid slice" xlink:href="rede-3d.png"/>
+<text x="30" y="948" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#222">CLAUDE CODE</text>
+<text x="30" y="990" font-family="Arial,sans-serif" font-size="29" fill="#777">o motor do build</text>
+</svg>

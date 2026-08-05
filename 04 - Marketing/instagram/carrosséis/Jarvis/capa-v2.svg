@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+  <filter id="paper" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence baseFrequency="0.018" numOctaves="3" seed="7" result="n"/><feColorMatrix in="n" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .11 0"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".18"/></filter>
+</defs>
+<image x="0" y="0" width="1080" height="1320" preserveAspectRatio="none" xlink:href="/Users/nicolascunha/Desktop/Captura de Tela 2026-08-05 às 10.48.02.png"/>
+<rect x="0" y="0" width="1080" height="470" fill="#f8f2e8" filter="url(#paper)"/>
+<rect x="0" y="450" width="440" height="425" fill="#f8f2e8" opacity=".98" filter="url(#paper)"/>
+<text x="540" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="10" fill="#2468bf">O BUILD EM 4 ETAPAS</text>
+<text x="44" y="246" font-family="Georgia,serif" font-size="142" fill="#171717">Construa seu</text>
+<text x="42" y="390" font-family="Georgia,serif" font-size="158" fill="#2468bf">JARVIS OS</text>
+<path d="M46 420 C310 416 690 425 1030 420" fill="none" stroke="#2468bf" stroke-width="4"/>
+<path d="M46 431 C310 427 690 436 1030 431" fill="none" stroke="#2468bf" stroke-width="3"/>
+<text x="540" y="505" text-anchor="middle" font-family="cursive" font-size="31" fill="#171717">no último passo, ele cuida do seu dia inteiro →</text>
+<g filter="url(#shadow)">
+ <rect x="70" y="540" width="230" height="95" rx="18" fill="#fffdf9"/><rect x="70" y="650" width="230" height="95" rx="18" fill="#fffdf9"/><rect x="70" y="760" width="230" height="95" rx="18" fill="#fffdf9"/><rect x="70" y="870" width="230" height="95" rx="18" fill="#fffdf9"/>
+</g>
+<g font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#181818"><text x="323" y="583">CLAUDE CODE</text><text x="323" y="693">OBSIDIAN</text><text x="323" y="803">VOZ LOCAL</text><text x="323" y="913">HUD ÚNICO</text></g>
+<g font-family="Arial,sans-serif" font-size="22" fill="#777"><text x="323" y="614">o motor</text><text x="323" y="724">a memória</text><text x="323" y="834">ouvidos + boca</text><text x="323" y="944">o rosto</text></g>
+<g fill="none" stroke="#2468bf" stroke-width="7" stroke-linecap="round"><path d="M130 582l18-25 12 25 24-15-11 27 27 10-30 7 10 28-25-18-16 25 3-29-29-2 26-13z"/><path d="M134 687h68M134 710h54M134 733h38"/><path d="M130 802h10m15-20v40m17-31v22m18-31v40m18-22v8"/><rect x="133" y="892" width="22" height="22" rx="3"/><rect x="169" y="892" width="22" height="22" rx="3"/><rect x="133" y="926" width="22" height="22" rx="3"/><rect x="169" y="926" width="22" height="22" rx="3"/></g>
+<rect x="0" y="1318" width="1080" height="32" fill="#f8f2e8"/>
+</svg>

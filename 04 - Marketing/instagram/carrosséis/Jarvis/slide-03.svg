@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+<rect width="1080" height="1080" fill="#f7f0e5"/>
+<text x="44" y="92" font-family="Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="7" fill="#2365b8">02 / ENSINE O CONTEXTO</text>
+<text x="42" y="260" font-family="Georgia,serif" font-size="112" fill="#1e1e1e">Dê ao agente</text>
+<text x="40" y="375" font-family="Georgia,serif" font-size="112" fill="#2365b8">um mapa.</text>
+<text x="46" y="490" font-family="Arial,sans-serif" font-size="32" fill="#3b3b3b">Regras, exemplos e fontes confiáveis</text>
+<text x="46" y="535" font-family="Arial,sans-serif" font-size="32" fill="#3b3b3b">reduzem dúvidas e aumentam a autonomia.</text>
+<g stroke="#2365b8" stroke-width="4" fill="#f7f0e5"><circle cx="540" cy="760" r="102" fill="#2365b8"/><circle cx="260" cy="660" r="82"/><circle cx="820" cy="660" r="82"/><circle cx="300" cy="900" r="70"/><circle cx="780" cy="900" r="70"/><path d="M350 676l100 42M630 718l100-42M470 812l-130 55M610 812l130 55"/></g>
+<text x="540" y="770" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#fff">AGENTE</text>
+<g font-family="Arial,sans-serif" font-size="24" text-anchor="middle" fill="#222"><text x="260" y="660">REGRAS</text><text x="820" y="660">FONTES</text><text x="300" y="900">EXEMPLOS</text><text x="780" y="900">LIMITES</text></g>
+<text x="42" y="995" font-family="cursive" font-size="32" fill="#222">Contexto é o que transforma instrução em decisão →</text>
+</svg>
