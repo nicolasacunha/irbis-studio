@@ -1,5 +1,5 @@
 /* POST /api/inbound — form da home ("SEU PROJETO TRAVOU?"). Cria lead inbound
-   no CRM (não qualificado) e avisa o Nicolas. Body: { nome, email, projeto }. */
+   no CRM (não qualificado) e avisa o Nicolas. Body: { nome, whatsapp, faturamento, projeto }. */
 var notion = require('./_lib/notion');
 var email = require('./_lib/email');
 
@@ -10,8 +10,13 @@ module.exports = async function handler(req, res) {
   try { body = await readJson(req); }
   catch (e) { res.status(400).json({ error: 'parse' }); return; }
 
-  var f = { nome: str(body.nome), email: str(body.email), projeto: str(body.projeto) };
-  if (!f.nome || !f.email) { res.status(400).json({ error: 'campos obrigatórios' }); return; }
+  var f = {
+    nome: str(body.nome),
+    whatsapp: str(body.whatsapp),
+    faturamento: str(body.faturamento),
+    projeto: str(body.projeto),
+  };
+  if (!f.nome || !validPhone(f.whatsapp) || !f.faturamento) { res.status(400).json({ error: 'campos obrigatórios' }); return; }
 
   try {
     await notion.createInboundLead(f);
@@ -24,6 +29,10 @@ module.exports = async function handler(req, res) {
 };
 
 function str(v) { return (v == null ? '' : String(v)).trim(); }
+function validPhone(v) {
+  var digits = str(v).replace(/\D/g, '');
+  return digits.length >= 10 && digits.length <= 15;
+}
 
 function readJson(req) {
   return new Promise(function (resolve, reject) {

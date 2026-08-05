@@ -65,7 +65,8 @@ async function notifyOwner(f, attachments) {
 async function notifyInbound(f) {
   var linhas = [
     ['Nome / Marca', f.nome],
-    ['Email', f.email],
+    ['WhatsApp', f.whatsapp],
+    ['Faturamento anual', f.faturamento],
     ['O que precisa', f.projeto || '—'],
   ];
   var rows = linhas.map(function (l) {
@@ -80,7 +81,7 @@ async function notifyInbound(f) {
   await transport().sendMail({
     from: FROM(),
     to: OWNER(),
-    subject: 'Novo contato pelo site: ' + (f.nome || f.email),
+    subject: 'Novo contato pelo site: ' + (f.nome || f.whatsapp),
     html: html,
   });
 }

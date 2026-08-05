@@ -1355,7 +1355,7 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 ================================================================ */
 #contato { padding: var(--sp-2xl) clamp(.625rem, 1.5vw, 1.125rem) clamp(.625rem, 1.5vw, 1.125rem); background: transparent; }
 .contato-cartao {
-  --bg: #E6E5E1; --s1: #EEEDEA; --s2: #D3D2CC; --text: #26251F; --muted: #5F5D53; --accent: #4A5D43;
+  --bg: #E6E5E1; --s1: #EEEDEA; --s2: #D3D2CC; --s3: #C8C1B0; --text: #26251F; --muted: #5F5D53; --accent: #4A5D43;
   background: var(--bg);
   color: var(--text);
   border-radius: clamp(16px, 2vw, 28px);
@@ -1375,6 +1375,21 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 .contato-cartao .form-input::placeholder { color: #8B887B; font-weight: 400; }
 .contato-cartao .form-input:focus { border-color: var(--accent); background: #FFFEFB; }
 .contato-cartao .form-input:focus-visible { outline: none; }
+.contato-cartao .form-choice-field { min-width: 0; padding: 0; border: 0; }
+.contato-cartao .form-choice-field .form-label { margin-bottom: .65rem; }
+.contato-cartao .form-choices { display: flex; flex-wrap: wrap; gap: .6rem; }
+.contato-cartao .form-choice { position: relative; cursor: pointer; }
+.contato-cartao .form-choice input { position: absolute; opacity: 0; pointer-events: none; }
+.contato-cartao .form-choice span {
+  display: block; padding: .6rem .95rem; border: 1.5px solid var(--s2); border-radius: 999px;
+  background: var(--s1); color: var(--muted); font-size: .875rem;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.contato-cartao .form-choice:hover span { border-color: var(--s3); color: var(--text); }
+.contato-cartao .form-choice input:checked + span {
+  border-color: var(--accent); background: rgba(74,93,67,.12); color: var(--text);
+}
+.contato-cartao .form-choice input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 .contato-cartao .form-submit {
   display: inline-flex; width: auto; min-height: auto; padding: .95rem 1.8rem; margin-top: .25rem;
   border-radius: 10px; color: #F2EFE9; background: #26251F;
@@ -2202,10 +2217,20 @@ html.no-motion .h-scroll-hint { display: none; }
               <p class="form-field-error" id="f-name-error">Informe seu nome ou o nome da empresa.</p>
             </div>
             <div class="form-row">
-              <label class="form-label" for="f-email">E-mail · obrigatório</label>
-              <input class="form-input" id="f-email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" inputmode="email" aria-describedby="f-email-error" required>
-              <p class="form-field-error" id="f-email-error">Digite um e-mail válido, como nome@empresa.com.br.</p>
+              <label class="form-label" for="f-whatsapp">WhatsApp · obrigatório</label>
+              <input class="form-input" id="f-whatsapp" name="whatsapp" type="tel" placeholder="(11) 99999-9999" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="f-whatsapp-error" required>
+              <p class="form-field-error" id="f-whatsapp-error">Digite um WhatsApp com DDD.</p>
             </div>
+            <fieldset class="form-row form-choice-field" id="f-revenue-group" aria-describedby="f-revenue-error">
+              <legend class="form-label">Faixa de faturamento anual · obrigatório</legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="faturamento" value="até R$500 mil"><span>até R$500 mil</span></label>
+                <label class="form-choice"><input type="radio" name="faturamento" value="R$500 mil a R$2 milhões"><span>R$500 mil a R$2 milhões</span></label>
+                <label class="form-choice"><input type="radio" name="faturamento" value="R$2 a R$10 milhões"><span>R$2 a R$10 milhões</span></label>
+                <label class="form-choice"><input type="radio" name="faturamento" value="Acima de R$10 milhões"><span>Acima de R$10 milhões</span></label>
+              </div>
+              <p class="form-field-error" id="f-revenue-error">Escolha uma faixa de faturamento.</p>
+            </fieldset>
             <div class="form-row">
               <label class="form-label" for="f-intent">O que está travando · obrigatório</label>
               <textarea class="form-input" id="f-intent" name="projeto" rows="3" placeholder="Ex.: o atendimento para quando saio do WhatsApp e os pedidos ainda entram numa planilha" autocomplete="off" aria-describedby="f-intent-error" required></textarea>
@@ -2733,14 +2758,18 @@ html.no-motion .h-scroll-hint { display: none; }
   const contatoForm = document.getElementById('contato-form');
   const formFields = [
     { input: document.getElementById('f-name'), error: document.getElementById('f-name-error') },
-    { input: document.getElementById('f-email'), error: document.getElementById('f-email-error') },
+    { input: document.getElementById('f-whatsapp'), error: document.getElementById('f-whatsapp-error') },
     { input: document.getElementById('f-intent'), error: document.getElementById('f-intent-error') },
   ];
   const formStatus = document.getElementById('form-status');
+  const revenueGroup = document.getElementById('f-revenue-group');
+  const revenueInputs = [...document.querySelectorAll('input[name="faturamento"]')];
+  const revenueError = document.getElementById('f-revenue-error');
 
   function validateFormField(field) {
     const value = field.input.value.trim();
-    const invalid = !value || (field.input.type === 'email' && !field.input.validity.valid);
+    const phoneDigits = field.input.type === 'tel' ? value.replace(/\D/g, '') : '';
+    const invalid = !value || (field.input.type === 'tel' && (phoneDigits.length < 10 || phoneDigits.length > 15));
     field.input.setAttribute('aria-invalid', String(invalid));
     field.error.classList.toggle('is-visible', invalid);
     return !invalid;
@@ -2752,17 +2781,28 @@ html.no-motion .h-scroll-hint { display: none; }
     });
   });
 
+  function validateRevenue() {
+    const valid = revenueInputs.some(input => input.checked);
+    revenueGroup.setAttribute('aria-invalid', String(!valid));
+    revenueError.classList.toggle('is-visible', !valid);
+    return valid;
+  }
+
+  revenueInputs.forEach(input => input.addEventListener('change', validateRevenue));
+
   contatoForm.addEventListener('submit', async function (e) {
     e.preventDefault();
     const nome   = document.getElementById('f-name').value.trim();
-    const email  = document.getElementById('f-email').value.trim();
+    const whatsapp = document.getElementById('f-whatsapp').value.trim();
     const intent = document.getElementById('f-intent').value.trim();
+    const faturamento = revenueInputs.find(input => input.checked)?.value || '';
     const invalidFields = formFields.filter(field => !validateFormField(field));
-    if (invalidFields.length) {
+    const revenueValid = validateRevenue();
+    if (invalidFields.length || !revenueValid) {
       formStatus.setAttribute('role', 'alert');
       formStatus.textContent = 'Revise os campos indicados antes de enviar.';
       formStatus.classList.add('is-visible');
-      invalidFields[0].input.focus();
+      (invalidFields[0]?.input || revenueInputs[0]).focus();
       return;
     }
     formStatus.setAttribute('role', 'status');
@@ -2770,12 +2810,12 @@ html.no-motion .h-scroll-hint { display: none; }
     formStatus.classList.remove('is-visible');
     const btn = this.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.textContent = 'ENVIANDO...';
+    btn.textContent = 'Enviando...';
     try {
       const res = await fetch('/api/inbound', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email, projeto: intent }),
+        body: JSON.stringify({ nome, whatsapp, faturamento, projeto: intent }),
       });
       if (res.ok) {
         try { sessionStorage.setItem('irbis_conv', 'contact_lead'); } catch (e) {}
@@ -2787,7 +2827,7 @@ html.no-motion .h-scroll-hint { display: none; }
       formStatus.classList.add('is-visible');
       formStatus.focus();
       btn.disabled = false;
-      btn.textContent = 'ENVIAR CONTEXTO';
+      btn.textContent = 'Enviar contexto';
     }
   });
 

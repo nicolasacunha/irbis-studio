@@ -48,16 +48,17 @@ async function createLead(f) {
   return data.id;
 }
 
-/* Cria um lead de INBOUND do form da home (nome, email, o que precisa).
+/* Cria um lead de INBOUND do form da home (nome, WhatsApp, o que precisa).
    Estágio "Contato recebido" = topo de funil, ainda não qualificado. */
 async function createInboundLead(f) {
   var props = {
     'Negócio': { title: txt(f.nome || 'Contato sem nome') },
     'Contato': { rich_text: txt(f.nome) },
-    'Email': { email: f.email || null },
+    'WhatsApp': { phone_number: f.whatsapp || null },
     'Estágio': { select: { name: 'Contato recebido' } },
     'Origem': { select: { name: 'Site' } },
   };
+  if (f.faturamento) props['Faturamento anual'] = { select: { name: f.faturamento } };
   var children = [];
   if (f.projeto) {
     children.push({
