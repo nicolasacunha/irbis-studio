@@ -68,7 +68,16 @@ O campo `pipeline.degrau_escada` é o estado atual. Regra de avanço:
   confirmação de leitura) não conta como resposta.
 - Depois do breakup: `degrau_escada = 'breakup enviado'`, **estágio → `nutricao`** (nunca
   `perdido` por silêncio), `data_proximo_toque = hoje + 30`, `proximo_passo = '1 conteúdo ou
-  case novo, sem pedir nada'`.
+  case novo, sem pedir nada'`. **Antes de fechar o breakup, releia os últimos `interacoes` do
+  lead** (mesma janela do passo 1): se em algum ponto ele já deu um motivo pessoal explícito de
+  timing (saúde, luto, licença, "não é o momento" ligado a vida pessoal — mesmo critério da
+  `irbis-reaproximar-lead-frio` §3) e simplesmente não voltou a responder depois disso, grave
+  `pipeline.motivo_perda = 'momento'` junto com o breakup. Sem esse registro, o lead vira
+  invisível pra reaproximação de cuidado — ele nunca teve proposta decidida pra passar pelo
+  post-mortem da seção 7, e sem `motivo_perda` marcado a `irbis-reaproximar-lead-frio` não o
+  encontra, mesmo com o motivo escrito ali no `resumo` (achado da revisão de 05/ago/2026). Sem
+  motivo explícito no histórico, o breakup segue como estava: silêncio puro, `motivo_perda`
+  fica nulo.
 - Nutrição: toque a cada 30 dias, sempre com valor entregue (conteúdo, case), zero pedido.
 
 Os scripts completos de cada degrau (0 a 5, com a estrutura exata e o que é proibido em cada

@@ -118,6 +118,21 @@ Todas nascem como **"Humano + IA"** (não "100% IA") — preparam/assistem, nunc
 
 Não commitado ainda — 10 diretórios novos em `.claude/skills/irbis-*/`.
 
+## Addendum 05/ago (6) — revisão externa (Fable) verificada, 2 achados corrigidos na hora, 2 pendentes fechados a pedido
+
+Nicolas pediu um prompt de revisão cética pro Fable rodar de forma independente. Resultado: 4 achados, todos verificados por mim ponto a ponto contra schema real/skills vizinhas/`page.tsx` antes de aceitar qualquer um como fato (mesmo padrão de sempre pra output de outra IA) — **os 4 eram reais, nada inventado**.
+
+**Corrigidos na hora da revisão:**
+- `irbis-carteira` §4 gerava o rascunho do pulso ela mesma sem saber que `irbis-pulso-satisfacao` também gera → duplicação real em `aprovacoes`. Fix: carteira agora delega em vez de duplicar.
+- `irbis-portal-cliente` ignorava `url_externa` — caso real: A. Cunha ADV (portal estático, não o `/portal/{slug}` gerado). Fix: a skill agora checa `url_externa` primeiro e não mexe em `mensagem` quando preenchido.
+- Cosmético: job "Reter contexto entre sessões" tinha `skill='expert-brain'` (MCP, não pasta) — corrigido o rótulo no Supabase.
+
+**Os 2 pendentes que tinha deixado pra decisão do Nicolas — ele mandou resolver:**
+- **2 jobs pré-pivot removidos do mapa**: `vendas · "Demo antes do pitch" · irbis-demo-prospect` e `operacoes · "Produzir site de cliente, do briefing ao ar" · irbis-producao-de-site`. Removidos da tabela `agentes_jobs` (não são mais representados como Job To Be Done ativo) — **as skills em si não foram tocadas/apagadas**, seguem existindo pra qualquer trabalho legado em andamento (Odery, EForce etc.), só pararam de aparecer no Company Brain como capacidade atual. Contagem: **35 jobs, 34 com skill** (era 37/36).
+- **Miss silencioso da `irbis-reaproximar-lead-frio` corrigido na raiz, não na skill sintoma**: o problema real estava em `irbis-leads-parados-supabase` — o fluxo de breakup por silêncio nunca gravava `motivo_perda`, mesmo quando o lead já tinha dado um motivo pessoal explícito antes de simplesmente sumir (só o post-mortem de proposta formal gravava esse campo). Fix: `irbis-leads-parados-supabase` §4 agora relê os `interacoes` antes de fechar o breakup e grava `motivo_perda='momento'` se achar motivo pessoal explícito no histórico, mesmo sem proposta decidida. A `irbis-reaproximar-lead-frio` não precisou mudar — o problema nunca foi a busca dela, era o dado que faltava rio acima.
+
+Demo estático e Supabase de produção sincronizados. Nada precisou de deploy novo (dado, não código).
+
 ## Addendum 05/ago (2) — Memória viva ao virar de verdade
 
 Depois de resolver a autenticação do MCP `expert-brain` em `~/.claude.json` (PAT via header, ver memória `mcp-expert-brain-auth-persistente`), testei o mesmo PAT direto por HTTP (igual o `~/.claude/expert-brain-sync/sync.py` já fazia) e confirmei: **o worker do expert-brain é uma API HTTP com Bearer token comum — não depende do MCP do Claude Code estar rodando.** Isso destrava o item que o addendum anterior tinha marcado como "sem decisão": o painel em produção (Vercel) PODE chamar o expert-brain direto, sem sync intermediária.
