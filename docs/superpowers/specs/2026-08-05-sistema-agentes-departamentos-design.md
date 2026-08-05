@@ -93,6 +93,31 @@ As três respostas acima mudaram o escopo: o mapa deixou de ser um artefato HTML
 
 **Como ver:** [os.irbis.com.br/agentes](https://os.irbis.com.br/agentes), login de sempre, "Agentes" na sidebar (grupo "inteligência"). Local também segue disponível via `.claude/launch.json` → `irbis-os-painel`, porta 3017.
 
+## Addendum 05/ago (5) — 10 gaps fecharam, 36 de 37 jobs com skill
+
+Nicolas: "quero uma skill pra automatizar CADA UM desses jobs." Escopo fechado antes de construir: só os 11 gaps do mapa (não recriar as 26 skills que já existem), tudo em paralelo na mesma sessão. Um gap ficou de fora de propósito: **"Formalizar CNPJ e emissão fiscal"** — travado por decisão de negócio ainda não tomada (ver `formalizacao-irbis-sem-cnpj` na memória), não por falta de skill; uma skill não pode automatizar uma decisão que não existe.
+
+Os outros 10 foram desenhados em paralelo por subagentes independentes, cada um lendo o schema real do Supabase, as skills vizinhas (pra não duplicar escopo) e o Manual de Copy antes de escrever — seguindo o padrão exato das 26 skills existentes (`irbis-carteira`/`irbis-cobrar` como referência), não o framework genérico de TDD do `superpowers:writing-skills` (que é pra técnicas reutilizáveis entre projetos, não pra runbooks operacionais de um negócio específico — o padrão do repo já estabelecido venceu):
+
+| Skill nova | Departamento | O que faz |
+|---|---|---|
+| `irbis-reaproximar-lead-frio` | Vendas | detecta lead que recusou por timing/motivo pessoal (não preço), calcula se já passou tempo razoável, prepara reaproximação de cuidado |
+| `irbis-decisao-estrutural` | Negócio | monta dossiê de decisão de posicionamento (pergunta, trade-off, pré-condições) — nunca recomenda um lado |
+| `irbis-revisao-trimestral-oferta` | Negócio | audita taxa de fechamento/objeção de preço do trimestre com dado real — nunca sugere número novo |
+| `irbis-distribuicao-multiplataforma` | Marketing | adapta roteiro já gravado por rede (Reels/TikTok/LinkedIn) — publicação de fato ainda depende de ferramenta não contratada |
+| `irbis-sinal-de-marca` | Marketing | busca web quinzenal por menção real à marca (filtra homônimos) |
+| `irbis-pulso-satisfacao` | Clientes | executa o momento já especificado em `irbis-carteira` — duas perguntas de nota, ramifica depoimento/reparo |
+| `irbis-portal-cliente` | Clientes | provisiona/mantém/desativa o portal público (frontend já existia, faltava o ciclo de vida) |
+| `irbis-qa-handoff` | Operações | roda o checklist real de handoff item a item com veredito honesto, nunca "tá tudo certo" |
+| `irbis-company-brain` | Inteligência | cruza expert-brain + Supabase + repo numa resposta só, com origem citada e contradição reportada — a skill mais importante das 10 |
+| `irbis-pesquisa-mercado` | Inteligência | 4 perguntas fixas mensais sobre o nicho via WebSearch, "nada relevante" é resultado válido |
+
+Todas nascem como **"Humano + IA"** (não "100% IA") — preparam/assistem, nunca decidem ou disparam sozinhas, mesmo padrão das 26 existentes. Banco de produção atualizado direto (`agentes_jobs`, sem migration nova — só `UPDATE` de `skill`/`nivel_automacao` nas 10 linhas), refletido ao vivo em `/agentes` sem precisar de deploy. Demo estático (`sistema-de-agentes/mapa-aurora.html`) sincronizado e republicado como artifact.
+
+**Cobertura final: 36 de 37 Jobs To Be Done da IRBIS têm skill.** O 1 que resta é uma decisão de negócio, não um gap de automação.
+
+Não commitado ainda — 10 diretórios novos em `.claude/skills/irbis-*/`.
+
 ## Addendum 05/ago (2) — Memória viva ao virar de verdade
 
 Depois de resolver a autenticação do MCP `expert-brain` em `~/.claude.json` (PAT via header, ver memória `mcp-expert-brain-auth-persistente`), testei o mesmo PAT direto por HTTP (igual o `~/.claude/expert-brain-sync/sync.py` já fazia) e confirmei: **o worker do expert-brain é uma API HTTP com Bearer token comum — não depende do MCP do Claude Code estar rodando.** Isso destrava o item que o addendum anterior tinha marcado como "sem decisão": o painel em produção (Vercel) PODE chamar o expert-brain direto, sem sync intermediária.
