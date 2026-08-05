@@ -1,0 +1,19 @@
+.DS_Store
+.agents/
+.claude/
+.superpowers/
+.windsurf/
+01 - Marca/
+02 - Projetos/
+03 - Comercial/
+04 - Marketing/
+05 - Growth/
+_rotinas/
+_to_delete/
+carrosseis/
+docs/
+explore/
+irbis-os/
+skills/
+CLAUDE.md
+skills-lock.json

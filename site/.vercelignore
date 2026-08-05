@@ -2,6 +2,7 @@
 .env.local
 .env*.local
 .vercel
+node_modules/
 .agents/
 .impeccable.md
 screenshots/
