@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Receba o setup completo do JARVIS OS em português brasileiro.">
+  <title>JARVIS OS — Setup completo | IRBIS</title>
+  <style>
+    :root {
+      --ink: #21201b;
+      --paper: #f2efe9;
+      --paper-deep: #e5dfd3;
+      --sage: #4a5d43;
+      --sage-dark: #35452f;
+      --line: rgba(33, 32, 27, .2);
+      --muted: #6d6a62;
+      --white: #fffdf8;
+      --radius: 1.35rem;
+      --display: Georgia, 'Times New Roman', serif;
+      --sans: 'Helvetica Neue', Helvetica, sans-serif;
+      --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .13; z-index: 5; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E"); mix-blend-mode: multiply; }
+    a { color: inherit; }
+    .page { min-height: 100dvh; overflow: hidden; }
+    .wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .brand { width: 120px; color: var(--ink); }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--sage); font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow::before { content: ''; width: 22px; height: 1px; background: currentColor; }
+    .top-note { color: var(--muted); font: 12px var(--mono); }
+
+    .hero { display: grid; grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr); gap: 72px; align-items: center; padding: 74px 0 92px; }
+    .hero > *, .capture > * { min-width: 0; }
+    h1 { max-width: 680px; margin: 24px 0 22px; font: 400 clamp(3.7rem, 7vw, 6.9rem)/.88 var(--display); letter-spacing: -.07em; overflow-wrap: anywhere; }
+    h1 em { color: var(--sage); font-style: normal; }
+    .lede { width: 100%; max-width: 510px; margin: 0; color: #57544c; font-size: 19px; line-height: 1.55; overflow-wrap: anywhere; }
+    .proof { display: flex; gap: 18px; align-items: flex-start; margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); max-width: 510px; }
+    .proof-mark { flex: 0 0 auto; width: 34px; height: 34px; border: 1px solid var(--sage); border-radius: 50%; display: grid; place-items: center; color: var(--sage); font: 14px var(--mono); }
+    .proof p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--muted); }
+
+    .hero-art { position: relative; min-height: 660px; margin: 0; border: 1px solid var(--ink); background: var(--paper-deep); overflow: hidden; min-width: 0; }
+    .claude-panel { min-height: 660px; height: 100%; display: grid; align-content: space-between; padding: 30px; background: var(--ink); color: var(--paper); }
+    .claude-panel-top { display: flex; justify-content: space-between; color: #c7d5bb; font: 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .claude-mark { width: 150px; height: 150px; margin: 64px auto 36px; display: grid; place-items: center; border: 1px solid rgba(242,239,233,.35); border-radius: 50%; color: #ef7b45; }
+    .claude-mark svg { width: 104px; height: 104px; }
+    .claude-panel h2 { max-width: 470px; margin: 0; font: 400 clamp(3rem, 6vw, 5rem)/.9 var(--display); letter-spacing: -.06em; }
+    .claude-panel h2 em { color: #c7d5bb; font-style: normal; }
+    .claude-terminal { margin-top: 42px; border-top: 1px solid rgba(242,239,233,.28); padding-top: 16px; color: #c7d5bb; font: 13px/1.75 var(--mono); }
+    .cursor { color: #ef7b45; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .art-label { position: absolute; left: 28px; bottom: 28px; padding: 11px 13px; background: var(--paper); border: 1px solid var(--ink); font: 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .art-stamp { position: absolute; top: 28px; right: 28px; width: 74px; height: 74px; border: 1px solid var(--ink); border-radius: 50%; display: grid; place-items: center; text-align: center; transform: rotate(9deg); font: 10px/1.25 var(--mono); text-transform: uppercase; background: rgba(242,239,233,.82); }
+
+    .capture { display: grid; grid-template-columns: minmax(0, .82fr) minmax(360px, 1.18fr); gap: 60px; align-items: start; padding: 84px 0 100px; border-top: 1px solid var(--line); }
+    .section-title { margin: 0 0 18px; font: 400 clamp(2.5rem, 4.2vw, 4.5rem)/.95 var(--display); letter-spacing: -.055em; }
+    .section-title em { color: var(--sage); font-style: normal; }
+    .copy { max-width: 470px; color: #57544c; font-size: 16px; line-height: 1.6; }
+    .copy strong { color: var(--ink); font-weight: 600; }
+    .stack { margin-top: 38px; border-top: 1px solid var(--ink); }
+    .stack-row { display: grid; grid-template-columns: 46px 1fr; gap: 16px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .stack-num { color: var(--sage); font: 14px var(--mono); }
+    .stack-row span:last-child { font-size: 14px; }
+
+    .form-shell { background: var(--white); border: 1px solid var(--ink); padding: 30px; box-shadow: 12px 12px 0 rgba(74,93,67,.2); }
+    .form-kicker { margin: 0 0 18px; color: var(--sage); font: 700 11px var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+    .form-title { margin: 0 0 8px; font: 400 33px/.98 var(--display); letter-spacing: -.04em; }
+    .form-note { margin: 0 0 26px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .field { display: grid; gap: 8px; margin-bottom: 17px; }
+    label { font: 700 12px var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+    input { width: 100%; border: 1px solid #a6a197; background: #faf8f2; color: var(--ink); padding: 15px 14px; border-radius: 0; font: 16px var(--sans); outline: none; }
+    input:focus { border-color: var(--sage); box-shadow: 0 0 0 3px rgba(74,93,67,.12); }
+    .consent { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); font-size: 12px; line-height: 1.45; margin: 4px 0 22px; }
+    .consent input { width: 16px; height: 16px; padding: 0; accent-color: var(--sage); }
+    .button { width: 100%; border: 1px solid var(--sage-dark); background: var(--sage); color: var(--white); padding: 16px 18px; cursor: pointer; font: 700 13px var(--mono); letter-spacing: .06em; text-transform: uppercase; transition: transform .18s ease, background .18s ease; }
+    .button:hover { background: var(--sage-dark); transform: translateY(-2px); }
+    .button:active { transform: translateY(1px); }
+    .form-foot { margin: 14px 0 0; color: var(--muted); font: 11px/1.45 var(--mono); }
+    .error { min-height: 18px; margin: 8px 0 0; color: #8b3b2f; font-size: 12px; }
+
+    .unlocked { display: none; padding: 84px 0 110px; border-top: 1px solid var(--line); }
+    .unlocked.is-visible { display: block; animation: reveal .55s ease both; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .unlocked-head { display: flex; justify-content: space-between; gap: 30px; align-items: end; margin-bottom: 35px; }
+    .unlocked-head > div { min-width: 0; }
+    .unlocked-head p { max-width: 390px; margin: 0 0 20px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .download { border: 1px solid var(--ink); background: var(--paper-deep); padding: 16px 18px; font: 700 12px var(--mono); text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+    .setup-board { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); background: var(--white); }
+    .setup-item { min-height: 170px; padding: 24px; border-bottom: 1px solid var(--line); }
+    .setup-item:nth-child(odd) { border-right: 1px solid var(--line); }
+    .setup-item:nth-last-child(-n+2) { border-bottom: 0; }
+    .setup-index { color: var(--sage); font: 12px var(--mono); }
+    .setup-item h3 { margin: 25px 0 8px; font: 400 25px var(--display); }
+    .setup-item p { margin: 0; color: var(--muted); font: 13px/1.5 var(--mono); }
+    .footer { border-top: 1px solid var(--line); padding: 23px 0 36px; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font: 11px var(--mono); }
+    .footer a { text-decoration: none; }
+
+    @media (max-width: 820px) {
+      .wrap { width: min(100% - 32px, 600px); }
+      .top-note { display: none; }
+      .hero, .capture { display: block; padding: 52px 0 70px; }
+      .hero > * + *, .capture > * + * { margin-top: 42px; }
+      h1 { max-width: 100%; font-size: clamp(3rem, 13vw, 4.8rem); letter-spacing: -.075em; }
+      .hero-art { min-height: 520px; }
+      .hero-art img { min-height: 520px; }
+      .capture { padding-top: 70px; }
+      .unlocked-head { display: block; }
+      .download { display: inline-block; margin-top: 22px; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(calc(100% - 24px), 420px); }
+      .topbar { padding: 19px 0; }
+      .hero { padding-top: 42px; }
+      .hero, .capture, .hero > div, .lede, .proof { width: 100%; max-width: 100%; }
+      .hero { overflow: hidden; }
+      .hero-art { min-height: 430px; }
+      .hero-art img { min-height: 430px; object-position: 53% 50%; }
+      .form-shell { padding: 22px; box-shadow: 7px 7px 0 rgba(74,93,67,.2); }
+      .setup-board { grid-template-columns: 1fr; }
+      .setup-item:nth-child(odd) { border-right: 0; }
+      .setup-item:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+      .footer { display: block; line-height: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="wrap">
+      <header class="topbar">
+        <a href="#top" aria-label="IRBIS"><img class="brand" src="/jarvis/assets/irbis-horizontal.svg" alt="IRBIS"></a>
+        <div class="top-note">SETUP JARVIS OS / ACESSO GRATUITO</div>
+      </header>
+
+      <section class="hero" id="top">
+        <div>
+          <div class="eyebrow">Você comentou. Agora constrói.</div>
+          <h1>O setup que<br>faz o <em>JARVIS</em><br>rodar.</h1>
+          <p class="lede">O fluxo completo em português:<br>motor, memória, voz e HUD.<br>Você recebe o mapa para montar<br>o sistema no seu computador —<br>com as peças no lugar certo.</p>
+          <div class="proof"><div class="proof-mark">01</div><p>Material direto ao ponto.<br>Sem curso de 40 aulas, sem teoria.</p></div>
+        </div>
+        <figure class="hero-art" aria-label="Claude Code é o motor do setup">
+          <div class="claude-panel">
+            <div class="claude-panel-top"><span>JARVIS OS / 01</span><span>ENGINE ONLINE</span></div>
+            <div>
+              <div class="claude-mark" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><path d="M60 13v94M13 60h94M27 27l66 66M93 27L27 93M43 17l34 86M77 17L43 103M17 43l86 34M103 43L17 77" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></div>
+              <h2>O motor<br>é <em>Claude Code.</em></h2>
+              <div class="claude-terminal">&gt; recebe o pedido<br>&gt; encontra a skill certa<br>&gt; devolve trabalho executado<span class="cursor">_</span></div>
+            </div>
+          </div>
+          <div class="art-stamp">feito<br>para<br>rodar</div>
+        </figure>
+      </section>
+
+      <section class="capture" aria-labelledby="capture-title">
+        <div>
+          <div class="eyebrow">Acesso em 30 segundos</div>
+          <h2 class="section-title" id="capture-title">Receba o setup.<br><em>Agora.</em></h2>
+          <p class="copy">Deixe seu nome e e-mail. <strong>O material é liberado na hora.</strong></p>
+          <div class="stack" aria-label="O que você recebe">
+            <div class="stack-row"><span class="stack-num">01</span><span>Mapa das quatro peças do sistema</span></div>
+            <div class="stack-row"><span class="stack-num">02</span><span>Ordem exata para montar o setup</span></div>
+            <div class="stack-row"><span class="stack-num">03</span><span>Prompts iniciais para colocar em movimento</span></div>
+          </div>
+        </div>
+
+        <div class="form-shell">
+          <p class="form-kicker">Desbloqueie o arquivo</p>
+          <h3 class="form-title">Seu setup começa aqui.</h3>
+          <p class="form-note">Nome e e-mail. Só o necessário para entregar o material e avisar quando sair a próxima parte.</p>
+          <form id="lead-form" novalidate>
+            <div class="field"><label for="name">Nome</label><input id="name" name="name" autocomplete="name" placeholder="Como você gosta de ser chamado" required></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com" required></div>
+            <label class="consent"><input id="consent" name="consent" type="checkbox" required><span>Quero receber o setup e comunicações pontuais da IRBIS. Posso sair quando quiser.</span></label>
+            <button class="button" type="submit">Liberar meu setup</button>
+            <p class="error" id="form-error" role="alert"></p>
+            <p class="form-foot">Seus dados não aparecem publicamente. Nesta prévia, o cadastro fica salvo apenas neste navegador.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="unlocked" id="unlocked" aria-labelledby="unlocked-title">
+        <div class="unlocked-head"><div><div class="eyebrow">Acesso liberado</div><h2 class="section-title" id="unlocked-title">Agora você tem<br><em>o mapa.</em></h2></div><div><p>Seu acesso está liberado. Baixe o manual completo ou continue abaixo.</p><a class="download" href="/jarvis/assets/jarvis-os-setup-ptbr.pdf" download>Baixar o setup completo</a></div></div>
+        <div class="setup-board">
+          <article class="setup-item"><div class="setup-index">01 / MOTOR</div><h3>Claude Code</h3><p>Recebe o pedido e chama a habilidade certa.</p></article>
+          <article class="setup-item"><div class="setup-index">02 / MEMÓRIA</div><h3>Obsidian</h3><p>Guarda o contexto em arquivos que você lê.</p></article>
+          <article class="setup-item"><div class="setup-index">03 / VOZ</div><h3>Local Voice</h3><p>Ouve e responde sem mandar seu áudio para fora.</p></article>
+          <article class="setup-item"><div class="setup-index">04 / ROSTO</div><h3>HUD único</h3><p>Uma tela para vitais, comandos e agenda.</p></article>
+        </div>
+      </section>
+
+      <footer class="footer"><span>IRBIS / NICOLAS CUNHA</span><a href="mailto:nicolas@irbis.com.br">nicolas@irbis.com.br</a></footer>
+    </div>
+  </main>
+  <script>
+    const form = document.querySelector('#lead-form');
+    const error = document.querySelector('#form-error');
+    const unlocked = document.querySelector('#unlocked');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      error.textContent = '';
+      const data = new FormData(form);
+      const name = String(data.get('name') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const consent = data.get('consent');
+      if (name.length < 2) { error.textContent = 'Coloque seu nome para continuar.'; return; }
+      if (!/^\S+@\S+\.\S+$/.test(email)) { error.textContent = 'Confira o e-mail antes de continuar.'; return; }
+      if (!consent) { error.textContent = 'Marque a autorização para receber o setup.'; return; }
+      localStorage.setItem('irbis_setup_lead', JSON.stringify({ name, email, capturedAt: new Date().toISOString() }));
+      form.querySelector('button').textContent = 'Setup liberado';
+      form.querySelector('button').disabled = true;
+      unlocked.classList.add('is-visible');
+      unlocked.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+</html>
