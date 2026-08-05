@@ -88,3 +88,12 @@ export function IconeCarteira({ className }: P) {
     </svg>
   );
 }
+
+export function IconeAgentes({ className }: P) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="12" r="2.5" />
+      <path d="M12 9.5V4M12 20v-5.5M9.8 10.7 5.5 6M18.5 18l-4.3-4.3M9.8 13.3 5.5 18M18.5 6l-4.3 4.3" />
+    </svg>
+  );
+}

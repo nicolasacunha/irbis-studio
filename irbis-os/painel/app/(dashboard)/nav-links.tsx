@@ -11,6 +11,7 @@ import {
   IconeTravas,
   IconeFinanceiro,
   IconeCarteira,
+  IconeAgentes,
 } from "@/lib/icones";
 
 const GRUPOS: {
@@ -37,6 +38,10 @@ const GRUPOS: {
       { href: "/financeiro", label: "Financeiro", Icone: IconeFinanceiro },
       { href: "/carteira", label: "Carteira", Icone: IconeCarteira },
     ],
+  },
+  {
+    titulo: "inteligência",
+    itens: [{ href: "/agentes", label: "Agentes", Icone: IconeAgentes }],
   },
 ];
 

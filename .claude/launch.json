@@ -42,6 +42,18 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3014", "/Users/nicolascunha/Projects/Business/irbis/explore"],
       "port": 3014
+    },
+    {
+      "name": "aurora-agentes",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3016", "/Users/nicolascunha/Projects/Business/irbis/sistema-de-agentes"],
+      "port": 3016
+    },
+    {
+      "name": "irbis-os-painel",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/nicolascunha/Projects/Business/irbis/irbis-os/painel", "--", "--port", "3017"],
+      "port": 3017
     }
   ]
 }
