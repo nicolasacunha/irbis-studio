@@ -11,13 +11,13 @@
   <meta property="og:url" content="https://irbis.com.br/odery-crm">
   <meta property="og:title" content="Odery CRM: operação comercial com IA · Case IRBIS">
   <meta property="og:description" content="Funil, agenda, histórico comercial e IA no mesmo sistema desenvolvido para a Odery Drums.">
-  <meta property="og:image" content="https://irbis.com.br/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.jpg">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="IRBIS">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Odery CRM · Case IRBIS">
   <meta name="twitter:description" content="Operação comercial organizada em um CRM com IA no atendimento.">
-  <meta name="twitter:image" content="https://irbis.com.br/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg">
+  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.jpg">
   <meta name="theme-color" content="#21201B">
   <link rel="icon" type="image/svg+xml" href="Design/icone/favicon-eye.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="Design/icone/apple-touch-icon.png">
@@ -72,6 +72,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { background: var(--paper); scroll-behavior: smooth; }
     body { background: var(--paper); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+    html.no-motion #pg-curtain { display: none !important; }
     a { color: inherit; text-decoration: none; }
     :focus-visible { outline: 2px solid var(--sage); outline-offset: 4px; border-radius: 2px; }
     ::selection { background: var(--sage); color: var(--paper); }
@@ -86,8 +87,8 @@
     .back { display: inline-flex; align-items: center; min-height: 44px; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); transition: color .2s; }
     .back:hover { color: var(--sage); }
     .hero {
-      min-height: 100svh; padding: 9rem 3rem 4rem;
-      display: grid; align-content: end; position: relative; overflow: clip;
+      min-height: min(780px, calc(100svh - 72px)); padding: 8.5rem 3rem 3.5rem;
+      display: grid; align-content: center; position: relative; overflow: clip;
       background: var(--graphite); color: var(--paper);
     }
     .hero::after {
@@ -116,10 +117,38 @@
     .shot-foot strong { color: var(--paper); font-weight: 600; }
     .shot-label { color: #C0D4CA; font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
     .shot-index { font-family: var(--display); color: var(--sage-hi); }
-    .shot-window { position: relative; aspect-ratio: 16 / 7.2; overflow: hidden; background: #F7F6F3; border: 1px solid rgba(242,239,233,.12); border-radius: 9px; }
-    .shot-window img { display: block; max-width: none; height: auto; }
-    .shot-agenda img { width: 200%; transform: translate(-17%, -14%); }
-    .shot-ai img { width: 180%; transform: translate(-39%, -8%); }
+    .shot-window { position: relative; aspect-ratio: 16 / 7.2; overflow: hidden; padding: 8px; background: #D9D5CC; border: 1px solid rgba(242,239,233,.12); border-radius: 9px; }
+    .crm-demo {
+      display: grid; grid-template-rows: auto auto 1fr; height: 100%;
+      padding: 1.25rem; color: var(--ink); background: #F7F6F3;
+    }
+    .crm-demo-toolbar, .crm-demo-legend { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .crm-demo-title { font-size: clamp(.78rem, 1.2vw, 1rem); font-weight: 750; }
+    .crm-demo-view { padding: .45rem .8rem; border-radius: 5px; background: #765306; color: var(--paper-hi); font-size: .72rem; font-weight: 700; letter-spacing: .1em; }
+    .crm-demo-legend { justify-content: flex-start; margin: .9rem 0 1rem; color: var(--muted); font-size: .72rem; }
+    .crm-demo-legend i { width: .55rem; height: .55rem; border-radius: 50%; background: #C9A73B; }
+    .crm-demo-legend i:last-of-type { background: #2E9A55; }
+    .crm-week { display: grid; grid-template-columns: repeat(5, 1fr); gap: .7rem; min-height: 0; }
+    .crm-day { min-width: 0; padding: clamp(.65rem, 1.2vw, 1rem); border: 1px solid var(--line); border-radius: 8px; background: #FEFDFC; }
+    .crm-day.is-today { border-color: #9A6F08; background: #F5F1E8; }
+    .crm-day-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: .7rem; }
+    .crm-day-name { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .1em; }
+    .crm-day-date { font-family: var(--display); font-size: clamp(1rem, 1.7vw, 1.35rem); }
+    .crm-event { display: block; margin-top: .5rem; padding: clamp(.5rem, 1vw, .8rem); border-radius: 6px; background: #D2B04A; color: #45370E; font-size: clamp(.7rem, 1vw, .82rem); font-weight: 650; line-height: 1.3; }
+    .crm-event.is-close { background: #46AD66; color: #082B13; }
+    .ai-demo { display: grid; grid-template-columns: .9fr 1.1fr; gap: 1px; height: 100%; padding: 8px; background: #D9D5CC; color: var(--ink); }
+    .ai-panel { padding: clamp(1rem, 2.4vw, 2rem); background: #F7F6F3; }
+    .ai-label { display: block; margin-bottom: .65rem; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .ai-select, .ai-textarea, .ai-search, .ai-history {
+      display: flex; align-items: center; width: 100%; border: 1px solid var(--line); border-radius: 7px; background: #FEFDFC; color: var(--muted); font-size: clamp(.72rem, 1vw, .88rem);
+    }
+    .ai-select { min-height: 40px; padding: .65rem .8rem; justify-content: space-between; color: var(--ink); }
+    .ai-textarea { min-height: 92px; margin-top: .65rem; padding: .8rem; align-items: flex-start; line-height: 1.5; }
+    .ai-button { display: inline-flex; margin-top: .65rem; padding: .65rem .9rem; border-radius: 6px; background: #765306; color: #FEFDFC; font-size: .72rem; font-weight: 700; }
+    .ai-assist { margin-bottom: 1rem; padding: .85rem; border: 1px solid #A9822D; border-radius: 8px; background: #F5F1E8; }
+    .ai-assist strong { display: block; margin-bottom: .55rem; font-family: var(--display); font-size: clamp(.9rem, 1.3vw, 1.05rem); }
+    .ai-search { min-height: 42px; padding: .7rem .8rem; justify-content: space-between; }
+    .ai-history { min-height: 120px; padding: 1rem; align-items: flex-start; }
     .story { display: grid; grid-template-columns: minmax(12rem, .7fr) minmax(0, 1.3fr); gap: clamp(3rem, 8vw, 8rem); padding: clamp(5rem, 9vw, 8rem) 3rem; }
     .story-label { color: var(--sage); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
     .story h2 { max-width: 14ch; margin-bottom: 2rem; font-family: var(--display); font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 700; line-height: 1; letter-spacing: -.035em; }
@@ -151,7 +180,7 @@
     .next a:hover { color: var(--sage-hi); border-color: var(--sage-hi); }
     @media (max-width: 900px) {
       nav { padding: 0 1.5rem; }
-      .hero { padding: 8rem 1.5rem 3rem; }
+      .hero { min-height: auto; padding: 9rem 1.5rem 3.5rem; }
       .hero-meta { grid-template-columns: 1fr 1fr; }
       .intro, .story { grid-template-columns: 1fr; padding-left: 1.5rem; padding-right: 1.5rem; }
       .shot { margin: 0 1.5rem; }
@@ -164,15 +193,32 @@
       .hero-meta { grid-template-columns: 1fr; gap: 1rem; }
       .flow li, .module { grid-template-columns: 1fr; gap: .5rem; }
       .shot-head, .shot-foot { align-items: flex-start; flex-wrap: wrap; }
-      .shot-window { aspect-ratio: 16 / 9; }
+      .shot-window { aspect-ratio: auto; }
       .shot-foot span:last-child { display: none; }
+      .crm-week { grid-template-columns: repeat(4, 1fr); gap: .35rem; }
+      .crm-day:nth-child(5) { display: none; }
+      .crm-day { padding: .45rem; }
+      .crm-event { padding: .4rem; font-size: .7rem; }
+      .crm-demo { height: auto; min-height: 300px; padding: .85rem; }
+      .crm-demo-legend { margin: .55rem 0; }
+      .ai-demo { grid-template-columns: 1fr; height: auto; }
+      .ai-textarea { min-height: 66px; }
+      .ai-history { min-height: 70px; }
       .next a { width: 100%; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      #pg-curtain { display: none !important; }
+    }
   </style>
   <script defer src="_vercel/insights/script.js"></script>
 </head>
 <body>
+  <noscript><style>#pg-curtain{display:none!important}</style></noscript>
+  <div id="pg-curtain" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#21201B;transform:translateY(0%);display:flex;align-items:center;justify-content:center;pointer-events:none">
+    <span style="font-family:var(--display);font-size:1.8rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#F2EFE9">IRBIS<span style="color:#8FA987">.</span></span>
+  </div>
   <nav aria-label="Navegação do case">
     <a class="brand" href="index.html" aria-label="IRBIS, voltar à página inicial"><svg viewBox="24 30 84 60" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</a>
     <a class="back" href="index.html#cases">← Cases</a>
@@ -197,8 +243,20 @@
 
     <figure class="shot shot-agenda">
       <figcaption class="shot-head"><span class="shot-label">CRM · Agenda semanal</span><span class="shot-index">OD / 01</span></figcaption>
-      <div class="shot-window"><img src="cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg" alt="Agenda semanal do Odery CRM com contatos organizados por prioridade" width="1920" height="1080"></div>
-      <p class="shot-foot"><strong>Próximos passos à vista.</strong><span>Prioridade, data e responsável.</span></p>
+      <div class="shot-window" role="img" aria-label="Agenda semanal do Odery CRM com contatos organizados por prioridade">
+        <div class="crm-demo" aria-hidden="true">
+          <div class="crm-demo-toolbar"><span class="crm-demo-title">27 JUL. — 02 AGO. 2026</span><span class="crm-demo-view">SEMANA</span></div>
+          <div class="crm-demo-legend"><i></i><span>Prioridade</span><i></i><span>Previsão de fechar</span></div>
+          <div class="crm-week">
+            <div class="crm-day"><div class="crm-day-head"><span class="crm-day-name">SEG</span><span class="crm-day-date">27</span></div><span class="crm-event">Retorno urgente</span><span class="crm-event">Enviar proposta</span></div>
+            <div class="crm-day"><div class="crm-day-head"><span class="crm-day-name">TER</span><span class="crm-day-date">28</span></div><span class="crm-event">Contato comercial</span></div>
+            <div class="crm-day is-today"><div class="crm-day-head"><span class="crm-day-name">QUA</span><span class="crm-day-date">29</span></div><span class="crm-event">Follow-up</span><span class="crm-event">Obter resposta</span></div>
+            <div class="crm-day"><div class="crm-day-head"><span class="crm-day-name">QUI</span><span class="crm-day-date">30</span></div><span class="crm-event is-close">Previsão de fechar</span></div>
+            <div class="crm-day"><div class="crm-day-head"><span class="crm-day-name">SEX</span><span class="crm-day-date">31</span></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="shot-foot"><strong>Próximos passos à vista.</strong><span>Reconstituição da interface, sem dados comerciais.</span></p>
     </figure>
 
     <section class="story" aria-labelledby="story-title">
@@ -217,8 +275,22 @@
 
     <figure class="shot shot-ai">
       <figcaption class="shot-head"><span class="shot-label">CRM · IA no atendimento</span><span class="shot-index">OD / 02</span></figcaption>
-      <div class="shot-window"><img src="cases-hub/odery-erp/assets/ODERY-ERP-IA.jpg" alt="Consulta ao histórico de contatos com IA no Odery CRM" loading="lazy" width="1920" height="1080"></div>
-      <p class="shot-foot"><strong>Contexto antes do próximo contato.</strong><span>Busca no histórico registrado.</span></p>
+      <div class="shot-window" role="img" aria-label="Registro de contato e consulta ao histórico com IA no Odery CRM">
+        <div class="ai-demo" aria-hidden="true">
+          <div class="ai-panel">
+            <span class="ai-label">Registrar contato</span>
+            <span class="ai-select">Ligação <span>⌄</span></span>
+            <span class="ai-textarea">Conte o que aconteceu. A IA organiza o registro e prepara o próximo passo.</span>
+            <span class="ai-button">Registrar com IA</span>
+          </div>
+          <div class="ai-panel">
+            <div class="ai-assist"><strong>Pergunte ao histórico</strong><span class="ai-search">O cliente pediu cotação de frete? <span>Buscar</span></span></div>
+            <span class="ai-label">Histórico do cliente</span>
+            <span class="ai-history">Os contatos registrados aparecem aqui em ordem cronológica.</span>
+          </div>
+        </div>
+      </div>
+      <p class="shot-foot"><strong>Contexto antes do próximo contato.</strong><span>Reconstituição da interface, sem dados comerciais.</span></p>
     </figure>
 
     <section class="modules" aria-labelledby="modules-title">
@@ -240,5 +312,52 @@
     <div><span class="next-label">Próximo passo</span><h2>Mapear sua operação.</h2><p>No diagnóstico, identificamos o processo, os dados disponíveis e o menor escopo capaz de entrar em uso.</p></div>
     <a href="call.html">Agendar diagnóstico →</a>
   </footer>
+  <script src="vendor/gsap.min.js" onerror="document.documentElement.classList.add('no-motion')"></script>
+  <script>
+  (function () {
+    const curtain = document.getElementById('pg-curtain');
+    const logo = curtain ? curtain.querySelector('span') : null;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!curtain || !window.gsap || reduced) {
+      if (curtain) curtain.style.display = 'none';
+      return;
+    }
+
+    gsap.timeline()
+      .to(logo, { opacity: 0, duration: .22, ease: 'power2.in' })
+      .to(curtain, { translateY: '-100%', duration: .62, ease: 'power3.inOut' }, '+=.04')
+      .from('.hero h1', { y: 34, opacity: 0, duration: .62, ease: 'power3.out' }, '-=.26')
+      .from('.hero-kicker', { y: 22, opacity: 0, duration: .48, ease: 'power3.out' }, '-=.42')
+      .from('.hero-meta > div', { y: 16, opacity: 0, duration: .4, stagger: .07, ease: 'power3.out' }, '-=.3');
+
+    function navigate(href) {
+      document.body.style.overflow = 'hidden';
+      gsap.set(curtain, { translateY: '-100%', pointerEvents: 'all' });
+      gsap.set(logo, { opacity: 0 });
+      gsap.timeline()
+        .to(curtain, { translateY: '0%', duration: .5, ease: 'power3.inOut' })
+        .to(logo, { opacity: 1, duration: .26, ease: 'power2.out' }, '-=.04')
+        .add(function () { window.location.href = href; }, '+=.12');
+    }
+
+    document.querySelectorAll('a[href]').forEach(function (anchor) {
+      if (anchor.target === '_blank') return;
+      const href = anchor.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+      anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        navigate(href);
+      });
+    });
+
+    window.addEventListener('pageshow', function (event) {
+      if (!event.persisted) return;
+      gsap.set(curtain, { translateY: '-100%', pointerEvents: 'none' });
+      gsap.set(logo, { opacity: 0 });
+      document.body.style.overflow = '';
+    });
+  })();
+  </script>
 </body>
 </html>

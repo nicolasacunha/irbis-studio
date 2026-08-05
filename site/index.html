@@ -858,16 +858,8 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   overflow: hidden;
   border: 1px solid rgba(242,239,233,.12);
   border-radius: 8px;
-  background: #F7F6F3;
-}
-.case-ed-foto.is-crm-showcase .case-shot-window img {
-  width: 200%;
-  max-width: none;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: initial;
-  transform: translate(-17%, -14%);
-  transition: transform .6s var(--ease-out);
+  padding: 6px;
+  background: #D9D5CC;
 }
 .case-shot-note {
   font-size: .72rem;
@@ -875,6 +867,53 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   color: #9C998A;
 }
 .case-shot-note strong { color: #F2EFE9; font-weight: 600; }
+.crm-demo {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 100%;
+  padding: 1rem;
+  color: #26251F;
+  background: #F7F6F3;
+  font-family: var(--f);
+}
+.crm-demo-toolbar,
+.crm-demo-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.crm-demo-title { font-size: .74rem; font-weight: 750; letter-spacing: .02em; }
+.crm-demo-view {
+  padding: .35rem .65rem;
+  border-radius: 4px;
+  background: #765306;
+  color: #FAF8F4;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+.crm-demo-legend { justify-content: flex-start; margin: .65rem 0 .7rem; color: #6E6C60; font-size: .7rem; }
+.crm-demo-legend i { width: .45rem; height: .45rem; border-radius: 50%; background: #C9A73B; }
+.crm-demo-legend i:last-of-type { background: #2E9A55; }
+.crm-week { display: grid; grid-template-columns: repeat(5, 1fr); gap: .45rem; min-height: 0; }
+.crm-day { min-width: 0; padding: .55rem; border: 1px solid #E1DCD0; border-radius: 7px; background: #FEFDFC; }
+.crm-day.is-today { border-color: #9A6F08; background: #F5F1E8; }
+.crm-day-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: .5rem; }
+.crm-day-name { color: #6E6C60; font-size: .7rem; font-weight: 700; letter-spacing: .08em; }
+.crm-day-date { font-family: var(--f-serif); font-size: 1rem; }
+.crm-event { display: block; margin-top: .35rem; padding: .5rem; border-radius: 5px; background: #D2B04A; color: #45370E; font-size: .7rem; font-weight: 650; line-height: 1.25; }
+.crm-event.is-close { background: #46AD66; color: #082B13; }
+@media (max-width: 640px) {
+  .case-ed-foto.is-crm-showcase { aspect-ratio: 16 / 13; }
+  .crm-week { grid-template-columns: repeat(4, 1fr); gap: .3rem; }
+  .crm-day:nth-child(5) { display: none; }
+  .crm-day { padding: .4rem; }
+  .crm-demo { padding: .6rem; }
+  .crm-event { margin-top: .2rem; padding: .3rem; font-size: .62rem; }
+  .crm-event + .crm-event { display: none; }
+  .crm-demo-legend { display: none; }
+}
 .case-port-list {
   margin-top: clamp(3rem, 7vw, 6rem);
   border-top: 1px solid var(--s2);
@@ -922,7 +961,6 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 .case-port-link:hover { color: var(--accent); }
 @media (hover: hover) and (pointer: fine) {
   .case-ed-foto:hover img { transform: scale(1.03); }
-  .case-ed-foto.is-crm-showcase:hover .case-shot-window img { transform: translate(-17%, -14%) scale(1.025); }
 }
 
 /* ================================================================
@@ -1632,6 +1670,8 @@ html.no-motion .h-scroll-hint { display: none; }
   .panel-divisa { display: none; }
 
   .mid-cta { padding: 2rem 1.5rem; }
+  .mid-cta-acts { width: 100%; flex-direction: column; align-items: stretch; flex-shrink: 1; }
+  .mid-wpp { padding: .75rem 0; text-align: center; }
 
   #faq { padding: 2rem 1.5rem; }
   .faq-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1822,8 +1862,18 @@ html.no-motion .h-scroll-hint { display: none; }
             <span class="case-shot-label">CRM · Agenda semanal</span>
             <span class="case-shot-index">OD / 01</span>
           </span>
-          <span class="case-shot-window">
-            <img src="/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg" alt="Agenda semanal do Odery CRM com contatos organizados por prioridade" loading="lazy" width="1920" height="1080">
+          <span class="case-shot-window" role="img" aria-label="Agenda semanal do Odery CRM com contatos organizados por prioridade">
+            <span class="crm-demo" aria-hidden="true">
+              <span class="crm-demo-toolbar"><span class="crm-demo-title">27 JUL. — 02 AGO. 2026</span><span class="crm-demo-view">SEMANA</span></span>
+              <span class="crm-demo-legend"><i></i><span>Prioridade</span><i></i><span>Previsão de fechar</span></span>
+              <span class="crm-week">
+                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">SEG</span><span class="crm-day-date">27</span></span><span class="crm-event">Retorno urgente</span><span class="crm-event">Enviar proposta</span></span>
+                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">TER</span><span class="crm-day-date">28</span></span><span class="crm-event">Contato comercial</span></span>
+                <span class="crm-day is-today"><span class="crm-day-head"><span class="crm-day-name">QUA</span><span class="crm-day-date">29</span></span><span class="crm-event">Follow-up</span><span class="crm-event">Obter resposta</span></span>
+                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">QUI</span><span class="crm-day-date">30</span></span><span class="crm-event is-close">Previsão de fechar</span></span>
+                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">SEX</span><span class="crm-day-date">31</span></span></span>
+              </span>
+            </span>
           </span>
           <span class="case-shot-note" aria-hidden="true"><strong>Próximos passos à vista.</strong><span>Prioridade, data e responsável.</span></span>
         </a>
@@ -2517,7 +2567,11 @@ html.no-motion .h-scroll-hint { display: none; }
          (curtain + intro timeline). Animar o fechamento e navegar para
          qualquer outra página deixa a cortina "presa": ela cobre a tela,
          mas a página seguinte não tem o script que a reabre. */
-      const CURTAIN_PAGES = ['sobre.html', '/sobre', '/call', 'call.html', '/en'];
+      const CURTAIN_PAGES = [
+        'sobre.html', '/sobre', '/call', 'call.html', '/en',
+        'cases-hub/odery-crm/index.html', '/odery-crm',
+        'cases-hub/adash/index.html', '/adash'
+      ];
       document.querySelectorAll('a[href]').forEach(a => {
         if (a.target === '_blank') return;
         const href = a.getAttribute('href');
