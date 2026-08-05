@@ -39,7 +39,7 @@
 }
 .roots path {
   fill: none;
-  stroke: var(--linha-n);
+  stroke: color-mix(in srgb, var(--papel-n) 6%, transparent);
   stroke-width: 1;
 }
 
@@ -92,19 +92,21 @@
 .title {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(20px, 2.6vw, 30px);
-  line-height: 1.15;
-  margin: 0 0 8px;
+  font-size: clamp(27px, 4.1vw, 49px);
+  line-height: 1.04;
+  letter-spacing: -0.008em;
+  margin: 0 0 10px;
   text-wrap: balance;
-  max-width: 46ch;
+  max-width: 19ch;
+  color: color-mix(in srgb, var(--papel-n) 96%, var(--salvia-bright) 4%);
 }
 
 .lede {
-  margin: 0;
+  margin: 6px 0 0;
   font-size: 13.5px;
   line-height: 1.55;
   color: color-mix(in srgb, var(--papel-n) 68%, transparent);
-  max-width: 42ch;
+  max-width: 30ch;
 }
 
 .legend {

@@ -22,7 +22,7 @@ export const DEPARTAMENTOS: {
   { id: "marketing", nome: "Marketing", tagline: "Voz, conteúdo e sinal de intenção de compra.", angulo: 124, raio: 0.76 },
   { id: "clientes", nome: "Clientes", tagline: "O que mantém quem já pagou, pagando de novo.", angulo: 181, raio: 0.6 },
   { id: "backoffice", nome: "Back Office", tagline: "Dinheiro entrando, saindo, e sob controle.", angulo: 236, raio: 0.79 },
-  { id: "operacoes", nome: "Operações", tagline: "Da assinatura ao projeto no ar.", angulo: 292, raio: 0.68 },
+  { id: "operacoes", nome: "Operações", tagline: "Da assinatura ao projeto no ar.", angulo: 292, raio: 0.5 },
   { id: "inteligencia", nome: "Inteligência", tagline: "A memória que amarra os outros seis.", angulo: 338, raio: 0.46 },
 ];
 

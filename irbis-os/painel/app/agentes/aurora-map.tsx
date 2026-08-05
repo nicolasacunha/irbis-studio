@@ -177,7 +177,6 @@ export function AuroraMap({
   const auroraCanvasRef = useRef<HTMLCanvasElement>(null);
   const rootsRef = useRef<SVGSVGElement>(null);
   const treeCanvasRefs = useRef<Record<string, HTMLCanvasElement | null>>({});
-  const starsRef = useRef<[number, number, number, number][] | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [radialParams, setRadialParams] = useState({ maxR: 44, centerY: 50 });
   const [firstLook, setFirstLook] = useState(true);
@@ -229,24 +228,17 @@ export function AuroraMap({
       svg.setAttribute("viewBox", `0 0 ${rect.width} ${rect.height}`);
       while (svg.firstChild) svg.removeChild(svg.firstChild);
       const svgns = "http://www.w3.org/2000/svg";
+      // Linha reta e quase invisível — só o suficiente pra sugerir pertencimento, sem
+      // parecer diagrama de fluxo/rede. O antigo bend em curva lia como grafo técnico
+      // (achado do Nicolas: "muito genérico" — cliché de visual de IA). Ver design doc.
       DEPARTAMENTOS.forEach((dept) => {
         const pos = positions[dept.id];
         const x1 = rect.width * 0.5;
         const y1 = rect.height * 0.5;
         const x2 = (pos.x / 100) * rect.width;
         const y2 = (pos.y / 100) * rect.height;
-        const mx = (x1 + x2) / 2;
-        const my = (y1 + y2) / 2;
-        const dx = x2 - x1;
-        const dy = y2 - y1;
-        const nx = -dy;
-        const ny = dx;
-        const norm = Math.sqrt(nx * nx + ny * ny) || 1;
-        const bend = 26;
-        const cx = mx + (nx / norm) * bend;
-        const cy = my + (ny / norm) * bend;
         const path = document.createElementNS(svgns, "path");
-        path.setAttribute("d", `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+        path.setAttribute("d", `M ${x1} ${y1} L ${x2} ${y2}`);
         svg.appendChild(path);
       });
     }
@@ -269,6 +261,25 @@ export function AuroraMap({
     let h = 0;
     let rafId = 0;
 
+    // Textura de fundo real do painel (`.grid-paper` em globals.css), não estrelas —
+    // aleatório-espacial é o clichê universal de "visual de IA"; papel milimetrado é o
+    // material físico da própria marca. Pattern de canvas repetido, barato de desenhar
+    // por frame (um fillRect, não milhares de arcos).
+    // Tile em unidades CSS (não device px) — o `ctx.setTransform(dpr,...)` no resize()
+    // já escala qualquer preenchimento, inclusive pattern, pro dpr real da tela.
+    const tileSize = 22;
+    const tile = document.createElement("canvas");
+    tile.width = tileSize;
+    tile.height = tileSize;
+    const tctx = tile.getContext("2d");
+    if (tctx) {
+      tctx.beginPath();
+      tctx.arc(tileSize / 2, tileSize / 2, 0.9, 0, Math.PI * 2);
+      tctx.fillStyle = "rgba(230, 229, 225, 0.16)";
+      tctx.fill();
+    }
+    const gridPattern = ctx.createPattern(tile, "repeat");
+
     function resize() {
       const rect = stage!.getBoundingClientRect();
       w = rect.width;
@@ -276,15 +287,6 @@ export function AuroraMap({
       canvas!.width = w * dpr;
       canvas!.height = h * dpr;
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    if (!starsRef.current) {
-      const stars: [number, number, number, number][] = [];
-      const starRand = mulberry32(7);
-      for (let s = 0; s < 90; s++) {
-        stars.push([starRand(), starRand() * 0.75, starRand() * 1.3 + 0.3, starRand() * 0.5 + 0.15]);
-      }
-      starsRef.current = stars;
     }
 
     function frame(time: number) {
@@ -324,14 +326,12 @@ export function AuroraMap({
       });
       ctx!.restore();
 
-      ctx!.save();
-      starsRef.current!.forEach(([sx, sy, r, a]) => {
-        ctx!.beginPath();
-        ctx!.arc(sx * w, sy * h, r, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(230, 229, 225, ${a})`;
-        ctx!.fill();
-      });
-      ctx!.restore();
+      if (gridPattern) {
+        ctx!.save();
+        ctx!.fillStyle = gridPattern;
+        ctx!.fillRect(0, 0, w, h);
+        ctx!.restore();
+      }
     }
 
     resize();

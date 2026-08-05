@@ -90,19 +90,21 @@
   h1 {
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: clamp(20px, 2.6vw, 30px);
-    line-height: 1.15;
-    margin: 0 0 8px;
+    font-size: clamp(27px, 4.1vw, 49px);
+    line-height: 1.04;
+    letter-spacing: -0.008em;
+    margin: 0 0 10px;
     text-wrap: balance;
-    color: var(--papel);
+    max-width: 19ch;
+    color: color-mix(in srgb, var(--papel) 96%, var(--salvia-bright) 4%);
   }
 
   .hud-title p {
-    margin: 0;
+    margin: 6px 0 0;
     font-size: 13.5px;
     line-height: 1.55;
     color: color-mix(in srgb, var(--papel) 68%, transparent);
-    max-width: 42ch;
+    max-width: 30ch;
   }
 
   .legend {
@@ -344,7 +346,7 @@
 
   svg#roots path {
     fill: none;
-    stroke: color-mix(in srgb, var(--papel) 16%, transparent);
+    stroke: color-mix(in srgb, var(--papel) 6%, transparent);
     stroke-width: 1;
   }
 
@@ -703,7 +705,7 @@
       id: "operacoes",
       name: "Operações",
       angle: 292,
-      radius: 0.68,
+      radius: 0.5,
       tagline: "Da assinatura ao projeto no ar.",
       jobs: [
         { title: "Cruzar projeto, marco e financeiro", skill: "irbis-projeto", level: "assisted" },
@@ -838,18 +840,13 @@
     rootsSvg.setAttribute("viewBox", "0 0 " + rect.width + " " + rect.height);
     var svgns = "http://www.w3.org/2000/svg";
     while (rootsSvg.firstChild) rootsSvg.removeChild(rootsSvg.firstChild);
+    // Linha reta e quase invisível — o bend em curva lia como diagrama de rede/fluxo,
+    // o cliché nº1 de "visual de IA" (achado do Nicolas: ficou genérico).
     DEPARTMENTS.forEach(function (dept) {
       var x1 = rect.width * 0.5, y1 = rect.height * 0.5;
       var x2 = (dept._pos.x / 100) * rect.width, y2 = (dept._pos.y / 100) * rect.height;
-      var mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
-      var dx = x2 - x1, dy = y2 - y1;
-      var nx = -dy, ny = dx;
-      var norm = Math.sqrt(nx * nx + ny * ny) || 1;
-      var bend = 26;
-      var cx = mx + (nx / norm) * bend;
-      var cy = my + (ny / norm) * bend;
       var path = document.createElementNS(svgns, "path");
-      path.setAttribute("d", "M " + x1 + " " + y1 + " Q " + cx + " " + cy + " " + x2 + " " + y2);
+      path.setAttribute("d", "M " + x1 + " " + y1 + " L " + x2 + " " + y2);
       rootsSvg.appendChild(path);
     });
   }
@@ -1051,6 +1048,20 @@
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
   var w, h, t = 0;
 
+  // Textura de fundo real do painel (papel milimetrado, `.grid-paper` do CSS), não
+  // estrelas — aleatório-espacial é o clichê universal de "visual de IA"; papel
+  // milimetrado é o material físico da própria marca. Tile em unidades CSS: o
+  // ctx.setTransform(dpr,...) do resizeAurora já escala o preenchimento pro dpr real.
+  var gridTile = document.createElement("canvas");
+  gridTile.width = 22;
+  gridTile.height = 22;
+  var gtctx = gridTile.getContext("2d");
+  gtctx.beginPath();
+  gtctx.arc(11, 11, 0.9, 0, Math.PI * 2);
+  gtctx.fillStyle = "rgba(230, 229, 225, 0.16)";
+  gtctx.fill();
+  var gridPattern = actx.createPattern(gridTile, "repeat");
+
   function resizeAurora() {
     var rect = stage.getBoundingClientRect();
     w = rect.width; h = rect.height;
@@ -1122,23 +1133,12 @@
 
     actx.restore();
 
-    // véu de estrelas fixas, sutil
-    if (!auroraCanvas._stars) {
-      var stars = [];
-      var starRand = mulberry32(7);
-      for (var s = 0; s < 90; s++) {
-        stars.push([starRand() * w, starRand() * h * 0.75, starRand() * 1.3 + 0.3, starRand() * 0.5 + 0.15]);
-      }
-      auroraCanvas._stars = stars;
+    if (gridPattern) {
+      actx.save();
+      actx.fillStyle = gridPattern;
+      actx.fillRect(0, 0, w, h);
+      actx.restore();
     }
-    actx.save();
-    auroraCanvas._stars.forEach(function (st) {
-      actx.beginPath();
-      actx.arc(st[0], st[1], st[2], 0, Math.PI * 2);
-      actx.fillStyle = "rgba(230, 229, 225, " + st[3] + ")";
-      actx.fill();
-    });
-    actx.restore();
   }
 
   var rafId;
