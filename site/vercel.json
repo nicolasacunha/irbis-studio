@@ -17,6 +17,7 @@
     }
   ],
   "redirects": [
+    { "source": "/cases-hub/adash/index.html", "destination": "/adash", "permanent": true },
     { "source": "/cases-hub",              "destination": "/cases",         "permanent": true },
     { "source": "/cases-hub/eforce",       "destination": "/eforce",        "permanent": true },
     { "source": "/cases-hub/adash",        "destination": "/adash",         "permanent": true },
