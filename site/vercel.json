@@ -17,6 +17,7 @@
     }
   ],
   "redirects": [
+    { "source": "/cases-hub/odery-crm/index.html", "destination": "/odery-crm", "permanent": true },
     { "source": "/cases-hub/adash/index.html", "destination": "/adash", "permanent": true },
     { "source": "/cases-hub",              "destination": "/cases",         "permanent": true },
     { "source": "/cases-hub/eforce",       "destination": "/eforce",        "permanent": true },
@@ -26,6 +27,8 @@
     { "source": "/cases-hub/odery-erp",    "destination": "/odery-erp",     "permanent": true }
   ],
   "rewrites": [
+    { "source": "/odery-crm/(.*)",  "destination": "/cases-hub/odery-crm/$1" },
+    { "source": "/odery-crm",       "destination": "/cases-hub/odery-crm/index.html" },
     { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
     { "source": "/adash-demo",      "destination": "/adash-demo/index.html" },
     { "source": "/adash/(.*)",      "destination": "/cases-hub/adash/$1" },

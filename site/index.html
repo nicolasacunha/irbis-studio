@@ -823,6 +823,58 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
   object-fit: contain;
 }
 .case-ed-foto.is-system img { object-position: right top; }
+.case-ed-foto.is-crm-showcase {
+  aspect-ratio: 16 / 11;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: .85rem;
+  background: #21201B;
+  color: #F2EFE9;
+  border-color: #3A372E;
+}
+.case-shot-top,
+.case-shot-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.case-shot-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #C0D4CA;
+}
+.case-shot-index {
+  font-family: var(--f-serif);
+  font-size: 1rem;
+  color: #8FA987;
+}
+.case-shot-window {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(242,239,233,.12);
+  border-radius: 8px;
+  background: #F7F6F3;
+}
+.case-ed-foto.is-crm-showcase .case-shot-window img {
+  width: 200%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: initial;
+  transform: translate(-17%, -14%);
+  transition: transform .6s var(--ease-out);
+}
+.case-shot-note {
+  font-size: .72rem;
+  line-height: 1.4;
+  color: #9C998A;
+}
+.case-shot-note strong { color: #F2EFE9; font-weight: 600; }
 .case-port-list {
   margin-top: clamp(3rem, 7vw, 6rem);
   border-top: 1px solid var(--s2);
@@ -870,6 +922,7 @@ nav.nav-scrolled .nav-links a:hover { color: #26251F; }
 .case-port-link:hover { color: var(--accent); }
 @media (hover: hover) and (pointer: fine) {
   .case-ed-foto:hover img { transform: scale(1.03); }
+  .case-ed-foto.is-crm-showcase:hover .case-shot-window img { transform: translate(-17%, -14%) scale(1.025); }
 }
 
 /* ================================================================
@@ -1762,10 +1815,17 @@ html.no-motion .h-scroll-hint { display: none; }
             <li><span class="n">Agenda</span><span class="l">prioridades de contato e próximos passos</span></li>
             <li><span class="n">IA</span><span class="l">registro por voz e consulta ao histórico do cliente</span></li>
           </ul>
-          <a class="case-ed-link" href="#processo">Ver método de entrega →</a>
+          <a class="case-ed-link" href="cases-hub/odery-crm/index.html">Ver case completo →</a>
         </div>
-        <a class="case-ed-foto is-system" href="#processo" aria-label="Ver o método de entrega aplicado ao Odery CRM">
-          <img src="/cases-hub/odery-erp/assets/ODERY-ERP-FUNIL.jpg" alt="Funil comercial do Odery CRM" loading="lazy" width="1920" height="1080">
+        <a class="case-ed-foto is-system is-crm-showcase" href="cases-hub/odery-crm/index.html" aria-label="Ver o case completo do Odery CRM">
+          <span class="case-shot-top" aria-hidden="true">
+            <span class="case-shot-label">CRM · Agenda semanal</span>
+            <span class="case-shot-index">OD / 01</span>
+          </span>
+          <span class="case-shot-window">
+            <img src="/cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg" alt="Agenda semanal do Odery CRM com contatos organizados por prioridade" loading="lazy" width="1920" height="1080">
+          </span>
+          <span class="case-shot-note" aria-hidden="true"><strong>Próximos passos à vista.</strong><span>Prioridade, data e responsável.</span></span>
         </a>
       </article>
 
