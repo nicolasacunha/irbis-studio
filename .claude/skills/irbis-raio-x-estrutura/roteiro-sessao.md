@@ -42,10 +42,13 @@ O coração. Nunca pergunte "o que o fulano faz" — devolve descrição de carg
 
 Sobre cada tarefa que aparecer, quatro cortes:
 
-1. **Frequência:** "Isso acontece todo dia ou só segunda?"
-2. **Horas:** "Quantas vezes por dia, e quanto tempo cada vez?"
-   Nunca pergunte "quantas horas por semana". Isso devolve chute. Volume × duração devolve
-   estimativa. Você faz a multiplicação depois, calado.
+1. **Frequência:** "Isso é todo dia, é uma vez por semana, ou é coisa de fim de mês —
+   fechamento, conciliação, relatório pro contador?"
+2. **Horas:** "Quantas vezes, e quanto tempo cada vez?"
+   Nunca pergunte "quantas horas por semana" — isso devolve chute; volume × duração devolve
+   estimativa, e você faz a multiplicação depois, calado. A faixa em horas do parágrafo
+   "Quando o dono não sabe", logo abaixo, não é essa mesma pergunta proibida: ali você não
+   pede precisão, pede ordem de grandeza, e só depois que volume × duração já falhou.
 3. **Decisão:** "Nessa hora ele decide alguma coisa, ou executa uma sequência que já é conhecida?"
    Teste de desempate: "se ele fizesse os passos fora de ordem, quebraria?" Se quebra, é sequência.
 4. **Sistemas:** "Ele tira de onde e põe onde?"
@@ -69,14 +72,26 @@ o raio-x sai errado, e sair errado é pior que sair incompleto.
 
 Some **na frente dele**, na sala. Não mande depois, não deixe pro documento.
 
-Diga o número sozinho, sem adjetivo: "esse departamento gasta N horas por semana em
-trabalho onde ninguém precisa decidir."
+**A fórmula**, pra bater com o que a captura recalcula depois:
+- Diária: vezes por dia × minutos por vez × 5 dias ÷ 60.
+- Semanal: volume semanal direto × minutos ÷ 60 — sem multiplicar por 5.
+- Mensal: volume mensal direto × minutos ÷ 60 ÷ 4,33 (52 semanas ÷ 12 meses).
+- Uma casa decimal em tudo.
+
+**Fica fora da soma:** job em faixa (`<1h`, `1-5h`, `>5h`), job com `horas_semana = —`
+(tempo embutido em outro job), e qualquer job com `precisa_decidir = sim` — mesmo que a
+hora dele seja numérica.
+
+Diga o número sozinho, sem adjetivo: "esse departamento gasta N horas por semana em trabalho onde ninguém precisa decidir."
 
 Depois cale a boca e espere ele reagir. É o único momento da sessão em que o cliente
 sente o tamanho do problema em número próprio.
 
-**Não diga:** quanto isso custa em salário, quanto ele economizaria, nenhum percentual.
-Você não tem entrega medida pra sustentar nada disso.
+**Se ele emendar com corte de gente:** reenquadre ali, na sala, sem esperar o documento —
+a equipe é boa demais pra passar o dia naquilo, e o que ela faz de melhor é decidir.
+
+**Não diga:** quanto isso custa em salário, quanto ele economizaria, nenhum percentual,
+nem prazo — quando isso fica pronto. Você não tem entrega medida pra sustentar nada disso.
 
 ## Bloco 5: Primeiro agente — 20 min
 
@@ -86,7 +101,13 @@ Escolha por horas × ausência de decisão ÷ esforço, e passe pelos três cort
 2. Não toca dinheiro.
 3. Não exige integração com sistema fechado.
 
-**Se nenhum job passar nos três:** reduza até caber. Um agente que rascunha e não envia
-ainda conta como rodando. Se nem isso couber, diga na sessão — não prometa pra depois.
+**Se nenhum job passar nos três:** reduza até caber nos três cortes.
 
-Feche dizendo o que vai estar rodando e o que fica na ordem de ataque.
+**Construa ali, com o tempo que sobrar.** Corte de escopo: constrói-se o que couber nos
+20 minutos — a versão mínima que rascunha e não envia ainda conta como entrega. A sessão
+não fecha com "escolhido, fica pronto depois"; fecha com algo rodando, nem que seja o
+rascunho.
+
+Se nem a versão mínima couber no tempo, diga isso na sessão — não prometa pra depois.
+
+Feche dizendo o que ficou rodando (ou rascunhando) e o que fica pra ordem de ataque.
