@@ -1,0 +1,46 @@
+{
+  "keyword": "quanto custa sistema com IA para escritório de advocacia",
+  "title": "Quanto custa um sistema com IA para escritório de advocacia?",
+  "summary": "O custo de um sistema com IA para escritório de advocacia varia conforme o processo escolhido, o volume de informações e as integrações necessárias. Um projeto bem definido separa o que a IA pode preparar do que um profissional precisa revisar e aprovar. Dados pessoais e documentos exigem regras de finalidade, acesso e segurança desde o desenho do sistema. A IRBIS só fecha um escopo depois de entender o fluxo de trabalho e os critérios que o escritório usará para aceitar a entrega.",
+  "faq": [
+    {
+      "question": "A IRBIS informa um valor fechado antes do diagnóstico?",
+      "answer": "Não. A IRBIS define primeiro processo, integrações, dados e critérios de aceite para preparar uma proposta ligada ao escopo real."
+    },
+    {
+      "question": "Um sistema com IA pode gerar peças sem revisão de advogado?",
+      "answer": "O fluxo deve deixar claro o que a ferramenta prepara, onde aponta fontes e qual profissional revisa e aprova a saída."
+    },
+    {
+      "question": "A LGPD muda o escopo do sistema?",
+      "answer": "Sim. Quando há dados pessoais, o projeto precisa considerar finalidade, necessidade, transparência, segurança e controles de acesso desde a concepção."
+    },
+    {
+      "question": "Dá para começar por uma única rotina?",
+      "answer": "Sim. Uma tarefa delimitada permite testar regras, fontes e revisão antes de ampliar o sistema."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1632508",
+      "type": "legislação federal",
+      "claim": "A LGPD estabelece princípios de finalidade, necessidade, transparência, segurança e prestação de contas, além de exigir medidas técnicas e administrativas desde a concepção do produto ou serviço."
+    },
+    {
+      "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence?hub=1063",
+      "type": "diretriz intergovernamental",
+      "claim": "A Recomendação da UNESCO aborda governança de dados, supervisão humana, auditabilidade e rastreabilidade de sistemas de IA."
+    }
+  ],
+  "firstPartyEvidence": [
+    "minuta-em-desenvolvimento"
+  ],
+  "image": {
+    "filename": "quanto-custa-sistema-com-ia-para-escritorio-de-advocacia.png",
+    "alt": "quanto custa sistema com IA para escritório de advocacia"
+  },
+  "internalLinks": [
+    "https://irbis.com.br/"
+  ],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-06/quanto-custa-sistema-com-ia-para-escritorio-de-advocacia.md"
+}
