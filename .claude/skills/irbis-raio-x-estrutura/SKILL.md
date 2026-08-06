@@ -9,8 +9,10 @@ Spec: `docs/superpowers/specs/2026-08-05-raio-x-estrutura-design.md`.
 Roteiro da sessão: `roteiro-sessao.md`. Formato da saída: `template-raio-x.md`.
 
 **O que esta sessão é:** produto pago, cliente já fechado, um departamento por vez, e ela
-só termina com um agente rodando. **O que ela não é:** a call gratuita de topo do site.
-Aquela se chama diagnóstico; esta se chama Raio-X. Nunca troque os nomes.
+só termina com um agente rodando. **O que ela não é:** a call gratuita de topo do site
+(essa se chama diagnóstico) nem a peça gratuita "Raio-X de Cultura" já publicada em
+`site/raio-x-cultura.html`. O nome completo do produto é **Raio-X de Estrutura** — use o
+qualificador sempre que houver risco de confundir com a peça de cultura.
 
 ## Modo preparo — antes da call
 
@@ -25,6 +27,8 @@ Dispara quando o Nicolas avisa que vai fazer uma sessão.
 3. **Adapte o Bloco 1:** se o formulário já nomeou a área travada, a pergunta principal
    vira confirmação em vez de descoberta.
 4. **Repita o teto de escopo** no fim: 3 caixinhas, ~6 jobs por caixinha.
+5. **Lembre o reenquadramento:** se o cliente emendar corte de gente no Bloco 4, a
+   resposta é realocação, ali na sala, sem esperar o documento.
 
 Nunca instrua o Nicolas a digitar durante a call. A captura acontece depois.
 
@@ -58,6 +62,9 @@ Quando o job existe de verdade mas o tempo dele já está embutido em outro job 
 contado — não dá pra medir separado sem inventar um número —, `horas_semana` recebe
 `—`. Esse job também **fica fora da conta final** e entra na mesma lista de não
 apurados, junto com as faixas estimadas.
+
+Se o job absorvido tem `precisa_decidir = sim`, o job-pai não pode entrar inteiro na
+conta como sem-decisão: ou separa as horas de decisão, ou o pai também vira `sim`.
 
 ### 3. Classificar
 
@@ -111,7 +118,9 @@ Se o Nicolas pedir o argumento de corte, recuse e diga o motivo prático.
   Não existe entrega de sistema de IA medida. Nem no documento, nem na sala.
 - **Nunca** transformar faixa estimada em número, nem somá-la na conta.
 - **Nunca** gravar o resultado do cliente no repo da IRBIS.
-- **Nunca** chamar esta sessão de "diagnóstico" — esse nome é da call gratuita do site.
+- **Nunca** chamar esta sessão de "diagnóstico" (call gratuita do site) nem de só
+  "Raio-X" sem qualificador quando puder confundir com a peça gratuita "Raio-X de
+  Cultura" (`site/raio-x-cultura.html`).
 - **Nunca** citar preço. O preço de cada frente segue pendente de definição do dono.
 - **Nunca** citar prazo — cronograma, data de entrega ou estimativa de duração do que vier
   depois da sessão. Mesmo motivo do preço e do ROI: não existe entrega de sistema de IA
