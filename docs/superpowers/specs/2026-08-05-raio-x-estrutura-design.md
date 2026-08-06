@@ -108,7 +108,7 @@ Mais que isso: o formulário da `/call` já pergunta *"Descreva o processo ou tr
 
 **Colisão de nome a resolver:** o site chama de "diagnóstico" a call de 1h gratuita; o raio-x é sessão paga. Dois produtos com o mesmo nome fazem o prospect chegar na call grátis esperando sair com o mapa. Linha de corte recomendada, sem mexer no que está no ar: **a call diagnostica o que está travando; o raio-x mede quanto custa e tira o primeiro job.** O nome do produto pago é Raio-X, nunca "diagnóstico".
 
-**2. Prova visual sem depender de cliente.** O mapa aurora da IRBIS é o "depois" da tese: 37 jobs mapeados, 36 com skill própria depois do commit `bcd1c67`, que fechou 10 dos 11 gaps. Material próprio, afirmável hoje. (O spec de 05/ago cita 26 com skill — número anterior a esse commit.)
+**2. Prova visual sem depender de cliente.** O mapa aurora da IRBIS é o "depois" da tese. **O número afirmável é 35 jobs**, lido direto da tabela `agentes_jobs` em 05/ago. Os "37 jobs" que circulam no spec de 05/ago e no HTML do protótipo nunca existiram no banco: a migration semeou 35. Material próprio, afirmável hoje — mas com o número do banco, não o do documento.
 
 **3. Publicar as perguntas, não o diagnóstico.** O roteiro de extração é fácil de ler e difícil de executar sozinho — o dono tenta, empaca na terceira pergunta e percebe que não sabe descrever a própria operação. Conteúdo e qualificação ao mesmo tempo, sem entregar a sessão de graça. **Decisão do Nicolas**, porque encosta na linha do que ele tirou de escopo.
 
