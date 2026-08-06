@@ -1,5 +1,20 @@
 {
-  "posts": [
+    "posts": [
+        {
+            "slug": "quanto-custa-sistema-com-ia-para-escritorio-de-advocacia",
+            "title": "Quanto custa um sistema com IA para escritório de advocacia?",
+            "description": "Entenda quais decisões de escopo determinam o investimento em um sistema jurídico com IA.",
+            "dateISO": "2026-08-06",
+            "pilar": "sistemas-ia",
+            "keywords": [
+                "quanto custa sistema com IA para escritório de advocacia",
+                "sistema jurídico com IA",
+                "automação jurídica",
+                "IA para advocacia"
+            ],
+            "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-escritorio-de-advocacia.png",
+            "readingTimeMin": 7
+        },
     {
       "slug": "erros-site-startup",
       "title": "7 Erros de Site que Afastam Clientes antes da Primeira Conversa",
