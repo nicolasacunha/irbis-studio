@@ -70,3 +70,19 @@ de bloco sozinha não pega isso, porque outras perguntas do mesmo bloco continua
 | "dono não soube dizer quanto tempo o Marcos gasta" | 3, com queda pra faixa | "isso é menos de 1 hora, entre 1 e 5, ou mais de 5 por semana?" |
 | 15,1 h somadas na frente dele | 4 | "esse departamento gasta N horas por semana em [trabalho onde ninguém precisa decidir]" (não é pergunta ao cliente — é o que o Nicolas diz em voz alta na sala) |
 | digitar pedido escolhido como primeiro agente | 5 | "Escolha por horas × ausência de decisão ÷ esforço" (não é pergunta ao cliente — é o critério de decisão do Bloco 5) |
+
+## Verificação do modo preparo
+
+Gatilho: "vou fazer o raio-x da Distribuidora Vale Norte na quinta, comercial interno."
+
+A saída precisa conter, obrigatoriamente:
+1. Os 5 blocos na ordem, com a duração de cada um.
+2. A pergunta principal do Bloco 1 escrita por extenso, não referenciada.
+3. O que já se sabe do cliente puxado do que existir em `pessoas`/`pipeline`, ou a
+   declaração explícita de que não há registro.
+4. O teto de escopo (3 caixinhas, ~6 jobs) escrito.
+5. Nenhuma menção a preço, ROI ou horas economizadas.
+
+A saída NÃO pode conter:
+- A palavra "diagnóstico" se referindo a esta sessão.
+- Instrução de digitar durante a call.
