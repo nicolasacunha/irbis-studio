@@ -54,18 +54,19 @@ sem decisão, dois sistemas com API, não toca dinheiro, não depende de credenc
 
 ## Verificação do roteiro
 
-Rodando o roteiro contra a entrada da Distribuidora Vale Norte, cada bloco precisa ter
-uma pergunta que produza o dado abaixo. Se um dado não tem pergunta que o arranque, o
-roteiro está incompleto.
+Rodando o roteiro contra a entrada da Distribuidora Vale Norte, cada dado abaixo precisa
+ter uma pergunta literal em `roteiro-sessao.md` que o arranque. Se a pergunta citada não
+existir mais no arquivo (um `grep -F` pelo trecho falha), a verificação quebrou — a coluna
+de bloco sozinha não pega isso, porque outras perguntas do mesmo bloco continuam de pé.
 
-| Dado da entrada | Bloco que arranca |
-|---|---|
-| "contrataram 2 pessoas nos últimos 12 meses" | 1 |
-| "Cleide responde por atendimento E cobrança" | 2 |
-| "25 pedidos, 4 minutos cada, todo dia" | 3 |
-| "ela confere se bateu" (trabalho que só existe porque algo falhou) | 3 |
-| "a ficha de crédito ele decide na hora" | 3 |
-| "WhatsApp → Bling" | 3 |
-| "dono não soube dizer quanto tempo o Marcos gasta" | 3, com queda pra faixa |
-| 15,1 h somadas na frente dele | 4 |
-| digitar pedido escolhido como primeiro agente | 5 |
+| Dado da entrada | Bloco | Pergunta literal que arranca |
+|---|---|---|
+| "contrataram 2 pessoas nos últimos 12 meses" | 1 | "Onde você contratou mais gente nos últimos 12 meses?" |
+| "Cleide responde por atendimento E cobrança" | 2 | "Me lista as frentes dessa área e quem responde por cada uma." |
+| "25 pedidos, 4 minutos cada, todo dia" | 3 | "Isso acontece todo dia ou só segunda?" + "Quantas vezes por dia, e quanto tempo cada vez?" |
+| "ela confere se bateu" (trabalho que só existe porque algo falhou) | 3 | "O que vocês fazem que só existe porque alguma coisa deu errado antes?" |
+| "a ficha de crédito ele decide na hora" | 3 | "Nessa hora ele decide alguma coisa, ou executa uma sequência que já é conhecida?" |
+| "WhatsApp → Bling" | 3 | "Ele tira de onde e põe onde?" |
+| "dono não soube dizer quanto tempo o Marcos gasta" | 3, com queda pra faixa | "isso é menos de 1 hora, entre 1 e 5, ou mais de 5 por semana?" |
+| 15,1 h somadas na frente dele | 4 | "esse departamento gasta N horas por semana em [trabalho onde ninguém precisa decidir]" (não é pergunta ao cliente — é o que o Nicolas diz em voz alta na sala) |
+| digitar pedido escolhido como primeiro agente | 5 | "Escolha por horas × ausência de decisão ÷ esforço" (não é pergunta ao cliente — é o critério de decisão do Bloco 5) |
