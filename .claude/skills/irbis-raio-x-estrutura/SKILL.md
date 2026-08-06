@@ -87,3 +87,32 @@ envia). Não empurre pra sessão seguinte sem avisar.
 
 Preencha `template-raio-x.md` e grave **na pasta local do projeto do cliente**, nunca no
 repo. Se o Nicolas não disser onde, pergunte o caminho — não escolha por ele.
+
+## Regra de condução
+
+O raio-x expõe gente cujo dia é 100% repetição, e o dono vai pensar em cortar na hora.
+O enquadramento é **realocação, nunca corte**: a equipe é boa demais pra passar o dia
+naquilo, e o que ela faz de melhor é decidir.
+
+Isso não é delicadeza. Se a equipe suspeitar que o mapeamento serve pra demitir, ninguém
+descreve a própria segunda-feira com honestidade, e o raio-x inteiro sai errado. A postura
+protege o dado.
+
+É por isso que o Bloco 4 (`roteiro-sessao.md`) soma o número na frente do cliente e depois
+cala a boca de propósito: o silêncio é pra ele sentir o tamanho do problema, não uma deixa
+pra cortar gente. Se ele emendar com corte ali, na sala, a resposta é a mesma desta regra —
+reenquadre pra realocação, no ato, sem esperar o documento.
+
+Se o Nicolas pedir o argumento de corte, recuse e diga o motivo prático.
+
+## Proibições
+
+- **Nunca** afirmar ROI, percentual de economia, horas economizadas ou valor em salário.
+  Não existe entrega de sistema de IA medida. Nem no documento, nem na sala.
+- **Nunca** transformar faixa estimada em número, nem somá-la na conta.
+- **Nunca** gravar o resultado do cliente no repo da IRBIS.
+- **Nunca** chamar esta sessão de "diagnóstico" — esse nome é da call gratuita do site.
+- **Nunca** citar preço. O preço de cada frente segue pendente de definição do dono.
+- **Nunca** fechar a sessão só com o mapa. Sem um agente rodando, isso é relatório, e
+  relatório está fora de escopo desde 03/ago.
+- **Nunca** estourar 3 caixinhas ou ~6 jobs por caixinha numa sessão. Corte e reagende.
