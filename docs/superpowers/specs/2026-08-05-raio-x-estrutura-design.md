@@ -102,7 +102,11 @@ Não é só princípio: se a equipe cheirar que o consultor veio mapear pra cort
 
 ## Uso no marketing
 
-**1. O CTA órfão ganha destino.** O roteiro de 05/ago registra "manda site no direct" como gatilho que atrai o lead errado desde o pivot, com a troca em aberto. O raio-x oferece a palavra: *"manda RAIO-X no direct"*. **Recomendação, não mudança aplicada** — trocar palavra de funil é decisão do Nicolas.
+**1. O CTA já foi trocado — verificado em produção nesta sessão.** O site não tem mais "manda site no direct" em lugar nenhum. O CTA principal de `irbis.com.br` é **"AGENDAR DIAGNÓSTICO"**, apontando pra `/call`, com "FALAR NO WHATSAPP" como secundário. O roteiro diário de 05/ago está desatualizado nesse ponto.
+
+Mais que isso: o formulário da `/call` já pergunta *"Descreva o processo ou trabalho que está travando"* — ou seja, o Bloco 1 do raio-x (recorte) começa a ser coletado antes da conversa, e o Nicolas chega na sessão com a área dolorida já nomeada pelo cliente.
+
+**Colisão de nome a resolver:** o site chama de "diagnóstico" a call de 1h gratuita; o raio-x é sessão paga. Dois produtos com o mesmo nome fazem o prospect chegar na call grátis esperando sair com o mapa. Linha de corte recomendada, sem mexer no que está no ar: **a call diagnostica o que está travando; o raio-x mede quanto custa e tira o primeiro job.** O nome do produto pago é Raio-X, nunca "diagnóstico".
 
 **2. Prova visual sem depender de cliente.** O mapa aurora da IRBIS é o "depois" da tese: 37 jobs mapeados, 36 com skill própria depois do commit `bcd1c67`, que fechou 10 dos 11 gaps. Material próprio, afirmável hoje. (O spec de 05/ago cita 26 com skill — número anterior a esse commit.)
 
@@ -128,6 +132,7 @@ Não é só princípio: se a equipe cheirar que o consultor veio mapear pra cort
 
 ## Perguntas em aberto
 
-1. Trocar o CTA do funil de "site" para "raio-x"? Decisão do Nicolas, pendente desde 04/ago.
+1. ~~Trocar o CTA do funil de "site" para "raio-x"?~~ **Resolvido 05/ago:** o CTA já é "AGENDAR DIAGNÓSTICO" em produção. Fica no lugar dele a pergunta de nomenclatura — confirmar que o produto pago se chama Raio-X e que "diagnóstico" segue reservado à call de topo.
 2. Publicar o roteiro de perguntas como conteúdo? Decisão do Nicolas.
 3. Primeiro cliente onde isso roda: A. Cunha ADV já fechou e o kickoff está atrasado — o raio-x entra nesse projeto ou espera o próximo?
+4. O formulário da `/call` já colhe o processo travado. Vale ampliar esse campo pra pré-carregar mais do Bloco 1, ou isso empurra atrito pro topo do funil?
