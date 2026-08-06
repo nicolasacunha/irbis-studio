@@ -76,7 +76,8 @@ Some **na frente dele**, na sala. Não mande depois, não deixe pro documento.
 - Diária: vezes por dia × minutos por vez × 5 dias ÷ 60.
 - Semanal: volume semanal direto × minutos ÷ 60 — sem multiplicar por 5.
 - Mensal: volume mensal direto × minutos ÷ 60 ÷ 4,33 (52 semanas ÷ 12 meses).
-- Uma casa decimal em tudo.
+- Uma casa decimal em tudo, arredondando cada job antes de somar — soma-se os jobs já
+  arredondados, nunca os minutos crus.
 
 **Fica fora da soma:** job em faixa (`<1h`, `1-5h`, `>5h`), job com `horas_semana = —`
 (tempo embutido em outro job), e qualquer job com `precisa_decidir = sim` — mesmo que a
@@ -103,10 +104,10 @@ Escolha por horas × ausência de decisão ÷ esforço, e passe pelos três cort
 
 **Se nenhum job passar nos três:** reduza até caber nos três cortes.
 
-**Construa ali, com o tempo que sobrar.** Corte de escopo: constrói-se o que couber nos
-20 minutos — a versão mínima que rascunha e não envia ainda conta como entrega. A sessão
-não fecha com "escolhido, fica pronto depois"; fecha com algo rodando, nem que seja o
-rascunho.
+**Construa com o que sobrar dos 20 minutos do bloco**, depois da escolha e dos três
+cortes de viabilidade — a versão mínima que rascunha e não envia ainda conta como
+entrega. A sessão não fecha com "escolhido, fica pronto depois"; fecha com algo rodando,
+nem que seja o rascunho.
 
 Se nem a versão mínima couber no tempo, diga isso na sessão — não prometa pra depois.
 

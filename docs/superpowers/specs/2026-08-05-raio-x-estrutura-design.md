@@ -81,7 +81,7 @@ O problema central: dono não sabe descrever o próprio trabalho. Descreve cargo
 **3. A semana real — 45 min.** O coração da sessão. Nunca "o que o fulano faz", que devolve descrição de cargo. Sempre: *"Descreve a segunda-feira do fulano, da hora que ele senta até a hora que sai."*
 
 Quatro cortes sobre cada tarefa que aparecer:
-- *"Isso acontece todo dia ou só segunda?"* → frequência
+- *"Isso acontece todo dia, toda semana ou uma vez por mês?"* → frequência (a versão binária original nunca produzia `mensal`, e a fórmula de conversão mensal ficava sem uso)
 - *"Quantas vezes por dia, e quanto tempo cada vez?"* → **horas nunca são perguntadas direto.** Volume × duração é estimativa; "quantas horas por semana" é chute.
 - *"Nessa hora ele decide algo, ou executa uma sequência já conhecida?"* → a linha entre agente e gente
 - *"Ele tira de onde e põe onde?"* → sistemas

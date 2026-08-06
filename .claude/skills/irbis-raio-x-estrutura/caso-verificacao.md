@@ -43,7 +43,7 @@ Um bloco por caixinha, como manda `template-raio-x.md`.
 | job | quem | frequencia | horas_semana | precisa_decidir | sistemas | classificacao |
 |---|---|---|---|---|---|---|
 | Mandar mensagem pra quem está atrasado | Cleide | diária | 3,3 | não | planilha de cobrança → WhatsApp Business | 100% IA |
-| Fechar relatório de comissão mensal pro contador | Cleide | mensal | 0,3 | não | Bling → planilha de cobrança | 100% IA |
+| Fechar relatório de comissão mensal pro contador | Cleide | mensal | 0,3 | não | ? | 100% IA |
 
 **Caixinha 3 — Cadastro de cliente novo (Marcos)**
 
@@ -61,7 +61,9 @@ sem inventar um número, então o job inteiro vira `precisa_decidir = sim` — S
 regra do job-pai que absorve decisão. A ficha de crédito isolada fica fora pelo mesmo
 motivo, com hora embutida em `—`. A dúvida de vendedor fica fora: hora só em faixa
 estimada, e a nota não sustenta frequência, decisão, sistemas nem classificação — esses
-quatro campos ficam `?`, lacuna pro Nicolas confirmar, em vez de inventados.)
+quatro campos ficam `?`, lacuna pro Nicolas confirmar, em vez de inventados. O relatório
+de comissão mensal entra na conta com hora numérica, mas a nota não diz por onde o dado
+passa — `sistemas` fica `?`, mesma lacuna, sem tirar o job da soma.)
 
 **Primeiro agente esperado:** digitar pedido do WhatsApp no ERP. Maior número de horas,
 sem decisão, dois sistemas com API, não toca dinheiro, não depende de credencial demorada.

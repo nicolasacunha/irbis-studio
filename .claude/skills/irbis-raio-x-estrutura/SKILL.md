@@ -50,18 +50,18 @@ A nota traz volume e duração. Você faz a conta:
 
 `vezes por dia × minutos por vez × 5 dias ÷ 60 = horas por semana`
 
-Uma casa decimal. Frequência semanal usa o volume semanal direto, sem multiplicar por 5.
-Frequência mensal usa o volume mensal direto, dividido por **4,33 semanas** (52 semanas
-÷ 12 meses): `vezes por mês × minutos por vez ÷ 60 ÷ 4,33 = horas por semana`.
+Uma casa decimal por job, arredondado antes de somar. Frequência semanal usa o volume direto,
+sem multiplicar por 5; mensal usa o volume mensal direto, dividido por **4,33 semanas** (52
+semanas ÷ 12 meses): `vezes por mês × minutos por vez ÷ 60 ÷ 4,33 = horas por semana`.
 
 Quando a nota registra que o cliente não soube estimar, o campo vira faixa (`<1h`,
 `1-5h`, `>5h`) com `(estimado)`, e o job **fica fora da conta final**, listado à parte
 como não apurado. Nunca converta faixa em número.
 
-Quando o job existe de verdade mas o tempo dele já está embutido em outro job já
-contado — não dá pra medir separado sem inventar um número —, `horas_semana` recebe
-`—`. Esse job também **fica fora da conta final** e entra na mesma lista de não
-apurados, junto com as faixas estimadas.
+Quando o job existe de verdade mas o tempo dele já está embutido em outro job — não dá
+pra medir separado sem inventar um número —, `horas_semana` recebe `—`, esteja esse
+job-pai contado ou não na soma. Esse job também **fica fora da conta final** e entra na
+mesma lista de não apurados, junto com as faixas estimadas.
 
 Se o job absorvido tem `precisa_decidir = sim`, o job-pai não pode entrar inteiro na
 conta como sem-decisão: ou separa as horas de decisão, ou o pai também vira `sim`.
