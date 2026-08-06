@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cards do reel — 06/ago</title>
+<style>
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:block;src:url('fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:block;src:url('fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}
+@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:block;src:url('fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}
+@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:block;src:url('fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}
+
+:root{
+  --bg:#21201B; --s1:#2A2822; --s2:#3A372E;
+  --text:#F2EFE9; --muted:#9C998A; --accent:#8FA987;
+  --f:'Archivo',sans-serif; --f-serif:'Besley',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#111;}
+.card{
+  width:1080px;height:1920px;background:var(--bg);color:var(--text);
+  font-family:var(--f);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 110px 210px;
+}
+/* textura de papel sutil, sem gradiente decorativo */
+.card::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px, rgba(242,239,233,.028) 1px, transparent 0);
+  background-size:5px 5px;
+}
+.rule{width:104px;height:8px;background:var(--accent);margin-bottom:56px}
+.rule.sm{width:64px;height:6px;margin-bottom:40px}
+
+.kicker{
+  font-size:30px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:44px;
+}
+h1{
+  font-weight:800;line-height:.94;letter-spacing:-.022em;
+  text-transform:uppercase;font-size:150px;
+}
+h1.big{font-size:156px}
+h1.mid{font-size:128px}
+.accent{color:var(--accent)}
+.sub{
+  font-family:var(--f-serif);font-weight:400;font-size:44px;line-height:1.35;
+  color:var(--muted);margin-top:56px;max-width:800px;
+}
+
+/* card 2: acumulação */
+.stack{display:flex;flex-direction:column;gap:86px}
+.item{display:flex;align-items:center;gap:38px}
+.dot{width:26px;height:26px;background:var(--accent);flex:none}
+.item.off .dot{background:var(--s2)}
+.item.off .word{color:var(--s2)}
+.word{font-weight:800;font-size:120px;line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+
+/* card 4: fórmula */
+.formula{display:flex;flex-direction:column;gap:4px}
+.f-line{font-weight:800;font-size:94px;line-height:1.06;letter-spacing:-.022em;text-transform:uppercase;white-space:nowrap}
+.f-op{font-size:94px;font-weight:800;color:var(--accent);line-height:1.06;font-family:var(--f);text-transform:uppercase;letter-spacing:-.022em;white-space:nowrap}
+
+/* card 5: CTA */
+.cta-box{
+  border:3px solid var(--accent);padding:44px 60px;display:inline-block;
+  align-self:flex-start;margin-top:64px;
+}
+.cta-box span{font-weight:700;font-size:52px;letter-spacing:.06em;text-transform:uppercase}
+.sig{
+  position:absolute;left:110px;bottom:96px;
+  font-size:28px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);
+}
+</style>
+</head>
+<body>
+
+<!-- 1 · 0-3s -->
+<section class="card" id="c1">
+  <div class="rule"></div>
+  <h1>O que<br>você não<br><span class="accent">mede</span></h1>
+</section>
+
+<!-- 2a · 3-14s, primeiro estado -->
+<section class="card" id="c2a">
+  <div class="kicker">O dia da sua equipe</div>
+  <div class="stack">
+    <div class="item"><i class="dot"></i><span class="word">Decidir</span></div>
+    <div class="item off"><i class="dot"></i><span class="word">Executar</span></div>
+  </div>
+</section>
+
+<!-- 2b · 3-14s, segundo estado -->
+<section class="card" id="c2b">
+  <div class="kicker">O dia da sua equipe</div>
+  <div class="stack">
+    <div class="item"><i class="dot"></i><span class="word">Decidir</span></div>
+    <div class="item"><i class="dot"></i><span class="word">Executar</span></div>
+  </div>
+</section>
+
+<!-- 3 · 14-28s, a virada -->
+<section class="card" id="c3">
+  <div class="rule"></div>
+  <h1 class="big">Decide<br>ou<br><span class="accent">executa?</span></h1>
+</section>
+
+<!-- 4 · 28-40s, o método -->
+<section class="card" id="c4">
+  <div class="kicker">A conta</div>
+  <div class="formula">
+    <div class="f-line">Vezes por dia</div>
+    <div class="f-op">× Minutos cada</div>
+    <div class="f-line">× 5 dias</div>
+  </div>
+  <p class="sub">O número vem sozinho, e ele assusta.</p>
+</section>
+
+<!-- 5 · 40-45s, CTA -->
+<section class="card" id="c5">
+  <div class="rule sm"></div>
+  <h1 class="mid">Descobre<br>quanto<br>custa</h1>
+  <div class="cta-box"><span>Agendar diagnóstico</span></div>
+  <div class="sig">irbis.com.br</div>
+</section>
+
+<script>
+(function(){
+  var id = new URLSearchParams(location.search).get('card');
+  if(!id) return;
+  document.querySelectorAll('.card').forEach(function(c){
+    c.style.display = (c.id === id) ? 'flex' : 'none';
+  });
+  document.body.style.margin = '0';
+})();
+</script>
+</body>
+</html>
