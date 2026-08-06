@@ -1,6 +1,6 @@
 # Roteiro — 06/ago/2026 · "A pergunta que mede o trabalho repetido"
 
-> Rascunho para aprovação do Nicolas. Nada publicado.
+> **APROVADO pelo Nicolas em 06/ago/2026 para gravação.** Publicação depois da gravação, com a peça pronta.
 > **Não é a rotina `irbis-roteiro-diario` completa.** Não rodei garimpo de SERP, colheita de "as pessoas também perguntam", nem sinal de nicho. Este roteiro nasce de um ativo interno novo (a skill `irbis-raio-x-estrutura`, construída em 05/ago), não da colheita do dia. Se quiser a rotina completa com garimpo, é outra execução.
 
 ## De onde vem
@@ -35,6 +35,29 @@ Gancho 3 é o mais raro do nicho (ninguém por lá opera solo com a própria emp
 | 14-28s | "Ninguém separa as duas. Aí você olha a folha e não sabe qual parte está pagando. Tem uma pergunta que separa, e ela cabe em oito palavras: nessa hora ele decide, ou executa? Se a resposta é executar, e se fazer fora de ordem quebra, é sequência." | **A virada.** Rosto mais fechado. Segura meio segundo depois de "decide, ou executa?". Texto grande: "DECIDE OU EXECUTA?" |
 | 28-40s | "Faz isso com a segunda-feira de uma pessoa só. Pergunta quantas vezes por dia acontece e quanto tempo leva cada vez. Multiplica. Vai te assustar o tamanho do número." | **O método.** B-roll: caderno com risco, relógio, calculadora. Texto: "VEZES POR DIA × MINUTOS". |
 | 40-45s | "Eu fiz isso com o meu próprio negócio antes de fazer com qualquer cliente. Se você quiser, eu faço com o seu. Agenda um diagnóstico." | **Fechamento.** Rosto. Texto: "AGENDAR DIAGNÓSTICO". |
+
+## Fala corrida para gravação
+
+Só o texto, na ordem, sem marcação. Improvise com as suas palavras onde travar; o que não pode mudar é a pergunta de oito palavras no meio.
+
+> Você mede faturamento, folha e estoque. Trabalho repetido, não.
+>
+> Sua equipe passa o dia fazendo duas coisas diferentes. Uma parte é decidir: que desconto dar, o que fazer quando o pedido chega errado. A outra parte é executar uma sequência que já é conhecida, do mesmo jeito, todo dia.
+>
+> Ninguém separa as duas. Aí você olha a folha e não sabe qual parte está pagando.
+>
+> Tem uma pergunta que separa, e ela cabe em oito palavras: nessa hora ele decide, ou executa? Se a resposta é executar, e se fazer fora de ordem quebra, é sequência.
+>
+> Faz isso com a segunda-feira de uma pessoa só. Pergunta quantas vezes por dia acontece e quanto tempo leva cada vez. Multiplica. Vai te assustar o tamanho do número.
+>
+> Eu fiz isso com o meu próprio negócio antes de fazer com qualquer cliente. Se você quiser, eu faço com o seu. Agenda um diagnóstico.
+
+**Marcas de gravação:**
+- Segurar meio segundo depois de "decide, ou executa?". É o único silêncio proposital do vídeo.
+- "Multiplica" sai seco, sem emenda com a frase seguinte.
+- Não apressar "Você mede faturamento, folha e estoque". Os três substantivos precisam pousar separados para a negação seguinte funcionar.
+
+**Música:** definir ANTES de gravar, nunca na hora de postar. Faixa entre 10 mil e 500 mil usos, dinâmica de argumento e método (o vídeo dá uma conta para fazer no mesmo dia, não um case).
 
 ## Legenda
 
