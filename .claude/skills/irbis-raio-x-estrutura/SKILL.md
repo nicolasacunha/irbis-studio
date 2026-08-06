@@ -113,6 +113,9 @@ Se o Nicolas pedir o argumento de corte, recuse e diga o motivo prático.
 - **Nunca** gravar o resultado do cliente no repo da IRBIS.
 - **Nunca** chamar esta sessão de "diagnóstico" — esse nome é da call gratuita do site.
 - **Nunca** citar preço. O preço de cada frente segue pendente de definição do dono.
+- **Nunca** citar prazo — cronograma, data de entrega ou estimativa de duração do que vier
+  depois da sessão. Mesmo motivo do preço e do ROI: não existe entrega de sistema de IA
+  medida, então não há base pra prometer prazo.
 - **Nunca** fechar a sessão só com o mapa. Sem um agente rodando, isso é relatório, e
   relatório está fora de escopo desde 03/ago.
 - **Nunca** estourar 3 caixinhas ou ~6 jobs por caixinha numa sessão. Corte e reagende.
