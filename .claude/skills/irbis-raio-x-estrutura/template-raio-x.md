@@ -37,8 +37,12 @@ Um bloco por caixinha. Campos obrigatórios, nesta ordem:
 **{N} horas por semana** em trabalho onde ninguém precisa decidir.
 
 Entram na soma apenas jobs com `precisa_decidir = não` e `horas_semana` numérico.
-Job sem hora numérica fica fora da conta e é listado à parte como não apurado —
-tanto faixa estimada (`<1h`, `1-5h`, `>5h`) quanto `—` (tempo embutido em outro job).
+Ficam fora, cada um por um motivo diferente:
+- hora não apurada — faixa estimada (`<1h`, `1-5h`, `>5h`) ou `—` (tempo embutido em
+  outro job); esses vão pra lista de não apurados abaixo;
+- hora apurada mas com `precisa_decidir = sim` — o job continua na tabela da Seção 2,
+  mas não entra na soma nem na lista de não apurados (a hora dele é conhecida, só não
+  conta porque tem decisão dentro).
 
 Não apurados: {LISTA}
 
