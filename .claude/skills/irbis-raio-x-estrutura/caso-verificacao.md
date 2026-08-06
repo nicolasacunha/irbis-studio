@@ -51,3 +51,21 @@ sem decisão, dois sistemas com API, não toca dinheiro, não depende de credenc
 - 40 min/dia × 5 = 200 min = **3.3 h**
 - 6 cadastros/semana × 20 min = 120 min = **2.0 h**
 - Dúvida de vendedor: dono não soube. Vira faixa `1-5h (estimado)`, fica fora da conta.
+
+## Verificação do roteiro
+
+Rodando o roteiro contra a entrada da Distribuidora Vale Norte, cada bloco precisa ter
+uma pergunta que produza o dado abaixo. Se um dado não tem pergunta que o arranque, o
+roteiro está incompleto.
+
+| Dado da entrada | Bloco que arranca |
+|---|---|
+| "contrataram 2 pessoas nos últimos 12 meses" | 1 |
+| "Cleide responde por atendimento E cobrança" | 2 |
+| "25 pedidos, 4 minutos cada, todo dia" | 3 |
+| "ela confere se bateu" (trabalho que só existe porque algo falhou) | 3 |
+| "a ficha de crédito ele decide na hora" | 3 |
+| "WhatsApp → Bling" | 3 |
+| "dono não soube dizer quanto tempo o Marcos gasta" | 3, com queda pra faixa |
+| 15,1 h somadas na frente dele | 4 |
+| digitar pedido escolhido como primeiro agente | 5 |
