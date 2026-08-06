@@ -142,6 +142,26 @@
   background: var(--alerta-bright);
   box-shadow: 0 0 6px var(--alerta-bright);
 }
+/* "Faz sozinho" é outro eixo, não um quarto nível de automação — por isso não ganha uma
+   quarta cor. O sinal é forma: anel neutro em volta, igual à órbita desenhada no neurônio. */
+.dot.orbit {
+  background: transparent;
+  border: 1px solid var(--papel-n);
+  width: 9px;
+  height: 9px;
+}
+.legendTitle {
+  margin: 0;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--suave-n) 75%, transparent);
+}
+.legendTitleSecond {
+  margin-top: 6px;
+  padding-top: 9px;
+  border-top: 1px solid var(--linha-n);
+}
 
 .statStrip {
   display: flex;
@@ -426,10 +446,36 @@
   border-color: color-mix(in srgb, var(--alerta-bright) 45%, transparent);
   background: color-mix(in srgb, var(--alerta-bright) 12%, transparent);
 }
+.jobPills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+/* Sem cor própria de propósito — o pill colorido ao lado responde "que tipo de trabalho é",
+   este responde "dispara sozinho". Mesma lógica do marcador de órbita na legenda. */
+.pillAgendado {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  color: var(--papel-n);
+  border: 1px solid color-mix(in srgb, var(--papel-n) 55%, transparent);
+}
+
 .jobSkill {
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--suave-n);
+}
+.jobCron {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--papel-n) 52%, transparent);
 }
 .jobSkill.gap {
   color: color-mix(in srgb, var(--alerta-bright) 85%, var(--suave-n) 15%);
@@ -456,6 +502,141 @@
 }
 .brainFact .v.pending {
   color: color-mix(in srgb, var(--alerta-bright) 80%, var(--suave-n) 20%);
+}
+
+/* Conversa com o Company Brain — v1: pergunta e recomenda, não executa (ver instructions
+   do agente em lib/agents/company-brain-agent.ts). */
+.brainChatWrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.brainFactsCompact {
+  flex-shrink: 0;
+  padding: 4px clamp(20px, 3vw, 32px) 4px;
+  border-bottom: 1px solid var(--linha-n);
+}
+.brainFactsCompact .brainFact {
+  padding: 10px 0;
+  font-size: 12px;
+}
+.chatMessages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chatEmpty {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--suave-n);
+  font-style: italic;
+}
+.chatMsg {
+  font-size: 13.5px;
+  line-height: 1.55;
+  padding: 10px 13px;
+  border-radius: 3px;
+  max-width: 92%;
+  white-space: pre-wrap;
+}
+.chatUser {
+  align-self: flex-end;
+  background: color-mix(in srgb, var(--salvia-bright) 14%, transparent);
+  color: var(--papel-n);
+}
+.chatAssistant {
+  align-self: flex-start;
+  background: color-mix(in srgb, var(--papel-n) 6%, transparent);
+  color: var(--papel-n);
+}
+/* Bloco, não inline: quando o texto da resposta começava a chegar ele grudava no último
+   chip ("consultarSupabase…Cruzei as três tabelas"). */
+.chatTool {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--suave-n);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+.chatMsg strong {
+  font-weight: 600;
+  color: var(--papel-n);
+}
+.chatForm {
+  flex-shrink: 0;
+  display: flex;
+  gap: 8px;
+  padding: 12px clamp(20px, 3vw, 32px) 10px;
+  border-top: 1px solid var(--linha-n);
+}
+.chatInput {
+  flex: 1;
+  background: color-mix(in srgb, var(--papel-n) 6%, transparent);
+  border: 1px solid var(--linha-n);
+  border-radius: 3px;
+  color: var(--papel-n);
+  font-family: var(--font-sans, inherit);
+  font-size: 13.5px;
+  padding: 10px 12px;
+}
+.chatInput:focus-visible {
+  outline: 2px solid var(--salvia-bright);
+  outline-offset: -1px;
+}
+.chatInput::placeholder {
+  color: var(--suave-n);
+}
+.chatSend {
+  flex-shrink: 0;
+  background: var(--salvia-n);
+  color: var(--papel-n);
+  border: 0;
+  border-radius: 3px;
+  padding: 0 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.chatSend:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.chatSend:not(:disabled):hover {
+  background: color-mix(in srgb, var(--salvia-n) 80%, var(--salvia-bright) 20%);
+}
+
+/* Custo à vista. Cada pergunta debita crédito real da AI Gateway — antes disso o gasto
+   só aparecia na fatura. Fica abaixo do campo, discreto: informa sem dominar. */
+.chatCusto {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0 clamp(20px, 3vw, 32px) clamp(14px, 2.4vw, 20px);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--suave-n);
+}
+.chatCusto b {
+  font-weight: 500;
+  color: color-mix(in srgb, var(--papel-n) 80%, transparent);
+}
+.chatCustoLink {
+  color: var(--suave-n);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.chatCustoLink:hover {
+  color: var(--papel-n);
 }
 
 /* Abaixo de 720px o layout radial não sobra espaço pra 7 rótulos de texto sem
@@ -529,6 +710,17 @@
   .treeName,
   .treeCount {
     text-align: left;
+  }
+
+  /* Os 4 fatos do núcleo são frases longas — no celular comiam metade da altura e
+     empurravam a conversa pra fora da tela. Viram um bloco com rolagem própria: o
+     contexto continua acessível, mas o chat mantém o espaço dele. */
+  .brainFactsCompact {
+    max-height: 28vh;
+    overflow-y: auto;
+  }
+  .brainFactsCompact .brainFact {
+    font-size: 11.5px;
   }
 }
 

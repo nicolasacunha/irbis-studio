@@ -88,3 +88,39 @@ export async function getCompanyBrainMemoria(): Promise<CompanyBrainMemoria> {
     return { ok: false, reason: e instanceof Error ? e.message : "erro desconhecido" };
   }
 }
+
+export type RecallResult = { id: string; title: string; domain: string; kind: string; tldr: string };
+
+// Busca híbrida (vetor + FTS) no vault — mesma tool `recall` do MCP, chamada por HTTP puro.
+// Filtra pra domínio de negócio por padrão (mesma regra do getCompanyBrainMemoria) — passar
+// domainsFilter explícito só quando o chamador sabe exatamente o domínio que quer.
+export async function recallMemoria(
+  query: string,
+  domainsFilter?: string[]
+): Promise<{ ok: true; results: RecallResult[] } | { ok: false; reason: string }> {
+  try {
+    const init = await ebRpc("initialize", {
+      protocolVersion: "2024-11-05",
+      capabilities: {},
+      clientInfo: { name: "irbis-os-painel", version: "1.0" },
+    });
+    if (!init.json?.result) return { ok: false, reason: "initialize falhou" };
+
+    const args: Record<string, unknown> = { query, limit: 8 };
+    if (domainsFilter?.length) args.domains_filter = domainsFilter;
+
+    const call = await ebRpc("tools/call", { name: "recall", arguments: args }, init.sid);
+    if (call.json?.error) return { ok: false, reason: String(call.json.error.message ?? "erro na tool recall") };
+
+    const content = (call.json?.result?.content ?? []) as { text?: string }[];
+    const text = content.map((c) => c.text ?? "").join("");
+    const parsed = JSON.parse(text) as { results?: RecallResult[] };
+    const all = parsed.results ?? [];
+    // Sem domainsFilter explícito, corta pra domínio de negócio (regra padrão do vault
+    // aqui). Com domainsFilter, confia no que o chamador pediu.
+    const results = domainsFilter ? all : all.filter((r) => BUSINESS_DOMAINS.has(r.domain));
+    return { ok: true, results };
+  } catch (e) {
+    return { ok: false, reason: e instanceof Error ? e.message : "erro desconhecido" };
+  }
+}

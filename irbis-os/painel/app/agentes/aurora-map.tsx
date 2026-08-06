@@ -2,14 +2,35 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useChat } from "@ai-sdk/react";
+import { DefaultChatTransport } from "ai";
 import styles from "./aurora.module.css";
 import { DEPARTAMENTOS, NIVEL_LABEL, type DepartamentoId } from "@/lib/agentes-departamentos";
+import type { CompanyBrainUIMessage } from "@/lib/agents/company-brain-agent";
 
 export type Job = {
   titulo: string;
   skill: string | null;
   nivel_automacao: "ai" | "assisted" | "human";
+  // Eixo separado do nível de automação: `nivel_automacao` diz o que o job SABE fazer
+  // sozinho, `agendado` diz o que de fato dispara sozinho, sem ninguém pedir. Um job pode
+  // ser "100% IA" e nunca rodar por conta própria — era o que o mapa escondia até 06/ago.
+  agendado: boolean;
+  cron: { taskId: string | null; ultima: string | null; proxima: string | null } | null;
 };
+
+export type Creditos = { ok: true; saldo: number; usado: number } | { ok: false; motivo: string };
+
+const BRL_LIKE = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+// O modelo responde em markdown e o chat mostrava os asteriscos crus ("**1. Duas
+// aprovações**"). Em vez de puxar um renderizador inteiro por causa de negrito, converte só
+// o `**`: quebra de linha e lista já saem certas pelo `white-space: pre-wrap` do bloco.
+function comNegrito(texto: string) {
+  return texto.split(/\*\*/).map((trecho, i) =>
+    i % 2 === 1 ? <strong key={i}>{trecho}</strong> : <span key={i}>{trecho}</span>
+  );
+}
 
 export type BrainFact = { k: string; v: string; pending?: boolean };
 
@@ -81,6 +102,16 @@ function drawNeuron(ctx: CanvasRenderingContext2D, size: number, deptId: string,
       ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(${col}, 0.95)`;
       ctx.fill();
+      // Órbita = tem cron disparando. Deliberadamente NÃO é uma quarta cor: cor já está
+      // toda gasta no eixo de automação, e dois eixos na mesma dimensão visual mentem
+      // sobre serem a mesma coisa. Anel neutro em cor de papel, forma em vez de matiz.
+      if (job.agendado) {
+        ctx.beginPath();
+        ctx.arc(x, y, r * 2.1, 0, Math.PI * 2);
+        ctx.strokeStyle = "rgba(230, 229, 225, 0.75)";
+        ctx.lineWidth = size * 0.004;
+        ctx.stroke();
+      }
     } else {
       // terminal sem conexão — a sinapse que ainda não existe
       ctx.beginPath();
@@ -165,13 +196,17 @@ export function AuroraMap({
   brainFacts,
   totalJobs,
   comSkill,
-  rodandoSozinho,
+  sabeSozinho,
+  agendados,
+  creditosIniciais,
 }: {
   jobsPorDepartamento: JobsPorDepartamento;
   brainFacts: BrainFact[];
   totalJobs: number;
   comSkill: number;
-  rodandoSozinho: number;
+  sabeSozinho: number;
+  agendados: number;
+  creditosIniciais: Creditos;
 }) {
   const stageRef = useRef<HTMLDivElement>(null);
   const auroraCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -198,6 +233,35 @@ export function AuroraMap({
     const t = setTimeout(() => setFirstLook(false), 4000);
     return () => clearTimeout(t);
   }, []);
+
+  const [chatInput, setChatInput] = useState("");
+  const chatScrollRef = useRef<HTMLDivElement>(null);
+  const { messages: chatMessages, sendMessage, status: chatStatus } = useChat<CompanyBrainUIMessage>({
+    transport: new DefaultChatTransport({ api: "/api/company-brain" }),
+  });
+
+  useEffect(() => {
+    chatScrollRef.current?.scrollTo({ top: chatScrollRef.current.scrollHeight, behavior: "smooth" });
+  }, [chatMessages]);
+
+  // Custo visível. Cada pergunta aqui debita crédito real da conta da Vercel AI Gateway —
+  // o saldo é relido depois que a resposta termina, e os tokens desta sessão somam do
+  // metadata que o route handler anexa. Não existe corte automático de propósito: o
+  // sistema tem um usuário só, travar a pergunta dele por cota seria frustração inventada.
+  const [creditos, setCreditos] = useState<Creditos>(creditosIniciais);
+  useEffect(() => {
+    if (chatStatus !== "ready" || chatMessages.length === 0) return;
+    let vivo = true;
+    fetch("/api/company-brain/creditos")
+      .then((r) => r.json())
+      .then((c: Creditos) => vivo && setCreditos(c))
+      .catch(() => {});
+    return () => {
+      vivo = false;
+    };
+  }, [chatStatus, chatMessages.length]);
+
+  const tokensSessao = chatMessages.reduce((soma, m) => soma + (m.metadata?.tokens ?? 0), 0);
 
   const positions = useMemo(() => {
     const map: Record<string, { x: number; y: number }> = {};
@@ -382,6 +446,7 @@ export function AuroraMap({
           </p>
         </div>
         <div className={styles.legend}>
+          <p className={styles.legendTitle}>sabe fazer</p>
           <div className={styles.legendRow}>
             <span>100% IA</span>
             <span className={`${styles.dot} ${styles.ai}`} />
@@ -393,6 +458,13 @@ export function AuroraMap({
           <div className={styles.legendRow}>
             <span>Humano lidera</span>
             <span className={`${styles.dot} ${styles.human}`} />
+          </div>
+          {/* Eixo separado, não um quarto nível: cor responde "sabe fazer", órbita
+              responde "faz sozinho, na hora marcada". */}
+          <p className={`${styles.legendTitle} ${styles.legendTitleSecond}`}>faz sozinho</p>
+          <div className={styles.legendRow}>
+            <span>Tem cron</span>
+            <span className={`${styles.dot} ${styles.orbit}`} />
           </div>
         </div>
       </div>
@@ -445,14 +517,18 @@ export function AuroraMap({
       })}
 
       <div className={`${styles.hud} ${styles.hudBottom}`}>
+        {/* O primeiro número era "% com nivel_automacao='ai'" — media capacidade, não
+            execução, e por isso inflava: contava job que sabe rodar sozinho mas nunca
+            roda sem alguém mandar. Agora o lead é quantos têm cron de verdade, e a
+            capacidade virou o número de apoio ao lado. */}
         <div className={styles.statStrip}>
           <div className={`${styles.stat} ${styles.statLead}`}>
-            <b>{Math.round((rodandoSozinho / totalJobs) * 100)}%</b>
-            <span>Rodando sozinho</span>
+            <b>{agendados}</b>
+            <span>Rodam sozinhos</span>
           </div>
           <div className={styles.stat}>
-            <b>{comSkill}</b>
-            <span>Com skill hoje</span>
+            <b>{sabeSozinho}</b>
+            <span>Sabem rodar só</span>
           </div>
           <div className={styles.stat}>
             <b>{totalJobs - comSkill}</b>
@@ -493,29 +569,113 @@ export function AuroraMap({
             </>
           ) : null}
         </div>
+        {activeId === "brain" ? (
+          <div className={styles.brainChatWrap}>
+            <div className={styles.brainFactsCompact}>
+              {brainFacts.map((f) => (
+                <div className={styles.brainFact} key={f.k}>
+                  <span className={styles.k}>{f.k}</span>
+                  <span className={`${styles.v} ${f.pending ? styles.pending : ""}`}>{f.v}</span>
+                </div>
+              ))}
+            </div>
+            <div className={styles.chatMessages} ref={chatScrollRef}>
+              {chatMessages.length === 0 && (
+                <p className={styles.chatEmpty}>
+                  Pergunta algo — &quot;o que eu devo fazer hoje&quot;, &quot;o que sabemos sobre
+                  [cliente]&quot;, &quot;já discutimos isso antes?&quot;
+                </p>
+              )}
+              {chatMessages.map((m) => (
+                <div key={m.id} className={`${styles.chatMsg} ${styles[m.role === "user" ? "chatUser" : "chatAssistant"]}`}>
+                  {m.parts.map((part, i) => {
+                    if (part.type === "text") return <span key={i}>{comNegrito(part.text)}</span>;
+                    if (part.type.startsWith("tool-")) {
+                      return (
+                        <span key={i} className={styles.chatTool}>
+                          consultando {part.type.replace("tool-", "")}…
+                        </span>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+              ))}
+              {(chatStatus === "submitted" || chatStatus === "streaming") && (
+                <div className={`${styles.chatMsg} ${styles.chatAssistant}`}>
+                  <span className={styles.chatTool}>pensando…</span>
+                </div>
+              )}
+            </div>
+            <form
+              className={styles.chatForm}
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!chatInput.trim()) return;
+                sendMessage({ text: chatInput });
+                setChatInput("");
+              }}
+            >
+              <input
+                className={styles.chatInput}
+                value={chatInput}
+                onChange={(e) => setChatInput(e.target.value)}
+                placeholder="Pergunta pro Company Brain…"
+                disabled={chatStatus !== "ready"}
+              />
+              <button type="submit" className={styles.chatSend} disabled={chatStatus !== "ready" || !chatInput.trim()}>
+                enviar
+              </button>
+            </form>
+            <p className={styles.chatCusto}>
+              {creditos.ok ? (
+                <>
+                  <b>US$ {BRL_LIKE.format(creditos.saldo)}</b> de crédito · US${" "}
+                  {BRL_LIKE.format(creditos.usado)} já usados
+                </>
+              ) : (
+                <>saldo da gateway indisponível ({creditos.motivo})</>
+              )}
+              {tokensSessao > 0 && ` · ${tokensSessao.toLocaleString("pt-BR")} tokens nesta sessão`}
+              {" · "}
+              <a
+                href="https://vercel.com/dashboard/ai-gateway"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.chatCustoLink}
+              >
+                painel da gateway ↗
+              </a>
+            </p>
+          </div>
+        ) : (
         <div className={styles.drawerBody}>
-          {activeId === "brain" &&
-            brainFacts.map((f) => (
-              <div className={styles.brainFact} key={f.k}>
-                <span className={styles.k}>{f.k}</span>
-                <span className={`${styles.v} ${f.pending ? styles.pending : ""}`}>{f.v}</span>
-              </div>
-            ))}
           {activeDept &&
             (jobsPorDepartamento[activeDept.id] ?? []).map((job) => (
               <div className={styles.jobRow} key={job.titulo}>
                 <div className={styles.jobTop}>
                   <span className={styles.jobTitle}>{job.titulo}</span>
-                  <span className={`${styles.pill} ${styles[job.nivel_automacao]}`}>
-                    {NIVEL_LABEL[job.nivel_automacao]}
+                  <span className={styles.jobPills}>
+                    {job.agendado && <span className={styles.pillAgendado}>agendado</span>}
+                    <span className={`${styles.pill} ${styles[job.nivel_automacao]}`}>
+                      {NIVEL_LABEL[job.nivel_automacao]}
+                    </span>
                   </span>
                 </div>
                 <span className={`${styles.jobSkill} ${job.skill ? "" : styles.gap}`}>
                   {job.skill ?? "Sem skill — a construir"}
                 </span>
+                {job.cron && (
+                  <span className={styles.jobCron}>
+                    {job.cron.taskId}
+                    {job.cron.ultima ? ` · rodou ${job.cron.ultima}` : ""}
+                    {job.cron.proxima ? ` · próxima ${job.cron.proxima}` : ""}
+                  </span>
+                )}
               </div>
             ))}
         </div>
+        )}
       </aside>
     </div>
   );

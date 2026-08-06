@@ -1,6 +1,7 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 import { DEPARTAMENTOS, type DepartamentoId } from "@/lib/agentes-departamentos";
 import { getCompanyBrainMemoria } from "@/lib/expert-brain";
+import { getCreditosGateway } from "@/lib/ai-gateway";
 import { AuroraMap, type Job, type BrainFact } from "./aurora-map";
 
 export const dynamic = "force-dynamic";
@@ -12,19 +13,43 @@ type Row = {
   skill: string | null;
   nivel_automacao: "ai" | "assisted" | "human";
   ordem: number;
+  agendado: boolean;
+  cron_task_id: string | null;
+  ultima_execucao_real: string | null;
+  proxima_execucao_real: string | null;
 };
+
+// Formata no servidor, com fuso fixo, pra não depender do relógio do browser nem gerar
+// mismatch de hidratação — o mapa mostra sempre horário de Brasília, que é quando as
+// rotinas de fato disparam na máquina do Nicolas.
+const FMT = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: "America/Sao_Paulo",
+  day: "2-digit",
+  month: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+function quando(iso: string | null) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? null : FMT.format(d).replace(",", "");
+}
 
 export default async function AgentesPage() {
   const supabase = createAdminClient();
 
-  const [jobsRes, pessoasRes, carteiraRes, memoria] = await Promise.all([
+  const [jobsRes, pessoasRes, carteiraRes, memoria, creditos] = await Promise.all([
     supabase
       .from("agentes_jobs")
-      .select("departamento, titulo, skill, nivel_automacao, ordem")
+      .select(
+        "departamento, titulo, skill, nivel_automacao, ordem, agendado, cron_task_id, ultima_execucao_real, proxima_execucao_real"
+      )
       .order("ordem", { ascending: true }),
     supabase.from("pessoas").select("id", { count: "exact", head: true }),
     supabase.from("projetos").select("id", { count: "exact", head: true }).eq("status", "carteira"),
     getCompanyBrainMemoria(),
+    getCreditosGateway(),
   ]);
 
   const rows = (jobsRes.data ?? []) as Row[];
@@ -33,7 +58,21 @@ export default async function AgentesPage() {
     (acc, dept) => {
       acc[dept.id] = rows
         .filter((r) => r.departamento === dept.id)
-        .map((r): Job => ({ titulo: r.titulo, skill: r.skill, nivel_automacao: r.nivel_automacao }));
+        .map(
+          (r): Job => ({
+            titulo: r.titulo,
+            skill: r.skill,
+            nivel_automacao: r.nivel_automacao,
+            agendado: r.agendado,
+            cron: r.agendado
+              ? {
+                  taskId: r.cron_task_id,
+                  ultima: quando(r.ultima_execucao_real),
+                  proxima: quando(r.proxima_execucao_real),
+                }
+              : null,
+          })
+        );
       return acc;
     },
     {} as Record<DepartamentoId, Job[]>
@@ -41,7 +80,8 @@ export default async function AgentesPage() {
 
   const totalJobs = rows.length;
   const comSkill = rows.filter((r) => r.skill).length;
-  const rodandoSozinho = rows.filter((r) => r.nivel_automacao === "ai").length;
+  const sabeSozinho = rows.filter((r) => r.nivel_automacao === "ai").length;
+  const agendados = rows.filter((r) => r.agendado).length;
 
   const pessoasCount = pessoasRes.count ?? 0;
   const carteiraCount = carteiraRes.count ?? 0;
@@ -77,7 +117,9 @@ export default async function AgentesPage() {
       brainFacts={brainFacts}
       totalJobs={totalJobs}
       comSkill={comSkill}
-      rodandoSozinho={rodandoSozinho}
+      sabeSozinho={sabeSozinho}
+      agendados={agendados}
+      creditosIniciais={creditos}
     />
   );
 }

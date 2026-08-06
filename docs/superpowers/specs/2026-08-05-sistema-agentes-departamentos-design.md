@@ -173,3 +173,139 @@ Nicolas: "a ideia é por aí mesmo, não encontrei referências, use suas skills
 - **`react-hooks/set-state-in-effect`** (2 novos casos, no cálculo responsivo do layout radial) — é o padrão SSR-safe correto pra evitar hydration mismatch (calcular `window.innerWidth` só depois de montar no cliente); a regra do eslint é mais rígida que o caso legítimo. Já existiam 3 casos iguais, não corrigidos, em outros arquivos do painel antes desta sessão — não bloqueia `next build`.
 
 Verificação: `tsc`, `eslint` (só os 2 casos aceitos acima) e `next build` limpos depois de cada rodada de correção; testado ao vivo no navegador em desktop e mobile (375×812) nas duas versões, incluindo o bug do z-index confirmado corrigido (trocar de departamento com a gaveta aberta funciona, fundo dimm corretamente).
+
+## Addendum 06/ago — automação fingida vs. automação real
+
+Veredicto do Nicolas sobre o v1: "amador". Não pelo desenho (a crítica formal já passou e
+foi aprovada), e sim porque **o sistema mostrava o que deveria acontecer, não o que de fato
+acontece sozinho**. O número de destaque media capacidade (`nivel_automacao='ai'`) e era
+lido como execução. Nada no mapa sabia da existência das 19 rotinas do `scheduled-tasks`
+que rodam de verdade.
+
+**Migration aditiva** `20260806000000_agentes_jobs_agendado.sql` (aplicada no banco real
+depois de `--dry-run` confirmar que só ela subiria): `agendado boolean default false`,
+`cron_task_id text`, `ultima_execucao_real timestamptz`, `proxima_execucao_real timestamptz`.
+Sem DROP, sem ALTER destrutivo.
+
+**O cruzamento contra `list_scheduled_tasks` corrigiu a premissa da tarefa.** Eram **6** jobs
+com cron real, não 4 — os 2 que faltavam na lista original:
+
+- `roteiro-diario-irbis` (diário 03h) → marketing · "Roteiro diário de vídeo". A rotina
+  invoca `irbis-roteiro-diario` literalmente.
+- `irbis-prospeccao-matinal` (seg–sex 07h30) → vendas · "Qualificar e agendar reunião".
+  Passo 1 da rotina invoca `irbis-prospeccao-e-diagnostico`.
+
+**3 rotinas órfãs viraram job** (rodavam há semanas sem existir no mapa): `guardiao-git-backup`
+e `health-check-semanal` em Operações, `sync-cerebro` em Inteligência — todas `nivel='ai'`,
+`agendado=true`. Total: **39 jobs, 9 com cron real, 12 que sabem rodar sozinhos, 1 sem dono**.
+
+**Uma 7ª rotina ficou de fora por colisão, não por esquecimento:** `irbis-auditoria-sites-clientes`
+(mensal) alimenta o mesmo job que `irbis-vigia-carteira` (clientes · "Vigiar carteira"), e
+`cron_task_id` guarda uma rotina só. Ficou a diária. Registrado no README.
+
+**Dois eixos, duas linguagens visuais.** Cor continua respondendo "sabe fazer" (sálvia/cinza/
+terracota). "Faz sozinho" virou **forma**, não uma quarta cor: anel neutro orbitando a sinapse
+no neurônio, marcador vazado na legenda (grupo próprio "faz sozinho"), pill sem cor na gaveta
+ao lado do pill colorido de nível. Misturar os dois eixos na mesma dimensão cromática mentiria
+sobre serem a mesma coisa. A gaveta mostra também `cron_task_id · rodou dd/mm hh:mm · próxima
+dd/mm hh:mm`, formatado no servidor em fuso de Brasília (determinístico, sem mismatch de
+hidratação). O stat de destaque trocou de "% que sabe rodar sozinho" para "quantos rodam
+sozinhos".
+
+**Custo do chat deixou de ser invisível.** `lib/ai-gateway.ts` lê o saldo real em
+`https://ai-gateway.vercel.sh/v1/credits`; `/api/company-brain/creditos` reexpõe (a chave
+nunca chega no browser); o route handler anexa `messageMetadata` com `totalUsage.totalTokens`
+por resposta. A barra abaixo do campo mostra saldo, gasto acumulado, tokens da sessão e link
+pro painel da gateway. **Sem rate-limit automático de propósito** — um usuário só, travar a
+pergunta dele por cota seria frustração inventada. Custo medido em uso real: **uma pergunta
+de auditoria ≈ US$ 0,05 e ≈ 13 mil tokens**; uma consulta simples ≈ US$ 0,02.
+
+**Primeira verificação visual da página autenticada.** Todos os addendums anteriores diziam
+"não verifiquei visualmente — o middleware bloqueia". Resolvido: sessão local montada pela
+Admin API do Supabase (`generateLink` → `verifyOtp` → cookie do `@supabase/ssr`), com a
+service role key do próprio `.env.local`. Nada saiu da máquina, nada foi contornado em
+produção. Achados só possíveis olhando:
+
+- O chat mostrava markdown cru (`**1. Duas aprovações**`). Corrigido com um conversor de
+  `**` de 4 linhas, sem puxar renderizador de markdown como dependência nova.
+- Os chips de "consultando…" eram inline e o texto da resposta grudava neles
+  ("consultarSupabase…Cruzei as três tabelas"). Viraram bloco.
+- No celular, os 4 fatos do núcleo comiam ~55% da altura e empurravam a conversa pra fora
+  da tela. Ganharam `max-height: 28vh` com rolagem própria.
+
+**O chat achou problema real de dados na primeira pergunta de auditoria** (registrado aqui
+porque nada no sistema guarda isso ainda — é exatamente a lacuna do item "achado guardado"):
+duas `aprovacoes` quase idênticas pro mesmo achado da Casa Paes (`44ad5d69` de 02/ago e
+`d0a12e5c` de 03/ago), e o pipeline com a Casa Paes em "Aprovação do design" pra 29/jul
+enquanto `projetos` já tem `data_entrega_real=2026-07-27` e `visivel_portal=true`.
+
+**Deriva silenciosa documentada:** `sistema-de-agentes/README.md` novo — skill nova, rotina
+nova ou job aposentado exigem atualização manual em `agentes_jobs`, senão o mapa mente; os
+dois timestamps são retrato tirado à mão e envelhecem sozinhos (o painel na Vercel não
+enxerga `~/.claude/scheduled-tasks/`).
+
+**Verificação:** `tsc --noEmit` limpo, `eslint` com os mesmos 2 casos de
+`react-hooks/set-state-in-effect` já aceitos antes (nenhum novo), `next build` completo com
+`/api/company-brain/creditos` na árvore de rotas. Testado ao vivo em 1280×720 e 375×812.
+
+### Decisões do Nicolas na mesma sessão (perguntadas antes de construir)
+
+**Item 4 — rotina proativa: aprovada, seg–sex 07h.** `irbis-company-brain-diario` criada
+(cron real `0 7 * * 1-5`, dispara 07h08 com jitter, antes da `irbis-prospeccao-matinal` das
+07h30, então o resumo já existe quando a prospecção roda). Ela cruza aprovacoes/pipeline/
+projetos/marcos/financeiro/interacoes/pessoas, grava o que não bate e devolve no máximo 15
+linhas. Restrição dura no prompt: escreve **só** em `achados`, nunca em pipeline/projetos/
+marcos/financeiro/aprovacoes, nunca contata ninguém, nunca commita.
+
+**Correção do custo que estimei antes de perguntar:** falei "~US$ 1/mês na AI Gateway". Está
+errado — a rotina roda como sessão do Claude Code, então consome a assinatura do Claude Code,
+não os créditos da AI Gateway. A gateway só é debitada pelo chat do painel.
+
+**Item 3 — achado guardado: tabela própria, só a rotina escreve.** Migration
+`20260806010000_achados.sql` (aditiva, aplicada depois de `--dry-run`). Reusar `aprovacoes`
+foi descartado com motivo: aquela tabela é mensagem pronta pra uma pessoa (`pessoa_id`,
+`canal`, `corpo`, `texto_enviado`, `enviado_em`) e alimenta a fila do `/aprovacoes` — achado
+não tem destinatário e nunca deve poder virar "enviado". O chat do painel **continua
+100% leitura**: ganhou `achados` na allowlist de consulta, não ganhou tool de escrita. A
+decisão do v1 (item 5: chat não executa) fica intacta.
+
+Anti-duplicata na raiz: índice único parcial em `achados(chave) where status='aberto'`. A
+rotina roda todo dia e acharia o mesmo problema toda vez; o banco recusa com `23505` e o
+prompt diz explicitamente que isso é o banco funcionando, não um erro a contornar. Achado que
+deixou de ser verdade vira `resolvido` na execução seguinte, não é apagado.
+
+**Item 2 — histórico: pulado por decisão dele.** Com `ultima_execucao_real` por job, a série
+temporal virou resposta pra pergunta que ninguém fez ainda, e uma tabela de snapshot nasceria
+vazia. Fica disponível: se um dia interessar, a rotina diária grava a linha do dia como
+subproduto, custo quase zero.
+
+**Item 5 — chat que executa: não implementado, de propósito.** Continua registrado como
+lacuna consciente, não como pendência.
+
+**A própria rotina nova virou linha em `agentes_jobs`** (inteligência · "Auditar os dados e
+guardar o que não bate", `agendado=true`) — criar automação sem registrar no mapa seria
+produzir na mesma sessão a deriva que o README acabou de documentar. Contagem final:
+**40 jobs, 10 com cron real, 13 que sabem rodar sozinhos, 1 sem dono de IA.**
+
+### Divergência arquivo × banco em `achados`, e como foi fechada
+
+A migration `20260806010000_achados.sql` chegou a ser aplicada com um desenho anterior
+(`categoria`/`fonte`/`visto_em`/`resolvido_em`, `chave` opcional com índice único parcial) e
+o arquivo foi reescrito na mesma sessão depois que o desenho mudou (`origem`, `fechado_em`,
+`chave` obrigatória e unique, severidade `urgente/atencao/nota`). `supabase db push` não
+reaplica migration já registrada, então arquivo e banco ficaram descasados e
+`registrar-achado-tool.ts` quebrava em runtime — confirmado com POST real:
+`PGRST204, Could not find the 'origem' column of 'achados'`.
+
+Fechado por `20260806020000_achados_alinha_schema.sql` (drop + recreate), aplicada depois de
+aprovação explícita do Nicolas. O DROP foi seguro porque a tabela tinha 0 linhas, verificado
+com `Prefer: count=exact` (`content-range: */0`) imediatamente antes — a própria migration
+carrega essa checagem escrita, com instrução de PARAR se algum dia houver linha.
+
+Verificado depois de aplicar, pelo caminho HTTP exato que a tool usa (`?on_conflict=chave`
+com `Prefer: resolution=ignore-duplicates`): primeira gravação devolve 1 linha, segunda com
+a mesma `chave` devolve 0 e não duplica. Linha de teste removida, tabela de volta a 0.
+
+**Não commitado, não deployado** — aguardando aprovação. O `/agentes` em produção já mostra
+os 40 jobs (dado é lido ao vivo), mas ainda com a UI antiga: sem órbita, sem badge
+"agendado", sem barra de custo — isso só aparece depois do deploy.
