@@ -1,6 +1,21 @@
 {
     "posts": [
         {
+            "slug": "quanto-custa-sistema-com-ia-para-industria",
+            "title": "Quanto custa um sistema com IA para indústria?",
+            "description": "Entenda quais decisões de escopo determinam o investimento em um sistema com IA para indústria.",
+            "dateISO": "2026-08-07",
+            "pilar": "sistemas-ia",
+            "keywords": [
+                "quanto custa sistema com IA para indústria",
+                "sistema com IA para indústria",
+                "automação industrial",
+                "IA para indústria"
+            ],
+            "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-industria.svg",
+            "readingTimeMin": 7
+        },
+        {
             "slug": "quanto-custa-sistema-com-ia-para-escritorio-de-advocacia",
             "title": "Quanto custa um sistema com IA para escritório de advocacia?",
             "description": "Entenda quais decisões de escopo determinam o investimento em um sistema jurídico com IA.",
