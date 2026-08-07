@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">quanto custa sistema com IA para indústria</title>
+  <desc id="desc">Diagrama abstrato de fluxos industriais e decisões de escopo para um sistema com IA.</desc>
+  <rect width="1600" height="900" fill="#14211e"/>
+  <path d="M0 690H330V505H665V350H1030V195H1600" fill="none" stroke="#bdc58b" stroke-width="18"/>
+  <circle cx="330" cy="690" r="34" fill="#db6946"/><circle cx="665" cy="505" r="34" fill="#db6946"/><circle cx="1030" cy="350" r="34" fill="#db6946"/>
+  <text x="112" y="150" fill="#f5f0df" font-family="Georgia, serif" font-size="72">Sistema com IA</text>
+  <text x="117" y="240" fill="#bdc58b" font-family="Arial, sans-serif" font-size="36">processo · dados · integrações · validação</text>
+  <text x="112" y="790" fill="#f5f0df" font-family="Arial, sans-serif" font-size="44">quanto custa sistema com IA para indústria</text>
+</svg>

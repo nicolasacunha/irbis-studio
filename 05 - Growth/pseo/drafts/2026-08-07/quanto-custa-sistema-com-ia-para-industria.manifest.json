@@ -1,0 +1,42 @@
+{
+  "keyword": "quanto custa sistema com IA para indústria",
+  "title": "Quanto custa um sistema com IA para indústria?",
+  "summary": "O custo de um sistema com IA para indústria nasce do escopo operacional, não de uma assinatura genérica de ferramenta. Integrações, dados, permissões, testes e implantação alteram o trabalho necessário. Quando o sistema acessa dados pessoais ou operacionais, a empresa precisa definir quais informações entram e quem pode consultá-las. A IA também exige critérios de validação e responsável humano quando a atividade pode afetar operação, cliente ou decisão relevante.",
+  "faq": [
+    {
+      "question": "Quanto custa um sistema com IA para indústria?",
+      "answer": "O valor depende da rotina escolhida, das integrações, do estado dos dados, do papel da IA e da implantação. A IRBIS não divulga faixa pública enquanto cada projeto precisa de escopo definido e verificável."
+    },
+    {
+      "question": "É melhor comprar um ERP pronto ou criar um sistema sob medida?",
+      "answer": "Depende do encaixe entre o processo e o produto disponível. Um sistema sob medida faz sentido quando regras, integrações ou fluxos de trabalho próprios são o problema central."
+    },
+    {
+      "question": "A IA pode aprovar pedidos ou alterar dados sozinha?",
+      "answer": "Só depois de definir permissões, limites, testes e responsável pela decisão. Em rotinas com consequência operacional, a implantação deve estabelecer quando a IA sugere e quando uma pessoa aprova."
+    },
+    {
+      "question": "Quais informações levar para um diagnóstico?",
+      "answer": "Leve exemplos da rotina atual, ferramentas usadas, pessoas envolvidas, dados de entrada, exceções frequentes e o resultado que a equipe precisa registrar."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "type": "documentação técnica oficial",
+      "claim": "O NIST AI 600-1 descreve riscos específicos de IA generativa e práticas de gestão de risco para organizações que a desenvolvem ou utilizam."
+    },
+    {
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "type": "guia técnico de segurança",
+      "claim": "O projeto OWASP Top 10 para aplicações com modelos de linguagem reúne riscos de segurança relevantes para aplicações que usam LLMs, sustentando a definição de permissões, limites e testes no escopo."
+    }
+  ],
+  "firstPartyEvidence": ["odery-crm-entrega"],
+  "image": {
+    "filename": "quanto-custa-sistema-com-ia-para-industria.svg",
+    "alt": "quanto custa sistema com IA para indústria"
+  },
+  "internalLinks": ["https://irbis.com.br/odery-crm"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-07/quanto-custa-sistema-com-ia-para-industria.md"
+}
