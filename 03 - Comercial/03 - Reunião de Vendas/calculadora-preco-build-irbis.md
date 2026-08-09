@@ -2,7 +2,9 @@
 
 > Como definir o preço de um projeto de Sistemas (build sob medida, preço cheio).
 
-> ⚠️ **Atualização 04/ago/2026 — REESTRUTURADO, VALORES PENDENTES.** Este doc era "Calculadora de Preço do Build (site)". Site saiu do escopo (ver `CLAUDE.md` seção IDENTITY). A lógica de precificação por valor (não por hora) é filosofia de negócio, não é específica de site, e mantive ela como está. **Os números — faixas em R$, referências de mercado (freelancer/agência) — eram calibrados pro mercado de site e não migram automaticamente pra Sistemas.** Precisam ser recalibrados com o dono antes de qualquer proposta usar essa tabela. Versão original (faixas de site) preservada no fim como histórico.
+> ⚠️ **Atualização 04/ago/2026 — REESTRUTURADO.** Este doc era "Calculadora de Preço do Build (site)". Site saiu do escopo (ver `CLAUDE.md` seção IDENTITY). A lógica de precificação por valor (não por hora) é filosofia de negócio, não é específica de site, e mantive ela como está. Versão original (faixas de site) preservada no fim como histórico.
+>
+> ✅ **Faixa definida pelo dono em 09/ago/2026: R$ 3.000–10.000, valor fechado.** Diferente do modelo de site, o dono não deu 4 sub-faixas por tipo de projeto — deu uma faixa única pra Sistemas em geral, calibrada pelo Passo 2 (gargalo central vs. conveniência). Ajustei o Passo 1 pra refletir isso. **Piso/teto de mercado (Trava 2) ainda pendente.**
 
 ## Regra de ouro
 
@@ -12,16 +14,14 @@ Nunca precificar por esforço/hora. Cost-plus pune eficiência, ancora contra fr
 
 ---
 
-## Passo 1 — Ancorar pelo tipo (piso técnico)
+## Passo 1 — A faixa (piso técnico)
 
-⚠️ **PENDENTE.** A tabela de site tinha 4 faixas (landing / institucional / com integrações / e-commerce) de R$ 1.997 a R$ 12k+. Sistemas provavelmente precisa de uma escala diferente — por exemplo automação simples / sistema modular / sistema com múltiplas integrações / sistema completo de operação — mas eu não tenho base pra inventar os números-piso de cada faixa. Preciso do dono pra definir a escala nova.
+Sistemas não tem sub-faixas por tipo como site tinha (landing/institucional/etc.) — o dono definiu uma faixa única, e o Passo 2 é quem move o preço dentro dela.
 
-| Tipo (rascunho — nomes e faixas pendentes) | Faixa-base |
+| Faixa | Valor |
 |---|---|
-| [a definir] | PENDENTE |
-| [a definir] | PENDENTE |
-| [a definir] | PENDENTE |
-| [a definir] | PENDENTE |
+| Sistemas — projeto padrão | **R$ 3.000 – R$ 10.000** |
+| Sistemas — muito complexo | **Sob consulta.** ⚠️ Sai da faixa. O dono precisa estar na call antes de qualquer número sair da boca — não tem teto definido ainda, não estimar. |
 
 ## Passo 2 — Mover dentro da faixa (a pergunta que calibra)
 
@@ -55,7 +55,7 @@ Cada item empurra o preço pra cima dentro (ou acima) da faixa:
 
 ## Resumo pra call
 
-1. Antes da call, já sei a **faixa pelo tipo** de projeto — quando a tabela do Passo 1 estiver preenchida.
+1. Antes da call, já sei a **faixa** (R$3-10k, ou "sob consulta" se for complexo demais pra faixa).
 2. Na call, a pergunta do Passo 2 me diz se fico na **base ou no topo**.
 3. Porte e modificadores ajustam o número final.
 4. Cota **valor fechado**, nunca hora.

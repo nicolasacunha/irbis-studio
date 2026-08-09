@@ -1,15 +1,17 @@
 # 🔁 Manual de Follow-up — IRBIS
 
-> Adaptado do Grupo JDP pra venda de site. Tom humano (de gente, não robô). Princípio: lead que não fechou NÃO morreu — e follow-up é consistência, não insistência.
+> ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). Preço, case e falas dos Blocos 5, 6, 8, 10, 13 e 14 atualizados conforme `CLAUDE.md` e `onboarding-comercial-novo-colaborador.md`. Cadência e volumetria (Blocos 1–4, 7, 9, 11–12) não dependiam de ser site — preservadas sem mudança.
+>
+> ⚠️ Bloco 10 (downsell) usa uma proposta minha (Claude) baseada no catálogo real — **não é decisão confirmada do Nicolas**, ver nota no bloco.
 
-> ⚠️ **Atualização 04/ago/2026 — cadência preservada, scripts de site flagueados.** A mecânica de timing/volumetria (Blocos 1–4, 7, 9, 11–12) não depende de ser site, mantida como está. Os Blocos 5, 6, 8, 10, 13 e 14 têm falas ou ofertas específicas de site — marquei cada um abaixo em vez de reescrever, porque a fala nova depende de preço (pendente) e de qual frente cada follow-up está fechando.
+> Adaptado do Grupo JDP. Tom humano (de gente, não robô). Princípio: lead que não fechou NÃO morreu — e follow-up é consistência, não insistência.
 
 ---
 
 ## BLOCO 1 — Objetivo
 
 Reativar e converter quem **teve a reunião mas não fechou**, e prospects que sumiram.
-Foco: segunda tentativa de fechamento, recuperação de oportunidade, relacionamento, e downsell (landing em vez de site completo).
+Foco: segunda tentativa de fechamento, recuperação de oportunidade, relacionamento, e downsell (entrada menor em vez do projeto completo).
 
 ## BLOCO 2 — Regra geral
 
@@ -35,31 +37,27 @@ Foco: segunda tentativa de fechamento, recuperação de oportunidade, relacionam
 
 ## BLOCO 5 — Abertura pós-reunião
 
-⚠️ Fala cita "o site de vocês" — trocar pela frente vendida na reunião quando houver.
-
 **Áudio de conexão (humano, curto):**
 ```
 Oi {{nome}}, tudo bem? É o Nicolas, da IRBIS.
-Tava revisando aqui o que a gente conversou sobre o site de vocês e lembrei de você.
+Tava revisando aqui o que a gente conversou sobre a operação de vocês [ou: sobre {{frente}}, se já ficou claro na reunião] e lembrei de você.
 Queria só entender como ficou sua cabeça depois da nossa conversa — fez sentido o caminho que mostrei?
 Me fala quando puder.
 ```
 
 ## BLOCO 6 — Follow-up por mensagem
 
-⚠️ Toques citam "o site" — mesma troca do Bloco 5.
-
 **Toque 1 (leve):**
 ```
 Oi {{nome}}, tudo certo?
-Correria por aí, imagino. Conseguiu pensar sobre o site?
+Correria por aí, imagino. Conseguiu pensar sobre o que a gente viu na reunião?
 Qualquer ponto que ficou no ar, me fala que eu esclareço rapidinho.
 ```
 
 **Toque 2 (retomada):**
 ```
 {{nome}}, voltando aqui.
-Pelo que você me falou na call, o site tá te custando cliente todo mês que passa parado.
+Pelo que você me falou na call, esse processo continua te custando tempo/dinheiro todo mês que passa sem ser resolvido.
 Faz sentido a gente destravar isso ainda esse mês?
 ```
 
@@ -72,15 +70,13 @@ Faz sentido a gente destravar isso ainda esse mês?
 
 ## BLOCO 8 — Quebra de objeção (preço)
 
-⚠️ **PENDENTE — números de site (R$ 7.000 / R$ 4.500–5.000), não migram sem preço definido pras 3 frentes atuais.**
-
 ```
-O valor que te apresentei (R$ 7.000) é o projeto completo.
-Mas o que importa não é o custo do site — é quanto você perde por mês sem ele trazendo cliente.
+O valor que te apresentei ([número calibrado na reunião]) é pro escopo que fecha o que a gente conversou.
+Mas o que importa não é o custo do projeto — é quanto você perde por mês com esse processo do jeito que tá hoje.
 A gente fecha o que cabe no seu momento, sem baixar o padrão.
 ```
-*(aqui você desce a âncora pro fechamento de R$ 4.500–5.000 — ao vivo, não por escrito)*
-*(lógica de "ancora e desce" provavelmente continua valendo — só os números são de site)*
+
+**Como calibrar (ver `calculadora-preco-build-irbis.md`):** cada frente tem faixa própria — Sistemas R$3.000–10.000, Consultoria de IA R$5.000/R$10.000 conforme faturamento, Bot de IA R$1.000+R$500/mês. Ancora no topo da faixa quando o gargalo é central pro negócio, desce dentro da faixa (nunca abaixo do piso) quando é mais conveniência. A descida acontece ao vivo, não por escrito — mesma lógica de antes, só que agora com números reais por frente em vez de uma âncora única de site.
 
 ## BLOCO 9 — Transição de retomada
 
@@ -91,15 +87,15 @@ Faz sentido voltar a olhar isso agora, ou o momento mudou de verdade?
 
 ## BLOCO 10 — Downsell (alternativa)
 
-⚠️ **PENDENTE — "landing page única" era o downsell de site.** A lógica de downsell (versão menor primeiro, evolui depois) provavelmente se aplica a Sistemas também, mas o que seria a versão "menor" de um sistema/automação não está definido — precisa do dono.
+> ⚠️ **Proposta minha (Claude), não confirmada pelo Nicolas.** A lógica de downsell (entrada menor primeiro, evolui depois) provavelmente segue valendo, mas "o que é a versão menor de um sistema/automação" nunca foi definido como produto formal. Uso abaixo os itens que JÁ existem confirmados no catálogo com menor barreira de entrada (Bot de IA, R$1.000 setup) em vez de inventar um produto novo — mas a decisão de oferecer isso como downsell formal é do Nicolas, não minha. Confirma antes de usar em call.
 
-Quando o orçamento não cabe no projeto completo:
+Quando o orçamento não cabe no projeto completo de Sistemas:
 ```
-Vi que talvez não seja a hora do projeto completo.
-Tem um caminho menor que encaixa agora: a gente começa por uma landing page única — a página que mais traz cliente — e evolui pro site completo depois.
+Vi que talvez não seja a hora do projeto completo agora.
+Tem um caminho menor que encaixa hoje: a gente começa pelo Bot de IA — R$1.000 de implementação, R$500/mês — resolve uma parte específica da operação, e o sistema completo entra depois, com esse primeiro passo já rodando.
 Faz sentido começar por aí?
 ```
-**Ofertas de downsell IRBIS:** landing page única · página de captação/agendamento · refação só da home.
+**Ofertas de downsell IRBIS (proposta, confirmar com Nicolas):** Bot de IA isolado · Consultoria de IA como primeiro passo antes de um projeto de Sistemas maior.
 
 ## BLOCO 11 — Fechamento no follow-up
 
@@ -120,16 +116,14 @@ Tenho amanhã 11h ou 15h30. Algum encaixa pra gente retomar?
 
 Quando não fecha em 30 dias:
 - Entra na base de nutrição
-- Manda conteúdo + caso novo de vez em quando (⚠️ exemplo original era "fiz um site pra uma clínica, deu X" — trocar pelo case atual quando houver um aprovado pra citar)
+- Manda conteúdo + caso novo de vez em quando — hoje o case pronto pra citar é a Odery Drums (CRM, bot de WhatsApp e apoio de consultoria — ver `P1-posicionamento-nicolas.md`)
 - Reativa quando tiver novidade ou vaga na agenda
 
 ## BLOCO 14 — Indicações (sempre)
 
-⚠️ Fala cita "um site que vende" — trocar pela frente relevante.
-
 Mesmo quem não fechou conhece quem precisa:
 ```
-{{nome}}, mesmo que não seja a hora pra você — conhece algum dono de negócio que tá precisando de um site que vende? Uma indicação sua já me ajuda demais.
+{{nome}}, mesmo que não seja a hora pra você — conhece algum dono de negócio que tá com a operação sobrecarregada e podia usar sistema, automação ou IA? Uma indicação sua já me ajuda demais.
 ```
 
 ## BLOCO FINAL — Regra de ouro
@@ -138,3 +132,19 @@ Mesmo quem não fechou conhece quem precisa:
 - Quem responde mais, vende mais
 - Quem acompanha, fecha
 - Quem some, perde
+
+---
+
+## Histórico — versão site (vigente até 04/ago/2026, fora de escopo)
+
+> Blocos 1-4, 7, 9, 11-12 (cadência/timing/volumetria) eram idênticos aos de hoje — mecânica não dependia do produto.
+
+**Bloco 5/6 (aberturas):** citavam literalmente "o site de vocês" / "conseguiu pensar sobre o site?".
+
+**Bloco 8 (preço):** âncora fixa de R$7.000, descia pra fechamento de R$4.500–5.000 ao vivo — número único, não faixa por frente.
+
+**Bloco 10 (downsell):** "landing page única" era a entrada menor antes do site completo — página de captação/agendamento ou refação só da home.
+
+**Bloco 13 (case):** exemplo genérico era "fiz um site pra uma clínica, deu X".
+
+**Bloco 14 (indicação):** "conhece algum dono de negócio que tá precisando de um site que vende?"
