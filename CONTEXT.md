@@ -8,6 +8,14 @@ Vocabulário comum para descrever o problema de manter áreas agrícolas irrigad
 Propriedade ou unidade produtiva que aplica água de forma controlada em uma ou mais áreas de cultivo.
 _Evitar_: Fazenda inteligente, fazenda autônoma
 
+**Pivô central**:
+Equipamento de irrigação mecanizada que gira ao redor de um ponto e atende uma área com configuração, estado e ciclo de aplicação próprios.
+_Evitar_: Irrigador genérico, válvula
+
+**Operação multipivô**:
+Operação irrigada que precisa coordenar dois ou mais pivôs centrais como unidades independentes de decisão, execução e confirmação. É o recorte obrigatório do MVP.
+_Evitar_: Fazenda irrigada, múltiplos setores, qualquer sistema de irrigação
+
 **Área de manejo**:
 Porção da operação tratada como unidade de decisão e execução por possuir cultura, condição ou infraestrutura própria.
 _Evitar_: Objeto, coisa, quadrante
