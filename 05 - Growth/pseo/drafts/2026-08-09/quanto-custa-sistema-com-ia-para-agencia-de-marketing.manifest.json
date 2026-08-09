@@ -1,0 +1,19 @@
+{
+  "keyword": "quanto custa sistema com IA para agência de marketing",
+  "title": "Quanto custa um sistema com IA para agência de marketing?",
+  "summary": "O custo de um sistema com IA para agência de marketing nasce do fluxo operacional, não da compra de uma ferramenta isolada. Dados de mídia, pipeline comercial, conteúdo e relatórios podem exigir integrações, acessos e regras diferentes. Quando o sistema usa dados de leads ou clientes, a agência precisa definir a origem, as permissões e a revisão do que será enviado a plataformas externas. A proposta fica mais precisa quando a agência descreve uma rotina, seus responsáveis e o resultado que precisa ficar registrado.",
+  "faq": [
+    {"question": "Quanto custa um sistema com IA para agência de marketing?", "answer": "O valor depende da rotina, das integrações, dos dados envolvidos, das permissões, dos testes e da implantação. A IRBIS não divulga faixa pública porque cada projeto precisa de escopo verificável antes de receber uma estimativa."},
+    {"question": "Um sistema com IA pode unificar mídia, CRM e relatórios?", "answer": "Pode apoiar essa organização quando a agência define quais dados entram, quais sistemas oferecem acesso e quem valida cada saída."},
+    {"question": "A agência deve liberar todo o CRM para um agente de IA?", "answer": "Não por padrão. O acesso deve seguir a finalidade do fluxo, com fontes e permissões delimitadas, além de revisão humana quando a consequência da saída exigir."},
+    {"question": "O que preciso levar para pedir uma proposta?", "answer": "Leve a descrição de uma rotina, exemplos de entrada e saída, pessoas envolvidas, ferramentas usadas, exceções recorrentes e o resultado que precisa ficar registrado."}
+  ],
+  "sources": [
+    {"url": "https://developers.google.com/google-ads/api/docs/conversions/upload-offline", "type": "documentação oficial de plataforma", "claim": "A documentação descreve conversões aprimoradas de leads com dados fornecidos pelo usuário, aceitação dos termos de dados do cliente e normalização e hash de identificadores antes da importação."},
+    {"url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/", "type": "guia técnico de segurança", "claim": "O projeto OWASP lista riscos de aplicações com modelos de linguagem, incluindo injeção de prompt, vazamento de informação sensível e acesso excessivo por agentes, sustentando a definição de limites de ferramentas, fontes e permissões."}
+  ],
+  "firstPartyEvidence": ["adash-entrega"],
+  "image": {"filename": "quanto-custa-sistema-com-ia-para-agencia-de-marketing.svg", "alt": "quanto custa sistema com IA para agência de marketing"},
+  "internalLinks": ["https://irbis.com.br/adash"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-09/quanto-custa-sistema-com-ia-para-agencia-de-marketing.md"
+}
