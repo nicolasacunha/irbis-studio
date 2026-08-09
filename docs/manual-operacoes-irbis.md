@@ -6,6 +6,12 @@
 
 Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
+## 0. Onboarding de novo colaborador
+
+| Processo/documento | Onde | Status |
+|---|---|---|
+| Ponto de entrada pra quem entra na IRBIS agora (comercial + geral) | `onboarding-comercial-novo-colaborador.md` (raiz do repo) | ✅ Criado 09/ago/2026 — leia antes de qualquer outro doc |
+
 ## 1. Estratégia (quem somos, pra onde vamos)
 
 | Processo/documento | Onde | Status |
@@ -24,7 +30,7 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 | Plano de canais e medição (70/20/10, input/output) | `04 - Marketing/plano-canais-e-medicao.md` | Aprovado 22/jul; **produto/preço atualizado 04/ago (fim dos sites)** |
 | Plano JDP de 7 dias (ICP, perfil, produção viral) | `~/Projects/Pessoal/JDP/PlanoPratico7DiasNicolasAlvesCunha.pdf` | Em execução — versão mais recente (04/ago); versões anteriores (`plano_7dias_*.pdf`) na mesma pasta |
 | Garimpo de concorrência | `04 - Marketing/garimpo-concorrencia-jul2026.md` | Aguarda sessão de lupa do Nicolas |
-| Posicionamento pessoal (P1: Big Idea, vilão, filtro) | `04 - Marketing/P1-posicionamento-nicolas.md` | Vigente; **v4 04/ago (fim dos sites) — bio ainda com CTA pendente de decisão** |
+| Posicionamento pessoal (P1: Big Idea, vilão, filtro) | `04 - Marketing/P1-posicionamento-nicolas.md` | Vigente; **v4 fechada 09/ago/2026 — bio, CTA ("manda 'IA' no direct"), ICP e case (Odery) resolvidos** |
 | Voz da marca (tom, fórmulas, palavras banidas) | `01 - Marca/IRBIS_Manual_de_Copy_v2.md` + `.claude/brand-context.md` | Vigente |
 | Prospecção e diagnóstico (cadências, dossiês, quiz) | `03 - Comercial/01 - Prospecção/` + skill `irbis-prospeccao-e-diagnostico` | Vigente |
 
@@ -44,9 +50,9 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 | Processo/documento | Onde | Status |
 |---|---|---|
 | **Método de entrega (espinha de TODO projeto: 7 fases + gates)** | `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` | **Vigente desde 01/ago — manda sobre os processos de entrega abaixo** |
-| Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | Vigente; agora é o **perfil SITE** instanciado do método |
-| Repitch MRR + pedido de indicação | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` | Vigente |
-| Planos de recorrência (2 pacotes) | `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md` | ⚠️ DESATUALIZADO — pricing é de manutenção de site (produto fora de escopo desde 04/ago); precisa do preço novo das 3 frentes pra reescrever, ver seção "⚠️ Pendente" do `CLAUDE.md` |
+| Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | 🛑 NEUTRALIZADO 09/ago/2026 — era o **perfil SITE** do método; site fora de escopo, preservado só como histórico. `metodo-entrega-irbis.md` cobre todos os perfis vigentes sozinho |
+| Repitch MRR + pedido de indicação | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` | Vigente — **não auditado nesta rodada de pivot, confira antes de usar** |
+| Planos de recorrência (2 pacotes) | `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md` | ✅ Reescrito 09/ago/2026 — recorrência confirmada só pro Bot de IA (R$1.000 setup + R$500/mês); Sistemas e Consultoria sem recorrência confirmada |
 | Gestão de carteira (ciclo, upsell, 4 campos no CRM) | `03 - Comercial/04 - Entrega e Recorrência/processo-gestao-carteira.md` | Aprovado 22/jul; estreia com fundadores |
 | Voz do cliente (pulso, depoimento, feedback) | `03 - Comercial/04 - Entrega e Recorrência/voz-do-cliente.md` | Aprovado 22/jul; estreia com fundadores |
 | Kit de onboarding pós-assinatura | `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` (Fases 0, 1 e 2) | ✅ FECHADA em 01/ago: o kit é o arranque + imersão + plano de entrega do método |
