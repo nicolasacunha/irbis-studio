@@ -1,0 +1,42 @@
+{
+  "keyword": "quanto custa automação com IA para escritório de advocacia",
+  "title": "Quanto custa automação com IA para escritório de advocacia?",
+  "summary": "O custo de uma automação com IA para escritório de advocacia nasce do processo escolhido, não de uma licença isolada de ferramenta. Preparação de documentos, integração com fontes autorizadas, controle de acesso, testes e revisão humana exigem trabalhos diferentes. Quando o fluxo trata dados pessoais ou conteúdo jurídico, o escritório precisa definir quais informações entram, quem pode consultá-las e como a equipe confere a saída. Uma estimativa útil só aparece depois que o escritório transforma a rotina em requisitos verificáveis.",
+  "faq": [
+    {
+      "question": "Quanto custa automação com IA para escritório de advocacia?",
+      "answer": "O valor depende da rotina escolhida, dos dados e integrações, do papel da IA, das permissões, dos testes e da implantação. A IRBIS não divulga faixa pública porque cada projeto precisa de escopo definido e verificável."
+    },
+    {
+      "question": "A IA pode preparar uma peça sem revisão de advogado?",
+      "answer": "O escritório deve definir a revisão humana conforme a consequência da saída. Uma IA pode apoiar a preparação de material, mas fontes autorizadas, critérios de conferência e responsável pela versão final precisam fazer parte do fluxo."
+    },
+    {
+      "question": "É possível automatizar processos jurídicos usando documentos existentes?",
+      "answer": "Pode ser possível quando o escritório identifica quais documentos são autorizados, como eles serão organizados e qual resultado a equipe precisa receber. A qualidade e a padronização desse material influenciam o escopo de implementação."
+    },
+    {
+      "question": "Quais informações preciso levar para pedir uma proposta?",
+      "answer": "Leve exemplos da rotina atual, pessoas envolvidas, fontes e sistemas usados, dados de entrada, exceções frequentes e o resultado que deve ficar registrado."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/guides/your-data",
+      "type": "documentação oficial de plataforma",
+      "claim": "O guia descreve controles, uso e retenção de dados na plataforma OpenAI, sustentando que decisões sobre dados e configurações devem entrar no escopo de uma integração."
+    },
+    {
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "type": "guia técnico de segurança",
+      "claim": "O projeto OWASP identifica riscos e práticas de mitigação para aplicações de IA generativa, sustentando a inclusão de permissões, limites e testes no escopo."
+    }
+  ],
+  "firstPartyEvidence": ["minuta-em-desenvolvimento"],
+  "image": {
+    "filename": "quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.svg",
+    "alt": "quanto custa automação com IA para escritório de advocacia"
+  },
+  "internalLinks": ["https://irbis.com.br/"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-08/quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.md"
+}

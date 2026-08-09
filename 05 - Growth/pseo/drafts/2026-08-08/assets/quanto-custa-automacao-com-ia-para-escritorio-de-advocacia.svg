@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">quanto custa automação com IA para escritório de advocacia</title>
+  <desc id="desc">Ilustração editorial de um fluxo jurídico com documentos, verificação humana e automação.</desc>
+  <rect width="1600" height="900" fill="#f2f0e9"/>
+  <rect x="104" y="110" width="1392" height="680" rx="28" fill="#e6e6dc"/>
+  <path d="M264 660V268c0-25 20-45 45-45h332c25 0 45 20 45 45v392" fill="#ffffff" stroke="#28372d" stroke-width="10"/>
+  <path d="M972 268c0-25 20-45 45-45h274c25 0 45 20 45 45v392" fill="#d9e6cf" stroke="#28372d" stroke-width="10"/>
+  <path d="M350 346h250M350 416h250M350 486h162" stroke="#28372d" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="1132" cy="412" r="100" fill="#ffffff" stroke="#28372d" stroke-width="10"/>
+  <path d="M1084 413l31 32 66-72" fill="none" stroke="#4b6a45" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M696 450h216" stroke="#4b6a45" stroke-width="18" stroke-linecap="round"/>
+  <path d="M856 388l62 62-62 62" fill="none" stroke="#4b6a45" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="182" y="738" fill="#28372d" font-family="Georgia, serif" font-size="46">Automação com IA, fontes conferíveis e revisão humana</text>
+</svg>
