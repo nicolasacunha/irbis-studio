@@ -10,7 +10,7 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
 | Processo/documento | Onde | Status |
 |---|---|---|
-| Visão (tese, ponto A/B, bifurcação) | `docs/visao-irbis.md` | Aprovado 21/jul |
+| Visão (tese, ponto A/B, bifurcação) | `docs/visao-irbis.md` | Aprovado 21/jul; **tese revisada 04/ago (fim dos sites) — v2 vigente** |
 | Valores (framework de decisão) | `docs/valores-irbis.md` | Aprovado 22/jul |
 | Metas por chapéu + ritual semanal | `docs/metas-por-chapeu.md` | Aprovado 22/jul |
 | Mapa de maturidade (42 itens) | `docs/mapa-maturidade-vs-realidade.md` | Vivo, recontado a cada avanço |
@@ -21,11 +21,11 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
 | Processo/documento | Onde | Status |
 |---|---|---|
-| Plano de canais e medição (70/20/10, input/output) | `04 - Marketing/plano-canais-e-medicao.md` | Aprovado 22/jul |
-| Plano JDP de 7 dias (ICP, perfil, produção viral) | `~/Projects/Pessoal/JDP/plano_7dias_*.pdf` | Em execução |
+| Plano de canais e medição (70/20/10, input/output) | `04 - Marketing/plano-canais-e-medicao.md` | Aprovado 22/jul; **produto/preço atualizado 04/ago (fim dos sites)** |
+| Plano JDP de 7 dias (ICP, perfil, produção viral) | `~/Projects/Pessoal/JDP/PlanoPratico7DiasNicolasAlvesCunha.pdf` | Em execução — versão mais recente (04/ago); versões anteriores (`plano_7dias_*.pdf`) na mesma pasta |
 | Garimpo de concorrência | `04 - Marketing/garimpo-concorrencia-jul2026.md` | Aguarda sessão de lupa do Nicolas |
-| Posicionamento pessoal (P1: Big Idea, vilão, filtro) | `04 - Marketing/P1-posicionamento-nicolas.md` | Vigente |
-| Voz da marca (tom, fórmulas, palavras banidas) | `01 - Marca/IRBIS_Manual_de_Copy.md` + `.claude/brand-context.md` | Vigente |
+| Posicionamento pessoal (P1: Big Idea, vilão, filtro) | `04 - Marketing/P1-posicionamento-nicolas.md` | Vigente; **v4 04/ago (fim dos sites) — bio ainda com CTA pendente de decisão** |
+| Voz da marca (tom, fórmulas, palavras banidas) | `01 - Marca/IRBIS_Manual_de_Copy_v2.md` + `.claude/brand-context.md` | Vigente |
 | Prospecção e diagnóstico (cadências, dossiês, quiz) | `03 - Comercial/01 - Prospecção/` + skill `irbis-prospeccao-e-diagnostico` | Vigente |
 
 ## 3. Venda e fechamento
@@ -46,10 +46,10 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 | **Método de entrega (espinha de TODO projeto: 7 fases + gates)** | `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` | **Vigente desde 01/ago — manda sobre os processos de entrega abaixo** |
 | Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | Vigente; agora é o **perfil SITE** instanciado do método |
 | Repitch MRR + pedido de indicação | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` | Vigente |
-| Planos de recorrência (2 pacotes) | `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md` | Vigente; versão software junto da proposta da mãe |
+| Planos de recorrência (2 pacotes) | `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md` | ⚠️ DESATUALIZADO — pricing é de manutenção de site (produto fora de escopo desde 04/ago); precisa do preço novo das 3 frentes pra reescrever, ver seção "⚠️ Pendente" do `CLAUDE.md` |
 | Gestão de carteira (ciclo, upsell, 4 campos no CRM) | `03 - Comercial/04 - Entrega e Recorrência/processo-gestao-carteira.md` | Aprovado 22/jul; estreia com fundadores |
 | Voz do cliente (pulso, depoimento, feedback) | `03 - Comercial/04 - Entrega e Recorrência/voz-do-cliente.md` | Aprovado 22/jul; estreia com fundadores |
-| Kit de onboarding pós-assinatura | `metodo-entrega-irbis.md` (Fases 0, 1 e 2) | ✅ FECHADA em 01/ago: o kit é o arranque + imersão + plano de entrega do método |
+| Kit de onboarding pós-assinatura | `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` (Fases 0, 1 e 2) | ✅ FECHADA em 01/ago: o kit é o arranque + imersão + plano de entrega do método |
 
 ## 5. CRM e ferramentas
 

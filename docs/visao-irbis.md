@@ -4,9 +4,13 @@
 **Método:** Manoel Lins (ponto A → ponto B com recursos limitados; horizonte rolante, foco anos 1-2) + David Ledson (indicadores com dono e data; mais progresso, depois ordem) — acervo `estrategia/`.
 **Revisão:** anual (set-dez, ciclo do Manoel) ou quando um gatilho de decisão disparar.
 
-## A tese
+> ⚡ **Atualização 04/ago/2026 (gatilho de decisão, dono verbatim, ver `CLAUDE.md` seção IDENTITY).** A tese abaixo foi escrita quando site ainda era produto ("site é a porta"). Em 04/ago o dono decidiu que **a IRBIS não vende mais sites nem landing pages** — opera como Service as a Software: Soluções com IA, Consultoria de IA e Sistemas, sem exceção. Este documento é o `docs/visao-irbis.md` citado por `04 - Marketing/P1-posicionamento-nicolas.md` e `04 - Marketing/plano-canais-e-medicao.md` como fonte da tese — os três foram atualizados juntos nesta revisão.
 
-Empresas da economia real pagam caro por aquilo que trabalha dentro delas. Site é a porta; sistema com IA é o que mora dentro. A IRBIS entrega os dois: presença digital que vende e sistemas que devolvem horas, para donos de negócio que faturam bem e operam no manual.
+## A tese (v2, 04/ago/2026 — substitui a tese original)
+
+Empresas da economia real pagam caro por rodar operação, automação e IA sem critério — ferramenta genérica plugada às pressas, sem quem entenda o negócio por trás. A IRBIS entrega isso com critério: Soluções com IA, Consultoria de IA e Sistemas sob medida, para donos de negócio que faturam bem e operam no manual.
+
+**Tese v1 (histórico, 21/jul/2026, substituída em 04/ago/2026):** "Empresas da economia real pagam caro por aquilo que trabalha dentro delas. Site é a porta; sistema com IA é o que mora dentro. A IRBIS entrega os dois: presença digital que vende e sistemas que devolvem horas, para donos de negócio que faturam bem e operam no manual."
 
 ## Ponto A (jul/2026, sem maquiagem)
 
@@ -14,7 +18,7 @@ Um dono, sem CNPJ (LTDA a caminho), receita de cliente de R$ 3.200 no ano. Do ou
 
 ## Ponto B — próximos 2 anos (compromisso firme)
 
-**Até out/2026:** 2 clientes fundadores de IA assinados e entregues como cases; ≥ 2 clientes novos/mês; R$ 4k/mês de receita própria recorrente entrando limpo na conta PJ. Se as 2 assinaturas saírem até ~19/ago, rebranding: IRBIS = IA para a economia real, sites como porta e upsell.
+**Até out/2026:** 2 clientes fundadores de IA assinados e entregues como cases; ≥ 2 clientes novos/mês; R$ 4k/mês de receita própria recorrente entrando limpo na conta PJ. ~~Se as 2 assinaturas saírem até ~19/ago, rebranding: IRBIS = IA para a economia real, sites como porta e upsell.~~ **Superado em 04/ago:** o rebranding não depende mais de gatilho de assinatura — sites saíram do escopo por decisão direta, não por condição de caixa. Comunicação externa já pode refletir as 3 frentes (ver `CLAUDE.md`).
 
 **Até jul/2027:** 5+ clientes com acompanhamento mensal ativo (MRR), case de IA com número citável no lugar do achismo, presença de conteúdo consolidada (o perfil como canal de inbound previsível), e caixa suficiente pra empresa se sustentar sem PIX de família.
 
@@ -28,10 +32,10 @@ Três rotas possíveis para ~2031: **estúdio solo premium** (eu + IA, ticket al
 
 ## Como (iniciativas macro vivas, cada uma com dono e data)
 
-1. **Pivot atrás de caixa** — fechar mãe + QG OS até ~19/ago; depois rebranding (dono: Nicolas).
+1. ~~**Pivot atrás de caixa** — fechar mãe + QG OS até ~19/ago; depois rebranding (dono: Nicolas).~~ **Concluído/superado em 04/ago:** rebranding já liberado, sem depender das 2 assinaturas.
 2. **Máquina de demanda** — plano JDP: 1 conteúdo/dia, garimpo, ICP economia real (dono: Nicolas; apoio: rotinas do Claude).
 3. **Fundação da empresa** — Fases 2-4 da spec, cada uma no seu gatilho (dono: Claude executa, Nicolas aprova).
-4. **T3 comercial** — prospecção e pipeline de sites até 30/set (dono: Nicolas).
+4. ~~**T3 comercial** — prospecção e pipeline de sites até 30/set (dono: Nicolas).~~ **Encerrado em 04/ago:** sites saíram do escopo vendável, pipeline de sites não se aplica mais. ⚠️ Pendente: se esse slot vira prospecção de Soluções com IA/Consultoria de IA/Sistemas com meta própria, é decisão do Nicolas — não substituí sozinho.
 
 ## Rituais de acompanhamento (já rodando)
 

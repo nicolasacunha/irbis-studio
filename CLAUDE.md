@@ -62,4 +62,9 @@ Regras de custo/qualidade de sessão (racional completo em `docs/superpowers/spe
 
 @01 - Marca/IRBIS_Manual_de_Copy_v2.md
 @01 - Marca/brand_guide_completo.html
-@03 - Comercial/01 - Prospecção/outbound-scripts-junho-2026.md
+
+<!-- Removido 08/ago/2026: @03 - Comercial/01 - Prospecção/outbound-scripts-junho-2026.md
+     Era carregado em toda sessão apesar de vender site (fora de escopo desde 04/ago) —
+     contraditório com a regra RULES/NUNCA acima. O arquivo continua no repo, marcado
+     como histórico. Se quiser um doc de outbound ativo aqui de novo, precisa ser um
+     escrito pras 3 frentes atuais, não este. -->
