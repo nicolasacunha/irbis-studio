@@ -20,19 +20,19 @@ Ele cobre: **como a IRBIS fala** (não muda), **o que ela vende** (mudou três v
 
 ## 02. O QUE A IRBIS É (EM COPY) — VERSÃO ATUAL
 
-A IRBIS faz **sites e sistemas com IA para empresas da economia real**.
+> ⚠️ **Atualizado 09/ago/2026 — pivot total de 04/ago/2026 (ver `CLAUDE.md`).** Esta seção (e §03, §06, §10, §12 abaixo) descreviam o modelo "Camada 1 site / Camada 2 sistema / Camada 3 white-label" — morto em 04/ago, sites saíram do escopo sem exceção. §04 Voz e Tom, §05 Fórmulas, §07 Banidos e §09 Glossário (exceto entradas marcadas) não mudam — são atemporais. Versão das camadas preservada no fim como histórico.
 
-Em uma linha: **site é a porta; sistema com IA é o que mora dentro.**
+A IRBIS opera como **Service as a Software**: sistemas, automação e IA para empresas da economia real. Não vende mais sites nem landing pages, sem exceção.
 
-### As três camadas
+**As 3 frentes, essa é a lista inteira:**
 
-| Camada | Desde | O que é | Como se fala disso |
-|---|---|---|---|
-| **1 — Sites** | 01/jun/2026 | Landing page, institucional, e-commerce | Livre. É o que o mercado já conhece da IRBIS |
-| **2 — Sistemas com IA** | 21/jul/2026 | Sistema acoplado à operação do cliente | Livre em call e proposta. Em copy público, ver §03 |
-| **3 — SaaS white-label** | 28/jul/2026 | Base de código única da IRBIS, com a marca do cliente. Primeiro produto: CRM de segmentação RFM puxado do ERP | Só em conversa 1:1 com cliente qualificado. Nada público ainda |
+| Frente | O que é | Como se fala disso |
+|---|---|---|
+| **Soluções com IA** | Automações, chatbots e agentes de IA aplicados à operação do cliente (ex.: bot de WhatsApp) | Livre, já é o discurso público atual |
+| **Consultoria de IA** | Diagnóstico de como a IA é usada hoje na empresa do cliente e indicação do caminho certo | Livre |
+| **Sistemas** | CRM, ERP e sistemas de IA sob medida — qualquer tipo de sistema entra aqui, não só CRM/ERP | Livre |
 
-Camadas 1 e 2 são **upsell mútuo**: quem compra site vira candidato a sistema, quem compra sistema precisa de porta.
+**Fora de escopo, sem exceção:** sites, landing pages, branding, identidade visual avulsa, app/dashboard avulso (fora do que se enquadra em Sistemas), Web3, motion avulso, gestão de redes sociais.
 
 ### A IRBIS fala como
 
@@ -50,17 +50,15 @@ Camadas 1 e 2 são **upsell mútuo**: quem compra site vira candidato a sistema,
 
 ---
 
-## 03. ⚠️ TRAVA DE COMUNICAÇÃO EXTERNA (até ~19/ago/2026)
+## 03. ✅ TRAVA DE COMUNICAÇÃO EXTERNA — CAIU em 04/ago/2026
 
-O rebranding público — **IRBIS = IA para a economia real** — está condicionado ao fechamento das 2 assinaturas fundadoras. Enquanto o gatilho não dispara:
+A trava era condicionada ao fechamento de 2 assinaturas até ~19/ago. Per `CLAUDE.md`: essa condição "some na prática, já que sites não são mais oferecidos" — não tem mais o que esconder até um gatilho, porque não existe mais oferta de site pra proteger com sigilo.
 
-**Pode, hoje, em qualquer canal público:** site, landing page, e-commerce, prazo de 2–3 semanas, cases Odery/EForce/A. Cunha/Casa Paes.
+**Pode, hoje, em qualquer canal público:** as 3 frentes atuais (Soluções com IA, Consultoria de IA, Sistemas), preço confirmado (ver §10), cases Odery (CRM, bot de WhatsApp, consultoria informal).
 
-**Só em call, proposta ou DM 1:1 com prospect qualificado:** sistema com IA acoplado à operação, CRM RFM, produto white-label.
+⚠️ **Confirmar com o dono antes de publicação em massa** (redesign de site institucional, deck, anúncio pago) — comunicação pontual (post, DM, proposta) já está liberada.
 
-**Não existe publicamente ainda:** "IRBIS faz IA", "plataforma", "produto SaaS", qualquer número de ticket das Camadas 2 e 3.
-
-Quando o gatilho disparar, este bloco morre e a Camada 2 sobe pro copy público. Até lá, o teste é: *se um concorrente ler isso no Instagram, ele descobre a tese antes dos 2 fundadores assinarem?* Se sim, não publica.
+**Case E-Force:** pode ser citado, mas só como credencial pessoal de geração de demanda — não como prova de que o produto atual (Sistemas/IA) funciona. Ver §10, resposta "Pedem referência".
 
 ---
 
@@ -210,16 +208,17 @@ Nunca uma qualidade vaga sem um número que a sustente.
 
 ## 06. O QUE A IRBIS RECUSA (e como recusa)
 
-**Fora de escopo, sem exceção:** branding, identidade visual avulsa, app avulso, dashboard avulso, Web3, motion avulso, gestão de redes sociais, consultoria avulsa.
-
-**A distinção que a v1 e o Arsenal não faziam:**
+**Fora de escopo, sem exceção (atualizado 09/ago/2026):** sites, landing pages, branding, identidade visual avulsa, app avulso, dashboard avulso, Web3, motion avulso, gestão de redes sociais.
 
 | Pedido | Resposta |
 |---|---|
+| "Faz um site pra gente?" | Não. Saiu do escopo em 04/ago/2026 — recusa limpa, mesmo que o repo antigo ainda descreva site como produto |
 | "Faz nossa identidade visual?" | Não. Recusa limpa |
 | "Faz um app pra gente?" | Não, se for avulso |
-| "Faz um dashboard?" | **Depende.** Avulso, não. Acoplado à operação, com dado real do ERP — **é a Camada 2, é sim** |
-| "Faz um sistema pra nossa operação?" | Sim. É o produto |
+| "Faz um dashboard?" | **Depende.** Avulso, não. Sob medida pra operação do cliente — **é Sistemas, é sim** |
+| "Faz um sistema/CRM/ERP pra nossa operação?" | Sim. É o produto |
+| "Faz automação/chatbot/agente de IA?" | Sim. É Soluções com IA |
+| "Faz diagnóstico de como usamos IA hoje?" | Sim. É Consultoria de IA |
 | "Cuida do nosso Instagram?" | Não |
 
 **Template de recusa:**
@@ -289,11 +288,13 @@ Se aparecer, o copy não está no tom.
 
 ### E-mail frio — sequência de 3 toques
 
-**D+0** · Assunto: `[Empresa] — algo que vi no site de vocês`
+> ⚠️ Exemplo abaixo atualizado 09/ago/2026 — a versão anterior auditava o site do prospect como gancho; sem site como produto, o gancho de abertura precisa vir da operação/processo dele, não do site. Ajustar caso a caso — este é só o esqueleto (observação → oferta → CTA).
+
+**D+0** · Assunto: `[Empresa] — algo que vi sobre a operação de vocês`
 
 > [Nome],
-> [observação específica do site auditado].
-> Faço sites para founders — landing page, institucional, e-commerce. Entrego em 2–3 semanas.
+> [observação específica sobre processo manual, retrabalho ou gargalo operacional identificado].
+> Construo sistemas e automação de IA sob medida pra empresa da economia real. Escopo fechado, sem cobrar por hora.
 > Vale uma call de 20 minutos?
 > Nicolas — IRBIS · irbis.com.br
 
@@ -318,15 +319,17 @@ Se aparecer, o copy não está no tom.
 - Preço sem rodeio — apresenta, explica uma vez, não justifica de novo
 - Encerramento: uma frase + CTA direto, sem "aguardo retorno"
 
-**Abertura padrão (4 Ps):**
+**Abertura padrão (4 Ps) — reescrita 09/ago/2026, esqueleto genérico pras 3 frentes:**
 
-> **O site que seu negócio merece ter — em 2 a 3 semanas.**
+> **[Nome da operação/processo do cliente] não devia depender de [gente / planilha / ferramenta de prateleira] pra funcionar.**
 >
-> Imagine o próximo investidor, parceiro ou cliente abrindo o site de vocês e sentindo, antes de ler uma linha, que é um negócio sério. Sem template. Sem "desenvolvido por [agência X]". Só o produto de vocês, representado do jeito que chegou.
+> Imagine essa parte do negócio rodando sozinha, certa, sem alguém checando manualmente todo dia. É isso que um sistema/automação sob medida — decidido por quem entende do seu negócio, não por ferramenta pronta — faz.
 >
-> Maurício Odery, CEO da EForce Drums, disse depois do projeto: *"O site antigo afastava os parceiros certos antes de qualquer conversa."* Em 2 semanas, isso mudou.
+> [Se houver case relevante ao escopo, citar Odery — CRM, bot de WhatsApp, ou apoio de consultoria — com resultado concreto, não a frase de EForce abaixo que era sobre site.]
 >
-> O próximo passo é simples: call de 20 minutos pra entender o contexto. Depois disso, proposta em 24h com escopo, prazo e valor.
+> O próximo passo é simples: call de 20 minutos pra entender a operação. Depois disso, proposta em 24h com escopo, prazo e valor.
+
+*(Exemplo antigo, série de site — histórico, não usar): "O site que seu negócio merece ter — em 2 a 3 semanas... Maurício Odery, CEO da EForce Drums: 'O site antigo afastava os parceiros certos antes de qualquer conversa.'"*
 
 **Encerramento padrão:**
 
@@ -362,9 +365,9 @@ Se aparecer, o copy não está no tom.
 | **Manda o sinal** | CTA de contato |
 | **Economia real** | O ICP: empresa que produz, vende e opera de verdade |
 | **Porta / o que mora dentro** | Site / sistema. A metáfora-mãe da tese atual |
-| **Acoplado à operação** | O que distingue Camada 2 de "dashboard avulso" |
+| **Acoplado à operação** | O que distingue Sistemas de "dashboard avulso" |
 
-**Aposentado com o pivot:** "Dominância visual", "Guerra de marca", "Marcas que as pessoas querem carregar", "DESIGN IS DEAD" — vocabulário da era branding.
+**Aposentado com o pivot de 04/ago/2026:** "Porta / o que mora dentro" (a metáfora inteira dependia de site existir como produto). Aposentado antes: "Dominância visual", "Guerra de marca", "Marcas que as pessoas querem carregar", "DESIGN IS DEAD" — vocabulário da era branding.
 
 ---
 
@@ -379,23 +382,17 @@ Se aparecer, o copy não está no tom.
 **Prospect diz que vai "pensar"**
 > "Claro. O que costuma ajudar a decidir — é o escopo, o valor ou o timing?"
 
-**Perguntam o que a IRBIS faz** *(versão pública, até 19/ago)*
-> "Faço site para empresa que precisa que o site trabalhe: landing page, institucional, e-commerce. Em 2 a 3 semanas."
-
-**Perguntam o que a IRBIS faz** *(versão 1:1 com prospect qualificado)*
-> "Site é a porta. O que mora dentro é um sistema acoplado à sua operação. A maioria compra a porta primeiro e descobre o resto depois."
+**Perguntam o que a IRBIS faz** *(atualizado 09/ago/2026 — resposta única, sem versão pública/1:1 separada)*
+> "Sistemas, automação e IA pra empresa da economia real. Três frentes: sistema sob medida pra sua operação, automação/agente de IA, ou diagnóstico de como vocês usam IA hoje. Não faço site."
 
 **Perguntam "como funciona?"**
-> "Briefing por call de 20 min. Entendo o negócio, o produto e pra quem é. Em 24h mando proposta com escopo, prazo e valor. Aprovando, começo em até 3 dias."
+> "Briefing por call de 20 min. Entendo o negócio, a operação e onde trava. Em 24h mando proposta com escopo, prazo e valor. Aprovando, começo em até 3 dias."
 
-**Perguntam "quanto custa?"** *(Camada 1)*
-> "Landing page a partir de R$5k. Institucional e e-commerce sob escopo — a complexidade define. Em todos os casos menos que agência equivalente, sem overhead de estrutura. Na call já te dou estimativa real."
-
-**Perguntam "quanto custa?"** *(Camada 2 e 3 — ⚠️ faixa não definida, ver §12)*
-> "Depende do que a operação de vocês já tem de dado. Me mostra o ERP numa call e te dou número real, não um 'a partir de'."
+**Perguntam "quanto custa?"** *(atualizado 09/ago/2026 — preço confirmado, ver `stripe-catalogo-produtos-irbis.md`)*
+> "Sistema sob medida fica entre R$3.000 e R$10.000, valor fechado pelo escopo — projeto muito complexo eu avalio numa call, não estimo de cabeça. Consultoria de IA é R$5.000 pra empresa até R$10 milhões de faturamento anual, R$10.000 acima disso. Automação (ex.: bot de IA) tem setup de R$1.000 mais R$500/mês. Nunca cotar por hora."
 
 **Pedem referência**
-> "Maurício Odery, CEO da EForce Drums — pode falar direto com ele. Ou [link do case no site]."
+> "Odery Drums — implementei o CRM deles, o bot de WhatsApp, e ajudei em várias coisas da operação. Posso te mostrar o que fizemos lá."
 
 ---
 
@@ -422,10 +419,10 @@ Do `copy-arsenal-irbis.md` (01/jun): abertura de proposta, sequência de 3 e-mai
 
 ## 12. PENDÊNCIAS — decisão do Nicolas, não do manual
 
-1. **Faixa de preço pública das Camadas 2 e 3.** Hoje só existe referência interna de ticket. Sem isso, §10 responde preço com evasiva em duas das três camadas.
-2. **"Predador técnico" sobrevive ao rebranding de ago?** A identidade atual é o Predador Silencioso; a expressão nasceu na era design. Manter, adaptar ou aposentar.
-3. **Nome comercial da Camada 2 em copy público** pós-19/ago. "Sistema com IA" é descrição, não nome.
-4. **Manifesto.** Era o melhor copy da empresa e é 100% da era branding. Reescrever pela tese "porta / o que mora dentro" ou aposentar.
+1. ✅ **Resolvido 09/ago/2026 — preço das 3 frentes.** Ver §10. Ainda sob consulta: Sistemas muito complexo, Consultoria "enterprise", Automações fora do Bot de IA.
+2. **"Predador técnico" sobrevive ao pivot de 04/ago?** Não decidido. A expressão nasceu na era design/branding — pode continuar (é sobre atitude, não sobre site) ou pode soar deslocada agora que a oferta é sistema/IA. Sinalizar ao dono.
+3. ✅ **Resolvido, por consequência do pivot 04/ago** — não existem mais "camadas" com nomes públicos vs. privados. As 3 frentes (Soluções com IA, Consultoria de IA, Sistemas) já são os nomes comerciais, e já são públicos.
+4. **Manifesto.** Segue pendente — era 100% da era branding/site ("porta / o que mora dentro"), a metáfora não faz mais sentido sem site pra ser a porta. Reescrever do zero ou aposentar — decisão do dono.
 
 ---
 

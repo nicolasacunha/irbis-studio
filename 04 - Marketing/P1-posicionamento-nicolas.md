@@ -26,8 +26,10 @@
 
 - **O que muda:** toda peça (Big Idea, Bio, Filtro, Pilares) ganha uma v4 abaixo do bloco v3 correspondente, removendo a imagem "site é a porta". v3 fica histórico, não apagada — mesma convenção das transições anteriores.
 - **O que NÃO muda:** o vilão (IA de prateleira + operação manual aceita como normal) continua valendo sem ajuste — nenhum dos dois dependia de site. O Arco de 3 Atos (item 2) também continua valendo como está: o Ato 1 é história pessoal real (começou fazendo site), o Ato 2 usa a E-Force como prova do MÉTODO (não como produto atual à venda), o Ato 3 já fala de IA/automação sem depender de site como oferta. Nenhuma reescrita necessária ali.
-- **⚠️ Pendente, não decidido aqui:** a Bio v3 usa "Manda 'site' no direct" como gatilho de CTA. Isso é mecanismo de funil, e o próprio doc já registrava (linha da Bio v3) que trocar a palavra-gatilho é "decisão técnica separada... perguntar ao dono antes de mudar". Não troquei a palavra sozinho — ver nota na Bio v4 abaixo.
-- **⚠️ Pendente, não decidido aqui:** destino dos cases de site já entregues (E-Force, Odery Drums) como prova social em conteúdo — CLAUDE.md marca isso como pergunta em aberto pro dono. Mantive o uso da E-Force como prova do MÉTODO na v4 (mesmo padrão que a v3 já usava), mas se a resposta for "tirar cases de site do conteúdo", isso muda Vilão, Arco item 2 e Destaques (item 7) também.
+- **✅ Resolvido em 09/ago/2026 — palavra-gatilho de CTA.** Passa a ser "IA" (era "Manda 'site' no direct"). Ver Bio v4 abaixo pra raciocínio completo.
+- **✅ Resolvido em 09/ago/2026 — ICP.** "Donos de negócios da economia real, por enquanto" — dono confirmou que ainda não tem dados suficientes pra nichar por vertical/segmento, e prefere ICP amplo até ter esses dados. Isso é uma decisão (ICP amplo deliberado), não uma pendência — não tratar como "falta definir", é definição atual.
+- **✅ Resolvido em 09/ago/2026 — Odery Drums.** O dono confirmou: Odery vira case nas 3 frentes atuais, não só prova de método antigo. **Sistemas** → CRM implementado lá (case real, atual, não repurposed). **Soluções com IA** → bot de WhatsApp implementado lá (case real). **Consultoria de IA** → ajuda informal na implementação de várias coisas (usar como prova qualitativa, "ajudei a implementar", não como projeto formal fechado). Isso é prova social melhor que E-Force pras 3 frentes porque é trabalho real feito sob o modelo atual, não site regravado como metáfora.
+- **✅ Resolvido em 09/ago/2026 — E-Force.** Uso mais estreito do que a v3 supunha: o dono definiu que E-Force prova que ele **sabe gerar demanda/resultado comercial**, não que prova o produto atual funciona — "não tem muito alinhamento com a oferta atual". Diferença prática: pode continuar citada como credencial pessoal (ex.: "já gerei +R$350k pra cliente"), mas não pode ser usada como se o "mesmo critério" se aplicasse a Sistemas/IA — essa ponte específica não é mais válida. Onde o texto anterior dizia "prova do MÉTODO" tratando E-Force como equivalente funcional a sistema, ler como **prova de capacidade pessoal, não prova de produto** (Ato 2, Nota de prova, Fixado 2, Destaques, Pilar 2 ângulos — mesma leitura, não reescrevi cada um). Prova de produto pras 3 frentes atuais agora é a Odery (acima).
 
 ## Parte 1 — A Fundação
 
@@ -123,21 +125,23 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 
 **Veredito: mantém.** Funciona bem agora. Upgrade opcional no futuro: uma foto com mais presença e expressão mais confiante, direção de arte mais intencional, pra reforçar autoridade. Não é bloqueio.
 
-### 5. Bio ⚠️ v4 PROPOSTA em 04/ago/2026 — não aplicada, falta decisão do dono sobre a palavra-gatilho
+### 5. Bio ✅ v4 FECHADA em 09/ago/2026
 
 **Nome do perfil (mantém):** Nicolas Cunha / Web Design & IA
-> Segue igual por enquanto: dono de empresa tradicional ainda pesquisa "site"/"web design", o nome segue funcionando como campo de busca. Trocar o nome de busca pra algo tipo "Sistemas com IA" é decisão separada, ainda não pedida — sinalizar ao dono se quiser revisitar. **Fica mais urgente com o fim dos sites (04/ago): revisitar quando decidir a palavra-gatilho abaixo.**
+> Segue igual por enquanto: dono de empresa tradicional ainda pesquisa "site"/"web design", o nome segue funcionando como campo de busca. Trocar o nome de busca pra algo tipo "Sistemas com IA" é decisão separada, ainda não pedida — sinalizar ao dono se quiser revisitar.
 
-**Bio v4 (proposta, fim dos sites, 04/ago/2026 — linhas 1-3 prontas, linha 4 ⚠️ PENDENTE):**
+**Bio v4 (fechada, 09/ago/2026):**
 > Sistemas com IA pra empresas da economia real.
 > Critério de quem entende o negócio, não ferramenta de prateleira.
-> +R$350k em vendas com o mesmo critério.
-> ⚠️ [CTA pendente — ver nota abaixo]
+> Já gerei +R$350k em vendas pra cliente — sei atrair e converter.
+> Manda "IA" no direct.
 > 🔗 irbis.com.br
 
-**⚠️ Não decidi a linha 4 sozinho.** A v3 usava "Manda 'site' no direct" como gatilho do funil de DM. Isso agora é literalmente um pedido de um produto que a IRBIS não vende mais — não dá pra manter, mas o próprio doc (v3) já registrava que trocar a palavra-gatilho é "decisão técnica separada... perguntar ao dono antes de mudar". Preciso que você escolha a palavra nova (ex.: "sistema", "diagnóstico", "IA" — ou outra) antes de eu fechar a linha 4 e aplicar a bio.
+**Linha 3 — reescrita em 09/ago/2026.** O dono definiu que E-Force prova capacidade pessoal de gerar demanda, não que o mesmo critério vale pra Sistemas/IA (baixo alinhamento com a oferta atual — ver nota na seção "Pivot total" acima). Tirei a implicação de "mesmo critério aplicado a sistema" e deixei como credencial pessoal ("sei atrair e converter"), que é o que o dono confirmou que a prova sustenta.
 
-**Lógica das linhas 1-3:** linha 1 mantém o ICP e nomeia o centro atual (sistema com IA); linha 2 substitui a imagem "site é a porta" pelo critério humano vs. ferramenta pronta, sem imagem de site; linha 3 mantém a prova (+R$350k, E-Force), como prova do MÉTODO — mesma ressalva da v3, ainda sem case de sistema de IA entregue e medido.
+**Linha 4 — CTA escolhido: "IA".** O dono deu 3 opções ("IA", "AGENTE", ou outra que fizesse sentido com a oferta) e delegou a escolha final. Fui de **"IA"** por ser a palavra que aparece nas 3 frentes (Soluções com **IA**, Consultoria de **IA**, Sistemas de **IA** sob medida) — "AGENTE" encaixaria bem em Soluções com IA mas soa estranho puxando Consultoria ou Sistemas tradicionais (CRM/ERP). Trade-off: "IA" é mais genérico, deve trazer mais volume de curiosos de baixa intenção que "AGENTE" traria — o quiz/qualificação depois do CTA é quem filtra isso, não a palavra. Reversível se não performar.
+
+**Lógica das linhas 1-2:** linha 1 mantém o ICP e nomeia o centro atual (sistema com IA); linha 2 substitui a imagem "site é a porta" pelo critério humano vs. ferramenta pronta, sem imagem de site.
 
 **Bio v2 (histórico, 15/jul/2026, substituída em 28/jul/2026):**
 > Sites com identidade pra empresas da economia real. / A IA executa. O critério é meu. / +R$350k em vendas gerados pra clientes. / Manda "site" no direct. / 🔗 irbis.com.br
@@ -150,16 +154,15 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 
 Decisão do Nicolas (15/jul, mantida): os GANCHOS ficam em aberto até a produção; existem inúmeras possibilidades com a tese v3, gerar variações na hora de gravar e escolher pelo Checklist Cara de Viral (P2). O que está fechado é a estrutura e o ângulo de cada um. Nenhum dos 3 foi gravado ainda (ver "Próximos passos"), então a atualização troca a base direto, sem versão histórica de vídeo pra descartar.
 
-> ⚡ **Atualização 04/ago/2026:** os 3 fixados abaixo ainda não foram gravados, então a base já troca direto pra v4 (mesma regra da linha acima — sem versão histórica de vídeo pra descartar). CTA de todos os 3 depende da mesma pendência da Bio v4 (palavra-gatilho ainda não decidida).
+> ⚡ **Atualização 04/ago/2026:** os 3 fixados abaixo ainda não foram gravados, então a base já troca direto pra v4 (mesma regra da linha acima — sem versão histórica de vídeo pra descartar). CTA de todos os 3: **"manda 'IA' no direct"** (ver Bio v4, 09/ago/2026).
 
 **Fixado 1 — A Tese.** Apresenta a Big Idea v4 e ataca o vilão.
 > Conteúdo: a crença (plugar IA pronta já resolve), a virada (o que decide é o critério de quem construiu o sistema pra aquela operação específica), o terceiro caminho (sistema acoplado, decidido por critério humano, não por ferramenta pronta). Imagem água/diamante disponível como fecho — imagem porta/sistema sai (era ligada a site).
 
-**Fixado 2 — A Prova.** O Ato 2 do arco + case real, generalizando o método.
-> Conteúdo: projeto E-Force. Identidade, estratégia e critério na frente da máquina geraram +R$350k em vendas. A mesma lógica hoje se aplica a sistema. ⚠️ Deixar claro no roteiro que é prova do MÉTODO, não um sistema de IA entregue — o 1º case de IA (A. Cunha ADV) fechou em 28/jul mas ainda não tem entrega nem número medido; nomear o cliente publicamente não está decidido.
+**Fixado 2 — A Prova.** ⚠️ Revisar roteiro em 09/ago/2026 — E-Force não pode mais carregar "a mesma lógica hoje se aplica a sistema" (dono definiu baixo alinhamento com a oferta atual). Duas opções, dono escolhe: (a) usar E-Force só como credencial pessoal de geração de demanda, sem ponte pra sistema; ou (b) trocar o case deste Fixado pela Odery (CRM/bot/consultoria — prova real da oferta atual, mas sem número grande pra citar ainda). Não escolhi por vocês — impacto de roteiro é grande o suficiente pra confirmar antes de gravar.
 
 **Fixado 3 — O Caminho.** Pra quem é, como funciona, próximo passo.
-> Conteúdo: quem atende (empresas da economia real, faturam bem, operam no manual), a dor (negócio que fatura bem mas trava porque tudo depende de gente/planilha — ⚠️ a estatística "75% julgam a credibilidade pelo design" (Stanford) é sobre site, não migra automaticamente pra este roteiro), o processo (diagnóstico da operação → sistema com IA construído sob medida), CTA único (⚠️ pendente, ver Bio v4).
+> Conteúdo: quem atende (empresas da economia real, faturam bem, operam no manual — ICP confirmado 09/ago/2026, amplo por enquanto, sem nicho definido), a dor (negócio que fatura bem mas trava porque tudo depende de gente/planilha — ⚠️ a estatística "75% julgam a credibilidade pelo design" (Stanford) é sobre site, não migra automaticamente pra este roteiro), o processo (diagnóstico da operação → sistema com IA construído sob medida), CTA único: **manda "IA" no direct**.
 
 ### 7. Destaques ✅ FECHADO
 Atuais: Método · Lifestyle · Me · Cases (capas pretas vazias, perfil novo).
@@ -175,7 +178,7 @@ Atuais: Método · Lifestyle · Me · Cases (capas pretas vazias, perfil novo).
 ### 8. Reels ✅ FECHADO (direção, ainda não tem reels)
 Você ainda não postou reels, então em vez de análise, a direção pros primeiros:
 - **Primeiros 3 segundos = gancho.** O melhor gancho nasce do vilão (ex: "Seu negócio fatura bem e ainda roda tudo na planilha? O problema não é o site").
-- Áudio e vídeo limpos, legenda e texto na tela (muita gente vê sem som), CTA no fim ("manda 'site' no direct").
+- Áudio e vídeo limpos, legenda e texto na tela (muita gente vê sem som), CTA no fim ("manda 'IA' no direct").
 - **Seus 3 primeiros reels = os 3 fixados:** Tese, Prova, Caminho. Viram fixados depois.
 - Daí em diante, alimenta pelos 3 Pilares de Conteúdo.
 
