@@ -2,7 +2,9 @@
 
 > Cada produto e preço pra cadastrar na Stripe. Moeda: **BRL (R$)**. Fontes: `calculadora-preco-build-irbis.md` (projeto) e `planos-recorrencia-irbis.md` (recorrência).
 
-> ⚠️ **Atualização 04/ago/2026 — REESTRUTURADO, PREÇO PENDENTE.** Os 5 produtos antigos (Acompanhamento Básico/Pro, Criação de Site, Gerenciamento de Infraestrutura, Fábrica de Landing Pages) eram todos de site — produto fora de escopo desde a decisão de 04/ago (ver `CLAUDE.md` seção IDENTITY). Nenhum tinha Price cadastrado equivalente pras 3 frentes atuais. Abaixo está a estrutura nova, com o preço de cada frente marcado como **PENDENTE**: não cadastrar nada na Stripe a partir daqui até o número ser confirmado pelo dono. Produtos antigos ficam preservados no fim deste doc como histórico — não usar pra cobrar cliente novo.
+> ⚠️ **Atualização 04/ago/2026 — REESTRUTURADO.** Os 5 produtos antigos (Acompanhamento Básico/Pro, Criação de Site, Gerenciamento de Infraestrutura, Fábrica de Landing Pages) eram todos de site — produto fora de escopo desde a decisão de 04/ago (ver `CLAUDE.md` seção IDENTITY). Produtos antigos ficam preservados no fim deste doc como histórico — não usar pra cobrar cliente novo.
+>
+> ✅ **Preço definido pelo dono em 09/ago/2026** (ver seções 1-3 abaixo). Ainda faltam confirmar: teto de Sistemas muito complexo, preço do tier "empresa muito grande" de Consultoria, e se Automações (fora do Bot de IA) tem componente recorrente — tudo marcado ⚠️ nos lugares certos. Isso não bloqueia mais cadastrar os Prices que já têm número.
 
 ## Como a Stripe organiza
 
@@ -17,48 +19,64 @@ O **compromisso de duração** (3/6/12 meses), quando aplicável, não é nativo
 ## 1. Sistemas — pagamento único (projeto)
 
 **Product name:** `Sistemas — Projeto`
-**Descrição:** CRM, ERP e sistemas de IA sob medida (ex.: sistema da A. Cunha ADV). Qualquer tipo de sistema entra aqui, não só CRM/ERP.
-**Tipo:** one-time (provável — confirmar com o dono se algum formato de Sistemas deveria ser recorrente desde o início)
+**Descrição:** CRM, ERP e sistemas de IA sob medida (ex.: CRM da Odery, sistema da A. Cunha ADV). Qualquer tipo de sistema entra aqui, não só CRM/ERP.
+**Tipo:** one-time.
 
-> ⚠️ **PENDENTE — sem preço nem faixa definida.** `calculadora-preco-build-irbis.md` tinha faixas por tipo de site (landing/institucional/integrações/e-commerce); a lógica de "preço por valor entregue ao negócio, não por hora" provavelmente transfere, mas as faixas em R$ precisam ser refeitas do zero pra escopo de sistema — não são as mesmas faixas de site com nome trocado.
+Faixa definida pelo dono (09/ago/2026): **R$ 3.000–10.000**, valor fechado calibrado pela `calculadora-preco-build-irbis.md` (gargalo central → topo da faixa; conveniência → base).
+
+⚠️ **Projeto muito complexo → sai da faixa, sob consulta.** O dono precisa estar presente pra avaliar antes de cotar; não tem teto definido — não cotar nada acima de R$10k sem essa reunião.
 
 | Price nickname | Valor | Tipo |
 |---|---|---|
-| `sistemas-projeto` | **PENDENTE** | one-time |
+| `sistemas-projeto` | R$ 3.000–10.000 (faixa fechada) | one-time |
+| `sistemas-projeto-complexo` | **PENDENTE — sob consulta, dono precisa avaliar** | one-time |
 
 ---
 
-## 2. Soluções com IA — modelo de cobrança pendente
+## 2. Soluções com IA — dois produtos com lógica diferente
 
 **Product name:** `Soluções com IA`
 **Descrição:** Automações, chatbots e agentes de IA aplicados à operação do cliente.
-**Tipo:** **PENDENTE** — não decidido se é one-time (build de automação) ou recurring (manutenção/evolução do agente ao longo do tempo, parecido com a lógica antiga de "Acompanhamento"). Automação que roda continuamente pode justificar assinatura; automação pontual pode ser projeto fechado. Não decidi isso sozinho.
+
+**2a. Bot de IA** (ex.: bot de WhatsApp implementado na Odery)
+**Tipo:** híbrido — setup one-time + assinatura recurring.
 
 | Price nickname | Valor | Tipo |
 |---|---|---|
-| `solucoes-ia` | **PENDENTE** | **PENDENTE** |
+| `bot-ia-setup` | R$ 1.000 | one-time |
+| `bot-ia-mensal` | R$ 500/mês | recurring |
+
+**2b. Automações** (fora do bot padrão)
+**Tipo:** ⚠️ **PENDENTE** — o dono disse que "vai muito de escopo a escopo", sem faixa fixa. Também não confirmou se automação fora do bot tem componente recorrente (mensalidade de manutenção/evolução) ou é só one-time. Cotar caso a caso usando a `calculadora-preco-build-irbis.md`; não usar o preço do Bot de IA como âncora, são produtos diferentes.
+
+| Price nickname | Valor | Tipo |
+|---|---|---|
+| `automacao-custom` | **PENDENTE — cotar por escopo** | **PENDENTE** |
 
 ---
 
-## 3. Consultoria de IA — modelo de cobrança pendente
+## 3. Consultoria de IA — engajamento por porte do cliente
 
 **Product name:** `Consultoria de IA`
 **Descrição:** Diagnóstico de como a IA é usada hoje na empresa do cliente e indicação do caminho certo a seguir.
-**Tipo:** **PENDENTE** — provável one-time (engajamento de diagnóstico com prazo definido), mas pode ter formato recorrente se virar acompanhamento contínuo. Confirmar com o dono.
+**Tipo:** one-time (engajamento; o dono não mencionou formato recorrente pra esta frente — não assumir assinatura).
 
-| Price nickname | Valor | Tipo |
-|---|---|---|
-| `consultoria-ia` | **PENDENTE** | **PENDENTE** |
+Faixa definida pelo dono (09/ago/2026), por faturamento anual do cliente:
+
+| Price nickname | Valor | Critério | Tipo |
+|---|---|---|---|
+| `consultoria-ia-pme` | R$ 5.000 | Empresa com faturamento até R$ 10 milhões/ano | one-time |
+| `consultoria-ia-grande` | R$ 10.000 | Empresa com faturamento acima de R$ 10 milhões/ano | one-time |
+| `consultoria-ia-enterprise` | **PENDENTE — sob consulta** | Empresa muito grande — exige mais reuniões e presença do Nicolas | one-time |
 
 ---
 
-## Checklist de cadastro na Stripe (pausado)
+## Checklist de cadastro na Stripe
 
-- [ ] **BLOQUEADO até o dono confirmar preço e modelo de cobrança (one-time/recurring) das 3 frentes.**
-- [ ] Decidir se Soluções com IA e/ou Consultoria de IA têm componente recorrente.
-- [ ] Definir se algum formato de recorrência (estilo "compromisso de 3/6/12 meses" do plano antigo) se aplica a alguma das 3 frentes.
-- [ ] Criar os Products acima só depois do preço confirmado.
-- [ ] Definir no contrato a **multa por cancelamento antecipado**, se houver componente recorrente.
+- [x] Preço confirmado pelo dono pra: Sistemas (faixa R$3-10k), Bot de IA (R$1.000 + R$500/mês), Consultoria de IA (R$5k/R$10k por faturamento).
+- [ ] Ainda pendente: teto de Sistemas complexo, preço de Consultoria enterprise, faixa/modelo de Automações fora do bot.
+- [ ] Criar os Products/Prices com número definido acima (sistemas-projeto, bot-ia-setup, bot-ia-mensal, consultoria-ia-pme, consultoria-ia-grande).
+- [ ] Definir no contrato a **multa por cancelamento antecipado** do Bot de IA (único com componente recurring confirmado até agora).
 - [ ] Gerar Payment Links por Price pra usar em proposta/fechamento.
 - [ ] **Desativar/arquivar na Stripe** (se já estiverem cadastrados) os 5 produtos de site abaixo — não usar pra cliente novo.
 

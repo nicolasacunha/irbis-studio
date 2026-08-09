@@ -1,6 +1,7 @@
 # Método de Entrega IRBIS — o padrão que todo projeto herda
 
 **Criado:** 01/ago/2026. **Status:** regra vigente a partir do próximo projeto que entrar.
+**Verificado 09/ago/2026 contra o pivot de 04/ago:** este documento já nasceu agnóstico de produto (fases, gates e leis valem pra "site, landing page, sistema, agente de IA, conteúdo") — não precisou de correção. Único ajuste de leitura: como site saiu de escopo, o perfil **"Sistema / agente de IA"** (seção 4) é o perfil padrão agora, não mais um entre vários — os perfis de Landing page/Site institucional ficam como referência histórica, não como opção ativa.
 **O que ele é:** a espinha fixa de qualquer entrega da IRBIS — site, landing page, sistema, agente de IA, conteúdo. Sete fases, sete portões. O que muda de projeto pra projeto está isolado em **3 botões de adaptação** (seção 4). Tudo o resto é igual sempre.
 **O que ele NÃO é:** um cronograma. Cronograma é artefato da Fase 2, feito por projeto.
 

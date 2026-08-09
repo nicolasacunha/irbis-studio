@@ -1,17 +1,19 @@
 ---
 peça: Brief criativo
-versão: v1.0
-data: 2026-08-03
-mudou da anterior: primeira versão
+versão: v1.1
+data: 2026-09-08
+mudou da anterior: "Formato" e menções a "site/página" atualizados pro pivot de 04/ago/2026 (Sistemas, Soluções com IA, Consultoria de IA) — resto do documento preservado
 sai quando: no kickoff/call de briefing (Fase 1 — Imersão e congelamento), antes de Estratégia/Design/Copy (Fase 3)
 ---
+
+> ⚠️ Só preenche este brief se o projeto tiver interface ou superfície pro usuário final (dashboard de Sistemas, fluxo de bot/agente em Soluções com IA). Consultoria de IA é diagnóstico, não tem entregável criativo — não usa este documento.
 
 # Brief criativo — {{projeto}}
 
 ## Visão geral
 
 Cliente: {{cliente}}
-Formato: {{site institucional / landing page / sistema com interface}}
+Formato: {{sistema/CRM com interface / dashboard / fluxo de bot ou agente de IA}}
 Prazo: {{prazo}}
 Início: {{data_inicio}}
 
@@ -29,7 +31,7 @@ O que essa pessoa valoriza ao decidir: {{preço/prazo/prova social/confiança}}
 
 ## Mensagem-chave
 
-A UMA coisa mais importante que este {{site/página}} precisa comunicar, acima de tudo o resto:
+A UMA coisa mais importante que este {{sistema/produto/fluxo}} precisa comunicar ou resolver, acima de tudo o resto:
 
 {{uma frase}}
 

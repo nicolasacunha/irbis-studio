@@ -1,6 +1,8 @@
 # 📦 Processo de Entrega Padrão — IRBIS (real)
 
-> O processo de verdade, do jeito que você entrega hoje. Documento pra levar ao checkpoint (o Arthur avalia se a entrega está à altura de um projeto de R$ 4,5–5k).
+> 🛑 **NEUTRALIZADO em 09/ago/2026 — histórico, não usar como processo vigente.** Documento inteiro descreve o processo de entrega de SITE (Stitch pra design, "site no ar", preço R$4.500–5.000, prazos de landing/institucional/e-commerce) — site saiu de escopo em 04/ago/2026. `metodo-entrega-irbis.md` (mesma pasta) já assumiu o papel de espinha de entrega pra todos os perfis de projeto, incluindo Sistemas e Soluções com IA — use aquele documento. Preservado aqui só como referência histórica do processo de site.
+
+> O processo de verdade, do jeito que se entregava até 04/ago/2026 (site). Documento originalmente pra levar ao checkpoint (o Arthur avaliava se a entrega estava à altura de um projeto de R$ 4,5–5k).
 
 ---
 
