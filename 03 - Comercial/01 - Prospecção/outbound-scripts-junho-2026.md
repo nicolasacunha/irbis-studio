@@ -3,6 +3,8 @@
 **Método:** Análise de site do prospect → DM com problema específico encontrado
 **Canal:** LinkedIn DM (conectar primeiro, depois enviar)
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR.** Todo script abaixo vende site ("Faço só sites e entrego em 2–3 semanas"), produto fora de escopo desde 04/ago (ver `CLAUDE.md`, seção IDENTITY/RULES). Este arquivo era carregado automaticamente em toda sessão via `@`-referência na seção KNOWLEDGE do `CLAUDE.md` — removi essa referência em 04/ago/2026 (mesma data, ver nota lá) porque não fazia sentido injetar um pitch de site em todo contexto quando o CLAUDE.md, na mesma respiração, manda ignorar documentos assim. Preservado aqui como histórico/mecânica de outbound (estrutura de DM, cadência D+0/D+4/D+10) — os prospects, ganchos e "faço só sites" não migram sem: (1) preço definido pras 3 frentes atuais, (2) decisão de qual frente puxar em cold outbound primeiro. Não reative sem essas duas coisas resolvidas com o dono.
+
 ---
 
 ## Regras de ouro antes de enviar

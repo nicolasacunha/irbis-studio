@@ -1,5 +1,7 @@
 # 🎯 Script de Hunter — IRBIS
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR.** Aberturas e gancho todos em torno de "site fraco"/"sem site", produto fora de escopo (ver `CLAUDE.md`). Preservado como histórico/mecânica de abordagem (princípios de DM, fluxo Conectar→Engajar→Qualificar→Conduzir→Agendar) — o gancho específico não migra sem decisão de qual dor das 3 frentes atuais usar e preço definido.
+
 > Adaptado do roteiro do Grupo JDP. Hunter = você (Nicolas) fazendo prospecção ativa por DM/WhatsApp/Instagram pra negócio com site fraco. Objetivo: **agendar a reunião**, não vender no chat.
 
 ---

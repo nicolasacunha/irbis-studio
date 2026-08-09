@@ -1,5 +1,7 @@
 # 🧭 Quiz de Diagnóstico do Site + Funil de DM — IRBIS
 
+> ⚠️ **DESATUALIZADO, BLOQUEADO — pivot total 04/ago/2026.** Mecanismo (CTA "manda SITE no direct" → ManyChat → quiz → agendamento) é reaproveitável estruturalmente e a infra de agendamento (`/call`) está confirmada em produção — mas as 5 perguntas do quiz são todas sobre "site fraco/site ausente", e a CTA depende da mesma palavra-gatilho ainda pendente que travou a Bio v4 em `P1-posicionamento-nicolas.md` (ver seção "PIVOT TOTAL" lá). Não reescrevi as perguntas porque isso é conteúdo novo (qual diagnóstico faz sentido pra Sistemas/Soluções com IA/Consultoria de IA), não find-and-replace — precisa de direção do dono sobre qual frente esse funil de DM alimenta primeiro.
+
 > Adaptado do mecanismo de funil do "prompt coringa", sem o que não serve (persona fake, infoproduto, saúde). Objetivo final: **agendar a reunião de diagnóstico**, não vender ebook.
 
 ## O mecanismo (como funciona)

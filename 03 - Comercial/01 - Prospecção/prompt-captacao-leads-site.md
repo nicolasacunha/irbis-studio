@@ -1,6 +1,6 @@
 # Prompt de captação — leads com necessidade publicada de site
 
-Versão em português do prompt de busca de leads (original em inglês, adaptado em 13/jul/2026). Usar no Claude Code (busca web + LinkedIn logado via Chrome), no ChatGPT ou em qualquer ferramenta de pesquisa. Alimenta o gate de qualificação da skill `irbis-demo-prospect`.
+> 🛑 **NEUTRALIZADO em 08/ago/2026 — NÃO EXECUTAR.** Pivot total 04/ago/2026 tornou este prompt ativamente contrário ao negócio: as queries (seção "Queries de busca") caçam só gente pedindo site, e o filtro da linha 65 excluía explicitamente App/dashboard/SaaS custom — exatamente o que Sistemas e Soluções com IA vendem hoje. Neutralizei a linha do filtro abaixo (deixei registrado, riscado, não apago histórico) pra que ninguém rode isso e reject na hora um lead bom. **Não neutralizei as queries** (linhas 34-52) porque cortar "site" delas sem saber o vocabulário certo de dor de sistema/automação me deixaria adivinhando — isso ainda depende do dono. Enquanto não houver queries novas, este prompt não deve rodar, nem parcialmente.
 
 Nota de adaptação: o original tinha sobras de outro prompt (queries de "data analytics", "built our MVP on website design"). Foram limpas; as queries abaixo miram pedidos reais de criação ou reforma de site.
 
@@ -62,8 +62,8 @@ Excluir sem dó: post anônimo ou só username; sem contexto de negócio; sem pe
 
 ## Filtros IRBIS (aplicar por cima, antes de virar demo)
 
-- Escopo é SITE. App, branding, dashboard, SaaS custom: fora.
-- Capacidade de pagamento aparente: negócio ativo com receita (corte SAM ≥ R$8k/projeto). Lead abaixo disso só como treino, com decisão explícita do Nicolas.
+- ~~Escopo é SITE. App, branding, dashboard, SaaS custom: fora.~~ 🛑 **NEUTRALIZADO 08/ago/2026** — este filtro excluía exatamente o que a IRBIS vende hoje (Sistemas = App/dashboard/SaaS custom sob medida). Sem esse filtro, o gate abaixo fica sem escopo definido — não é "sem filtro = passa tudo", é "sem filtro = não decide sozinho, pergunta ao Nicolas" até o escopo novo existir.
+- ⚠️ Capacidade de pagamento aparente (corte SAM ≥ R$8k/projeto) — calibrado pro mercado de site, não confirmado pras 3 frentes atuais. Mantido como piso provisório, não validado.
 - Lead validado entra no gate da skill `irbis-demo-prospect`; máximo de 1 demo/dia.
 
 ## Formato de saída (por lead)

@@ -1,5 +1,7 @@
 # Script WhatsApp — Lead de entrada querendo site (IRBIS)
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR.** Todo o funil pressupõe lead pedindo site de clínica, com âncora de R$ 7.000. Site saiu de escopo (ver `CLAUDE.md`). Preservado como histórico/mecânica (os 4 blocos de condução, a técnica de reframe quando perguntam preço) — não migra sem preço definido e sem decisão de qual vertical/ICP este funil de entrada agora atende (o doc todo é escrito pra clínica; não sei se isso ainda é o ICP prioritário).
+
 > Situação: alguém te chama no WhatsApp querendo um site. Você é o Nicolas conduzindo.
 > Princípio inegociável: **preço não vai por WhatsApp.** Você qualifica, constrói autoridade e leva pra reunião — onde entram o deck, os dados da dor e a âncora de R$ 7.000. Foi mandar proposta solta que matou as 3 anteriores.
 

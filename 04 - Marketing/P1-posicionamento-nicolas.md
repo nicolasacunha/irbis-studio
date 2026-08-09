@@ -20,9 +20,26 @@
 - **Guarda de prova social (atualizado 28/jul, checado no CRM do Notion): 1 case de sistema de IA FECHADO, ainda sem resultado medido.** A. Cunha ADV (escritório de advocacia trabalhista, indicação) fechou hoje, 28/jul/2026, pedido "Sistema de IA", prazo 30 dias úteis — mas é fechamento de contrato, não entrega: **ainda não existe resultado, número ou ROI medido**, porque o sistema nem começou a rodar. QG Group segue em estágio "Proposta" (Sistema Operacional), não fechado. Enquanto não houver entrega + medição: **nenhuma peça cita resultado numérico de sistema de IA**, nem "economiza X horas" (a página "ROI de IA" do Notion tem uma estimativa de ~27,5h/semana, mas está marcada "Em validação" com regra explícita do dono de não usar externamente antes de validar). A única prova numérica afirmável continua sendo **+R$350k (E-Force, que é site)**, usada aqui como prova do MÉTODO ("critério antes da ferramenta funciona"), nunca maquiada como se fosse resultado de um sistema de IA entregue. **Narrativa liberada agora:** pode falar em primeira pessoa que fechou o primeiro sistema de IA e está construindo ("acabei de fechar, tô construindo agora"), como prova de tração sem prova de resultado. **Nomear o cliente (A. Cunha ADV) em conteúdo público NÃO está decidido** — é o escritório da mãe do Nicolas, tratar como sensível e perguntar antes de citar nome/nicho específico em peça externa. Assim que houver entrega + número medido, esta seção pede revisão v4.
 - **Checklist da `irbis-guarda-pivot`, pergunta 1b:** isso é comunicação pública que aproxima o discurso pessoal de "IA" antes do gatilho de rebranding da marca (~19/ago). Tratado como aprovado para este pivot específico porque foi pedido direto pelo dono no chat, e porque o precedente já existe (bio pessoal "Sites e IA para empresas da economia real" desde 21/jul, ponte pré-rebranding). Isso NÃO libera reescrever comunicação da IRBIS como empresa (site, deck) — aquilo segue congelado até o gatilho.
 
+## ⚡ PIVOT TOTAL — fim dos sites, 04/ago/2026 (palavra do dono, substitui a seção acima)
+
+**O gatilho de rebranding chegou, mas não do jeito previsto.** A seção acima (28/jul) dizia que "site não sai do posicionamento — vira porta/upsell" e que reescrever a comunicação da IRBIS como empresa ficava congelado até ~19/ago. Em 04/ago o dono decidiu direto: **a IRBIS não vende mais sites nem landing pages, sem exceção** — nem produto, nem upsell, nem Camada 1 (ver `CLAUDE.md` seção IDENTITY, decisão verbatim do dono). Isso substitui integralmente a lógica "site é a porta, sistema é o que mora dentro" que estruturava a v3 inteira abaixo — Big Idea, Bio, Filtro e Pilares.
+
+- **O que muda:** toda peça (Big Idea, Bio, Filtro, Pilares) ganha uma v4 abaixo do bloco v3 correspondente, removendo a imagem "site é a porta". v3 fica histórico, não apagada — mesma convenção das transições anteriores.
+- **O que NÃO muda:** o vilão (IA de prateleira + operação manual aceita como normal) continua valendo sem ajuste — nenhum dos dois dependia de site. O Arco de 3 Atos (item 2) também continua valendo como está: o Ato 1 é história pessoal real (começou fazendo site), o Ato 2 usa a E-Force como prova do MÉTODO (não como produto atual à venda), o Ato 3 já fala de IA/automação sem depender de site como oferta. Nenhuma reescrita necessária ali.
+- **⚠️ Pendente, não decidido aqui:** a Bio v3 usa "Manda 'site' no direct" como gatilho de CTA. Isso é mecanismo de funil, e o próprio doc já registrava (linha da Bio v3) que trocar a palavra-gatilho é "decisão técnica separada... perguntar ao dono antes de mudar". Não troquei a palavra sozinho — ver nota na Bio v4 abaixo.
+- **⚠️ Pendente, não decidido aqui:** destino dos cases de site já entregues (E-Force, Odery Drums) como prova social em conteúdo — CLAUDE.md marca isso como pergunta em aberto pro dono. Mantive o uso da E-Force como prova do MÉTODO na v4 (mesmo padrão que a v3 já usava), mas se a resposta for "tirar cases de site do conteúdo", isso muda Vilão, Arco item 2 e Destaques (item 7) também.
+
 ## Parte 1 — A Fundação
 
-### 1. Big Idea (Frase de Tese) ✅ FECHADO — v3 em 28/jul/2026, substitui v2
+### 1. Big Idea (Frase de Tese) ✅ FECHADO — v4 em 04/ago/2026, substitui v3
+
+**Frase de Tese (v4, fim dos sites, 04/ago/2026):**
+> A maioria acha que plugar uma IA pronta já resolve o negócio. Mas empresa da economia real não cresce por ter uma ferramenta genérica rodando, cresce pelo critério de quem construiu aquilo pra operação específica dela. Eu construo o sistema acoplado na operação real do cliente, decidido por quem entende do negócio, não por quem só sabe plugar automação de prateleira. É isso que devolve hora pro dono.
+
+**Versões faladas v4 (15s):**
+> 1. "Todo mundo hoje fala em IA pro seu negócio. Quase ninguém constrói o sistema que fica rodando depois. Eu construo o que fica."
+> 2. "Automação de prateleira virou água, qualquer ferramenta promete. Sistema pensado pro seu negócio é o diamante. Eu entrego o diamante."
+> 3. "O problema não é falta de IA no seu negócio, é IA sem critério. Eu entro, entendo a operação, e construo o sistema que ela realmente precisa."
 
 **Frase de Tese (v3, pivot pra sistema com IA, 28/jul/2026):**
 > A maioria acha que ter um site já resolve o negócio. Mas empresa da economia real não cresce por ter uma porta bonita, cresce pelo que roda por trás dela. Enquanto o mercado empurra automação de prateleira e chama isso de IA, eu construo o sistema acoplado na operação real do cliente, decidido por quem entende do negócio, não por quem só sabe plugar uma ferramenta pronta. Site é a porta. Sistema com IA é o que mora dentro. Eu entrego os dois, mas é o segundo que devolve hora pro dono.
@@ -35,7 +52,7 @@
 
 Posição do Nicolas: quem entra na operação de verdade, entende o negócio antes de construir, e usa IA como execução, não como enfeite.
 
-**Versões faladas (15s), as 3 registradas; usar a que soar natural no contexto:**
+**Versões faladas v3 (histórico, substituídas em 04/ago/2026 — usavam imagem de site):**
 > 1. "Todo mundo hoje fala em IA pro seu negócio. Quase ninguém constrói o sistema que fica rodando depois que o cliente entra. O site é a porta. O sistema é o que mora dentro."
 > 2. "Ter site não é o fim, é o começo. O que decide se seu negócio cresce é o que roda por trás da porta. Eu construo isso."
 > 3. "Automação de prateleira virou água, qualquer ferramenta promete. Sistema pensado pro seu negócio é o diamante. Eu entrego o diamante."
@@ -72,15 +89,20 @@ Chave do arco v3: o "Antes" do Nicolas e a crença do mercado hoje são a MESMA 
 
 **Arco v1 (histórico, jun/2026, substituído):** Antes: "achava que site feito com IA era genérico e feio; na época era assim mesmo." · Virada: "o mercado de IA evoluiu e eu evoluí junto; a virada foi aprender a usar do jeito certo." · Missão: "não consigo ficar calado vendo a IA ser julgada pelo trabalho mal feito dos outros."
 
-### 3. Filtro Diário de Coerência ✅ FECHADO — v3 em 28/jul/2026, substitui v2
+### 3. Filtro Diário de Coerência ✅ FECHADO — v4 em 04/ago/2026, substitui v3
 
 10 segundos antes de qualquer post. Se falhar em uma, reescreve e roda as 3 de novo.
 
-1. **Isso defende a minha tese?** (site é a porta; sistema com IA é o que mora dentro e devolve hora pro dono; critério humano decide o que construir, não a ferramenta pronta). Se contradiz, não posta.
+1. **Isso defende a minha tese?** (sistema com IA construído com critério pra operação real do cliente, não ferramenta de prateleira; critério humano decide o que construir). Se contradiz, não posta.
 2. **Isso bate em alguma cara do meu vilão?** (a IA de prateleira que promete e não entende a operação real, ou a operação manual que o dono aceita como normal). Se não cutuca nenhuma, é conteúdo neutro e só ocupa espaço.
-3. **Se a pessoa visse só esse post, saberia que eu construo o que fica por trás da porta, não só a porta?** Se não, acha um jeito melhor de publicar.
+3. **Se a pessoa visse só esse post, saberia que eu construo o sistema que fica rodando, não só entrego uma ferramenta pronta?** Se não, acha um jeito melhor de publicar.
 
-> ⚠️ O card `filtro-diario.png` no celular é da v1/v2. Gerar card novo com o texto v3 (identidade IRBIS, preto e laranja) e trocar.
+> ⚠️ O card `filtro-diario.png` no celular é da v1/v2. Gerar card novo com o texto v4 (identidade IRBIS, preto e laranja) e trocar — v3 nunca chegou a virar card.
+
+**Filtro v3 (histórico, 28/jul/2026, substituído em 04/ago/2026 — usava imagem de site):**
+1. Isso defende a minha tese? (site é a porta; sistema com IA é o que mora dentro e devolve hora pro dono; critério humano decide o que construir, não a ferramenta pronta).
+2. Isso bate em alguma cara do meu vilão? (a IA de prateleira que promete e não entende a operação real, ou a operação manual que o dono aceita como normal).
+3. Se a pessoa visse só esse post, saberia que eu construo o que fica por trás da porta, não só a porta?
 
 **Filtro v2 (histórico, 15/jul/2026, substituído em 28/jul/2026):** (1) defende a tese de que a IA barateou a execução, não o critério; (2) bate na IA preguiçosa ou na agência; (3) mostraria que o critério humano é o diamante.
 
@@ -101,19 +123,21 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 
 **Veredito: mantém.** Funciona bem agora. Upgrade opcional no futuro: uma foto com mais presença e expressão mais confiante, direção de arte mais intencional, pra reforçar autoridade. Não é bloqueio.
 
-### 5. Bio ✅ FECHADO — v3 em 28/jul/2026, substitui v2
+### 5. Bio ⚠️ v4 PROPOSTA em 04/ago/2026 — não aplicada, falta decisão do dono sobre a palavra-gatilho
 
 **Nome do perfil (mantém):** Nicolas Cunha / Web Design & IA
-> Segue igual por enquanto: dono de empresa tradicional ainda pesquisa "site"/"web design", o nome segue funcionando como campo de busca. Trocar o nome de busca pra algo tipo "Sistemas com IA" é decisão separada, ainda não pedida — sinalizar ao dono se quiser revisitar.
+> Segue igual por enquanto: dono de empresa tradicional ainda pesquisa "site"/"web design", o nome segue funcionando como campo de busca. Trocar o nome de busca pra algo tipo "Sistemas com IA" é decisão separada, ainda não pedida — sinalizar ao dono se quiser revisitar. **Fica mais urgente com o fim dos sites (04/ago): revisitar quando decidir a palavra-gatilho abaixo.**
 
-**Bio v3 (pivot pra sistema com IA, 28/jul/2026):**
+**Bio v4 (proposta, fim dos sites, 04/ago/2026 — linhas 1-3 prontas, linha 4 ⚠️ PENDENTE):**
 > Sistemas com IA pra empresas da economia real.
-> Site é a porta. O sistema é o que mora dentro.
+> Critério de quem entende o negócio, não ferramenta de prateleira.
 > +R$350k em vendas com o mesmo critério.
-> Manda "site" no direct.
+> ⚠️ [CTA pendente — ver nota abaixo]
 > 🔗 irbis.com.br
 
-**Lógica:** linha 1 nomeia o novo centro (sistema com IA) mantendo o ICP; linha 2 comprime a tese v3 em 8 palavras; linha 3 é a prova (+R$350k, E-Force, único número afirmável), grafada como "o mesmo critério" para não dar a entender que veio de um sistema de IA entregue (não existe case fechado ainda); CTA por DM mantém o gatilho "site" sem mudança, porque é mecanismo de funil já em uso e trocar a palavra-gatilho é decisão técnica separada, fora do escopo deste pivot de conteúdo — perguntar ao dono antes de mudar.
+**⚠️ Não decidi a linha 4 sozinho.** A v3 usava "Manda 'site' no direct" como gatilho do funil de DM. Isso agora é literalmente um pedido de um produto que a IRBIS não vende mais — não dá pra manter, mas o próprio doc (v3) já registrava que trocar a palavra-gatilho é "decisão técnica separada... perguntar ao dono antes de mudar". Preciso que você escolha a palavra nova (ex.: "sistema", "diagnóstico", "IA" — ou outra) antes de eu fechar a linha 4 e aplicar a bio.
+
+**Lógica das linhas 1-3:** linha 1 mantém o ICP e nomeia o centro atual (sistema com IA); linha 2 substitui a imagem "site é a porta" pelo critério humano vs. ferramenta pronta, sem imagem de site; linha 3 mantém a prova (+R$350k, E-Force), como prova do MÉTODO — mesma ressalva da v3, ainda sem case de sistema de IA entregue e medido.
 
 **Bio v2 (histórico, 15/jul/2026, substituída em 28/jul/2026):**
 > Sites com identidade pra empresas da economia real. / A IA executa. O critério é meu. / +R$350k em vendas gerados pra clientes. / Manda "site" no direct. / 🔗 irbis.com.br
@@ -126,14 +150,16 @@ Foto atual: rosto centralizado, fundo claro, camisa preta.
 
 Decisão do Nicolas (15/jul, mantida): os GANCHOS ficam em aberto até a produção; existem inúmeras possibilidades com a tese v3, gerar variações na hora de gravar e escolher pelo Checklist Cara de Viral (P2). O que está fechado é a estrutura e o ângulo de cada um. Nenhum dos 3 foi gravado ainda (ver "Próximos passos"), então a atualização troca a base direto, sem versão histórica de vídeo pra descartar.
 
-**Fixado 1 — A Tese.** Apresenta a Big Idea v3 e ataca o vilão.
-> Conteúdo: a crença (site já resolve / plugar IA já resolve), a virada (o que fica por trás da porta decide se cresce), o terceiro caminho (sistema acoplado, decidido por critério humano, não por ferramenta pronta). Imagem porta/sistema ou água/diamante disponível como fecho.
+> ⚡ **Atualização 04/ago/2026:** os 3 fixados abaixo ainda não foram gravados, então a base já troca direto pra v4 (mesma regra da linha acima — sem versão histórica de vídeo pra descartar). CTA de todos os 3 depende da mesma pendência da Bio v4 (palavra-gatilho ainda não decidida).
+
+**Fixado 1 — A Tese.** Apresenta a Big Idea v4 e ataca o vilão.
+> Conteúdo: a crença (plugar IA pronta já resolve), a virada (o que decide é o critério de quem construiu o sistema pra aquela operação específica), o terceiro caminho (sistema acoplado, decidido por critério humano, não por ferramenta pronta). Imagem água/diamante disponível como fecho — imagem porta/sistema sai (era ligada a site).
 
 **Fixado 2 — A Prova.** O Ato 2 do arco + case real, generalizando o método.
-> Conteúdo: projeto E-Force. Identidade, estratégia e critério na frente da máquina geraram +R$350k em vendas. A mesma lógica hoje se aplica a sistema, não só a site. ⚠️ Deixar claro no roteiro que é prova do MÉTODO, não um sistema de IA entregue — o 1º case de IA (A. Cunha ADV) fechou em 28/jul mas ainda não tem entrega nem número medido; nomear o cliente publicamente não está decidido.
+> Conteúdo: projeto E-Force. Identidade, estratégia e critério na frente da máquina geraram +R$350k em vendas. A mesma lógica hoje se aplica a sistema. ⚠️ Deixar claro no roteiro que é prova do MÉTODO, não um sistema de IA entregue — o 1º case de IA (A. Cunha ADV) fechou em 28/jul mas ainda não tem entrega nem número medido; nomear o cliente publicamente não está decidido.
 
 **Fixado 3 — O Caminho.** Pra quem é, como funciona, próximo passo.
-> Conteúdo: quem atende (empresas da economia real, faturam bem, operam no manual), a dor (negócio que fatura bem mas trava porque tudo depende de gente/planilha; 75% julgam a credibilidade pelo design, Stanford, ainda vale pro site-porta), o processo (diagnóstico da operação, site como porta, sistema com IA como o que fica), CTA único (manda "site" no direct).
+> Conteúdo: quem atende (empresas da economia real, faturam bem, operam no manual), a dor (negócio que fatura bem mas trava porque tudo depende de gente/planilha — ⚠️ a estatística "75% julgam a credibilidade pelo design" (Stanford) é sobre site, não migra automaticamente pra este roteiro), o processo (diagnóstico da operação → sistema com IA construído sob medida), CTA único (⚠️ pendente, ver Bio v4).
 
 ### 7. Destaques ✅ FECHADO
 Atuais: Método · Lifestyle · Me · Cases (capas pretas vazias, perfil novo).
@@ -159,23 +185,28 @@ Você ainda não postou reels, então em vez de análise, a direção pros prime
 
 ## Parte 3 — Direção
 
-### 9. Pilares de Conteúdo ✅ FECHADO — v3 em 28/jul/2026, substitui v2
+### 9. Pilares de Conteúdo ✅ FECHADO — v4 em 04/ago/2026, substitui v3
 
 As 3 formas de defender a tese. Todo post até a P2 cai em um deles, e cada pilar bate numa face do vilão.
 
 **Pilar 1 — IA que trabalha, não que promete** (autoridade técnica) → ataca a IA de prateleira
 Mostra o que é sistema acoplado na operação de verdade, o oposto do chatbot/automação genérica que promete e não entrega.
 Ângulos: bastidor de construção de sistema (sem citar número de resultado, ainda sem case fechado), "por que seu chatbot pronto não resolve", o que separa ferramenta de prateleira de sistema sob medida, diagnóstico de operação antes de construir.
+*(v3 → v4: sem alteração — este pilar nunca dependeu de site.)*
 
-**Pilar 2 — O que fica por trás da porta** (resultado / negócio) → prova a tese, ataca a operação manual
-Site é a porta, mas o negócio cresce (ou trava) pelo que roda por trás. Fala a língua do dono que fatura bem e opera no manual.
-Ângulos: prova cruzada com a E-Force (mesmo critério, agora aplicado a sistema), dados da dor de operação manual e de site (98% pesquisam antes, 75% julgam pelo design, 53% abandonam por lentidão — todos com fonte, seguem valendo pro pilar do site-porta), "por que faturar bem não é o mesmo que ter um negócio que escala", "quanto tempo seu negócio te devolve".
+**Pilar 2 — O que roda por trás do negócio** (resultado / negócio) → prova a tese, ataca a operação manual — v4, substitui "O que fica por trás da porta"
+O negócio cresce (ou trava) pelo que roda por trás da operação, não pela ferramenta que ele usa. Fala a língua do dono que fatura bem e opera no manual.
+Ângulos: prova cruzada com a E-Force (mesmo critério, agora aplicado a sistema — método, não produto atual), dados da dor de operação manual (planilha, WhatsApp, retrabalho — trocar fonte se a estatística citada era específica de site), "por que faturar bem não é o mesmo que ter um negócio que escala", "quanto tempo seu negócio te devolve".
+⚠️ Os 3 dados estatísticos da v3 (98% pesquisam antes, 75% julgam pelo design, 53% abandonam por lentidão) são pesquisa de comportamento em SITE especificamente — não migram automaticamente pra este pilar. Preciso de dado equivalente pra operação/sistema antes de usar em peça pública, não vou inventar número.
 
 **Pilar 3 — O terceiro caminho** (posicionamento) → ataca agência de software cara e a ferramenta de prateleira
 Critério e foco contra as duas alternativas ruins: pagar agência de software lenta e cara, ou tentar resolver sozinho com ferramenta pronta que não escala pro negócio.
 Ângulos: "por que ERP genérico não serve pra operação real", 1 profissional e 0 intermediários, do diagnóstico ao sistema rodando em semanas, comparações IRBIS x agência x ferramenta de prateleira.
+*(v3 → v4: sem alteração — este pilar nunca dependeu de site.)*
 
 > Sempre que travar no "o que postar?", escolhe um pilar e um ângulo. Passa pelo Filtro Diário antes de publicar.
+
+**Pilares v3 (histórico, 28/jul/2026, substituídos em 04/ago/2026):** Pilar 1 "IA que trabalha, não que promete" (idêntico ao v4) · Pilar 2 "O que fica por trás da porta" (site é a porta, negócio cresce pelo que roda atrás) · Pilar 3 "O terceiro caminho" (idêntico ao v4).
 
 **Pilares v2 (histórico, 15/jul/2026, substituídos em 28/jul/2026):** Pilar 1 "IA do jeito certo" (ataca IA genérica, mostra como fazer site com IA bem feito) · Pilar 2 "Site que vende" (cases, dados de dor, conversão) · Pilar 3 "O terceiro caminho" (ataca agência lenta e cara).
 

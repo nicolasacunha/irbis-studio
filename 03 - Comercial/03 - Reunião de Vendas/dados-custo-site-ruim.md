@@ -1,5 +1,7 @@
 # Munição de venda — o custo de um site ruim (ou nenhum)
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR pra vender.** Munição inteira argumenta o valor de ter um bom site — site saiu de escopo (ver `CLAUDE.md`). Diferente dos docs de preço/catálogo, isto **não dá pra restruturar**: não existe "equivalente" mecânico de custo-de-não-ter-Sistemas/Soluções-com-IA sem levantar dados novos e verificados (mesmo padrão de rigor deste doc — fonte primária, não número solto). Se quiser um munição.md equivalente pras 3 frentes atuais, é pesquisa nova, não find-and-replace. Preservado como histórico/referência de formato (como citar fonte + frase pronta + lista de "não usar").
+
 > Dados verificados contra a fonte primária (jun/2026). Use o número + a frase pronta.
 > No fim tem a lista do que **não usar** — números inflados que te derrubam numa objeção.
 

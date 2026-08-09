@@ -1,5 +1,7 @@
 # 📞 Script de Cold Call — IRBIS
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR.** Script inteiro construído em torno de venda de site (âncora R$ 7.000 → fecha R$ 4.500–5.000, SPIN citando "site parado", cases de site). Site saiu de escopo (ver `CLAUDE.md`). Preservado como histórico/mecânica de call (estrutura SPIN, tréplica, fechamento de agendamento) — reaproveitável quando houver preço definido pra alguma das 3 frentes atuais e decisão de qual gancho/dor usar em vez de "site fraco". Não ligar com este script como está.
+
 > Adaptado do roteiro do Grupo JDP para a realidade da IRBIS (venda de site).
 > Diferença central: a ligação é fria, pro negócio da lista do Phantom (ele NÃO se cadastrou). Então a abertura é honesta + gancho real no site dele. E o objetivo não é "sessão grátis" — é **agendar a reunião de diagnóstico**, onde o preço nasce (com o deck e a âncora de R$ 7.000). Preço NUNCA na ligação.
 

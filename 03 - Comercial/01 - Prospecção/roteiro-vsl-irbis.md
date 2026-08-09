@@ -1,5 +1,7 @@
 # 🎬 Roteiro de VSL — IRBIS
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR.** VSL inteira vende site ("Eu faço site que traz cliente"), cita o case E-Force como prova — E-Force é um dos cases com destino ainda pendente de decisão do dono (ver `CLAUDE.md`, não decidir sozinho). Site saiu de escopo. Preservado como histórico/estrutura (abertura→dor→solução→prova→CTA) — não regravar/publicar sem front definido, prova aprovada e preço.
+
 > Adaptado do Grupo JDP. VSL pra atrair dono de negócio (clínica, loja, escritório, founder) com site fraco/inexistente e levá-lo a **agendar a reunião de diagnóstico**. Você (Nicolas) é quem fala. Preço não entra na VSL.
 
 ---

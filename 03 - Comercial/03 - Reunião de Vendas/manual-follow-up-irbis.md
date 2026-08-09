@@ -2,6 +2,8 @@
 
 > Adaptado do Grupo JDP pra venda de site. Tom humano (de gente, não robô). Princípio: lead que não fechou NÃO morreu — e follow-up é consistência, não insistência.
 
+> ⚠️ **Atualização 04/ago/2026 — cadência preservada, scripts de site flagueados.** A mecânica de timing/volumetria (Blocos 1–4, 7, 9, 11–12) não depende de ser site, mantida como está. Os Blocos 5, 6, 8, 10, 13 e 14 têm falas ou ofertas específicas de site — marquei cada um abaixo em vez de reescrever, porque a fala nova depende de preço (pendente) e de qual frente cada follow-up está fechando.
+
 ---
 
 ## BLOCO 1 — Objetivo
@@ -33,6 +35,8 @@ Foco: segunda tentativa de fechamento, recuperação de oportunidade, relacionam
 
 ## BLOCO 5 — Abertura pós-reunião
 
+⚠️ Fala cita "o site de vocês" — trocar pela frente vendida na reunião quando houver.
+
 **Áudio de conexão (humano, curto):**
 ```
 Oi {{nome}}, tudo bem? É o Nicolas, da IRBIS.
@@ -42,6 +46,8 @@ Me fala quando puder.
 ```
 
 ## BLOCO 6 — Follow-up por mensagem
+
+⚠️ Toques citam "o site" — mesma troca do Bloco 5.
 
 **Toque 1 (leve):**
 ```
@@ -66,12 +72,15 @@ Faz sentido a gente destravar isso ainda esse mês?
 
 ## BLOCO 8 — Quebra de objeção (preço)
 
+⚠️ **PENDENTE — números de site (R$ 7.000 / R$ 4.500–5.000), não migram sem preço definido pras 3 frentes atuais.**
+
 ```
 O valor que te apresentei (R$ 7.000) é o projeto completo.
 Mas o que importa não é o custo do site — é quanto você perde por mês sem ele trazendo cliente.
 A gente fecha o que cabe no seu momento, sem baixar o padrão.
 ```
 *(aqui você desce a âncora pro fechamento de R$ 4.500–5.000 — ao vivo, não por escrito)*
+*(lógica de "ancora e desce" provavelmente continua valendo — só os números são de site)*
 
 ## BLOCO 9 — Transição de retomada
 
@@ -81,6 +90,8 @@ Faz sentido voltar a olhar isso agora, ou o momento mudou de verdade?
 ```
 
 ## BLOCO 10 — Downsell (alternativa)
+
+⚠️ **PENDENTE — "landing page única" era o downsell de site.** A lógica de downsell (versão menor primeiro, evolui depois) provavelmente se aplica a Sistemas também, mas o que seria a versão "menor" de um sistema/automação não está definido — precisa do dono.
 
 Quando o orçamento não cabe no projeto completo:
 ```
@@ -109,10 +120,12 @@ Tenho amanhã 11h ou 15h30. Algum encaixa pra gente retomar?
 
 Quando não fecha em 30 dias:
 - Entra na base de nutrição
-- Manda conteúdo + caso novo de vez em quando (ex: "fiz um site pra uma clínica, deu X")
+- Manda conteúdo + caso novo de vez em quando (⚠️ exemplo original era "fiz um site pra uma clínica, deu X" — trocar pelo case atual quando houver um aprovado pra citar)
 - Reativa quando tiver novidade ou vaga na agenda
 
 ## BLOCO 14 — Indicações (sempre)
+
+⚠️ Fala cita "um site que vende" — trocar pela frente relevante.
 
 Mesmo quem não fechou conhece quem precisa:
 ```

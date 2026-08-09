@@ -1,5 +1,7 @@
 # Prompts de análise de site — IRBIS (1 por aspecto)
 
+> ⚠️ **AMBÍGUO, não editei — decisão do dono.** Site saiu de escopo como produto vendável, mas isto é auditoria técnica (velocidade, conversão, SEO, design), não pitch — plausivelmente ainda serve pra **Consultoria de IA** como ferramenta de diagnóstico do prospect (analisar a presença digital de um cliente é diferente de vender reforma de site). Não decidi sozinho: preciso saber se Consultoria de IA inclui esse tipo de auditoria, e se sim, se o output ainda é o PDF de placar /100 (`[[formato-pdf-analise]]`) ou outra coisa.
+
 Uso: rodar os 5 em paralelo (subagentes) ou um a um, trocando `{URL}`. Cada um devolve achados verificados + nota x/20. A soma vira o placar /100 do PDF ([[formato-pdf-analise]]). Regra de ouro em todos: só reportar o que foi medido ou visto, com evidência e data.
 
 ---

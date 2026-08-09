@@ -1,5 +1,7 @@
 # 📞 Dossiê de Cold Call — Leva 1 (Negócios Locais)
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026.** Dossiê de uma leva de ligações executada em 23/jun/2026 pra vender site (âncora R$ 7.000). Site saiu de escopo (ver `CLAUDE.md`). Não retomar estas ligações com este pitch. Fica como histórico da leva — se algum desses contatos virar oportunidade real pras 3 frentes atuais, é prospecção nova, não retomada deste script.
+
 **Data:** 23/jun/2026
 **Modo:** Triagem rápida (raso) — 1 gargalo + abertura curta por negócio
 **Praças:** SP capital (alta renda) · Curitiba (Batel) · Florianópolis · Porto Alegre (Moinhos)

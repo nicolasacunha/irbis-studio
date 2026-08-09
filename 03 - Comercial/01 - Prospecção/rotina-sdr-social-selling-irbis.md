@@ -2,6 +2,8 @@
 
 > Adaptado do Grupo JDP. Como a IRBIS é solo (você prospecta E entrega), a rotina é enxuta: 1–2 blocos de social selling por dia, não um turno inteiro. O objetivo é sempre o mesmo — **transformar interação em reunião**, sem parecer venda.
 
+> ⚠️ **Atualização 04/ago/2026 — rotina/ritmo preservados, ganchos de site flagueados.** A cadência (2 blocos/dia, 8 fundamentos, pipeline, follow-up por nível) não depende de vender site, mantida como está. As falas de abordagem (seção "Abordagem (exemplos)") e as menções à âncora de R$ 7.000 são específicas de site — flagueadas abaixo, não reescrevi porque o gancho novo depende de qual frente essa rotina está gerando reunião para.
+
 ---
 
 ## Papel
@@ -53,6 +55,8 @@ Você não precisa do dia todo. **2 blocos fixos resolvem:**
 - Responder 100% de quem interagiu (DM/comentário/story)
 
 ## Abordagem (exemplos)
+
+⚠️ **PENDENTE — exemplos abaixo são de site (gancho "site parado" + âncora R$ 7.000).**
 
 **Novo seguidor (negócio):**
 ```

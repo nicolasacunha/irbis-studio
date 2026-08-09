@@ -5,7 +5,9 @@
 
 ## A sequência validada (bloco 0 do playbook)
 
-Mercado ✅ (economia real, ICP do plano JDP) → Produto/preço ✅ sites (IA em validação pelos 2 fundadores) → **Canal = onde estamos agora** → Modelo de negócio (bifurcação, jul/2027). O plano de canais só existe porque as etapas anteriores fecharam; se o pivot mudar o produto, este plano se revisa.
+Mercado ✅ (economia real, ICP do plano JDP) → Produto/preço ⚠️ Soluções com IA, Consultoria de IA e Sistemas (pivot 04/ago — sites saíram do escopo, ver `docs/visao-irbis.md`; **preço de cada frente ainda não definido**, ver `CLAUDE.md` seção IDENTITY) → **Canal = onde estamos agora** → Modelo de negócio (bifurcação, jul/2027). O plano de canais só existe porque as etapas anteriores fecharam; se o pivot mudar o produto, este plano se revisa.
+
+> ⚡ **Atualização 04/ago/2026:** este documento foi escrito quando "sites" era o produto validado. O gatilho de revisão da linha acima ("se o pivot mudar o produto, este plano se revisa") disparou — atualizado nesta revisão junto com `docs/visao-irbis.md` e `04 - Marketing/P1-posicionamento-nicolas.md`.
 
 ## Os canais da IRBIS, por papel
 

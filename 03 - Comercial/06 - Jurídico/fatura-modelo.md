@@ -20,9 +20,9 @@ com nota fiscal atrelada, e deixa de ser usado como está.
 
 | Serviço | Tipo | Qtd | Valor unit. | Total |
 |---|---|---|---|---|
-| {{ex: Setup — Criação de Site}} | Único | 1 | {{R$ x}} | {{R$ x}} |
-| {{ex: Acompanhamento Pro}} | Mensal | 1 | {{R$ x}} | {{R$ x}} |
-| {{ex: Gerenciamento de Infraestrutura}} | Mensal (add-on) | 1 | {{R$ x}} | {{R$ x}} |
+| {{ex: Sistemas — Projeto (build sob medida)}} | Único | 1 | {{R$ x}} | {{R$ x}} |
+| {{ex: Soluções com IA — Implementação}} | Único | 1 | {{R$ x}} | {{R$ x}} |
+| {{ex: Consultoria de IA — Sessão/Pacote}} | Mensal | 1 | {{R$ x}} | {{R$ x}} |
 
 **Total:** {{R$ total}}
 

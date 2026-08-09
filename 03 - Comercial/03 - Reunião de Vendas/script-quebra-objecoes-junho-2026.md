@@ -3,6 +3,8 @@
 **Uso:** companion do `script-call-comercial-junho-2026.md` — entra na etapa 6 (Fechamento) ou quando a objeção aparecer
 **Contexto:** venda de site, ticket de projeto, decisão na call
 
+> ⚠️ **DESATUALIZADO — pivot total 04/ago/2026, NÃO USAR como está.** Companion do call script já flagueado como bloqueado (deck ausente, case E-Force/Odery pendente de destino). O framework universal (Despressurizar → Amarrar → Isolar → Confirmação dupla → Lidar → Avançar) é genérico e reaproveitável — mas todo exemplo trabalhado (âncora de preço, downsell pra landing page, "implicação" citada) foi escrito pra venda de site, e como os exemplos citam o que o cliente "disse no SPIN" da call de site, não dá pra trocar exemplo por exemplo sem reescrever a call inteira primeiro (que depende do deck ausente e do preço). Não reescrevi o corpo por esse motivo — preservado como histórico + referência de framework.
+
 ---
 
 ## Objetivo
