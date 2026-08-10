@@ -1,0 +1,19 @@
+{
+  "keyword": "quanto custa automação com IA para escritório de advocacia",
+  "title": "Quanto custa uma automação com IA para escritório de advocacia?",
+  "summary": "O custo de uma automação com IA para escritório de advocacia depende do gargalo escolhido, dos sistemas que precisam se conectar e do volume de solicitações que passam pela rotina. Como a automação lida com dados de cliente e, em muitos casos, com informação sob sigilo profissional, o escopo precisa prever base legal de tratamento, controle de acesso e trilha de revisão desde o início. A Ordem dos Advogados do Brasil recomenda confidencialidade, prática ética e comunicação clara sobre o uso de IA generativa na advocacia. A proposta fica mais precisa quando o escritório descreve a rotina, o volume mensal e o ponto em que um advogado precisa aprovar antes de qualquer saída seguir adiante.",
+  "faq": [
+    {"question": "Quanto custa uma automação com IA para escritório de advocacia?", "answer": "O valor depende do volume de solicitações, dos sistemas envolvidos, dos dados de cliente tratados e do nível de revisão humana exigido. A IRBIS não divulga faixa pública porque cada escopo muda o trabalho de integração e permissão antes de virar estimativa."},
+    {"question": "A IA pode substituir a análise de um advogado?", "answer": "Não. A Recomendação nº 001/2024 da OAB e decisões de tribunais de ética exigem supervisão humana e revisão integral das saídas geradas por IA antes de qualquer uso em processo, para evitar erro factual ou jurídico."},
+    {"question": "Automatizar o atendimento pelo WhatsApp do escritório é compatível com a LGPD?", "answer": "Pode ser, desde que o escritório defina a base legal para o tratamento dos dados do cliente, limite o acesso às informações coletadas e informe o cliente sobre esse tratamento antes ou no início do contato automatizado."},
+    {"question": "O que preciso levar para pedir uma proposta?", "answer": "Leve o volume real de solicitações, os sistemas usados hoje, exemplos de mensagens ou casos recorrentes e o ponto em que um advogado precisa revisar o resultado antes dele seguir adiante."}
+  ],
+  "sources": [
+    {"url": "https://www.migalhas.com.br/quentes/455537/advogados-socios-devem-garantir-supervisao-em-uso-de-ia-decide-oab-sp", "type": "notícia jurídica especializada", "claim": "O Tribunal de Ética e Disciplina da OAB/SP decidiu que advogados sócios ou em cargo de gestão devem garantir que o uso de IA por associados, estagiários e assistentes seja supervisionado, revisando integralmente as saídas geradas pela IA antes de apresentá-las em processos judiciais, em linha com o dever de veracidade do artigo 77 do CPC."},
+    {"url": "https://www.ibet.com.br/oab-aprova-recomendacoes-para-o-uso-de-inteligencia-artificial-na-advocacia/", "type": "análise de instituto de estudos jurídicos", "claim": "A Recomendação nº 001/2024 do Conselho Federal da OAB, elaborada pelo Observatório Nacional de Cibersegurança, IA e Proteção de Dados, estabelece quatro diretrizes para uso de IA generativa na advocacia: legislação aplicável, confidencialidade e privacidade, prática jurídica ética e comunicação sobre o uso de IA generativa, com o objetivo de resguardar a confidencialidade das informações do cliente."}
+  ],
+  "firstPartyEvidence": ["minuta-em-desenvolvimento", "irbis-13-rotinas"],
+  "image": {"filename": "quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.svg", "alt": "quanto custa automação com IA para escritório de advocacia"},
+  "internalLinks": ["https://irbis.com.br/metodo"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-10/quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.md"
+}
