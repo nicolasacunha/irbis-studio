@@ -1,6 +1,8 @@
 # 🗓️ Script de Agendamento — IRBIS
 
-> Adaptado do Grupo JDP. Pra quando chega um **lead indicado** (do Dia 1 / cliente que te indicou) e você precisa agendar a reunião de diagnóstico. Operação solo: você é quem agenda E conduz — sem "closer" nem grupo com especialista.
+> ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). Oferta e case atualizados.
+
+> Adaptado do Grupo JDP. Pra quando chega um **lead indicado** (do Dia 1 / cliente que te indicou) e você precisa agendar a reunião de diagnóstico. Até 09/ago/2026 a operação era 100% solo (quem agenda também conduz); a partir de agora pode haver um colaborador comercial dedicado a isso — ajuste "eu"/"você" conforme quem estiver executando.
 
 ---
 
@@ -15,14 +17,14 @@ Quem me passou seu contato foi o {{cliente que indicou}}. Tem 5 minutos?
 
 ## 2. Motivo do contato
 ```
-Legal, {{nome}}. Entrei em contato porque o {{cliente que indicou}} ficou muito satisfeito com o site que fiz pra ele e comentou que faria sentido a gente conversar.
+Legal, {{nome}}. Entrei em contato porque o {{cliente que indicou}} ficou muito satisfeito com o que fiz pra operação dele e comentou que faria sentido a gente conversar.
 
-Desde que o site dele ficou pronto, {{resultado breve — ex: começou a receber mais contato pelo Google}}.
+Desde que a gente implementou o sistema/automação com ele, {{resultado breve — ex: ele parou de perder paciente/cliente no meio do processo}}.
 ```
 
 ## 3. Transição
 ```
-O que eu faço na IRBIS é site que traz cliente — não site bonito e parado.
+O que eu faço na IRBIS é sistema, automação e IA sob medida — não sistema genérico de prateleira.
 
 Assim como fiz pro {{cliente que indicou}}, acho que dá pra fazer algo que destrave isso aí pra você também.
 ```
@@ -31,7 +33,7 @@ Assim como fiz pro {{cliente que indicou}}, acho que dá pra fazer algo que dest
 ```
 Como tá sua agenda?
 
-Eu faço uma reunião rápida de diagnóstico: olho seu site (ou a falta dele), entendo seu negócio e — só se fizer sentido — te mostro o que daria pra fazer, com projeto e prazo.
+Eu faço uma reunião rápida de diagnóstico: entendo como sua operação funciona hoje e — só se fizer sentido — te mostro o que daria pra sistematizar, com projeto e prazo.
 
 Consegue 30-40 min hoje às 15h30 ou amanhã às 17h?
 ```
@@ -46,7 +48,7 @@ Consegue 30-40 min hoje às 15h30 ou amanhã às 17h?
 ```
 Oi {{nome}}! Passando pra confirmar nossa reunião amanhã às {{hora}}.
 
-Separei 2 pontos específicos do {{seu site / sua presença online}} que valem te mostrar. Te mando o link por aqui. Combinado?
+Separei 2 pontos específicos sobre a operação de vocês que valem te mostrar. Te mando o link por aqui. Combinado?
 ```
 
 ## 7. Reminder no dia (1h30 antes)
@@ -64,4 +66,14 @@ Qualquer coisa com a chamada, me chama.
 - Sorria ao telefone, ajusta o ritmo ao do lead
 - Pergunta inteligente + silêncio depois (não interrompe)
 - Autoridade com naturalidade, sem parecer "pedindo favor"
-- **Não vende no agendamento — só marca.** A venda é na reunião, com o deck e a âncora.
+- **Não vende no agendamento — só marca.** A venda é na reunião, calibrada ao vivo (ver `calculadora-preco-build-irbis.md`).
+
+---
+
+## Histórico — versão site (vigente até 04/ago/2026, fora de escopo)
+
+**Motivo do contato (seção 2):** "o {{cliente}} ficou muito satisfeito com o site que fiz pra ele... começou a receber mais contato pelo Google."
+
+**Transição (seção 3):** "O que eu faço na IRBIS é site que traz cliente — não site bonito e parado."
+
+**Pitch (seção 4):** "Eu olho seu site (ou a falta dele), entendo seu negócio..."

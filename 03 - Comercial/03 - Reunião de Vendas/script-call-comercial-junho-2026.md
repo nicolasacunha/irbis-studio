@@ -1,7 +1,11 @@
 # IRBIS — Script de Call Comercial
-**Criado:** 11/jun/2026
-**Uso:** padrão de execução da call de apresentação, conduzida com o deck `Apresentação Comercial.html`
-**Formato:** call de ~45 min, preço apresentado ao vivo, decisão na call
+**Criado:** 11/jun/2026 · **Reescrito:** 09/ago/2026
+**Uso:** padrão de execução da call de diagnóstico/apresentação, conduzida com o deck `Apresentação Comercial.html`
+**Formato:** call de ~45 min, preço apresentado ao vivo (calibrado, não fixo — ver `calculadora-preco-build-irbis.md`), decisão na call
+
+> ✅ **REESCRITO em 09/ago/2026, pronto pra usar com uma ressalva grande.** Este era o script mais importante que ainda não tinha sido tocado nesta auditoria — a call em si, não achado antes porque não tinha banner nenhum. Substitui integralmente a venda de site por Sistemas/Soluções com IA/Consultoria de IA, preço real, ICP amplo e Odery como case principal (E-Force só como prova de capacidade pessoal — ver `P1-posicionamento-nicolas.md`).
+>
+> 🛑 **Ressalva crítica: o deck `Apresentação Comercial.html` NÃO foi auditado nem atualizado.** Esse script é estruturado em cima dos slides do deck (a tabela de Timing e as marcações "*Slide: ...*" abaixo apontam pra ele). Se o deck ainda mostra "SITE? SIM." e os 3 produtos de site na tela enquanto quem conduz fala de Sistemas/IA, a call fica contraditória pro cliente. **Não use este script ao vivo sem antes confirmar o estado do deck com o Nicolas.**
 
 ---
 
@@ -43,7 +47,7 @@ Não passar de 50 min sem uma decisão explícita na mesa.
 
 **Rapport (1 linha real, não social):**
 
-> Vi seu site antes da call. [observação específica encontrada na auditoria pré-call].
+> Pesquisei a operação de vocês antes da call. [observação específica encontrada na pesquisa pré-call: processo manual, sinal de crescimento, etc.]
 
 > Vi que você atua com [área] — [conexão real, se existir].
 
@@ -57,7 +61,7 @@ Regra: o rapport da IRBIS é demonstração de dever de casa, não puxa-saco. Se
 
 > [Nome], deixa eu te explicar como funciona essa conversa.
 >
-> Primeiro eu quero entender seu negócio — onde o site está travando o crescimento.
+> Primeiro eu quero entender seu negócio — onde a operação está travando o crescimento.
 > Depois te mostro como eu resolvo isso e exatamente o que você recebe.
 > E no final eu te apresento o investimento.
 >
@@ -67,57 +71,54 @@ Regra: o rapport da IRBIS é demonstração de dever de casa, não puxa-saco. Se
 
 ## 2. AUTORIDADE (5–7 min)
 
-*Slides: "Quem conduz" → "O modelo" → "Só sites" → fase Resultados.*
+*Slides: "Quem conduz" → "O modelo" → fase Resultados. ⚠️ Se o deck ainda disser "Só sites", pule esse slide ou ajuste ao vivo — não leia contra o que está reescrito abaixo.*
 
-> Prazer, IRBIS. Eu faço só sites — landing page, institucional, e-commerce. Mais nada. Foco é uma decisão: quem faz de tudo não é referência em nada.
+> Prazer, IRBIS. Eu construo sistema, automação e IA sob medida — Sistemas, Soluções com IA, Consultoria de IA. Mais nada. Foco é uma decisão: quem faz de tudo não é referência em nada.
 >
 > Você fala direto com quem pensa e executa. Sem camadas, sem telefone sem fio.
 >
-> Antes de qualquer promessa, números: [EForce — vendas no lançamento. Adash — processo de dias virou horas. Odery — aumento de LTV]. A pergunta dessa call é: qual vai ser o seu número?
+> Antes de qualquer promessa: a Odery Drums é o case atual — CRM implementado, bot de WhatsApp rodando na operação, e apoio direto em como a empresa usa IA no dia a dia. As 3 frentes, no mesmo cliente. E se você já me viu falando de geração de demanda: sim, ajudei um cliente a passar de R$350 mil em vendas num lançamento — mas hoje eu construo a estrutura por trás disso, não só a campanha. A pergunta dessa call é: qual vai ser o seu número?
 
 Máximo 2 minutos. Autoridade não se estica — se prova e segue.
 
-⚠️ Números dos cases: "+500" e "1,8x" são BANIDOS (decisão do dono, 04/jul/2026); "3 semanas de média" segue sem confirmação. Único resultado afirmável: +R$350k (E-Force). Não citar os banidos em call nem no deck.
+⚠️ Números dos cases: "+500" e "1,8x" continuam BANIDOS (decisão do dono, 04/jul/2026). Único resultado numérico afirmável de cliente: "+R$350k em vendas" (E-Force) — e só como prova de capacidade de geração de demanda, nunca como prova de que o produto atual (Sistemas/IA) funciona. Prova de produto pras 3 frentes de hoje é a Odery.
 
 ---
 
 ## 3. QUESTIONÁRIO — SPIN + DIAGNÓSTICO (7–20 min)
 
-*Slide parado em "Seu cenário". Aqui o deck espera — a conversa manda.*
+*Slide parado em "Seu cenário". Aqui o deck espera — a conversa manda. ⚠️ Os slides de "6 dores" e "Checklist" do deck original eram dores de site — se ainda não foram reescritos, use-os só como pano de fundo visual e conduza pelas perguntas abaixo, não pelo texto neles.*
 
 ### Situação
 
-> Como o cliente chega até você hoje? Quanto disso vem do digital?
-> Tem site no ar? Quem fez? Quem consegue mexer nele hoje?
-> Roda tráfego pago? Quanto investe por mês?
+> Como funciona sua operação hoje — o que já é sistema e o que ainda é manual?
+> Tem CRM, ERP ou algum sistema hoje? Quem cuida disso, você ou tem alguém?
+> Já tentou automatizar algo com IA? O que rolou?
 > Qual a meta de faturamento pros próximos 12 meses?
 
 ### Problema
 
 > O que te fez aceitar essa conversa?
-> Qual o maior travamento do site hoje — ou da falta dele?
+> Qual o maior travamento da operação hoje?
 
-*Agora avance pelos slides das 6 dores (Cenário 01–06) e pare na que ele citou:*
+*Conduza pela dor que ele citou — sem depender do slide de "6 dores" se ele ainda for de site:*
 
 > Me fala se isso faz sentido pra você hoje.
 
-*Slide Checklist — "Quantas dessas são suas?":*
-
-> Dessas seis, quantas são suas?
+> Me conta mais um pouco: isso te atrapalha toda semana, ou só em época de pico?
 
 ### Implicação
 
-*Slide "O custo de esperar":*
+*Slide "O custo de esperar" (se ainda genérico, use; se for específico de site, pule pra pergunta direta):*
 
-> Quantos leads ou vendas você estima que perde por mês por causa disso?
-> Cada clique pago que cai numa página fraca custa quanto?
+> Quanto essa forma de operar te custa hoje — em tempo, retrabalho ou venda/oportunidade perdida — por não estar sistematizada?
 > Se nada mudar nos próximos 6 meses, o que acontece com a meta que você me falou?
 
 **Anote o número que ele der. Ele volta na ancoragem e no fechamento.**
 
 ### Necessidade
 
-> Se o site virasse seu melhor vendedor — rodando 24h, sem depender de ninguém — o que mudaria na sua operação?
+> Se essa parte da operação rodasse sozinha — sem alguém checando toda hora — o que mudaria no seu dia?
 > De 0 a 10, quão urgente é resolver isso agora?
 
 *Se a nota for menor que 7:*
@@ -126,9 +127,9 @@ Máximo 2 minutos. Autoridade não se estica — se prova e segue.
 
 **PACTO PARA APRESENTAÇÃO**
 
-*Slides "Negação tripla" → "Então o que é?":*
+*Slides "Negação tripla" → "Então o que é?" (se ainda fizerem sentido genericamente; senão, siga só na fala):*
 
-> Então olha o que você me disse: não é o tráfego, não é o produto, não é falta de esforço.
+> Então olha o que você me disse: não é o esforço do seu time, não é falta de vontade, não é sorte.
 >
 > [Nome], com base nisso — faz sentido eu te mostrar como você sai de [situação atual, palavras dele] para [objetivo, palavras dele]?
 >
@@ -138,7 +139,7 @@ Máximo 2 minutos. Autoridade não se estica — se prova e segue.
 
 ## 4. PITCH (20–33 min)
 
-*Slides: "É estrutura." → Método (5 fases) → Entrega (4 pilares) → Suporte → Cases.*
+*Slides: "É estrutura." → Método (5 fases) → Entrega → Suporte → Cases.*
 
 **Virada:**
 
@@ -147,27 +148,27 @@ Máximo 2 minutos. Autoridade não se estica — se prova e segue.
 **Método (5 fases — Escuta, Diagnóstico, Estratégia, Execução, Ritual):**
 Passar pelas 5 fases conectando cada uma a algo que ELE disse no SPIN. Exemplo:
 
-> Fase 2 é diagnóstico — exatamente isso que você me falou do tráfego caindo em página fraca. A gente acha onde está vazando com dado, não com achismo.
+> Fase 2 é diagnóstico — exatamente isso que você me falou do retrabalho acontecendo toda semana. A gente acha onde está vazando com dado, não com achismo.
 
 **IA como alavanca:**
 
-> A estratégia é minha. A execução é amplificada. O que leva semanas numa agência, aqui leva dias. IA como alavanca, não muleta.
+> A estratégia é minha. A execução é amplificada. O que leva semanas numa agência tradicional, aqui leva dias. IA como alavanca, não muleta.
 
 **Micro-confirmação (obrigatória antes da Entrega):**
 
 > Faz sentido esse cenário até aqui?
 
-**Entrega (4 pilares + entregáveis + prazo):**
+**Entrega (pilares + entregáveis + prazo — ajustar pilares conforme a frente: Sistemas, Soluções com IA ou Consultoria):**
 Em cada pilar, ler só o "na prática". O prospect não compra pilar — compra o que acontece com ele.
 
-> Site no ar, código e acessos seus desde o dia 1, analytics configurado, guia de edição. Tudo é seu. Eu não crio dependência.
+> Sistema no ar, código e acessos seus desde o dia 1, documentação de uso. Tudo é seu. Eu não crio dependência.
 
 **Suporte:**
 
 > Checkpoint semanal, WhatsApp direto, resposta em horas. Quem responde é quem executa — sem ticket, sem fila, sem gerente de conta.
 
 **Cases (1 ou 2, não os 3):**
-Escolher o case mais parecido com o cenário dele. Contexto → ação → resultado, 1 minuto cada.
+Caso mais parecido com o cenário dele — hoje, praticamente sempre a Odery (as 3 frentes cabem nela). Contexto → ação → resultado, 1 minuto cada.
 
 **Transição para a oferta:**
 
@@ -178,17 +179,17 @@ Escolher o case mais parecido com o cenário dele. Contexto → ação → resul
 
 ## 5. ANCORAGEM (33–38 min)
 
-*Slides: Bônus (4) → "Isso faz parte da conta." → "Tudo que entra no projeto" → "A pergunta certa".*
+*Slides: Bônus → "Isso faz parte da conta." → "Tudo que entra no projeto" → "A pergunta certa".*
 
-> Antes do número, uma distinção: preço é o que você paga uma vez. Valor é o que o site devolve todo mês. Vamos olhar o valor primeiro.
+> Antes do número, uma distinção: preço é o que você paga uma vez (ou por mês, no caso do Bot de IA). Valor é o que isso devolve pro seu negócio todo mês. Vamos olhar o valor primeiro.
 
-*Stack completo na tela (4 pilares + suporte + 4 bônus):*
+*Stack completo na tela (entregáveis + suporte + eventuais bônus):*
 
 > Isso não é extra. Isso faz parte da conta.
 
 *Slide "A pergunta certa":*
 
-> A pergunta não é quanto custa o site. É quanto custa continuar sem ele. Você me disse que perde [implicação dele — leads/R$/mês]. Esse é o preço de não decidir.
+> A pergunta não é quanto custa o sistema. É quanto custa continuar sem ele. Você me disse que perde [implicação dele — tempo/R$/oportunidade por mês]. Esse é o preço de não decidir.
 
 ---
 
@@ -206,7 +207,9 @@ Escolher o case mais parecido com o cenário dele. Contexto → ação → resul
 
 > Você me disse que [dor, palavras dele], que isso custa [implicação] por mês, e que resolver é prioridade [nota] de 10.
 >
-> Pra esse escopo — [tipo de site] — o investimento é R$ [X].
+> Pra esse escopo — [Sistemas / Bot de IA / Consultoria de IA, conforme o caso] — o investimento é R$ [X].
+
+Calibração do número: ver `calculadora-preco-build-irbis.md` — Sistemas R$3.000–10.000 (topo se o gargalo é central pro negócio, base se é conveniência), Bot de IA R$1.000 setup + R$500/mês (fixo), Consultoria de IA R$5.000 ou R$10.000 conforme faturamento. Nunca cotar por hora.
 
 **Silêncio. Quem fala primeiro depois do preço não é você.**
 
@@ -224,7 +227,7 @@ Urgência só se for verdadeira. Escassez fabricada quebra a marca.
 
 **Semente de indicação (depois da decisão — fechando ou não):**
 
-> Última coisa: se essa conversa te ajudou a enxergar o problema, quem você conhece que está com o site travando o negócio? Me apresenta que eu faço a mesma análise pra ele.
+> Última coisa: se essa conversa te ajudou a enxergar o problema, quem você conhece que está com a operação travando o negócio? Me apresenta que eu faço a mesma análise pra ele.
 
 ---
 
@@ -256,18 +259,18 @@ Urgência só se for verdadeira. Escassez fabricada quebra a marca.
 
 ## Checklist pré-call
 
-- [ ] Site do prospect auditado no dia da call (mesma regra do outbound)
+- [ ] Negócio do prospect pesquisado no dia da call — LinkedIn, Instagram, site institucional se tiver, notícia recente (mesma regra do outbound)
 - [ ] 1 observação específica anotada para o rapport
-- [ ] Case mais parecido com o cenário dele escolhido
-- [ ] Faixa de preço definida para o escopo provável (sem tabela fixa, com lógica)
-- [ ] Deck aberto e testado, gravação ligada
+- [ ] Case Odery revisado pra puxar no momento certo
+- [ ] Faixa de preço definida para o escopo provável (ver `calculadora-preco-build-irbis.md`, sem tabela fixa, com lógica)
+- [ ] **Deck conferido antes da call — confirmar que os slides não estão mostrando site como oferta** (ver ressalva no topo deste documento)
 - [ ] Status real da agenda confirmado (slide "1 vaga")
 
 ## Pós-call
 
 - **Fechou:** termo de aceite + agendamento do briefing no mesmo dia.
 - **Não fechou, mas quente:** proposta por escrito em até 24h. Encerramento padrão: *"Esse é o projeto. Quando quiser começar, é só falar."*
-- **Sumiu depois da proposta:** follow-up D+4 — *"[Nome], a proposta segue aberta. Se quiser ajustar algo, pode falar. Se o timing mudou, tudo bem também — só me avisa."*
+- **Sumiu depois da proposta:** follow-up D+4 — *"[Nome], a proposta segue aberta. Se quiser ajustar algo, pode falar. Se o timing mudou, tudo bem também — só me avisa."* (ver também `manual-follow-up-irbis.md` pra cadência completa)
 - Toda call gravada → revisar timing real vs tabela. Desvio recorrente numa etapa = ponto de treino.
 
 ---
@@ -281,17 +284,17 @@ Direto do Manual de Copy:
 - "Estou à disposição", "qualquer dúvida", "parceria", "soluções personalizadas", "metodologia ágil"
 - Pedir desculpa por preço, por follow-up ou por silêncio
 - Justificar o preço mais de uma vez
-- Prometer fora do escopo: a IRBIS faz **só sites**
+- Prometer fora do escopo: a IRBIS vende **só Sistemas, Soluções com IA e Consultoria de IA** — nada de site, landing page, branding, identidade avulsa, app/dashboard avulso fora de Sistemas
 
 ---
 
-## Pendências (ajustar no deck antes de padronizar)
+## Pendências
 
-1. **Números dos cases** — "+500" e "1,8x" BANIDOS pelo dono (04/jul/2026); remover do deck. "3 sem. de média" sem confirmação. Afirmável em call só "+R$350k" (E-Force).
-2. **Slide Agenda diz "30 minutos"** — a call padrão é ~45. Ou ajustar o slide ("Os próximos minutos") ou tratar os 30 min como a parte apresentada.
-3. **Slide Investimento** — decisão tomada: número apresentado ao vivo na call. Ajustar copy do slide para refletir isso e revisar o passo "01 Proposta — você recebe hoje" dos Próximos passos (vira termo de aceite no fechamento).
-4. **E-mail no slide final** está com proteção da Cloudflare (placeholder quebrado) — corrigir para contato@irbis.com.br.
+1. **🛑 O deck `Apresentação Comercial.html` não foi auditado nesta rodada.** Ele guia a call inteira (timing, ordem, o que aparece na tela) — se ainda mostra site como produto, "SITE? SIM." como hero, ou os 3 produtos de site como oferta, a call fica contraditória com este script. Prioridade alta antes de usar este script ao vivo com um lead real.
+2. **Números dos cases** — "+500" e "1,8x" seguem BANIDOS pelo dono (04/jul/2026); confirmar que não estão no deck. Afirmável em call: Odery (prova de produto) e "+R$350k" (E-Force, só prova de capacidade — não confundir os dois papéis).
+3. **Slide Agenda diz "30 minutos"** — a call padrão é ~45. Ajustar o slide ou tratar os 30 min como a parte apresentada — pendência antiga, não resolvida nesta rodada.
+4. **E-mail no slide final** — checar se ainda está quebrado (era placeholder de Cloudflare); corrigir para contato@irbis.com.br se ainda estiver.
 
 ---
 
-*Script de call IRBIS — uso interno. Junho 2026.*
+*Script de call IRBIS — uso interno. Reescrito 09/ago/2026 (original junho/2026).*

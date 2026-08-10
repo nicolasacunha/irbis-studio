@@ -1,26 +1,28 @@
 # Sequências de Email — Prospects IRBIS
-**Criado:** 01/jun/2026
-**Uso:** Complementar ao LinkedIn. Enviar quando não responderem no LinkedIn após D+7.
+**Criado:** 01/jun/2026 · **Template base reescrito:** 09/ago/2026
+**Uso:** Complementar ao LinkedIn/Instagram. Enviar quando não responderem após D+7.
+
+> ✅ **Template base reescrito em 09/ago/2026, pronto pra usar.** Os 10 emails individualizados abaixo (SolarZ, RegDoor, Lunatic Monkey, Conty, BackChannel, Elephan.AI, Bud, Vitrify, Bull, Unbox) são registro de uma campanha específica de jun-jul/2026, com crítica pontual do site de cada empresa — **não reescrevi essas 10**, porque eu inventaria a crítica operacional de cada uma sem ter os dados reais (o mesmo cuidado usado nos dossiês antigos). Preservadas como histórico no fim do arquivo. Use o **Template Base** abaixo pra qualquer prospect novo.
 
 ---
 
 ## Como usar
 
-1. Após D+7 sem resposta no LinkedIn → buscar o email do founder (Hunter.io, Apollo, ou LinkedIn Premium)
-2. Usar Email 1 com o mesmo problema específico do site que citou no DM
+1. Após D+7 sem resposta no LinkedIn/direct → buscar o email do decisor (Hunter.io, Apollo, ou LinkedIn Premium)
+2. Usar Email 1 com o mesmo gancho de dor de operação que citou no DM
 3. Cadência: Email 1 → D+4 → Email 2 → D+8 → Email 3 (breakup)
 
 ---
 
 ## Template Base — Email 1 (D+0)
 
-**Assunto:** [Empresa] — algo que vi no site de vocês
+**Assunto:** [Empresa] — algo que vi em como vocês operam
 
 > [Nome],
 >
-> [INSERIR PROBLEMA ESPECÍFICO DO SITE — usar achado da auditoria].
+> [INSERIR GANCHO ESPECÍFICO DE OPERAÇÃO — processo manual, sinal de crescimento que sobrecarregou algo, tarefa repetitiva visível publicamente].
 >
-> Faço só sites para founders — landing page, site institucional, e-commerce. Entrego em 2–3 semanas.
+> Construo sistema, automação e IA sob medida pra negócio como o de vocês — Sistemas, Soluções com IA, Consultoria de IA. Prazo varia por escopo, definido na primeira conversa.
 >
 > Vale uma call de 20 minutos?
 >
@@ -29,7 +31,7 @@
 
 ---
 
-## Emails individualizados por prospect
+## Emails individualizados por prospect — histórico (ver banner no topo)
 
 ---
 

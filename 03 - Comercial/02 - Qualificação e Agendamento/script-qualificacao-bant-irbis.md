@@ -1,12 +1,14 @@
 # ✅ Script de Qualificação BANT — IRBIS
 
-> Adaptado do Grupo JDP pra venda de site. Reescrevi de "estrutura comercial" pra "site": Budget, Authority, Need e Timing aplicados a quem precisa de um site que vende. Objetivo: **qualificar quem deve avançar pra reunião** — não vender no chat/ligação.
+> ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). Budget, Need e transição atualizados com preço e escopo reais das 3 frentes.
+
+> Adaptado do Grupo JDP. Budget, Authority, Need e Timing aplicados a Sistemas, Soluções com IA e Consultoria de IA. Objetivo: **qualificar quem deve avançar pra reunião** — não vender no chat/ligação.
 
 ## Objetivo
 Identificar se o lead tem:
-- **Budget** — caixa pra investir num site sério (sua faixa: R$ 4.500–5.000)
+- **Budget** — caixa pra investir num sistema/automação/consultoria sério (faixas reais: Sistemas R$3.000–10.000 · Bot de IA R$1.000+R$500/mês · Consultoria R$5.000/R$10.000)
 - **Authority** — poder de decidir
-- **Need** — dor real de site
+- **Need** — dor real de operação/sistema/IA
 - **Timing** — urgência
 
 Conversa consultiva, com tréplica após cada resposta. Não é interrogatório.
@@ -15,37 +17,37 @@ Conversa consultiva, com tréplica após cada resposta. Não é interrogatório.
 
 ## B — BUDGET (orçamento)
 *Entender capacidade de investir.*
-- Hoje vocês investem em marketing, tráfego ou site?
-- Quanto, em média, por mês pra atrair cliente?
-- Se existir uma solução que traga mais cliente pelo site, isso já estaria previsto no orçamento?
+- Hoje vocês investem em sistema, automação ou ferramenta pra organizar a operação?
+- Quanto, em média, isso custa hoje (ferramenta, tempo de gente, retrabalho)?
+- Se existir uma solução que resolva isso de vez, isso já estaria previsto no orçamento?
 - Esse tipo de investimento é prioridade agora ou ainda em avaliação?
 
 **Tréplica:** "Perfeito, isso já me ajuda a entender o momento de vocês."
 
 ## A — AUTHORITY (autoridade)
-*Quem decide o site.*
+*Quem decide sobre sistema/operação.*
 - Além de você, quem participa dessa decisão?
 - Você é quem decide ou precisa validar com sócio?
 - Tem mais alguém que aprova esse tipo de investimento?
 
 **Tréplica:** "Importante garantir que quem decide esteja na reunião."
 
-## N — NEED (necessidade) — a dor de site
+## N — NEED (necessidade) — a dor de operação
 *Entender dor, impacto e gargalo.*
-- Como o cliente de vocês te encontra hoje? Vocês têm site?
-- O site atual traz cliente ou é só um cartão de visitas parado?
-- Onde você sente que perde cliente — no Google, no celular, na credibilidade?
-- O que o site deixa de fazer que você queria que fizesse?
+- Como funciona sua operação hoje? O que já é sistema, o que ainda é manual?
+- Vocês têm CRM, ERP ou já usam IA em algo?
+- Onde você sente que perde tempo, dinheiro ou oportunidade — no processo manual, na falta de dado organizado, ou na falta de saber por onde a IA entra?
+- O que o processo atual deixa de fazer que você queria que fizesse?
 
 **Aprofundamento:**
-- Como isso acontece na prática? Já impacta o faturamento?
-- Há quanto tempo o site tá assim (ou sem existir)?
+- Como isso acontece na prática? Já impacta o faturamento ou o tempo do time?
+- Há quanto tempo a operação tá assim?
 
 **Tréplica:** "Entendi. Isso é mais comum do que parece em negócio que cresceu rápido."
 
 ## T — TIMING (urgência)
 *Prioridade e tempo de decisão.*
-- Tem alguma meta, campanha ou lançamento que depende do site?
+- Tem alguma meta, contratação ou momento de crescimento que depende de resolver isso?
 - Resolver isso é prioridade agora ou planejamento futuro?
 - Se nada mudar nos próximos 3 meses, qual o impacto?
 - De 0 a 10, qual a urgência disso hoje?
@@ -58,9 +60,9 @@ Conversa consultiva, com tréplica após cada resposta. Não é interrogatório.
 ```
 Deixa eu confirmar se entendi:
 - Hoje o principal problema é {{dor principal}}
-- Isso impacta {{consequência — ex: cliente indo pro concorrente}}
+- Isso impacta {{consequência — ex: tempo do time, retrabalho, oportunidade perdida}}
 - Existe uma meta de {{objetivo}}
-- E faz sentido um site que realmente traga cliente
+- E faz sentido sistematizar/automatizar isso de verdade
 
 Essa leitura tá certa?
 ```
@@ -70,8 +72,8 @@ Essa leitura tá certa?
 Perfeito. Com base no que você me trouxe, faz sentido a gente avançar pra uma reunião de diagnóstico.
 
 Nela eu vou:
-- Analisar seu site atual (ou a falta dele)
-- Mapear onde você perde cliente
+- Analisar sua operação hoje
+- Mapear onde você perde tempo, dinheiro ou oportunidade
 - Te mostrar o que daria pra fazer, com projeto, prazo e investimento
 
 Tenho hoje 11h ou 16h, ou amanhã 18h. Qual fica melhor?
@@ -81,5 +83,11 @@ Tenho hoje 11h ou 16h, ou amanhã 18h. Qual fica melhor?
 - Conversa consultiva, não interrogatório
 - Tréplica após cada resposta · silêncio pra aprofundar
 - Conduz com autoridade
-- **Foco total em qualificar, não vender.** Preço só na reunião, com o deck e a âncora.
+- **Foco total em qualificar, não vender.** Preço fechado só na reunião, calibrado ao vivo (ver `calculadora-preco-build-irbis.md`).
 - Se faltar Budget OU Authority OU Timing claros → não força a reunião; entra no follow-up.
+
+---
+
+## Histórico — versão site (vigente até 04/ago/2026, fora de escopo)
+
+**Objetivo original:** Budget era "sua faixa: R$4.500–5.000". Need era inteiramente sobre "site que traz cliente" — se o site atual gerava contato, onde perdia cliente (Google, celular, credibilidade). Transição citava "analisar seu site atual (ou a falta dele)".
