@@ -1,0 +1,19 @@
+{
+  "keyword": "quanto custa automação com IA para indústria",
+  "title": "Quanto custa automação com IA para indústria?",
+  "summary": "O custo de uma automação com IA para indústria varia conforme o fluxo, os sistemas conectados e a consequência de cada ação. Um primeiro escopo pode automatizar uma consulta, organizar um registro ou encaminhar uma pendência, sem tentar substituir toda a operação. Integrações, qualidade dos dados, permissões e critérios de revisão alteram o trabalho de implementação e teste. A melhor forma de pedir uma estimativa é descrever uma rotina recorrente, seus responsáveis, as entradas usadas e o resultado que precisa ficar registrado.",
+  "faq": [
+    {"question": "Quanto custa automação com IA para indústria?", "answer": "O valor depende da rotina, dos sistemas conectados, dos dados envolvidos, das permissões, dos testes e da implantação. Automações fora do bot de IA padrão são orçadas por escopo após entender o processo que precisa entrar em uso."},
+    {"question": "Uma automação com IA pode integrar CRM e ERP?", "answer": "Pode, quando os sistemas oferecem os acessos necessários e a indústria define quais campos, eventos e responsáveis participam do fluxo."},
+    {"question": "A IA pode executar ações sem revisão humana?", "answer": "Depende da consequência da ação. O escopo deve declarar o que é automático, o que exige aprovação e como a equipe corrige exceções."},
+    {"question": "O que preciso preparar antes de pedir uma proposta?", "answer": "Descreva uma rotina recorrente, as pessoas envolvidas, as ferramentas e dados usados, exemplos anonimizados de entrada e saída e as exceções mais comuns."}
+  ],
+  "sources": [
+    {"url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf", "type": "framework público", "claim": "O NIST AI RMF organiza a gestão de riscos de IA nas funções Govern, Map, Measure e Manage e descreve governança como função transversal, sustentando a necessidade de definir responsabilidade, limites e validação no escopo."},
+    {"url": "https://developers.google.com/google-ads/api/docs/conversions/upload-offline", "type": "documentação oficial de plataforma", "claim": "A documentação de conversões offline do Google Ads descreve requisitos para conversões aprimoradas de leads, incluindo termos de dados do cliente e normalização ou hash de certos identificadores, sustentando a definição de origem, finalidade e conferência dos dados em integrações."}
+  ],
+  "firstPartyEvidence": ["odery-crm-entrega"],
+  "image": {"filename": "quanto-custa-automacao-com-ia-para-industria.svg", "alt": "quanto custa automação com IA para indústria"},
+  "internalLinks": ["https://irbis.com.br/odery-crm"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-10/quanto-custa-automacao-com-ia-para-industria.md"
+}

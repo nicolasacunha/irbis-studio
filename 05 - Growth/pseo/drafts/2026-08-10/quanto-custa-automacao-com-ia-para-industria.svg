@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">quanto custa automação com IA para indústria</title>
+  <desc id="desc">Diagrama abstrato de uma rotina industrial passando por dados, revisão humana e automação com IA.</desc>
+  <rect width="1600" height="900" fill="#21201B"/>
+  <rect x="100" y="148" width="1400" height="604" rx="18" fill="#292820" stroke="#8FA987" stroke-width="2"/>
+  <text x="168" y="250" fill="#F2EFE9" font-family="Georgia, serif" font-size="62" font-weight="700">quanto custa automação</text>
+  <text x="168" y="322" fill="#8FA987" font-family="Georgia, serif" font-size="62" font-weight="700">com IA para indústria</text>
+  <g font-family="sans-serif" font-size="23" fill="#F2EFE9">
+    <rect x="168" y="430" width="280" height="128" rx="10" fill="#39382E"/><text x="198" y="482">Processo</text><text x="198" y="520" fill="#B8B4A7">rotina e exceções</text>
+    <rect x="660" y="430" width="280" height="128" rx="10" fill="#4A5D43"/><text x="690" y="482">Automação</text><text x="690" y="520" fill="#D4E2CE">dados e regras</text>
+    <rect x="1152" y="430" width="280" height="128" rx="10" fill="#39382E"/><text x="1182" y="482">Revisão</text><text x="1182" y="520" fill="#B8B4A7">responsável humano</text>
+  </g>
+  <path d="M478 494H620M970 494H1112" stroke="#8FA987" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="620" cy="494" r="8" fill="#8FA987"/><circle cx="1112" cy="494" r="8" fill="#8FA987"/>
+  <text x="168" y="676" fill="#B8B4A7" font-family="sans-serif" font-size="25">O escopo define o investimento.</text>
+</svg>
