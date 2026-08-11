@@ -1,0 +1,19 @@
+{
+  "keyword": "quanto custa CRM sob medida para escritório de advocacia",
+  "title": "Quanto custa um CRM sob medida para escritório de advocacia?",
+  "summary": "Um CRM sob medida para escritório de advocacia custa entre R$ 3.000 e R$ 10.000 em projetos de escopo padrão na IRBIS. O valor varia conforme a entrada de contatos, a organização de casos, os níveis de permissão, as integrações e os critérios de teste. Um CRM que centraliza relacionamento comercial tem um escopo diferente de um sistema que também consulta documentos ou apoia atividades jurídicas. A estimativa fica mais precisa quando o escritório descreve uma rotina, as pessoas que a executam e os dados que precisam permanecer acessíveis.",
+  "faq": [
+    {"question": "Quanto custa um CRM sob medida para escritório de advocacia?", "answer": "Na IRBIS, um projeto padrão custa entre R$ 3.000 e R$ 10.000. O valor depende do processo, das integrações, dos dados, dos perfis de acesso e do que a equipe precisa testar antes de colocar o CRM em uso."},
+    {"question": "Um CRM jurídico precisa guardar dados de processos?", "answer": "Não necessariamente. Se a dor está no relacionamento comercial, o primeiro escopo pode cuidar apenas de contatos, etapas, agenda e histórico de atendimento."},
+    {"question": "Posso integrar WhatsApp e e-mail ao CRM?", "answer": "Pode ser possível quando as ferramentas oferecem os acessos necessários e o escritório define quais dados e ações entram na integração."},
+    {"question": "O CRM pode usar IA?", "answer": "Pode, para preparar registros ou ajudar a consultar um histórico, desde que o escopo defina as informações, os limites e a revisão humana."}
+  ],
+  "sources": [
+    {"url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia-vf.pdf", "type": "guia oficial regulatório", "claim": "O guia da ANPD apresenta medidas de segurança da informação e boas práticas relacionadas ao tratamento de dados pessoais para agentes de tratamento de pequeno porte, sustentando a necessidade de decidir dados, acessos e revisão no escopo."},
+    {"url": "https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/", "type": "padrão técnico de segurança", "claim": "A OWASP descreve o risco de expor ou alterar propriedades sensíveis sem autorização no nível do objeto, sustentando que perfis, permissões e testes de acesso fazem parte do escopo de um CRM com dados sensíveis."}
+  ],
+  "firstPartyEvidence": ["minuta-em-desenvolvimento"],
+  "image": {"filename": "quanto-custa-crm-sob-medida-para-escritorio-de-advocacia.svg", "alt": "quanto custa CRM sob medida para escritório de advocacia"},
+  "internalLinks": ["https://irbis.com.br/odery-crm"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-11/quanto-custa-crm-sob-medida-para-escritorio-de-advocacia.md"
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">quanto custa CRM sob medida para escritório de advocacia</title>
+  <desc id="desc">Ilustração editorial de um fluxo de CRM jurídico com contatos, permissões e revisão humana.</desc>
+  <rect width="1600" height="900" fill="#f2f0eb"/>
+  <rect x="120" y="126" width="1360" height="648" rx="18" fill="#e6e5df"/>
+  <rect x="184" y="194" width="432" height="512" rx="12" fill="#253c39"/>
+  <text x="232" y="292" fill="#f2f0eb" font-family="Georgia, serif" font-size="52">CRM jurídico</text>
+  <text x="232" y="348" fill="#b8c6b7" font-family="Arial, sans-serif" font-size="26">escopo, acessos e revisão</text>
+  <circle cx="270" cy="470" r="42" fill="#d7b66c"/>
+  <path d="M340 470h190M340 550h142M340 630h176" stroke="#b8c6b7" stroke-width="14" stroke-linecap="round"/>
+  <rect x="702" y="256" width="650" height="132" rx="12" fill="#faf9f5"/>
+  <rect x="702" y="434" width="650" height="132" rx="12" fill="#faf9f5"/>
+  <rect x="702" y="612" width="650" height="94" rx="12" fill="#d7b66c"/>
+  <circle cx="756" cy="322" r="22" fill="#253c39"/>
+  <circle cx="756" cy="500" r="22" fill="#253c39"/>
+  <text x="804" y="332" fill="#253c39" font-family="Arial, sans-serif" font-size="32">Contato e histórico</text>
+  <text x="804" y="510" fill="#253c39" font-family="Arial, sans-serif" font-size="32">Permissões por função</text>
+  <text x="750" y="671" fill="#253c39" font-family="Arial, sans-serif" font-size="32">Revisão humana antes do uso</text>
+</svg>
