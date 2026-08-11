@@ -1,8 +1,8 @@
 # 📲 Rotina SDR / Social Selling — IRBIS
 
-> Adaptado do Grupo JDP. Como a IRBIS é solo (você prospecta E entrega), a rotina é enxuta: 1–2 blocos de social selling por dia, não um turno inteiro. O objetivo é sempre o mesmo — **transformar interação em reunião**, sem parecer venda.
+> ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). Missão e "Abordagem (exemplos)" reescritos usando o mesmo gancho já validado no `script-hunter-irbis.md` — a pendência de "gancho depende de qual frente" está resolvida: os ganchos são sobre dor de operação, não sobre qual das 3 frentes (isso se descobre na conversa).
 
-> ⚠️ **Atualização 04/ago/2026 — rotina/ritmo preservados, ganchos de site flagueados.** A cadência (2 blocos/dia, 8 fundamentos, pipeline, follow-up por nível) não depende de vender site, mantida como está. As falas de abordagem (seção "Abordagem (exemplos)") e as menções à âncora de R$ 7.000 são específicas de site — flagueadas abaixo, não reescrevi porque o gancho novo depende de qual frente essa rotina está gerando reunião para.
+> Adaptado do Grupo JDP. Até 09/ago/2026 a IRBIS era solo (quem prospecta também entrega); a partir de agora pode haver um colaborador comercial dedicado a isso. A rotina é enxuta: 1–2 blocos de social selling por dia, não um turno inteiro. O objetivo é sempre o mesmo — **transformar interação em reunião**, sem parecer venda.
 
 ---
 
@@ -17,14 +17,14 @@ Iniciar conversas nas redes (principalmente Instagram) com:
 
 ## Missão
 
-Transformar interação social em oportunidade de site — de forma humana, consultiva e nada invasiva.
+Transformar interação social em oportunidade de sistema, automação ou IA — de forma humana, consultiva e nada invasiva.
 
 ## O que garante performance (8 fundamentos)
 
 1. **Fale com quem já demonstrou interesse** — quem parou na vitrine (seguiu, curtiu, viu story).
 2. **Abordagem invisível** — escuta antes de oferecer qualquer coisa.
 3. **Educação + desapego + interesse genuíno** — respeito e naturalidade; você escolhe cliente.
-4. **Venda o agendamento, não o site** — o foco é levar pra reunião.
+4. **Venda o agendamento, não o projeto** — o foco é levar pra reunião.
 5. **Menos é mais** — mensagem curta converte mais.
 6. **Personalização real** — usa algo do perfil/negócio dele.
 7. **Finalize com pergunta** — mantém a conversa viva e conduzida.
@@ -39,16 +39,16 @@ Criar um canal que conduz o lead do ponto A ao B por interações — muitas vez
 
 ---
 
-## Rotina realista (solo)
+## Rotina realista
 
-Você não precisa do dia todo. **2 blocos fixos resolvem:**
+Não precisa do dia todo. **2 blocos fixos resolvem:**
 
 - **Bloco manhã (30–45 min):** responder DMs/comentários + abordar 5 novos seguidores/engajados.
 - **Bloco fim de tarde (30–45 min):** follow-up dos que não responderam + 5 abordagens novas + atualizar pipeline.
 
-> O resto do dia é entrega de projeto. Social selling é constância, não volume bruto.
+> O resto do dia é entrega de projeto ou outras funções. Social selling é constância, não volume bruto.
 
-## Ritmo ideal por dia (versão solo)
+## Ritmo ideal por dia
 
 - 5–10 abordagens novas
 - 5–10 follow-ups
@@ -56,21 +56,21 @@ Você não precisa do dia todo. **2 blocos fixos resolvem:**
 
 ## Abordagem (exemplos)
 
-⚠️ **PENDENTE — exemplos abaixo são de site (gancho "site parado" + âncora R$ 7.000).**
+Mesmos ganchos do `script-hunter-irbis.md` — gancho real, sem pitch nem preço no DM.
 
-**Novo seguidor (negócio):**
+**Novo seguidor (negócio com sinal de operação manual):**
 ```
-Opa {{nome}}, valeu por seguir! Dei uma olhada na [clínica/loja] de vocês — curti o trabalho.
-Vocês cuidam do site internamente ou tá meio parado?
-```
-
-**Engajou num post de prova:**
-```
-{{nome}}, vi que você curtiu o post do antes/depois. Faz sentido pro momento de vocês?
-Se quiser, te mostro rapidinho o que daria pra fazer no site de vocês.
+Opa {{nome}}, valeu por seguir! Dei uma olhada em como vocês operam — curti o trabalho.
+Vocês tocam isso tudo na mão ainda, ou já tem sistema rodando por trás?
 ```
 
-> Nunca pitch nem preço no DM. Gancho → pergunta → conduz pra reunião (deck + âncora de R$ 7.000 ficam na call).
+**Engajou num post de prova (case/resultado):**
+```
+{{nome}}, vi que você curtiu o post sobre [case/resultado]. Faz sentido pro momento de vocês?
+Se quiser, te mostro rapidinho o que daria pra sistematizar na operação de vocês.
+```
+
+> Nunca pitch nem preço no DM. Gancho → pergunta → conduz pra reunião (preço nasce na reunião, calibrado ao vivo — ver `calculadora-preco-build-irbis.md`).
 
 ## CRM / Pipeline (Notion)
 
@@ -92,7 +92,7 @@ Detalhe de cada um no **Manual de Follow-up**. Regra: quem não responde hoje po
 - **Google Meet / Zoom** — reunião
 - Chip/número dedicado pra prospecção (opcional)
 
-## Fim do dia (mini-relatório pra você mesmo)
+## Fim do dia (mini-relatório)
 
 Anota: abordagens feitas · conversas abertas · reuniões agendadas · 1 aprendizado.
 Sem isso você não sabe onde o funil trava.
@@ -102,3 +102,13 @@ Sem isso você não sabe onde o funil trava.
 - Objeção é parte do jogo
 - Follow-up é obrigatório, não opcional
 - Consistência > intensidade. Quem aparece todo dia, fecha.
+
+---
+
+## Histórico — versão site (vigente até 04/ago/2026, fora de escopo)
+
+**Missão original:** "Transformar interação social em oportunidade de site."
+
+**Abordagem (novo seguidor):** "Dei uma olhada na [clínica/loja] de vocês — curti o trabalho. Vocês cuidam do site internamente ou tá meio parado?"
+
+**Abordagem (engajou):** "...Se quiser, te mostro rapidinho o que daria pra fazer no site de vocês." Fechamento citava deck + âncora de R$7.000 na reunião.

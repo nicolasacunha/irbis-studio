@@ -1,5 +1,7 @@
 # Kit de objeções — cold call estética premium (13/jul/2026)
 
+> 📁 **Histórico — campanha de nicho específico (estética/Itaim), 13/jul/2026, fora de escopo desde 04/ago/2026.** Objeções giram 100% em torno de site ("já tenho site", âncora "casa dos milhares" de site) e o ICP de nicho (clínicas de estética) não é mais o filtro — ICP hoje é amplo, sem nicho definido. Preservado como registro — pra objeções atuais use `script-quebra-objecoes-junho-2026.md` (reescrito 09/ago/2026).
+
 Respostas curtas para as objeções mais prováveis das clínicas do dossiê `dossie-cold-call-estetica-itaim-20260713.md`. Objetivo de toda resposta: **voltar para a reunião**, nunca fechar preço no telefone.
 
 **Regras de preço (fixas):** preço nunca na ligação. Reframe para a reunião. Última carta, se insistir muito: "casa dos milhares, não das centenas". Prova social só "+R$350k" (E-Force). Sem travessão, dono falando com dono.

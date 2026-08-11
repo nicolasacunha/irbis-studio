@@ -1,5 +1,7 @@
 # Outbound LinkedIn — Founders (Leva 2, 13/jul/2026)
 
+> 📁 **Histórico — campanha específica de 13/jul/2026, fora de escopo desde 04/ago/2026.** Cada gancho é uma crítica pontual do site das 6 empresas listadas — site saiu do escopo vendável, e não dá pra reescrever um gancho de operação sem dados reais de cada empresa (mesma regra de não fabricar aplicada em `email-sequences-prospects.md`). Preservado como registro de campanha já executada, não como template — pra template atual use `script-hunter-irbis.md` e `rotina-sdr-social-selling-irbis.md`.
+
 Completa a leva de junho (`outbound-scripts-junho-2026.md` já cobre SolarZ, Conty, Elephan.AI, Vitrify). Estes são os **6 founders restantes** de `phantombuster-prospects.csv`, cada um com o problema de site (`dmHook`) já identificado.
 
 **Fluxo vigente (não repetir o erro do doc de junho):** o preço fecha **ao vivo na call**; proposta em 24h só para quem NÃO fechou na hora. Nenhuma DM promete "proposta em 24h automática".
