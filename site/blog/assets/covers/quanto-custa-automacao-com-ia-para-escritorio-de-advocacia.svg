@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">quanto custa automação com IA para escritório de advocacia</title>
+  <desc id="desc">Diagrama editorial de um documento revisado por um advogado antes da automação seguir adiante.</desc>
+  <rect width="1600" height="900" fill="#14211e"/>
+  <g fill="none" stroke="#bdc58b" stroke-width="5">
+    <rect x="150" y="230" width="330" height="440" rx="10"/>
+    <path d="M210 320H420M210 380H420M210 440H360"/>
+    <circle cx="820" cy="450" r="110" fill="#db6946" stroke="none"/>
+    <path d="M480 450H710M930 450H1160" stroke-width="6"/>
+    <rect x="1160" y="360" width="290" height="180" rx="10"/>
+    <path d="M1230 430L1290 480L1400 400" stroke="#f5f0df" stroke-width="10"/>
+  </g>
+  <g fill="#f5f0df" font-family="system-ui, sans-serif" font-size="27" font-weight="700" text-anchor="middle">
+    <text x="315" y="700">DOCUMENTO</text>
+    <text x="820" y="458">IA</text>
+    <text x="1305" y="580">REVISÃO</text>
+    <text x="1305" y="612">DO ADVOGADO</text>
+  </g>
+  <text x="112" y="140" fill="#f5f0df" font-family="Georgia, serif" font-size="66">Automação com IA</text>
+  <text x="117" y="200" fill="#bdc58b" font-family="system-ui, sans-serif" font-size="32">rotina · dados de cliente · sigilo · revisão humana</text>
+  <text x="112" y="812" fill="#f5f0df" font-family="system-ui, sans-serif" font-size="38">quanto custa automação com IA para escritório de advocacia</text>
+</svg>

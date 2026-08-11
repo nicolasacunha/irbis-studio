@@ -1,6 +1,51 @@
 {
     "posts": [
         {
+            "slug": "quanto-custa-automacao-com-ia-para-industria",
+            "title": "Quanto custa automação com IA para indústria?",
+            "description": "Entenda quais fatores de escopo, dados e revisão humana determinam o investimento em uma automação com IA para indústria.",
+            "dateISO": "2026-08-11",
+            "pilar": "automacao-ia",
+            "keywords": [
+                "quanto custa automação com IA para indústria",
+                "automação com IA para indústria",
+                "automação industrial com IA",
+                "IA para indústria"
+            ],
+            "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-industria.svg",
+            "readingTimeMin": 7
+        },
+        {
+            "slug": "quanto-custa-automacao-com-ia-para-escritorio-de-advocacia",
+            "title": "Quanto custa uma automação com IA para escritório de advocacia?",
+            "description": "Entenda quais fatores de escopo, dados de cliente e revisão humana determinam o custo de uma automação com IA para escritório de advocacia.",
+            "dateISO": "2026-08-11",
+            "pilar": "automacao-ia",
+            "keywords": [
+                "quanto custa automação com IA para escritório de advocacia",
+                "automação com IA para advocacia",
+                "IA para escritório de advocacia",
+                "OAB inteligência artificial"
+            ],
+            "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.svg",
+            "readingTimeMin": 7
+        },
+        {
+            "slug": "quanto-custa-sistema-com-ia-para-agencia-de-marketing",
+            "title": "Quanto custa um sistema com IA para agência de marketing?",
+            "description": "Entenda quais decisões de escopo, dados e integrações determinam o investimento em um sistema com IA para agência de marketing.",
+            "dateISO": "2026-08-11",
+            "pilar": "sistemas-ia",
+            "keywords": [
+                "quanto custa sistema com IA para agência de marketing",
+                "sistema com IA para agência",
+                "CRM para agência de marketing",
+                "IA para agência de marketing"
+            ],
+            "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-agencia-de-marketing.svg",
+            "readingTimeMin": 7
+        },
+        {
             "slug": "quanto-custa-sistema-com-ia-para-industria",
             "title": "Quanto custa um sistema com IA para indústria?",
             "description": "Entenda quais decisões de escopo determinam o investimento em um sistema com IA para indústria.",
