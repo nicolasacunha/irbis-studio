@@ -1,4 +1,17 @@
 # SEO Auditoria — irbis.com.br
+
+> 🛑 **PRÉ-PIVOT — NÃO EXECUTAR.** Marcado em 12/ago/2026.
+> Auditoria escrita em 01/jun/2026, quando a IRBIS vendia sites. **Esse modelo acabou em 04/ago/2026.**
+>
+> **Este arquivo é mais perigoso que os outros documentos pré-pivot, porque contém instrução de implementação pronta para o site no ar.** Se alguém executar o que está aqui, publica em irbis.com.br o escopo morto, com aparência de tarefa técnica legítima. Especificamente:
+> - **Title tags** propostas: "Webdesign para Startups | Landing Page e Site Institucional | IRBIS".
+> - **Schema JSON-LD** de `Service` para "Landing Page para Startups" e "Site Institucional para Startups", com descrição "a partir de R$5k".
+> - **Clusters de keyword** inteiros sobre landing page, site institucional e webdesign para founders.
+> - Item 8 do plano de link building: pitchar o case E-Force como "história real de transformação digital". Colide duas vezes com as regras atuais: E-Force não faz ponte para Sistemas ou IA (decisão de 09/ago), e "transformação digital" é expressão banida.
+>
+> **O que ainda serve:** o método da auditoria (estrutura de title, hierarquia de heading, schema, plano por semana) e os achados puramente técnicos que independem de oferta.
+> **O que vale hoje:** a rotina de pSEO em `05 - Growth/pseo/`, que já publica páginas de intenção de compra das 3 frentes. Fonte de escopo: `CLAUDE.md`.
+
 **Data:** 01/jun/2026
 
 ---

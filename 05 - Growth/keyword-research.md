@@ -1,4 +1,12 @@
 # IRBIS — Keyword Research
+
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Pesquisa de maio/2026, quando a IRBIS vendia sites. **Esse modelo acabou em 04/ago/2026.**
+>
+> **O que aqui está morto:** o ICP declarado ("founders de SaaS, Web3, startups digitais, ticket R$18–45k"), o Cluster 1 inteiro (landing page para SaaS, criação de site, webdesign), o Cluster 2 inteiro (Web3, que é escopo explicitamente recusado hoje), e qualquer decisão de conteúdo derivada deles. O ICP vigente é dono de negócio da economia real, com prospecção nichada em advocacia, indústria e agência.
+> **O que ainda serve:** o método (clusterizar por intenção, cruzar volume com dificuldade, priorizar comercial sobre informacional) e o critério de escolher termo de baixa competição com intenção alta.
+> **O que vale hoje:** `05 - Growth/pseo/`, que já opera sobre consultas de alta intenção das 3 frentes ("quanto custa sistema com IA para advocacia" e afins). Fonte de escopo: `CLAUDE.md`.
+
 > Gerado: maio 2026 | Fonte: pesquisa manual + Tavily | Revisar com Ahrefs/SEMrush quando disponível
 
 ---
