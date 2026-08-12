@@ -38,10 +38,12 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 
 | Processo/documento | Onde | Status |
 |---|---|---|
-| Call de diagnóstico e fechamento | `03 - Comercial/02 - Qualificação e Agendamento/` + skill `irbis-call-de-vendas` | Vigente |
-| Pricing (charm pricing, build por valor, recorrência) | skill `irbis-precificacao` + docs comerciais | Vigente; pricing de IA em exploração |
-| Escada de follow-up (D+3 leve, D+7 contexto, D+10 ultimato) | hoje só em `03 - Comercial/_rotina-diaria/pendencias-*.md` | ⚠️ LACUNA: vira doc próprio na Fase 3 |
-| Proposta-modelo do novo escopo | não existe ainda | ⚠️ LACUNA: entregável da Fase 3 (template a partir do PDF QG OS) |
+| **Reunião única de venda (~1h, triagem embutida)** | `03 - Comercial/03 - Reunião de Vendas/estrutura-reuniao-unica-irbis.md` | **✅ Vigente desde 12/ago/2026 — árbitro de duração e sequência.** Acabou a call de diagnóstico separada; todo canal promete 1 hora |
+| **Política de preço (quando o número sai)** | `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md` | **✅ Criada 12/ago/2026 — árbitro.** Faixa é pública em qualquer canal; número fechado só na reunião |
+| Método de precificação (valor, não hora) | `03 - Comercial/03 - Reunião de Vendas/calculadora-preco-build-irbis.md` + skill `irbis-precificacao` | Vigente para Sistemas. ⚠️ Trava 2 sem âncora de mercado do setor novo |
+| **Escada de follow-up (única: D+0, D+3, D+7, D+14, breakup D+21)** | `03 - Comercial/03 - Reunião de Vendas/escada-follow-up-irbis.md` | **✅ LACUNA FECHADA em 12/ago/2026.** Substitui as 6 cadências divergentes. Conteúdo varia por estágio, intervalo nunca |
+| Proposta-modelo do novo escopo | não existe ainda | ⚠️ **LACUNA ABERTA.** Bloqueia a etapa entre a reunião e o contrato |
+| Deck da reunião (`Apresentação Comercial.html`) | não auditado desde o pivot | ⚠️ **LACUNA ABERTA.** Pode ainda mostrar "SITE? SIM.". Não usar em call sem conferir |
 | Contrato + anexos + assinatura + recebimento | `03 - Comercial/06 - Jurídico/` (6 documentos) | Completo; contrato em revisão jurídica |
 | Checklist do dia do sim | `03 - Comercial/06 - Jurídico/checklist-dia-do-sim.md` | Pronto |
 
@@ -50,7 +52,8 @@ Paths relativos à raiz do repo (`~/Projects/Business/irbis/`).
 | Processo/documento | Onde | Status |
 |---|---|---|
 | **Método de entrega (espinha de TODO projeto: 7 fases + gates)** | `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` | **Vigente desde 01/ago — manda sobre os processos de entrega abaixo** |
-| Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | 🛑 NEUTRALIZADO 09/ago/2026 — era o **perfil SITE** do método; site fora de escopo, preservado só como histórico. `metodo-entrega-irbis.md` cobre todos os perfis vigentes sozinho |
+| **Processo de operação para Sistemas (perfil SISTEMAS do método)** | `03 - Comercial/04 - Entrega e Recorrência/processo-sistemas-irbis.md` | **✅ Criado 12/ago/2026.** Os 5 artefatos obrigatórios de F1 e F2: system design com os 3 fluxos principais · requisitos não-funcionais · entidades · APIs · arquitetura. Nenhuma linha de código antes dos 5 aprovados por escrito |
+| Processo de entrega padrão | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-padrao-irbis.md` | 🛑 NEUTRALIZADO 09/ago/2026 — era o **perfil SITE** do método; site fora de escopo, preservado só como histórico. Substituído na prática pelo `processo-sistemas-irbis.md` |
 | Repitch MRR + pedido de indicação | `03 - Comercial/04 - Entrega e Recorrência/processo-entrega-mrr-indicacao-irbis.md` | Vigente — **não auditado nesta rodada de pivot, confira antes de usar** |
 | Planos de recorrência (2 pacotes) | `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md` | ✅ Reescrito 09/ago/2026 — recorrência confirmada só pro Bot de IA (R$1.000 setup + R$500/mês); Sistemas e Consultoria sem recorrência confirmada |
 | Gestão de carteira (ciclo, upsell, 4 campos no CRM) | `03 - Comercial/04 - Entrega e Recorrência/processo-gestao-carteira.md` | Aprovado 22/jul; estreia com fundadores |

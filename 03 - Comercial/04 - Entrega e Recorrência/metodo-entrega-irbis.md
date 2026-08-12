@@ -182,10 +182,14 @@ Toda vez que um projeto novo entrar, você responde a **3 perguntas** na Fase 2.
 
 | Perfil | Ritmo (botão 1) | Definição de pronto (botão 2) | Métrica prometida (botão 3) |
 |---|---|---|---|
-| **Landing page** | 1–2 ciclos, demo no fim de cada | Página aprovada em desktop e celular + performance mínima + formulário testado ponta a ponta | Conversão do formulário nos primeiros 30 dias |
-| **Site institucional** | 3–4 ciclos, demo semanal | Todas as páginas do escopo no ar + SEO técnico + analytics + guia de edição entregue | Tráfego e contatos gerados em 30 dias |
-| **Sistema / agente de IA** | 4–6 ciclos, demo semanal + validação com casos reais do cliente a partir do ciclo 2 | **N casos reais** do próprio cliente rodados com saída aprovada pelo decisor, dentro de **N rodadas de formato** — ambos os números escritos no contrato | Tempo devolvido por tarefa (antes × depois, medido em casos reais) |
-| **Conteúdo / vídeo** | Lotes, não ciclos | Lote entregue com **até 1 rodada de ajuste por peça** | Alcance/retenção no período combinado |
+| **Sistemas** (CRM, ERP, sistema sob medida) | 4–6 ciclos, demo semanal + validação com casos reais do cliente a partir do ciclo 2. **Um fluxo principal por ciclo** | **N casos reais** do próprio cliente rodados com saída aprovada pelo decisor, dentro de **N rodadas de formato** — ambos os números escritos no contrato | Tempo devolvido por tarefa (antes × depois, medido em casos reais) |
+| **Soluções com IA** (bot, agente, automação) | 2–4 ciclos, demo semanal + validação em conversas/casos reais a partir do ciclo 1 | N casos reais respondidos com saída aprovada, dentro de N rodadas de ajuste de prompt/fluxo — números no contrato | Tempo devolvido ou volume atendido sem humano, medido em 30 dias |
+| **Consultoria de IA** | Sem ciclos. Diagnóstico → plano de ação → entrega em sessão única | Documento de diagnóstico entregue **e** plano de ação apresentado ao decisor, com priorização | Não tem métrica de resultado: a entrega é o diagnóstico. Ver ressalva abaixo |
+| ~~Landing page~~ · ~~Site institucional~~ | 🛑 **PERFIS HISTÓRICOS.** Site e landing page saíram do escopo em 04/ago/2026. Não são opção ativa de entrega. Preservados só para leitura de projetos antigos | | |
+
+**Detalhamento obrigatório do perfil Sistemas:** `processo-sistemas-irbis.md` (os 5 artefatos de F1 e F2).
+
+**Ressalva do perfil Consultoria:** consultoria que termina em PDF é a que o dono já recusou. Quando a consultoria incluir algo rodando ao fim, ela deixa de ser perfil Consultoria e vira perfil Sistemas ou Soluções com IA para a parte construída, com escopo e aceite próprios.
 
 > **Aviso pro perfil sistema/IA:** é o único perfil em que "pronto" é subjetivo por natureza (o cliente lê a saída e acha que "não é bem assim"). Por isso ele é o único que **exige número de casos e número de rodadas escritos antes de começar**. Sem isso, o projeto não tem fim — tem desistência.
 
@@ -211,7 +215,8 @@ Nada de "call quando precisar". Data fixa marcada na F2, todas de uma vez.
 |---|---|
 | F0 arranque | `06 - Jurídico/checklist-dia-do-sim.md` · `contrato-prestacao-software-modelo.md` |
 | F1 escopo congelado | modelo em `06 - Jurídico/anexo-escopo-qgos.md` (o anexo do contrato **é** o escopo congelado) |
-| F3 perfil site | `processo-entrega-padrao-irbis.md` |
+| **F1 + F2 perfil Sistemas** | **`processo-sistemas-irbis.md`** — os 5 artefatos obrigatórios (system design com 3 fluxos · requisitos não-funcionais · entidades · APIs · arquitetura). Nenhuma linha de código antes dos 5 aprovados |
+| ~~F3 perfil site~~ | ~~`processo-entrega-padrao-irbis.md`~~ 🛑 **NEUTRALIZADO 09/ago/2026** — era o perfil SITE; site saiu do escopo em 04/ago. Preservado só como histórico |
 | F6 pulso / F7 feedback | `voz-do-cliente.md` |
 | F7 repitch MRR | `processo-entrega-mrr-indicacao-irbis.md` · `planos-recorrencia-irbis.md` |
 | F7 indicação | `05 - Indicação/sistema-indicacao-base-irbis.md` |
