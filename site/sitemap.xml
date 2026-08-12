@@ -123,16 +123,6 @@
   </url>
 
   <url>
-    <loc>https://irbis.com.br/vs-agencia</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/vs-agencia"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/vs-agency"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/vs-agencia"/>
-  </url>
-
-  <url>
     <loc>https://irbis.com.br/para/saas</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
@@ -210,16 +200,6 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/cases"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/cases"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/cases"/>
-  </url>
-
-  <url>
-    <loc>https://irbis.com.br/en/vs-agency</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/vs-agencia"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/vs-agency"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/vs-agencia"/>
   </url>
 
   <url>
