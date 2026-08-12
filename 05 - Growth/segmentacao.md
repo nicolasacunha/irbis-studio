@@ -1,106 +1,62 @@
-# IRBIS — Oportunidade e Segmentação
+# IRBIS — Ficha de Segmento (worksheet)
 
-> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
-> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
-> **O que aqui está morto:** a oportunidade central "sistema de pipeline previsível de R$15–30k/mês" e as métricas iniciais (ticket médio R$20–25k com meta de R$30k), fora da faixa vigente. Os 3 perfis de segmento inteiros: A "founders de startups Web3, DeFi, SaaS B2B, 25–38 anos" com ticket R$25–50k, B "negócios premium consolidados que buscam modernização de marca" com dor "vergonha do site atual" e ticket R$15–30k, C "agências buscando subcontratação de motion, Web3, animação". O critério de segmentação "tipo de projeto: Web3/SaaS vs. premium brand vs. subcontratação". A conclusão de que o Segmento A é prioritário e que "ADASH é o case perfeito para atrair esse perfil". Ana RE e Dermotion tratados como pipeline vivo. O ICP atual é dono de negócio da economia real, amplo e sem vertical por decisão do dono.
-> **O que ainda serve:** os 5 critérios de segmentação da primeira tabela (tipo de projeto, estágio da empresa cliente, canal de chegada, decisor, ticket expectado) e os 4 fatores da conclusão, reaplicáveis às 3 frentes atuais quando houver dado suficiente pra segmentar.
-> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+**v2 · reescrito em 12/ago/2026.** Este arquivo deixou de ser um documento de decisão e virou o formulário que alimenta a decisão.
 
-> Framework baseado em "Oportunidade e Introdução à Segmentação" (LINK School of Business, G&G 2, 2026.1)
+| Antes (v1) | Agora (v2) | Motivo |
+|---|---|---|
+| 3 perfis de segmento preenchidos (Web3/SaaS, premium brand, subcontratação) | Ficha em branco, para preencher com dado real | Os 3 perfis morreram com o pivot de 04/ago e não têm substituto com dado suficiente |
+| Duplicava a análise de `matriz-segmentacao-beachhead.md` | Aponta para ela como canônica e guarda só o método | Dois arquivos dizendo a mesma coisa geram duas versões da verdade |
 
----
-
-## 🔄 Revisão da Oportunidade
-
-**Oportunidade central definida:** construir um sistema de pipeline previsível de R$15–30k/mês sem contratar, eliminando a dependência de indicações pontuais e ciclos de venda artesanais.
-
-**Hipóteses em aberto:**
-- Instagram com case studies atrai leads qualificados sem custo de mídia
-- Template de proposta não destrói percepção de premium
-- Ciclo de venda médio é de 30–45 dias (não medido ainda)
-
-**Métricas iniciais:**
-- Ticket médio: R$20–25k (meta: R$30k)
-- Taxa de conversão: ~25–30% estimada (meta: 40%)
-- Leads inbound/mês: 0 (meta: 1–2)
-
-**Aprendizado crítico desde o diagnóstico:** os 3 prospects ativos (Ana RE, Dermotion, ADASH) têm perfis diferentes — e o processo de venda provavelmente deveria ser diferente para cada um. Isso indica que a IRBIS ainda não definiu seu segmento prioritário.
+**A decisão de segmentação vive em `05 - Growth/matriz-segmentacao-beachhead.md`.** Verticais de prospecção, atributos do beachhead, oferta de entrada e pendências estão lá. Canal está em `04 - Marketing/plano-canais-e-medicao.md`. Não duplicar nenhum dos dois aqui.
 
 ---
 
-## 🧩 Introdução à Segmentação
+## Quando usar esta ficha
 
-### Critérios de Segmentação
+Depois de acumular conversas registradas em `interacoes` com origem e vertical preenchidas. Antes disso, preencher a ficha produz opinião com cara de dado, que é exatamente o que a v1 fazia.
+
+Uma ficha por vertical de prospecção: advocacia, indústria, agência/time criativo.
+
+---
+
+## Critérios que separam um segmento do outro
+
 | Critério | Por que importa para a IRBIS |
-|----------|------------------------------|
-| **Tipo de projeto** | Web3/SaaS vs. premium brand vs. subcontratação → impacto direto em ticket e complexidade |
-| **Estágio da empresa cliente** | Startup em lançamento vs. empresa estabelecida → ciclo de venda e urgência diferentes |
-| **Canal de chegada** | Indicação vs. inbound Instagram vs. LinkedIn frio → qualidade e velocidade de conversão diferentes |
-| **Decisor** | Founder técnico vs. sócio de negócios vs. diretor de marketing → argumentos e tempo de aprovação diferentes |
-| **Ticket expectado** | R$5–15k vs. R$15–30k vs. R$30–50k → posicionamento e esforço de proposta diferentes |
+|---|---|
+| **Tipo de dor** | Atendimento, triagem, orçamento ou follow-up. Define o gancho da abordagem e o escopo do bot |
+| **Porte e acessibilidade do dono** | Time de 3 a 8 pessoas com dono que atende decide rápido. Acima disso aparece comitê |
+| **Estágio de tentativa** | Nunca tentou automatizar, tentou com ferramenta pronta e frustrou, ou já tem algo rodando |
+| **Canal de chegada** | Indicação, comunidade, base morna ou frio. Muda temperatura e ciclo |
+| **Decisor** | Dono, sócio operador ou gestor intermediário. Muda o argumento e o tempo de aprovação |
+| **Potencial de upsell** | Se a operação comporta Sistemas depois do bot, ou se para no bot |
 
 ---
 
-## 👥 Perfis de Segmento
+## Ficha em branco
 
-### Segmento A — Founders Técnicos (Web3 / SaaS)
-| Atributo | Detalhe |
-|----------|---------|
-| **Perfil** | Founders de startups Web3, DeFi, SaaS B2B. 25–38 anos. Tecnicamente sofisticados. |
-| **Dor principal** | Produto técnico avançado com identidade visual genérica → credibilidade prejudicada com investidores e clientes |
-| **Comportamento de compra** | Decide rápido quando há fit. Valoriza execução técnica acima de nome de agência. Pesquisa portfólio antes de qualquer reunião. |
-| **Valor gerado** | Site que converte investor deck em presença credível. Landing page que suporta pitch de fundraising. |
-| **Sensibilidade a preço** | Média-baixa. Paga R$20–50k se o resultado for defensável para investidores. |
-| **Canal de chegada** | Indicação de outros founders, Twitter/X, LinkedIn, comunidades Web3 |
-| **Ticket médio** | R$25–50k |
-| **Potencial de growth** | Alto. Case de sucesso (ADASH) é o principal ativo de aquisição para esse segmento. |
+Copiar e preencher, uma por vertical.
 
----
+```
+Vertical: ___________________________
+Preenchida em: ______________________
+Base de dado: N conversas registradas, N reuniões, N propostas
 
-### Segmento B — Negócios Premium Estabelecidos (Imóveis, Saúde, Lifestyle)
-| Atributo | Detalhe |
-|----------|---------|
-| **Perfil** | Donos ou sócios de negócios premium consolidados. 35–55 anos. Buscam modernização de marca, não de produto. |
-| **Dor principal** | Identidade visual desatualizada que não reflete o posicionamento premium do negócio. Vergonha do site atual. |
-| **Comportamento de compra** | Ciclo mais longo. Precisa de 2–3 reuniões. Compara com outras agências. Decide por confiança, não só por portfólio técnico. |
-| **Valor gerado** | Marca que justifica o preço premium que já cobram. Site que qualifica o cliente antes do primeiro contato. |
-| **Sensibilidade a preço** | Média. Paga R$15–30k mas negocia mais do que o Segmento A. |
-| **Canal de chegada** | Indicação direta, Instagram (visual inspira confiança), reunião presencial |
-| **Ticket médio** | R$15–30k |
-| **Potencial de growth** | Médio. Volume maior, mas margem de esforço de venda também maior. Ana RE e Dermotion são desse segmento. |
+Perfil ......................  (porte, quem é o dono, como é o dia dele)
+Dor principal ..............  (o trabalho repetitivo que alguém faz na mão hoje)
+Estágio de tentativa .......  (nunca tentou / tentou e frustrou / já tem algo)
+Comportamento de compra ....  (quantos toques até a reunião, o que trava)
+Valor gerado ...............  (horas ou erros que o bot tira da operação)
+Sensibilidade a preço ......  (reação observada a R$ 1.000 + R$ 500/mês)
+Canal de chegada ...........  (de onde vieram as conversas dessa vertical)
+Ticket observado ...........  (fechado de verdade, não projetado)
+Potencial de upsell ........  (cabe Sistemas depois? qual?)
+Prova social disponível ....  (o que pode ser citado nessa vertical, sem inventar)
+O que ainda não sabemos ....
+```
 
----
+**Regras de preenchimento:**
 
-### Segmento C — Agências buscando Subcontratação *(excluir do foco)*
-| Atributo | Detalhe |
-|----------|---------|
-| **Perfil** | Agências que subcontratam execução técnica (motion, Web3, animação) |
-| **Dor principal** | Precisam de capacidade técnica específica sem contratar |
-| **Comportamento de compra** | Rápido, transacional, baseado em prazo e preço |
-| **Sensibilidade a preço** | Alta. Margens comprimidas, pressão por menor custo. |
-| **Ticket médio** | R$5–15k (menor ticket, mais volume, menos autonomia criativa) |
-| **Potencial de growth** | Baixo para o posicionamento premium. Destrói percepção de marca se virar modelo principal. |
-
----
-
-## 📊 Revisão das Métricas por Segmento
-
-| Métrica | Segmento A (Web3/SaaS) | Segmento B (Premium brand) | Segmento C (Subcontratação) |
-|---------|----------------------|--------------------------|---------------------------|
-| Ticket médio | R$25–50k | R$15–30k | R$5–15k |
-| Ciclo de venda | 7–21 dias | 30–60 dias | 3–7 dias |
-| CAC estimado | Baixo (indicação/portfólio) | Médio (reuniões + conteúdo) | Muito baixo (transacional) |
-| Probabilidade de retorno | Alta (evolução de produto) | Média (1 projeto por vez) | Baixa (commodity) |
-| Fit com posicionamento | Muito alto | Alto | Baixo |
-| **Prioridade** | **1º** | **2º** | **Não perseguir** |
-
----
-
-## 🎯 Fatores Principais de Segmentação
-
-1. **Tipo de empresa e estágio:** startup tecnológica em crescimento vs. negócio premium estabelecido
-2. **Decisor e ciclo:** founder técnico (rápido, portfólio decide) vs. sócio de negócio (lento, confiança decide)
-3. **Ticket e complexidade:** projetos >R$20k com autonomia criativa vs. subcontratação de menor valor
-4. **Canal de chegada:** indicação de comunidade vs. inbound visual (Instagram/portfólio)
-
-**Conclusão de segmentação:** o Segmento A (Web3/SaaS founders) é o prioritário — maior ticket, menor ciclo de venda, maior fit com o posicionamento técnico da IRBIS, e ADASH é o case perfeito para atrair esse perfil. O Segmento B (premium brand) complementa quando o pipeline permite — Ana RE e Dermotion são oportunidades imediatas, não modelo recorrente.
+- Só entra número que veio do banco ou de uma conversa que aconteceu. Estimativa entra marcada como estimativa, nunca em tabela comparativa.
+- Prova social segue a política do `irbis-guarda-pivot`: Odery é prova de produto sem número financeiro publicável, E-Force é credencial pessoal e não faz ponte para Sistemas ou IA, ADASH não pode ser citada, Eduboxs não é case.
+- Ficha preenchida com dado de cliente da família fica marcada como tal. A. Cunha e Odery não provam mercado.
+- Terminou de preencher as três, leve o resultado para `matriz-segmentacao-beachhead.md` e reabra o placar lá. A ficha não decide sozinha.

@@ -1,107 +1,106 @@
-# IRBIS — Matriz de Segmentação + Beachheads
+# IRBIS — Matriz de Segmentação + Beachhead
 
-> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
-> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
-> **O que aqui está morto:** os 3 segmentos comparados e o placar 37/27/24 (A Web3/SaaS Founders, B Premium Brands, C Subcontratação), nenhum deles é o ICP atual. O beachhead imediato "founder técnico, 25–38 anos, startup Web3/SaaS B2B/DeFi, em preparação para fundraising, demo day ou lançamento público nos próximos 60–90 dias", Web3 está fora de escopo e o ICP hoje é dono de negócio da economia real sem vertical. Os tickets de cada segmento (R$25–50k, R$15–30k, R$5–15k), todos fora da faixa vigente. A ação de aquisição "publicar ADASH como case detalhado" e a meta "2 projetos Web3/SaaS fechados em 60 dias → R$60–100k". O beachhead futuro (SaaS B2B em escala, projetos de R$50–100k por ciclo, com "motion + Web3 como diferencial"). O TAM/SAM/SOM e o potencial combinado de R$275–650k, calculado sobre segmentos que saíram.
-> **O que ainda serve:** os 8 critérios de segmentação da primeira tabela (comportamento de compra, valor gerado, intensidade da dor, maturidade, urgência, potencial de retenção, ticket médio, facilidade de aquisição) e o método de pontuar cada segmento antes de decidir onde gastar esforço comercial, útil quando houver dado pra segmentar a economia real.
-> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+**v2 · reescrito em 12/ago/2026.** Substitui a v1 (01/jun), escrita quando a IRBIS vendia sites e o segmento prioritário era founder de startup Web3/SaaS. Documento vivo: é aqui que mora a decisão de para quem se prospecta.
 
-> Framework baseado em "Nem todo cliente possui a mesma dor; gera o mesmo valor; converte igual; ou vale o mesmo esforço." (LINK School of Business, G&G 2, 2026.1)
+| Antes (v1) | Agora (v2) | Motivo |
+|---|---|---|
+| 3 segmentos com placar 37/27/24 e vencedor definido | 3 verticais de prospecção sem placar, porque não há dado para pontuar | Web3, premium brand e subcontratação saíram com o pivot de 04/ago. As verticais de hoje vieram de contrato real, não de comparação |
+| Beachhead = founder técnico Web3/SaaS em fundraising | Beachhead = atributo do negócio (time de 3 a 8, dono acessível, já tentou ferramenta pronta), dentro de advocacia, indústria e agência | O ICP declarado é amplo por decisão do dono. Nicha-se a prospecção, não a empresa |
+| Tickets R$25–50k / R$15–30k / R$5–15k | Bot de IA R$ 1.000 + R$ 500/mês na porta, Sistemas R$ 3.000 a 10.000 no upsell | Preço das 3 frentes definido em 09/ago |
+| Ação de aquisição: publicar ADASH como case | ADASH nunca foi entregue e não pode ser citada | Fato verificado. Ver `irbis-guarda-pivot` |
+| TAM/SAM/SOM somando R$275–650k em 12 meses | Sem TAM/SAM/SOM. A única aritmética real é 8 clientes de bot para R$ 4.000/mês | O cálculo antigo era feito sobre segmentos que saíram. Não há base para refazer |
+
+**Fontes vigentes:** `CLAUDE.md` (escopo), `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md` (preço e escada), `04 - Marketing/plano-canais-e-medicao.md` (canal e medição).
+
+**O que este documento não cobre:** canal. Onde se fala com o segmento, quem opera e como se mede está no plano de canais. Aqui é só com quem se fala e por quê.
 
 ---
 
-## 🧩 Critérios de Segmentação
+## Os critérios de segmentação
 
-Nem todo cliente da IRBIS converte igual, gera o mesmo valor ou custa o mesmo para adquirir. Os 3 segmentos identificados diferem radicalmente em 8 dimensões que determinam onde o esforço comercial deve ir.
+Os 8 critérios abaixo vieram da v1 e continuam válidos como instrumento. O que mudou é que hoje não há dado para pontuar nenhum deles com honestidade.
 
 | Critério | O que mede para a IRBIS |
-|----------|------------------------|
-| **Comportamento de compra** | Velocidade de decisão e previsibilidade do processo |
-| **Valor gerado** | Impacto real no negócio do cliente |
-| **Intensidade da dor** | Urgência subjetiva do cliente em resolver o problema |
-| **Maturidade** | Prontidão do segmento para fechar sem educar muito |
-| **Urgência** | Se a dor tem prazo — ou pode esperar indefinidamente |
-| **Potencial de retenção** | Chance de projeto recorrente ou indicação |
-| **Ticket médio** | Receita por projeto |
-| **Facilidade de aquisição** | CAC e esforço para chegar ao decisor |
+|---|---|
+| Comportamento de compra | Velocidade de decisão e previsibilidade do processo |
+| Valor gerado | Quanto de trabalho repetitivo o bot tira da mesa do cliente |
+| Intensidade da dor | Urgência subjetiva de resolver |
+| Maturidade | Prontidão para fechar sem precisar de educação sobre IA |
+| Urgência | Se a dor tem prazo ou pode esperar |
+| Potencial de retenção | Chance de virar upsell de Sistemas e de manter a mensalidade do bot |
+| Ticket | Receita por cliente, considerando setup mais recorrência |
+| Facilidade de aquisição | Esforço para chegar ao dono |
+
+**Por que o placar está suspenso.** Pontuar exige histórico. O histórico hoje é: 2 leads ativos, 5 pessoas no banco com origem indicação em 100% dos casos, 1 cliente pagante fora da família, zero MRR. Qualquer estrela atribuída agora seria opinião com aparência de dado. O placar volta quando `interacoes` tiver conversas registradas com origem e vertical preenchidas nas três verticais. **Pendente:** o dono define quantas conversas por vertical bastam para reabrir o placar.
 
 ---
 
-## 📊 Matriz Comparativa de Segmentos
+## As três verticais de prospecção
 
-| Critério | **A — Web3/SaaS Founders** | **B — Premium Brands** | **C — Subcontratação** |
-|----------|---------------------------|------------------------|------------------------|
-| Comportamento de compra | ★★★★★ Decide rápido por portfólio | ★★★☆☆ 2–3 reuniões, compara | ★★★★★ Transacional, urgência de prazo |
-| Valor gerado ao cliente | ★★★★★ Credibilidade com investidores | ★★★★☆ Marca que justifica preço premium | ★★☆☆☆ Capacidade técnica pontual |
-| Intensidade da dor | ★★★★★ Produto técnico com visual genérico = fundraising comprometido | ★★★★☆ "Vergonha do site" é dor real, mas não urgente | ★★★★☆ Prazo de entrega cria urgência artificial |
-| Maturidade do segmento | ★★★★☆ Já conhece o conceito de design técnico premium | ★★★☆☆ Precisa ser educado sobre o que torna design "premium" | ★★★★★ Já sabe o que quer, decide por preço/prazo |
-| Urgência | ★★★★★ Fundraising tem data. Lançamento tem data. | ★★★☆☆ Pode adiar indefinidamente sem custo imediato | ★★★★★ Deadline de entrega para cliente final |
-| Potencial de retenção | ★★★★★ Produto evolui → novos projetos recorrentes | ★★★☆☆ 1 projeto a cada 2–3 anos | ★★☆☆☆ Commodity → busca sempre o mais barato |
-| Ticket médio | ★★★★★ R$25–50k | ★★★★☆ R$15–30k | ★★☆☆☆ R$5–15k |
-| Facilidade de aquisição | ★★★★☆ Indicação de comunidade + portfólio ADASH | ★★★☆☆ Instagram + reuniões presenciais | ★★★★★ Muito fácil, mas destrói posicionamento |
-| **TOTAL** | **37/40** | **27/40** | **24/40** |
-| **Prioridade** | **1º — FOCO** | **2º — Complementar** | **Excluir** |
+Advocacia, indústria e agência/time criativo. Decisão do dono em 12/ago/2026. Elas não foram escolhidas por hipótese: apareceram duas vezes, por caminhos independentes.
 
----
+| Origem do sinal | O que apontou |
+|---|---|
+| Contratos e contatos reais | A. Cunha Advocacia (advocacia), Odery Drums (indústria), QG Group (agência/time criativo) |
+| 7 páginas de pSEO publicadas pela rotina, sem coordenação | Advocacia, indústria e agência de marketing |
 
-## 🏖️ Beachhead Imediato
+| Vertical | Evidência real que temos | Prova social citável | O que falta saber |
+|---|---|---|---|
+| **Advocacia** | A. Cunha Advocacia, contrato de R$ 4.997 em produção. Páginas de pSEO no ar | O caso existe, mas é o escritório da mãe do Nicolas. Não serve como prova de mercado | Se o gancho de triagem e atendimento por WhatsApp abre conversa com escritório sem vínculo pessoal |
+| **Indústria** | Odery Drums, com CRM e bot de WhatsApp implementados. Páginas de pSEO no ar | Prova de produto nas 3 frentes, sem número financeiro publicável. É a empresa do pai do Nicolas | Se o ciclo de decisão da indústria cabe no prazo de fechamento que a IRBIS precisa |
+| **Agência / time criativo** | QG Group como contato real. Páginas de pSEO no ar | Nenhuma prova entregue nesta vertical até hoje | Se agência compra bot ou se quer revender. Muda a oferta inteira se for revenda |
 
-**Segmento:** Founders técnicos de startups Web3 / SaaS em fase de lançamento ou fundraising
-
-**Por que é o beachhead?**
-
-- Dor com prazo real: fundraising e lançamentos têm datas — a urgência é embutida no contexto do cliente, não precisa ser criada.
-- Decisão rápida: founder decide sozinho. Sem aprovação de comitê, sem 3 reuniões de convencimento.
-- ADASH é o case de aquisição perfeito: já existe no portfólio, é a demonstração exata do que o segmento precisa ver para decidir.
-- CAC baixo: indicação entre founders circula em comunidades fechadas (Discord, grupos Web3, Twitter/X). Um founder satisfeito indica 3.
-- Ticket alto com ciclo curto: R$25–50k em 7–21 dias de ciclo → melhor relação receita/esforço de todos os segmentos.
-
-**Perfil preciso do cliente:**
-- Founder técnico, 25–38 anos, startup Web3/SaaS B2B/DeFi
-- Produto já existe (em beta ou lançado), mas a identidade visual não reflete a sofisticação técnica
-- Em preparação para fundraising, demo day ou lançamento público nos próximos 60–90 dias
-- Valoriza execução técnica acima de nome de agência — portfólio decide antes da primeira conversa
-
-**Ação de aquisição:** publicar ADASH como case detalhado (Twitter/X + portfólio + LinkedIn), com processo e resultado técnico explicitados. O próximo cliente desse segmento chega por esse conteúdo.
-
-**Meta do beachhead:** 2 projetos Web3/SaaS fechados em 60 dias → R$60–100k de receita + 2 cases que alimentam o ciclo de indicação.
+**O único cliente pagante fora da família é a Casa Paes, R$ 1.200, já entregue.** A vertical dela não está declarada neste documento e não vou deduzir. **Pendente:** classificar a Casa Paes em uma das três verticais ou registrar que ela está fora delas, porque isso muda a leitura de qual vertical já converteu.
 
 ---
 
-## 🔭 Beachhead Futuro
+## O beachhead
 
-**Segmento:** Startups SaaS B2B em crescimento — da fase de produto para a fase de escala de mercado
+O beachhead não é uma vertical. É um atributo que o colaborador reconhece dentro de qualquer uma das três, na hora de montar lista.
 
-**Por que é o próximo beachhead?**
+1. **Time pequeno com dono acessível.** De 3 a 8 pessoas nos casos reais. Quem decide atende.
+2. **Trabalho repetitivo e documentável**, com o processo já na cabeça de alguém.
+3. **Já tentou resolver com ferramenta pronta e a ferramenta não conheceu a operação.** É o mais forte dos três. Quem nunca tentou não sente a dor. Quem tentou e se frustrou chega pré-vendido.
 
-- É o estágio seguinte natural do Segmento A: o founder que contratou a IRBIS para lançar volta quando for crescer (rebrand, landing pages de produto, onboarding visual, pitch de Series A).
-- Ticket maior: projetos de escala (sistemas de design, múltiplas landing pages, pitch deck completo) chegam a R$50–100k por ciclo.
-- Relacionamento defensável: a empresa que cresceu com a IRBIS desde o lançamento não muda de fornecedor na hora crítica — há contexto e confiança acumulados.
-- Motion + Web3 como diferencial: à medida que o produto fica mais complexo, o nível técnico da execução visual se torna barreira de entrada para qualquer outra agência replicar o trabalho.
+**A oferta de entrada é uma só: Bot de IA.** R$ 1.000 de setup mais R$ 500/mês. É o único produto recorrente da casa e o único caminho conhecido para MRR. Sistemas é upsell de quem já é cliente, entra no repitch de fim de projeto. Consultoria de IA não é porta: a R$ 5.000 tem tamanho de projeto, não de primeira conversa.
 
-**Quando ativar:** após ter 3+ cases de founders Web3/SaaS documentados e 1 relacionamento de longo prazo em curso (cliente retornou para segundo projeto).
+Isso muda o gancho de abordagem. Não se pergunta se a empresa quer um sistema. Fala-se do atendimento, do orçamento ou da triagem que hoje depende de alguém digitando no WhatsApp.
 
----
-
-## 📈 Estimativa de Potencial de Mercado
-
-| Segmento | TAM | SAM (filtrado) | SOM — 12 meses |
-|----------|-----|----------------|-----------------|
-| **A — Web3/SaaS Founders** | ~3.000 startups tech ativas no Brasil com funding | ~500 em fase de lançamento/fundraising com budget para design | 8–12 clientes → R$200–500k receita |
-| **B — Premium Brands** | ~50.000 negócios premium no Brasil (imóveis, saúde, lifestyle) | ~2.000 com budget para design premium e dor visível | 3–5 clientes → R$75–150k receita |
-| **C — Subcontratação** | Imenso, mas destrói posicionamento | — | Excluir |
-
-**Potencial combinado 12 meses:** R$275–650k (Seg A + Seg B, com Seg A como motor principal)
-
-**Concentração de risco atual:** Ana RE e Dermotion são Segmento B — boa receita imediata, mas o modelo de longo prazo é construído no Segmento A. O ADASH precisa ser publicado como case antes do final do projeto.
+**Sinal de que o beachhead funcionou:** uma conversa com dono de negócio sem vínculo pessoal com o Nicolas, dentro de uma das três verticais, que chega a reunião. Até 12/ago isso nunca aconteceu: são sete semanas sem reunião fora de indicação.
 
 ---
 
-## 🎯 Conclusão de Priorização
+## Beachhead futuro
 
-**Beachhead imediato:** Web3/SaaS founders com prazo de fundraising ou lançamento.
-- Ação: publicar case ADASH + prospectar 5 founders em comunidades Web3 esta semana.
+**Não definido, e não vou definir sem dado.** O próximo movimento natural é concentrar nas verticais que responderem melhor no primeiro ciclo de prospecção, e a única leitura que autoriza essa escolha é a taxa de resposta por vertical registrada em `interacoes`.
 
-**Não dispersar esforço:** Ana RE e Dermotion fecham porque já estão no pipeline — mas o modelo de aquisição não é "agências premium" de forma geral. É founders técnicos, especificamente.
+O que já está decidido sobre o passo seguinte, e não depende de vertical: **Sistemas como upsell da base**. Quem comprou bot e ficou é quem compra sistema de R$ 3.000 a 10.000 depois. O movimento de carteira está descrito em `03 - Comercial/04 - Entrega e Recorrência/`.
 
-**Sinal de que o beachhead funcionou:** 1 lead inbound da comunidade Web3/SaaS chegou pelo case do ADASH sem indicação direta.
+---
+
+## Tamanho de mercado
+
+Não existe. O TAM/SAM/SOM da v1 foi calculado sobre segmentos que saíram do escopo, e refazer o cálculo hoje seria inventar.
+
+A única aritmética que a IRBIS tem de verdade é a do caminho até a meta de caixa:
+
+| Meta | Aritmética |
+|---|---|
+| R$ 4.000/mês limpos na PJ até 30/set/2026 | 8 clientes de bot pagando R$ 500/mês |
+
+Cada cliente de bot também traz R$ 1.000 de setup no mês em que entra, e abre a porta do upsell de Sistemas. Sem CNPJ até hoje, o que é bloqueador da própria meta e está registrado como pendência em `project_formalizacao-irbis-sem-cnpj`.
+
+---
+
+## Pendências deste documento
+
+- Quantas conversas por vertical bastam para reabrir o placar de segmentação.
+- Em que vertical a Casa Paes entra, ou se fica fora das três.
+- Se agência/time criativo compra bot para uso próprio ou quer revender. A resposta muda a oferta.
+- Qual vertical vira foco depois do primeiro ciclo. Depende de dado que ainda não existe.
+
+---
+
+## Worksheet relacionado
+
+A ficha de perfil de segmento, para preencher quando houver dado, está em `05 - Growth/segmentacao.md`. Ela é o formulário. Este documento é a decisão.

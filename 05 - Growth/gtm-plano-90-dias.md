@@ -1,120 +1,144 @@
-# GTM IRBIS — Plano de 90 Dias
+# GTM IRBIS — Plano de 90 dias
 
-> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
-> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
-> **O que aqui está morto:** a meta "3 projetos fechados = R$45k–90k", impossível na faixa vigente. O ICP inteiro do bloco de cima (founder de startup pré-seed a Série A, 1-15 pessoas, dor "site não representa onde a empresa chegou", medo de "perder credibilidade com cliente/investidor pelo site"), hoje o ICP é dono de negócio da economia real. O posicionamento "a IRBIS é o único especialista em sites que não faz mais nada" e a promessa "entrega qualidade de agência em 2-3 semanas". O ticket "R$5k–45k" que justifica o motion. As ações de prospectar "10 novos founders/semana" e "batch 3 (10 novos sites auditados)". A meta "Fechar 1º projeto R$15k+" na semana 9-10. O canal Instagram @byirbis como motor, o motor de demanda hoje é o perfil pessoal @o.nicolascunha (ver `04 - Marketing/plano-canais-e-medicao.md`).
-> **O que ainda serve:** o motion sales-led (DM personalizado → call de 20 min → proposta em 24h → fechamento), a regra de 3 canais com papel e prioridade explícitos, o formato da tabela de métricas semanais e os 3 erros a evitar no fim do arquivo.
-> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+**v2 · reescrito em 12/ago/2026.** Cobre de 12/ago a 10/nov/2026. Substitui a v1 (01/jun), escrita quando a IRBIS vendia sites.
 
-**Criado:** 01/jun/2026
-**Meta:** 3 projetos fechados = R$45k–90k em receita
+| Antes (v1) | Agora (v2) | Motivo |
+|---|---|---|
+| Meta: 3 projetos fechados, R$ 45k a 90k | Metas: 2 clientes fundadores até ~19/ago, ≥ 2 clientes novos por mês a partir de set, R$ 4.000/mês limpos até 30/set | A meta antiga era impossível na faixa de preço vigente |
+| ICP: founder de startup pré-seed a Série A | ICP amplo (dono de negócio da economia real), prospecção nichada em advocacia, indústria e agência | Decisões de 09/ago e 12/ago |
+| Posicionamento: único especialista em sites que não faz mais nada | 3 frentes, com Bot de IA como porta e Sistemas como upsell | Sites saíram do escopo em 04/ago |
+| Ticket R$ 5k a 45k | Bot R$ 1.000 + R$ 500/mês. Sistemas R$ 3.000 a 10.000. Consultoria R$ 5.000 ou R$ 10.000 | Preço definido em 09/ago |
+| Canal motor: Instagram @byirbis | Motores: indicação e comunidades (Nicolas), social selling na base morna (colaborador). Instagram é ativo de conversão | Plano de canais v2, 12/ago |
+| Ação: prospectar 10 novos founders por semana, sozinho | Prospecção é papel do colaborador. Nicolas faz reunião, preço e entrega | O time virou duas pessoas em ago |
+| Métrica semanal: conexões, seguidores, taxa de resposta | Métrica de output: conversas iniciadas por origem | Definida no plano de canais |
 
----
+**Fontes vigentes:** `CLAUDE.md` (escopo), `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md` (preço e escada), `04 - Marketing/plano-canais-e-medicao.md` (canal e medição, fonte canônica), `05 - Growth/matriz-segmentacao-beachhead.md` (para quem), `05 - Growth/growth-problem-opportunity.md` (diagnóstico e baseline).
 
-## ICP
-
-```
-B2B — Founder de startup ou negócio em crescimento
-
-Firmográfico:
-  Estágio: pré-seed a Série A
-  Tamanho: 1-15 pessoas
-  Localização: Brasil
-
-Psicográfico:
-  Dor: site não representa onde a empresa chegou
-  Objetivo: ir ao ar rápido sem agência
-  Medo: perder credibilidade com cliente/investidor pelo site
-
-Comportamental:
-  Hangouts: LinkedIn, Instagram, Twitter/X
-  Gatilho de compra: captação recente, lançamento de produto, início de tráfego pago
-  Como decide: confia em quem mostra que entende o problema antes de vender
-```
+**O que este plano não redefine:** canal. Papel de cada canal, operador e métrica estão no plano de canais.
 
 ---
 
-## Posicionamento
+## Ponto de partida
 
-```
-Para founders de startups e negócios em crescimento,
-que precisam de site no ar em semanas,
-a IRBIS é o único especialista em sites que não faz mais nada.
-Ao contrário de agências e estúdios full-service,
-a IRBIS entrega qualidade de agência em 2-3 semanas
-porque só faz uma coisa.
-```
+12/ago/2026: 2 leads ativos, 5 pessoas no banco todas vindas de indicação, 15 dias sem pessoa nova no funil, 7 semanas sem reunião fora de indicação. MRR R$ 0, nenhum Bot de IA vendido. R$ 600 recebidos em 2026, R$ 5.597 a receber. Um cliente pagante fora da família: Casa Paes, R$ 1.200.
 
 ---
 
-## GTM Motion: Sales-Led
+## O que se vende, e em que ordem
 
-Ticket R$5k–45k exige conversa humana. O fluxo é:
-
-```
-DM personalizado → call de 20min → proposta em 24h → fechamento
-```
-
----
-
-## Canais — 3 apenas
-
-| # | Canal | Papel | Prioridade |
+| Degrau | Oferta | Preço | Papel |
 |---|---|---|---|
-| 1 | **LinkedIn Outbound** | Geração de pipeline ativo | Primário |
-| 2 | **Instagram @byirbis** | Prova social + inbound passivo | Secundário |
-| 3 | **Indicações (rede existente)** | Leads quentes de baixo custo | Terciário |
+| Porta | **Bot de IA** | R$ 1.000 de setup + R$ 500/mês | É o que se prospecta. Único produto recorrente da casa |
+| Upsell | **Sistemas** (CRM, ERP, sob medida) | R$ 3.000 a 10.000. Muito complexo: sob consulta | Vendido a quem já é cliente, no repitch de fim de projeto |
+| Fora da porta | **Consultoria de IA** | R$ 5.000 (cliente ≤ R$ 10mi/ano) ou R$ 10.000 | A R$ 5.000 tem tamanho de projeto, não de primeira conversa |
+| Sem faixa | Automação fora do bot, Sistema muito complexo, Consultoria enterprise | Sob consulta. Não estimar | Regra de preço |
 
-**Regra:** LinkedIn gera receita agora. Instagram gera receita em 60-90 dias. Indicações dependem de clientes ativos.
-
----
-
-## Plano de execução
-
-### Semanas 1-4 — Construir pipeline
-
-| Ação | Métrica | Frequência |
-|---|---|---|
-| Enviar DMs para os 10 prospects auditados | 3+ respostas com interesse | Conforme conexões aceitam |
-| Prospectar 10 novos founders/semana no LinkedIn | 40 novas conexões enviadas | Diário (10 min) |
-| Publicar 2x/semana no Instagram | 50 novos seguidores ICP | Seg + Qui |
-| Ativar rede próxima (3 contatos quentes) | 1 indicação quente | Semana 1 |
-
-### Semanas 5-8 — Converter pipeline
-
-| Ação | Métrica | Frequência |
-|---|---|---|
-| Fazer calls com quem respondeu | 2+ propostas enviadas | Conforme agenda |
-| Follow-ups D+4 para quem não respondeu | 2+ respostas adicionais | Conforme cadência |
-| Publicar case EForce no Instagram (antes/depois) | 200+ alcance | Semana 5 |
-| Ativar lead magnet de auditoria gratuita no Instagram | 3+ pedidos de auditoria | Semana 6 |
-
-### Semanas 9-12 — Fechar e renovar pipeline
-
-| Ação | Métrica | Frequência |
-|---|---|---|
-| Fechar 1º projeto | R$15k+ | Semana 9-10 |
-| Pedir indicação ao 1º cliente | 1 lead indicado | Ao entregar |
-| Publicar case do 1º projeto | Prova social nova | Ao concluir |
-| Prospectar batch 3 (10 novos sites auditados) | 10 novos DMs personalizados | Semana 10-11 |
+A faixa é pública em qualquer canal. O número fechado sai na reunião.
 
 ---
 
-## Métricas semanais (review toda sexta, 15 min)
+## Para quem
 
-| Métrica | Meta S4 | Meta S8 | Meta S12 |
-|---|---|---|---|
-| Conexões LinkedIn enviadas | 40 | 80 | 120 |
-| Taxa de resposta aos DMs | >15% | >15% | >15% |
-| Calls realizadas | 2 | 5 | 8 |
-| Propostas enviadas | 1 | 3 | 5 |
-| Projetos fechados | 0 | 1 | 3 |
-| Seguidores novos Instagram | 50 | 150 | 300 |
+ICP declarado amplo: dono de negócio da economia real. A prospecção é nichada em **advocacia, indústria e agência/time criativo**, e o que qualifica dentro delas é o atributo, não a vertical:
+
+- Time de 3 a 8 pessoas, com dono acessível.
+- Trabalho repetitivo e documentável.
+- Já tentou resolver com ferramenta pronta que não conheceu a operação.
+
+Raciocínio completo em `matriz-segmentacao-beachhead.md`.
+
+---
+
+## Motion
+
+Sales-led, com dois papéis que não se sobrepõem.
+
+```
+lista (colaborador)
+  → abordagem, sem pitch e sem preço no primeiro toque (colaborador)
+    → conversa registrada em `interacoes` no mesmo dia (quem falou)
+      → agendamento (colaborador)
+        → reunião de diagnóstico (Nicolas)
+          → proposta (Nicolas)
+            → fechamento (Nicolas)
+              → entrega pelo método de F0 a F7 (Nicolas)
+                → repitch de Sistemas e pedido de indicação no fim (Nicolas)
+```
+
+**Regra de gargalo:** tudo que depende do Nicolas mora depois do agendamento. Se ele estiver em entrega, o topo continua girando. Era o que não acontecia antes de ago.
+
+---
+
+## Bloco 1 — de 12/ago a 31/ago: provar que existe mercado fora de casa
+
+O objetivo do bloco não é receita, é sinal. A pergunta que ele responde: alguém sem vínculo pessoal com o Nicolas senta numa reunião.
+
+| Ação | Dono | Resultado esperado |
+|---|---|---|
+| Fechar o 2º cliente fundador | Nicolas | Meta datada em ~19/ago. 1 de 2 até agora |
+| Mapear e aquecer a base morna (84 seguidores mais quem engajou no vídeo de 9 mil views) | Colaborador | Lista trabalhada pela primeira vez |
+| Abordar a base morna com o gancho do bot | Colaborador | Conversas iniciadas, registradas por origem |
+| Disparar o pedido de indicação como etapa fixa de carteira e de fim de projeto | Nicolas | Processo escrito que nunca rodou |
+| Montar a 1ª lista por vertical usando os 3 atributos de qualificação | Colaborador | Lista pronta para o bloco 2 |
+| Aplicar a bio v4 e gravar os 3 fixados | Nicolas | Perfil deixa de vazar quem o conteúdo traz |
+| Registrar toda conversa em `interacoes` no mesmo dia, com origem | Quem falou | Sem isso nada abaixo é mensurável |
+
+**Teste de sinal do bloco:** 5 conversas reais com dono de negócio até 26/ago. Proposto no plano de canais, aguardando confirmação do dono. Se não acontecer, o problema deixa de ser canal e vira oferta.
+
+---
+
+## Bloco 2 — setembro: vender o primeiro bot e começar o MRR
+
+Meta declarada: ≥ 2 clientes novos por mês a partir de set, e R$ 4.000/mês limpos na PJ até 30/set. O caminho aritmético dos R$ 4.000 são 8 clientes de bot a R$ 500/mês.
+
+| Ação | Dono | Observação |
+|---|---|---|
+| Prospecção rodando nas 3 verticais, uma oferta só (bot) | Colaborador | Um gancho por lista |
+| Reuniões de diagnóstico e propostas | Nicolas | Faixa pública, número fechado na reunião |
+| Entregar os bots vendidos sem estourar a capacidade | Nicolas | A. Cunha continua em produção |
+| Repitch de Sistemas na carteira | Nicolas | É o degrau que sobe o ticket |
+| Post-mortem de cada proposta decidida, ganha ou perdida | Nicolas | Responde a pergunta 1 do CSD |
+| Hunter frio, se e quando a lista morna acabar | Colaborador | Lastro de volume, não ponto de partida |
+| CNPJ | Nicolas | Bloqueia a meta de receita limpa na PJ |
+
+**Alerta aritmético, para constar:** 8 mensalidades de R$ 500 só somam R$ 4.000 se os 8 clientes estiverem ativos no mesmo mês. Quem entra em set paga a primeira mensalidade em set. **Pendente:** o dono confirma se a meta de 30/set conta setup mais mensalidade ou só recorrência. A leitura muda o número de clientes necessários.
+
+---
+
+## Bloco 3 — de 1º/out a 10/nov: não definido
+
+Não existe meta decidida depois de 30/set, e não vou inventar uma. O que este bloco vira depende de duas leituras que só existem no fim de setembro:
+
+- Quantos bots foram vendidos e quantos sobreviveram ao primeiro mês de mensalidade.
+- Qual vertical respondeu, medida por taxa de resposta em `interacoes`.
+
+**Pendente:** o dono define a meta de out e nov depois do fechamento de setembro. Os três candidatos naturais são concentrar prospecção na vertical que respondeu, subir ticket com Sistemas na base de bot, ou ligar ads caso a receita própria passe de R$ 4.000/mês.
+
+---
+
+## Medição
+
+A métrica de output é **conversa iniciada com dono de negócio, por origem**. A tabela completa e a regra de decisão estão no plano de canais e não se repetem aqui.
+
+| Métrica | Meta conhecida | Onde vive |
+|---|---|---|
+| Clientes fundadores | 2 até ~19/ago | Pipeline |
+| Conversas com dono | 5 até 26/ago, a confirmar | `interacoes` |
+| Clientes novos por mês | ≥ 2 a partir de set | Pipeline |
+| Receita limpa na PJ | R$ 4.000/mês até 30/set | Financeiro |
+| Clientes de bot ativos | 8 para fechar a conta acima | CRM |
+| Reunião fora de indicação | Sem meta definida. Hoje é 0 há 7 semanas | Pipeline |
+| Conversão, ciclo de venda, CAC | Sem meta. Sem volume para calcular | A definir quando houver dado |
+
+Revisão semanal na sexta, junto do fechamento de semana.
 
 ---
 
 ## Erros a evitar
 
-- **Não abrir 3 canais ao mesmo tempo** — LinkedIn primeiro, Instagram segundo
-- **Não aceitar projetos fora do escopo** — cada "sim" fora do posicionamento é 3 semanas perdidas
-- **Não esperar o Instagram dar resultado antes de fazer outbound** — Instagram é lento, outbound é rápido
+- **Prospectar mais de uma oferta ao mesmo tempo.** A porta é o bot. Sistemas e Consultoria não entram na abordagem de topo.
+- **Começar pelo frio.** A ordem é indicação e comunidades, depois base morna, depois hunter frio. Frio é para quando as duas primeiras listas acabarem.
+- **Deixar de registrar conversa de WhatsApp e telefone.** É por onde tudo acontece e nada disso entra no banco sozinho. Sem registro, a revisão de sexta volta a medir preparação em vez de conversão.
+- **Aceitar projeto fora das 3 frentes.** Site, landing page, branding, identidade avulsa, dashboard avulso, Web3, motion e social media estão fora, sem exceção.
+- **Citar prova social que não pode ser citada.** ADASH nunca foi entregue. Eduboxs não é case. E-Force é credencial pessoal e não prova Sistemas nem IA. Odery prova produto, sem número financeiro publicável.
+- **Tratar cliente da família como prova de mercado.** A. Cunha e Odery abrem porta, não fecham a discussão de tração.

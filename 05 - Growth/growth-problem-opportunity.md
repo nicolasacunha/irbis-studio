@@ -1,103 +1,170 @@
-# IRBIS — Growth Problem Statement + Opportunity Canvas
+# IRBIS — Diagnóstico de Growth
 
-> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
-> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
-> **O que aqui está morto:** a definição de partida "a IRBIS é uma micro-agência de design digital premium operada solo", design não é mais o produto. O mercado-alvo "founders, marcas premium" e o limite de escopo "não aceitar projetos fora do ICP (design técnico avançado: Web3, SaaS, premium brands)", Web3 e branding estão fora de escopo por decisão. O ticket médio de R$20–25k e a capacidade "1–2 projetos × R$20–25k", acima da faixa vigente. Todo o pipeline citado como ativo (Ana RE, Dermotion, ADASH) e as metas derivadas dele: pipeline de R$80–130k, critério de sucesso "pipeline ativo contínuo de R$150k+". As 4 hipóteses de oportunidade, ancoradas em publicar ADASH como case e no "render da pantera" como bloqueio de vendas.
-> **O que ainda serve:** a estrutura do worksheet (variáveis críticas, stakeholders, métricas impactadas, critérios de sucesso, limites do espaço de solução) como molde pra refazer o diagnóstico sobre as 3 frentes atuais, e o limite "não competir por preço com agências genéricas". Atenção: o limite "não contratar (solo + IA é o modelo)" também caiu, a IRBIS passou a ter um colaborador (ver `CLAUDE.md`).
-> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+**v2 · reescrito em 12/ago/2026.** Substitui a v1 (01/jun), escrita quando a IRBIS era descrita como micro-agência de design digital premium. Este é o documento canônico de diagnóstico: onde o negócio está, com número real, e o que precisa mudar.
+
+| Antes (v1) | Agora (v2) | Motivo |
+|---|---|---|
+| Micro-agência de design digital premium, operada solo | Sistemas, automação e IA, duas pessoas | Pivot de 04/ago. O colaborador entrou em ago |
+| Ticket médio R$ 20–25k, pipeline estimado em R$ 80–130k | Bot R$ 1.000 + R$ 500/mês, Sistemas R$ 3.000 a 10.000. A receber: R$ 5.597 | Preço definido em 09/ago. O pipeline antigo era estimativa sobre prospects que não fecharam |
+| Pipeline vivo: Ana RE, Dermotion, ADASH | 2 leads ativos, 5 pessoas no banco, todas de indicação | Nenhum dos três virou cliente. ADASH nunca foi entregue |
+| Critério de sucesso: pipeline contínuo de R$ 150k+ | Critério de sucesso: R$ 4.000/mês limpos até 30/set, via 8 clientes de bot | A meta antiga era calculada em ticket de site |
+| Limite: não contratar, solo mais IA é o modelo | Limite: duas pessoas, e nada que exija uma terceira | O modelo mudou de fato |
+| Problema central: não existe sistema de pipeline | Problema central: não existe prova de mercado fora da família | O sistema de canal já foi escrito. O que falta é alguém sem vínculo pessoal pagando |
+
+**Fontes vigentes:** `CLAUDE.md` (escopo), `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md` (preço), `04 - Marketing/plano-canais-e-medicao.md` (canal e medição), `05 - Growth/matriz-segmentacao-beachhead.md` (para quem se prospecta).
 
 ---
 
-## 📋 Growth Problem Statement Worksheet
+## Contexto
 
-### Contexto
-A IRBIS é uma micro-agência de design digital premium operada solo. Tem produto diferenciado, site sofisticado, brand completa e receita ativa agora — mas opera sem sistema de vendas: cada proposta é artesanal, não há presença social ativa, e o pipeline depende inteiramente de indicações e prospecção manual. Se os 2–3 prospects atuais não converterem, a receita zera em 60–90 dias.
+A IRBIS vende três frentes: Soluções com IA, Consultoria de IA e Sistemas. Tem preço definido desde 09/ago, escada de oferta definida em 12/ago (Bot de IA é a porta, Sistemas é o upsell), método de entrega escrito, painel próprio no ar e um plano de canais reescrito com dado de três semanas de medição.
 
-### Variáveis Críticas
-- **Taxa de conversão de propostas:** atualmente estimada em 25–30%, sem dado histórico real
-- **Tempo de ciclo de venda:** sem medição (provavelmente 30–45 dias por prospect)
-- **Fonte de leads:** 100% outbound/indicação — zero inbound documentado
-- **Capacidade de entrega:** 1–2 projetos simultâneos sem contratar
-- **Concentração de risco:** 3 prospects, se nenhum fechar → receita zero
+O que ela não tem é cliente.
 
-### Stakeholders
+Dois clientes existem no papel. Casa Paes, R$ 1.200, entregue. A. Cunha Advocacia, R$ 4.997, em produção. Recebido em 2026: R$ 600. A receber: R$ 5.597. MRR: R$ 0.
+
+**O fato desconfortável, que precisa aparecer em qualquer leitura honesta deste diagnóstico:** Odery e E-Force são a empresa do pai do Nicolas. A. Cunha Advocacia é o escritório da mãe. O único cliente pagante fora da família é a Casa Paes, R$ 1.200. Não existe prova de mercado. Existe prova de que o produto funciona quando alguém de casa abre a porta.
+
+Isso reposiciona o problema. Em junho, o diagnóstico dizia que faltava sistema de pipeline. Hoje o sistema de canal está escrito, com operador definido por canal. O que falta é a primeira conversa que vira reunião sem vínculo pessoal: são sete semanas sem reunião fora de indicação, e 15 dias sem uma pessoa nova entrar no funil.
+
+---
+
+## Variáveis críticas
+
+| Variável | Estado em 12/ago | Comentário |
+|---|---|---|
+| Origem dos leads | 5 de 5 pessoas no banco vieram de indicação | Zero de conteúdo, zero de frio, zero de pSEO |
+| Pessoas novas no funil | 0 nos últimos 15 dias | O funil parou de entrar gente antes de parar de converter |
+| Reunião fora de indicação | 0 há 7 semanas | É o indicador mais duro que existe hoje |
+| Leads ativos | 2 | Concentração alta: se os dois esfriarem, o pipeline zera |
+| MRR | R$ 0 | Só o Bot de IA gera recorrência. Nenhum vendido |
+| Prova de mercado | 1 cliente pagante fora da família, R$ 1.200 | Bloqueia case, bloqueia argumento de venda, bloqueia confiança do operador |
+| Capacidade de entrega | Nicolas entrega sozinho | Colaborador é comercial. Entrega não é papel dele |
+| Formalização | Sem CNPJ | Bloqueia a meta de R$ 4.000/mês limpos na PJ |
+| Taxa de conversão | Não medida | Não há volume para calcular |
+| Ciclo de venda | Não medido | Idem |
+
+---
+
+## Stakeholders
+
 | Stakeholder | Papel | Influência no problema |
-|------------|-------|----------------------|
-| Fundador (solo operator) | Vendedor + executor | Gargalo: faz tudo, tempo é o recurso crítico |
-| Prospects ativos (Ana RE, Dermotion, ADASH) | Potenciais clientes | Decisão de compra imediata |
-| Clientes futuros (founders, marcas premium) | Mercado-alvo | Definem o ICP e o canal certo |
-| Concorrentes (agências genéricas) | Benchmark negativo | Posicionamento anti-agência como diferencial |
-
-### Métricas Impactadas
-| Métrica | Situação atual | Impacto do problema |
-|---------|---------------|-------------------|
-| MRR/receita mensal | Variável, dependente de fechamentos | Risco de zerar em 60–90 dias |
-| Pipeline value | R$80–130k (estimado, não confirmado) | Concentrado em 3 prospects |
-| CAC | Desconhecido (sem rastreamento) | Impossível otimizar sem saber |
-| Taxa de conversão | ~25–30% (estimativa) | Sem template, ciclo é lento e artesanal |
-| Capacidade mensal de receita | 1–2 projetos × R$20–25k | Teto de escala sem sistema |
-
-### Critérios de Sucesso
-- Pipeline ativo contínuo de R$150k+ (3–4 projetos simultâneos em diferentes estágios)
-- Taxa de conversão proposta → fechamento ≥ 40%
-- Pelo menos 1 novo lead qualificado/semana via inbound (Instagram ou LinkedIn)
-- Ciclo de venda documentado e médio < 21 dias com template de proposta
-- 30% dos clientes retornam para 2º projeto ou retainer
-
-### Limites do Espaço de Solução
-- Não contratar (solo + IA é o modelo)
-- Não reduzir posicionamento premium para aumentar volume
-- Não competir por preço com agências genéricas
-- Não aceitar projetos fora do ICP (design técnico avançado: Web3, SaaS, premium brands)
-- Solução deve funcionar com 2–4h/semana dedicadas a marketing/vendas
+|---|---|---|
+| Nicolas | Reunião, preço, entrega | Gargalo de tudo que acontece depois do agendamento |
+| Colaborador generalista com foco comercial | Prospecção, agendamento, follow-up, pipeline | Destrava volume de topo. É a mudança estrutural de ago |
+| Casa Paes | Único cliente pagante fora da família | É a única fonte de prova de mercado que existe hoje |
+| A. Cunha Advocacia | Contrato em produção, R$ 4.997 | Ocupa a capacidade de entrega enquanto o comercial precisa girar |
+| Base morna (84 seguidores mais quem engajou no vídeo de 9 mil views) | Volume qualificado e gratuito | Nunca foi trabalhada |
 
 ---
 
-## 🗺️ Opportunity Canvas
+## Métricas impactadas
+
+| Métrica | Baseline em 12/ago | O que o problema causa |
+|---|---|---|
+| Receita recebida em 2026 | R$ 600 | Não sustenta operação nem formalização |
+| A receber | R$ 5.597 | Concentrado em um contrato em produção |
+| MRR | R$ 0 | Sem recorrência, todo mês recomeça do zero |
+| Leads ativos | 2 | Risco de pipeline seco |
+| Conversas iniciadas com dono de negócio | Não medido até 12/ago | Passa a ser a métrica de output, ver plano de canais |
+| CAC | Desconhecido | Sem volume e sem atribuição, não dá para calcular |
+| Clientes pagantes fora da família | 1 | O número que resume o diagnóstico |
+
+---
+
+## Critérios de sucesso
+
+Só os que estão decididos. O resto está em pendências.
+
+| Critério | Prazo | Estado |
+|---|---|---|
+| 2 clientes fundadores | ~19/ago/2026 | 1 de 2 |
+| ≥ 2 clientes novos por mês | a partir de set/2026 | Não iniciado |
+| R$ 4.000/mês limpos na PJ | 30/set/2026 | R$ 0. Caminho: 8 clientes de bot a R$ 500/mês |
+| Primeira reunião com dono sem vínculo pessoal | Não definido | 7 semanas sem |
+| 5 conversas reais com dono até 26/ago | Proposto no plano de canais, aguardando confirmação do dono | Depende de registro em `interacoes` |
+
+---
+
+## Limites do espaço de solução
+
+- **Duas pessoas.** Nada que exija uma terceira, nem que exija o Nicolas prospectando em volume.
+- **Escopo fechado.** Soluções com IA, Consultoria de IA e Sistemas. Fora: site, landing page, branding, identidade avulsa, dashboard avulso, Web3, motion, social media.
+- **Bot de IA é a única porta de prospecção.** Uma oferta por lista.
+- **Ads desligado** até receita própria ≥ R$ 4.000/mês.
+- **Sem CNPJ.** Tudo entra como PF, sem nota, o que limita cliente maior.
+- **Não competir por preço.** A faixa é pública, o número fechado sai na reunião.
+- **Prova social limitada por regra.** Odery prova produto sem número publicável, E-Force é credencial pessoal e não faz ponte para IA ou Sistemas, ADASH não pode ser citada, Eduboxs não é case, "+500" e "1,8x" estão banidos.
+
+---
+
+## Opportunity Canvas
 
 ### Problema
-A IRBIS não tem sistema de geração de pipeline. Depende de indicações e prospecção manual, sem presença social ativa, sem template de proposta e sem rastreamento de métricas comerciais. Isso torna a receita imprevisível e concentrada em poucos prospects simultâneos.
+
+A IRBIS resolveu produto, preço, escada de oferta e plano de canal, e continua sem prova de que alguém fora do círculo pessoal do Nicolas compra. O funil parou de receber gente nova antes de parar de converter, e a recorrência que sustentaria a operação depende de um produto que nunca foi vendido.
 
 ### Impactados
-- **Fundador:** incerteza de receita mês a mês, tempo gasto em vendas artesanais
-- **Prospects:** processo de compra não estruturado → percepção de pouca profissionalização
-- **Clientes futuros:** sem presença social, a IRBIS é invisível para quem ainda não foi indicado
+
+- **Nicolas:** entrega o contrato da família enquanto o comercial precisa girar, e é o único ponto de reunião, preço e execução.
+- **Colaborador:** entrou para prospectar e trabalha sem case de mercado para citar. O argumento de venda depende de prova que não existe.
+- **Prospect:** ouve uma oferta de bot de uma marca sem cliente comparável ao dele.
 
 ### Urgência
-**Alta.** Os 3 prospects atuais estão em fase de fechamento. Se não converterem nos próximos 30–45 dias, há risco real de pipeline seco. O Instagram sem conteúdo ativo e a ausência de template de proposta são gaps que podem ser resolvidos rapidamente (semanas, não meses).
 
-### Hipóteses de Oportunidade
-1. **Case study no Instagram:** publicar ADASH como case antes do encerramento do projeto → atrair leads qualificados em 30 dias
-2. **Template de proposta:** reduzir tempo de criação de proposta de 4–6h para < 1h sem perder percepção de premium
-3. **LinkedIn outbound:** 10 conexões/semana com founders de startups Web3/SaaS → 1–2 reuniões/mês
-4. **Render da pantera:** desbloquear identidade visual completa → propostas mais impactantes e presença social coesa
+Alta e datada. A meta de R$ 4.000/mês vence em 30/set, e o caminho aritmético são 8 clientes de bot. Nenhum foi vendido. Cada semana sem cliente novo de bot torna a meta aritmeticamente mais difícil, porque o setup de cada cliente entra uma vez só e a mensalidade precisa de meses rodando.
 
-### Potencial Impacto no Crescimento
-| Oportunidade | Impacto estimado | Prazo |
-|-------------|-----------------|-------|
-| Case study Instagram (ADASH) | +1–2 leads qualificados/mês | 30 dias |
-| Template de proposta | +15% taxa de conversão, -70% tempo de criação | 2 semanas |
-| LinkedIn outbound | +2–4 reuniões/mês | 45 dias |
-| Render mascote | Propostas visuais mais impactantes | 2–4 semanas |
+### Hipóteses de oportunidade
 
-### Opportunity Pitch
-> **Problema:** A IRBIS tem produto diferenciado mas pipeline frágil — depende de indicações e prospecção manual sem sistema.
->
-> **Impacto:** Risco de receita zero em 60–90 dias se os 3 prospects atuais não fecharem.
->
-> **Urgência:** Pipeline em fase de fechamento agora. Sem ação em 2–3 semanas, oportunidade esfria.
->
-> **Oportunidade:** Construir um sistema mínimo de inbound (Instagram + LinkedIn) e padronizar propostas — 2 alavancas de baixo custo e alto retorno que podem ser ativadas em paralelo à entrega dos projetos atuais.
->
-> **Visão de growth:** De agência dependente de indicação → studio com presença ativa que atrai o cliente certo antes de precisar procurá-lo.
+Ordenadas por custo de testar. Nenhuma tem impacto estimado, porque não há base histórica para estimar.
 
-### Baseline das Métricas Principais
-| Métrica | Baseline atual |
-|---------|---------------|
-| Leads/mês (inbound) | 0 |
-| Propostas enviadas/mês | ~1–2 |
-| Taxa de conversão | ~25–30% (estimada) |
-| Ticket médio | R$20–25k |
-| Ciclo de venda | ~30–45 dias (estimado) |
-| CAC | Desconhecido |
-| MRR | Variável (projeto a projeto) |
+1. **A base morna converte.** Os 84 seguidores e quem engajou no vídeo de 9 mil views nunca foram abordados. É o único volume qualificado e gratuito que existe. Teste: mapear, aquecer e abordar, com o colaborador, registrando cada conversa em `interacoes`.
+2. **O gancho do bot abre porta que o gancho de sistema não abria.** Falar de atendimento, orçamento e triagem no WhatsApp em vez de perguntar se a empresa quer um sistema. Teste: taxa de resposta por vertical na primeira lista.
+3. **Indicação com pedido explícito produz mais que indicação passiva.** 5 de 5 leads vieram de indicação sem que existisse processo. O processo está escrito e nunca foi disparado. Teste: rodar o pedido de indicação como etapa fixa de fim de projeto e de carteira.
+4. **A Casa Paes é a chave da prova de mercado.** É o único cliente pagante fora da família. Teste: verificar se ela autoriza virar case e se comporta upsell de bot.
+5. **pSEO já traz gente e ninguém sabe.** 7 páginas no ar, zero atribuição. Teste: fechar a atribuição antes de julgar o canal.
+
+### Opportunity pitch
+
+> **Problema:** a IRBIS tem produto, preço e plano de canal definidos, e nenhum cliente pagante relevante fora da família.
+>
+> **Impacto:** MRR zero, R$ 600 recebidos em 2026, e uma meta de R$ 4.000/mês que vence em 30/set.
+>
+> **Urgência:** 7 semanas sem reunião fora de indicação e 15 dias sem pessoa nova no funil. O topo secou.
+>
+> **Oportunidade:** existe volume qualificado e gratuito que nunca foi tocado (base morna e indicação com processo), e uma oferta de entrada barata de decidir (Bot de IA, R$ 1.000 mais R$ 500/mês) que é também a única fonte de recorrência da casa.
+>
+> **O que muda se der certo:** o primeiro cliente de bot fora da família resolve dois problemas de uma vez, começa o MRR e cria o primeiro case citável sem ressalva.
+
+### Baseline das métricas principais
+
+| Métrica | Baseline em 12/ago/2026 |
+|---|---|
+| Leads ativos | 2 |
+| Pessoas no banco | 5, todas de indicação |
+| Pessoas novas nos últimos 15 dias | 0 |
+| Reuniões fora de indicação | 0 há 7 semanas |
+| Clientes | 2 (Casa Paes entregue, A. Cunha em produção) |
+| Clientes pagantes fora da família | 1 |
+| Recebido em 2026 | R$ 600 |
+| A receber | R$ 5.597 |
+| MRR | R$ 0 |
+| Clientes de bot vendidos | 0 |
+| CAC | Desconhecido, sem atribuição |
+| Ciclo de venda | Não medido |
+
+---
+
+## Pendências
+
+- Confirmar o teste de 14 dias proposto no plano de canais: 5 conversas com dono até 26/ago.
+- Definir o que acontece se as duas metas de agosto não forem atingidas. Não existe plano B escrito.
+- Decidir se a Casa Paes vira case, e sob que condição.
+- CNPJ. A meta de 30/set é declarada como receita limpa na PJ e não existe PJ.
+- Fechar a atribuição de pSEO e o registro obrigatório de conversas de WhatsApp e telefone em `interacoes`. Sem os dois, este diagnóstico não pode ser refeito com dado melhor no mês que vem.
+
+---
+
+## Documento irmão
+
+A matriz CSD, que separa certeza de suposição e de dúvida antes de agir, está em `05 - Growth/growth-brief-csd.md`. Ela usa este diagnóstico como insumo e não repete o conteúdo dele.
