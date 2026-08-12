@@ -1,5 +1,11 @@
 # IRBIS — Design Brief de Growth + Matriz CSD
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** a definição "micro-agência de design digital premium" e a premissa "o problema de growth não é produto", o produto mudou inteiro depois disso. O escopo do desafio "construir um pipeline previsível de R$15k–30k/mês", número calibrado em ticket de site. O público primário "founders e sócios de startups/scale-ups (Web3, SaaS, marketplace)" e o gatilho de compra "vergonha do site atual", hoje o ICP é dono de negócio da economia real. Os cenários de impacto (fechar Ana RE + Dermotion = +R$50k, 2 contratos/mês = R$300–500k/ano). As métricas de partida e metas: ticket médio R$20–25k indo pra R$30k, LTV ~R$25k indo pra R$50k, pipeline R$80–130k indo pra R$200k. A matriz CSD inteira, cujas certezas e suposições falam de Web3, motion avançado e do render da pantera. As 3 hipóteses prioritárias, todas ancoradas em ADASH ou no template de proposta de site.
+> **O que ainda serve:** o método da matriz CSD, separar certeza, suposição e dúvida antes de agir, e duas perguntas de pesquisa que continuam abertas hoje: por que cada prospect travou (preço, proposta, timing ou fit) e qual canal trouxe cada cliente com que CAC.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 ---
 
 ## 🎯 Design Brief de Growth

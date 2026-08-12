@@ -1,5 +1,11 @@
 # IRBIS — Matriz de Segmentação + Beachheads
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** os 3 segmentos comparados e o placar 37/27/24 (A Web3/SaaS Founders, B Premium Brands, C Subcontratação), nenhum deles é o ICP atual. O beachhead imediato "founder técnico, 25–38 anos, startup Web3/SaaS B2B/DeFi, em preparação para fundraising, demo day ou lançamento público nos próximos 60–90 dias", Web3 está fora de escopo e o ICP hoje é dono de negócio da economia real sem vertical. Os tickets de cada segmento (R$25–50k, R$15–30k, R$5–15k), todos fora da faixa vigente. A ação de aquisição "publicar ADASH como case detalhado" e a meta "2 projetos Web3/SaaS fechados em 60 dias → R$60–100k". O beachhead futuro (SaaS B2B em escala, projetos de R$50–100k por ciclo, com "motion + Web3 como diferencial"). O TAM/SAM/SOM e o potencial combinado de R$275–650k, calculado sobre segmentos que saíram.
+> **O que ainda serve:** os 8 critérios de segmentação da primeira tabela (comportamento de compra, valor gerado, intensidade da dor, maturidade, urgência, potencial de retenção, ticket médio, facilidade de aquisição) e o método de pontuar cada segmento antes de decidir onde gastar esforço comercial, útil quando houver dado pra segmentar a economia real.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 > Framework baseado em "Nem todo cliente possui a mesma dor; gera o mesmo valor; converte igual; ou vale o mesmo esforço." (LINK School of Business, G&G 2, 2026.1)
 
 ---

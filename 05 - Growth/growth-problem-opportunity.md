@@ -1,5 +1,11 @@
 # IRBIS — Growth Problem Statement + Opportunity Canvas
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** a definição de partida "a IRBIS é uma micro-agência de design digital premium operada solo", design não é mais o produto. O mercado-alvo "founders, marcas premium" e o limite de escopo "não aceitar projetos fora do ICP (design técnico avançado: Web3, SaaS, premium brands)", Web3 e branding estão fora de escopo por decisão. O ticket médio de R$20–25k e a capacidade "1–2 projetos × R$20–25k", acima da faixa vigente. Todo o pipeline citado como ativo (Ana RE, Dermotion, ADASH) e as metas derivadas dele: pipeline de R$80–130k, critério de sucesso "pipeline ativo contínuo de R$150k+". As 4 hipóteses de oportunidade, ancoradas em publicar ADASH como case e no "render da pantera" como bloqueio de vendas.
+> **O que ainda serve:** a estrutura do worksheet (variáveis críticas, stakeholders, métricas impactadas, critérios de sucesso, limites do espaço de solução) como molde pra refazer o diagnóstico sobre as 3 frentes atuais, e o limite "não competir por preço com agências genéricas". Atenção: o limite "não contratar (solo + IA é o modelo)" também caiu, a IRBIS passou a ter um colaborador (ver `CLAUDE.md`).
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 ---
 
 ## 📋 Growth Problem Statement Worksheet

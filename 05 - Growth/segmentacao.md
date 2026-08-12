@@ -1,5 +1,11 @@
 # IRBIS — Oportunidade e Segmentação
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** a oportunidade central "sistema de pipeline previsível de R$15–30k/mês" e as métricas iniciais (ticket médio R$20–25k com meta de R$30k), fora da faixa vigente. Os 3 perfis de segmento inteiros: A "founders de startups Web3, DeFi, SaaS B2B, 25–38 anos" com ticket R$25–50k, B "negócios premium consolidados que buscam modernização de marca" com dor "vergonha do site atual" e ticket R$15–30k, C "agências buscando subcontratação de motion, Web3, animação". O critério de segmentação "tipo de projeto: Web3/SaaS vs. premium brand vs. subcontratação". A conclusão de que o Segmento A é prioritário e que "ADASH é o case perfeito para atrair esse perfil". Ana RE e Dermotion tratados como pipeline vivo. O ICP atual é dono de negócio da economia real, amplo e sem vertical por decisão do dono.
+> **O que ainda serve:** os 5 critérios de segmentação da primeira tabela (tipo de projeto, estágio da empresa cliente, canal de chegada, decisor, ticket expectado) e os 4 fatores da conclusão, reaplicáveis às 3 frentes atuais quando houver dado suficiente pra segmentar.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 > Framework baseado em "Oportunidade e Introdução à Segmentação" (LINK School of Business, G&G 2, 2026.1)
 
 ---

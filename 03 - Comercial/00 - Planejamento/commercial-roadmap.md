@@ -1,5 +1,11 @@
 # Roadmap Comercial IRBIS
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** o ticket alvo "R$5k (landing page) a R$45k+ (site complexo / e-commerce)", substituído por Sistemas R$3.000–10.000 e Bot de IA R$1.000 setup + R$500/mês. O segmento prioritário "founders de startup ou negócio em crescimento que precisam de site", hoje o ICP é dono de negócio da economia real, sem vertical definida. A ação de mapear "20 founders de Web3/SaaS no LinkedIn e Twitter/X", Web3 está explicitamente fora de escopo. O template de outbound "Faço só sites: landing page, site institucional, e-commerce". As metas de receita das 3 fases (R$15k+, R$25–35k, R$45k+) e o ticket médio subindo pra R$35–45k, incompatíveis com a faixa de preço vigente. O retainer de R$3–8k/mês por evolução de site. O posicionamento de "especialista em Web3/SaaS" da Fase 3. Os cases citados (EForce, Adash) não servem mais como prova das 3 frentes atuais, a prova de produto hoje é Odery.
+> **O que ainda serve:** a estrutura de fases com KPI por fase, a tabela de anti-ações ("o que parece certo" x "o que é certo" com pipeline vazio) e as regras de cadência do outbound (personalizar sempre, 1 follow-up em 5 dias, parar após 2 tentativas).
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 **Objetivo:** Sair de zero clientes ativos para R$30k MRR consistente  
 **Atualizado em:** 2026-05  
 **Responsável:** Nicolas Cunha (solo)

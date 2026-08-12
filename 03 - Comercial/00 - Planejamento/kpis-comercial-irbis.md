@@ -1,5 +1,11 @@
 # 📊 KPIs Comercial — IRBIS (Pré-vendas + Vendas)
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** a premissa declarada logo abaixo, "calibradas pra operação solo vendendo site". O KPI "Sites fechados/mês 2/4/6", não existe mais unidade de venda chamada site. O ticket médio de R$4.500 / R$5.000 / R$6.000, abaixo e fora da faixa vigente (Sistemas R$3.000–10.000, Consultoria de IA R$5.000 ou R$10.000 por porte, Bot de IA R$1.000 setup + R$500/mês). A escada de faturamento ~R$9k / ~R$20k / R$30k+ e os 3 níveis amarrados ao roadmap R$0→15k→30k, que é o `commercial-roadmap.md`, também pré-pivot.
+> **O que ainda serve:** os indicadores de topo de funil (contatos por semana, taxa de resposta, conversão contato → reunião, comparecimento, taxa de follow-up), a leitura de onde o funil trava por etapa e a rotina diário/semanal/mensal, todos independentes do que é vendido. A recorrência do Bot de IA pede um KPI de MRR que este documento não tem.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 > Adaptado do Grupo JDP. As metas do JDP são pra time em volume (250–350 leads/semana). Aqui estão **calibradas pra operação solo vendendo site**, escalando com o seu roadmap (R$0→15k→30k). Metas em 3 níveis (sobrevivência → estabilidade → escala). Ajusta conforme sua realidade.
 
 ## Princípio

@@ -65,18 +65,18 @@ A "lista enorme" real tem **8 itens** pra construir. O resto já existe, já est
 | Treinamento de vendas | ✅ | Versão solo: playbooks de call documentados (skills) + mentoria JDP ativa |
 | Onboarding de closers | ⏸ | Pressupõe time |
 | Estrutura de time de vendas | ⏸ | Pressupõe time |
-| Gestão de carteira, cross/upsell | 🔄 | 2 pacotes de recorrência + repitch MRR + auditoria mensal dos sites entregues + sites↔IA como upsell mútuo (pivot). Processo formal de carteira quando houver 5+ clientes ativos |
+| Gestão de carteira, cross/upsell | 🔄 | 2 pacotes de recorrência + repitch MRR + auditoria mensal dos sites já entregues (base legada) + upsell entre as 3 frentes atuais (Sistemas ↔ Soluções com IA ↔ Consultoria de IA). Processo formal de carteira quando houver 5+ clientes ativos. ⚠️ **Corrigido 12/ago/2026 — sites saíram do escopo em 04/ago; não existe mais upsell mútuo nem segmento de site** |
 
 ## Pilar 5 — Experiência e Relacionamento com o Cliente
 
 | Item | Status | Evidência / o que falta |
 |---|---|---|
 | Conhecer perfil e necessidade | 🔄 | Dossiês por lead + questionário estruturado (caso mãe). Padronizar o questionário como etapa fixa = Fase 3 |
-| Personalizar por segmento | ⬜ | 2 segmentos nascendo (sites / IA). Cedo demais pra personalização formal; definir junto com a oferta da Fase 4 |
+| Personalizar por segmento | ⬜ | Segmento único: dono de negócio da economia real, sem vertical, o mesmo para as 3 frentes. Cedo demais pra personalização formal; definir junto com a oferta da Fase 4. ⚠️ **Corrigido 12/ago/2026 — sites saíram do escopo em 04/ago; não existe mais upsell mútuo nem segmento de site** |
 | Canais e qualidade de atendimento | 🔄 | Kit de onboarding da Fase 3 define canais, cadência e tempo de resposta (especificado, aguarda 1ª assinatura) |
 | Jornada do 1º contato ao pós-venda | 🔄 | Funil documentado ponta a ponta: demo → call → proposta → contrato → dia do sim → onboarding → calls de estratégia. Falta rodar com cliente real |
 | Medir satisfação | 🔄 | Rascunho pronto 21/jul (`03 - Comercial/04 - Entrega e Recorrência/voz-do-cliente.md`: pulso 0-10 + Must-Have Score + depoimento) — aguarda revisão |
-| Monetizar a base / expandir receita | 🔄 | Pacotes de recorrência + auditoria mensal como gancho + upsell cruzado do pivot |
+| Monetizar a base / expandir receita | 🔄 | Pacotes de recorrência + auditoria mensal como gancho + upsell entre as 3 frentes atuais. ⚠️ **Corrigido 12/ago/2026 — sites saíram do escopo em 04/ago; não existe mais upsell mútuo nem segmento de site** (a linha dizia "upsell cruzado do pivot", que era o upsell site↔IA) |
 | Envolver clientes na melhoria | 🔄 | Rascunho pronto 21/jul (mesmo `voz-do-cliente.md`: 3 perguntas de fim de projeto, com a "próxima dor" alimentando a carteira) — aguarda revisão |
 
 ## Pilar 6 — Inteligência Artificial

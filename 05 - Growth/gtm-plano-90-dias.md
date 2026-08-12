@@ -1,4 +1,11 @@
 # GTM IRBIS — Plano de 90 Dias
+
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** a meta "3 projetos fechados = R$45k–90k", impossível na faixa vigente. O ICP inteiro do bloco de cima (founder de startup pré-seed a Série A, 1-15 pessoas, dor "site não representa onde a empresa chegou", medo de "perder credibilidade com cliente/investidor pelo site"), hoje o ICP é dono de negócio da economia real. O posicionamento "a IRBIS é o único especialista em sites que não faz mais nada" e a promessa "entrega qualidade de agência em 2-3 semanas". O ticket "R$5k–45k" que justifica o motion. As ações de prospectar "10 novos founders/semana" e "batch 3 (10 novos sites auditados)". A meta "Fechar 1º projeto R$15k+" na semana 9-10. O canal Instagram @byirbis como motor, o motor de demanda hoje é o perfil pessoal @o.nicolascunha (ver `04 - Marketing/plano-canais-e-medicao.md`).
+> **O que ainda serve:** o motion sales-led (DM personalizado → call de 20 min → proposta em 24h → fechamento), a regra de 3 canais com papel e prioridade explícitos, o formato da tabela de métricas semanais e os 3 erros a evitar no fim do arquivo.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 **Criado:** 01/jun/2026
 **Meta:** 3 projetos fechados = R$45k–90k em receita
 

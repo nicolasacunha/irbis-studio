@@ -1,5 +1,11 @@
 # IRBIS — Impulsos e Freios do Growth
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto:** o potencializador "missão clara: design técnico premium (Web3, motion, identidade)" e o "produto diferenciado: Web3 + motion avançado + posicionamento anti-agência", Web3, motion e branding estão fora de escopo desde 04/ago. O potencializador "case real documentado: Odery/EFORCE entregue e no portfólio" precisa ser relido: Odery vale como prova das 3 frentes, EForce só prova geração de demanda. Todos os exemplos de operação citam ADASH, Ana RE e Dermotion como pipeline vivo, o que não é mais o caso. O "render da pantera" como tarefa pendente crítica e a vitória rápida "publicar 1 post do ADASH como case study". O bloco de execução diária descrito como "projetos em andamento (ADASH, entregas)".
+> **O que ainda serve:** quase todo o diagnóstico. Os 3 freios continuam valendo tal como escritos: líder gargalo, papel sem dono e medo de erro disfarçado de premium. A solução também: blocos de tempo protegidos por papel (vendas, marketing, execução) e a troca da métrica-guia de "projetos entregues" para "pipeline em aberto documentado". Uma ressalva: o texto assume operação 100% solo, e a IRBIS passou a ter um colaborador com foco comercial (ver `CLAUDE.md`), o que muda quem é dono de cada papel, não a existência do freio.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 > Framework baseado em "O que Potencializa — e o que Freia — o Growth" (LINK School of Business, G&G 2, 2026.1)
 
 ---

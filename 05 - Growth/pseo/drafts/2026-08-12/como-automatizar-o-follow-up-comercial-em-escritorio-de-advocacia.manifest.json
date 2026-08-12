@@ -1,0 +1,19 @@
+{
+  "keyword": "como automatizar o follow-up comercial em escritório de advocacia",
+  "title": "Como automatizar o follow-up comercial em escritório de advocacia",
+  "summary": "Um escritório de advocacia automatiza o follow-up comercial quando transforma cada oportunidade em um registro com responsável, etapa e próxima ação. O sistema pode criar lembretes, encaminhar contatos e preparar um histórico, mas a equipe decide como responder e quando encerrar uma conversa. Dados de pessoas exigem finalidade, acesso definido e cuidado com a LGPD. A comunicação comercial também deve manter caráter informativo e respeitar as regras da OAB sobre publicidade e captação de clientela.",
+  "faq": [
+    {"question": "É possível automatizar o follow-up sem mandar mensagens automáticas?", "answer": "Sim. O primeiro escopo pode criar registros, atribuir responsáveis e gerar lembretes internos, preservando o controle do profissional sobre cada contato externo."},
+    {"question": "Posso conectar WhatsApp e e-mail ao fluxo?", "answer": "Pode ser viável se as ferramentas oferecerem os acessos necessários e o escritório definir dados, acessos e ações que exigem confirmação."},
+    {"question": "Como evitar que dois profissionais respondam a mesma pessoa?", "answer": "O registro deve ter um responsável visível, histórico acessível conforme a necessidade e uma regra para redistribuir contatos."},
+    {"question": "A automação pode decidir se o escritório aceita um novo caso?", "answer": "Não como regra genérica. Ela pode organizar informações e sinalizar critérios previamente definidos, enquanto os profissionais decidem o atendimento."}
+  ],
+  "sources": [
+    {"url": "https://www.gov.br/inss/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais", "type": "legislação federal", "claim": "A página oficial descreve que a LGPD regula o tratamento de dados pessoais, inclusive em meios digitais, sustentando a necessidade de definir finalidade, acesso e retenção de dados no follow-up."},
+    {"url": "https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021", "type": "norma profissional", "claim": "O Provimento nº 205/2021 determina caráter informativo, discrição e sobriedade para a publicidade profissional e veda captação de clientela, sustentando limites para mensagens e gatilhos comerciais."}
+  ],
+  "firstPartyEvidence": ["odery-crm-entrega"],
+  "image": {"filename": "como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia.svg", "alt": "como automatizar o follow-up comercial em escritório de advocacia"},
+  "internalLinks": ["https://irbis.com.br/odery-crm"],
+  "bodyPath": "05 - Growth/pseo/drafts/2026-08-12/como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia.md"
+}

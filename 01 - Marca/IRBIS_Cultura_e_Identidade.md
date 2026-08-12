@@ -1,5 +1,11 @@
 # Cultura e Identidade — IRBIS
 
+> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
+> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
+> **O que aqui está morto: só a seção Visão. O resto do documento continua vigente.** Morreu a âncora de tese da Visão, a frase "Consistente com a tese registrada em `docs/visao-irbis.md`: 'site é a porta; sistema com IA é o que mora dentro'", que é a tese de 28/jul substituída integralmente em 04/ago (site deixou de ser porta porque deixou de ser produto). Morreu junto a menção a "sites" na justificativa do Propósito, onde se lê "a especificidade de execução (sites, sistemas com IA, economia real) mora na Visão e nos Valores". A frase da Visão em si, "ser a referência de execução com IA para negócios da economia real", segue de pé e ficou até mais precisa depois do pivot.
+> **O que ainda serve:** tudo fora da Visão. O Propósito ("ajudar líderes a escalar suas empresas") e a decisão consciente de não amarrar o "como" nele. O diagnóstico de cultura (quadrante Resultados, confirmado como intencional, e os 3 sintomas de estagnação). Os 3 valores completos com comportamento esperado, violação e ritual: compromisso com resultado (acompanhamento de 30 dias pós-entrega), no bullshit (resposta em até 24h) e honestidade sempre (aviso proativo de erro ou atraso). E a pendência registrada no fim, a Missão formal, que continua em aberto.
+> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+
 > Construído em 28/jul/2026, a partir do framework das aulas do G4 Scale (Bernardo Carneiro — Liderança de Alta Performance e Governança de Gente; Paula Pimenta — Construção de Cultura e Gestão de Pessoas). Nicolas define o conteúdo; o framework só dá a estrutura.
 
 ## Propósito (Why)
