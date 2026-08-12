@@ -389,7 +389,7 @@ Se aparecer, o copy não está no tom.
 > "Briefing por call de 20 min. Entendo o negócio, a operação e onde trava. Em 24h mando proposta com escopo, prazo e valor. Aprovando, começo em até 3 dias."
 
 **Perguntam "quanto custa?"** *(atualizado 09/ago/2026 — preço confirmado, ver `stripe-catalogo-produtos-irbis.md`)*
-> "Sistema sob medida fica entre R$3.000 e R$10.000, valor fechado pelo escopo — projeto muito complexo eu avalio numa call, não estimo de cabeça. Consultoria de IA é R$5.000 pra empresa até R$10 milhões de faturamento anual, R$10.000 acima disso. Automação (ex.: bot de IA) tem setup de R$1.000 mais R$500/mês. Nunca cotar por hora."
+> "Sistema sob medida fica entre R$3.000 e R$10.000, valor fechado pelo escopo — projeto muito complexo eu avalio numa call, não estimo de cabeça. Consultoria de IA é R$5.000 pra empresa até R$10 milhões de faturamento anual, R$10.000 acima disso. Bot de IA tem setup de R$1.000 mais uma mensalidade entre R$500 e R$3.000, conforme o tamanho da operação, e o número certo sai na reunião. Nunca cotar por hora."
 
 **Pedem referência**
 > "Odery Drums — implementei o CRM deles, o bot de WhatsApp, e ajudei em várias coisas da operação. Posso te mostrar o que fizemos lá."

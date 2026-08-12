@@ -6,9 +6,9 @@
 |---|---|---|
 | 3 segmentos com placar 37/27/24 e vencedor definido | 3 verticais de prospecção sem placar, porque não há dado para pontuar | Web3, premium brand e subcontratação saíram com o pivot de 04/ago. As verticais de hoje vieram de contrato real, não de comparação |
 | Beachhead = founder técnico Web3/SaaS em fundraising | Beachhead = atributo do negócio (time de 3 a 8, dono acessível, já tentou ferramenta pronta), dentro de advocacia, indústria e agência | O ICP declarado é amplo por decisão do dono. Nicha-se a prospecção, não a empresa |
-| Tickets R$25–50k / R$15–30k / R$5–15k | Bot de IA R$ 1.000 + R$ 500/mês na porta, Sistemas R$ 3.000 a 10.000 no upsell | Preço das 3 frentes definido em 09/ago |
+| Tickets R$25–50k / R$15–30k / R$5–15k | Bot de IA R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião) na porta, Sistemas R$ 3.000 a 10.000 no upsell | Preço das 3 frentes definido em 09/ago; mensalidade do bot virou faixa em 12/ago |
 | Ação de aquisição: publicar ADASH como case | ADASH nunca foi entregue e não pode ser citada | Fato verificado. Ver `irbis-guarda-pivot` |
-| TAM/SAM/SOM somando R$275–650k em 12 meses | Sem TAM/SAM/SOM. A única aritmética real é 3 bots até 30/set, a R$ 4.000 de receita contratada cada | O cálculo antigo era feito sobre segmentos que saíram. Não há base para refazer |
+| TAM/SAM/SOM somando R$275–650k em 12 meses | Sem TAM/SAM/SOM. A única aritmética real é 3 bots até 30/set, a partir de R$ 4.000 de receita contratada cada (piso da faixa de mensalidade; no topo, R$ 19.000) | O cálculo antigo era feito sobre segmentos que saíram. Não há base para refazer |
 
 **Fontes vigentes:** `CLAUDE.md` (escopo), `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md` (preço e escada), `04 - Marketing/plano-canais-e-medicao.md` (canal e medição).
 
@@ -62,7 +62,7 @@ O beachhead não é uma vertical. É um atributo que o colaborador reconhece den
 2. **Trabalho repetitivo e documentável**, com o processo já na cabeça de alguém.
 3. **Já tentou resolver com ferramenta pronta e a ferramenta não conheceu a operação.** É o mais forte dos três. Quem nunca tentou não sente a dor. Quem tentou e se frustrou chega pré-vendido.
 
-**A oferta de entrada é uma só: Bot de IA.** R$ 1.000 de setup mais R$ 500/mês. É o único produto recorrente da casa e o único caminho conhecido para MRR. Sistemas é upsell de quem já é cliente, entra no repitch de fim de projeto. Consultoria de IA não é porta: a R$ 5.000 tem tamanho de projeto, não de primeira conversa.
+**A oferta de entrada é uma só: Bot de IA.** R$ 1.000 de setup mais mensalidade de R$ 500 a R$ 3.000, fechada na reunião conforme o tamanho da operação. É o único produto recorrente da casa e o único caminho conhecido para MRR. Sistemas é upsell de quem já é cliente, entra no repitch de fim de projeto. Consultoria de IA não é porta: a R$ 5.000 tem tamanho de projeto, não de primeira conversa.
 
 Isso muda o gancho de abordagem. Não se pergunta se a empresa quer um sistema. Fala-se do atendimento, do orçamento ou da triagem que hoje depende de alguém digitando no WhatsApp.
 
@@ -86,7 +86,7 @@ A única aritmética que a IRBIS tem de verdade é a do caminho até a meta de c
 
 | Meta | Aritmética |
 |---|---|
-| R$ 12.000 de receita contratada até 30/set/2026 | 3 bots fechados, a R$ 4.000 cada (setup mais 6 meses travados) |
+| R$ 12.000 de receita contratada até 30/set/2026, no piso | 3 bots fechados, a partir de R$ 4.000 cada (setup mais 6 meses travados no piso da mensalidade; até R$ 19.000 no topo) |
 
 Cada cliente de bot também traz R$ 1.000 de setup no mês em que entra, e abre a porta do upsell de Sistemas. Sem CNPJ até hoje, o que é bloqueador da própria meta e está registrado como pendência em `project_formalizacao-irbis-sem-cnpj`.
 

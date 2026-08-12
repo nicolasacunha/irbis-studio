@@ -25,7 +25,7 @@ Se você abrir um documento no repo (e vai abrir muitos) que descreve a IRBIS ve
 | Frente | Preço | Observação |
 |---|---|---|
 | Sistemas | R$ 3.000 – R$ 10.000, valor fechado | Projeto muito complexo sai da faixa — **chama o Nicolas antes de cotar**, não tem teto definido |
-| Soluções com IA — Bot de IA | R$ 1.000 setup + R$ 500/mês | Único produto com mensalidade confirmada até agora |
+| Soluções com IA — Bot de IA | R$ 1.000 setup + mensalidade de R$ 500 a R$ 3.000 | Único produto com mensalidade confirmada. A faixa pode ser dita; **o número fechado sai na reunião, com o Nicolas** (topo quando a operação é grande e o bot é central, base quando é conveniência) |
 | Soluções com IA — Automações (fora do bot) | Sob consulta, cotado por escopo | Sem faixa fixa ainda |
 | Consultoria de IA | R$ 5.000 (empresa fatura até R$10mi/ano) · R$ 10.000 (acima disso) | Empresa muito grande = sob consulta, precisa do Nicolas na call |
 

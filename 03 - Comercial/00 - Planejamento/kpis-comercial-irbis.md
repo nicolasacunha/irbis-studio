@@ -81,7 +81,7 @@ Quem enche: **colaborador**, exceto onde marcado.
 | **MRR ativo** | Termômetro, não meta. Soma das mensalidades correndo no mês. Deixou de ter projeção fixa: depende de onde cada bot cair na faixa | Nicolas | Financeiro |
 | Conversão reunião → fechamento | Referência da mentoria de 03/ago: 35 a 40% com apresentação estruturada, 10 a 15% sem. Sem baseline próprio | Nicolas | `pipeline` |
 | Upsells de Sistemas vendidos para carteira | Sem meta. Depende de quantos bots existirem | Nicolas | `pipeline` |
-| **Ticket médio por frente** (medido separado, nunca em média única) | Bot: R$ 1.000 setup + R$ 500/mês. Sistemas: dentro de R$ 3.000 a 10.000. Consultoria: R$ 5.000 ou R$ 10.000 | Nicolas | `pipeline` |
+| **Ticket médio por frente** (medido separado, nunca em média única) | Bot: R$ 1.000 setup + mensalidade dentro de R$ 500 a R$ 3.000. Sistemas: dentro de R$ 3.000 a 10.000. Consultoria: R$ 5.000 ou R$ 10.000 | Nicolas | `pipeline` |
 | Cash collected do setup do bot (R$ 1.000 antes de começar) | 100%. É a Cláusula 3, não é negociação | Nicolas | Financeiro |
 | Propostas enviadas em até 24h da reunião | 100% | Nicolas | `pipeline` |
 | Propostas decididas com motivo registrado (sim ou não) | 100%. Proposta sem post-mortem não fecha o ciclo | Nicolas | `pipeline` |
@@ -90,7 +90,7 @@ Quem enche: **colaborador**, exceto onde marcado.
 
 **Por que receita contratada é o KPI que decide:** faturamento de projeto some no mês seguinte. Em 2026 a casa recebeu R$ 600 e tem R$ 5.597 a receber, com MRR em R$ 0. Vender um Sistema de R$ 10.000 paga um mês e deixa a base no mesmo lugar. Só o bot acumula.
 
-**E por que contratada, e não MRR num instante:** com fidelidade de 6 meses, o valor entra no dia da assinatura, não no dia do calendário. Medir MRR em 30/set contaria R$ 500 por um bot que vale R$ 4.000 e foi vendido cinco dias antes. A meta antiga media assim porque o produto anterior era manutenção mês a mês, sem trava, onde o retrato do mês era o valor real.
+**E por que contratada, e não MRR num instante:** com fidelidade de 6 meses, o valor entra no dia da assinatura, não no dia do calendário. Medir MRR em 30/set contaria uma mensalidade por um bot que vale de R$ 4.000 a R$ 19.000 e foi vendido cinco dias antes. A meta antiga media assim porque o produto anterior era manutenção mês a mês, sem trava, onde o retrato do mês era o valor real.
 
 ---
 
@@ -145,7 +145,7 @@ Meta estourada ganha uma linha de causa no placar. Comparar planejado contra rea
 |---|---|---|
 | Conflito entre "R$ 4.000 recorrente até 30/set" e "≥ 2 clientes novos/mês" | Dono | A meta de bots fechados por mês |
 | Meta de 5 conversas até 26/ago | Dono | O único KPI de topo com número |
-| O que os R$ 500/mês do bot cobrem | Dono | Escopo do recorrente e o primeiro fechamento |
+| O que a mensalidade do bot cobre | Dono | Escopo do recorrente e o primeiro fechamento |
 | Custo de token por cliente | Dono | Margem do MRR |
 | Prazo mínimo de contrato do bot | Dono | Previsibilidade do MRR e a métrica de churn |
 | Meta de MRR além de 30/set | Dono | A Fase 3 do roadmap |

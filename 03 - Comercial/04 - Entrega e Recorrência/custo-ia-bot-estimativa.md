@@ -1,6 +1,6 @@
 # Custo de IA do Bot: estimativa por volume
 
-> Criado em 12/ago/2026. Fecha a pendência aberta na `politica-de-preco-irbis.md`: **o que responder quando o cliente perguntar "além dos R$ 500, quanto mais eu pago?"**
+> Criado em 12/ago/2026. Fecha a pendência aberta na `politica-de-preco-irbis.md`: **o que responder quando o cliente perguntar "além da mensalidade, quanto mais eu pago?"**
 >
 > ⚠️ **Isto é estimativa calculada, não medição.** O consumo real do bot da Odery não pôde ser medido (a conta é do cliente e a IRBIS não tem acesso ao painel). As premissas estão todas declaradas abaixo, então qualquer uma pode ser trocada e a conta refeita.
 
@@ -44,7 +44,7 @@ O cenário econômico assume conversas curtas; o caro assume conversas longas. A
 
 ## A fala pronta pra reunião
 
-> Além dos R$ 500 por mês, você paga o consumo da nuvem direto no seu cartão, e isso varia com quanto o bot trabalha. Pra um volume de umas mil conversas por mês, fica em torno de R$ 50 a R$ 150. Se o bot atender muito mais que isso, sobe proporcionalmente, e eu te aviso antes de virar surpresa. A conta fica no seu nome desde o primeiro dia, então você vê tudo.
+> Além da mensalidade, você paga o consumo da nuvem direto no seu cartão, e isso varia com quanto o bot trabalha. Pra um volume de umas mil conversas por mês, fica em torno de R$ 50 a R$ 150. Se o bot atender muito mais que isso, sobe proporcionalmente, e eu te aviso antes de virar surpresa. A conta fica no seu nome desde o primeiro dia, então você vê tudo.
 
 ## Três coisas que mudam a conta de verdade
 

@@ -46,7 +46,7 @@ Dor principal ..............  (o trabalho repetitivo que alguém faz na mão hoj
 Estágio de tentativa .......  (nunca tentou / tentou e frustrou / já tem algo)
 Comportamento de compra ....  (quantos toques até a reunião, o que trava)
 Valor gerado ...............  (horas ou erros que o bot tira da operação)
-Sensibilidade a preço ......  (reação observada a R$ 1.000 + R$ 500/mês)
+Sensibilidade a preço ......  (reação observada a R$ 1.000 de setup + a mensalidade cotada, dentro da faixa de R$ 500 a R$ 3.000)
 Canal de chegada ...........  (de onde vieram as conversas dessa vertical)
 Ticket observado ...........  (fechado de verdade, não projetado)
 Potencial de upsell ........  (cabe Sistemas depois? qual?)

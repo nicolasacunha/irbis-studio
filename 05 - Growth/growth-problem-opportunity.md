@@ -5,7 +5,7 @@
 | Antes (v1) | Agora (v2) | Motivo |
 |---|---|---|
 | Micro-agência de design digital premium, operada solo | Sistemas, automação e IA, duas pessoas | Pivot de 04/ago. O colaborador entrou em ago |
-| Ticket médio R$ 20–25k, pipeline estimado em R$ 80–130k | Bot R$ 1.000 + R$ 500/mês, Sistemas R$ 3.000 a 10.000. A receber: R$ 5.597 | Preço definido em 09/ago. O pipeline antigo era estimativa sobre prospects que não fecharam |
+| Ticket médio R$ 20–25k, pipeline estimado em R$ 80–130k | Bot R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião), Sistemas R$ 3.000 a 10.000. A receber: R$ 5.597 | Preço definido em 09/ago, mensalidade do bot virou faixa em 12/ago. O pipeline antigo era estimativa sobre prospects que não fecharam |
 | Pipeline vivo: Ana RE, Dermotion, ADASH | 2 leads ativos, 5 pessoas no banco, todas de indicação | Nenhum dos três virou cliente. ADASH nunca foi entregue |
 | Critério de sucesso: pipeline contínuo de R$ 150k+ | Critério de sucesso: 3 bots fechados até 30/set, R$ 12.000 de receita contratada | A meta antiga era calculada em ticket de site. A intermediária (R$ 4.000/mês recorrentes) media MRR num instante, o que não funciona com fidelidade de 6 meses |
 | Limite: não contratar, solo mais IA é o modelo | Limite: duas pessoas, e nada que exija uma terceira | O modelo mudou de fato |
@@ -80,7 +80,7 @@ Só os que estão decididos. O resto está em pendências.
 |---|---|---|
 | 2 clientes fundadores | ~19/ago/2026 | 1 de 2 |
 | ≥ 2 clientes novos por mês | a partir de set/2026 | Não iniciado |
-| R$ 12.000 de receita contratada | 30/set/2026 | R$ 0. Caminho: 3 bots a R$ 4.000 cada (setup mais 6 meses travados) |
+| R$ 12.000 de receita contratada, no piso | 30/set/2026 | R$ 0. Caminho: 3 bots a partir de R$ 4.000 cada (setup mais 6 meses travados no piso da mensalidade; até R$ 19.000 no topo da faixa) |
 | Primeira reunião com dono sem vínculo pessoal | Não definido | 7 semanas sem |
 | 5 conversas reais com dono até 26/ago | Proposto no plano de canais, aguardando confirmação do dono | Depende de registro em `interacoes` |
 
@@ -132,7 +132,7 @@ Ordenadas por custo de testar. Nenhuma tem impacto estimado, porque não há bas
 >
 > **Urgência:** 7 semanas sem reunião fora de indicação e 15 dias sem pessoa nova no funil. O topo secou.
 >
-> **Oportunidade:** existe volume qualificado e gratuito que nunca foi tocado (base morna e indicação com processo), e uma oferta de entrada barata de decidir (Bot de IA, R$ 1.000 mais R$ 500/mês) que é também a única fonte de recorrência da casa.
+> **Oportunidade:** existe volume qualificado e gratuito que nunca foi tocado (base morna e indicação com processo), e uma oferta de entrada barata de decidir (Bot de IA, R$ 1.000 mais mensalidade a partir de R$ 500) que é também a única fonte de recorrência da casa.
 >
 > **O que muda se der certo:** o primeiro cliente de bot fora da família resolve dois problemas de uma vez, começa o MRR e cria o primeiro case citável sem ressalva.
 

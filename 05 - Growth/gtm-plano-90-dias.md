@@ -7,7 +7,7 @@
 | Meta: 3 projetos fechados, R$ 45k a 90k | Metas: 2 clientes fundadores até ~19/ago, ≥ 2 clientes novos por mês a partir de set, **3 bots até 30/set (R$ 12.000 de receita contratada)** | A meta antiga era impossível na faixa de preço vigente |
 | ICP: founder de startup pré-seed a Série A | ICP amplo (dono de negócio da economia real), prospecção nichada em advocacia, indústria e agência | Decisões de 09/ago e 12/ago |
 | Posicionamento: único especialista em sites que não faz mais nada | 3 frentes, com Bot de IA como porta e Sistemas como upsell | Sites saíram do escopo em 04/ago |
-| Ticket R$ 5k a 45k | Bot R$ 1.000 + R$ 500/mês. Sistemas R$ 3.000 a 10.000. Consultoria R$ 5.000 ou R$ 10.000 | Preço definido em 09/ago |
+| Ticket R$ 5k a 45k | Bot R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião). Sistemas R$ 3.000 a 10.000. Consultoria R$ 5.000 ou R$ 10.000 | Preço definido em 09/ago, mensalidade do bot virou faixa em 12/ago |
 | Canal motor: Instagram @byirbis | Motores: indicação e comunidades (Nicolas), social selling na base morna (colaborador). Instagram é ativo de conversão | Plano de canais v2, 12/ago |
 | Ação: prospectar 10 novos founders por semana, sozinho | Prospecção é papel do colaborador. Nicolas faz reunião, preço e entrega | O time virou duas pessoas em ago |
 | Métrica semanal: conexões, seguidores, taxa de resposta | Métrica de output: conversas iniciadas por origem | Definida no plano de canais |
@@ -28,7 +28,7 @@
 
 | Degrau | Oferta | Preço | Papel |
 |---|---|---|---|
-| Porta | **Bot de IA** | R$ 1.000 de setup + R$ 500/mês | É o que se prospecta. Único produto recorrente da casa |
+| Porta | **Bot de IA** | R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião) | É o que se prospecta. Único produto recorrente da casa |
 | Upsell | **Sistemas** (CRM, ERP, sob medida) | R$ 3.000 a 10.000. Muito complexo: sob consulta | Vendido a quem já é cliente, no repitch de fim de projeto |
 | Fora da porta | **Consultoria de IA** | R$ 5.000 (cliente ≤ R$ 10mi/ano) ou R$ 10.000 | A R$ 5.000 tem tamanho de projeto, não de primeira conversa |
 | Sem faixa | Automação fora do bot, Sistema muito complexo, Consultoria enterprise | Sob consulta. Não estimar | Regra de preço |
@@ -126,7 +126,7 @@ A métrica de output é **conversa iniciada com dono de negócio, por origem**. 
 | Conversas com dono | 5 até 26/ago, a confirmar | `interacoes` |
 | Clientes novos por mês | ≥ 2 a partir de set | Pipeline |
 | **Bots fechados** | **3 até 30/set** (1 em agosto, 2 em setembro) | Pipeline |
-| **Receita contratada** | **R$ 12.000 até 30/set** = 3 × R$ 4.000 (setup + 6 meses travados), contada no dia da assinatura | Financeiro |
+| **Receita contratada** | **R$ 12.000 até 30/set no piso** = 3 × R$ 4.000 (setup + 6 meses travados no piso da mensalidade), contada no dia da assinatura. Bot de operação grande vale até R$ 19.000, então o piso é o mínimo da meta, não o esperado | Financeiro |
 | MRR ativo | Termômetro, não meta. Projeção de R$ 1.500 em 30/set | Financeiro |
 | CNPJ e conta PJ | Meta do chapéu Dono, sem prazo definido. Saiu da meta comercial em 12/ago | Fundação |
 | Reunião fora de indicação | Sem meta definida. Hoje é 0 há 7 semanas | Pipeline |

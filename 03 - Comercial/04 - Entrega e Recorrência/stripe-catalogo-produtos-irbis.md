@@ -43,10 +43,20 @@ Faixa definida pelo dono (09/ago/2026): **R$ 3.000–10.000**, valor fechado cal
 
 | Price nickname | Valor | Tipo |
 |---|---|---|
-| `bot-ia-setup` | R$ 1.000 | one-time |
-| `bot-ia-mensal` | R$ 500/mês | recurring, **fidelidade mínima de 6 meses** |
+| `bot-ia-setup` | R$ 1.000 | one-time ⚠️ ver pendência abaixo |
+| `bot-ia-mensal` | R$ 500 a R$ 3.000/mês (faixa; número na reunião) | recurring, **fidelidade mínima de 6 meses** ⚠️ **PENDENTE DE CADASTRO** |
 
-> ✅ **12/ago/2026 — o Bot de IA virou a porta da IRBIS.** É o produto de entrada e o que se prospecta; Sistemas passou a ser upsell. Fidelidade de 6 meses (LTV mínimo de R$ 4.000). A mensalidade cobre infraestrutura, monitoramento, correção de defeito e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam; o que passa disso é fila ou aditivo. Escopo completo em `planos-recorrencia-irbis.md`, cláusula em `06 - Jurídico/contrato-prestacao-software-modelo.md` (Cláusula 5).
+> ✅ **12/ago/2026 — o Bot de IA virou a porta da IRBIS.** É o produto de entrada e o que se prospecta; Sistemas passou a ser upsell. Fidelidade de 6 meses. A mensalidade cobre infraestrutura, monitoramento, correção de defeito e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam; o que passa disso é fila ou aditivo. Escopo completo em `planos-recorrencia-irbis.md`, cláusula em `06 - Jurídico/contrato-prestacao-software-modelo.md` (Cláusula 5).
+
+> ✅ **12/ago/2026 — a mensalidade virou faixa.** Era R$ 500 fixo. Olhando a Odery, o dono constatou que cobraria cerca de R$ 3.000 de um cliente daquele porte, e um preço único não cobre uma diferença de seis vezes. Mesma mecânica de Sistemas: faixa pública, número fechado na reunião. **Calibração: topo da faixa quando a operação é grande e o bot é central; base quando é conveniência.** Receita contratada por bot vai de R$ 4.000 no piso (R$ 1.000 + 6 × R$ 500) a R$ 19.000 no topo (R$ 1.000 + 6 × R$ 3.000).
+
+⚠️ **O que a faixa significa no cadastro da Stripe:** um Price recurring guarda um valor, não um intervalo. Duas saídas, e o dono precisa escolher uma antes de cadastrar:
+> 1. **Um Price por valor fechado** (ex.: `bot-ia-mensal-500`, `bot-ia-mensal-1000`, `bot-ia-mensal-1500`, e assim por diante), criado sob demanda quando o número sai da reunião. Mais controle e relatório limpo por faixa; exige criar Price novo a cada valor inédito.
+> 2. **Um Price customizável** (`custom_unit_amount` com `minimum` 50000 e `maximum` 300000 em centavos), onde o valor é definido na hora de gerar a assinatura. Um único Price cobre a faixa toda; em compensação, o relatório da Stripe não separa por degrau.
+>
+> **Enquanto isso não for decidido, `bot-ia-mensal` não deve ser cadastrado.** Cadastrar R$ 500 fixo agora recria o problema que a faixa resolveu.
+
+⚠️ **O setup acompanha a faixa? Pendente.** O dono falou só da mensalidade. Um bot de operação grande também dá mais trabalho para construir, então R$ 1.000 fixo pode não se sustentar. **Não deduzir.** Até ele decidir, `bot-ia-setup` é R$ 1.000 para todo mundo.
 
 **2b. Automações** (fora do bot padrão)
 **Tipo:** ⚠️ **PENDENTE** — o dono disse que "vai muito de escopo a escopo", sem faixa fixa. Também não confirmou se automação fora do bot tem componente recorrente (mensalidade de manutenção/evolução) ou é só one-time. Cotar caso a caso usando a `calculadora-preco-build-irbis.md`; não usar o preço do Bot de IA como âncora, são produtos diferentes.
@@ -75,11 +85,12 @@ Faixa definida pelo dono (09/ago/2026), por faturamento anual do cliente:
 
 ## Checklist de cadastro na Stripe
 
-- [x] Preço confirmado pelo dono pra: Sistemas (faixa R$3-10k), Bot de IA (R$1.000 + R$500/mês), Consultoria de IA (R$5k/R$10k por faturamento).
-- [ ] Ainda pendente: teto de Sistemas complexo, preço de Consultoria enterprise, faixa/modelo de Automações fora do bot.
-- [ ] Criar os Products/Prices com número definido acima (sistemas-projeto, bot-ia-setup, bot-ia-mensal, consultoria-ia-pme, consultoria-ia-grande).
+- [x] Preço confirmado pelo dono pra: Sistemas (faixa R$3-10k), Bot de IA (R$1.000 de setup + mensalidade na faixa de R$500 a R$3.000, número fechado na reunião), Consultoria de IA (R$5k/R$10k por faturamento).
+- [ ] **Decidir como a faixa da mensalidade do bot vira Price:** Prices por valor fechado ou um Price customizável de R$500 a R$3.000. Sem essa decisão, `bot-ia-mensal` fica fora do cadastro.
+- [ ] Ainda pendente: se o setup do bot também vira faixa, teto de Sistemas complexo, preço de Consultoria enterprise, faixa/modelo de Automações fora do bot.
+- [ ] Criar os Products/Prices com número definido acima (sistemas-projeto, bot-ia-setup, consultoria-ia-pme, consultoria-ia-grande). `bot-ia-mensal` só depois da decisão acima.
 - [ ] **Redigir com a advogada a multa por cancelamento antes dos 6 meses** do Bot de IA. A Cláusula 5.5 do contrato modelo já tem o lugar reservado e a intenção comercial registrada (proporcional ao período restante), falta o texto jurídico. 🔴 **Trava o primeiro fechamento do produto que virou a porta.**
-- [ ] **Medir o custo de token por cliente/mês** usando o bot da Odery, que já roda. Sem isso a margem do MRR é desconhecida.
+- [ ] **Validar a estimativa de custo de IA contra uma fatura real**, no primeiro bot que rodar em API paga. A Odery não serve: aparentemente roda modelo local e não gera contagem de token. A estimativa calculada está em `custo-ia-bot-estimativa.md`. Isso não trava a margem da IRBIS (o custo é do cliente), trava a resposta na reunião.
 - [ ] Gerar Payment Links por Price pra usar em proposta/fechamento.
 - [ ] **Desativar/arquivar na Stripe** (se já estiverem cadastrados) os 5 produtos de site abaixo — não usar pra cliente novo.
 

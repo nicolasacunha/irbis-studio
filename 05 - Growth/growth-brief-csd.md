@@ -27,7 +27,7 @@ Regra de uso: **toda suposição que sustenta uma decisão de canal ou de oferta
 |---|---|---|
 | 5 de 5 pessoas no banco vieram de indicação | A base morna dos 84 e do vídeo de 9 mil views responde a uma abordagem direta | Quanto tempo leva do primeiro toque à reunião no gancho do bot |
 | 7 semanas sem reunião fora de indicação, 15 dias sem pessoa nova no funil | O gancho de atendimento e triagem no WhatsApp abre porta que o gancho de sistema não abria | Advocacia, indústria e agência respondem em ritmos diferentes ou parecidos |
-| MRR R$ 0. Nenhum Bot de IA vendido | Dono de 3 a 8 pessoas decide R$ 1.000 mais R$ 500/mês sem comitê | Agência compra bot para uso próprio ou quer revender |
+| MRR R$ 0. Nenhum Bot de IA vendido | Dono de 3 a 8 pessoas decide R$ 1.000 mais uma mensalidade de R$ 500 a R$ 3.000 sem comitê | Agência compra bot para uso próprio ou quer revender |
 | R$ 600 recebidos em 2026, R$ 5.597 a receber | Quem já tentou ferramenta pronta e frustrou chega pré-vendido | O prospect entende "bot" como o que a IRBIS entrega, ou como chatbot de menu |
 | 1 cliente pagante fora da família: Casa Paes, R$ 1.200 | Odery serve como prova de produto mesmo sem número financeiro publicável | Sem case de mercado, quanto isso custa em taxa de fechamento |
 | Odery e E-Force são a empresa do pai, A. Cunha é o escritório da mãe | A entrega de bot cabe na capacidade do Nicolas com um contrato de Sistemas em produção | 3 bots até 30/set é alcançável partindo de zero reunião fora de indicação há sete semanas |

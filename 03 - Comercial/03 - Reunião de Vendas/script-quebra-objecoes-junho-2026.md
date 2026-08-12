@@ -197,7 +197,7 @@ Se ainda assim aparecer:
 
 Resposta padrão do Manual de Copy:
 
-> Depende do escopo. Sistema fechado geralmente fica entre R$3.000 e R$10.000, Consultoria de IA é R$5.000 ou R$10.000 conforme o porte, Bot de IA é R$1.000+R$500/mês — mas o número certo pro seu caso eu só sei depois de entender o escopo.
+> Depende do escopo. Sistema fechado geralmente fica entre R$3.000 e R$10.000, Consultoria de IA é R$5.000 ou R$10.000 conforme o porte, Bot de IA é R$1.000 de implementação mais uma mensalidade entre R$500 e R$3.000, conforme o tamanho da operação. O número certo pro seu caso eu só sei depois de entender o escopo.
 
 Se insistir sem dar contexto:
 

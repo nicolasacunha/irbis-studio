@@ -209,7 +209,7 @@ Caso mais parecido com o cenário dele — hoje, praticamente sempre a Odery (as
 >
 > Pra esse escopo — [Sistemas / Bot de IA / Consultoria de IA, conforme o caso] — o investimento é R$ [X].
 
-Calibração do número: ver `calculadora-preco-build-irbis.md` — Sistemas R$3.000–10.000 (topo se o gargalo é central pro negócio, base se é conveniência), Bot de IA R$1.000 setup + R$500/mês (fixo), Consultoria de IA R$5.000 ou R$10.000 conforme faturamento. Nunca cotar por hora.
+Calibração do número: ver `calculadora-preco-build-irbis.md` — Sistemas R$3.000–10.000 (topo se o gargalo é central pro negócio, base se é conveniência), Bot de IA R$1.000 de setup + mensalidade de R$500 a R$3.000 (faixa; número fechado sai aqui, na reunião, e calibra igual a Sistemas: topo quando a operação é grande e o bot é central, base quando é conveniência), Consultoria de IA R$5.000 ou R$10.000 conforme faturamento. Nunca cotar por hora.
 
 **Silêncio. Quem fala primeiro depois do preço não é você.**
 

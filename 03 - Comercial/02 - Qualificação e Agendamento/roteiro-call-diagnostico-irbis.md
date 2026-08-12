@@ -60,7 +60,7 @@ Não fala preço fechado ainda. Fala resultado. Posiciona a tese.
 ## 6. FAIXA DE ORÇAMENTO (1 min)
 Aqui ancora. Dá uma faixa real, não um número fechado. O preço final fecha na videochamada.
 
-> "Pelo que tu me descreveu, um sistema fechado geralmente fica entre **R$ 3.000 e R$ 10.000**, dependendo do escopo — se for mais pro lado da Consultoria de IA fica em R$5.000 ou R$10.000 conforme o porte, e se for o Bot de IA é R$1.000 de implementação mais R$500/mês. Eu não te fecho o número agora porque quero te mostrar exatamente o que entra antes. Mas já te dá uma noção pra ver se faz sentido pro teu momento, faz?"
+> "Pelo que tu me descreveu, um sistema fechado geralmente fica entre **R$ 3.000 e R$ 10.000**, dependendo do escopo — se for mais pro lado da Consultoria de IA fica em R$5.000 ou R$10.000 conforme o porte, e se for o Bot de IA é R$1.000 de implementação mais uma mensalidade entre R$500 e R$3.000, conforme o tamanho da operação. Eu não te fecho o número agora porque quero te mostrar exatamente o que entra antes. Mas já te dá uma noção pra ver se faz sentido pro teu momento, faz?"
 
 > Lê a reação. Se ele topar a faixa, ótimo. Se travar, não baixa preço aqui. Investiga: "O que pesou? O valor ou o momento?"
 

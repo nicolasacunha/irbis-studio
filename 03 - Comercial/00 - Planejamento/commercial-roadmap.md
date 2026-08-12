@@ -44,13 +44,13 @@ A leitura: não existe problema de entrega nem de preço. Existe um funil que n�
 
 | Degrau | Produto | Preço | Papel no roadmap |
 |---|---|---|---|
-| Entrada | **Bot de IA** | R$ 1.000 de setup + R$ 500/mês | O que se prospecta. **Único produto que gera MRR** |
+| Entrada | **Bot de IA** | R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião) | O que se prospecta. **Único produto que gera MRR** |
 | Camada seguinte | **Sistemas** | R$ 3.000 a 10.000, projeto | Vendido a quem já é cliente. Paga o mês, não constrói base |
 | Lateral | **Consultoria de IA** | R$ 5.000 ou R$ 10.000 por porte | Entra quando o cliente pede diagnóstico |
 
 Sob consulta, sem faixa, nunca estimar: Sistema muito complexo, automações fora do bot, Consultoria enterprise.
 
-**A conta que define o roadmap inteiro:** a meta é **3 bots até 30/set**, ou **R$ 12.000 de receita contratada** (R$ 4.000 por bot: setup mais os 6 meses travados, somados no dia da assinatura). Sistemas e Consultoria são one-time. Vender um Sistema de R$ 10.000 paga o mês e deixa a base exatamente onde estava.
+**A conta que define o roadmap inteiro:** a meta é **3 bots até 30/set**, ou **R$ 12.000 de receita contratada no piso** (R$ 4.000 por bot no piso da mensalidade, até R$ 19.000 no topo: setup mais os 6 meses travados, somados no dia da assinatura). Sistemas e Consultoria são one-time. Vender um Sistema de R$ 10.000 paga o mês e deixa a base exatamente onde estava.
 
 ---
 
@@ -111,11 +111,11 @@ Não é fase de fechar. É de provar que existe topo de funil quando alguém tra
 
 ## Fase 2 · Primeiro MRR (setembro)
 
-**Objetivo:** **3 Bots de IA fechados até 30/set.** Isso são **R$ 12.000 de receita contratada** e **R$ 1.500 de MRR ativo**. Decisão do dono em 12/ago/2026.
+**Objetivo:** **3 Bots de IA fechados até 30/set.** No piso da faixa de mensalidade (R$ 500), isso são **R$ 12.000 de receita contratada** e **R$ 1.500 de MRR ativo**. Com a mensalidade virando faixa de R$ 500 a R$ 3.000 em 12/ago, esses dois números passam a ser o mínimo da meta, não o valor esperado: três bots de operação grande valeriam até R$ 57.000 contratados. Decisão do dono em 12/ago/2026.
 
 ### A unidade é receita contratada, não MRR num dia
 
-Cada bot vale **R$ 4.000 no dia da assinatura**: R$ 1.000 de setup mais os 6 meses de fidelidade. Medir MRR no dia 30/set puniria a venda tardia e esconderia valor já vendido, porque um bot assinado em 25/set aparece como R$ 500 e vale R$ 4.000. MRR ativo continua sendo reportado todo mês, como termômetro, não como meta.
+Cada bot vale **no mínimo R$ 4.000 no dia da assinatura**: R$ 1.000 de setup mais os 6 meses de fidelidade no piso da mensalidade. No topo da faixa, o mesmo bot vale R$ 19.000. Medir MRR no dia 30/set puniria a venda tardia e esconderia valor já vendido, porque um bot assinado em 25/set aparece como uma mensalidade e vale seis vezes isso mais o setup. MRR ativo continua sendo reportado todo mês, como termômetro, não como meta.
 
 ### A conta, aberta
 
@@ -133,9 +133,9 @@ Hoje a casa faz zero reunião fora de indicação há sete semanas. **O trabalho
 
 Três pendências de `politica-de-preco-irbis.md` deixaram de ser toleráveis quando o Bot virou a porta:
 
-1. **O que os R$ 500/mês cobrem.** Sem essa lista, o primeiro cliente define o escopo sozinho e vira precedente para os outros sete.
+1. **O que a mensalidade cobre.** Sem essa lista, o primeiro cliente define o escopo sozinho e vira precedente para os outros sete. Vale igual na base e no topo da faixa de R$ 500 a R$ 3.000.
 2. **Custo de token por cliente por mês.** É o único produto com custo marginal que cresce com o uso. Sem esse número, a margem do MRR é desconhecida.
-3. **Prazo mínimo de contrato.** Define se R$ 500 é receita previsível ou receita que some em 30 dias.
+3. **Prazo mínimo de contrato.** Define se a mensalidade é receita previsível ou receita que some em 30 dias.
 
 Nenhuma se resolve por dedução. Prospectar o bot pode. Fechar o primeiro sem elas, não.
 
@@ -223,7 +223,7 @@ O conteúdo de cada mensagem por estágio vive em `escada-follow-up-irbis.md`. O
 
 Ordem de bloqueio, do mais caro para o menos:
 
-1. **As três pendências do Bot de IA** (escopo dos R$ 500, custo de token, prazo mínimo de contrato). Bloqueiam o primeiro fechamento do produto que é a porta e a única fonte de MRR.
+1. **As três pendências do Bot de IA** (escopo da mensalidade, custo de token, prazo mínimo de contrato). Bloqueiam o primeiro fechamento do produto que é a porta e a única fonte de MRR.
 2. **O conflito entre "R$ 4.000 recorrente até 30/set" e "≥ 2 clientes novos/mês".** Aritmeticamente incompatíveis. Decisão do dono.
 3. **Os quatro buracos da reunião única** (deck não auditado, pilares de venda, bônus da ancoragem, prazo padrão por frente). Enquanto existirem, só o Nicolas conduz, e a reunião é o gargalo do funil inteiro.
 4. **A IRBIS não tem CNPJ.** A meta diz "R$ 4.000 limpos na PJ" e a PJ não existe. Ou a meta muda de redação, ou a formalização entra no caminho crítico.

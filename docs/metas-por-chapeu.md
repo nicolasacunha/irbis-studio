@@ -32,7 +32,7 @@ A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regr
 >
 > | Métrica | O que é | Papel |
 > |---|---|---|
-> | **Receita contratada** | Setup mais os 6 meses travados, contados no dia da assinatura. **1 bot = R$ 4.000** | É a meta |
+> | **Receita contratada** | Setup mais os 6 meses travados, contados no dia da assinatura. **1 bot = de R$ 4.000 a R$ 19.000**, conforme onde a mensalidade fechar na faixa | É a meta |
 > | **MRR ativo** | Soma das mensalidades correndo naquele mês | Termômetro mensal, não data-alvo |
 >
 > **O "limpos na PJ" saiu da meta comercial.** Isso é formalização, não performance de venda, e está travado por não existir CNPJ. Misturar os dois fazia a meta comercial nascer impossível por um motivo que não tem a ver com vender. Virou meta do chapéu Dono.

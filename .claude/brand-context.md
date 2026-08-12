@@ -35,7 +35,7 @@ Não escrever para designers, desenvolvedores ou founders de SaaS que procuram d
 
 ## Proibições
 
-- Faixa de preço pode ser publicada; número fechado de projeto, não. Faixas vigentes desde 09/ago/2026: Sistemas R$3.000 a R$10.000, Bot de IA R$1.000 de setup mais R$500 por mês, Consultoria de IA R$5.000 até R$10 milhões de faturamento anual do cliente e R$10.000 acima disso. O valor fechado de um projeto específico só sai na reunião. Ver `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
+- Faixa de preço pode ser publicada; número fechado de projeto, não. Faixas vigentes desde 09/ago/2026: Sistemas R$3.000 a R$10.000, Bot de IA R$1.000 de setup mais mensalidade de R$500 a R$3.000 (faixa desde 12/ago/2026; número na reunião), Consultoria de IA R$5.000 até R$10 milhões de faturamento anual do cliente e R$10.000 acima disso. O valor fechado de um projeto específico só sai na reunião. Ver `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
 - Não prometer ROI, horas economizadas ou aumento de receita sem medição pública.
 - Não usar o case EForce de site como prova de resultado de sistema ou IA.
 - Não afirmar resultado do MINUTA: está em desenvolvimento.

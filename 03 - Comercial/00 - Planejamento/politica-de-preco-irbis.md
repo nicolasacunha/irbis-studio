@@ -24,7 +24,7 @@ Faixa pode ser dita em qualquer canal, por qualquer um dos dois, a qualquer mome
 |---|---|---|
 | Sistemas (projeto padrão) | R$ 3.000 a R$ 10.000, valor fechado por escopo | Não tem |
 | Sistemas muito complexo | Sob consulta. **Não estimar teto**, não inventar número | Não tem |
-| Bot de IA (dentro de Soluções com IA) | R$ 1.000 de setup + R$ 500/mês | Sim, R$ 500/mês |
+| Bot de IA (dentro de Soluções com IA) | R$ 1.000 de setup + **R$ 500 a R$ 3.000/mês** (faixa; número na reunião) | Sim, a mensalidade |
 | Automações fora do bot | Sob consulta. **Faixa ainda não definida** | Pendente |
 | Consultoria de IA, cliente até R$ 10 mi/ano | R$ 5.000 | Não tem |
 | Consultoria de IA, cliente acima de R$ 10 mi/ano | R$ 10.000 | Não tem |
@@ -40,7 +40,7 @@ Fonte: `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbi
 
 | Degrau | Produto | Preço | Papel |
 |---|---|---|---|
-| **Entrada** | **Bot de IA** | R$ 1.000 setup + R$ 500/mês | O que se prospecta. Venda rápida, objeção baixa, gera MRR |
+| **Entrada** | **Bot de IA** | R$ 1.000 setup + **R$ 500 a R$ 3.000/mês** (número na reunião) | O que se prospecta. Venda rápida, objeção baixa, gera MRR |
 | **Camada seguinte** | **Sistemas** | R$ 3.000 a 10.000 | Vendido a quem já é cliente do bot, não prospectado a frio |
 | Lateral | **Consultoria de IA** | R$ 5.000 ou R$ 10.000 | Não é porta. A R$5.000 tem tamanho de projeto, não de entrada. Entra quando o cliente pede diagnóstico, não como oferta de topo |
 
@@ -57,7 +57,7 @@ Fonte: `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbi
 
 **DM e WhatsApp.** Se o lead perguntar preço, responde com a faixa das três frentes na hora, sem rodeio. Se ele insistir por um número exato, repete a faixa e vira pra reunião:
 
-> Sistema fechado fica entre R$ 3.000 e R$ 10.000. Bot de IA é R$ 1.000 de implementação mais R$ 500 por mês. Consultoria de IA é R$ 5.000, ou R$ 10.000 se a empresa fatura acima de R$ 10 milhões por ano.
+> Sistema fechado fica entre R$ 3.000 e R$ 10.000. Bot de IA é R$ 1.000 de implementação mais uma mensalidade entre R$ 500 e R$ 3.000, dependendo do tamanho da operação. Consultoria de IA é R$ 5.000, ou R$ 10.000 se a empresa fatura acima de R$ 10 milhões por ano.
 > O número do seu caso eu só consigo te dar depois de entender o que trava a sua operação. É pra isso que serve a reunião. Consegue [dia] às [hora]?
 
 **Cold call.** A faixa pode ser dita se o lead perguntar. A regra antiga ("preço nunca na ligação") **está revogada**. O que não sai na ligação é o número fechado, porque na ligação você ainda não diagnosticou nada.
@@ -89,9 +89,9 @@ Regras que decorrem disso:
 ### ✅ Resolvidas em 12/ago, junto com a decisão da porta
 
 1. **Fidelidade do Bot de IA: 6 meses.** LTV mínimo de R$ 4.000, acima do piso de Sistemas, então a reunião de 1 hora se paga. O vencimento no mês 6 é o gatilho natural do upsell para Sistemas, com 5 meses de resultado medido na mão.
-2. **O que os R$ 500/mês cobrem:** infraestrutura e disponibilidade, monitoramento, correção de erro do que foi entregue, e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam. O que passa disso é fila do mês seguinte ou aditivo cotado. Lista completa em `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`.
+2. **O que a mensalidade cobre:** infraestrutura e disponibilidade, monitoramento, correção de erro do que foi entregue, e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam. O que passa disso é fila do mês seguinte ou aditivo cotado. Lista completa em `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`. ⚠️ O escopo é o mesmo em toda a faixa: quem paga R$ 3.000 recebe a mesma lista de quem paga R$ 500. Se isso não se sustentar na prática, é decisão nova do dono, não dedução.
 
-3. **Custo de IA: é do cliente, não da IRBIS.** A infraestrutura e o consumo dos modelos rodam na conta do cliente e são pagos por ele, como já acontece na Odery. Os R$ 500/mês remuneram trabalho, não compute. **Não há custo marginal comendo o MRR.**
+3. **Custo de IA: é do cliente, não da IRBIS.** A infraestrutura e o consumo dos modelos rodam na conta do cliente e são pagos por ele. A mensalidade remunera trabalho, não compute. **Não há custo marginal comendo o MRR.**
 
 4. **A faixa de custo de nuvem por volume, para dizer na reunião.** Calculada em 12/ago: **entre 6 e 19 centavos de real por conversa**, o que dá cerca de R$ 50 a R$ 150 por mês num volume de mil conversas. Fala pronta, tabela por volume e premissas em `03 - Comercial/04 - Entrega e Recorrência/custo-ia-bot-estimativa.md`. É estimativa calculada, não medição: o consumo real da Odery segue sem acesso.
 

@@ -41,7 +41,7 @@ Três razões, nesta ordem:
 2. **O vencimento é o gatilho do upsell.** No mês 6 existem 5 meses de resultado medido, e a conversa deixa de ser "renova?" e passa a ser "renova ou sobe pra Sistemas". Fidelidade de 12 meses enterraria esse momento; 3 meses chegaria antes de haver prova.
 3. **Não põe atrito na porta.** O bot existe para ser a entrada de baixa fricção. Exigir um ano de compromisso na primeira compra contraria o trabalho do produto.
 
-### O que os R$ 500/mês cobrem
+### O que a mensalidade cobre (igual em toda a faixa)
 
 Definido em 12/ago/2026. **Esta lista é o escopo. O que não está aqui é fila ou aditivo.**
 
@@ -78,7 +78,7 @@ Após os 6 meses, o contrato segue mês a mês, salvo renovação por novo perí
 
 ✅ **Resolvido em 12/ago/2026.** A infraestrutura e o consumo dos modelos de IA rodam **na conta do cliente e são pagos por ele**, direto ao provedor. É assim que o bot da Odery já opera hoje, e é coerente com a Lei da F5 do método (produção nas contas do cliente) e com a Cláusula 9 do contrato.
 
-**O que isso significa para a margem:** os R$ 500/mês remuneram trabalho, não compute. Não há custo marginal crescente comendo o MRR, e a margem do produto é o tempo do Nicolas, não a fatura da nuvem. **A trava de margem que estava aberta deixou de existir.**
+**O que isso significa para a margem:** a mensalidade remunera trabalho, não compute. Não há custo marginal crescente comendo o MRR, e a margem do produto é o tempo do Nicolas, não a fatura da nuvem. **A trava de margem que estava aberta deixou de existir.**
 
 ### Mas o risco mudou de lugar, não sumiu
 
@@ -91,7 +91,7 @@ Duas consequências práticas:
 
 **Mitigação registrada na Cláusula 9.1 do contrato:** o Prestador informa uma estimativa antes do início e avisa quando observar variação relevante. A Cláusula 9.2 reserva o lugar de um **teto de uso**, ainda a definir.
 
-⚠️ **O que falta:** medir o consumo real do bot da Odery, que já roda, e transformar isso numa faixa de custo por volume de conversa. Deixou de ser trava de margem e virou **munição de venda e proteção contra churn**.
+⚠️ **O que falta:** validar a estimativa de custo contra uma fatura real. **A Odery não serve para isso**: descoberto em 12/ago que o bot de lá aparentemente não gera contagem de token, provavelmente por rodar em modelo local. A validação vem do primeiro bot que rodar em API paga. A estimativa calculada está em `custo-ia-bot-estimativa.md` e já dá a faixa por volume; o que falta é confirmá-la na prática. Deixou de ser trava de margem e virou **munição de venda e proteção contra churn**.
 
 ---
 

@@ -147,7 +147,7 @@ Regra completa em `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
 | Frente | Faixa citável |
 |---|---|
 | Sistemas | R$ 3.000 a R$ 10.000, valor fechado por escopo |
-| Bot de IA | R$ 1.000 de setup + R$ 500/mês |
+| Bot de IA | R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião) |
 | Consultoria de IA | R$ 5.000 até R$ 10 mi de faturamento anual do cliente; R$ 10.000 acima |
 
 **O número fechado de um projeto nunca entra em copy.** Ele nasce na reunião.
@@ -278,7 +278,7 @@ Ruim:
 (Viola: "cada caso é um caso", diminutivo, esconde a faixa que é pública, duração errada.)
 
 Bom:
-> Sistema fechado fica entre R$ 3.000 e R$ 10.000. Bot de IA é R$ 1.000 de implementação mais R$ 500 por mês. Consultoria de IA é R$ 5.000, ou R$ 10.000 acima de R$ 10 milhões de faturamento.
+> Sistema fechado fica entre R$ 3.000 e R$ 10.000. Bot de IA é R$ 1.000 de implementação mais uma mensalidade que fica entre R$ 500 e R$ 3.000, conforme o tamanho da operação. Consultoria de IA é R$ 5.000, ou R$ 10.000 acima de R$ 10 milhões de faturamento.
 > O número do seu caso sai depois que eu entender o que trava a operação. São 60 minutos e você sai com o valor real.
 > Consegue quinta às 15h? Nicolas
 

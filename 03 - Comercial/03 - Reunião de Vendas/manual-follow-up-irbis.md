@@ -76,7 +76,7 @@ Mas o que importa não é o custo do projeto — é quanto você perde por mês 
 A gente fecha o que cabe no seu momento, sem baixar o padrão.
 ```
 
-**Como calibrar (ver `calculadora-preco-build-irbis.md`):** cada frente tem faixa própria — Sistemas R$3.000–10.000, Consultoria de IA R$5.000/R$10.000 conforme faturamento, Bot de IA R$1.000+R$500/mês. Ancora no topo da faixa quando o gargalo é central pro negócio, desce dentro da faixa (nunca abaixo do piso) quando é mais conveniência. A descida acontece ao vivo, não por escrito — mesma lógica de antes, só que agora com números reais por frente em vez de uma âncora única de site.
+**Como calibrar (ver `calculadora-preco-build-irbis.md`):** cada frente tem faixa própria — Sistemas R$3.000–10.000, Consultoria de IA R$5.000/R$10.000 conforme faturamento, Bot de IA R$1.000 de setup + mensalidade de R$500 a R$3.000 (faixa; número na reunião). Ancora no topo da faixa quando o gargalo é central pro negócio, desce dentro da faixa (nunca abaixo do piso) quando é mais conveniência. A descida acontece ao vivo, não por escrito — mesma lógica de antes, só que agora com números reais por frente em vez de uma âncora única de site.
 
 ## BLOCO 9 — Transição de retomada
 
@@ -92,7 +92,7 @@ Faz sentido voltar a olhar isso agora, ou o momento mudou de verdade?
 Quando o orçamento não cabe no projeto completo de Sistemas:
 ```
 Vi que talvez não seja a hora do projeto completo agora.
-Tem um caminho menor que encaixa hoje: a gente começa pelo Bot de IA — R$1.000 de implementação, R$500/mês — resolve uma parte específica da operação, e o sistema completo entra depois, com esse primeiro passo já rodando.
+Tem um caminho menor que encaixa hoje: a gente começa pelo Bot de IA, R$1.000 de implementação mais uma mensalidade que fica entre R$500 e R$3.000 conforme o tamanho da operação (o seu número sai na reunião). Ele resolve uma parte específica da operação, e o sistema completo entra depois, com esse primeiro passo já rodando.
 Faz sentido começar por aí?
 ```
 **Ofertas de downsell IRBIS (proposta, confirmar com Nicolas):** Bot de IA isolado · Consultoria de IA como primeiro passo antes de um projeto de Sistemas maior.

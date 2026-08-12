@@ -64,7 +64,7 @@ Excluir sem dó: post anônimo ou só username; sem contexto de negócio; sem pe
 ## Filtros IRBIS (aplicar por cima, antes de virar demo)
 
 - **Escopo é Sistemas, Soluções com IA (automação/bot/agente) e Consultoria de IA.** Site, landing page, branding, identidade visual avulsa, app/dashboard avulso fora do que se enquadra em Sistemas: fora, sem exceção (ver `CLAUDE.md`).
-- Capacidade de pagamento aparente (corte SAM ≥ R$3.000/projeto — piso confirmado da faixa de Sistemas em 09/ago/2026; abaixo disso, provavelmente não fecha na faixa atual). Consultoria e Bot de IA têm piso próprio (R$5.000 e R$1.000+R$500/mês) — ajustar o corte conforme o que o lead sinaliza precisar.
+- Capacidade de pagamento aparente (corte SAM ≥ R$3.000/projeto — piso confirmado da faixa de Sistemas em 09/ago/2026; abaixo disso, provavelmente não fecha na faixa atual). Consultoria e Bot de IA têm piso próprio: Consultoria R$5.000, Bot de IA R$1.000 de setup mais mensalidade que começa em R$500 e vai até R$3.000 conforme o tamanho da operação. Ajustar o corte conforme o que o lead sinaliza precisar; operação grande com o bot no centro do atendimento paga o topo da faixa, não o piso.
 - Lead validado entra no gate da skill `irbis-demo-prospect`; máximo de 1 demo/dia.
 
 ## Formato de saída (por lead)

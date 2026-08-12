@@ -65,7 +65,7 @@ Qual fica melhor? Já deixo reservado pra você.
 ```
 Boa pergunta, {{nome}} — e a real é: depende do que você precisa sistematizar.
 
-Sistema fechado geralmente fica entre R$ 3.000 e R$ 10.000. Bot de IA é R$ 1.000 de implementação + R$ 500/mês. Consultoria de IA é R$ 5.000 (ou R$ 10.000 se a empresa fatura acima de R$10 milhões/ano). O que serve pro seu caso eu só sei depois de entender o escopo.
+Sistema fechado geralmente fica entre R$ 3.000 e R$ 10.000. Bot de IA é R$ 1.000 de implementação mais uma mensalidade que fica entre R$ 500 e R$ 3.000, dependendo do tamanho da operação. Consultoria de IA é R$ 5.000 (ou R$ 10.000 se a empresa fatura acima de R$10 milhões/ano). O que serve pro seu caso eu só sei depois de entender o escopo.
 
 Por isso faço uma reunião rápida de diagnóstico antes: entendo sua operação e já te apresento o projeto, prazo e investimento certos — sem chute.
 
@@ -74,7 +74,7 @@ Te mostro isso quinta 14h ou sexta 17h — qual fica melhor?
 
 ### Se ele insistir ("só queria uma ideia de faixa")
 ```
-Já te passei: R$3-10k pra sistema, R$1k+R$500/mês pro bot de IA, R$5k ou R$10k pra consultoria, dependendo do porte. O que muda o número dentro dessa faixa é o quanto isso te custa hoje — tempo, retrabalho, oportunidade perdida — e isso eu só calibro entendendo seu caso.
+Já te passei: R$3-10k pra sistema, R$1k de implementação mais R$500 a R$3.000 por mês pro bot de IA, R$5k ou R$10k pra consultoria, dependendo do porte. O que muda o número dentro dessa faixa é o quanto isso te custa hoje — tempo, retrabalho, oportunidade perdida — e isso eu só calibro entendendo seu caso.
 
 São 30 min e você sai com o valor real e o projeto na mão. Bora marcar?
 ```

@@ -13,7 +13,7 @@ Mercado ✅ (economia real) → Produto e preço ✅ (3 frentes, preço definido
 | Frente | Preço |
 |---|---|
 | Sistemas (CRM, ERP, sistema sob medida) | R$ 3.000–10.000 por projeto. Muito complexo sai da faixa, sob consulta |
-| Soluções com IA — Bot de IA | R$ 1.000 de setup + R$ 500/mês |
+| Soluções com IA — Bot de IA | R$ 1.000 de setup + R$ 500 a R$ 3.000/mês (faixa; número na reunião) |
 | Soluções com IA — automações fora do bot | Sob consulta. **Sem faixa. Não estimar** |
 | Consultoria de IA | R$ 5.000 (cliente ≤ R$10mi/ano) ou R$ 10.000 (acima). Muito grande: sob consulta |
 

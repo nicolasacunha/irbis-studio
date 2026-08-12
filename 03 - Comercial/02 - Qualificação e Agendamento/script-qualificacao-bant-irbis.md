@@ -6,7 +6,7 @@
 
 ## Objetivo
 Identificar se o lead tem:
-- **Budget** — caixa pra investir num sistema/automação/consultoria sério (faixas reais: Sistemas R$3.000–10.000 · Bot de IA R$1.000+R$500/mês · Consultoria R$5.000/R$10.000)
+- **Budget** — caixa pra investir num sistema/automação/consultoria sério (faixas reais: Sistemas R$3.000–10.000 · Bot de IA R$1.000 de setup + mensalidade de R$500 a R$3.000 (faixa; número na reunião) · Consultoria R$5.000/R$10.000)
 - **Authority** — poder de decidir
 - **Need** — dor real de operação/sistema/IA
 - **Timing** — urgência
