@@ -4,7 +4,7 @@
 
 | Antes (v1) | Agora (v2) | Motivo |
 |---|---|---|
-| Meta: 3 projetos fechados, R$ 45k a 90k | Metas: 2 clientes fundadores até ~19/ago, ≥ 2 clientes novos por mês a partir de set, R$ 4.000/mês limpos até 30/set | A meta antiga era impossível na faixa de preço vigente |
+| Meta: 3 projetos fechados, R$ 45k a 90k | Metas: 2 clientes fundadores até ~19/ago, ≥ 2 clientes novos por mês a partir de set, **3 bots até 30/set (R$ 12.000 de receita contratada)** | A meta antiga era impossível na faixa de preço vigente |
 | ICP: founder de startup pré-seed a Série A | ICP amplo (dono de negócio da economia real), prospecção nichada em advocacia, indústria e agência | Decisões de 09/ago e 12/ago |
 | Posicionamento: único especialista em sites que não faz mais nada | 3 frentes, com Bot de IA como porta e Sistemas como upsell | Sites saíram do escopo em 04/ago |
 | Ticket R$ 5k a 45k | Bot R$ 1.000 + R$ 500/mês. Sistemas R$ 3.000 a 10.000. Consultoria R$ 5.000 ou R$ 10.000 | Preço definido em 09/ago |
@@ -89,7 +89,7 @@ O objetivo do bloco não é receita, é sinal. A pergunta que ele responde: algu
 
 ## Bloco 2 — setembro: vender o primeiro bot e começar o MRR
 
-Meta declarada: ≥ 2 clientes novos por mês a partir de set, e R$ 4.000/mês limpos na PJ até 30/set. O caminho aritmético dos R$ 4.000 são 8 clientes de bot a R$ 500/mês.
+Meta declarada: ≥ 2 clientes novos por mês a partir de set, e **3 bots fechados até 30/set**, o que dá R$ 12.000 de receita contratada. As duas somam: 1 bot em agosto mais 2 em setembro.
 
 | Ação | Dono | Observação |
 |---|---|---|
@@ -101,7 +101,7 @@ Meta declarada: ≥ 2 clientes novos por mês a partir de set, e R$ 4.000/mês l
 | Hunter frio, se e quando a lista morna acabar | Colaborador | Lastro de volume, não ponto de partida |
 | CNPJ | Nicolas | Bloqueia a meta de receita limpa na PJ |
 
-**Alerta aritmético, para constar:** 8 mensalidades de R$ 500 só somam R$ 4.000 se os 8 clientes estiverem ativos no mesmo mês. Quem entra em set paga a primeira mensalidade em set. **Pendente:** o dono confirma se a meta de 30/set conta setup mais mensalidade ou só recorrência. A leitura muda o número de clientes necessários.
+✅ **Resolvido em 12/ago/2026.** O alerta aritmético que estava aqui perguntava se a meta contava setup mais mensalidade ou só recorrência, porque medir MRR num dia faz um bot vendido em 25/set valer R$ 500 em vez dos R$ 4.000 que ele realmente contratou. A resposta do dono foi trocar a unidade: **a meta é receita contratada**, somada no dia da assinatura. MRR ativo continua sendo reportado como termômetro mensal, não como data-alvo.
 
 ---
 
@@ -112,7 +112,7 @@ Não existe meta decidida depois de 30/set, e não vou inventar uma. O que este 
 - Quantos bots foram vendidos e quantos sobreviveram ao primeiro mês de mensalidade.
 - Qual vertical respondeu, medida por taxa de resposta em `interacoes`.
 
-**Pendente:** o dono define a meta de out e nov depois do fechamento de setembro. Os três candidatos naturais são concentrar prospecção na vertical que respondeu, subir ticket com Sistemas na base de bot, ou ligar ads caso a receita própria passe de R$ 4.000/mês.
+**Pendente:** o dono define a meta de out e nov depois do fechamento de setembro. Os três candidatos naturais são concentrar prospecção na vertical que respondeu, subir ticket com Sistemas na base de bot, ou ligar ads, que só volta com receita própria de R$ 4.000/mês (regra do plano de canais, não muda com a meta nova).
 
 ---
 
@@ -125,8 +125,10 @@ A métrica de output é **conversa iniciada com dono de negócio, por origem**. 
 | Clientes fundadores | 2 até ~19/ago | Pipeline |
 | Conversas com dono | 5 até 26/ago, a confirmar | `interacoes` |
 | Clientes novos por mês | ≥ 2 a partir de set | Pipeline |
-| Receita limpa na PJ | R$ 4.000/mês até 30/set | Financeiro |
-| Clientes de bot ativos | 8 para fechar a conta acima | CRM |
+| **Bots fechados** | **3 até 30/set** (1 em agosto, 2 em setembro) | Pipeline |
+| **Receita contratada** | **R$ 12.000 até 30/set** = 3 × R$ 4.000 (setup + 6 meses travados), contada no dia da assinatura | Financeiro |
+| MRR ativo | Termômetro, não meta. Projeção de R$ 1.500 em 30/set | Financeiro |
+| CNPJ e conta PJ | Meta do chapéu Dono, sem prazo definido. Saiu da meta comercial em 12/ago | Fundação |
 | Reunião fora de indicação | Sem meta definida. Hoje é 0 há 7 semanas | Pipeline |
 | Conversão, ciclo de venda, CAC | Sem meta. Sem volume para calcular | A definir quando houver dado |
 

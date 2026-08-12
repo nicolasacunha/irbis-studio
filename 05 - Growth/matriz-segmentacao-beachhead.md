@@ -8,7 +8,7 @@
 | Beachhead = founder técnico Web3/SaaS em fundraising | Beachhead = atributo do negócio (time de 3 a 8, dono acessível, já tentou ferramenta pronta), dentro de advocacia, indústria e agência | O ICP declarado é amplo por decisão do dono. Nicha-se a prospecção, não a empresa |
 | Tickets R$25–50k / R$15–30k / R$5–15k | Bot de IA R$ 1.000 + R$ 500/mês na porta, Sistemas R$ 3.000 a 10.000 no upsell | Preço das 3 frentes definido em 09/ago |
 | Ação de aquisição: publicar ADASH como case | ADASH nunca foi entregue e não pode ser citada | Fato verificado. Ver `irbis-guarda-pivot` |
-| TAM/SAM/SOM somando R$275–650k em 12 meses | Sem TAM/SAM/SOM. A única aritmética real é 8 clientes de bot para R$ 4.000/mês | O cálculo antigo era feito sobre segmentos que saíram. Não há base para refazer |
+| TAM/SAM/SOM somando R$275–650k em 12 meses | Sem TAM/SAM/SOM. A única aritmética real é 3 bots até 30/set, a R$ 4.000 de receita contratada cada | O cálculo antigo era feito sobre segmentos que saíram. Não há base para refazer |
 
 **Fontes vigentes:** `CLAUDE.md` (escopo), `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md` (preço e escada), `04 - Marketing/plano-canais-e-medicao.md` (canal e medição).
 
@@ -86,7 +86,7 @@ A única aritmética que a IRBIS tem de verdade é a do caminho até a meta de c
 
 | Meta | Aritmética |
 |---|---|
-| R$ 4.000/mês limpos na PJ até 30/set/2026 | 8 clientes de bot pagando R$ 500/mês |
+| R$ 12.000 de receita contratada até 30/set/2026 | 3 bots fechados, a R$ 4.000 cada (setup mais 6 meses travados) |
 
 Cada cliente de bot também traz R$ 1.000 de setup no mês em que entra, e abre a porta do upsell de Sistemas. Sem CNPJ até hoje, o que é bloqueador da própria meta e está registrado como pendência em `project_formalizacao-irbis-sem-cnpj`.
 

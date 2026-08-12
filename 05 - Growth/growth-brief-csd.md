@@ -30,7 +30,7 @@ Regra de uso: **toda suposição que sustenta uma decisão de canal ou de oferta
 | MRR R$ 0. Nenhum Bot de IA vendido | Dono de 3 a 8 pessoas decide R$ 1.000 mais R$ 500/mês sem comitê | Agência compra bot para uso próprio ou quer revender |
 | R$ 600 recebidos em 2026, R$ 5.597 a receber | Quem já tentou ferramenta pronta e frustrou chega pré-vendido | O prospect entende "bot" como o que a IRBIS entrega, ou como chatbot de menu |
 | 1 cliente pagante fora da família: Casa Paes, R$ 1.200 | Odery serve como prova de produto mesmo sem número financeiro publicável | Sem case de mercado, quanto isso custa em taxa de fechamento |
-| Odery e E-Force são a empresa do pai, A. Cunha é o escritório da mãe | A entrega de bot cabe na capacidade do Nicolas com um contrato de Sistemas em produção | 8 clientes de bot até 30/set é alcançável no ritmo atual, ou a meta precisa de outra oferta |
+| Odery e E-Force são a empresa do pai, A. Cunha é o escritório da mãe | A entrega de bot cabe na capacidade do Nicolas com um contrato de Sistemas em produção | 3 bots até 30/set é alcançável partindo de zero reunião fora de indicação há sete semanas |
 | Preço das 3 frentes definido em 09/ago, escada definida em 12/ago | Sistemas vende melhor como upsell da base do que como porta | Qual é o teto de escopo de um bot de R$ 1.000 antes de virar prejuízo |
 | Existe um colaborador com foco comercial desde ago | pSEO traz gente e falta só atribuição para provar | A ausência de CNPJ trava fechamento com empresa maior, ou é indiferente nesse ticket |
 

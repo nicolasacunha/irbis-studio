@@ -49,7 +49,7 @@ Fonte: `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbi
 - Sistemas sai do discurso de prospecção e entra no de carteira. O momento do upsell é o repitch de F7 do método e o campo "próxima camada" da carteira.
 - A faixa de Sistemas continua pública (ver tabela acima), porque quem pergunta pergunta. O que muda é que ela não é mais o que se oferece primeiro.
 
-**Por que isso importa para o caixa:** o Bot é o único produto recorrente que existe. A meta de R$ 4.000/mês de receita recorrente até 30/set só tem caminho aritmético por aqui: **8 clientes de bot**. Sistemas e Consultoria são one-time e não constroem MRR.
+**Por que isso importa para o caixa:** o Bot é o único produto recorrente que existe. Sistemas e Consultoria são one-time e não constroem base. Cada bot vale **R$ 4.000 de receita contratada** no dia da assinatura (R$ 1.000 de setup mais os 6 meses travados), e a meta vigente é **3 bots até 30/set**, ou R$ 12.000 contratados. Ver `docs/metas-por-chapeu.md`.
 
 ## Como a faixa aparece em cada canal
 

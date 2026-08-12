@@ -75,8 +75,9 @@ Quem enche: **colaborador**, exceto onde marcado.
 
 | Indicador | Meta | Dono | Onde vive |
 |---|---|---|---|
-| **MRR acumulado** | **R$ 4.000 até 30/set** = 8 clientes de bot a R$ 500 | Nicolas | `pipeline` + financeiro |
-| **Bots fechados no mês** | A conta pede ~5/mês para chegar a 8 até 30/set. ⚠️ Conflita com "≥ 2 clientes novos/mês" das metas por chapéu | Nicolas | `pipeline` |
+| **Receita contratada** ← *KPI que decide* | **R$ 12.000 até 30/set** = 3 bots × R$ 4.000 (setup + 6 meses travados), contados no dia da assinatura | Nicolas | `pipeline` + financeiro |
+| **Bots fechados** | **3 até 30/set.** 1 em agosto, 2 em setembro. Compatível com "≥ 2 clientes novos/mês" das metas por chapéu | Nicolas | `pipeline` |
+| **MRR ativo** | Termômetro, não meta. Soma das mensalidades correndo no mês. Projeção: R$ 1.500 em 30/set | Nicolas | Financeiro |
 | Conversão reunião → fechamento | Referência da mentoria de 03/ago: 35 a 40% com apresentação estruturada, 10 a 15% sem. Sem baseline próprio | Nicolas | `pipeline` |
 | Upsells de Sistemas vendidos para carteira | Sem meta. Depende de quantos bots existirem | Nicolas | `pipeline` |
 | **Ticket médio por frente** (medido separado, nunca em média única) | Bot: R$ 1.000 setup + R$ 500/mês. Sistemas: dentro de R$ 3.000 a 10.000. Consultoria: R$ 5.000 ou R$ 10.000 | Nicolas | `pipeline` |
@@ -84,9 +85,11 @@ Quem enche: **colaborador**, exceto onde marcado.
 | Propostas enviadas em até 24h da reunião | 100% | Nicolas | `pipeline` |
 | Propostas decididas com motivo registrado (sim ou não) | 100%. Proposta sem post-mortem não fecha o ciclo | Nicolas | `pipeline` |
 | Indicações coletadas por cliente entregue | Sem meta aprovada | Nicolas | `interacoes` |
-| Churn de bot | Não é mensurável ainda. Depende de existir prazo mínimo de contrato | Nicolas | Pendente |
+| Churn de bot | Só mensurável a partir do mês 7 de cada contrato, porque a fidelidade é de 6 meses. Antes disso, o que existe é multa, não churn | Nicolas | Financeiro |
 
-**Por que o MRR passou a ser o KPI que decide:** faturamento de projeto some no mês seguinte. Em 2026 a casa recebeu R$ 600 e tem R$ 5.597 a receber, com MRR em R$ 0. Vender um Sistema de R$ 10.000 paga um mês e deixa a base no mesmo lugar. Só o bot acumula.
+**Por que receita contratada é o KPI que decide:** faturamento de projeto some no mês seguinte. Em 2026 a casa recebeu R$ 600 e tem R$ 5.597 a receber, com MRR em R$ 0. Vender um Sistema de R$ 10.000 paga um mês e deixa a base no mesmo lugar. Só o bot acumula.
+
+**E por que contratada, e não MRR num instante:** com fidelidade de 6 meses, o valor entra no dia da assinatura, não no dia do calendário. Medir MRR em 30/set contaria R$ 500 por um bot que vale R$ 4.000 e foi vendido cinco dias antes. A meta antiga media assim porque o produto anterior era manutenção mês a mês, sem trava, onde o retrato do mês era o valor real.
 
 ---
 

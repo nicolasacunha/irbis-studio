@@ -11,7 +11,24 @@ A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regr
 |---|---|---|---|
 | Clientes fundadores de IA assinados | 2 (mãe + QG OS) | ~19/ago | Council 20/jul: pivot atrás de caixa |
 | Clientes novos por mês | ≥ 2 | A partir de set | Meta de 90 dias (JDP) |
-| Receita própria mensal | ≥ R$ 4k limpos na PJ | Até 30/set | Plano T3 da auditoria |
+| **Bots de IA fechados** | **3** | **Até 30/set** | Decisão do dono, 12/ago/2026 |
+| **Receita contratada** | **R$ 12.000** (3 × R$ 4.000) | Até 30/set | Decorre da meta acima |
+| ~~Receita própria mensal ≥ R$ 4k limpos na PJ~~ | — | ~~Até 30/set~~ | 🛑 **Superada em 12/ago/2026.** Ver abaixo |
+
+> 🛑 **Por que a meta de R$ 4k/mês recorrente foi substituída (12/ago/2026).**
+>
+> Ela nasceu no Plano T3 da auditoria de julho, quando o produto era site com plano de manutenção de R$ 197 a R$ 997/mês. R$ 4.000 recorrentes eram dez a quinze clientes de manutenção. Em 04/ago o site saiu do escopo e **o produto recorrente saiu junto**: entre 04 e 09/ago a IRBIS teve uma meta de receita recorrente e zero produtos recorrentes no catálogo. A meta ficou órfã do mecanismo que a tornava calculável, e foi isso que gerou o conflito com "≥ 2 clientes novos por mês".
+>
+> **A unidade mudou, não só o número.** A meta antiga media MRR num instante (o dia 30/set), o que fazia sentido com manutenção mês a mês, sem trava. Com a fidelidade de 6 meses do Bot de IA, o retrato mente: um bot assinado em 25/set aparece como R$ 500 no dia 30 e vale R$ 4.000 contratados. A meta punia a venda tardia e escondia valor já vendido.
+>
+> | Métrica | O que é | Papel |
+> |---|---|---|
+> | **Receita contratada** | Setup mais os 6 meses travados, contados no dia da assinatura. **1 bot = R$ 4.000** | É a meta |
+> | **MRR ativo** | Soma das mensalidades correndo naquele mês | Termômetro mensal, não data-alvo |
+>
+> **O "limpos na PJ" saiu da meta comercial.** Isso é formalização, não performance de venda, e está travado por não existir CNPJ. Misturar os dois fazia a meta comercial nascer impossível por um motivo que não tem a ver com vender. Virou meta do chapéu Dono.
+>
+> **O conflito se dissolveu.** 3 bots até 30/set são compatíveis com "≥ 2 clientes novos/mês a partir de setembro": 1 em agosto mais 2 em setembro. As duas metas passam a somar em vez de brigar.
 
 ## Chapéu 2: Marketing (o que enche o funil)
 
@@ -33,6 +50,7 @@ A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regr
 
 | Meta | Número | Prazo | Fonte da dor |
 |---|---|---|---|
+| **CNPJ aberto e conta PJ operando** | 1x | **Sem prazo definido pelo dono** | Veio da meta comercial de 30/set, que misturava venda com formalização. Separado em 12/ago/2026 |
 | Fases da fundação disparadas no gatilho certo (2: entrada; 3: assinatura; 4: duas assinaturas) | Sem atraso > 1 semana do gatilho | Por evento | Spec da fundação |
 | Ritual semanal cumprido (placar + revisão de sexta) | 4/4 semanas no mês | Contínuo | Manoel: ciclo mensal de revisão |
 | Decisão de rota da bifurcação tomada com dado | 1x | Jul/2027 | Visão aprovada |

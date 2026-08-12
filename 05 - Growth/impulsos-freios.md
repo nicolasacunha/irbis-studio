@@ -54,7 +54,7 @@ O que continua sem dono com data:
 - **Os 3 fixados** (Tese, Prova, Caminho), nunca gravados. O Fixado 2 depende de uma decisão em aberto: E-Force como credencial pessoal ou trocar o case pela Odery.
 - **Atribuição de pSEO.** 7 páginas no ar e nenhuma forma de saber se trouxeram alguém.
 - **Registro de conversa de WhatsApp e telefone** em `interacoes`. É obrigação de quem falou e, sem ela, nada do plano de canais é mensurável.
-- **CNPJ.** Bloqueia a meta de R$ 4.000/mês limpos na PJ até 30/set.
+- **CNPJ.** Deixou de bloquear a meta comercial em 12/ago, quando "limpos na PJ" saiu dela e virou meta do chapéu Dono. Continua bloqueando emissão fiscal e a conta separada, e segue sem prazo definido.
 
 **Consequência real:** são cinco itens de custo baixo que atrasam há semanas, e todos ficam entre o dever de casa do marketing e o do comercial.
 

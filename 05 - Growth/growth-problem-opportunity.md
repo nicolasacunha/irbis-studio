@@ -7,7 +7,7 @@
 | Micro-agência de design digital premium, operada solo | Sistemas, automação e IA, duas pessoas | Pivot de 04/ago. O colaborador entrou em ago |
 | Ticket médio R$ 20–25k, pipeline estimado em R$ 80–130k | Bot R$ 1.000 + R$ 500/mês, Sistemas R$ 3.000 a 10.000. A receber: R$ 5.597 | Preço definido em 09/ago. O pipeline antigo era estimativa sobre prospects que não fecharam |
 | Pipeline vivo: Ana RE, Dermotion, ADASH | 2 leads ativos, 5 pessoas no banco, todas de indicação | Nenhum dos três virou cliente. ADASH nunca foi entregue |
-| Critério de sucesso: pipeline contínuo de R$ 150k+ | Critério de sucesso: R$ 4.000/mês limpos até 30/set, via 8 clientes de bot | A meta antiga era calculada em ticket de site |
+| Critério de sucesso: pipeline contínuo de R$ 150k+ | Critério de sucesso: 3 bots fechados até 30/set, R$ 12.000 de receita contratada | A meta antiga era calculada em ticket de site. A intermediária (R$ 4.000/mês recorrentes) media MRR num instante, o que não funciona com fidelidade de 6 meses |
 | Limite: não contratar, solo mais IA é o modelo | Limite: duas pessoas, e nada que exija uma terceira | O modelo mudou de fato |
 | Problema central: não existe sistema de pipeline | Problema central: não existe prova de mercado fora da família | O sistema de canal já foi escrito. O que falta é alguém sem vínculo pessoal pagando |
 

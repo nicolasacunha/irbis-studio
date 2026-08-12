@@ -111,17 +111,23 @@ Não é fase de fechar. É de provar que existe topo de funil quando alguém tra
 
 ## Fase 2 · Primeiro MRR (setembro)
 
-**Objetivo:** R$ 4.000/mês de receita recorrente até 30/set. São 8 clientes de Bot de IA.
+**Objetivo:** **3 Bots de IA fechados até 30/set.** Isso são **R$ 12.000 de receita contratada** e **R$ 1.500 de MRR ativo**. Decisão do dono em 12/ago/2026.
+
+### A unidade é receita contratada, não MRR num dia
+
+Cada bot vale **R$ 4.000 no dia da assinatura**: R$ 1.000 de setup mais os 6 meses de fidelidade. Medir MRR no dia 30/set puniria a venda tardia e esconderia valor já vendido, porque um bot assinado em 25/set aparece como R$ 500 e vale R$ 4.000. MRR ativo continua sendo reportado todo mês, como termômetro, não como meta.
 
 ### A conta, aberta
 
-De 12/ago a 30/set são cerca de sete semanas. Oito bots em sete semanas é **cerca de 1,2 fechamento por semana**.
+De 12/ago a 30/set são cerca de sete semanas. Três bots em sete semanas é **cerca de 1 fechamento a cada 2,3 semanas**.
 
-Com a taxa de conversão de reunião que a mentoria de 03/ago aponta para reunião com apresentação estruturada (35 a 40%), 8 fechamentos exigem **20 a 23 reuniões realizadas**, ou cerca de 3 por semana.
+Com a taxa que a mentoria de 03/ago aponta para reunião com apresentação estruturada (35 a 40%), 3 fechamentos exigem **8 a 9 reuniões realizadas** no período, ou pouco mais de 1 por semana.
 
-Hoje a casa faz zero reunião fora de indicação há sete semanas.
+Hoje a casa faz zero reunião fora de indicação há sete semanas. **O trabalho da Fase 1 é sair do zero, não chegar a três.**
 
-⚠️ **Este número entra em conflito com a própria meta ao lado.** `docs/metas-por-chapeu.md` prevê "≥ 2 clientes novos por mês a partir de setembro". Dois por mês não chega a oito até 30/set. **Uma das duas metas precisa ceder e a decisão é do dono:** ou a meta de R$ 4.000 recorrente muda de data, ou a meta de 2 clientes/mês sobe. Não deduzir, não escolher por conta própria.
+✅ **O conflito com a meta de clientes por mês se dissolveu.** `docs/metas-por-chapeu.md` prevê "≥ 2 clientes novos por mês a partir de setembro". Três bots até 30/set são 1 em agosto mais 2 em setembro: as duas metas passam a somar em vez de brigar.
+
+> **De onde veio a meta antiga.** Até 12/ago este bloco pedia R$ 4.000/mês recorrentes, ou 8 bots. Aquele número nasceu no Plano T3 da auditoria de julho, quando o produto era site com manutenção de R$ 197 a R$ 997/mês, e ficou órfão de mecanismo quando o site saiu do escopo. Foi ele que criou o conflito aritmético entre as duas metas.
 
 ### O que precisa estar resolvido antes do primeiro bot fechar
 
