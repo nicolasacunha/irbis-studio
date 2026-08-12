@@ -1,46 +1,141 @@
-# Plano de canais e medição — IRBIS (Pilar 3)
+# Plano de canais e medição — IRBIS
 
-**Escrito:** noite de 21/jul/2026. **Status:** APROVADO pelo Nicolas em 22/jul/2026 (canais, produção e medição).
-**Método:** playbook de growth do acervo (`growth-aquisicao/_playbook.md`): sequência mercado→produto→canal; 70/20/10; input vs output; funil invertido (comunidade antes de alcance); multicanal como resiliência (Ledson: casa em terreno alheio).
+**v2 · reescrito em 12/ago/2026** por decisão do dono. Substitui a v1 (21/jul, aprovada em 22/jul), que colocava 80% da aposta de aquisição no Instagram. O que mudou e por quê está no fim deste documento.
 
-## A sequência validada (bloco 0 do playbook)
+**Método:** playbook de growth do acervo (`growth-aquisicao/_playbook.md` e `workshop-agencia-com-ia-planejamento-posicionamento-inbound.md`): sequência mercado→produto→canal; 70/20/10; input separado de output; funil invertido (comunidade antes de alcance); multicanal como resiliência.
 
-Mercado ✅ (economia real, ICP do plano JDP) → Produto/preço ⚠️ Soluções com IA, Consultoria de IA e Sistemas (pivot 04/ago — sites saíram do escopo, ver `docs/visao-irbis.md`; **preço de cada frente ainda não definido**, ver `CLAUDE.md` seção IDENTITY) → **Canal = onde estamos agora** → Modelo de negócio (bifurcação, jul/2027). O plano de canais só existe porque as etapas anteriores fecharam; se o pivot mudar o produto, este plano se revisa.
+## A sequência
 
-> ⚡ **Atualização 04/ago/2026:** este documento foi escrito quando "sites" era o produto validado. O gatilho de revisão da linha acima ("se o pivot mudar o produto, este plano se revisa") disparou — atualizado nesta revisão junto com `docs/visao-irbis.md` e `04 - Marketing/P1-posicionamento-nicolas.md`.
+Mercado ✅ (economia real) → Produto e preço ✅ (3 frentes, preço definido em 09/ago) → **Canal = onde estamos** → Modelo de negócio (bifurcação, jul/2027).
 
-## Os canais da IRBIS, por papel
+**Preço vigente**, para referência de quem escreve conteúdo:
 
-| Canal | Papel | Estado | Regra |
-|---|---|---|---|
-| Instagram pessoal (@o.nicolascunha) | Motor de demanda principal: autoridade + inbound | Ativo desde 21/jul, 1/dia | Formato modelado do garimpo; CTA único por vídeo; filtro diário P1 antes de postar |
-| Comunidades onde já estamos (G4, LSB, JDP) | Canal de maior conversão: inbound quente por relacionamento | Provado (MGITECH chegou em horas) | Funil invertido do playbook: comunidade pequena converte mais que alcance frio; presença > anúncio |
-| Indicação de cliente | O canal mais barato que existe | Subaproveitado (processo de pedido existe na entrega) | Pedido de indicação vira etapa fixa do fim de projeto (ver voz-do-cliente.md) |
-| Site + blog automático + SEO | Fundo de funil: prova e conversão de quem chega | No ar, saudável (95/99) | Não é canal de aquisição ativa; é onde os outros canais convertem |
-| LinkedIn | Secundário: reciclagem dos melhores conteúdos do IG | Cadência definida, execução pausada | Só reaproveitamento, sem produção própria (proteger o foco) |
-| Ads | DESLIGADO por decisão | Volta com receita própria ≥ R$ 4k/mês | Decisão da auditoria de julho; não antecipar |
+| Frente | Preço |
+|---|---|
+| Sistemas (CRM, ERP, sistema sob medida) | R$ 3.000–10.000 por projeto. Muito complexo sai da faixa, sob consulta |
+| Soluções com IA — Bot de IA | R$ 1.000 de setup + R$ 500/mês |
+| Soluções com IA — automações fora do bot | Sob consulta. **Sem faixa. Não estimar** |
+| Consultoria de IA | R$ 5.000 (cliente ≤ R$10mi/ano) ou R$ 10.000 (acima). Muito grande: sob consulta |
 
-**Risco declarado (Ledson):** hoje a aposta de aquisição ativa é 80% Instagram. Aceitável nesta fase (foco > diversificação prematura), mas a visão registra: canal único é casa em terreno alheio. A diversificação real começa quando Ads voltar e a base de indicação girar.
+A **faixa é pública** em qualquer canal, inclusive conteúdo e pSEO. O **número fechado** só na reunião. Regra completa em `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
 
-## Produção: 70/20/10 (bloco 2 do playbook)
+---
 
-- **70% formato validado:** o que o garimpo + os prints provarem que viraliza no nicho (após o mapa de formato).
-- **20% teste:** 1-2 vídeos/semana testando gancho ou formato novo (documentar o que era teste).
-- **10% otimização:** regravar/reeditar o que já performou com ajuste fino.
-- Até o mapa de formato existir, os 70% seguem a estrutura do plano JDP (gancho 3s, PAS, antes/depois, loop).
+## O que a medição mostrou
 
-## Medição: input separado de output (regra de ouro do playbook)
+Em 12/ago/2026, com o plano v1 rodando havia três semanas:
+
+| Canal | Aposta na v1 | Leads produzidos |
+|---|---|---|
+| Instagram pessoal | **80% da aposta** | **0** |
+| Indicação e comunidades | Sem processo rodando | **5 de 5** |
+| Site + blog + pSEO | Fundo de funil | 0 atribuídos |
+| LinkedIn | Pausado | 0 |
+| Ads | Desligado | 0 |
+
+Outros números da mesma leitura: 15 dias sem uma pessoa nova no funil, sete semanas sem reunião fora de indicação, 19 roteiros diários produzidos em 27 dias, e um vídeo com cerca de 9 mil views sobre uma base de 84 seguidores.
+
+**A leitura.** Um vídeo de 9 mil views com 84 seguidores não é um canal que falhou. É conteúdo que funciona chegando num perfil que não converte: bio ainda na versão anterior à v4, três fixados nunca gravados, nenhum reel publicado. A pessoa assistiu, clicou no perfil e não encontrou o que confirmar.
+
+Isso é o diagnóstico do próprio acervo (Skale, feed F1/F2): **o perfil não vende, ele confirma a compra.** O lead vê o conteúdo, passa por 9 a 12 posts em segundos e decide ali.
+
+---
+
+## Os canais, por papel
+
+| Canal | Papel | Quem opera | Estado | Regra |
+|---|---|---|---|---|
+| **Indicação e base** | **Motor 1.** O canal com 100% do histórico de conversão | Nicolas | Processo escrito, nunca disparado | Pedido de indicação é etapa fixa do fim de projeto e da carteira. É relação, não script frio |
+| **Comunidades onde já estamos** (G4, LSB, JDP) | **Motor 1 (mesmo bloco).** Inbound quente por relacionamento | Nicolas | Provado: MGITECH chegou em horas | Presença vale mais que anúncio. Funil invertido: comunidade pequena converte mais que alcance frio |
+| **Social selling na base morna** | **Motor 2.** Os 84 seguidores + quem engajou no vídeo de 9k | Colaborador | Lista existe, nunca foi trabalhada | Mapear, aquecer por uma semana, abordar. Nunca pitch nem preço no primeiro toque |
+| **Hunter frio (DM e ligação)** | **Lastro de volume.** Só entra quando os motores 1 e 2 esgotarem a lista morna | Colaborador | Destravado pela chegada do colaborador | Era descartado porque dependia do Nicolas, que não faz. Agora existe quem faça |
+| **Instagram pessoal (@o.nicolascunha)** | **Ativo de conversão, não de aquisição** | Nicolas | Conteúdo produzindo, perfil incompleto | Converte o que os motores trazem. Deixa de carregar meta de geração de lead |
+| **Site + blog + pSEO** | Fundo de funil e captura de intenção de compra | Rotina automatizada | 7 posts no ar, 6 dias | Continua rodando: custo marginal zero e compõe. **Precisa de atribuição** |
+| **LinkedIn** | Reciclagem do melhor conteúdo do IG | Colaborador, quando sobrar | Pausado | Só reaproveitamento, sem produção própria |
+| **Ads** | Desligado | — | Volta com receita própria ≥ R$ 4k/mês | O acervo confirma a regra: mídia só a partir de investimento ≥ ticket médio, mínimo prático R$ 2.000/mês, e depois dos primeiros contratos por outbound |
+
+### A ordem importa: morno antes de frio
+
+1. **Indicação e comunidades.** Custa horas, não semanas. Lista finita e quente.
+2. **Os 84 e quem engajou no vídeo de 9k.** O único volume qualificado e gratuito que existe hoje.
+3. **Hunter frio.** Volume infinito, temperatura zero. É onde se vai quando 1 e 2 acabam, não onde se começa.
+
+### Sobre a regra de um canal por vez
+
+O JDP mandou aperfeiçoar um canal por vez ("quem tenta atacar todos vai conseguir extrair apenas dois"). Este plano roda dois motores, e a diferença é que eles têm **operadores diferentes com tempo que não se sobrepõe**: indicação é o Nicolas, com gente que já o conhece; social selling é o colaborador, em tempo integral. Se fosse uma pessoa só fazendo os dois, a regra do JDP venceria.
+
+---
+
+## O Instagram como ativo de conversão
+
+Deixa de ter meta de lead. Passa a ter meta de **estar pronto para receber**. Três consertos, nesta ordem, e nenhum depende de produzir conteúdo novo:
+
+1. **Bio v4 aplicada.** Está fechada desde 09/ago e ainda não foi para o ar. É a linha que diz o que ele vende e qual palavra mandar no direct.
+2. **Os 3 fixados gravados** (Tese, Prova, Caminho). ⚠️ O Fixado 2 depende de uma decisão sua ainda em aberto: E-Force só como credencial pessoal, ou trocar o case pela Odery.
+3. **Feed com o que confirma a compra**, no formato F1/F2 do acervo: uma faixa de posts de prova e resultado, e destaques quebrando as objeções.
+
+O nome do perfil segue "Nicolas Cunha / Web Design & IA" por decisão registrada. Não é pendência.
+
+Enquanto os três não existirem, cada vídeo que performa continua vazando.
+
+## Produção: 70/20/10
+
+- **70% formato validado** — o que o garimpo provou que funciona no nicho.
+- **20% teste** — 1 ou 2 vídeos por semana testando gancho ou formato novo, documentados como teste.
+- **10% otimização** — regravar o que já performou.
+
+Regra do acervo que vale aqui: **teste por hipótese, cerca de 3 vídeos por hipótese.** Trocar de formato a cada vídeo impede construir marca.
+
+E o alerta que vale para quem vende IA: **não fazer conteúdo para pares.** Conteúdo de dev e de IA técnica atrai quem não compra.
+
+---
+
+## Medição
+
+A métrica que decide mudou. Não é mais seguidor nem view, e também não é mais "DM recebida": é **conversa iniciada com dono de negócio**.
 
 | Tipo | Métrica | Onde vive | Frequência |
 |---|---|---|---|
-| Input (saúde do canal) | Views, seguidores, engajamento por vídeo | Placar da semana | Semanal (sexta) |
-| Input | Melhor e pior conteúdo da semana + POR QUÊ | Placar da semana (1 linha cada) | Semanal, sem exceção |
-| Output (negócio) | DMs de interesse recebidas | Placar | Semanal |
-| Output | Calls agendadas com origem em conteúdo | Placar + CRM | Semanal |
-| Output | Propostas e receita com origem em conteúdo | CRM | Mensal |
+| **Output (decide)** | **Conversas iniciadas, por canal de origem** | `interacoes` no Supabase | Semanal (sexta) |
+| Output (decide) | Reuniões agendadas, por origem | Pipeline + placar | Semanal |
+| Output (decide) | Propostas e receita, por origem | CRM | Mensal |
+| Input (informa) | Views, seguidores, engajamento por vídeo | Placar da semana | Semanal |
+| Input (informa) | Melhor e pior conteúdo da semana, com o porquê | Placar, uma linha cada | Semanal |
+| Input (informa) | Abordagens feitas e taxa de resposta | `interacoes` | Semanal |
 
-Regra de decisão: seguidor e view informam, **DM, call e receita decidem**. Se input cresce 3 semanas e output não mexe, o problema é oferta ou CTA, não alcance.
+**Regra de decisão:** view e seguidor informam; conversa, reunião e receita decidem. Se o input cresce por três semanas e o output não mexe, o problema é oferta ou CTA, não alcance.
 
-## O que este plano NÃO cobre (por decisão)
+**Toda conversa vira linha em `interacoes` no mesmo dia, com a origem preenchida.** Sem isso, este plano não é mensurável e a revisão de sexta volta a medir preparação em vez de conversão. É a mesma contrapartida que sustenta o disparo autônomo do colaborador na escada de follow-up.
 
-Rebranding dos canais (Fase 4, atrás das assinaturas). Novos canais antes do gatilho de Ads. Tráfego pago em qualquer forma.
+### Duas lacunas de medição que precisam ser fechadas
+
+1. **WhatsApp e telefone são canal cego.** É por onde todo contato real acontece e nada disso entra no banco sozinho. Enquanto o registro for manual, ele é obrigação de quem falou.
+2. **pSEO sem atribuição.** Se um lead vier de uma página de intenção de compra, hoje não há como saber. Sem isso, o canal nunca vai poder ser julgado.
+
+### O teste de 14 dias
+
+> ⚠️ **Proposto por mim, aguardando sua confirmação, Nicolas.** Você concordou com o rebaixamento do Instagram, mas não fechou o número.
+
+**Se indicação, comunidades e a base morna não produzirem pelo menos 5 conversas reais com dono de negócio até 26/ago/2026, o problema deixa de ser canal.** Passa a ser oferta, e a discussão vira outra: o que estamos vendendo não está sendo entendido como algo que resolve um gargalo caro.
+
+Cinco conversas em 14 dias é um piso baixo de propósito. Não é meta de crescimento, é teste de sinal.
+
+---
+
+## O que este plano não cobre, por decisão
+
+Tráfego pago em qualquer forma. Novos canais além dos listados. Rebranding dos canais. Produção de conteúdo em plataforma nova antes de o Instagram converter o que já traz.
+
+---
+
+## O que mudou da v1 (21/jul → 12/ago)
+
+| v1 | v2 | Motivo |
+|---|---|---|
+| Instagram = motor de demanda principal, 80% da aposta | Instagram = ativo de conversão, sem meta de lead | Três semanas rodando, zero lead, enquanto indicação fez 5 de 5 |
+| Indicação = "subaproveitado" | Indicação = motor 1 | É o único canal com histórico de conversão |
+| Social selling na base = não existia | Motor 2, operado pelo colaborador | A base morna dos 84 e do vídeo de 9k nunca foi trabalhada |
+| Cold call = fora do plano | Hunter frio = lastro de volume | Estava descartado por depender do Nicolas. O colaborador destravou |
+| Métrica de output: "DMs de interesse recebidas" | Métrica de output: conversas iniciadas por origem | DM recebida é passiva. Conversa iniciada mede o que os dois motores fazem |
+| Risco declarado: "canal único é casa em terreno alheio", aceito nesta fase | Risco endereçado: dois motores com operadores distintos | Chegou a segunda pessoa. O motivo de aceitar o risco deixou de existir |
+| Preço das 3 frentes não definido | Faixa pública, número fechado na reunião | Preço definido em 09/ago, política em 12/ago |
