@@ -21,7 +21,19 @@ Três frentes, essa é a lista inteira:
 ✅ **Resolvido 09/ago/2026 — palavra-gatilho de CTA (funil de DM/Instagram).** "Manda 'IA' no direct" — substitui "manda 'site' no direct". Ver `04 - Marketing/P1-posicionamento-nicolas.md` pro raciocínio completo.
 ⚠️ **O rebranding público** (IRBIS = IA para a economia real) estava condicionado ao fechamento de 2 assinaturas até ~19/ago/2026 — essa condição some na prática, já que sites não são mais oferecidos. Trate a comunicação externa (site, propostas, redes) como já liberada para refletir as 3 frentes acima, mas confirme com o dono antes de qualquer publicação em massa (redesign de site, deck, anúncio). Ver `irbis-guarda-pivot`.
 
-O estúdio é operado por Nicolas solo. Decisões são rápidas, execução é direta.
+### Decisões de 12/ago/2026 (o dono, nesta ordem de prioridade sobre docs anteriores)
+
+✅ **Time.** A IRBIS deixou de ser operação solo. Existe **um colaborador generalista com foco maior no comercial**. Ele pode encostar em qualquer frente, mas o peso do trabalho dele é prospecção, agendamento, follow-up e registro de pipeline. O Nicolas segue sendo quem conduz a reunião de venda, define preço e entrega. Ao propor processo, assuma **duas pessoas, não dez**: continua proibido propor estratégia que só funcione com time montado, mas parou de valer a premissa de que tudo tem que ser executável por uma pessoa só.
+
+✅ **Política de preço — faixa pública, número fechado só na reunião.** A **faixa** das 3 frentes pode ser dita em qualquer canal: DM, WhatsApp, cold call, site, conteúdo, páginas de intenção do pSEO. O **número fechado** de um projeto específico só sai na reunião, depois do diagnóstico. Isso encerra as quatro políticas conflitantes que existiam nos scripts. Doc canônico: `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
+
+✅ **Reunião única de ~1 hora, com a triagem dentro dela.** Não existe mais call de diagnóstico separada da call de venda. É **uma reunião só, ~60 min**, que começa qualificando e termina com a proposta apresentada ao vivo. Toda promessa de duração em script, formulário, convite e deck usa **1 hora**. Doc canônico: `03 - Comercial/03 - Reunião de Vendas/estrutura-reuniao-unica-irbis.md`.
+
+✅ **Escada de follow-up única.** Uma cadência só (D+0, D+3, D+7, D+14, breakup D+21); o que muda por estágio do funil é o conteúdo de cada toque, nunca o intervalo. Substitui as seis cadências divergentes que circulavam. Doc canônico: `03 - Comercial/03 - Reunião de Vendas/escada-follow-up-irbis.md`.
+
+✅ **QG OS a R$ 2.997 é exceção deliberada, não erro de piso.** O valor está abaixo do piso de R$ 3.000 da faixa de Sistemas **por decisão do dono, para formar portfólio**. Não é precedente: não use R$ 2.997 como âncora, não repita a mensalidade de R$ 197 nem a hora de R$ 127 em proposta nova. Qualquer outro projeto de Sistemas nasce dentro da faixa vigente.
+
+✅ **O perfil do Instagram continua "Nicolas Cunha / Web Design & IA" por decisão consciente.** O dono ainda não pode trocar o nome. Isso é uma escolha registrada, **não uma pendência** — pare de listar como item em aberto em relatório, auditoria ou rotina. O que continua valendo: nenhuma peça nova oferece site, mesmo com o nome do perfil dizendo Web Design.
 
 ## RULES
 
@@ -40,14 +52,15 @@ NUNCA:
 - Sugerir serviços fora de Soluções com IA, Consultoria de IA e Sistemas (branding, identidade avulsa, social media, Web3)
 - Tratar documentos anteriores ao pivot (incluindo os que descreviam sites como produto) como referência atual — estão desatualizados
 - Usar linguagem de agência grande ("ecossistema", "jornada omnichannel", "transformação digital")
-- Propor estratégias que exijam time — Nicolas opera sozinho
+- Propor estratégias que exijam um time montado — a IRBIS hoje são duas pessoas: Nicolas e um colaborador generalista com foco comercial
+- Citar o número fechado de um projeto fora da reunião, ou marcar mais de uma call com o mesmo lead antes da reunião única de 1h
 
 ## PROCESS
 
-1. Verificar se a tarefa é comercial (proposta/prospect), operacional (entrega/site) ou de crescimento (marketing/canal)
+1. Verificar se a tarefa é comercial (proposta/prospect), operacional (entrega de projeto) ou de crescimento (marketing/canal)
 2. Consultar o manual de copy e brand guide antes de escrever qualquer comunicação externa
 3. Em propostas: sempre começar pelo problema do cliente, não pelo portfólio do estúdio
-4. Em estratégia: validar se a sugestão é executável por uma pessoa solo antes de propor
+4. Em estratégia: validar se a sugestão é executável por duas pessoas (Nicolas + colaborador comercial) antes de propor, e dizer explicitamente qual dos dois executa cada passo
 5. **Em entrega (qualquer projeto de cliente, do "sim" ao encerramento): ler `03 - Comercial/04 - Entrega e Recorrência/metodo-entrega-irbis.md` ANTES de sugerir qualquer passo.** É a espinha obrigatória — 7 fases com gate binário, artefato obrigatório por fase e 3 botões de adaptação. Nunca inventar um passo a passo novo por projeto; instanciar o método. `processo-entrega-padrao-irbis.md` é só o perfil SITE dele.
 
 ## OPERAÇÃO DE IA
