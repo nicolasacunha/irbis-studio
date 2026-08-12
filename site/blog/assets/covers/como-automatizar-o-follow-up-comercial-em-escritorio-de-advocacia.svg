@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">como automatizar o follow-up comercial em escritório de advocacia</title>
+  <desc id="desc">Fluxo visual de contato, responsável, lembrete e revisão humana em um escritório de advocacia.</desc>
+  <rect width="1600" height="900" fill="#21201B"/>
+  <rect x="100" y="140" width="1400" height="620" rx="18" fill="#292820" stroke="#8FA987" stroke-width="2"/>
+  <text x="170" y="245" fill="#F2EFE9" font-family="Georgia,serif" font-size="55" font-weight="700">follow-up comercial</text>
+  <text x="170" y="310" fill="#8FA987" font-family="Georgia,serif" font-size="55" font-weight="700">em escritório de advocacia</text>
+  <g font-family="sans-serif" font-size="26">
+    <rect x="170" y="430" width="250" height="130" rx="12" fill="#39382E"/><text x="205" y="485" fill="#F2EFE9">Contato</text><text x="205" y="525" fill="#B8B4A7">registro inicial</text>
+    <rect x="675" y="430" width="250" height="130" rx="12" fill="#4A5D43"/><text x="710" y="485" fill="#F2EFE9">Lembrete</text><text x="710" y="525" fill="#D4E2CE">próxima ação</text>
+    <rect x="1180" y="430" width="250" height="130" rx="12" fill="#39382E"/><text x="1215" y="485" fill="#F2EFE9">Revisão</text><text x="1215" y="525" fill="#B8B4A7">profissional decide</text>
+  </g>
+  <path d="M450 495H645M955 495H1150" stroke="#8FA987" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="645" cy="495" r="8" fill="#8FA987"/><circle cx="1150" cy="495" r="8" fill="#8FA987"/>
+  <text x="170" y="680" fill="#B8B4A7" font-family="sans-serif" font-size="25">Dados, responsabilidade e contexto antes da automação.</text>
+</svg>

@@ -1,6 +1,16 @@
 {
     "posts": [
         {
+            "slug": "como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia",
+            "title": "Como automatizar o follow-up comercial em escritório de advocacia",
+            "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial.",
+            "dateISO": "2026-08-12",
+            "pilar": "solucoes-com-ia",
+            "keywords": ["como automatizar o follow-up comercial em escritório de advocacia", "CRM jurídico", "automação de atendimento jurídico", "follow-up comercial"],
+            "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia.svg",
+            "readingTimeMin": 7
+        },
+        {
             "slug": "quanto-custa-automacao-com-ia-para-industria",
             "title": "Quanto custa automação com IA para indústria?",
             "description": "Entenda quais fatores de escopo, dados e revisão humana determinam o investimento em uma automação com IA para indústria.",
