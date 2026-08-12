@@ -54,6 +54,16 @@ Isso é o diagnóstico do próprio acervo (Skale, feed F1/F2): **o perfil não v
 | **LinkedIn** | Reciclagem do melhor conteúdo do IG | Colaborador, quando sobrar | Pausado | Só reaproveitamento, sem produção própria |
 | **Ads** | Desligado | — | Volta com receita própria ≥ R$ 4k/mês | O acervo confirma a regra: mídia só a partir de investimento ≥ ticket médio, mínimo prático R$ 2.000/mês, e depois dos primeiros contratos por outbound |
 
+### O que se prospecta: Bot de IA, uma oferta só
+
+Decisão do dono em 12/ago/2026: **Bot de IA é a porta, Sistemas é o upsell.** Prospecção fala de bot. Uma oferta por lista, um gancho por oferta.
+
+Sistemas sai do discurso de topo de funil e entra no de carteira: vendido a quem já é cliente, no repitch de F7 e no campo "próxima camada". Consultoria de IA não é porta, a R$ 5.000 tem tamanho de projeto.
+
+Isso importa para o canal porque muda o gancho: o colaborador não aborda perguntando se a empresa quer um sistema. Aborda pelo atendimento, orçamento ou triagem que hoje depende de alguém digitando no WhatsApp.
+
+Detalhe da escada em `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
+
 ### A ordem importa: morno antes de frio
 
 1. **Indicação e comunidades.** Custa horas, não semanas. Lista finita e quente.

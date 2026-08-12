@@ -34,6 +34,23 @@ Fonte: `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbi
 
 **Nunca cotar por hora.** Falou em hora, virou freelancer na cabeça do cliente. A única exceção documentada está na cláusula de horas excedentes do contrato assinado, que é pós-venda, não é oferta.
 
+## A escada de oferta (decisão de 12/ago/2026)
+
+**Bot de IA é a porta. Sistemas é o upsell.**
+
+| Degrau | Produto | Preço | Papel |
+|---|---|---|---|
+| **Entrada** | **Bot de IA** | R$ 1.000 setup + R$ 500/mês | O que se prospecta. Venda rápida, objeção baixa, gera MRR |
+| **Camada seguinte** | **Sistemas** | R$ 3.000 a 10.000 | Vendido a quem já é cliente do bot, não prospectado a frio |
+| Lateral | **Consultoria de IA** | R$ 5.000 ou R$ 10.000 | Não é porta. A R$5.000 tem tamanho de projeto, não de entrada. Entra quando o cliente pede diagnóstico, não como oferta de topo |
+
+**O que isso muda na prática:**
+- O colaborador prospecta **Bot de IA**, não as três frentes. Uma oferta por lista, um gancho por oferta.
+- Sistemas sai do discurso de prospecção e entra no de carteira. O momento do upsell é o repitch de F7 do método e o campo "próxima camada" da carteira.
+- A faixa de Sistemas continua pública (ver tabela acima), porque quem pergunta pergunta. O que muda é que ela não é mais o que se oferece primeiro.
+
+**Por que isso importa para o caixa:** o Bot é o único produto recorrente que existe. A meta de R$ 4.000/mês de receita recorrente até 30/set só tem caminho aritmético por aqui: **8 clientes de bot**. Sistemas e Consultoria são one-time e não constroem MRR.
+
 ## Como a faixa aparece em cada canal
 
 **Instagram, conteúdo, páginas de intenção do pSEO.** A faixa pode ser o assunto do conteúdo. As páginas de "quanto custa sistema com IA para advocacia" já operam assim e estão certas. O conteúdo entrega a faixa e o CTA leva pra conversa.
@@ -69,17 +86,24 @@ Regras que decorrem disso:
 
 ## Pendências que travam preço
 
-Estas seguem em aberto e nenhuma pode ser resolvida por dedução:
+### 🔴 Bloqueantes desde 12/ago, porque o Bot virou a porta
 
-1. Teto de "Sistemas muito complexo" e critério de gatilho para sair da faixa padrão.
-2. Faixa e modelo de "Automações fora do bot".
-3. Preço de "Consultoria de IA enterprise" e o que caracteriza enterprise.
-4. **O que exatamente os R$ 500/mês do Bot de IA cobrem.** Hoje se vende um recorrente sem escopo de serviço definido. Isso precisa virar lista antes do próximo bot vendido.
-5. Se o Bot de IA tem prazo mínimo de contrato ou é mês a mês.
-6. **Custo de token por cliente/mês do Bot de IA.** É o único produto com custo marginal que cresce com o uso. Sem esse número, a margem do MRR é desconhecida.
+Estas três eram toleráveis quando o Bot era um produto lateral. Com ele como oferta de entrada e única fonte de MRR, **cada uma bloqueia a venda ou a margem do produto principal**:
+
+1. **O que exatamente os R$ 500/mês cobrem.** Monitoramento? Ajuste de prompt? Suporte? Fila de mudanças? Hoje se vende um recorrente sem escopo de serviço definido. Sem essa lista, o primeiro cliente define o escopo sozinho, na primeira vez que pedir algo, e vira precedente para todos os outros.
+2. **Custo de token por cliente/mês.** É o único produto com custo marginal que cresce com o uso. Sem esse número, a margem do MRR é desconhecida, e o MRR é a receita que a casa está apostando. Regra do próprio acervo: modele o custo por cliente antes de precificar o serviço.
+3. **Prazo mínimo de contrato: mês a mês ou fidelidade de 3, 6 ou 12 meses.** Define se o R$ 500 é receita previsível ou receita que pode sumir em 30 dias, e é cláusula de contrato, não detalhe comercial.
+
+**Nenhuma das três se resolve por dedução.** Enquanto estiverem abertas, o bot pode ser prospectado e a faixa pode ser dita, mas o primeiro fechamento não deveria acontecer sem elas.
+
+### Abertas, não bloqueantes agora
+
+4. Teto de "Sistemas muito complexo" e critério de gatilho para sair da faixa padrão.
+5. Faixa e modelo de "Automações fora do bot".
+6. Preço de "Consultoria de IA enterprise" e o que caracteriza enterprise.
 7. Trava 2 da calculadora de preço: a âncora de mercado ainda é a do mundo de site (freelancer de GetNinjas, agência de site). Precisa ser levantada de novo contra dev freelancer, consultoria de automação e agência de software.
 
-Enquanto essas seis primeiras estiverem abertas, o cliente que cair nelas ouve "sob consulta" e o valor volta com o Nicolas.
+Enquanto as itens 4 a 6 estiverem abertos, o cliente que cair neles ouve "sob consulta" e o valor volta com o Nicolas.
 
 ## O que este documento substitui
 

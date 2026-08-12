@@ -33,6 +33,8 @@ Três frentes, essa é a lista inteira:
 
 ✅ **QG OS a R$ 2.997 é exceção deliberada, não erro de piso.** O valor está abaixo do piso de R$ 3.000 da faixa de Sistemas **por decisão do dono, para formar portfólio**. Não é precedente: não use R$ 2.997 como âncora, não repita a mensalidade de R$ 197 nem a hora de R$ 127 em proposta nova. Qualquer outro projeto de Sistemas nasce dentro da faixa vigente.
 
+✅ **Escada de oferta: Bot de IA é a porta, Sistemas é o upsell.** Decisão do dono ("por agora vai ser assim"). O **Bot de IA** (R$1.000 setup + R$500/mês) é o produto de entrada e o alvo padrão da prospecção: venda rápida, objeção baixa, e o único MRR que a casa tem. **Sistemas** (R$3.000–10.000) deixa de ser o que se prospecta e vira a camada seguinte, vendida a quem já é cliente. **Consultoria de IA** continua existindo, mas não é porta: a R$5.000 ela é do tamanho de um projeto, não de uma entrada. Consequência operacional: o colaborador prospecta **Bot de IA**, não as três frentes ao mesmo tempo.
+
 ✅ **O perfil do Instagram continua "Nicolas Cunha / Web Design & IA" por decisão consciente.** O dono ainda não pode trocar o nome. Isso é uma escolha registrada, **não uma pendência** — pare de listar como item em aberto em relatório, auditoria ou rotina. O que continua valendo: nenhuma peça nova oferece site, mesmo com o nome do perfil dizendo Web Design.
 
 ## RULES
