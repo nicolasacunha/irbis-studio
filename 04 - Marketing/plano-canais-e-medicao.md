@@ -54,6 +54,24 @@ Isso é o diagnóstico do próprio acervo (Skale, feed F1/F2): **o perfil não v
 | **LinkedIn** | Reciclagem do melhor conteúdo do IG | Colaborador, quando sobrar | Pausado | Só reaproveitamento, sem produção própria |
 | **Ads** | Desligado | — | Volta com receita própria ≥ R$ 4k/mês | O acervo confirma a regra: mídia só a partir de investimento ≥ ticket médio, mínimo prático R$ 2.000/mês, e depois dos primeiros contratos por outbound |
 
+### Para quem se prospecta: advocacia, indústria, agência
+
+Decisão do dono em 12/ago/2026. **O ICP declarado continua amplo** (donos de negócio da economia real); o que ganha vertical é a **prospecção**: lista, gancho, criativo e a nomenclatura da abordagem. Regra do acervo: nicha-se a prospecção, não a empresa. Custo de estar errado é 60 dias, não o posicionamento.
+
+As três não foram escolhidas por hipótese. Foram reveladas duas vezes, de forma independente:
+
+| Origem | O que apontou |
+|---|---|
+| Contratos e leads reais | A. Cunha Advocacia (**advocacia**), Odery Drums (**indústria**), QG Group (**agência/time criativo**) |
+| Rotina de pSEO, sem coordenação | As 7 páginas publicadas miram **advocacia, indústria e agência de marketing** |
+
+É o método do acervo para quem ainda não tem ritual de ICP: olhar os últimos contratos fechados e buscar o que têm em comum.
+
+**O atributo que o colaborador reconhece numa lista**, e que vale mais que a vertical:
+- Time pequeno com dono acessível (3 a 8 pessoas nos casos reais).
+- Trabalho repetitivo e documentável, com o processo já na cabeça de alguém.
+- **Já tentaram resolver com ferramenta e a ferramenta não conheceu a operação.** Este é o mais forte: é o vilão do P1 virando critério de qualificação. Quem nunca tentou não sente a dor; quem tentou e se frustrou já chega pré-vendido.
+
 ### O que se prospecta: Bot de IA, uma oferta só
 
 Decisão do dono em 12/ago/2026: **Bot de IA é a porta, Sistemas é o upsell.** Prospecção fala de bot. Uma oferta por lista, um gancho por oferta.
