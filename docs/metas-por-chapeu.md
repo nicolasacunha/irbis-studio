@@ -12,7 +12,16 @@ A IRBIS tem um dono e quatro chapéus. Cada chapéu tem NO MÁXIMO 3 metas (regr
 | Clientes fundadores de IA assinados | 2 (mãe + QG OS) | ~19/ago | Council 20/jul: pivot atrás de caixa |
 | Clientes novos por mês | ≥ 2 | A partir de set | Meta de 90 dias (JDP) |
 | **Bots de IA fechados** | **3** | **Até 30/set** | Decisão do dono, 12/ago/2026 |
-| **Receita contratada** | **R$ 12.000** (3 × R$ 4.000) | Até 30/set | Decorre da meta acima |
+| **Receita contratada** | **R$ 12.000 no piso** | Até 30/set | Decorre da meta acima. Ver a nota sobre a faixa |
+
+> ⚠️ **A conta mudou no fim do dia 12/ago, quando a mensalidade do bot virou faixa.**
+>
+> Quando a meta foi fechada, um bot valia R$ 4.000 de receita contratada (R$ 1.000 de setup + 6 × R$ 500). Com a mensalidade em faixa de R$ 500 a R$ 3.000, um bot passa a valer **entre R$ 4.000 e R$ 19.000**. As duas metas deixaram de ser equivalentes:
+>
+> - **3 bots** continua sendo a meta. Ela mede se o funil volta a produzir de forma repetida, que é o problema real de agosto.
+> - **R$ 12.000** vira o **piso** do que esses 3 bots produzem, não o número exato.
+>
+> **Isso abre um caso que precisa da sua decisão quando acontecer:** um único cliente do porte da Odery, fechado sozinho, entrega R$ 19.000 de receita contratada e supera o dinheiro da meta com **1 bot, não 3**. Dinheiro atingido, repetibilidade não provada. Se isso acontecer antes de 30/set, decida na hora se conta como meta cumprida. Não deduza pelo valor.
 | ~~Receita própria mensal ≥ R$ 4k limpos na PJ~~ | — | ~~Até 30/set~~ | 🛑 **Superada em 12/ago/2026.** Ver abaixo |
 
 > 🛑 **Por que a meta de R$ 4k/mês recorrente foi substituída (12/ago/2026).**

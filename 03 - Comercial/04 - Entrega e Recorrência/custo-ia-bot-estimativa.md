@@ -56,9 +56,15 @@ O cenário econômico assume conversas curtas; o caro assume conversas longas. A
 
 ## O que ainda falta medir
 
-1. **Qual modelo o bot da Odery usa.** Sem isso, não dá pra validar a estimativa contra um caso real. Basta uma pergunta ao Maurício, ou acesso de leitura ao painel de billing.
-2. **Volume real de conversas de um cliente típico.** A tabela cobre de 500 a 10.000 por mês porque não existe um número medido.
-3. **Se algum bot precisa de mídia.**
+⚠️ **A Odery não serve para validar isto.** Descoberto em 12/ago: o bot de lá aparentemente **não gera contagem de token** — provavelmente roda em modelo local, não em API paga. Se for o caso, o custo variável ali é zero e não existe fatura para comparar com esta tabela. **A validação precisa vir do primeiro cliente de bot que rodar em API.**
+
+Isso muda uma coisa importante: modelo local é uma **opção de arquitetura**, não só um detalhe. Onde ele couber, o custo variável do cliente desaparece e sobra só a infraestrutura. Vale saber por que a Odery foi por esse caminho antes de assumir API como padrão nas próximas vendas.
+
+Segue faltando:
+
+1. **Volume real de conversas de um cliente típico.** A tabela cobre de 500 a 10.000 por mês porque não existe um número medido.
+2. **Se algum bot precisa de mídia.**
+3. **Quando modelo local vale mais que API**, e o que muda no preço quando vale.
 
 ## Consequência operacional que decorre disso
 
@@ -66,6 +72,10 @@ A Cláusula 9.1 obriga o Prestador a **informar estimativa antes do início e av
 
 Sem esse acesso, a cláusula é impossível de cumprir: não dá para avisar sobre uma variação que não se enxerga. Foi exatamente o que aconteceu na Odery.
 
-## Teto de uso (Cláusula 9.2)
+## Teto de uso: descartado
 
-O lugar está reservado no contrato e continua vazio. Com a tabela acima, dá pra propor um: um teto em conversas por mês, com o excedente cotado à parte, protege o cliente da surpresa e a IRBIS da conversa difícil no mês 2. O número é decisão do dono.
+Decisão do dono em 12/ago/2026: **não existe teto.** O raciocínio, verbatim: *"eu estou vendendo negócio pro cara e vou falar que ele só pode usar até isso? Não faz sentido."*
+
+Um teto transformaria a ferramenta em algo que o cliente precisa racionar, o que contradiz o que o produto promete. A proteção contra a fatura-surpresa passa a ser inteiramente a transparência da Cláusula 9.1: estimativa antes de começar, aviso quando o consumo variar de forma relevante. **O cliente decide se quer usar mais; a IRBIS garante que ele nunca descubra a conta depois do fato.**
+
+Isso torna o acesso de leitura ao billing ainda mais necessário, não menos: sem teto, o aviso é a única rede.

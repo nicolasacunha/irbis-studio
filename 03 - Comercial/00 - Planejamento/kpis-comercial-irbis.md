@@ -75,9 +75,10 @@ Quem enche: **colaborador**, exceto onde marcado.
 
 | Indicador | Meta | Dono | Onde vive |
 |---|---|---|---|
-| **Receita contratada** ← *KPI que decide* | **R$ 12.000 até 30/set** = 3 bots × R$ 4.000 (setup + 6 meses travados), contados no dia da assinatura | Nicolas | `pipeline` + financeiro |
-| **Bots fechados** | **3 até 30/set.** 1 em agosto, 2 em setembro. Compatível com "≥ 2 clientes novos/mês" das metas por chapéu | Nicolas | `pipeline` |
-| **MRR ativo** | Termômetro, não meta. Soma das mensalidades correndo no mês. Projeção: R$ 1.500 em 30/set | Nicolas | Financeiro |
+| **Receita contratada** ← *KPI que decide* | **R$ 12.000 até 30/set, no piso.** Cada bot vale de R$ 4.000 a R$ 19.000 conforme a mensalidade fechada (setup + 6 meses travados), contado no dia da assinatura | Nicolas | `pipeline` + financeiro |
+| **Bots fechados** | **3 até 30/set.** 1 em agosto, 2 em setembro. É esta linha que mede repetibilidade do funil; a de receita mede dinheiro. Podem divergir | Nicolas | `pipeline` |
+| **Mensalidade média fechada** | Sem meta. Termômetro de onde os clientes caem na faixa de R$ 500 a R$ 3.000. Se ficar colada no piso, a calibração na reunião não está funcionando | Nicolas | `pipeline` |
+| **MRR ativo** | Termômetro, não meta. Soma das mensalidades correndo no mês. Deixou de ter projeção fixa: depende de onde cada bot cair na faixa | Nicolas | Financeiro |
 | Conversão reunião → fechamento | Referência da mentoria de 03/ago: 35 a 40% com apresentação estruturada, 10 a 15% sem. Sem baseline próprio | Nicolas | `pipeline` |
 | Upsells de Sistemas vendidos para carteira | Sem meta. Depende de quantos bots existirem | Nicolas | `pipeline` |
 | **Ticket médio por frente** (medido separado, nunca em média única) | Bot: R$ 1.000 setup + R$ 500/mês. Sistemas: dentro de R$ 3.000 a 10.000. Consultoria: R$ 5.000 ou R$ 10.000 | Nicolas | `pipeline` |

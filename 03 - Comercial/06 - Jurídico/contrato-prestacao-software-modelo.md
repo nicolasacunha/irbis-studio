@@ -108,7 +108,11 @@ O Prestador entra nessas contas como colaborador técnico, para configurar e ope
 
 **9.1. Custo de uso de inteligência artificial.** Quando o sistema ou o bot usar modelos de inteligência artificial, a conta do provedor do modelo também fica em nome do Contratante e é paga por ele. **Esse custo varia com o volume de uso**: quanto mais conversas o bot atender, maior a fatura do mês. O Prestador informa uma estimativa antes do início e avisa o Contratante quando observar variação relevante, mas não responde pelo valor da fatura.
 
-**9.2. Teto de uso.** {{TETO_DE_USO}} ⚠️ **A definir.** Quando houver teto de volume acordado, ele entra aqui, junto com o que acontece ao ser ultrapassado.
+**9.2. Sem limite de uso.** Não há teto de volume. O Contratante usa o sistema quanto precisar e paga o consumo que gerar, direto ao provedor.
+
+> **Decisão do dono, 12/ago/2026.** A cláusula de teto foi descartada em vez de preenchida. O raciocínio, verbatim: *"eu estou vendendo negócio pro cara e vou falar que ele só pode usar até isso? Não faz sentido."* Um teto transformaria uma ferramenta de operação em algo que o cliente precisa racionar, o que é o oposto do que o produto promete.
+>
+> **A proteção contra surpresa é a transparência da Cláusula 9.1, não um limite.** O Prestador informa a estimativa antes de começar e avisa quando observar variação relevante. O cliente decide se quer usar mais.
 
 ---
 

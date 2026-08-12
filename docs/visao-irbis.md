@@ -18,7 +18,7 @@ Um dono, sem CNPJ (LTDA a caminho), receita de cliente de R$ 3.200 no ano. Do ou
 
 ## Ponto B — próximos 2 anos (compromisso firme)
 
-**Até out/2026:** 2 clientes fundadores de IA assinados e entregues como cases; ≥ 2 clientes novos/mês; **3 Bots de IA fechados até 30/set, o que dá R$ 12.000 de receita contratada e R$ 1.500 de MRR ativo.**
+**Até out/2026:** 2 clientes fundadores de IA assinados e entregues como cases; ≥ 2 clientes novos/mês; **3 Bots de IA fechados até 30/set, o que dá pelo menos R$ 12.000 de receita contratada.**
 
 > 🛑 **Atualizado em 12/ago/2026.** A redação anterior era "R$ 4k/mês de receita própria recorrente entrando limpo na conta PJ". Ela foi escrita quando o produto era site com plano de manutenção, e ficou sem mecanismo quando o site saiu do escopo em 04/ago. A unidade passou de MRR num instante para **receita contratada**, porque a fidelidade de 6 meses do Bot faz o retrato de um dia esconder valor já vendido. O "limpo na conta PJ" virou meta do chapéu Dono, já que é formalização e não venda. Raciocínio completo em `docs/metas-por-chapeu.md`. ~~Se as 2 assinaturas saírem até ~19/ago, rebranding: IRBIS = IA para a economia real, sites como porta e upsell.~~ **Superado em 04/ago:** o rebranding não depende mais de gatilho de assinatura — sites saíram do escopo por decisão direta, não por condição de caixa. Comunicação externa já pode refletir as 3 frentes (ver `CLAUDE.md`).
 

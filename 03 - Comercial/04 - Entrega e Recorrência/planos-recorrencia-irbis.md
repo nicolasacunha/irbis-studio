@@ -18,10 +18,20 @@ O Bot de IA (dentro de Soluções com IA, ex.: o bot de WhatsApp implementado na
 
 | Item | Definição |
 |---|---|
-| Setup | **R$ 1.000**, one-time |
-| Mensalidade | **R$ 500/mês**, valor fixo, sem tiers e sem desconto por duração |
+| Setup | **R$ 1.000**, one-time ⚠️ ver pendência abaixo |
+| Mensalidade | **Faixa de R$ 500 a R$ 3.000/mês.** Número fechado sai na reunião |
 | **Fidelidade mínima** | **6 meses** |
-| LTV mínimo do contrato | **R$ 4.000** (R$ 1.000 + 6 × R$ 500) |
+| Receita contratada por bot | **R$ 4.000 no piso** (R$ 1.000 + 6 × R$ 500) a **R$ 19.000 no topo** (R$ 1.000 + 6 × R$ 3.000) |
+
+### Por que a mensalidade virou faixa (12/ago/2026)
+
+O valor era R$ 500 fixo, definido quando o Bot era produto lateral. Ao olhar a Odery, o dono constatou que cobraria **cerca de R$ 3.000** de um cliente daquele porte, *"de tantos que eles gastam, porque é uma empresa muito grande, que tem muitos pedidos todos os dias"*. Um preço único não cobre uma diferença de seis vezes.
+
+**A mecânica é a mesma de Sistemas**, que já funciona assim: faixa pública, número fechado na reunião. Calibração idêntica: **topo da faixa quando a operação é grande e o bot é central; base quando é conveniência.**
+
+O que justifica o topo não é só o porte do cliente, é o trabalho real: mais volume significa mais casos extremos aparecendo, mais monitoramento e mais ajustes dentro dos dois mensais. Um bot atendendo centenas de pedidos por dia dá mais trabalho de sustentar que um respondendo dúvidas de horário de funcionamento.
+
+⚠️ **Pendência: o setup acompanha a faixa?** O dono falou só da mensalidade. Um bot de operação grande também dá mais trabalho para construir, então o setup de R$ 1.000 provavelmente também deveria variar. **Não deduzi.** Até ele decidir, o setup é R$ 1.000 para todo mundo.
 
 ### Por que 6 meses
 
