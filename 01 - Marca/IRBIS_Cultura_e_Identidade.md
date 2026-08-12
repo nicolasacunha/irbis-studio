@@ -1,24 +1,32 @@
 # Cultura e Identidade — IRBIS
 
-> 🛑 **PRÉ-PIVOT — NÃO É REFERÊNCIA ATUAL.** Marcado em 12/ago/2026.
-> Este documento foi escrito sob o modelo de negócio anterior, em que a IRBIS vendia sites e landing pages. **Esse modelo acabou em 04/ago/2026.** Hoje a IRBIS vende só três frentes: Soluções com IA, Consultoria de IA e Sistemas sob medida.
-> **O que aqui está morto: só a seção Visão. O resto do documento continua vigente.** Morreu a âncora de tese da Visão, a frase "Consistente com a tese registrada em `docs/visao-irbis.md`: 'site é a porta; sistema com IA é o que mora dentro'", que é a tese de 28/jul substituída integralmente em 04/ago (site deixou de ser porta porque deixou de ser produto). Morreu junto a menção a "sites" na justificativa do Propósito, onde se lê "a especificidade de execução (sites, sistemas com IA, economia real) mora na Visão e nos Valores". A frase da Visão em si, "ser a referência de execução com IA para negócios da economia real", segue de pé e ficou até mais precisa depois do pivot.
-> **O que ainda serve:** tudo fora da Visão. O Propósito ("ajudar líderes a escalar suas empresas") e a decisão consciente de não amarrar o "como" nele. O diagnóstico de cultura (quadrante Resultados, confirmado como intencional, e os 3 sintomas de estagnação). Os 3 valores completos com comportamento esperado, violação e ritual: compromisso com resultado (acompanhamento de 30 dias pós-entrega), no bullshit (resposta em até 24h) e honestidade sempre (aviso proativo de erro ou atraso). E a pendência registrada no fim, a Missão formal, que continua em aberto.
-> Fonte vigente: `CLAUDE.md` (identidade e escopo) e `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbis.md` (preço).
+> **Vigente.** Construído em 28/jul/2026, atualizado em 12/ago/2026. Propósito, Visão, diagnóstico de cultura e os 3 valores seguem de pé; o que mudou foi a âncora de tese da Visão e o gatilho de contratação no fim do documento.
+>
+> | Antes | Agora | Motivo |
+> |---|---|---|
+> | Visão ancorada em "site é a porta; sistema com IA é o que mora dentro" | Visão ancorada nas 3 frentes | A tese de 28/jul foi substituída em 04/ago: site deixou de ser porta porque deixou de ser produto |
+> | Propósito citava "sites" como exemplo de execução | Cita as 3 frentes | Mesmo motivo |
+> | Capacitação de liderança "não se aplica enquanto a IRBIS é operação solo" | Gatilho disparado | A IRBIS deixou de ser solo em 12/ago |
+>
+> A frase da Visão em si não mudou e ficou mais precisa depois do pivot.
 
-> Construído em 28/jul/2026, a partir do framework das aulas do G4 Scale (Bernardo Carneiro — Liderança de Alta Performance e Governança de Gente; Paula Pimenta — Construção de Cultura e Gestão de Pessoas). Nicolas define o conteúdo; o framework só dá a estrutura.
+> Framework: aulas do G4 Scale (Bernardo Carneiro, Liderança de Alta Performance e Governança de Gente; Paula Pimenta, Construção de Cultura e Gestão de Pessoas). Nicolas define o conteúdo; o framework só dá a estrutura.
 
 ## Propósito (Why)
 
 **Ajudar líderes a escalar suas empresas.**
 
-Fica abstrato de propósito — a especificidade de execução (sites, sistemas com IA, economia real) mora na Visão e nos Valores, não aqui. Decisão consciente: propósito não amarra o "como", pra não ficar refém de um mecanismo específico se a IRBIS evoluir.
+Fica abstrato de propósito. A especificidade de execução (sistemas, automação e IA para a economia real) mora na Visão e nos Valores, não aqui. Decisão consciente: propósito não amarra o "como", pra não ficar refém de um mecanismo específico se a IRBIS evoluir.
+
+O pivot de 04/ago provou que a decisão estava certa: a IRBIS trocou o produto inteiro e o propósito continuou valendo sem uma linha de ajuste.
 
 ## Visão (Where)
 
 **Ser a referência de execução com IA para negócios da economia real.**
 
-Consistente com a tese registrada em `docs/visao-irbis.md`: "site é a porta; sistema com IA é o que mora dentro."
+O "como" da Visão são as três frentes definidas em 04/ago/2026: Soluções com IA, Consultoria de IA e Sistemas sob medida. Referência de execução se prova entregando sistema que roda na operação do cliente, não vendendo tecnologia.
+
+A âncora anterior ("site é a porta; sistema com IA é o que mora dentro", tese de 28/jul) foi substituída integralmente: site deixou de ser porta porque deixou de ser produto. Ver `CLAUDE.md` e `docs/visao-irbis.md`.
 
 ## Cultura — diagnóstico
 
@@ -60,5 +68,8 @@ Honestidade em números, cases, no que já fiz e no que não fiz — inclusive q
 
 ## Pendente para sessão futura
 
-- Missão (o "what" formal) — hoje implícita no CLAUDE.md e em `docs/visao-irbis.md`, não foi formalizada nesta sessão.
-- Capacitação de liderança e comunicação interna — etapas do framework de 7 passos que não se aplicam enquanto a IRBIS é operação solo; revisitar quando houver contratação (ver `docs/superpowers/specs/2026-07-20-fundacao-agencia-design.md`).
+- Missão (o "what" formal). Hoje implícita no `CLAUDE.md` e em `docs/visao-irbis.md`, ainda não formalizada.
+- **Capacitação de liderança e comunicação interna. ⚡ O gatilho disparou em 12/ago/2026.** Estas etapas do framework de 7 passos estavam adiadas "enquanto a IRBIS é operação solo, revisitar quando houver contratação". A contratação aconteceu: entrou um colaborador generalista com foco comercial. O que isso abre, e que ainda não foi feito:
+  - Como o colaborador recebe a cultura. Hoje ela existe em documento, não em ritual de entrada. O acervo é direto nisso: onboarding responde por 80% das saídas precoces.
+  - Quais dos 3 rituais passam a valer para ele e como se verifica. A resposta em 24h e o aviso proativo de erro deixam de ser disciplina pessoal do Nicolas e viram acordo entre duas pessoas.
+  - O sintoma "decisões centralizadas" do diagnóstico abaixo deixa de ser inevitável e vira escolha. Vale reavaliar o que continua sendo decisão do Nicolas e o que passa a ser do colaborador. Um primeiro corte já existe na escada de follow-up: ele dispara os degraus padrão sozinho, e o que sai do modelo volta para o Nicolas.
