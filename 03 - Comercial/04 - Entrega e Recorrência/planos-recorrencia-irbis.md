@@ -64,13 +64,24 @@ Após os 6 meses, o contrato segue mês a mês, salvo renovação por novo perí
 - **Sistemas** e **Consultoria de IA**: preço fechado, one-time. Não assumir mensalidade em nenhum dos dois.
 - **Automações fora do bot padrão**: o dono descreveu como "vai muito de escopo a escopo". Sem faixa e sem recorrência confirmada.
 
-## A trava que continua aberta
+## Quem paga o custo de IA: o cliente
 
-⚠️ **Custo de token por cliente/mês não foi medido.** O bot é o único produto com custo marginal que cresce com o uso, e agora é a receita principal da casa. Sem esse número, a margem do MRR é desconhecida: R$ 500 por mês pode ser 90% de margem ou 40%, e ninguém sabe qual.
+✅ **Resolvido em 12/ago/2026.** A infraestrutura e o consumo dos modelos de IA rodam **na conta do cliente e são pagos por ele**, direto ao provedor. É assim que o bot da Odery já opera hoje, e é coerente com a Lei da F5 do método (produção nas contas do cliente) e com a Cláusula 9 do contrato.
 
-Regra do próprio acervo (`operacoes/_playbook.md`, armadilha 6): modele o custo por cliente/mês antes de precificar o serviço. Aqui o preço já está definido, então a medição serve para saber se ele se sustenta, e é o dado que decide se o R$ 500 aguenta 8 clientes ou precisa de teto de uso.
+**O que isso significa para a margem:** os R$ 500/mês remuneram trabalho, não compute. Não há custo marginal crescente comendo o MRR, e a margem do produto é o tempo do Nicolas, não a fatura da nuvem. **A trava de margem que estava aberta deixou de existir.**
 
-O bot da Odery já está rodando e é a fonte de medição disponível.
+### Mas o risco mudou de lugar, não sumiu
+
+Passar o custo variável ao cliente resolve a margem e cria um problema novo, do outro lado da mesa: **quanto mais o bot trabalha, maior a fatura que o cliente recebe.** Um bot que atende bem gera uma conta maior no mês seguinte, e é o cliente quem abre essa fatura.
+
+Duas consequências práticas:
+
+1. **É objeção de venda, no produto que virou a porta.** A pergunta "além dos R$ 500, quanto mais eu pago?" vai aparecer em toda reunião de bot, e hoje não tem resposta. Precisa de uma faixa estimada de custo mensal de nuvem por volume, para dizer na reunião sem inventar.
+2. **É risco de churn no mês 2 ou 3.** Fatura maior que o esperado é o tipo de surpresa que faz cliente pedir para desligar, mesmo satisfeito com o bot. A fidelidade de 6 meses segura o contrato, não a relação.
+
+**Mitigação registrada na Cláusula 9.1 do contrato:** o Prestador informa uma estimativa antes do início e avisa quando observar variação relevante. A Cláusula 9.2 reserva o lugar de um **teto de uso**, ainda a definir.
+
+⚠️ **O que falta:** medir o consumo real do bot da Odery, que já roda, e transformar isso numa faixa de custo por volume de conversa. Deixou de ser trava de margem e virou **munição de venda e proteção contra churn**.
 
 ---
 

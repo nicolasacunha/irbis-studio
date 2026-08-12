@@ -52,7 +52,9 @@ Quando o objeto deste contrato for um Bot de IA, aplica-se o seguinte:
 
 **5.1. Valor e prazo.** A mensalidade é de {{VALOR_MENSALIDADE}}, com **prazo mínimo de 6 (seis) meses** contados da entrada em produção. Encerrado o prazo mínimo, o contrato segue por prazo indeterminado, mês a mês, salvo renovação por novo período acordada por escrito.
 
-**5.2. O que a mensalidade cobre.** Infraestrutura e disponibilidade do bot em produção; monitoramento do funcionamento; correção de defeito no que foi entregue; e **até 2 (dois) ajustes de prompt ou de fluxo por mês**.
+**5.2. O que a mensalidade cobre.** Gestão da infraestrutura e da disponibilidade do bot em produção; monitoramento do funcionamento; correção de defeito no que foi entregue; e **até 2 (dois) ajustes de prompt ou de fluxo por mês**.
+
+A mensalidade remunera o trabalho do Prestador. **Não inclui o custo da infraestrutura nem o custo de uso dos modelos de inteligência artificial**, que são do Contratante e seguem a Cláusula 9.
 
 **5.3. O que a mensalidade não cobre.** Ajustes além do segundo no mesmo mês; fluxo novo, canal novo ou integração nova; mudança que exija remodelar o comportamento do bot; e treinamento de novos usuários após o treinamento de virada. Tudo isso segue a Cláusula 4 (aditivo), com escopo e valor acordados por escrito antes da execução.
 
@@ -103,6 +105,10 @@ Ao fim do contrato, o Prestador devolve ou apaga os dados pessoais a que teve ac
 As contas de hospedagem e de serviços do sistema (por exemplo Vercel e Supabase) ficam em nome do Contratante e são pagas por ele.
 
 O Prestador entra nessas contas como colaborador técnico, para configurar e operar o que o projeto precisa. A titularidade e o custo da infraestrutura são do Contratante.
+
+**9.1. Custo de uso de inteligência artificial.** Quando o sistema ou o bot usar modelos de inteligência artificial, a conta do provedor do modelo também fica em nome do Contratante e é paga por ele. **Esse custo varia com o volume de uso**: quanto mais conversas o bot atender, maior a fatura do mês. O Prestador informa uma estimativa antes do início e avisa o Contratante quando observar variação relevante, mas não responde pelo valor da fatura.
+
+**9.2. Teto de uso.** {{TETO_DE_USO}} ⚠️ **A definir.** Quando houver teto de volume acordado, ele entra aqui, junto com o que acontece ao ser ultrapassado.
 
 ---
 

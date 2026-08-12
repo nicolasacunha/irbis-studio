@@ -91,11 +91,12 @@ Regras que decorrem disso:
 1. **Fidelidade do Bot de IA: 6 meses.** LTV mínimo de R$ 4.000, acima do piso de Sistemas, então a reunião de 1 hora se paga. O vencimento no mês 6 é o gatilho natural do upsell para Sistemas, com 5 meses de resultado medido na mão.
 2. **O que os R$ 500/mês cobrem:** infraestrutura e disponibilidade, monitoramento, correção de erro do que foi entregue, e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam. O que passa disso é fila do mês seguinte ou aditivo cotado. Lista completa em `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`.
 
-### 🔴 Ainda bloqueante
+3. **Custo de IA: é do cliente, não da IRBIS.** A infraestrutura e o consumo dos modelos rodam na conta do cliente e são pagos por ele, como já acontece na Odery. Os R$ 500/mês remuneram trabalho, não compute. **Não há custo marginal comendo o MRR.**
 
-3. **Custo de token por cliente/mês.** É o único produto com custo marginal que cresce com o uso, e virou a receita que a casa está apostando. Sem esse número, R$ 500 por mês pode ser 90% de margem ou 40%, e ninguém sabe qual. O bot da Odery já roda e é a fonte de medição disponível.
+### 🔴 Ainda aberto
 
-⚠️ **E uma trava jurídica nova:** a cláusula de multa por cancelamento antes dos 6 meses e o aviso prévio de renovação **não existem no contrato modelo**. É o que falta para o primeiro bot ser vendido com segurança.
+4. **A faixa estimada de custo de nuvem por volume**, para dizer ao cliente na reunião. Deixou de ser trava de margem e virou objeção de venda: "além dos R$ 500, quanto mais eu pago?" vai aparecer em toda reunião de bot e hoje não tem resposta. É também proteção contra churn, porque fatura maior que o esperado no mês 2 é o tipo de surpresa que faz cliente querer desligar mesmo satisfeito. Medir no bot da Odery, que já roda.
+5. **A cláusula de multa** por cancelamento antes dos 6 meses. O lugar está reservado como 5.5 no contrato modelo, com a intenção comercial registrada, faltando o texto jurídico.
 
 ### Abertas, não bloqueantes agora
 

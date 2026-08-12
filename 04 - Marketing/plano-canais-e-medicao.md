@@ -67,6 +67,10 @@ As três não foram escolhidas por hipótese. Foram reveladas duas vezes, de for
 
 É o método do acervo para quem ainda não tem ritual de ICP: olhar os últimos contratos fechados e buscar o que têm em comum.
 
+**Agência: comprar ou revender, os dois estão abertos.** Decisão do dono em 12/ago: a IRBIS atende os dois modelos, e qual predomina se decide pela demanda que aparecer, não por escolha prévia. Na prospecção, isso significa não travar o gancho: descobrir na conversa se a agência quer o bot para a operação dela ou para os clientes dela, e conduzir a partir daí. Se a revenda virar volume, ela precisa de condição própria (preço, suporte, quem responde ao cliente final), e aí vira decisão nova.
+
+**Prospecção nichada não é recusa de cliente de fora.** As três verticais dizem onde se caça, não quem pode comprar. O primeiro prospect de bot da casa, por exemplo, é a Casa Paes, que é saúde: veio da base, não da prospecção. Isso é esperado e não contradiz o nicho. O cuidado é só na leitura: cliente que veio de fora do nicho não conta como evidência a favor das três verticais escolhidas.
+
 **O atributo que o colaborador reconhece numa lista**, e que vale mais que a vertical:
 - Time pequeno com dono acessível (3 a 8 pessoas nos casos reais).
 - Trabalho repetitivo e documentável, com o processo já na cabeça de alguém.
