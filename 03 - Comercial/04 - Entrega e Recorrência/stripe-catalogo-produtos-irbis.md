@@ -44,7 +44,9 @@ Faixa definida pelo dono (09/ago/2026): **R$ 3.000–10.000**, valor fechado cal
 | Price nickname | Valor | Tipo |
 |---|---|---|
 | `bot-ia-setup` | R$ 1.000 | one-time |
-| `bot-ia-mensal` | R$ 500/mês | recurring |
+| `bot-ia-mensal` | R$ 500/mês | recurring, **fidelidade mínima de 6 meses** |
+
+> ✅ **12/ago/2026 — o Bot de IA virou a porta da IRBIS.** É o produto de entrada e o que se prospecta; Sistemas passou a ser upsell. Fidelidade de 6 meses (LTV mínimo de R$ 4.000). A mensalidade cobre infraestrutura, monitoramento, correção de defeito e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam; o que passa disso é fila ou aditivo. Escopo completo em `planos-recorrencia-irbis.md`, cláusula em `06 - Jurídico/contrato-prestacao-software-modelo.md` (Cláusula 5).
 
 **2b. Automações** (fora do bot padrão)
 **Tipo:** ⚠️ **PENDENTE** — o dono disse que "vai muito de escopo a escopo", sem faixa fixa. Também não confirmou se automação fora do bot tem componente recorrente (mensalidade de manutenção/evolução) ou é só one-time. Cotar caso a caso usando a `calculadora-preco-build-irbis.md`; não usar o preço do Bot de IA como âncora, são produtos diferentes.
@@ -76,7 +78,8 @@ Faixa definida pelo dono (09/ago/2026), por faturamento anual do cliente:
 - [x] Preço confirmado pelo dono pra: Sistemas (faixa R$3-10k), Bot de IA (R$1.000 + R$500/mês), Consultoria de IA (R$5k/R$10k por faturamento).
 - [ ] Ainda pendente: teto de Sistemas complexo, preço de Consultoria enterprise, faixa/modelo de Automações fora do bot.
 - [ ] Criar os Products/Prices com número definido acima (sistemas-projeto, bot-ia-setup, bot-ia-mensal, consultoria-ia-pme, consultoria-ia-grande).
-- [ ] Definir no contrato a **multa por cancelamento antecipado** do Bot de IA (único com componente recurring confirmado até agora).
+- [ ] **Redigir com a advogada a multa por cancelamento antes dos 6 meses** do Bot de IA. A Cláusula 5.5 do contrato modelo já tem o lugar reservado e a intenção comercial registrada (proporcional ao período restante), falta o texto jurídico. 🔴 **Trava o primeiro fechamento do produto que virou a porta.**
+- [ ] **Medir o custo de token por cliente/mês** usando o bot da Odery, que já roda. Sem isso a margem do MRR é desconhecida.
 - [ ] Gerar Payment Links por Price pra usar em proposta/fechamento.
 - [ ] **Desativar/arquivar na Stripe** (se já estiverem cadastrados) os 5 produtos de site abaixo — não usar pra cliente novo.
 

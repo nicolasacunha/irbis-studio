@@ -86,15 +86,16 @@ Regras que decorrem disso:
 
 ## Pendências que travam preço
 
-### 🔴 Bloqueantes desde 12/ago, porque o Bot virou a porta
+### ✅ Resolvidas em 12/ago, junto com a decisão da porta
 
-Estas três eram toleráveis quando o Bot era um produto lateral. Com ele como oferta de entrada e única fonte de MRR, **cada uma bloqueia a venda ou a margem do produto principal**:
+1. **Fidelidade do Bot de IA: 6 meses.** LTV mínimo de R$ 4.000, acima do piso de Sistemas, então a reunião de 1 hora se paga. O vencimento no mês 6 é o gatilho natural do upsell para Sistemas, com 5 meses de resultado medido na mão.
+2. **O que os R$ 500/mês cobrem:** infraestrutura e disponibilidade, monitoramento, correção de erro do que foi entregue, e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam. O que passa disso é fila do mês seguinte ou aditivo cotado. Lista completa em `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`.
 
-1. **O que exatamente os R$ 500/mês cobrem.** Monitoramento? Ajuste de prompt? Suporte? Fila de mudanças? Hoje se vende um recorrente sem escopo de serviço definido. Sem essa lista, o primeiro cliente define o escopo sozinho, na primeira vez que pedir algo, e vira precedente para todos os outros.
-2. **Custo de token por cliente/mês.** É o único produto com custo marginal que cresce com o uso. Sem esse número, a margem do MRR é desconhecida, e o MRR é a receita que a casa está apostando. Regra do próprio acervo: modele o custo por cliente antes de precificar o serviço.
-3. **Prazo mínimo de contrato: mês a mês ou fidelidade de 3, 6 ou 12 meses.** Define se o R$ 500 é receita previsível ou receita que pode sumir em 30 dias, e é cláusula de contrato, não detalhe comercial.
+### 🔴 Ainda bloqueante
 
-**Nenhuma das três se resolve por dedução.** Enquanto estiverem abertas, o bot pode ser prospectado e a faixa pode ser dita, mas o primeiro fechamento não deveria acontecer sem elas.
+3. **Custo de token por cliente/mês.** É o único produto com custo marginal que cresce com o uso, e virou a receita que a casa está apostando. Sem esse número, R$ 500 por mês pode ser 90% de margem ou 40%, e ninguém sabe qual. O bot da Odery já roda e é a fonte de medição disponível.
+
+⚠️ **E uma trava jurídica nova:** a cláusula de multa por cancelamento antes dos 6 meses e o aviso prévio de renovação **não existem no contrato modelo**. É o que falta para o primeiro bot ser vendido com segurança.
 
 ### Abertas, não bloqueantes agora
 

@@ -44,13 +44,23 @@ Nada é desenvolvido por acordo verbal. Um pedido feito por conversa, mensagem o
 
 ## Cláusula 5. Manutenção (opcional, após a entrega)
 
-Após a entrega, o Contratante pode contratar acompanhamento mensal. São 2 pacotes, conforme a proposta comercial vigente.
+> ⚠️ **Reescrita em 12/ago/2026.** A versão anterior falava em "2 pacotes" de manutenção, que eram os planos Básico e Pro de **site**, mortos com o pivot de 04/ago. Também cobrava excedente **por hora**, contra a regra de ouro repetida em seis documentos da casa. Só existe um produto recorrente hoje: o Bot de IA.
 
-O pacote de manutenção cobre **ajuste e correção** do sistema entregue. Não cobre funcionalidade nova, que segue sempre a Cláusula 4.
+Só o **Bot de IA** tem acompanhamento mensal. Sistemas e Consultoria de IA são de preço fechado, sem mensalidade.
 
-Horas que passarem do limite do pacote são cobradas a {{VALOR_HORA_EXCEDENTE}} por hora.
+Quando o objeto deste contrato for um Bot de IA, aplica-se o seguinte:
 
-A manutenção é opcional. O Contratante não é obrigado a contratá-la para receber o sistema.
+**5.1. Valor e prazo.** A mensalidade é de {{VALOR_MENSALIDADE}}, com **prazo mínimo de 6 (seis) meses** contados da entrada em produção. Encerrado o prazo mínimo, o contrato segue por prazo indeterminado, mês a mês, salvo renovação por novo período acordada por escrito.
+
+**5.2. O que a mensalidade cobre.** Infraestrutura e disponibilidade do bot em produção; monitoramento do funcionamento; correção de defeito no que foi entregue; e **até 2 (dois) ajustes de prompt ou de fluxo por mês**.
+
+**5.3. O que a mensalidade não cobre.** Ajustes além do segundo no mesmo mês; fluxo novo, canal novo ou integração nova; mudança que exija remodelar o comportamento do bot; e treinamento de novos usuários após o treinamento de virada. Tudo isso segue a Cláusula 4 (aditivo), com escopo e valor acordados por escrito antes da execução.
+
+**5.4. Ajustes não acumulam.** Os 2 ajustes mensais valem no mês de referência. Mês sem uso não gera crédito para o mês seguinte.
+
+**5.5. Cancelamento antes do prazo mínimo.** {{CLÁUSULA_DE_MULTA}} ⚠️ **A redigir com a advogada.** A intenção comercial registrada é multa proporcional ao período restante. Ver `03 - Comercial/04 - Entrega e Recorrência/planos-recorrencia-irbis.md`.
+
+**5.6.** A contratação do acompanhamento é condição do produto Bot de IA, não item opcional: o bot depende de infraestrutura ativa para operar.
 
 ---
 
@@ -100,7 +110,7 @@ O Prestador entra nessas contas como colaborador técnico, para configurar e ope
 
 Nos 30 dias seguintes à entrega, o Prestador corrige sem custo os defeitos que o Contratante reportar (erros do sistema em relação ao Anexo I).
 
-Depois desses 30 dias, correções e ajustes seguem pelo pacote de manutenção (Cláusula 5) ou por hora avulsa.
+Depois desses 30 dias, correções e ajustes seguem pelo acompanhamento mensal do Bot de IA (Cláusula 5), quando houver, ou por aditivo (Cláusula 4). Não há cobrança por hora avulsa.
 
 A garantia cobre defeito. Não cobre pedido de mudança ou funcionalidade nova, que seguem a Cláusula 4.
 

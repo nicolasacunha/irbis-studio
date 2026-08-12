@@ -12,34 +12,65 @@ Um sistema/automação entregue e parado perde valor com o tempo. Isso segue val
 
 ---
 
-## O que é recorrente, confirmado em 09/ago/2026
+## O Bot de IA, fechado em 12/ago/2026
 
-**Bot de IA** (dentro de Soluções com IA, ex.: bot de WhatsApp como o implementado na Odery):
-- Setup: **R$ 1.000** (one-time)
-- Mensalidade: **R$ 500/mês** (recurring, sem tiers, sem desconto por duração)
+O Bot de IA (dentro de Soluções com IA, ex.: o bot de WhatsApp implementado na Odery) deixou de ser produto lateral: **é a porta da IRBIS**, o que se prospecta, e a única fonte de MRR da casa. Ver `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`.
 
-Isso é tudo que está confirmado. Não é um "plano" com Básico/Pro — é um preço único de manutenção do bot.
+| Item | Definição |
+|---|---|
+| Setup | **R$ 1.000**, one-time |
+| Mensalidade | **R$ 500/mês**, valor fixo, sem tiers e sem desconto por duração |
+| **Fidelidade mínima** | **6 meses** |
+| LTV mínimo do contrato | **R$ 4.000** (R$ 1.000 + 6 × R$ 500) |
 
-⚠️ **O que ainda não sabemos:**
-- [ ] Automações fora do bot padrão têm mensalidade também, ou só o build é cobrado (one-time)? Dono disse que automações "vão muito de escopo a escopo" — não confirmou recorrência pra elas.
-- [ ] Sistemas e Consultoria de IA — dono não mencionou mensalidade em nenhum dos dois. Tratar como **sem recorrência** até ele dizer o contrário, não como "provavelmente recorrente" (era a hipótese antiga, ficou sem base).
-- [ ] O que exatamente a mensalidade de R$500 do Bot de IA cobre (monitoramento? ajustes de prompt? suporte?, fila de mudanças?) — não especificado ainda.
+### Por que 6 meses
 
-## Compromisso de duração (3/6/12 meses com desconto) — não confirmado pra recorrência atual
+Três razões, nesta ordem:
 
-A mecânica antiga (quanto mais longo o compromisso, menor o preço/mês) não apareceu na resposta do dono sobre o Bot de IA — ele descreveu mensalidade fixa, sem escalonamento por duração. Não estou aplicando essa mecânica aqui até confirmar se ele quer isso pro Bot de IA ou se é R$500/mês fixo, ponto.
+1. **Faz a reunião se pagar.** A venda passa pela reunião única de 1 hora do Nicolas. Com LTV de R$ 4.000, o bot fica acima do piso de Sistemas (R$ 3.000) e a hora se justifica. Mês a mês, uma hora poderia ser gasta por um cliente que sai em 60 dias.
+2. **O vencimento é o gatilho do upsell.** No mês 6 existem 5 meses de resultado medido, e a conversa deixa de ser "renova?" e passa a ser "renova ou sobe pra Sistemas". Fidelidade de 12 meses enterraria esse momento; 3 meses chegaria antes de haver prova.
+3. **Não põe atrito na porta.** O bot existe para ser a entrada de baixa fricção. Exigir um ano de compromisso na primeira compra contraria o trabalho do produto.
 
----
+### O que os R$ 500/mês cobrem
 
-## Renovação, contrato e multa — ⚠️ mecânica de duração (3/6/12m) não confirmada pro Bot de IA
+Definido em 12/ago/2026. **Esta lista é o escopo. O que não está aqui é fila ou aditivo.**
 
-O que está preservado da lógica antiga, sem depender de duração: **"a multa é a rede, não o motor"** — cancelamento antes do fim do contrato paga multa proporcional ao restante; a multa retém, não é o que faz o cliente querer ficar (isso é o valor entregue). Isso vale mesmo num contrato de mensalidade fixa sem tiers.
+**Está incluso:**
+- Infraestrutura e disponibilidade do bot no ar.
+- Monitoramento do funcionamento.
+- Correção de erro no que foi entregue (o bot deixou de responder, respondeu quebrado, integração caiu).
+- **Até 2 ajustes de prompt ou de fluxo por mês.**
 
-O que **não** está confirmado: se o Bot de IA tem prazo mínimo de contrato (3/6/12 meses) ou é mês a mês sem compromisso. O dono não falou nisso — perguntar antes de colocar cláusula de fidelidade na proposta.
+**Não está incluso, e é cotado à parte:**
+- Ajuste 3 em diante no mesmo mês. Entra na fila do mês seguinte ou vira aditivo.
+- Fluxo novo, canal novo, integração nova.
+- Mudança que exige remodelar o comportamento do bot, e não ajustar o existente.
+- Treinamento de novas pessoas depois do treinamento de virada.
 
-## Fair use (proteção do operador solo) — mecânica preservada, conteúdo pendente
+**Ajuste não acumula.** Dois por mês significa dois naquele mês; mês sem uso não vira crédito. Isso protege o operador de uma dívida de 12 ajustes chegando de uma vez.
 
-A lógica de fila + prazo de resposta (proteger o tempo de quem opera sozinho) provavelmente se aplica ao Bot de IA (ajustes/suporte pedidos pelo cliente), mas o que exatamente entra na fila (era "alterações na página" pro site) precisa ser redefinido — o dono não especificou o que os R$500/mês cobrem em termos de atendimento.
+**A regra que fecha a porta do "até ficar bom":** todo pedido é classificado na hora em correção (coberta), ajuste (uma das duas do mês) ou aditivo (cotado). É a Lei 3 do método aplicada à recorrência.
+
+### Multa e renovação
+
+**"A multa é a rede, não o motor."** Cancelamento antes dos 6 meses paga multa proporcional ao que resta. A multa retém; quem faz o cliente querer ficar é o valor entregue.
+
+Após os 6 meses, o contrato segue mês a mês, salvo renovação por novo período. **A conversa de renovação é a mesma do upsell de Sistemas** e acontece no mês 5, com o resultado medido na mão.
+
+⚠️ **Redação da cláusula de multa e do aviso prévio ainda não existe no contrato modelo.** É o que falta para o primeiro bot ser vendido com segurança. Ver `03 - Comercial/06 - Jurídico/contrato-prestacao-software-modelo.md`.
+
+### O que segue sem recorrência
+
+- **Sistemas** e **Consultoria de IA**: preço fechado, one-time. Não assumir mensalidade em nenhum dos dois.
+- **Automações fora do bot padrão**: o dono descreveu como "vai muito de escopo a escopo". Sem faixa e sem recorrência confirmada.
+
+## A trava que continua aberta
+
+⚠️ **Custo de token por cliente/mês não foi medido.** O bot é o único produto com custo marginal que cresce com o uso, e agora é a receita principal da casa. Sem esse número, a margem do MRR é desconhecida: R$ 500 por mês pode ser 90% de margem ou 40%, e ninguém sabe qual.
+
+Regra do próprio acervo (`operacoes/_playbook.md`, armadilha 6): modele o custo por cliente/mês antes de precificar o serviço. Aqui o preço já está definido, então a medição serve para saber se ele se sustenta, e é o dado que decide se o R$ 500 aguenta 8 clientes ou precisa de teto de uso.
+
+O bot da Odery já está rodando e é a fonte de medição disponível.
 
 ---
 
