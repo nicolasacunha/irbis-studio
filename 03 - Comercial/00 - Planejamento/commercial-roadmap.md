@@ -4,7 +4,7 @@
 
 | Antes (v1) | Agora (v2) | Motivo |
 |---|---|---|
-| Destino: R$ 30k de faturamento mensal por projeto | Destino: **R$ 4.000/mês de receita recorrente até 30/set**, depois volume de projeto em cima | O recorrente é a meta que está no `docs/metas-por-chapeu.md`. Faturamento por projeto não se acumula |
+| Destino: R$ 30k de faturamento mensal por projeto | Destino: **3 bots até 30/set, R$ 12.000 de receita contratada**, depois volume de projeto em cima | Base recorrente antes de volume. Faturamento por projeto não se acumula, e a unidade é receita contratada porque a fidelidade é de 6 meses. Ver `docs/metas-por-chapeu.md` |
 | Unidade de venda: site (R$ 5k a R$ 45k+) | Unidade de venda: **Bot de IA** na porta, **Sistemas** no upsell | Sites saíram do escopo em 04/ago. Escada de oferta decidida em 12/ago |
 | ICP: founders de Web3 e SaaS | Dono de negócio da economia real, prospecção nichada em advocacia, indústria e agência | Web3 está fora de escopo. As três verticais vieram dos contratos reais e da rotina de pSEO |
 | Operação solo | **Duas pessoas** com papéis fixos: Nicolas conduz e entrega, colaborador enche o funil | O colaborador chegou em 12/ago. É o que destrava o topo |
@@ -50,7 +50,7 @@ A leitura: não existe problema de entrega nem de preço. Existe um funil que n�
 
 Sob consulta, sem faixa, nunca estimar: Sistema muito complexo, automações fora do bot, Consultoria enterprise.
 
-**A conta que define o roadmap inteiro:** a meta de R$ 4.000/mês de receita recorrente até 30/set só fecha por um caminho, **8 clientes de bot a R$ 500**. Sistemas e Consultoria são one-time. Vender um Sistema de R$ 10.000 paga o mês e deixa o MRR exatamente onde estava.
+**A conta que define o roadmap inteiro:** a meta é **3 bots até 30/set**, ou **R$ 12.000 de receita contratada** (R$ 4.000 por bot: setup mais os 6 meses travados, somados no dia da assinatura). Sistemas e Consultoria são one-time. Vender um Sistema de R$ 10.000 paga o mês e deixa a base exatamente onde estava.
 
 ---
 

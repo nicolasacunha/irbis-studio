@@ -40,7 +40,7 @@ Isso reposiciona o problema. Em junho, o diagnóstico dizia que faltava sistema 
 | MRR | R$ 0 | Só o Bot de IA gera recorrência. Nenhum vendido |
 | Prova de mercado | 1 cliente pagante fora da família, R$ 1.200 | Bloqueia case, bloqueia argumento de venda, bloqueia confiança do operador |
 | Capacidade de entrega | Nicolas entrega sozinho | Colaborador é comercial. Entrega não é papel dele |
-| Formalização | Sem CNPJ | Bloqueia a meta de R$ 4.000/mês limpos na PJ |
+| Formalização | Sem CNPJ | Bloqueia emissão fiscal e conta separada. Deixou de bloquear a meta comercial em 12/ago, quando "limpos na PJ" virou meta do chapéu Dono |
 | Taxa de conversão | Não medida | Não há volume para calcular |
 | Ciclo de venda | Não medido | Idem |
 
@@ -80,7 +80,7 @@ Só os que estão decididos. O resto está em pendências.
 |---|---|---|
 | 2 clientes fundadores | ~19/ago/2026 | 1 de 2 |
 | ≥ 2 clientes novos por mês | a partir de set/2026 | Não iniciado |
-| R$ 4.000/mês limpos na PJ | 30/set/2026 | R$ 0. Caminho: 8 clientes de bot a R$ 500/mês |
+| R$ 12.000 de receita contratada | 30/set/2026 | R$ 0. Caminho: 3 bots a R$ 4.000 cada (setup mais 6 meses travados) |
 | Primeira reunião com dono sem vínculo pessoal | Não definido | 7 semanas sem |
 | 5 conversas reais com dono até 26/ago | Proposto no plano de canais, aguardando confirmação do dono | Depende de registro em `interacoes` |
 
@@ -112,7 +112,7 @@ A IRBIS resolveu produto, preço, escada de oferta e plano de canal, e continua 
 
 ### Urgência
 
-Alta e datada. A meta de R$ 4.000/mês vence em 30/set, e o caminho aritmético são 8 clientes de bot. Nenhum foi vendido. Cada semana sem cliente novo de bot torna a meta aritmeticamente mais difícil, porque o setup de cada cliente entra uma vez só e a mensalidade precisa de meses rodando.
+Alta e datada. A meta de 3 bots vence em 30/set e nenhum foi vendido. Com a unidade em receita contratada, cada venda conta integral no dia da assinatura, então a pressão não vem do calendário corroendo o valor: vem de o funil estar em zero reunião fora de indicação há sete semanas, e cada semana perdida ser uma a menos para produzir três fechamentos.
 
 ### Hipóteses de oportunidade
 
