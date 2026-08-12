@@ -93,10 +93,12 @@ Regras que decorrem disso:
 
 3. **Custo de IA: é do cliente, não da IRBIS.** A infraestrutura e o consumo dos modelos rodam na conta do cliente e são pagos por ele, como já acontece na Odery. Os R$ 500/mês remuneram trabalho, não compute. **Não há custo marginal comendo o MRR.**
 
+4. **A faixa de custo de nuvem por volume, para dizer na reunião.** Calculada em 12/ago: **entre 6 e 19 centavos de real por conversa**, o que dá cerca de R$ 50 a R$ 150 por mês num volume de mil conversas. Fala pronta, tabela por volume e premissas em `03 - Comercial/04 - Entrega e Recorrência/custo-ia-bot-estimativa.md`. É estimativa calculada, não medição: o consumo real da Odery segue sem acesso.
+
 ### 🔴 Ainda aberto
 
-4. **A faixa estimada de custo de nuvem por volume**, para dizer ao cliente na reunião. Deixou de ser trava de margem e virou objeção de venda: "além dos R$ 500, quanto mais eu pago?" vai aparecer em toda reunião de bot e hoje não tem resposta. É também proteção contra churn, porque fatura maior que o esperado no mês 2 é o tipo de surpresa que faz cliente querer desligar mesmo satisfeito. Medir no bot da Odery, que já roda.
 5. **A cláusula de multa** por cancelamento antes dos 6 meses. O lugar está reservado como 5.5 no contrato modelo, com a intenção comercial registrada, faltando o texto jurídico.
+6. **O teto de uso** da Cláusula 9.2. Com a tabela de custo por volume agora existindo, dá pra propor um teto em conversas por mês com excedente cotado à parte. O número é decisão do dono.
 
 ### Abertas, não bloqueantes agora
 
