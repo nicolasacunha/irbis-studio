@@ -1,91 +1,124 @@
 # IRBIS — Script de Call Comercial
-**Criado:** 11/jun/2026 · **Reescrito:** 09/ago/2026
-**Uso:** padrão de execução da call de diagnóstico/apresentação, conduzida com o deck `Apresentação Comercial.html`
-**Formato:** call de ~45 min, preço apresentado ao vivo (calibrado, não fixo — ver `calculadora-preco-build-irbis.md`), decisão na call
+**Criado:** 11/jun/2026 · **Reescrito:** 09/ago/2026 · **Reestruturado:** 13/ago/2026
+**Uso:** padrão de execução da Reunião Única de venda, conduzida com o deck `Apresentação Comercial.html`
+**Formato:** reunião de **1 hora**, preço apresentado ao vivo (calibrado, não fixo — ver `calculadora-preco-build-irbis.md`), decisão na própria reunião
 
 > ✅ **REESCRITO em 09/ago/2026, pronto pra usar com uma ressalva grande.** Este era o script mais importante que ainda não tinha sido tocado nesta auditoria — a call em si, não achado antes porque não tinha banner nenhum. Substitui integralmente a venda de site por Sistemas/Soluções com IA/Consultoria de IA, preço real, ICP amplo e Odery como case principal (E-Force só como prova de capacidade pessoal — ver `P1-posicionamento-nicolas.md`).
 >
-> 🛑 **Ressalva crítica: o deck `Apresentação Comercial.html` NÃO foi auditado nem atualizado.** Esse script é estruturado em cima dos slides do deck (a tabela de Timing e as marcações "*Slide: ...*" abaixo apontam pra ele). Se o deck ainda mostra "SITE? SIM." e os 3 produtos de site na tela enquanto quem conduz fala de Sistemas/IA, a call fica contraditória pro cliente. **Não use este script ao vivo sem antes confirmar o estado do deck com o Nicolas.**
+> ✏️ **REESTRUTURADO em 13/ago/2026.** Este documento estava organizado em 6 etapas de ~45 min — desatualizado desde 12/ago/2026, quando `estrutura-reuniao-unica-irbis.md` virou o **árbitro de duração e sequência** e definiu 7 blocos de 60 min, com um bloco de Triagem (BANT dentro da reunião) que não existia aqui como etapa própria. Este script foi reescalonado para os 7 blocos oficiais. O conteúdo de fala (SPIN, pitch, ancoragem, fechamento) é o mesmo de 09/ago — só a divisão em blocos, o timing e a adição do bloco de Triagem mudaram.
+>
+> 🔁 **FUNIL MUDOU em 13/ago/2026.** A Reunião Única fecha **Consultoria de IA**, não "Sistemas, Bot ou Consultoria, conforme o caso". Sistemas e Bot de IA viraram a segunda venda, feita na entrega da consultoria — não mais aqui. Blocos 3 e 7 abaixo já refletem isso. Árbitro: `03 - Comercial/00 - Planejamento/funil-consultoria-producao-irbis.md`.
+>
+> 🛑 **Ressalva crítica, ainda não resolvida: o deck `Apresentação Comercial.html` NÃO foi auditado nem atualizado.** Esse script é estruturado em cima dos slides do deck (a tabela de Timing e as marcações "*Slide: ...*" abaixo apontam pra ele). Se o deck ainda mostra "SITE? SIM." e os 3 produtos de site na tela enquanto quem conduz fala de Sistemas/IA, a reunião fica contraditória pro cliente. **Não use este script ao vivo sem antes confirmar o estado do deck com o Nicolas.**
 
 ---
 
 ## Objetivo
 
-- Apresentação consistente, estruturada e persuasiva — toda call igual, todo resultado comparável
-- Domínio de processo e controle de timing em todas as etapas
+- Apresentação consistente, estruturada e persuasiva — toda reunião igual, todo resultado comparável
+- Domínio de processo e controle de timing em todos os blocos
 - Construção progressiva de valor percebido antes do número
-- Fechamento na própria call, com decisão honesta do prospect
+- Fechamento na própria reunião, com decisão honesta do prospect
 
 ## Princípios de execução
 
-- **Timing é maturidade comercial.** Irregularidade de tempo por etapa indica falta de domínio do processo. Cronometrar toda call.
-- **Problema antes da solução.** Sempre. É regra de proposta e é regra de call.
+- **Timing é maturidade comercial.** Irregularidade de tempo por bloco indica falta de domínio do processo. Cronometrar toda reunião.
+- **Problema antes da solução.** Sempre. É regra de proposta e é regra de reunião.
 - **O deck conduz, você conversa.** O slide é pano de fundo — o prospect olha pra você, não pro slide.
 - **Voz IRBIS:** confiante sem arrogância, direta, técnica, seletiva. Sem entusiasmo fabricado, sem submissão, sem pedir desculpa por cobrar.
 - **Anotar tudo.** As palavras do prospect no SPIN são a munição da ancoragem e do fechamento. Repetir as palavras DELE, não as suas.
 
 ---
 
-## Timing da call (~45 min)
+## Timing da reunião (~60 min) — os 7 blocos oficiais
 
-| Etapa | Janela | Slides do deck (fase) |
-|---|---|---|
-| 1. Intro / warm-up | 0–5 min | Abertura (capa → agenda) |
-| 2. Autoridade | 5–7 min | Resultados |
-| 3. SPIN + diagnóstico | 7–20 min | Diagnóstico |
-| 4. Pitch | 20–33 min | Método → Entrega → Suporte → Cases |
-| 5. Ancoragem | 33–38 min | Bônus → Oferta |
-| 6. Fechamento | 38–45/50 min | Decisão |
+> Fonte da estrutura: `03 - Reunião de Vendas/estrutura-reuniao-unica-irbis.md` (árbitro, 12/ago/2026). Onde este script e aquele documento divergirem em duração ou sequência, vale o `estrutura-reuniao-unica-irbis.md`.
 
-Não passar de 50 min sem uma decisão explícita na mesa.
+| Bloco | Minutos | O que acontece | Quem fala mais | Slides do deck (fase) |
+|---|---|---|---|---|
+| 1. Abertura e contrato da reunião | 0–4 | Diz em voz alta o que vai acontecer na próxima hora e pede acordo | Nicolas | Abertura (capa → agenda) |
+| 2. Triagem | 4–14 | Confirma decisor, orçamento, necessidade e prazo — BANT dentro da reunião | Cliente | — |
+| 3. Autoridade | 14–17 | Quem é a IRBIS e por que ele deveria continuar ouvindo. **Máximo 3 min** | Nicolas | Resultados |
+| 4. Diagnóstico | 17–34 | SPIN sobre a operação. Sai daqui com o gargalo quantificado | Cliente | Diagnóstico |
+| 5. Apresentação | 34–46 | O que a IRBIS faria no caso dele, especificamente | Nicolas | Método → Entrega → Suporte → Cases |
+| 6. Ancoragem | 46–52 | O que está incluso e onde o valor dele cai dentro da faixa | Nicolas | Bônus → Oferta |
+| 7. Fechamento e proposta ao vivo | 52–60 | O número fechado, o pedido de decisão e a data | Os dois | Decisão |
+
+**Não passar de 65 min sem uma decisão explícita na mesa.**
+
+**Se a triagem (bloco 2) reprovar** — decisor ausente, sem verba, sem prazo — não gasta os 45 min restantes. Encerra em ~20 min (ver bloco 2 abaixo) e registra como reunião realizada, movendo o lead pra nutrição na escada de follow-up (estágio C).
 
 ---
 
-## 1. INTRO — WARM-UP (0–5 min)
+## 1. ABERTURA E CONTRATO DA REUNIÃO (0–4 min)
 
 *Tela: capa do deck. Energia: calma e firme — você não está animado, você está em casa.*
 
 **Rapport (1 linha real, não social):**
 
-> Pesquisei a operação de vocês antes da call. [observação específica encontrada na pesquisa pré-call: processo manual, sinal de crescimento, etc.]
+> Pesquisei a operação de vocês antes da reunião. [observação específica encontrada na pesquisa pré-call: processo manual, sinal de crescimento, etc.]
 
 > Vi que você atua com [área] — [conexão real, se existir].
 
-Regra: o rapport da IRBIS é demonstração de dever de casa, não puxa-saco. Se não tem observação real, vá direto ao pacto.
+Regra: o rapport da IRBIS é demonstração de dever de casa, não puxa-saco. Se não tem observação real, vá direto ao contrato da reunião.
 
 **Aviso de anotação:**
 
 > Se eu olhar pra baixo durante a conversa, é porque estou anotando o que você fala. Tudo que você me disser aqui vira insumo do projeto, combinado?
 
-**PACTO DE TRANSIÇÃO** *(slide: Agenda — "Os próximos 30 minutos")*
+**CONTRATO DA REUNIÃO** *(slide: Agenda)*
 
-> [Nome], deixa eu te explicar como funciona essa conversa.
+> [Nome], deixa eu te explicar como funciona essa próxima hora.
 >
-> Primeiro eu quero entender seu negócio — onde a operação está travando o crescimento.
-> Depois te mostro como eu resolvo isso e exatamente o que você recebe.
-> E no final eu te apresento o investimento.
+> Primeiro eu confirmo rapidinho com você um contexto de decisão e momento. Depois eu quero entender seu negócio — onde a operação está travando o crescimento. Aí te mostro como eu resolvo isso e exatamente o que você recebe. E no final eu te apresento o investimento.
 >
 > Eu não vou tentar te empurrar nada. Mas no final eu vou te pedir uma resposta: sim ou não. Os dois são respostas boas. Combinado?
 
 ---
 
-## 2. AUTORIDADE (5–7 min)
+## 2. TRIAGEM (4–14 min)
+
+*Sem slide dedicado. É o BANT dentro da reunião — substitui a antiga call curta de diagnóstico, que deixou de existir em 12/ago/2026.*
+
+Quatro perguntas, sem parecer formulário:
+
+> Quem mais decide isso junto com você?
+
+> Já tentaram resolver isso antes? Com quem, e o que aconteceu?
+
+> Vocês já reservaram alguma verba pra isso, ou ainda é ideia?
+
+> Se isso continuar do jeito que está pelos próximos três meses, o que acontece?
+
+*(Tréplica leve depois de cada resposta — não interrogatório, conversa.)*
+
+**Se a triagem reprovar** (não é o decisor, não há verba, não há prazo), não gaste os 45 minutos restantes. Encerre com honestidade, por volta dos 20 min de reunião:
+
+> Pelo que você me contou, isso ainda não está no ponto de virar projeto. Prefiro não te vender uma coisa que você vai cancelar em dois meses. Deixa eu te mandar [material] e a gente se fala quando [gatilho concreto].
+
+Registra como reunião realizada e move pra nutrição na Escada de Follow-up, estágio C (`escada-follow-up-irbis.md`).
+
+**Se a triagem aprovar**, segue direto pro bloco 3.
+
+---
+
+## 3. AUTORIDADE (14–17 min)
 
 *Slides: "Quem conduz" → "O modelo" → fase Resultados. ⚠️ Se o deck ainda disser "Só sites", pule esse slide ou ajuste ao vivo — não leia contra o que está reescrito abaixo.*
 
-> Prazer, IRBIS. Eu construo sistema, automação e IA sob medida — Sistemas, Soluções com IA, Consultoria de IA. Mais nada. Foco é uma decisão: quem faz de tudo não é referência em nada.
+> Prazer, IRBIS. Eu faço o diagnóstico de onde a IA e a sistematização mudam o jogo pra sua operação — e depois construo o que for identificado: sistema, automação, IA sob medida. Foco é uma decisão: quem faz de tudo não é referência em nada.
 >
 > Você fala direto com quem pensa e executa. Sem camadas, sem telefone sem fio.
 >
-> Antes de qualquer promessa: a Odery Drums é o case atual — CRM implementado, bot de WhatsApp rodando na operação, e apoio direto em como a empresa usa IA no dia a dia. As 3 frentes, no mesmo cliente. E se você já me viu falando de geração de demanda: sim, ajudei um cliente a passar de R$350 mil em vendas num lançamento — mas hoje eu construo a estrutura por trás disso, não só a campanha. A pergunta dessa call é: qual vai ser o seu número?
+> Antes de qualquer promessa: a Odery Drums é o case atual — CRM implementado, bot de WhatsApp rodando na operação, e apoio direto em como a empresa usa IA no dia a dia. As 3 frentes, no mesmo cliente. E se você já me viu falando de geração de demanda: sim, ajudei um cliente a passar de R$350 mil em vendas num lançamento — mas hoje eu construo a estrutura por trás disso, não só a campanha. A pergunta dessa reunião é: o que a gente vai encontrar quando eu olhar pra sua operação de verdade?
 
-Máximo 2 minutos. Autoridade não se estica — se prova e segue.
+Máximo 3 minutos. Autoridade não se estica — se prova e segue.
 
 ⚠️ Números dos cases: "+500" e "1,8x" continuam BANIDOS (decisão do dono, 04/jul/2026). Único resultado numérico afirmável de cliente: "+R$350k em vendas" (E-Force) — e só como prova de capacidade de geração de demanda, nunca como prova de que o produto atual (Sistemas/IA) funciona. Prova de produto pras 3 frentes de hoje é a Odery.
 
 ---
 
-## 3. QUESTIONÁRIO — SPIN + DIAGNÓSTICO (7–20 min)
+## 4. DIAGNÓSTICO — SPIN (17–34 min)
 
 *Slide parado em "Seu cenário". Aqui o deck espera — a conversa manda. ⚠️ Os slides de "6 dores" e "Checklist" do deck original eram dores de site — se ainda não foram reescritos, use-os só como pano de fundo visual e conduza pelas perguntas abaixo, não pelo texto neles.*
 
@@ -135,9 +168,11 @@ Máximo 2 minutos. Autoridade não se estica — se prova e segue.
 >
 > No final você me dá um sim ou um não. Fechado?
 
+Sai deste bloco com o gargalo em número: quantas horas por semana, quantos pedidos perdidos, quantas pessoas envolvidas. É esse número que calibra o preço no bloco 6.
+
 ---
 
-## 4. PITCH (20–33 min)
+## 5. APRESENTAÇÃO (34–46 min)
 
 *Slides: "É estrutura." → Método (5 fases) → Entrega → Suporte → Cases.*
 
@@ -177,7 +212,7 @@ Caso mais parecido com o cenário dele — hoje, praticamente sempre a Odery (as
 
 ---
 
-## 5. ANCORAGEM (33–38 min)
+## 6. ANCORAGEM (46–52 min)
 
 *Slides: Bônus → "Isso faz parte da conta." → "Tudo que entra no projeto" → "A pergunta certa".*
 
@@ -191,9 +226,11 @@ Caso mais parecido com o cenário dele — hoje, praticamente sempre a Odery (as
 
 > A pergunta não é quanto custa o sistema. É quanto custa continuar sem ele. Você me disse que perde [implicação dele — tempo/R$/oportunidade por mês]. Esse é o preço de não decidir.
 
+O número fechado sai no próximo bloco, dentro da faixa pública, calibrado por este bloco de diagnóstico: **topo da faixa quando o gargalo é central pro negócio, base quando é conveniência** (ver `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`).
+
 ---
 
-## 6. FECHAMENTO (38–45/50 min)
+## 7. FECHAMENTO E PROPOSTA AO VIVO (52–60 min)
 
 *Slide: "Tirando os valores… isso faz sentido pra você hoje?"*
 
@@ -205,11 +242,15 @@ Caso mais parecido com o cenário dele — hoje, praticamente sempre a Odery (as
 
 **Apresentação do número:**
 
-> Você me disse que [dor, palavras dele], que isso custa [implicação] por mês, e que resolver é prioridade [nota] de 10.
+> Você me disse que [dor, palavras dele], que isso custa [implicação] por mês, e que resolver é prioridade [nota] de 10. Antes de eu te dizer o que construir, eu preciso diagnosticar isso de verdade — mapear o que está errado e, principalmente, onde a oportunidade está.
 >
-> Pra esse escopo — [Sistemas / Bot de IA / Consultoria de IA, conforme o caso] — o investimento é R$ [X].
+> É isso que é a Consultoria de IA: eu entro na sua operação, analiso de ponta a ponta, e saio com um diagnóstico real — não um achismo de reunião de uma hora. O investimento é R$ [X].
 
-Calibração do número: ver `calculadora-preco-build-irbis.md` — Sistemas R$3.000–10.000 (topo se o gargalo é central pro negócio, base se é conveniência), Bot de IA R$1.000 de setup + mensalidade de R$500 a R$3.000 (faixa; número fechado sai aqui, na reunião, e calibra igual a Sistemas: topo quando a operação é grande e o bot é central, base quando é conveniência), Consultoria de IA R$5.000 ou R$10.000 conforme faturamento. Nunca cotar por hora.
+Calibração do número da Consultoria: R$5.000 se a empresa fatura até R$10 milhões/ano, R$10.000 acima disso (ver `03 - Comercial/00 - Planejamento/politica-de-preco-irbis.md`). Nunca cotar por hora.
+
+> ⚠️ **Mudança de 13/ago/2026:** esta reunião fecha Consultoria, não Sistemas/Bot/Consultoria "conforme o caso". A produção (Sistemas e/ou Bot de IA) é vendida depois, na Reunião de Entrega da Consultoria, com o diagnóstico pronto na mão — ver `funil-consultoria-producao-irbis.md`. Se o prospect perguntar "e depois do diagnóstico, o que acontece?", a resposta é:
+>
+> > Depois eu te mostro exatamente o que construir pra resolver o que a gente encontrar — pode ser um sistema, pode ser uma automação com IA, às vezes os dois. Isso é uma segunda conversa, com o diagnóstico pronto na mesa, não uma suposição de hoje.
 
 **Silêncio. Quem fala primeiro depois do preço não é você.**
 
@@ -224,6 +265,10 @@ Regra do Manual de Copy: apresente o valor, explique uma vez, não justifique ma
 > Eu pego um projeto por vez — atenção total. A agenda fecha quando lotada. Hoje ela está [status real].
 
 Urgência só se for verdadeira. Escassez fabricada quebra a marca.
+
+**Se não fechar na hora, sai da reunião com data e hora marcadas pra resposta.** Nunca com "vou pensar" em aberto:
+
+> O não me libera pra cuidar de outro cliente. O talvez é o que me atrapalha. Amanhã às 14h você me dá a resposta?
 
 **Semente de indicação (depois da decisão — fechando ou não):**
 
@@ -257,25 +302,26 @@ Urgência só se for verdadeira. Escassez fabricada quebra a marca.
 
 ---
 
-## Checklist pré-call
+## Checklist pré-reunião
 
-- [ ] Negócio do prospect pesquisado no dia da call — LinkedIn, Instagram, site institucional se tiver, notícia recente (mesma regra do outbound)
+- [ ] Negócio do prospect pesquisado no dia da reunião — LinkedIn, Instagram, site institucional se tiver, notícia recente (mesma regra do outbound)
 - [ ] 1 observação específica anotada para o rapport
 - [ ] Case Odery revisado pra puxar no momento certo
 - [ ] Faixa de preço definida para o escopo provável (ver `calculadora-preco-build-irbis.md`, sem tabela fixa, com lógica)
-- [ ] **Deck conferido antes da call — confirmar que os slides não estão mostrando site como oferta** (ver ressalva no topo deste documento)
+- [ ] **Deck conferido antes da reunião — confirmar que os slides não estão mostrando site como oferta** (ver ressalva no topo deste documento)
 - [ ] Status real da agenda confirmado (slide "1 vaga")
+- [ ] Convite de agenda enviado com 1 hora de duração (não 30-45 min — ver `estrutura-reuniao-unica-irbis.md`)
 
-## Pós-call
+## Pós-reunião
 
-- **Fechou:** termo de aceite + agendamento do briefing no mesmo dia.
-- **Não fechou, mas quente:** proposta por escrito em até 24h. Encerramento padrão: *"Esse é o projeto. Quando quiser começar, é só falar."*
-- **Sumiu depois da proposta:** follow-up D+4 — *"[Nome], a proposta segue aberta. Se quiser ajustar algo, pode falar. Se o timing mudou, tudo bem também — só me avisa."* (ver também `manual-follow-up-irbis.md` pra cadência completa)
-- Toda call gravada → revisar timing real vs tabela. Desvio recorrente numa etapa = ponto de treino.
+- **Fechou:** termo de aceite + agendamento do briefing no mesmo dia → `checklist-dia-do-sim-irbis.md`.
+- **Não fechou, mas quente:** proposta por escrito em até 24h. Encerramento padrão: *"Esse é o projeto. Quando quiser começar, é só falar."* → Escada de Follow-up, estágio B.
+- **Reprovou na triagem (bloco 2) ou não é o momento:** → Escada de Follow-up, estágio C.
+- Toda reunião gravada → revisar timing real vs tabela dos 7 blocos. Desvio recorrente num bloco = ponto de treino.
 
 ---
 
-## O que NUNCA entra na call
+## O que NUNCA entra na reunião
 
 Direto do Manual de Copy:
 
@@ -285,16 +331,22 @@ Direto do Manual de Copy:
 - Pedir desculpa por preço, por follow-up ou por silêncio
 - Justificar o preço mais de uma vez
 - Prometer fora do escopo: a IRBIS vende **só Sistemas, Soluções com IA e Consultoria de IA** — nada de site, landing page, branding, identidade avulsa, app/dashboard avulso fora de Sistemas
+- Segunda call antes desta reunião — se precisou de duas conversas pra chegar aqui, a triagem de agendamento falhou
+- Número fechado antes do bloco 6 (Ancoragem)
+- Valor por hora como oferta
+- Caso da Adash. **Nunca foi entregue**
 
 ---
 
 ## Pendências
 
-1. **🛑 O deck `Apresentação Comercial.html` não foi auditado nesta rodada.** Ele guia a call inteira (timing, ordem, o que aparece na tela) — se ainda mostra site como produto, "SITE? SIM." como hero, ou os 3 produtos de site como oferta, a call fica contraditória com este script. Prioridade alta antes de usar este script ao vivo com um lead real.
-2. **Números dos cases** — "+500" e "1,8x" seguem BANIDOS pelo dono (04/jul/2026); confirmar que não estão no deck. Afirmável em call: Odery (prova de produto) e "+R$350k" (E-Force, só prova de capacidade — não confundir os dois papéis).
-3. **Slide Agenda diz "30 minutos"** — a call padrão é ~45. Ajustar o slide ou tratar os 30 min como a parte apresentada — pendência antiga, não resolvida nesta rodada.
-4. **E-mail no slide final** — checar se ainda está quebrado (era placeholder de Cloudflare); corrigir para contato@irbis.com.br se ainda estiver.
+1. **🛑 O deck `Apresentação Comercial.html` não foi auditado nesta rodada.** Ele guia a reunião inteira (timing, ordem, o que aparece na tela) — se ainda mostra site como produto, "SITE? SIM." como hero, ou os 3 produtos de site como oferta, a reunião fica contraditória com este script. Prioridade alta antes de usar este script ao vivo com um lead real.
+2. **Números dos cases** — "+500" e "1,8x" seguem BANIDOS pelo dono (04/jul/2026); confirmar que não estão no deck. Afirmável em reunião: Odery (prova de produto) e "+R$350k" (E-Force, só prova de capacidade — não confundir os dois papéis).
+3. **Os pilares de venda das três frentes** ainda não têm nome definido — no bloco 5, apresentar pelo problema do cliente e pelo mecanismo da solução, não por uma lista de pilares inventada ao vivo (ver `estrutura-reuniao-unica-irbis.md`).
+4. **Os bônus e o stack da ancoragem (bloco 6)** não existem formalmente ainda. Não prometer nada que não esteja definido.
+5. **O prazo padrão por frente** não existe como número oficial. Os dois pontos reais que já foram pra contrato: QG OS, 10 dias úteis; MINUTA, 30 dias úteis. Não inventar prazo na reunião — dizer que o prazo sai na proposta.
+6. **E-mail no slide final** — checar se ainda está quebrado (era placeholder de Cloudflare); corrigir para contato@irbis.com.br se ainda estiver.
 
 ---
 
-*Script de call IRBIS — uso interno. Reescrito 09/ago/2026 (original junho/2026).*
+*Script de reunião comercial IRBIS — uso interno. Reestruturado 13/ago/2026 (reescrito 09/ago/2026, original junho/2026).*
