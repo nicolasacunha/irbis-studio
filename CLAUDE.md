@@ -71,7 +71,7 @@ NUNCA:
 
 ## OPERAÇÃO DE IA
 
-Regras de custo/qualidade de sessão (racional completo em `docs/superpowers/specs/2026-07-23-playbook-uso-ia-irbis-design.md`):
+Regras de custo/qualidade de sessão (racional completo em `00 - IRBIS/06 - Produto/05 - Superpowers (Framework Dev)/specs/2026-07-23-playbook-uso-ia-irbis-design.md`):
 
 - Uma sessão = um assunto. Trocar de tópico não relacionado é sinal pra fechar e abrir sessão nova, não empilhar contexto.
 - Contexto que se repete entre sessões vai pra memória — não reexplicar toda vez.

@@ -64,6 +64,8 @@
       gap: clamp(56px, 9vw, 150px); align-items: end;
       padding: clamp(70px, 10vh, 128px) 0 clamp(56px, 8vh, 94px);
     }
+    .mascote { width: clamp(96px, 9vw, 130px); margin-bottom: clamp(20px, 3vw, 32px); }
+    .mascote img { width: 100%; height: auto; display: block; }
     h1 {
       max-width: 830px; margin: 0; font-family: 'Besley', serif;
       font-size: clamp(3.55rem, 8.2vw, 8.9rem); font-weight: 760; line-height: .88;
@@ -173,6 +175,10 @@
 
     <section class="confirmation" aria-labelledby="confirmation-title">
       <div class="message">
+        <picture class="mascote">
+          <source srcset="/Design/mascote/aprovados/irbis-mascote-sentada.webp" type="image/webp">
+          <img src="/Design/mascote/aprovados/irbis-mascote-sentada.png" alt="Pantera das neves da IRBIS sentada, tranquila" width="130" height="147" loading="eager">
+        </picture>
         <h1 id="confirmation-title">Recebi o<br>contexto<span class="dot">.</span></h1>
         <p class="lead">Vou revisar o que você enviou e <strong>te chamar no WhatsApp em até 1 dia útil.</strong> A próxima mensagem vem direto de mim, Nicolas.</p>
         <div class="actions">

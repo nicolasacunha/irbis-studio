@@ -1,0 +1,22 @@
+{
+  "keyword": "como automatizar o follow-up comercial em indústria",
+  "title": "Como automatizar o follow-up comercial em indústria",
+  "summary": "O follow-up comercial em indústria começa por um registro confiável de oportunidade, responsável, prazo e próxima ação. A automação pode criar tarefas, alertar atrasos e consolidar o histórico de interações, sem substituir a decisão comercial. Dados de contato e informações de negociação exigem acessos definidos e medidas de segurança compatíveis com o risco do tratamento. A IRBIS já desenvolveu para a Odery Drums um CRM com funil, agenda, histórico e IA para registro e consulta de contatos, mas esse case comprova o mecanismo entregue, não ganho financeiro público.",
+  "faq": [
+    {"question": "Como automatizar o follow-up comercial em indústria sem enviar mensagens automáticas?", "answer": "Use o sistema para criar tarefas, definir responsável, registrar a próxima ação e avisar sobre prazos vencidos. O vendedor mantém a decisão sobre a mensagem, o momento de contato e a condição comercial."},
+    {"question": "Quais dados precisam entrar no fluxo de follow-up?", "answer": "Comece com empresa, contato, origem, etapa, responsável, última interação e próxima ação. Inclua dados de produto ou prazo apenas se eles mudarem a decisão de quem fará o próximo contato."},
+    {"question": "Como evitar que dois vendedores atendam a mesma oportunidade?", "answer": "Defina um responsável único por registro, preserve o histórico de transferências e crie uma regra clara para redistribuição. A automação deve alertar a equipe, não apagar o contexto da conversa anterior."},
+    {"question": "É preciso trocar todas as ferramentas antes de automatizar?", "answer": "Não. A empresa pode iniciar organizando o registro e as responsabilidades sobre os canais atuais. A decisão de integrar ou substituir ferramentas vem depois de testar onde o processo perde informação ou tempo."}
+  ],
+  "sources": [
+    {"url": "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022", "type": "regulamentação oficial", "claim": "A Resolução CD/ANPD nº 2 determina que agentes de tratamento de pequeno porte adotem medidas administrativas e técnicas necessárias à proteção de dados pessoais, considerando risco à privacidade e a realidade operacional."},
+    {"url": "https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/", "type": "padrão técnico de segurança", "claim": "A OWASP descreve o risco de expor ou alterar propriedades sensíveis de um registro sem autorização adequada, sustentando a definição e o teste de permissões em fluxos comerciais."}
+  ],
+  "firstPartyEvidence": ["odery-crm-entrega"],
+  "image": {
+    "filename": "como-automatizar-o-follow-up-comercial-em-industria.svg",
+    "alt": "como automatizar o follow-up comercial em indústria"
+  },
+  "internalLinks": ["https://irbis.com.br/odery-crm"],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-13/como-automatizar-o-follow-up-comercial-em-industria.md"
+}

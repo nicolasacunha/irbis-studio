@@ -49,6 +49,8 @@
       text-align: center; padding: 24px;
     }
     .dot { color: #4A5D43; }
+    .mascote { width: clamp(120px, 16vw, 180px); margin: 0 auto 20px; }
+    .mascote img { width: 100%; height: auto; display: block; }
     h1 { font-family: 'Besley', Georgia, serif;
          font-size: clamp(32px, 6vw, 56px); font-weight: 700;
          letter-spacing: -.015em; margin-bottom: 16px; }
@@ -64,6 +66,10 @@
 </head>
 <body>
   <div>
+    <picture class="mascote">
+      <source srcset="/Design/mascote/aprovados/irbis-mascote-espreguicando.webp" type="image/webp">
+      <img src="/Design/mascote/aprovados/irbis-mascote-espreguicando.png" alt="Pantera das neves da IRBIS se espreguiçando" width="180" height="165" loading="eager">
+    </picture>
     <h1>Confirmado<span class="dot">.</span></h1>
     <p>Você vai receber o convite por email. Até a call.</p>
     <a href="/">Voltar ao site</a>

@@ -1,0 +1,1018 @@
+/* ==========================================================================
+   LP Casa Paes — Design tokens
+   ========================================================================== */
+
+:root {
+  /* Cores — extraídas do manual de marca Casa Paes (ap_casapaes_kv_social):
+     esmeralda #015B4F · creme #F0EFDD · areia dourada #E1B87F */
+  --deep: #015B4F;                     /* esmeralda da marca */
+  --deep-dark: oklch(from var(--deep) calc(l - 0.06) c h);
+  --deep-soft: oklch(from var(--deep) calc(l + 0.07) calc(c - 0.01) h);
+  --cream: #F0EFDD;                    /* creme da marca */
+  --cream-deep: oklch(from var(--cream) calc(l - 0.035) c h);
+  --ink: oklch(24% 0.03 175);          /* texto principal, tingido pro esmeralda */
+  --ink-soft: oklch(41% 0.028 172);    /* texto secundário */
+  --ink-faint: oklch(55% 0.02 170);    /* legendas */
+  --line: oklch(86% 0.018 140);        /* bordas/divisores */
+  --accent: #E1B87F;                   /* areia dourada da marca (CTA) */
+  --accent-hover: oklch(from var(--accent) calc(l - 0.06) c h);
+  --accent-soft: oklch(from var(--accent) calc(l + 0.14) calc(c - 0.04) h);
+  --on-accent: oklch(from var(--deep) calc(l - 0.04) c h); /* texto sobre areia */
+  --on-deep: #F0EFDD;
+  --on-deep-soft: oklch(from var(--cream) calc(l - 0.14) calc(c + 0.015) 160);
+  --overlay: oklch(from var(--deep) calc(l - 0.12) c h); /* base do gradiente do hero */
+
+  /* Espaçamento — escala 4pt */
+  --space-2xs: 0.25rem;   /* 4  */
+  --space-xs: 0.5rem;     /* 8  */
+  --space-sm: 0.75rem;    /* 12 */
+  --space-md: 1rem;       /* 16 */
+  --space-lg: 1.5rem;     /* 24 */
+  --space-xl: 2rem;       /* 32 */
+  --space-2xl: 3rem;      /* 48 */
+  --space-3xl: 4rem;      /* 64 */
+  --space-4xl: 6rem;      /* 96 */
+
+  /* Tipografia — escala fluida, ratio ~1.28
+     Placeholders fiéis ao manual: EB Garamond ≈ Beaufort Pro (serif elegante),
+     Hanken Grotesk ≈ Delight (sans geométrica suave), Luxurious Script = detalhes */
+  --font-display: "EB Garamond", Georgia, serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+  --font-script: "Luxurious Script", cursive;
+  --text-sm: 0.875rem;
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --text-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem);
+  --text-h2: clamp(1.65rem, 1.35rem + 1.5vw, 2.5rem);
+  --text-h1: clamp(2.1rem, 1.6rem + 2.6vw, 3.6rem);
+  --text-num: clamp(2.4rem, 1.9rem + 2.6vw, 4rem);
+
+  --radius: 10px;
+  --header-h: 64px;
+  --container: 1120px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: auto; scroll-padding-top: calc(var(--header-h) + 16px); }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+
+p, li { max-width: 70ch; }
+
+a { color: inherit; }
+
+img { display: block; max-width: 100%; height: auto; }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.section { padding-block: var(--space-3xl); }
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+  max-width: 40ch;
+}
+
+.section-sub { color: var(--ink-soft); font-size: var(--text-lg); }
+
+.section-cta { margin-top: var(--space-2xl); }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   Botões
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.85em 1.7em;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+  will-change: transform;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.btn-primary:hover { background: var(--accent-hover); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--deep);
+  border-color: var(--deep);
+}
+
+.btn-sm { padding: 0.55em 1.1em; font-size: 0.9rem; }
+.btn-lg { padding: 1.05em 2.1em; font-size: 1.125rem; }
+.btn-block { display: block; width: 100%; }
+
+/* ==========================================================================
+   1. Header
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  height: var(--header-h);
+  background: transparent;
+  transition: background 0.2s ease-out;
+}
+.site-header.is-scrolled {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+/* Wordmark placeholder — eco do logotipo do manual (caps espaçadas) */
+.logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--deep); /* hero claro: wordmark na cor da marca */
+  transition: color 0.2s ease-out;
+}
+
+/* ==========================================================================
+   2. Hero — editorial creme: texto esmeralda sobre a cor da marca,
+   foto sem scrim em janela de arco (a "casa" da Casa Paes)
+   ========================================================================== */
+
+.hero {
+  background: var(--cream);
+  padding-top: calc(var(--header-h) + var(--space-2xl));
+  padding-bottom: var(--space-2xl);
+}
+
+.hero-grid {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--deep);
+  max-width: none; /* eyebrow corre em linha única quando couber */
+}
+
+.hero-content h1 {
+  color: var(--deep);
+  max-width: 17ch;
+  margin-top: var(--space-md);
+}
+
+.hero-sub {
+  font-size: var(--text-lg);
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-top: var(--space-md);
+}
+
+.hero-cta-group {
+  margin-top: var(--space-xl);
+  align-self: stretch;
+}
+.hero-cta-group .btn { display: block; width: 100%; }
+
+/* Selo de confiança: linha de autoridade médica com ícones, sob fio */
+.hero-seal {
+  list-style: none;
+  margin-top: var(--space-xl);
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+.hero-seal li { display: flex; align-items: center; gap: var(--space-sm); }
+.hero-seal svg { flex-shrink: 0; color: var(--deep); }
+
+.hero-media img {
+  width: 100%;
+  height: clamp(340px, 52vh, 460px);
+  object-fit: cover;
+  object-position: center 24%;
+  border-radius: 999px 999px var(--radius) var(--radius);
+}
+
+/* Selo do CTA final segue no formato bullet (sobre fundo esmeralda) */
+.final-seal {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs) var(--space-sm);
+  font-size: var(--text-sm);
+  letter-spacing: 0.01em;
+  color: var(--on-deep-soft);
+  margin-top: calc(-1 * var(--space-xs));
+}
+.final-seal li { display: flex; align-items: center; gap: var(--space-sm); }
+.final-seal li:not(:last-child)::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.microcopy { font-size: var(--text-sm); color: var(--ink-faint); }
+.final-cta .microcopy { color: var(--on-deep-soft); }
+
+/* ==========================================================================
+   3. Barra de prova
+   ========================================================================== */
+
+.proof {
+  background: var(--deep);
+  color: var(--on-deep);
+  padding-block: var(--space-2xl);
+}
+
+.proof-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl) var(--space-lg);
+}
+
+.proof-item dt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.proof-item dd { color: var(--on-deep-soft); margin-top: var(--space-2xs); }
+
+.proof-note {
+  margin-top: var(--space-xl);
+  font-size: var(--text-sm);
+  color: var(--on-deep-soft);
+  max-width: 62ch;
+}
+
+/* ==========================================================================
+   4. Agitação — lista 7fr / imagem 5fr no desktop
+   ========================================================================== */
+
+.agitation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+.agitation-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* mobile: corte 4:5 após a lista */
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--radius);
+}
+
+.symptom-list {
+  list-style: none;
+  counter-reset: symptom;
+}
+
+.symptom-list li {
+  counter-increment: symptom;
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--text-lg);
+}
+.symptom-list li::before {
+  content: counter(symptom, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--accent);
+  margin-right: var(--space-md);
+}
+.symptom-list li strong { font-weight: 700; }
+
+/* Gancho de virada entre a lista de sinais e o fecho */
+.pull-quote {
+  margin-block: var(--space-2xl) 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-style: italic;
+  color: var(--deep);
+  max-width: 34ch;
+  text-wrap: balance;
+}
+.pull-quote + .section-cta { margin-top: var(--space-lg); }
+
+.section-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+.section-cta .microcopy { margin-bottom: calc(-1 * var(--space-xs)); }
+
+/* ==========================================================================
+   5. Virada / método — bloco tipográfico curto, sem imagem
+   ========================================================================== */
+
+.turn {
+  background: var(--deep-dark);
+  color: var(--on-deep);
+  padding-block: var(--space-3xl);
+}
+
+.turn-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 56ch;
+}
+.turn-inner h2 { color: var(--on-deep); max-width: 22ch; }
+/* Epígrafe: entra antes da headline, em escala menor que ela */
+.hook-line {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--accent);
+  max-width: 40ch;
+  margin-bottom: calc(-1 * var(--space-xs));
+}
+.turn-inner p { font-size: var(--text-lg); color: var(--on-deep-soft); }
+.turn-inner strong { color: var(--on-deep); }
+
+/* ==========================================================================
+   6. Como funciona
+   ========================================================================== */
+
+.steps-section { background: var(--cream-deep); }
+
+.steps-note {
+  margin-top: var(--space-2xl);
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-style: italic;
+  color: var(--deep);
+  max-width: 40ch;
+  text-wrap: balance;
+}
+
+.steps {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 620px;
+}
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 1.35rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: var(--line);
+}
+
+.steps li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-lg);
+  position: relative;
+}
+
+.step-num {
+  flex: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--deep);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  align-self: center;
+}
+
+/* ==========================================================================
+   6. Personalização — fundo esmeralda, foto sangrando no desktop
+   ========================================================================== */
+
+.personalization {
+  background: var(--deep);
+  color: var(--on-deep);
+  overflow: clip; /* segura a sangria da foto */
+}
+.personalization h2 { color: var(--on-deep); }
+.personalization p { color: var(--on-deep-soft); }
+.personalization strong { color: var(--on-deep); }
+
+/* Chamada da nota de rodapé (asterisco do dado clínico) */
+.footnote-ref {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding-inline: 0.1em;
+}
+.footnote-ref:hover { text-decoration: underline; }
+
+.pers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+.pers-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.pers-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: calc(var(--radius) * 2);
+}
+
+/* ==========================================================================
+   7B. Comparativo — duas colunas tipográficas assimétricas
+   ========================================================================== */
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+.compare-col h3 { margin-bottom: var(--space-md); max-width: 24ch; }
+
+.compare-list { list-style: none; }
+.compare-list li {
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Coluna do atalho: mais estreita e visualmente rebaixada */
+.compare-shortcut h3 { color: var(--ink-soft); }
+.compare-shortcut .compare-list li { color: var(--ink-soft); font-size: var(--text-base); }
+.compare-shortcut strong { color: var(--ink); font-weight: 700; }
+
+/* Coluna do cuidado: maior e mais forte */
+.compare-care .compare-list li { font-size: var(--text-lg); }
+.compare-care strong { color: var(--deep); }
+
+.compare-note {
+  margin-top: var(--space-2xl);
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-style: italic;
+  color: var(--deep);
+  max-width: 44ch;
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   7. Simulador
+   ========================================================================== */
+
+.simulator { background: var(--deep); color: var(--on-deep); }
+.simulator h2 { color: var(--on-deep); }
+.simulator .section-sub { color: var(--on-deep-soft); }
+
+.sim-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  background: var(--deep-soft);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+}
+
+.sim-input { display: flex; flex-direction: column; gap: var(--space-md); }
+
+.sim-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-deep-soft);
+}
+
+.sim-current {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-num);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.sim-unit { font-size: max(0.4em, 0.75rem); font-weight: 600; margin-left: 0.15em; color: var(--on-deep-soft); }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: oklch(46% 0.045 155);
+  outline-offset: 6px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--on-deep);
+  cursor: grab;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--on-deep);
+  cursor: grab;
+}
+input[type="range"]:active::-webkit-slider-thumb { cursor: grabbing; }
+
+.sim-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--on-deep-soft);
+}
+
+.sim-output { display: flex; flex-direction: column; gap: var(--space-lg); }
+
+/* Gráfico SVG de projeção */
+.sim-chart svg { display: block; width: 100%; height: auto; }
+.chart-line {
+  fill: none;
+  stroke: var(--cream);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.chart-dot { fill: var(--cream); }
+.chart-dot-final { fill: var(--accent); }
+.chart-kg {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 21px;
+  font-variant-numeric: tabular-nums;
+  fill: var(--cream);
+  text-anchor: middle;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.chart-kg-final { fill: var(--accent); }
+.chart-month {
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--on-deep-soft);
+  text-anchor: middle;
+}
+
+.sim-total {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+.sim-total-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-deep-soft);
+}
+.sim-total-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-num);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-soft);
+}
+
+.sim-disclaimer {
+  font-size: var(--text-sm);
+  color: var(--on-deep-soft);
+  max-width: 56ch;
+}
+
+.sim-microcta { max-width: 44ch; }
+.sim-microcta em { font-style: italic; color: var(--accent); }
+
+/* ==========================================================================
+   9. Depoimentos
+   ========================================================================== */
+
+.testimonials { background: var(--cream-deep); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.tcard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 2px solid var(--deep);
+}
+.tcard p { font-size: var(--text-lg); color: var(--ink); }
+.tcard cite {
+  font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.stars {
+  display: flex;
+  gap: 0.15em;
+  margin-bottom: calc(-1 * var(--space-2xs));
+}
+.stars svg {
+  width: 1em;
+  height: 1em;
+  fill: var(--accent);
+}
+
+.testimonial-note {
+  margin-top: var(--space-2xl);
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
+}
+
+/* ==========================================================================
+   10. Médico — retrato com offset
+   ========================================================================== */
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+.doctor-media img {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.doctor-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ==========================================================================
+   11. Incluso
+   ========================================================================== */
+
+.included-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 var(--space-2xl);
+  max-width: 900px;
+}
+.included-list li {
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--text-lg);
+}
+
+.included-note {
+  margin-top: var(--space-xl);
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-style: italic;
+  color: var(--deep);
+  max-width: 44ch;
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   12. FAQ
+   ========================================================================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-list details { border-bottom: 1px solid var(--line); }
+
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-lg);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-lg);
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  content: "+";
+  flex: none;
+  font-weight: 600;
+  font-size: 1.4em;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 0.2s ease-out;
+}
+.faq-list details[open] summary::after { transform: rotate(45deg); }
+
+.faq-list details p {
+  padding-bottom: var(--space-lg);
+  color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   13. CTA final
+   ========================================================================== */
+
+.final-cta {
+  background: var(--deep-dark);
+  color: var(--on-deep);
+  padding-block: var(--space-4xl);
+}
+.final-cta h2 { color: var(--on-deep); }
+
+.final-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  max-width: 560px;
+}
+.final-cta-inner p { color: var(--on-deep-soft); font-size: var(--text-lg); }
+
+/* Detalhe caligráfico — único uso de Luxurious Script na página */
+.final-cta-inner .script-accent {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: calc(-1 * var(--space-sm));
+}
+
+/* ==========================================================================
+   14. Footer — disclaimers legais em escala descendente
+   ========================================================================== */
+
+.site-footer {
+  background: var(--deep-dark);
+  color: var(--on-deep-soft);
+  border-top: 1px solid oklch(33% 0.045 158);
+  padding-block: var(--space-xl);
+}
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.legal-note { font-size: var(--text-sm); max-width: 90ch; }
+/* Bloco regulatório longo: menor e mais discreto, mas legível (AA) */
+.legal-fine {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: oklch(from var(--on-deep-soft) calc(l - 0.06) c h);
+  max-width: none;
+}
+
+/* ==========================================================================
+   Sticky CTA (mobile)
+   ========================================================================== */
+
+.sticky-cta {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40;
+  padding: var(--space-sm) var(--space-md) calc(var(--space-sm) + env(safe-area-inset-bottom));
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  transform: translateY(110%);
+  transition: transform 0.25s ease-out;
+}
+.sticky-cta.is-visible { transform: translateY(0); }
+
+/* ==========================================================================
+   Reveal on scroll
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+/* Sem JS, nada fica escondido */
+html:not(.js) .reveal { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .sticky-cta { transition: none; }
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+  .chart-kg { transition: none; }
+}
+
+/* ==========================================================================
+   Desktop
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .proof-list { grid-template-columns: repeat(4, 1fr); }
+
+  .agitation-grid {
+    grid-template-columns: 7fr 5fr; /* lista de sintomas / imagem contida */
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+  .agitation-media img { aspect-ratio: 3 / 4; }
+
+  .compare-grid {
+    grid-template-columns: 5fr 7fr; /* colunas assimétricas, sem cards */
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+  .compare-shortcut { padding-top: var(--space-2xl); } /* degrau tipográfico */
+  .compare-care {
+    border-left: 1px solid var(--line);
+    padding-left: var(--space-2xl);
+  }
+
+  .sim-card {
+    grid-template-columns: 5fr 6fr;
+    padding: var(--space-2xl);
+    align-items: center;
+  }
+
+  .doctor-grid {
+    grid-template-columns: 5fr 7fr; /* imagem menor, texto maior */
+    align-items: center; /* sem o depoimento, a coluna de texto encurtou */
+    gap: var(--space-3xl);
+  }
+  .doctor-media img { max-width: 360px; }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .sticky-cta { display: none; }
+
+  .section { padding-block: var(--space-4xl); }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding-top: calc(var(--header-h) + var(--space-3xl));
+    padding-bottom: 0; /* o arco da foto pousa na barra esmeralda de prova */
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr; /* assimetria: texto manda, foto acompanha */
+    gap: clamp(3rem, 6vw, 5.5rem);
+    align-items: end;
+  }
+  .hero-content {
+    align-self: center;
+    padding-block: var(--space-2xl) var(--space-3xl);
+  }
+  .hero-content h1 { max-width: 15ch; }
+  .hero-cta-group { align-self: flex-start; }
+  .hero-cta-group .btn { display: inline-block; width: auto; }
+  .hero-seal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--space-xl);
+    row-gap: var(--space-sm);
+  }
+  .hero-media img { height: min(72vh, 620px); }
+
+  .pers-grid {
+    grid-template-columns: 6fr 6fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+  .pers-media { margin-right: clamp(-7rem, -9vw, -2.5rem); } /* sangria controlada */
+}
+
+@media (max-width: 599px) {
+  .included-list { grid-template-columns: 1fr; }
+  .header-inner .btn-sm { font-size: 0.8rem; padding: 0.5em 0.9em; }
+}

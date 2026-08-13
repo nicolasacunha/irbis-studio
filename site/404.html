@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
   <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #E6E5E1; --text: #26251F; --accent: #4A5D43; --muted: #6E6C60; --f: 'Archivo', sans-serif; --f-serif: 'Besley', Georgia, serif; }
@@ -37,6 +37,13 @@
       text-align: center;
       display: flex; flex-direction: column; align-items: center; gap: 2rem;
     }
+
+    .mascote {
+      width: clamp(140px, 18vw, 220px);
+      margin-bottom: -.5rem;
+      filter: drop-shadow(0 12px 24px rgba(38,37,31,.12));
+    }
+    .mascote img { width: 100%; height: auto; display: block; }
 
     .eyebrow {
       font-size: .6rem; font-weight: 600; letter-spacing: .3em;
@@ -101,6 +108,10 @@
   <a href="/" class="logo" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.45em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</a>
   <div class="num" aria-hidden="true">404</div>
   <div class="content">
+    <picture class="mascote">
+      <source srcset="/Design/mascote/aprovados/irbis-mascote-dormindo.webp" type="image/webp">
+      <img src="/Design/mascote/aprovados/irbis-mascote-dormindo.png" alt="Pantera das neves da IRBIS dormindo" width="220" height="190" loading="eager">
+    </picture>
     <p class="eyebrow">Página não encontrada</p>
     <h1 class="title">Nada <br>aqui.</h1>
     <p class="desc">Esse endereço não existe ou foi movido. Mas o restante do site está inteiro.</p>

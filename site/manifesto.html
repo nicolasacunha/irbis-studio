@@ -227,6 +227,8 @@
       transition: background .25s ease, color .25s ease;
     }
     [data-s="9"] .s9-cta:hover { background: var(--text); color: var(--dark); }
+    [data-s="9"] .m-mascote { width: clamp(90px, 10vw, 140px); margin: 0 auto 1.75rem; opacity: .95; }
+    [data-s="9"] .m-mascote img { width: 100%; height: auto; display: block; }
 
     /* ── MOBILE: vertical stack ── */
     @media (max-width: 767px) {
@@ -396,6 +398,10 @@
       <!-- S9 -->
       <section class="m-screen" data-s="9" data-bg="#4A5D43">
         <div class="m-inner">
+          <picture class="m-mascote">
+            <source srcset="/Design/mascote/aprovados/irbis-mascote-confiante.webp" type="image/webp">
+            <img src="/Design/mascote/aprovados/irbis-mascote-confiante.png" alt="Pantera das neves da IRBIS, confiante" width="140" height="140" loading="lazy">
+          </picture>
           <span class="s9-title" id="s9-title">IRBIS.</span>
           <span class="s9-sub" id="s9-sub">Construído pra marcas que as pessoas<br>querem antes de precisar.</span>
           <a class="s9-cta" id="s9-cta" href="https://irbis.com.br/#contato">Iniciar um projeto →</a>

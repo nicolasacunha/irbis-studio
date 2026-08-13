@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://irbis.com.br/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/manifesto</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/manifesto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/manifesto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/manifesto"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/metodo</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/metodo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/method"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/metodo"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/cases</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/cases"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/cases"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/eforce</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/eforce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/eforce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/eforce"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/adash</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/adash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/adash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/adash"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/sobre</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/sobre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/sobre"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/processo/adash</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/processo/adash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/process/adash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/processo/adash"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/erros-site-startup</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/erros-site-startup"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/startup-website-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/erros-site-startup"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/sinais-hora-trocar-site</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/sinais-hora-trocar-site"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/signs-its-time-to-replace-your-website"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/sinais-hora-trocar-site"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/ai-is-changing-how-clients-find-your-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/vs-agencia</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/vs-agencia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/vs-agency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/vs-agencia"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/para/saas</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/para/saas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/for/saas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/para/saas"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/para/startups</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/para/startups"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/for/startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/para/startups"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/benchmark-conversao-mobile-2026</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/mobile-conversion-benchmark-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/about</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/sobre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/sobre"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/method</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/metodo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/method"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/metodo"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/manifesto</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/manifesto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/manifesto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/manifesto"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/cases</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/cases"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/cases"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/vs-agency</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/vs-agencia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/vs-agency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/vs-agencia"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/for/saas</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/para/saas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/for/saas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/para/saas"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/for/startups</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/para/startups"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/for/startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/para/startups"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/eforce</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/eforce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/eforce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/eforce"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/adash</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/adash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/adash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/adash"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/process/adash</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/processo/adash"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/process/adash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/processo/adash"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/blog</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/blog/startup-website-mistakes</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/erros-site-startup"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/startup-website-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/erros-site-startup"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/blog/signs-its-time-to-replace-your-website</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/sinais-hora-trocar-site"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/signs-its-time-to-replace-your-website"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/sinais-hora-trocar-site"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/blog/ai-is-changing-how-clients-find-your-business</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/ai-is-changing-how-clients-find-your-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/blog/mobile-conversion-benchmark-2026</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/blog/mobile-conversion-benchmark-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/benchmark-conversao-mobile-2026"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/site-bonito-nao-converte</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/site-bonito-nao-converte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/site-bonito-nao-converte"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/design</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/design"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/design"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/design"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/design</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/design"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/design"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/design"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/blog/confianca-site-desatualizado-pesquisa-2026</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/blog/confianca-site-desatualizado-pesquisa-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/confianca-site-desatualizado-pesquisa-2026"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/odery-erp</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-erp"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/claude-skills</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/claude-skills"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/claude-skills"/>
+  </url>
+
+</urlset>
