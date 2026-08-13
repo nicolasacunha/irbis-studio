@@ -1,6 +1,7 @@
 # 🗓️ Script de Agendamento — IRBIS
 
 > ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). Oferta e case atualizados.
+> ✏️ **Ajustado em 13/ago/2026:** duração da reunião corrigida de "30-40 min" para "1 hora" em todo o documento, conforme `estrutura-reuniao-unica-irbis.md` (árbitro de duração, 12/ago/2026).
 
 > Adaptado do Grupo JDP. Pra quando chega um **lead indicado** (do Dia 1 / cliente que te indicou) e você precisa agendar a reunião de diagnóstico. Até 09/ago/2026 a operação era 100% solo (quem agenda também conduz); a partir de agora pode haver um colaborador comercial dedicado a isso — ajuste "eu"/"você" conforme quem estiver executando.
 
@@ -33,15 +34,15 @@ Assim como fiz pro {{cliente que indicou}}, acho que dá pra fazer algo que dest
 ```
 Como tá sua agenda?
 
-Eu faço uma reunião rápida de diagnóstico: entendo como sua operação funciona hoje e — só se fizer sentido — te mostro o que daria pra sistematizar, com projeto e prazo.
+Eu faço uma reunião de diagnóstico: entendo como sua operação funciona hoje e — só se fizer sentido — te mostro o que daria pra sistematizar, com projeto e prazo.
 
-Consegue 30-40 min hoje às 15h30 ou amanhã às 17h?
+Consegue 1 hora hoje às 15h30 ou amanhã às 17h?
 ```
 
 ## 5. Processo de agendamento (checklist)
 - [ ] Conferir agenda e oferecer 2-3 horários
 - [ ] Registrar no **pipeline do Notion** (Estágio: Reunião agendada · Origem: Indicação)
-- [ ] Enviar convite no Google Agenda (30-40 min, com nome + link da chamada)
+- [ ] Enviar convite no Google Agenda (1 hora, com nome + link da chamada)
 - [ ] Confirmar pelo WhatsApp com o link
 
 ## 6. Confirmação de véspera (anti no-show)

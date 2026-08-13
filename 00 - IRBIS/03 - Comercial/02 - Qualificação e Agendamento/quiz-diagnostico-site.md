@@ -1,6 +1,7 @@
 # 🧭 Quiz de Diagnóstico + Funil de DM — IRBIS
 
 > ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). CTA, ICP e as 5 perguntas do quiz atualizados conforme `CLAUDE.md` e `onboarding-comercial-novo-colaborador.md`. Mecanismo (CTA → ManyChat → quiz → agendamento) e infra do `/call` preservados sem mudança.
+> ✏️ **Ajustado em 13/ago/2026:** duração dos diagnósticos finais corrigida pra "1 hora", conforme `estrutura-reuniao-unica-irbis.md` (árbitro de duração, 12/ago/2026).
 
 > Adaptado do mecanismo de funil do "prompt coringa", sem o que não serve (persona fake, infoproduto, saúde). Objetivo final: **agendar a reunião de diagnóstico**, não vender ebook.
 
@@ -53,13 +54,13 @@
 ## Diagnóstico final (3 variações por perfil)
 
 **Perfil Sistemas — operação manual ou desconectada, crescendo (quente):**
-> Pelo que você respondeu, a sua operação tá custando tempo e dinheiro todo mês que passa sem ser sistematizada. E você tá no momento certo pra resolver isso. Bora marcar 30 minutos pra eu te mostrar exatamente o que dá pra fazer no seu caso.
+> Pelo que você respondeu, a sua operação tá custando tempo e dinheiro todo mês que passa sem ser sistematizada. E você tá no momento certo pra resolver isso. Bora marcar 1 hora pra eu te mostrar exatamente o que dá pra fazer no seu caso.
 
 **Perfil Soluções com IA — processo repetitivo, quer automação:**
 > Você já identificou onde o time perde tempo com tarefa repetitiva — isso é exatamente o tipo de coisa que automação e agente de IA resolvem sem você precisar contratar mais gente. Vamos conversar sobre como aplicar isso na sua operação numa call rápida.
 
 **Perfil Consultoria de IA — quer usar IA mas não sabe por onde começar:**
-> Você sabe que IA pode ajudar seu negócio, só falta clareza de por onde começar — é exatamente pra isso que existe o diagnóstico de consultoria. Vale a gente alinhar o caminho numa conversa de 20 minutos, sem compromisso.
+> Você sabe que IA pode ajudar seu negócio, só falta clareza de por onde começar — é exatamente pra isso que existe o diagnóstico de consultoria. Vale a gente alinhar o caminho numa conversa de 1 hora, sem compromisso.
 
 **CTA final (todas):**
 > 👉 Agenda aqui: https://irbis.com.br/call

@@ -1,6 +1,7 @@
 # Script WhatsApp — Lead de entrada (IRBIS)
 
 > ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site/clínica (histórico preservado no fim do arquivo). ICP, preço e enquadramento do funil atualizados conforme `CLAUDE.md` e `onboarding-comercial-novo-colaborador.md`. A técnica de reframe de preço (não solta número solto, qualifica e leva pra reunião) foi mantida — só o conteúdo mudou.
+> ✏️ **Ajustado em 13/ago/2026:** duração corrigida de "30-40 min"/"30 min" pra "1 hora", conforme `estrutura-reuniao-unica-irbis.md` (árbitro de duração, 12/ago/2026).
 
 > Situação: alguém te chama no WhatsApp interessado em sistema, automação ou IA (ou te viu no direct e mandou "IA"). Você é o Nicolas conduzindo.
 > Princípio inegociável: **preço fechado não vai por WhatsApp.** Você qualifica, constrói autoridade e leva pra reunião — onde o valor é calibrado pro caso real dele (ver `calculadora-preco-build-irbis.md`). Faixa geral pode ser citada se ele insistir (ver seção de preço abaixo); número fechado, não.
@@ -44,7 +45,7 @@ Não mando proposta solta — a gente conversa, eu te apresento e você vê tudo
 
 ### BLOCO 4 — Fechamento (marca a reunião, não o preço)
 ```
-Bora marcar então. É rápida, uns 30-40 min, por chamada — eu te mostro tudo ali.
+Bora marcar então. É 1 hora, por chamada — eu te mostro tudo ali.
 
 Tenho esses horários:
 
@@ -76,7 +77,7 @@ Te mostro isso quinta 14h ou sexta 17h — qual fica melhor?
 ```
 Já te passei: R$3-10k pra sistema, R$1k de implementação mais R$500 a R$3.000 por mês pro bot de IA, R$5k ou R$10k pra consultoria, dependendo do porte. O que muda o número dentro dessa faixa é o quanto isso te custa hoje — tempo, retrabalho, oportunidade perdida — e isso eu só calibro entendendo seu caso.
 
-São 30 min e você sai com o valor real e o projeto na mão. Bora marcar?
+É 1 hora e você sai com o valor real e o projeto na mão. Bora marcar?
 ```
 
 > Diferente do modelo de site (que evitava qualquer número), aqui a faixa é pública e pode ser citada sem problema — o que continua não saindo por WhatsApp é o número fechado, que depende do escopo real.

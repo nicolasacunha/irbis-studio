@@ -4,9 +4,11 @@
 
 > Adaptado do Grupo JDP. Budget, Authority, Need e Timing aplicados a Sistemas, Soluções com IA e Consultoria de IA. Objetivo: **qualificar quem deve avançar pra reunião** — não vender no chat/ligação.
 
+> 🔁 **FUNIL MUDOU em 13/ago/2026.** A Reunião Única fecha **Consultoria de IA** — Sistemas e Bot de IA viraram a segunda venda, feita depois, na entrega do diagnóstico. Qualificar aqui é qualificar pra Consultoria, não pra "uma das três frentes". Árbitro: `03 - Comercial/00 - Planejamento/funil-consultoria-producao-irbis.md`.
+
 ## Objetivo
 Identificar se o lead tem:
-- **Budget** — caixa pra investir num sistema/automação/consultoria sério (faixas reais: Sistemas R$3.000–10.000 · Bot de IA R$1.000 de setup + mensalidade de R$500 a R$3.000 (faixa; número na reunião) · Consultoria R$5.000/R$10.000)
+- **Budget** — caixa pra investir no diagnóstico (Consultoria de IA: R$5.000 até R$10mi/ano de faturamento, R$10.000 acima) e, depois, na produção que ele apontar (Sistemas R$3.000–10.000 · Bot de IA R$1.000 de setup + mensalidade de R$500 a R$3.000)
 - **Authority** — poder de decidir
 - **Need** — dor real de operação/sistema/IA
 - **Timing** — urgência

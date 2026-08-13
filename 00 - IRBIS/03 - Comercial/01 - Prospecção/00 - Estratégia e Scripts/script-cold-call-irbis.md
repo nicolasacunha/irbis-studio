@@ -1,6 +1,7 @@
 # 📞 Script de Cold Call — IRBIS
 
 > ✅ **REESCRITO em 09/ago/2026, pronto pra usar.** Substitui a versão de site (histórico preservado no fim do arquivo). Preço, ICP, CTA e case atualizados conforme `CLAUDE.md` e `onboarding-comercial-novo-colaborador.md`. Estrutura SPIN e mecânica de call preservadas — só o conteúdo mudou.
+> ✏️ **Ajustado em 13/ago/2026:** duração da reunião corrigida de "30-40 min" para "1 hora", conforme `estrutura-reuniao-unica-irbis.md` (árbitro de duração e sequência, 12/ago/2026). A regra "preço não entra na ligação" segue mantida aqui como princípio de call fria, mas note que `politica-de-preco-irbis.md` (12/ago) revogou a proibição de citar a *faixa* de preço na ligação, se o lead perguntar — o que não muda é que o número fechado nunca sai antes da reunião.
 
 > Adaptado do roteiro do Grupo JDP para a realidade atual da IRBIS (sistemas, automação e IA).
 > Diferença central: a ligação é fria, pro negócio da lista do Phantom (ele NÃO se cadastrou). Então a abertura é honesta + gancho real sobre a operação dele. O objetivo não é "sessão grátis" — é **agendar a reunião de diagnóstico**, onde o preço nasce (calibrado pela pergunta de valor, não uma âncora fixa). Preço NUNCA na ligação.
@@ -102,7 +103,7 @@ Perfeito, [Nome]. Pelo que você me falou, faz total sentido a gente olhar isso 
 
 ### 10. Transição para a reunião de diagnóstico
 ```
-Funciona assim: eu marco uma reunião rápida com você, uns 30-40 min, por chamada.
+Funciona assim: eu marco uma reunião com você, 1 hora, por chamada.
 
 Nela eu te mostro:
 - O que dá pra sistematizar nessa operação
