@@ -1,6 +1,7 @@
 # 🔗 Sistema de Indicação com a Base — IRBIS (F4)
 
 > ✅ **REESCRITO em 09/ago/2026, pronto pra usar com uma ressalva.** Substitui a versão de site (histórico preservado no fim do arquivo). Gatilhos, mensagem-modelo e falas atualizados pra Sistemas/Soluções com IA/Consultoria de IA.
+> ✏️ **Ajustado em 13/ago/2026:** duração do contato com o indicado corrigida de "20 minutos" pra "1 hora", conforme `estrutura-reuniao-unica-irbis.md` (árbitro de duração, 12/ago/2026). A call de acompanhamento com o cliente da base **não muda** — continua 30 a 45 min, porque não é reunião de venda.
 >
 > ⚠️ **Ressalva que não resolvi sozinho:** a rede de indicação da E-Force (e de qualquer cliente que recebeu SITE, não sistema/IA) foi construída em torno de founder que precisa de site — pode não ser a rede certa pra pedir indicação de Sistemas/IA agora. Não decidi isso por vocês; ver nota na seção 1.
 
@@ -88,7 +89,7 @@ Te mandei uma mensagem pronta no WhatsApp. Consegue encaminhar agora pra essas p
 ## 5. Contato com o indicado (em até 24h)
 
 ```
-Oi [nome]! O [cliente] me passou seu contato, falou que você tá [contexto do gatilho]. Eu construo sistema, automação e IA sob medida pra negócio da economia real — topa 20 minutos pra eu entender o que você precisa?
+Oi [nome]! O [cliente] me passou seu contato, falou que você tá [contexto do gatilho]. Eu construo sistema, automação e IA sob medida pra negócio da economia real — topa 1 hora pra eu entender o que você precisa e já te mostrar o caminho?
 ```
 > Sempre abre falando da outra pessoa — nunca pareça abordagem fria. Referência quente esfria em horas.
 
