@@ -5,6 +5,8 @@
 > ⚠️ **Atualização 04/ago/2026 — REESTRUTURADO.** Os 5 produtos antigos (Acompanhamento Básico/Pro, Criação de Site, Gerenciamento de Infraestrutura, Fábrica de Landing Pages) eram todos de site — produto fora de escopo desde a decisão de 04/ago (ver `CLAUDE.md` seção IDENTITY). Produtos antigos ficam preservados no fim deste doc como histórico — não usar pra cobrar cliente novo.
 >
 > ✅ **Preço definido pelo dono em 09/ago/2026** (ver seções 1-3 abaixo). Ainda faltam confirmar: teto de Sistemas muito complexo, preço do tier "empresa muito grande" de Consultoria, e se Automações (fora do Bot de IA) tem componente recorrente — tudo marcado ⚠️ nos lugares certos. Isso não bloqueia mais cadastrar os Prices que já têm número.
+>
+> 🔁 **FUNIL MUDOU em 13/ago/2026.** Consultoria de IA é a porta (o que se prospecta e o que a Reunião Única vende). Sistemas e Soluções com IA viraram "produção" — vendida na entrega da consultoria, não mais oferta de entrada. Os preços abaixo continuam valendo, só a ordem de venda muda. Árbitro: `03 - Comercial/00 - Planejamento/funil-consultoria-producao-irbis.md`. Numeração das seções abaixo preservada por compatibilidade com o resto do repo — ler seção 3 (Consultoria) como a entrada do funil, e seções 1-2 (Sistemas, Soluções com IA) como a produção vendida depois.
 
 ## Como a Stripe organiza
 
@@ -46,7 +48,7 @@ Faixa definida pelo dono (09/ago/2026): **R$ 3.000–10.000**, valor fechado cal
 | `bot-ia-setup` | R$ 1.000 | one-time ⚠️ ver pendência abaixo |
 | `bot-ia-mensal` | R$ 500 a R$ 3.000/mês (faixa; número na reunião) | recurring, **fidelidade mínima de 6 meses** ⚠️ **PENDENTE DE CADASTRO** |
 
-> ✅ **12/ago/2026 — o Bot de IA virou a porta da IRBIS.** É o produto de entrada e o que se prospecta; Sistemas passou a ser upsell. Fidelidade de 6 meses. A mensalidade cobre infraestrutura, monitoramento, correção de defeito e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam; o que passa disso é fila ou aditivo. Escopo completo em `planos-recorrencia-irbis.md`, cláusula em `06 - Jurídico/contrato-prestacao-software-modelo.md` (Cláusula 5).
+> 🛑 **Revogado em 13/ago/2026:** "o Bot de IA virou a porta da IRBIS" (decisão de 12/ago). A porta agora é a Consultoria de IA (seção 3) — ver `funil-consultoria-producao-irbis.md`. O que segue abaixo sobre fidelidade, escopo da mensalidade e custo continua valendo; só o papel de "produto de entrada" mudou. Fidelidade de 6 meses. A mensalidade cobre infraestrutura, monitoramento, correção de defeito e **até 2 ajustes de prompt ou fluxo por mês**, que não acumulam; o que passa disso é fila ou aditivo. Escopo completo em `planos-recorrencia-irbis.md`, cláusula em `06 - Jurídico/contrato-prestacao-software-modelo.md` (Cláusula 5).
 
 > ✅ **12/ago/2026 — a mensalidade virou faixa.** Era R$ 500 fixo. Olhando a Odery, o dono constatou que cobraria cerca de R$ 3.000 de um cliente daquele porte, e um preço único não cobre uma diferença de seis vezes. Mesma mecânica de Sistemas: faixa pública, número fechado na reunião. **Calibração: topo da faixa quando a operação é grande e o bot é central; base quando é conveniência.** Receita contratada por bot vai de R$ 4.000 no piso (R$ 1.000 + 6 × R$ 500) a R$ 19.000 no topo (R$ 1.000 + 6 × R$ 3.000).
 
@@ -67,10 +69,10 @@ Faixa definida pelo dono (09/ago/2026): **R$ 3.000–10.000**, valor fechado cal
 
 ---
 
-## 3. Consultoria de IA — engajamento por porte do cliente
+## 3. Consultoria de IA — a porta do funil (produto de entrada, desde 13/ago/2026)
 
 **Product name:** `Consultoria de IA`
-**Descrição:** Diagnóstico de como a IA é usada hoje na empresa do cliente e indicação do caminho certo a seguir.
+**Descrição:** Diagnóstico completo da operação do cliente — o que está errado e, principalmente, a oportunidade de onde IA/sistema muda o jogo pra aquele negócio. É o que se prospecta e o que a Reunião Única fecha. A venda da produção (Sistemas/Bot, seções 1-2) acontece depois, na entrega deste diagnóstico.
 **Tipo:** one-time (engajamento; o dono não mencionou formato recorrente pra esta frente — não assumir assinatura).
 
 Faixa definida pelo dono (09/ago/2026), por faturamento anual do cliente:

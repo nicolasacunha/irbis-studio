@@ -2,6 +2,8 @@
 
 **v2 · reescrito em 12/ago/2026.** Substitui a v1 (adaptada do Grupo JDP), calibrada para operação solo vendendo site. Mudou o que se vende, quem vende e qual número decide.
 
+> 🔁 **FUNIL MUDOU em 13/ago/2026 — revoga a premissa "Bot na porta" desta v2.** A porta agora é a Consultoria de IA; Sistemas e Bot viraram produção, vendida na entrega da consultoria. Isso muda o KPI de fundo de funil (seção "Fundo de funil" abaixo) e a leitura de "onde o funil trava". As tabelas de topo e meio de funil (abordagem, conversas, reuniões) não mudam de mecânica — só de oferta. Árbitro: `03 - Comercial/00 - Planejamento/funil-consultoria-producao-irbis.md`.
+
 | Antes (v1) | Agora (v2) | Motivo |
 |---|---|---|
 | Premissa: "operação solo vendendo site" | Duas pessoas vendendo **Bot de IA** na porta e **Sistemas** no upsell | Sites saíram do escopo em 04/ago. O colaborador chegou em 12/ago |
@@ -75,22 +77,22 @@ Quem enche: **colaborador**, exceto onde marcado.
 
 | Indicador | Meta | Dono | Onde vive |
 |---|---|---|---|
-| **Receita contratada** ← *KPI que decide* | **R$ 12.000 até 30/set, no piso.** Cada bot vale de R$ 4.000 a R$ 19.000 conforme a mensalidade fechada (setup + 6 meses travados), contado no dia da assinatura | Nicolas | `pipeline` + financeiro |
-| **Bots fechados** | **3 até 30/set.** 1 em agosto, 2 em setembro. É esta linha que mede repetibilidade do funil; a de receita mede dinheiro. Podem divergir | Nicolas | `pipeline` |
-| **Mensalidade média fechada** | Sem meta. Termômetro de onde os clientes caem na faixa de R$ 500 a R$ 3.000. Se ficar colada no piso, a calibração na reunião não está funcionando | Nicolas | `pipeline` |
-| **MRR ativo** | Termômetro, não meta. Soma das mensalidades correndo no mês. Deixou de ter projeção fixa: depende de onde cada bot cair na faixa | Nicolas | Financeiro |
-| Conversão reunião → fechamento | Referência da mentoria de 03/ago: 35 a 40% com apresentação estruturada, 10 a 15% sem. Sem baseline próprio | Nicolas | `pipeline` |
-| Upsells de Sistemas vendidos para carteira | Sem meta. Depende de quantos bots existirem | Nicolas | `pipeline` |
-| **Ticket médio por frente** (medido separado, nunca em média única) | Bot: R$ 1.000 setup + mensalidade dentro de R$ 500 a R$ 3.000. Sistemas: dentro de R$ 3.000 a 10.000. Consultoria: R$ 5.000 ou R$ 10.000 | Nicolas | `pipeline` |
-| Cash collected do setup do bot (R$ 1.000 antes de começar) | 100%. É a Cláusula 3, não é negociação | Nicolas | Financeiro |
+| **Consultorias fechadas** ← *KPI que decide, desde 13/ago/2026* | Sem baseline ainda — primeiro mês do funil novo mede. Substitui "Bots fechados" como topo do funil de receita | Nicolas | `pipeline` |
+| **Taxa de upsell: Consultoria → Produção** | Sem baseline. É a linha que mede se o diagnóstico está virando venda de Sistemas/Bot na entrega | Nicolas | `pipeline` |
+| **Receita contratada (Consultoria)** | R$5.000 ou R$10.000 por fechamento, conforme faturamento do cliente. Sem meta agregada ainda — decisão do dono pendente | Nicolas | `pipeline` + financeiro |
+| **Receita contratada (Produção)** | Vendida na entrega da consultoria. Bot: R$4.000 a R$19.000 contratado (setup + 6 meses). Sistema: R$3.000–10.000. Meta agregada pendente | Nicolas | `pipeline` + financeiro |
+| **Mensalidade média fechada (Bot, quando vendido)** | Sem meta. Termômetro de onde os clientes caem na faixa de R$ 500 a R$ 3.000 | Nicolas | `pipeline` |
+| **MRR ativo** | Termômetro, não meta — voltou a ser termômetro porque a receita da porta agora é one-time (Consultoria), não recorrente | Nicolas | Financeiro |
+| Conversão reunião → fechamento (Consultoria) | Referência da mentoria de 03/ago: 35 a 40% com apresentação estruturada, 10 a 15% sem. Sem baseline próprio | Nicolas | `pipeline` |
+| **Ticket médio por frente** (medido separado, nunca em média única) | Consultoria: R$5.000 ou R$10.000. Bot: R$ 1.000 setup + mensalidade dentro de R$ 500 a R$ 3.000. Sistemas: dentro de R$ 3.000 a 10.000 | Nicolas | `pipeline` |
 | Propostas enviadas em até 24h da reunião | 100% | Nicolas | `pipeline` |
 | Propostas decididas com motivo registrado (sim ou não) | 100%. Proposta sem post-mortem não fecha o ciclo | Nicolas | `pipeline` |
 | Indicações coletadas por cliente entregue | Sem meta aprovada | Nicolas | `interacoes` |
 | Churn de bot | Só mensurável a partir do mês 7 de cada contrato, porque a fidelidade é de 6 meses. Antes disso, o que existe é multa, não churn | Nicolas | Financeiro |
 
-**Por que receita contratada é o KPI que decide:** faturamento de projeto some no mês seguinte. Em 2026 a casa recebeu R$ 600 e tem R$ 5.597 a receber, com MRR em R$ 0. Vender um Sistema de R$ 10.000 paga um mês e deixa a base no mesmo lugar. Só o bot acumula.
+**Por que Consultorias fechadas é o KPI que decide agora:** a Consultoria é a porta do funil desde 13/ago/2026 (ver `funil-consultoria-producao-irbis.md`). Ela é o que se prospecta e o que a Reunião Única vende — é o número que mede se o topo do funil está funcionando. A receita de produção (Sistemas/Bot) vem depois, na entrega, e depende de uma segunda venda que ainda não tem baseline.
 
-**E por que contratada, e não MRR num instante:** com fidelidade de 6 meses, o valor entra no dia da assinatura, não no dia do calendário. Medir MRR em 30/set contaria uma mensalidade por um bot que vale de R$ 4.000 a R$ 19.000 e foi vendido cinco dias antes. A meta antiga media assim porque o produto anterior era manutenção mês a mês, sem trava, onde o retrato do mês era o valor real.
+**Isto substitui a lógica de 12/ago ("Bots fechados" e "MRR" como KPI que decide).** Naquele modelo o Bot era a porta e a receita recorrente nascia na prospecção. Com a Consultoria na porta, a primeira receita é one-time — o MRR volta a ser termômetro, não meta, até a taxa de upsell pra Bot ter baseline.
 
 ---
 
@@ -103,7 +105,7 @@ Quem enche: **colaborador**, exceto onde marcado.
 | Reunião agendada, lead não aparece | Confirmação de véspera | Confirmação explícita foi pedida, ou só foi avisado o horário? |
 | Reunião acontece, não vira proposta | Gate de entrada | Está entrando gente sem decisor, sem verba ou sem prazo |
 | Proposta na mesa, não fecha | Condução e ancoragem | Bloco 6 sem gargalo quantificado no bloco 4. O preço fica sem lastro |
-| Fecha, mas o MRR não sobe | **Mix de produto** | Está fechando Sistema (one-time) em vez de bot. Sintoma novo, não existia na v1 |
+| Consultoria fecha, mas não vira produção | **Upsell na entrega** | O diagnóstico não está sendo usado como prova na Reunião de Entrega — ou o script dessa reunião ainda nem existe (ver pendência em `funil-consultoria-producao-irbis.md`) |
 | Cliente entregue e some | Pós-venda | Repitch de F7 e "próxima camada" não foram disparados |
 
 ---

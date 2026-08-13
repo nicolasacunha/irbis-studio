@@ -34,22 +34,24 @@ Fonte: `03 - Comercial/04 - Entrega e Recorrência/stripe-catalogo-produtos-irbi
 
 **Nunca cotar por hora.** Falou em hora, virou freelancer na cabeça do cliente. A única exceção documentada está na cláusula de horas excedentes do contrato assinado, que é pós-venda, não é oferta.
 
-## A escada de oferta (decisão de 12/ago/2026)
+## A escada de oferta (decisão de 13/ago/2026 — substitui a de 12/ago)
 
-**Bot de IA é a porta. Sistemas é o upsell.**
+**Consultoria de IA é a porta. Produção — Sistemas e/ou Soluções com IA — é o que se vende na entrega da consultoria.**
+
+> 🛑 A decisão anterior ("Bot de IA é a porta, Sistemas é o upsell", 12/ago/2026) durou um dia e foi revogada pelo dono em 13/ago. Vender produção antes de diagnosticar era vender às cegas. Árbitro completo desta mudança: `03 - Comercial/00 - Planejamento/funil-consultoria-producao-irbis.md`.
 
 | Degrau | Produto | Preço | Papel |
 |---|---|---|---|
-| **Entrada** | **Bot de IA** | R$ 1.000 setup + **R$ 500 a R$ 3.000/mês** (número na reunião) | O que se prospecta. Venda rápida, objeção baixa, gera MRR |
-| **Camada seguinte** | **Sistemas** | R$ 3.000 a 10.000 | Vendido a quem já é cliente do bot, não prospectado a frio |
-| Lateral | **Consultoria de IA** | R$ 5.000 ou R$ 10.000 | Não é porta. A R$5.000 tem tamanho de projeto, não de entrada. Entra quando o cliente pede diagnóstico, não como oferta de topo |
+| **Entrada** | **Consultoria de IA** | R$ 5.000 (até R$10mi/ano) ou R$ 10.000 (acima) | O que se prospecta e o que a Reunião Única fecha. Entrega o diagnóstico real: o que está errado e, principalmente, a oportunidade |
+| **Segunda venda** | **Produção** — Sistemas e/ou Bot de IA | Sistemas R$3.000–10.000 · Bot R$1.000 setup + R$500–3.000/mês | Vendida na entrega da consultoria, calibrada pelo que o diagnóstico encontrou. Pode ser mais de um projeto ao mesmo tempo |
 
 **O que isso muda na prática:**
-- O colaborador prospecta **Bot de IA**, não as três frentes. Uma oferta por lista, um gancho por oferta.
-- Sistemas sai do discurso de prospecção e entra no de carteira. O momento do upsell é o repitch de F7 do método e o campo "próxima camada" da carteira.
-- A faixa de Sistemas continua pública (ver tabela acima), porque quem pergunta pergunta. O que muda é que ela não é mais o que se oferece primeiro.
+- O colaborador prospecta **Consultoria de IA**, não Bot nem Sistemas. Uma oferta por lista, um gancho por oferta.
+- A Reunião Única sempre fecha Consultoria — bloco 7 apresenta o número da Consultoria, não "conforme o caso".
+- Sistemas e Bot de IA saem do discurso de prospecção e entram no discurso de entrega: a Reunião de Entrega da Consultoria é o novo momento de venda da produção (script ainda pendente, ver documento-árbitro).
+- As faixas de Sistemas e Bot continuam públicas (ver tabela abaixo), porque quem pergunta pergunta. O que muda é que elas não são mais o que se oferece primeiro.
 
-**Por que isso importa para o caixa:** o Bot é o único produto recorrente que existe. Sistemas e Consultoria são one-time e não constroem base. Cada bot vale **R$ 4.000 de receita contratada** no dia da assinatura (R$ 1.000 de setup mais os 6 meses travados), e a meta vigente é **3 bots até 30/set**, ou R$ 12.000 contratados. Ver `00 - IRBIS/00 - Operação/01 - Manual e Metas/metas-por-chapeu.md`.
+**Por que isso importa para o caixa:** a Consultoria paga a si mesma no fechamento — R$5k/R$10k, one-time, sem depender de fidelidade de 6 meses pra virar receita real. O Bot de IA continua sendo o único produto recorrente do catálogo, só que nasce mais devagar (depois da consultoria, não na prospecção). Meta e ticket médio por frente seguem em `kpis-comercial-irbis.md`, agora com Consultorias fechadas como KPI de topo do funil de receita.
 
 ## Como a faixa aparece em cada canal
 
