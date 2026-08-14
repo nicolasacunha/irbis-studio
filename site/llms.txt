@@ -33,6 +33,7 @@ Sites, landing pages, branding, identidade visual, social media, Web3 e motion a
 ## Conteúdo
 
 - [Blog](https://irbis.com.br/blog): arquivo de artigos. Parte do acervo anterior a 04/ago/2026 trata de sites e não representa a oferta atual.
+- [Como automatizar o follow-up comercial em indústria](https://irbis.com.br/blog/como-automatizar-o-follow-up-comercial-em-industria): registro, responsabilidade e controles de acesso antes da automação.
 - [Agentes de IA já compram sozinhos](https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto): estrutura digital para agentes de navegação.
 - [Como clientes encontram empresas por IA](https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio): SEO e busca generativa.
 

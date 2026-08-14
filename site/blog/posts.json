@@ -1,6 +1,16 @@
 {
     "posts": [
         {
+            "slug": "como-automatizar-o-follow-up-comercial-em-industria",
+            "title": "Como automatizar o follow-up comercial em indústria",
+            "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial em indústria.",
+            "dateISO": "2026-08-13",
+            "pilar": "solucoes-com-ia",
+            "keywords": ["como automatizar o follow-up comercial em indústria", "CRM industrial", "automação comercial industrial", "follow-up comercial"],
+            "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-industria.svg",
+            "readingTimeMin": 7
+        },
+        {
             "slug": "como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia",
             "title": "Como automatizar o follow-up comercial em escritório de advocacia",
             "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial.",
