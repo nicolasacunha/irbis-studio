@@ -1,0 +1,19 @@
+{
+  "keyword": "quanto custa automação com IA para agência de marketing",
+  "title": "Quanto custa automação com IA para agência de marketing?",
+  "summary": "Uma automação com IA para agência de marketing custa R$ 1.000 de setup mais mensalidade de R$ 500 a R$ 3.000 quando o problema cabe em um Bot de IA com escopo fechado. O preço varia com as fontes de dados, as integrações, as permissões e o ponto em que uma pessoa precisa conferir a saída. A documentação de preços de APIs de IA mostra que uso de modelo é medido por componentes como tokens, o que reforça a necessidade de dimensionar o volume real da rotina. A proposta fecha depois de entender uma tarefa específica, seus responsáveis e as exceções que a equipe enfrenta.",
+  "faq": [
+    {"question": "Quanto custa automação com IA para agência de marketing?", "answer": "Um Bot de IA da IRBIS começa em R$ 1.000 de setup, com mensalidade entre R$ 500 e R$ 3.000. O valor fechado depende do fluxo e é definido na reunião de uma hora."},
+    {"question": "O que a mensalidade do Bot de IA inclui?", "answer": "Ela inclui infraestrutura, monitoramento, correção de defeito e até dois ajustes de prompt ou fluxo por mês. Os ajustes não acumulam; pedidos além do escopo entram em fila ou aditivo."},
+    {"question": "Uma automação pode enviar respostas para clientes sem revisão?", "answer": "Pode haver automações de comunicação quando a agência define regras, permissões e exceções. Para saídas com impacto comercial, a revisão humana deve fazer parte do desenho sempre que o risco justificar."},
+    {"question": "O que preciso levar para pedir uma proposta?", "answer": "Leve uma rotina específica, as ferramentas que participam, exemplos anonimizados de entrada e saída, pessoas responsáveis e as exceções mais frequentes. Isso permite estimar um fluxo que a equipe consegue operar."}
+  ],
+  "sources": [
+    {"url": "https://developers.openai.com/api/docs/pricing", "type": "documentação oficial de preços", "claim": "A página oficial informa que o uso da API é precificado por componentes como tokens de entrada, tokens em cache e tokens de saída, conforme o modelo."},
+    {"url": "https://developers.google.com/google-ads/api/docs/conversions/upload-offline", "type": "documentação oficial de plataforma", "claim": "A documentação descreve a importação de conversões offline e conversões aprimoradas de leads com dados fornecidos pelo usuário, incluindo requisitos de termos de dados do cliente e tratamento de identificadores em fluxos aplicáveis."}
+  ],
+  "firstPartyEvidence": ["adash-entrega"],
+  "image": {"filename": "quanto-custa-automacao-com-ia-para-agencia-de-marketing.svg", "alt": "quanto custa automação com IA para agência de marketing"},
+  "internalLinks": ["https://irbis.com.br/adash"],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-14/quanto-custa-automacao-com-ia-para-agencia-de-marketing.md"
+}
