@@ -1,0 +1,42 @@
+{
+  "keyword": "quanto custa CRM sob medida para agência de marketing",
+  "title": "Quanto custa CRM sob medida para agência de marketing?",
+  "summary": "Na IRBIS, um CRM sob medida para agência de marketing pode ficar entre R$ 3.000 e R$ 10.000 dentro do escopo padrão de Sistemas. O investimento varia conforme funil, permissões, histórico de clientes, regras de atendimento e integrações. Dados de lead exigem critérios claros de acesso, finalidade e retenção, porque a LGPD regula operações de tratamento de dados pessoais. A IRBIS já desenvolveu o Adash para centralizar mídia, CRM, conteúdo, relatórios e agente de IA na operação da QG Group, mas esse case comprova a entrega, não um resultado financeiro público.",
+  "faq": [
+    {
+      "question": "Quanto custa um CRM sob medida para agência de marketing na IRBIS?",
+      "answer": "A faixa pública para Sistemas na IRBIS é de R$ 3.000 a R$ 10.000 em projetos padrão. O valor fechado depende do diagnóstico do funil, dos dados, das integrações e das regras de acesso."
+    },
+    {
+      "question": "O CRM pode integrar dados de anúncios e leads?",
+      "answer": "Pode, desde que a integração tenha finalidade operacional clara e defina quais dados entram, quem acessa e como a agência trata essas informações."
+    },
+    {
+      "question": "CRM sob medida substitui todas as ferramentas da agência?",
+      "answer": "Não necessariamente. O projeto deve centralizar os pontos em que a agência perde contexto ou repete trabalho e manter ferramentas especializadas quando elas cumprem bem sua função."
+    },
+    {
+      "question": "O case Adash prova resultado financeiro para outras agências?",
+      "answer": "Não. O case comprova o escopo entregue, sem resultado financeiro público medido."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-publicacaooriginal-156212-pl.html",
+      "type": "legislação",
+      "claim": "A LGPD regula o tratamento de dados pessoais e estabelece princípios como finalidade, necessidade, transparência e segurança."
+    },
+    {
+      "url": "https://business.google.com/br/privacy/",
+      "type": "documentação oficial",
+      "claim": "Mudanças de privacidade e de plataforma afetam medição e uso de dados em publicidade, o que torna necessário definir o tratamento de dados de lead nas integrações."
+    }
+  ],
+  "firstPartyEvidence": ["adash-entrega"],
+  "image": {
+    "filename": "quanto-custa-crm-sob-medida-para-agencia-de-marketing.svg",
+    "alt": "quanto custa CRM sob medida para agência de marketing"
+  },
+  "internalLinks": ["https://irbis.com.br/adash"],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-15/quanto-custa-crm-sob-medida-para-agencia-de-marketing.md"
+}
