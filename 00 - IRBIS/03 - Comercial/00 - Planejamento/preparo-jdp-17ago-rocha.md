@@ -42,6 +42,27 @@ Duas referências públicas de precificação de consultoria de IA no Brasil:
 | IAEO 2026 | Consultoria + implementação | R$ 5.000 a R$ 30.000 | variável |
 | IAEO 2026 | Sistema inteligente sob medida (ERP/CRM) | R$ 15.000 a R$ 50.000 | projeto |
 
+### 🔥 O que mudou em 14/ago: o Gabriel respondeu, e o argumento ficou muito melhor
+
+As cinco respostas chegaram. Duas delas mudam a conversa de preço:
+
+> **"Temos uns 30 que atendem clientes, na realidade precisaríamos de uns 50, porém não se consegue o profissional no mercado."**
+>
+> **"Estamos tentando integrar o WhatsApp por um programa da TOTVS, porém não temos equipe para desenvolver o processo, daí não estamos conseguindo andar."**
+
+**Ele não tem problema de software. Tem um buraco de 20 pessoas que o mercado não vende, e a ferramenta que ele comprou pra resolver isso está parada pelo mesmo motivo.**
+
+**A conta que isso abre.** Um atendente de balcão e televendas, com salário e encargos, deve rodar entre R$ 3,5 mil e R$ 5 mil por mês. Vinte pessoas que faltam:
+
+| | Por mês | Por ano |
+|---|---|---|
+| Estimativa conservadora | ~R$ 70 mil | ~R$ 840 mil |
+| Estimativa alta | ~R$ 100 mil | ~R$ 1,2 milhão |
+
+⚠️ **É estimativa, não medição.** O número real sai da boca dele no bloco 4 da reunião, e a técnica é perguntar em vez de estimar: *"quanto custa um atendente pra vocês, tudo somado?"* Número que o cliente calcula sozinho não se negocia depois.
+
+**Por que isso importa pro preço:** a consultoria deixa de ser comparada com "um relatório" e passa a ser comparada com **um buraco de capacidade de sete dígitos por ano que ele não consegue tapar nem pagando.** R$ 25 mil vira 2% a 3% de um ano do problema, uma vez só.
+
 ### O argumento, em uma linha
 
 **R$ 20.000 a R$ 25.000 não é preço agressivo. É o meio da faixa de mercado, aplicado a um cliente maior que o cliente típico dessa faixa.**
@@ -50,18 +71,15 @@ A faixa de R$10k a R$40k é descrita para **PME**. O Rocha tem 7 lojas, um CD, m
 
 E a doutrina do próprio JDP diz a mesma coisa, no item 1.3 do plano: *"Empresa de R$100 milhões por ano não compara solução de R$5 mil com algo sério. O cliente ancora no primeiro número que ouve. Num negócio desse porte, valor baixo passa impressão de solução fuleira."*
 
-### O problema que vem junto, e a saída
+### ✅ Simplificação de 14/ago à noite: segunda vende só a Consultoria
 
-Se a consultoria custa R$20-25 mil e a produção custa R$3-10 mil, o cliente pergunta por que **pensar custa mais que construir**. E ele tem razão de perguntar.
+Decisão do dono: **volta pro funil padrão.** Nada de implementação vendida junto. A produção é vendida depois, na entrega do diagnóstico.
 
-A saída é tratar o Rocha como enterprise nas duas pontas:
+Isso derruba o campo em branco mais problemático da lista — a faixa de implementação — que era justamente o que conflitava com a política, porque ela manda "sob consulta" pra Sistemas muito complexo e proíbe estimar teto. **Restam dois campos pra fechar às 11h: valor e prazo.**
 
-| Etapa | Rocha |
-|---|---|
-| Consultoria de IA | Degrau enterprise, R$ 20-25 mil |
-| Produção (Sistemas) | **"Sistemas muito complexo, sob consulta"** — a política já prevê essa saída e não estima teto |
+Fica de pé um problema que só mudou de data: se a consultoria sai a R$ 20-25 mil e a produção segue na faixa de R$ 3-10 mil, na segunda venda o cliente vai perguntar por que **pensar custou mais que construir**. E ele tem razão de perguntar.
 
-Isso resolve a ordem de grandeza e é coerente com a tabela. **O que não pode acontecer é cotar consultoria enterprise e depois oferecer um sistema de R$ 7.000 pra 8 unidades.**
+A saída continua sendo tratar o Rocha como enterprise nas duas pontas, com a produção entrando em **"Sistemas muito complexo, sob consulta"** — que a política já prevê. A diferença é que agora essa decisão é tomada com o diagnóstico na mão, e não no escuro. **Melhor assim.**
 
 > Nota que não é pauta de segunda, mas é real: a faixa de Sistemas da IRBIS (R$3-10 mil) está abaixo do que as duas referências de mercado cobram por sistema sob medida (R$15-50 mil). A `calculadora-preco-build-irbis.md` já registra isso como pendência aberta (Trava 2, "âncora de mercado ainda é a do mundo de site"). Os números acima são o primeiro insumo real pra fechar essa trava.
 
@@ -80,8 +98,14 @@ O Rocha compra peça, não compra consultoria. A objeção provável não é "es
 **3. Qual o prazo da consultoria?**
 A IRBIS não tem prazo definido, e a estrutura da reunião proíbe inventar número ao vivo. O mercado trabalha com **3 a 6 semanas** pra diagnóstico. Fechar 3 ou 4 semanas antes das 15h resolve isso, e é uma resposta que ele vai pedir.
 
-**4. Fecha ao vivo ou apresenta e cobra a resposta?**
-A estrutura da IRBIS manda fechar no bloco 7, ao vivo. Mas a Isabel é sócia em todos os CNPJs. Se ela não estiver na sala, o JDP recomenda fechar mesmo assim com o Roberto, ou marcar o fechamento com os dois?
+**4. ~~Fecha ao vivo mesmo sem a Isabel?~~ ✅ RESOLVIDO**
+O Gabriel confirmou: **o Roberto decide sozinho.** A Isabel é sócia em todos os CNPJs mas não entra na decisão de investir em sistema. Fecha ao vivo no bloco 7, sem ressalva.
+*Bônus:* ela reclama que o atendimento precisa melhorar. Não decide, mas é voz interna a favor da dor. Vale validar isso na reunião sem transformá-la em fonte de pressão.
+
+**4-bis (substitui a anterior). Como se posiciona diante da TOTVS sem brigar com ela?**
+Ele já contratou e já pagou o módulo de WhatsApp. Atacar a escolha é atacar o julgamento dele.
+A posição que eu levaria: *"não sei ainda se o caminho é destravar o que vocês compraram ou fazer diferente, e é isso que o diagnóstico responde."* Existe uma pergunta real, sem resposta, que sangra caixa todo dia — o que é exatamente o que uma consultoria compra.
+**O JDP concorda com esse enquadramento, ou tem um jeito melhor de conviver com fornecedor incumbente grande?**
 
 ---
 

@@ -31,11 +31,11 @@ Tudo que já foi produzido está em `03 - Comercial`, e o índice completo fica 
 | | Quantidade |
 |---|---|
 | Tarefas do plano | **31** |
-| Concluídas | **5** |
-| Parciais | **6** |
+| Concluídas | **6** |
+| Parciais | **5** |
 | Não começadas | **20** |
 
-**Todas as 5 concluídas e as 6 parciais foram feitas por Nicolas em 14/ago.** O Gabriel ainda não recebeu nenhuma tarefa formalmente, o que é o gargalo que este documento existe pra resolver: ele tem 14 tarefas esperando por ele e nenhuma delas começou.
+**Cinco foram feitas por Nicolas em 14/ago. A sexta (G1) foi do Gabriel, no mesmo dia, e ele entregou.** Restam 13 tarefas dele, e a maior parte destrava na segunda, quando o material da Área de Membros sair.
 
 ---
 ---
@@ -48,25 +48,20 @@ Tudo que já foi produzido está em `03 - Comercial`, e o índice completo fica 
 
 ## Agora, antes de segunda 17/ago
 
-### G1 · As 5 respostas sobre o Rocha Auto Peças
+### ~~G1 · As 5 respostas sobre o Rocha Auto Peças~~
 *Tarefa 1.1 do plano · dividida com Nicolas*
 
-~~Levantar dados públicos do Rocha: lojas, cidades, tamanho da operação, sócios~~ — **FEITO POR NICOLAS (14/ago)**
+✅ **FEITO POR GABRIEL (14/ago).** Primeira tarefa dele, entregue com número, nome de fornecedor e o motivo real do travamento. As respostas reescreveram a oferta da reunião de segunda.
 
-**Sua fatia, e ela é a que falta:** você tem contato próximo, e as cinco respostas abaixo não existem em fonte pública.
+| # | Pergunta | Resposta |
+|---|---|---|
+| 1 | Qual ERP | "ERP referência de mercado", **sem nome**. O pessoal tem dificuldade de acompanhar as inovações, o que atrapalha a operação. *Nome fica pra perguntar na reunião* |
+| 2 | Canais | Site, WhatsApp, balcão e telefone. **"Não estamos tendo pessoas para atender nos meios digitais"** |
+| 3 | Quantos atendem | **30 hoje, precisariam de 50. "Não se consegue o profissional no mercado"** |
+| 4 | A Isabel decide? | **Não.** Mas reclama que o atendimento precisa melhorar |
+| 5 | O que já tentaram | **Integrar o WhatsApp por um programa da TOTVS. "Não temos equipe para desenvolver o processo, daí não estamos conseguindo andar"** |
 
-| # | Pergunta |
-|---|---|
-| 1 | Que sistema ou ERP eles usam hoje, e há quanto tempo |
-| 2 | Cliente entra por onde: balcão, telefone, WhatsApp, televendas, site |
-| 3 | Quantas das 180 pessoas atendem cliente direto |
-| 4 | **A Isabel participa da decisão de investir em sistema?** |
-| 5 | **O que eles já tentaram nessa linha e não deu certo?** |
-
-**Prazo:** domingo 16/ago à noite.
-**Pronto quando:** as 5 respondidas, ou pelo menos a 4 e a 5, que são as que mudam a condução da reunião.
-
-**O que o Nicolas já levantou, pra você não repetir:** 7 lojas (3 em Campinas, mais Indaiatuba, Jundiaí, Araraquara e Hortolândia), +180 colaboradores, centro de distribuição próprio desde 2012, unidade nova em planejamento, sócios Roberto Rocha de Souza Pinto e Isabel Aparecida Amalfi, fundada em 1992.
+**O que isso mudou:** o Rocha não tem problema de software. Tem um buraco de 20 pessoas que o mercado não vende, e a ferramenta que ele comprou pra resolver está parada pelo mesmo motivo. Blocos 2, 4 e 5 da reunião foram reescritos em cima disso.
 
 ---
 
@@ -265,9 +260,8 @@ Levar o placar consolidado pro acompanhamento e definir com o time a prioridade 
 ## DIA 1 · Preparar o lead grande
 
 ### ~~1.1 · Levantar o máximo do Rocha antes da reunião~~
-**FEITO (14/ago).** Dossiê em `01 - Prospecção/02 - Dossiês de Prospects/dossie-rocha-autopecas-17ago2026.md`.
-Levantados: 7 lojas, +180 colaboradores, CD próprio, unidade nova em planejamento, dois sócios decisores, estrutura multi-CNPJ, fundação em 1992.
-*Aguarda a fatia do Gabriel (G1).*
+**FEITO (14/ago), pelos dois.** Dossiê em `01 - Prospecção/02 - Dossiês de Prospects/dossie-rocha-autopecas-17ago2026.md`.
+Nicolas levantou a parte pública: 7 lojas, +180 colaboradores, CD próprio, unidade nova, estrutura multi-CNPJ, fundação em 1992. O Gabriel trouxe as cinco respostas de dentro (ver G1), e foram elas que reescreveram a oferta.
 
 ### ~~1.2 · Montar o roteiro de qualificação com o método BANT~~
 **FEITO (14/ago).** As quatro perguntas adaptadas ao vocabulário de autopeças, encaixadas no bloco 2 da reunião única. **Authority foi movido pra primeira posição** por causa da Isabel.
@@ -276,7 +270,7 @@ Levantados: 7 lojas, +180 colaboradores, CD próprio, unidade nova em planejamen
 🔴 **EM ABERTO, e trava a reunião inteira.**
 Direção: R$ 20.000 a R$ 25.000 pela Fase 1. Fecha na reunião com o JDP, **segunda 17/ago às 11h**.
 Âncora de mercado já levantada: diagnóstico de IA para PME roda entre R$ 10 mil e R$ 40 mil, em 3 a 6 semanas.
-Três campos precisam sair preenchidos daquela reunião: **valor da Fase 1 · prazo da Fase 1 · faixa da Fase 2.**
+Dois campos precisam sair preenchidos daquela reunião: **valor da Consultoria · prazo da Consultoria.** (A faixa de implementação saiu da conta: em 14/ago o dono decidiu que segunda vende só a Consultoria.)
 Pauta em `00 - Planejamento/preparo-jdp-17ago-rocha.md`.
 
 ### ~~1.4 · Preparar o mecanismo do diagnóstico como abertura da oferta~~
@@ -421,6 +415,6 @@ Cinco dependências. Se uma delas parar, o que vem depois para junto.
 
 **1. A oferta de entrada é Consultoria de IA.** Não Bot, não Sistemas. Decisão de 13/ago. Sistemas e Bot viraram a segunda venda, feita na entrega da consultoria.
 
-**2. No Rocha especificamente, consultoria e implementação são vendidas juntas**, em duas fases com portão: Fase 1 com preço fechado agora, Fase 2 com faixa acordada e número fechado só no fim da Fase 1. Exceção declarada, vale só pra este caso.
+**2. O Rocha segue o funil padrão.** A exceção de vender consultoria e implementação juntas foi cogitada e revogada no mesmo dia. Segunda fecha só a Consultoria de IA; a produção vem depois, na entrega do diagnóstico.
 
 **3. Existe uma reunião só, e ela dura 1 hora.** Em todo canal: convite, DM, ligação, confirmação de véspera. Acabou a separação entre call de diagnóstico e call de venda. Quem conduz é o Nicolas, sem exceção.

@@ -18,7 +18,7 @@
 | `blocos-reuniao-rocha-17ago.md` | Como a reunião funciona por dentro. Ele não conduz, mas entender os 7 blocos melhora o que ele qualifica |
 | `preparo-jdp-17ago-rocha.md` | A âncora de mercado e o raciocínio de precificação |
 
-**A única ressalva é de fato, não de confiança:** até segunda 11h os três campos de preço estão em branco de verdade. Enquanto estiverem, ninguém cita número de Fase 1 ou Fase 2 pra lead nenhum. A faixa pública de Consultoria (R$ 5.000 / R$ 10.000) segue liberada normalmente.
+**A única ressalva é de fato, não de confiança:** até segunda 11h o valor e o prazo da Consultoria estão em branco de verdade. Enquanto estiverem, ninguém cita número fechado pra lead nenhum. A faixa pública de Consultoria (R$ 5.000 / R$ 10.000) segue liberada normalmente.
 
 ### O que sai em .docx
 
@@ -80,7 +80,7 @@ Ainda não trabalhados. Do PDF: **Dia 3** funil de aplicação e narrativa · **
 **1. Segunda vende Consultoria de IA, não implementação avulsa.**
 O plano do JDP foi escrito assumindo pacote de implementação. O `funil-consultoria-producao-irbis.md` de 13/ago decidiu que Consultoria é a porta. Prevalece o funil, com a exceção do item 2 abaixo.
 
-**2. No Rocha especificamente, consultoria e implementação são vendidas juntas** (decisão do dono, 14/ago), estruturadas em **duas fases com portão**: Fase 1 com preço fechado agora, Fase 2 com faixa acordada e número fechado só no fim da Fase 1. Exceção declarada, válida só pra este caso. Estrutura em `blocos-reuniao-rocha-17ago.md`.
+**2. O Rocha segue o funil padrão.** A exceção de "consultoria + implementação juntas", cogitada em 14/ago pela manhã, foi revogada pelo dono na mesma noite. Segunda vende **só a Consultoria de IA**; a produção é vendida depois, na entrega do diagnóstico. Isso realinha o caso ao `funil-consultoria-producao-irbis.md` e elimina a necessidade de cotar implementação antes de diagnosticar oito unidades.
 
 **3. A âncora de mercado existe agora.** Diagnóstico de IA para PME no Brasil roda entre **R$ 10 mil e R$ 40 mil, em 3 a 6 semanas**. Isso fecha parcialmente a Trava 2 da `calculadora-preco-build-irbis.md`, que ainda usava referência do mundo de site. Detalhe em `preparo-jdp-17ago-rocha.md` §2.
 
@@ -92,7 +92,7 @@ O plano do JDP foi escrito assumindo pacote de implementação. O `funil-consult
 |---|---|---|
 | 1 | **O número da Fase 1** (consultoria) | A reunião de segunda inteira |
 | 2 | **O prazo da consultoria** em semanas | Bloco 6. Não pode ser inventado ao vivo |
-| 3 | **A faixa da Fase 2** (implementação) | Bloco 6. ⚠️ Bate de frente com a política, que manda "sob consulta" e proíbe estimar teto. **É decisão nova do dono** |
+| 3 | ~~A faixa da Fase 2 (implementação)~~ ✅ **caiu em 14/ago**: a venda de segunda é só a Consultoria, então nada de implementação é cotado | — |
 | 4 | O degrau "Consultoria enterprise" segue sem valor na `politica-de-preco-irbis.md` | O próximo lead grande |
 | 5 | O `CLAUDE.md` ainda registra "Bot de IA é a porta" (12/ago), revogado em 13/ago | Prospecção pela regra velha |
 | 6 | Script da Reunião de Entrega da Consultoria não existe | A segunda venda, se o Rocha fechar |
