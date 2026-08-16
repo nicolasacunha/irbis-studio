@@ -1,0 +1,42 @@
+{
+  "keyword": "como automatizar o follow-up comercial em agência de marketing",
+  "title": "Como automatizar o follow-up comercial em agência de marketing",
+  "summary": "Uma agência automatiza o follow-up comercial quando registra a origem do lead, define um responsável e transforma cada avanço em uma tarefa com data. O fluxo deve preservar o contexto da conversa e permitir que o comercial intervenha antes de qualquer mensagem inadequada. A LGPD exige que o tratamento de dados pessoais tenha finalidade, necessidade, transparência e segurança, portanto o projeto deve limitar os dados que circulam entre ferramentas. A IRBIS desenvolveu o Adash para reunir mídia, CRM, conteúdo, relatórios e agente de IA na operação da QG Group, mas esse case comprova a entrega, não um resultado financeiro público.",
+  "faq": [
+    {
+      "question": "Como automatizar o follow-up comercial em agência de marketing sem enviar mensagens erradas?",
+      "answer": "Comece com tarefas e alertas internos. A equipe valida o contexto antes de falar com o prospect. Mensagens externas entram depois, para situações previsíveis e com texto aprovado."
+    },
+    {
+      "question": "O CRM precisa receber dados de todas as plataformas de anúncio?",
+      "answer": "Não. A agência deve integrar apenas os dados necessários para uma decisão comercial ou de atendimento e definir finalidade, acesso, retenção e responsabilidade pelo tratamento."
+    },
+    {
+      "question": "Automação de follow-up substitui o comercial da agência?",
+      "answer": "Não. A automação registra o contexto, cria lembretes e sinaliza pendências. O comercial continua responsável por qualificar, negociar e decidir o próximo contato."
+    },
+    {
+      "question": "O Adash prova que a agência terá mais vendas?",
+      "answer": "Não. O Adash comprova uma entrega da IRBIS para a QG Group, sem resultado financeiro público medido."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+      "type": "legislação",
+      "claim": "A LGPD define tratamento de dados pessoais e, no artigo 6º, estabelece princípios como finalidade, necessidade, transparência, segurança e prestação de contas."
+    },
+    {
+      "url": "https://developers.google.com/google-ads/api/docs/conversions/upload-clicks?hl=pt-br",
+      "type": "documentação oficial",
+      "claim": "A documentação do Google Ads descreve o envio de conversões offline para associar ações posteriores aos cliques, quando a implementação e o tratamento de dados forem adequados ao caso."
+    }
+  ],
+  "firstPartyEvidence": ["adash-entrega"],
+  "image": {
+    "filename": "como-automatizar-o-follow-up-comercial-em-agencia-de-marketing.svg",
+    "alt": "como automatizar o follow-up comercial em agência de marketing"
+  },
+  "internalLinks": ["https://irbis.com.br/adash"],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-16/como-automatizar-o-follow-up-comercial-em-agencia-de-marketing.md"
+}
