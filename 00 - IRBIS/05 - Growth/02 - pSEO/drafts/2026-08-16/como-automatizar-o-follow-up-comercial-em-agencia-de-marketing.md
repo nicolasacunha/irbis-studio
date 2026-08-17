@@ -28,7 +28,7 @@ Uma agência costuma receber contato de formulários, indicação, ligação, Wh
 
 A documentação oficial do [Google Ads sobre conversões offline](https://developers.google.com/google-ads/api/docs/conversions/upload-clicks?hl=pt-br) mostra que dados de conversão podem ser enviados ao Google Ads para associar ações posteriores aos cliques. Essa integração deve entrar no escopo apenas quando a agência consegue explicar a finalidade e manter o vínculo entre o dado enviado e a operação comercial. Ela não justifica enviar todos os campos de um CRM para a plataforma.
 
-A [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) considera tratamento operações como coleta, armazenamento, consulta, alteração e comunicação de dados pessoais. No artigo 6º, a lei determina finalidade, necessidade, transparência, segurança e prestação de contas. Na prática, a agência deve documentar quais dados entram no fluxo, quem acessa, qual base legal orienta o tratamento e por quanto tempo cada dado permanece disponível. Este artigo não substitui orientação jurídica para o caso concreto.
+A [LGPD](https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-publicacaooriginal-156212-pl.html) considera tratamento operações como coleta, armazenamento, consulta, alteração e comunicação de dados pessoais. No artigo 6º, a lei determina finalidade, necessidade, transparência, segurança e prestação de contas. Na prática, a agência deve documentar quais dados entram no fluxo, quem acessa, qual base legal orienta o tratamento e por quanto tempo cada dado permanece disponível. Este artigo não substitui orientação jurídica para o caso concreto.
 
 ## Use automação para cobrar a ação certa
 
