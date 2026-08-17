@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mapa mental da call · Rocha Auto Peças · 17/ago 15h</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Besley:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#21201B; --text:#F2EFE9; --accent:#8FA987; --muted:#9C998A;
+  --c1:#7C93D8; --c2:#A583D8; --c3:#D87A9E; --c4:#D8664A; --c5:#D8A34A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+
+.top{padding:26px 34px 18px;border-bottom:1px solid rgba(242,239,233,.12)}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-family:Besley,Georgia,serif;font-weight:500;font-size:30px;margin:8px 0 6px}
+.sub{color:var(--muted);font-size:13.5px}
+.sub b{color:var(--text);font-weight:600}
+.hint{margin-top:10px;font-size:12.5px;color:var(--accent)}
+
+/* ---------- mapa ---------- */
+.stage{position:relative;padding:40px 34px 60px;overflow-x:auto}
+#wires{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.map{position:relative;display:grid;grid-template-columns:190px 230px minmax(320px,1fr);
+  column-gap:70px;row-gap:26px;align-items:center;min-width:920px}
+
+.root{grid-column:1;grid-row:1 / -1;align-self:center;justify-self:start}
+.root b{display:block;font-family:Besley,Georgia,serif;font-size:27px;font-weight:500;line-height:1.15}
+.root span{display:block;margin-top:9px;font-size:12px;color:var(--muted);line-height:1.5}
+
+.bnode{grid-column:2;justify-self:start;cursor:pointer;border:1px solid var(--bc);
+  border-radius:7px;padding:11px 15px;background:rgba(0,0,0,.16);transition:.16s;min-width:200px}
+.bnode:hover{background:rgba(255,255,255,.05)}
+.bnode .n{font-family:Besley,Georgia,serif;font-size:20px;color:var(--bc);line-height:1.1}
+.bnode .m{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+  font-weight:600;margin-top:5px}
+
+.kids{grid-column:3;display:flex;flex-direction:column;gap:9px;align-items:flex-start}
+.kid{cursor:pointer;display:flex;align-items:center;gap:10px;padding:8px 15px;border-radius:6px;
+  border:1px solid rgba(242,239,233,.14);background:rgba(242,239,233,.03);transition:.16s;
+  font-size:14.5px;font-weight:500;max-width:560px}
+.kid:hover{border-color:var(--bc);background:rgba(242,239,233,.075);transform:translateX(3px)}
+.kid.act{border-color:var(--bc);background:rgba(242,239,233,.09)}
+.kid .dot{width:8px;height:8px;border-radius:50%;background:var(--bc);flex:0 0 auto}
+.tg{font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  padding:2px 6px;border-radius:3px;white-space:nowrap}
+.tg.new{background:rgba(143,169,135,.16);border:1px solid rgba(143,169,135,.55);color:var(--accent)}
+.tg.cut{background:rgba(216,102,74,.14);border:1px solid rgba(216,102,74,.55);color:#E08A72}
+
+/* ---------- gaveta ---------- */
+.scrim{position:fixed;inset:0;background:rgba(12,12,10,.55);opacity:0;pointer-events:none;
+  transition:.2s;z-index:40}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(620px,94vw);background:#25241F;
+  border-left:1px solid rgba(242,239,233,.18);z-index:50;transform:translateX(102%);
+  transition:transform .22s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;
+  box-shadow:-30px 0 60px rgba(0,0,0,.4)}
+.drawer.on{transform:none}
+.dhead{padding:22px 28px 16px;border-bottom:1px solid rgba(242,239,233,.13);flex:0 0 auto}
+.dhead .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--bc)}
+.dhead h2{font-family:Besley,Georgia,serif;font-weight:500;font-size:25px;margin:8px 0 0}
+.dhead .m{margin-top:8px;font-size:12px;color:var(--muted);letter-spacing:.05em}
+.close{position:absolute;top:20px;right:24px;cursor:pointer;border:1px solid rgba(242,239,233,.22);
+  background:none;color:var(--text);border-radius:5px;width:30px;height:30px;font-size:16px;line-height:1}
+.close:hover{background:rgba(242,239,233,.08)}
+.dbody{padding:20px 28px 60px;overflow-y:auto;flex:1 1 auto}
+
+.why{font-size:13.5px;color:var(--muted);line-height:1.6;margin:0 0 12px}
+.why b{color:var(--text);font-weight:600}
+.say{margin:0 0 10px;padding:12px 16px;background:rgba(242,239,233,.05);
+  border-left:2px solid var(--bc);border-radius:0 5px 5px 0;font-size:14.5px;line-height:1.6}
+.say em{color:var(--accent);font-style:normal;font-weight:600}
+.beat{font-size:12.5px;color:var(--accent);font-weight:600;line-height:1.5;margin:0 0 14px}
+.warn{font-size:13px;line-height:1.55;color:#E8A08C;margin:0 0 12px;
+  border-left:2px solid rgba(216,102,74,.5);padding:9px 14px;background:rgba(216,102,74,.06);
+  border-radius:0 5px 5px 0}
+.warn b{color:#F0BCA9}
+ul{margin:0 0 12px;padding-left:19px}
+li{font-size:13.5px;line-height:1.65;color:var(--muted);margin-bottom:4px}
+li b{color:var(--text);font-weight:600}
+
+/* ---------- rodapé ---------- */
+.foot{padding:0 34px 60px;max-width:1000px}
+.foot h3{font-family:Besley,Georgia,serif;font-weight:500;font-size:22px;margin:0 0 14px}
+pre{background:rgba(242,239,233,.04);border:1px solid rgba(242,239,233,.12);border-radius:6px;
+  padding:17px 19px;overflow-x:auto;font-size:12.5px;line-height:1.75;
+  font-family:ui-monospace,Menlo,monospace;margin:0 0 18px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-bottom:20px}
+.card{border:1px solid rgba(242,239,233,.14);border-radius:6px;padding:14px 16px;background:rgba(242,239,233,.03)}
+.card .k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.card .v{font-size:14px;line-height:1.45;margin-top:6px}
+.punch{font-size:15px;line-height:1.6;border-left:2px solid var(--accent);padding-left:16px}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="eyebrow">Mapa mental da call comercial</div>
+  <h1>Rocha Auto Peças</h1>
+  <p class="sub">Segunda, 17/ago/2026, 15h · <b>1h05</b> · Roberto decide sozinho · estrutura Grupo JDP, conteúdo desta call</p>
+  <p class="hint">→ Clique em qualquer nó para abrir a fala, os minutos e os slides.</p>
+</div>
+
+<div class="stage">
+  <svg id="wires"></svg>
+  <div class="map" id="map"></div>
+</div>
+
+<div class="foot">
+  <h3>A cola, se você só olhar uma coisa</h3>
+<pre>0-4    Rapport. Contrato da hora. "Se eu olhar pra baixo é porque estou anotando."
+4-9    Slides 1-8, Odery. TETO DE 9 MIN, SEM EXCEÇÃO.
+9-27   TELA FECHADA. Budget → ferramentas compradas → TOTVS parado →
+       "quanto custa um atendente?" → ELE multiplica por 20 → nota 0-10.
+       Devolutiva → "isso parece problema de falta de sistema?" → PACTO.
+27-45  Slides 2-35. DOR VERMELHA logo no começo. Desacelera no 20-22.
+       Régua do tempo no 26. Fecha no "o que é mais urgente pra vocês?"
+45-50  Slides 36-46. Entregáveis → sinais → valor ≠ preço → R$ 106 mil → 72%.
+50-65  Slide 47. R$ 30.000. E CALA A BOCA.
+       Recap dos três sins → "o que falta pra você me dizer sim agora?"</pre>
+  <div class="three">
+    <div class="card"><div class="k">Número 1</div><div class="v">O custo de um atendente — <b>dito por ele</b></div></div>
+    <div class="card"><div class="k">Número 2</div><div class="v">A nota de 0 a 10 — <b>dita por ele</b></div></div>
+    <div class="card"><div class="k">Número 3</div><div class="v">A data da F1 — <b>marcada pelos dois</b></div></div>
+  </div>
+  <p class="punch">“Vocês não têm problema de sistema. Falta gente que o mercado não vende, e a ferramenta que vocês compraram pra resolver isso está parada exatamente pelo mesmo motivo.”</p>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+  <div class="dhead"><button class="close" id="close">×</button>
+    <div class="k" id="dk"></div><h2 id="dt"></h2><div class="m" id="dm"></div></div>
+  <div class="dbody" id="db"></div>
+</aside>
+
+<script>
+const B = [
+{n:"Introdução", c:"var(--c1)", m:"0 – 9 min · slides 1 a 8",
+ body:`<p class="why">Objetivo único: <b>comprar permissão para conduzir a hora inteira.</b> Nada aqui vende. Se estourar dos 9 minutos, você tirou tempo do bloco que sustenta o preço.</p>`,
+ k:[
+  {n:"Warm Up", m:"0 – 2 min", body:`
+   <p class="why">Rapport com o que é <b>verdade e específico</b>. Elogio genérico em dono de operação lê como técnica de vendas.</p>
+   <ul><li><b>Ganchos reais:</b> CD próprio desde 2012 · sete lojas em quatro cidades · a unidade nova em planejamento</li>
+   <li><b>Ponte natural:</b> o Gabriel, que abriu a porta. Cite uma vez, no começo</li>
+   <li>Nunca abrir com "como vocês estão de vendas?". Ele responde por educação e a conversa nasce morta</li></ul>
+   <div class="say">Roberto, se eu olhar pra baixo durante a conversa é porque estou anotando o que você fala. Não é desatenção, é o contrário. Combinado?</div>
+   <p class="beat">→ Cinco segundos que compram vinte minutos de caderno aberto.</p>`},
+
+  {n:"Pacto de Transição", m:"2 – 4 min", body:`
+   <p class="why">O contrato da hora. É o que autoriza você a pedir uma decisão aos 50 minutos sem parecer que forçou.</p>
+   <div class="say">Roberto, nossa próxima hora funciona assim. Primeiro eu entendo o contexto de vocês. Depois eu faço as perguntas que revelam onde a operação perde tempo e venda. Na última parte eu te mostro o que eu faria aqui e quanto custa. <em>No fim eu vou te pedir uma resposta, mesmo que seja não.</em> Fechado?</div>
+   <p class="beat">→ Espere o "fechado". É um sim pequeno que ancora todos os outros.</p>
+   <div class="warn"><b>Não use a versão do JDP</b> — <i>"não estou aqui pra te vender nada"</i>. Você está, e vai pedir R$ 30 mil aos 50 minutos. Ele já ouviu essa frase de todo fornecedor que entrou na sala dele.</div>`},
+
+  {n:"Autoridade", t:"new", m:"4 – 9 min · slides 1 a 8", body:`
+   <p class="why">Não está no mapa do JDP porque lá cabe numa frase. Aqui tem prova em tela: o caso Odery. <b>Teto rígido — a tela fecha aos 9 minutos.</b></p>
+   <ul><li><b>Slides 1 e 2</b> — quem somos e a frase de posição: <i>não vendemos software para quem já tem software</i></li>
+   <li><b>Slides 3 a 8</b> — Odery Drums: consultoria primeiro, CRM e ERP integrados ao Sankhya que já rodava, WhatsApp automatizado. Os dois prints merecem um minuto cada</li>
+   <li><b>Nunca cite:</b> Adash, que nunca foi entregue. E-Force é prova de demanda, não de produto</li></ul>
+   <p class="beat">→ Cada minuto a mais aqui sai do SPIN, que é o que sustenta o preço.</p>`},
+
+  {n:"Semente de Indicação", t:"cut", m:"não planta na abertura", body:`
+   <p class="why"><b>Neste cliente, não plante aqui.</b> Pedir indicação no minuto 3, antes de entregar qualquer valor, custa autoridade numa mesa de grupo familiar. A semente é só mental: você guarda a pergunta para depois do sim.</p>
+   <div class="say">Roberto, se isso funcionar aqui, quem mais no setor você acha que vive esse mesmo problema de atendimento?</div>
+   <p class="beat">→ Colher no minuto 60, depois do fechamento. Nunca antes.</p>
+   <div class="warn"><b>Não use</b> <i>"se gostar indica 10 amigos, se não gostar indica 10 inimigos"</i>. Funciona em call de mentoria; aqui derruba o registro da conversa inteira.</div>`}
+ ]},
+
+{n:"SPIN", c:"var(--c2)", m:"9 – 27 min · tela fechada",
+ body:`<p class="why">O bloco mais longo, e o único que sustenta o preço. <b>Ele fala, você anota.</b> Se você estiver falando aqui, a reunião saiu do trilho. Alvo de saída: <b>um número dito por ele em voz alta.</b></p>`,
+ k:[
+  {n:"Situação", m:"9 – 13 min", body:`
+   <div class="warn"><b>Não pergunte faturamento, meta nem ticket.</b> O Gabriel já respondeu o porte, os 30 atendentes e o projeto travado. Repetir pergunta já respondida mostra que ninguém leu nada antes de entrar.</div>
+   <p class="why">O que <b>realmente falta</b> saber — quatro coisas, todas rápidas:</p>
+   <ul><li><b>Qual ERP</b> vocês rodam, e há quantos anos? <i>(não presuma. Chamar de Protheus o que é Winthor te queima na primeira frase)</i></li>
+   <li>Esse <b>programa da TOTVS</b> — vocês contrataram, ou é algo que eles oferecem? <i>(muda a força do argumento inteiro)</i></li>
+   <li>Dos <b>30 atendentes</b>, quantos no balcão e quantos nos canais digitais?</li>
+   <li><b>Budget, o único BANT em aberto:</b> fora o ERP, quanto vocês já investem por mês em ferramenta e estrutura pro atendimento?</li></ul>
+   <p class="beat">→ A pergunta de budget não descobre se ele tem dinheiro. Descobre <b>contra o que o seu preço vai ser comparado.</b></p>`},
+
+  {n:"Problema", m:"13 – 17 min", body:`
+   <p class="why">Duas perguntas em sequência. <b>A segunda é o primeiro soco, e quem dá é ele.</b></p>
+   <div class="say">Quantas ferramentas vocês já compraram pra melhorar o atendimento?</div>
+   <div class="say">E quantas estão rodando hoje <em>do jeito que você imaginou quando comprou</em>?</div>
+   <p class="beat">→ Não comente. Não console. Só siga.</p>
+   <div class="say">Me conta do projeto do WhatsApp com a TOTVS. Onde exatamente ele parou?</div>
+   <ul><li>Faz quanto tempo que está parado?</li>
+   <li>O que precisaria acontecer pra destravar — é gente, é fornecedor, é decisão?</li></ul>`},
+
+  {n:"Implicação", m:"17 – 22 min", body:`
+   <p class="why">Onde a dor vira dinheiro. <b>A pergunta do custo é a mais importante que você faz no dia.</b></p>
+   <div class="say">O mecânico manda a lista de peças às 8h da manhã e ninguém responde até as 11h. Ele espera?</div>
+   <p class="beat">→ Ele vai rir. A venda perdida vira fato dito por ele, não acusação sua.</p>
+   <div class="say">E isso aparece em algum relatório que chega até você?</div>
+   <p class="beat">→ A resposta é não. <b>Não alivie o desconforto.</b></p>
+   <div class="say">Faz quanto tempo que essas vagas estão abertas?</div>
+   <div class="say">E quanto custa um atendente pra vocês, <em>tudo somado, com encargos</em>?</div>
+   <div class="warn"><b>Não estime por ele. Pergunte, espere, e deixe ele multiplicar por vinte em voz alta.</b> Se travar: <i>"chuta pra mim"</i>. Número que o cliente calcula sozinho não se negocia depois. Sem esse número, a ancoragem do minuto 45 vira opinião — e opinião negocia.</div>`},
+
+  {n:"Necessidade", m:"22 – 25 min", body:`
+   <div class="say">Se dinheiro não fosse problema, <em>em quanto tempo você preencheria as vinte vagas</em>?</div>
+   <p class="beat">→ A mais importante das oito. Não existe resposta boa: ou "não sei" ou "não conseguiria". Nos dois casos <b>ele concluiu sozinho que verba não resolve.</b> Fique quieto três segundos.</p>
+   <div class="say">Quantos meses faltam pra unidade nova abrir? E ela vai abrir com esse mesmo processo?</div>
+   <div class="say">De 0 a 10, quanto resolver isso é urgente pra vocês hoje?</div>
+   <p class="beat">→ Anote a nota. Ela volta literalmente no fechamento. Se vier 6 ou menos, <b>descubra o porquê agora</b>, não aos 55 minutos.</p>
+   <div class="warn"><b>Não pergunte</b> <i>"se você tivesse o método certo, quanto investiria?"</i> Isso pede um número antes de você ancorar, e o número que ele disser vira o teto da negociação. O próprio material do JDP contradiz isso duas páginas adiante, quando manda construir valor antes do preço.</div>`},
+
+  {n:"Devolutiva + Pacto", t:"new", m:"25 – 27 min", body:`
+   <p class="why">Antes de abrir a tela de novo, duas coisas. Primeiro você <b>recapitula com as palavras dele</b>:</p>
+   <div class="say">Deixa eu ver se entendi. Vocês compraram [X] ferramentas e nem todas rodam como você imaginou. As vagas estão abertas há [Y] meses, e mesmo com dinheiro você não sabe em quanto tempo preencheria. Cada atendente custa [R$ Z], então as vinte seriam [R$ Z×20] por mês. O cliente que não é respondido compra na esquina, e isso não aparece em relatório nenhum. E a unidade nova abre em [W] meses.</div>
+   <div class="say">Isso parece problema de <em>falta de sistema</em> pra você?</div>
+   <p class="beat">→ Ele vai dizer não. <b>A frase mais importante da reunião sai da boca dele.</b></p>
+   <p class="why"><b>E só então o pacto para a apresentação</b> — a peça mais valiosa que o JDP tem e que faltava aqui:</p>
+   <div class="say">Roberto, com base em tudo que você me falou, faz sentido eu te mostrar como sair de vinte vagas abertas e um projeto parado, pra uma operação que atende sem depender de contratar essas vinte pessoas?<br><br>No final você me dá um sim ou um não. <em>Não precisa ser sim. Só não pode ser "eu te aviso".</em> Combinado?</div>
+   <p class="beat">→ É isso que transforma o fechamento em algo que ele já concordou em fazer. Aos 50 minutos você não pressiona, você cumpre um combinado.</p>`}
+ ]},
+
+{n:"Pitch", c:"var(--c3)", m:"27 – 45 min · slides 2 a 35",
+ body:`<p class="why">Não é apresentação genérica. É a <b>devolução organizada do que ele acabou de falar</b>. Formato de cada ponto: <i>"você me disse X. Isso significa Y em dinheiro. O que eu faria aqui é Z, nessa ordem, por esse motivo."</i></p>`,
+ k:[
+  {n:"Contexto de Mercado", m:"27 – 31 min · slides 2, 3 e 9", body:`
+   <p class="why">O JDP sugere custo de aquisição, margem e previsibilidade. <b>Aqui isso seria genérico e ele desliga.</b> O contexto desta call é outro, e é o dele:</p>
+   <div class="say">O profissional de atendimento que você precisa <em>não está no mercado pra ser contratado</em>. Isso não é um problema seu, é do setor inteiro — e é a primeira vez que um gargalo de operação não se resolve com verba.</div>
+   <p class="why"><b>Slides 2 e 3 · abertura, fundo vermelho.</b> É aqui que a dor entra, não no meio do deck:</p>
+   <div class="say">Vocês têm quatro portas abertas: site, WhatsApp, balcão e telefone. O balcão e o telefone têm gente na frente. <em>O digital é o que fica por último — e é por onde o cliente novo chega.</em></div>
+   <div class="say">A venda que não acontece porque ninguém respondeu não vira pedido, não vira relatório e não entra em reunião. <em>É o único custo da operação que cresce sem ser medido.</em></div>
+   <p class="beat">→ Depois desta, silêncio. Deixe ele conectar sozinho com o mecânico que mandou a lista às 8h.</p>
+   <p class="why"><b>Slide 9 · o cenário.</b> Duas versões da mesma empresa em agosto de 2027:</p>
+   <div class="say">Se nada for feito, daqui a um ano as vinte vagas continuam abertas, a integração continua parada e a unidade nova abre com o mesmo processo. <em>Nenhuma dessas linhas depende de o mercado piorar. Todas já estão acontecendo.</em></div>`},
+
+  {n:"Problema de fazer sozinho", m:"31 – 34 min · slides 10 e 11", body:`
+   <p class="why"><b>Slide 10 · a alternativa natural.</b> Ele já pensou nisso, então nomeie antes que ele diga:</p>
+   <div class="say">A saída óbvia é resolver internamente. Só que fazer internamente exige exatamente <em>o mesmo perfil que vocês não estão encontrando no mercado</em> — e a urgência do dia sempre vence o projeto interno.</div>
+   <p class="why"><b>Slide 11 · o projeto parado.</b> <b>Não diga que ele pagou</b> se ele não confirmou na Situação:</p>
+   <div class="say">O projeto de integração já foi iniciado. E ele está parado. Não por falta de decisão de vocês, e não por falta de fornecedor — <em>está parado por falta da mesma gente que falta no atendimento.</em></div>
+   <p class="beat">→ Esta é a frase que nenhum outro fornecedor disse pra ele. Deixe respirar.</p>
+   <div class="warn"><b>Não ataque a TOTVS.</b> Ele já escolheu esse caminho; criticar a escolha é criticar o julgamento dele, e você perde a sala. A posição honesta vende o diagnóstico sozinha: <i>"eu não sei ainda se o caminho é destravar o que vocês já compraram ou fazer diferente. Quem responde isso é olhar a operação de perto. O que eu sei é que essa pergunta está aberta e custa dinheiro todo dia que continua aberta."</i></div>`},
+
+  {n:"Construção da solução", t:"new", m:"34 – 44 min · slides 12 a 34", body:`
+   <p class="why">Faltava no mapa e é o miolo do pitch. Três blocos de slide, com ritmos diferentes:</p>
+   <ul><li><b>Slides 12 a 16 · rápido</b> — o que o diagnóstico responde, por que achar o problema é a parte fácil, como cada caso de uso é ranqueado, o que vocês passam a ter</li>
+   <li><b>Slides 18 a 22 · desacelera, um minuto por slide</b> — o Rocha, a leitura ("não é falta de sistema, é falta de gente"), a operação desenhada de ponta a ponta. <b>É o coração da apresentação</b></li>
+   <li><b>Slides 23 a 32 · quinze segundos cada</b> — seis semanas, oito fases, oito reuniões. O detalhe existe pra ele <i>ver que existe</i>, não pra ser lido em voz alta</li></ul>
+   <p class="why"><b>Slide 20 · a leitura, e é a frase que carrega a reunião.</b> Diga devagar:</p>
+   <div class="say">O problema de vocês não é falta de sistema. Vocês têm ERP de referência e já começaram a integração. <em>Ferramenta não falta. Faltam vinte pessoas que o mercado não vende</em> — e esse é o único recurso que o orçamento de vocês não está conseguindo comprar.</div>
+   <div class="say">Isso bate com o que você vive aí dentro, ou eu li alguma coisa errado?</div>
+   <p class="beat">→ Convidar a correção é o que separa devolutiva de palestra.</p>
+   <p class="why"><b>Slide 26 · a régua do tempo.</b> Uma imagem só, com as seis semanas:</p>
+   <div class="say">São seis semanas e no mínimo oito reuniões ao longo delas. <em>Vocês veem o trabalho acontecendo, não só o resultado no fim.</em></div>
+   <p class="beat">→ Este slide responde ao fornecedor que sumiu. Se estiver atrasado, mostre só ele e pule os oito de detalhe.</p>`},
+
+  {n:"Transição para Produto", m:"44 – 45 min · slide 35", body:`
+   <p class="why">São <b>duas</b> perguntas — e a segunda vale mais que a primeira.</p>
+   <div class="say">Você acredita que isso faz sentido para vocês?</div>
+   <p class="beat">→ <b>Não avance sem o sim.</b> Objeção que aparece aqui ainda dá tempo de tratar. Objeção que aparece depois do preço vira desconto.</p>
+   <div class="say">E de tudo que eu mostrei, <em>o que é mais urgente para vocês hoje</em>?</div>
+   <p class="beat">→ Faz ele escolher a prioridade em voz alta, e <b>priorização é exatamente o que você está vendendo</b>. O que ele responder é a primeira linha da Fila de Casos de Uso — e você repete a frase dele no fechamento.</p>`},
+
+  {n:"Pedido de Indicação", t:"cut", m:"empurra pro fim", body:`
+   <p class="why">O JDP coloca aqui, no meio do pitch. <b>Neste cliente, empurre para depois do sim</b> — pedir indicação antes de fechar sinaliza que você já desistiu de fechar hoje.</p>`}
+ ]},
+
+{n:"Ancoragem", c:"var(--c4)", m:"45 – 50 min · slides 36 a 46",
+ body:`<p class="why">Cinco minutos, <b>sem preço nenhum na tela</b>. Todo número grande que ele ouvir aqui trabalha a favor do número pequeno que vem depois.</p>`,
+ k:[
+  {n:"Os seis entregáveis", m:"slides 34 e 35", body:`
+   <p class="why">Entregável sem nome vira "ele vai me mandar um relatório". Com nome, vira ativo — e ativo se compara com preço.</p>
+   <ul><li>1 · <b>Mapa da Operação</b> · 2 · <b>Custo do Trabalho Manual</b> · 3 · <b>Matriz de Priorização</b></li>
+   <li>4 · <b>Fila de Casos de Uso</b> · 5 · <b>Parecer da Integração</b> · 6 · <b>Apresentação Executiva</b></li></ul>
+   <div class="say">São seis entregáveis, e eles têm nome. O primeiro é o Mapa da Operação. O terceiro é a Matriz de Priorização. O quinto é o Parecer da Integração, que responde se o caminho é destravar o que vocês já começaram ou fazer diferente. <em>Tudo isso fica com vocês, digital, e é de propriedade de vocês.</em></div>
+   <p class="beat">→ <b>Diga pelo número.</b> "O terceiro entregável é a Matriz de Priorização" soa como produto que existe. "Vou te mostrar como priorizar" soa como promessa.</p>`},
+
+  {n:"Os seis sinais de alerta", m:"slides 36 a 39", body:`
+   <p class="why">Como avaliar qualquer proposta de IA, <b>inclusive a minha</b>. É defesa contra o concorrente que não está na sala — e credibilidade, porque você está entregando o critério pelo qual pode ser reprovado.</p>
+   <div class="say">Antes de eu falar em número, eu quero te dar os seis sinais de que uma proposta de IA é ruim. <em>Inclusive a minha.</em> Se eu bater em algum deles hoje, você me interrompe.</div>
+   <div class="say">A licença, a nuvem e a API ficam no nome de vocês, não no meu. <em>Se um dia vocês quiserem trocar de fornecedor, não precisam pedir nada pra mim.</em></div>
+   <p class="beat">→ Entregar o critério pelo qual você pode ser reprovado é o que separa você dos outros quatro fornecedores.</p>`},
+
+  {n:"Valor ≠ preço", m:"slides 40 e 41", body:`
+   <div class="say">Valor é o que isso representa pra vocês. Preço é o que vocês pagam. <em>Vamos olhar o valor primeiro.</em></div>
+   <div class="warn"><b>Corte o slide 17</b> se estiver atrasado. Ele faz essa mesma pergunta 23 slides cedo demais — é a ancoragem disparada fora de hora. O slide 40 faz melhor, colado no preço.</div>`},
+
+  {n:"O stack e os 72%", m:"slides 42 a 44", body:`
+   <ul><li><b>Slide 42</b> — se cada item fosse contratado separadamente: <b>R$ 106 mil</b></li>
+   <li><b>Slide 43</b> — do outro lado da conta, as vinte pessoas que faltam: <b>R$ 720 mil por ano</b>, no cenário conservador</li>
+   <li><b>Slide 44</b> — a conta que eu proponho: <b>72% de desconto</b> sobre o stack</li></ul>
+   <div class="say">Se vocês contratassem cada um desses itens separadamente, o pacote fecharia em <em>cento e seis mil reais</em>. E do outro lado da conta estão as vinte pessoas que faltam, que num cenário conservador custariam <em>setecentos e vinte mil por ano</em> — se vocês conseguissem contratá-las.</div>
+   <p class="beat">→ Ele precisa ouvir R$ 106 mil e R$ 720 mil <b>antes</b> de ouvir R$ 30 mil. É só isso que a ancoragem é.</p>`}
+ ]},
+
+{n:"Fechamento", c:"var(--c5)", m:"50 – 65 min · slides 47 e 48",
+ body:`<p class="why"><b>Quinze minutos, não cinco.</b> É onde a objeção real aparece, e objeção real não se trata com o relógio batendo. O relógio para aqui.</p>`,
+ k:[
+  {n:"O número", m:"50 min · slide 45", body:`
+   <ul><li><b>R$ 30.000</b> à vista, ou em <b>até 12×</b> com os juros da plataforma</li></ul>
+   <div class="say">A consultoria é R$ 30 mil, com prazo de seis semanas. É fechado, não tem mensalidade, e o que sai dele é seu. Numa operação com sete lojas e o centro de distribuição, o diagnóstico cobre as oito frentes, não uma amostra.</div>
+   <p class="beat">→ E então <b>silêncio</b>. Quem fala primeiro depois do número, negocia.</p>`},
+
+  {n:"O recap dos três sins", t:"new", m:"51 – 53 min", body:`
+   <div class="say">Roberto, você me disse três coisas hoje. Que faz sentido. Que é urgente — você me deu [nota]. E que mesmo com dinheiro você não sabe em quanto tempo preencheria essas vinte vagas.<br><br>Então deixa eu te perguntar: <em>o que falta pra você me dizer sim agora?</em></div>
+   <p class="beat">→ "Você quer fechar?" aceita um não como resposta completa. <b>Esta pressupõe o sim e pede o obstáculo</b> — e o que ele disser é a objeção real, que você trata em vez de discutir preço. Depois de perguntar, <b>silêncio</b>.</p>`},
+
+  {n:"As quatro respostas", m:"53 – 62 min", body:`
+   <ul><li><b>"Preciso pensar"</b> → <i>"pensar sobre o quê, especificamente? Se for valor a gente fala de valor. Se for prazo, resolve o prazo. Mas pensar solto é o que faz isso continuar do jeito que está."</i></li>
+   <li><b>"Preciso ver com alguém"</b> → ele já disse que decide sozinho. <i>"Você me disse que essa decisão é sua."</i></li>
+   <li><b>"Manda a proposta"</b> → <i>"mando hoje. Mas ela vai confirmar o que a gente já falou aqui. Tem alguma coisa que ainda não está clara pra você?"</i></li>
+   <li><b>Travou de vez</b> → aí sim data e hora. <b>É plano B, nunca abertura</b>, e nunca "te aviso"</li></ul>`},
+
+  {n:"O que sai da sala", m:"62 – 65 min", body:`
+   <ul><li><b>F0 é o pagamento</b>, não a assinatura. O sim e o começo não têm espera entre eles</li>
+   <li><b>A data da F1</b> marcada antes dele sair da sala</li>
+   <li><b>A pergunta de indicação</b>, agora sim: <i>"quem mais no setor vive esse mesmo problema?"</i></li>
+   <li>Proposta escrita em até 24h. Ela <b>confirma, nunca revela</b></li></ul>
+   <div class="warn">🔴 <b>O bloqueio que não é seu, mas te trava:</b> o financeiro do Rocha vai pedir <b>nota fiscal</b> pra liberar o valor e lançar a despesa. Sem CNPJ não há emissão. Isso não é risco jurídico distante — é o dinheiro não entrar mesmo com o Roberto querendo fechar.</div>`}
+ ]}
+];
+
+/* ---------- render ---------- */
+const map=document.getElementById('map');
+let html='<div class="root"><b>Call<br>Comercial</b><span>Rocha Auto Peças<br>17/ago · 15h · 1h05</span></div>';
+B.forEach((b,i)=>{
+  html+=`<div class="bnode" style="--bc:${b.c}" data-b="${i}" id="b${i}">
+    <div class="n">${b.n}</div><div class="m">${b.m}</div></div>`;
+  html+=`<div class="kids" style="--bc:${b.c}">`;
+  b.k.forEach((k,j)=>{
+    const tg=k.t?`<span class="tg ${k.t}">${k.t==='new'?'adicionado':'não use'}</span>`:'';
+    html+=`<div class="kid" data-b="${i}" data-k="${j}" id="k${i}_${j}"><i class="dot"></i>${k.n}${tg}</div>`;
+  });
+  html+='</div>';
+});
+map.innerHTML=html;
+
+/* ---------- fios ---------- */
+function wires(){
+  const svg=document.getElementById('wires'), st=document.querySelector('.stage').getBoundingClientRect();
+  const root=document.querySelector('.root').getBoundingClientRect();
+  const rx=root.right-st.left+14, ry=root.top-st.top+root.height/2;
+  let p='';
+  const curve=(x1,y1,x2,y2,c,w)=>{const d=Math.max(34,(x2-x1)*.55);
+    p+=`<path d="M${x1},${y1} C${x1+d},${y1} ${x2-d},${y2} ${x2},${y2}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" opacity=".85"/>`};
+  B.forEach((b,i)=>{
+    const bn=document.getElementById('b'+i).getBoundingClientRect();
+    const bx=bn.left-st.left, by=bn.top-st.top+bn.height/2;
+    curve(rx,ry,bx-2,by,b.c,2.2);
+    b.k.forEach((k,j)=>{
+      const kn=document.getElementById(`k${i}_${j}`).getBoundingClientRect();
+      curve(bn.right-st.left+2, by, kn.left-st.left-2, kn.top-st.top+kn.height/2, b.c, 1.5);
+    });
+  });
+  svg.style.width=document.querySelector('.stage').scrollWidth+'px';
+  svg.style.height=st.height+'px';
+  svg.innerHTML=p;
+}
+addEventListener('load',wires); addEventListener('resize',wires); setTimeout(wires,350); setTimeout(wires,1200);
+
+/* ---------- gaveta ---------- */
+const dr=document.getElementById('drawer'), sc=document.getElementById('scrim');
+function open(i,j){
+  const b=B[i], k=(j===null?null:b.k[j]);
+  dr.style.setProperty('--bc',b.c);
+  document.getElementById('dk').textContent=b.n.toUpperCase()+(k?' · '+b.m.split('·')[0].trim():'');
+  document.getElementById('dt').textContent=k?k.n:b.n;
+  document.getElementById('dm').textContent=k?(k.m||''):b.m;
+  document.getElementById('db').innerHTML=k?k.body:b.body+b.k.map(x=>`<p class="why">• <b>${x.n}</b> — ${x.m||''}</p>`).join('');
+  document.getElementById('db').scrollTop=0;
+  dr.classList.add('on'); sc.classList.add('on');
+  document.querySelectorAll('.kid').forEach(e=>e.classList.remove('act'));
+  if(k) document.getElementById(`k${i}_${j}`).classList.add('act');
+}
+function shut(){dr.classList.remove('on');sc.classList.remove('on');
+  document.querySelectorAll('.kid').forEach(e=>e.classList.remove('act'));}
+map.addEventListener('click',e=>{
+  const k=e.target.closest('.kid'); if(k){open(+k.dataset.b,+k.dataset.k);return}
+  const b=e.target.closest('.bnode'); if(b) open(+b.dataset.b,null);
+});
+document.getElementById('close').onclick=shut; sc.onclick=shut;
+addEventListener('keydown',e=>{if(e.key==='Escape')shut()});
+</script>
+</body>
+</html>

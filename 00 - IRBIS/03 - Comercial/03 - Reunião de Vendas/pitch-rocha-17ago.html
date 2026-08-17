@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IRBIS · Rocha Auto Peças · 17 ago 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Besley:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#21201B; --text:#F2EFE9; --accent:#8FA987; --muted:#9C998A;
+  --f:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --f-serif:'Besley',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:var(--f);-webkit-font-smoothing:antialiased}
+#deck{position:relative;width:100vw;height:100vh}
+.s{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+   padding:clamp(40px,7vw,120px);opacity:0;pointer-events:none;transition:opacity .45s ease;
+   max-width:1500px;margin:0 auto}
+.s.on{opacity:1;pointer-events:auto}
+.eyebrow{font-size:clamp(10px,1vw,13px);letter-spacing:.22em;text-transform:uppercase;
+   color:var(--accent);margin-bottom:clamp(20px,3vh,38px);font-weight:600}
+h1{font-family:var(--f-serif);font-weight:500;font-size:clamp(38px,6.4vw,92px);line-height:1.03;letter-spacing:-.02em}
+h2{font-family:var(--f-serif);font-weight:500;font-size:clamp(30px,4.6vw,66px);line-height:1.1;letter-spacing:-.015em;max-width:19ch}
+h3{font-family:var(--f-serif);font-weight:500;font-size:clamp(24px,3.2vw,44px);line-height:1.15;letter-spacing:-.01em}
+p.lead{font-size:clamp(17px,1.85vw,27px);line-height:1.5;color:var(--muted);max-width:44ch;margin-top:clamp(20px,3vh,36px)}
+p.lead strong{color:var(--text);font-weight:500}
+.accent{color:var(--accent)}
+.rule{width:64px;height:2px;background:var(--accent);margin:clamp(22px,3.4vh,40px) 0}
+
+/* capa */
+.cover{justify-content:space-between}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+.mark{font-family:var(--f-serif);font-size:clamp(20px,2vw,28px);letter-spacing:-.01em;font-weight:500}
+.cover-meta{text-align:right;font-size:clamp(11px,1vw,14px);color:var(--muted);line-height:1.8;letter-spacing:.04em}
+
+/* listas */
+ul.steps{list-style:none;margin-top:clamp(24px,4vh,44px);display:flex;flex-direction:column;gap:clamp(14px,2.2vh,26px);max-width:52ch}
+ul.steps li{display:flex;gap:clamp(16px,1.6vw,26px);align-items:baseline;
+   font-size:clamp(16px,1.65vw,24px);line-height:1.42;color:var(--muted)}
+ul.steps li b{color:var(--text);font-weight:500}
+ul.steps .n{font-family:var(--f-serif);color:var(--accent);font-size:clamp(14px,1.15vw,17px);
+   min-width:2.4ch;flex-shrink:0;font-weight:500}
+
+/* números grandes */
+.stats{display:flex;gap:clamp(40px,6vw,110px);margin-top:clamp(26px,4vh,48px);flex-wrap:wrap}
+.stat .v{font-family:var(--f-serif);font-size:clamp(52px,8.6vw,132px);line-height:.92;letter-spacing:-.035em;font-weight:500}
+.stat .k{font-size:clamp(11px,1.02vw,14px);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:16px;max-width:22ch;line-height:1.6}
+.stat.hi .v{color:var(--accent)}
+
+/* pausa */
+.s.pause{background:#141310;align-items:center;justify-content:center;text-align:center}
+.s.pause h2{max-width:22ch}
+.s.pause .eyebrow{color:var(--muted)}
+
+/* recibo / o que recebe */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(20px,2.6vw,40px);margin-top:clamp(26px,4vh,46px);max-width:1120px}
+.card{border-top:2px solid rgba(242,239,233,.16);padding-top:clamp(16px,2vh,24px)}
+.card h4{font-size:clamp(15px,1.35vw,20px);font-weight:600;letter-spacing:-.005em;margin-bottom:10px}
+.card p{font-size:clamp(13px,1.12vw,16px);line-height:1.55;color:var(--muted)}
+
+/* preço */
+.price{font-family:var(--f-serif);font-size:clamp(58px,10vw,150px);line-height:.9;letter-spacing:-.04em;color:var(--accent);font-weight:500}
+.price-sub{font-size:clamp(15px,1.5vw,22px);color:var(--muted);margin-top:clamp(18px,2.6vh,30px);max-width:40ch;line-height:1.5}
+.todo{background:#5c3a1e;color:#ffd9a8;padding:3px 12px;border-radius:3px;font-size:.42em;
+  vertical-align:middle;letter-spacing:.08em;font-family:var(--f);font-weight:600}
+
+/* quote */
+.quote{font-family:var(--f-serif);font-size:clamp(24px,3.5vw,50px);line-height:1.22;letter-spacing:-.012em;max-width:20ch;font-weight:400}
+.quote .accent{font-style:italic}
+
+/* chrome */
+#bar{position:fixed;left:0;bottom:0;height:2px;background:var(--accent);width:0;transition:width .45s ease;z-index:20}
+#num{position:fixed;right:clamp(20px,3vw,44px);bottom:clamp(18px,2.6vh,32px);font-size:12px;
+   color:var(--muted);letter-spacing:.1em;z-index:20;font-variant-numeric:tabular-nums}
+#notes{position:fixed;left:0;right:0;bottom:0;background:#141310;border-top:1px solid rgba(242,239,233,.14);
+   padding:20px clamp(20px,3vw,44px) 26px;font-size:14px;line-height:1.55;color:var(--muted);
+   display:none;z-index:19;max-height:34vh;overflow:auto}
+#notes.on{display:block}
+#notes b{color:var(--accent);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:8px}
+#hint{position:fixed;left:clamp(20px,3vw,44px);bottom:clamp(18px,2.6vh,32px);font-size:11px;color:#55534a;letter-spacing:.08em;z-index:20}
+@media print{html,body{overflow:visible}.s{position:relative;opacity:1;page-break-after:always;height:100vh}}
+</style>
+</head>
+<body>
+<div id="deck">
+
+<!-- 1 -->
+<section class="s on cover">
+  <div class="cover-top">
+    <div class="mark">IRBIS</div>
+    <div class="cover-meta">17 de agosto de 2026<br>Campinas, SP</div>
+  </div>
+  <div>
+    <div class="eyebrow">Consultoria de IA</div>
+    <h1>Rocha<br>Auto Peças</h1>
+    <div class="rule"></div>
+    <p class="lead">Diagnóstico de operação para as sete lojas e o centro de distribuição.</p>
+  </div>
+  <div class="cover-meta" style="text-align:left">Preparado para Roberto Rocha</div>
+</section>
+
+<!-- 2 -->
+<section class="s">
+  <div class="eyebrow">A próxima hora</div>
+  <h2>Como esta conversa funciona</h2>
+  <ul class="steps">
+    <li><span class="n">01</span><span><b>Eu escuto.</b> Os primeiros trinta minutos são seus. Eu pergunto e você conta como a operação roda hoje.</span></li>
+    <li><span class="n">02</span><span><b>Eu devolvo o que entendi.</b> Onde a operação perde tempo, dinheiro e venda.</span></li>
+    <li><span class="n">03</span><span><b>Eu digo o que faria aqui, e quanto custa.</b> O número sai hoje, nesta sala.</span></li>
+    <li><span class="n">04</span><span><b>Eu peço uma resposta.</b> Mesmo que seja não.</span></li>
+  </ul>
+</section>
+
+<!-- 3 -->
+<section class="s pause">
+  <div class="eyebrow">Blocos 2 e 4 · cerca de 30 minutos</div>
+  <h2>Agora eu escuto</h2>
+  <p class="lead" style="margin-left:auto;margin-right:auto;text-align:center">Feche a tela. Quem fala aqui é ele.</p>
+</section>
+
+<!-- 4 -->
+<section class="s">
+  <div class="eyebrow">Quem está do outro lado</div>
+  <h2>Sistema e IA para empresa da economia real</h2>
+  <p class="lead">Eu entro na operação, acho onde o trabalho repetido está comendo margem, e resolvo com sistema feito para aquela operação. Não com ferramenta de prateleira.</p>
+  <div class="grid" style="max-width:900px">
+    <div class="card"><h4>Indústria</h4><p>Odery Drums. CRM implantado e atendimento de WhatsApp rodando.</p></div>
+    <div class="card"><h4>Advocacia</h4><p>Sistema de produção de peças jurídicas com IA.</p></div>
+    <div class="card"><h4>Serviço</h4><p>Operações de agendamento e captação.</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="s">
+  <div class="eyebrow">O que eu ouvi de vocês</div>
+  <h2>A operação, em cinco linhas</h2>
+  <ul class="steps">
+    <li><span class="n">→</span><span>ERP de referência de mercado, instalado e rodando</span></li>
+    <li><span class="n">→</span><span>Quatro canais de entrada: balcão, telefone, site e WhatsApp</span></li>
+    <li><span class="n">→</span><span><b>Trinta pessoas atendendo. A conta pede cinquenta.</b></span></li>
+    <li><span class="n">→</span><span><b>O profissional não está no mercado para ser contratado</b></span></li>
+    <li><span class="n">→</span><span><b>A integração de WhatsApp já foi contratada e está parada</b></span></li>
+  </ul>
+</section>
+
+<!-- 6 -->
+<section class="s">
+  <div class="eyebrow">O reenquadramento</div>
+  <h1 style="font-size:clamp(32px,5.4vw,80px);max-width:17ch">Vocês não têm problema de sistema.</h1>
+  <p class="lead" style="max-width:48ch">Ferramenta não falta aqui. O ERP existe, a integração foi comprada. <strong>O que falta é gente, e gente é a única coisa que o dinheiro não está conseguindo comprar.</strong></p>
+</section>
+
+<!-- 7 -->
+<section class="s">
+  <div class="eyebrow">O buraco</div>
+  <div class="stats">
+    <div class="stat"><div class="v">30</div><div class="k">atendendo hoje</div></div>
+    <div class="stat"><div class="v">50</div><div class="k">o que a operação pede</div></div>
+    <div class="stat hi"><div class="v">20</div><div class="k">que o mercado não vende</div></div>
+  </div>
+  <p class="lead" style="max-width:50ch">Enquanto isso, o cliente que manda mensagem e não é respondido compra do concorrente. <strong>Essa venda não aparece em relatório nenhum, porque ela nunca virou pedido.</strong></p>
+</section>
+
+<!-- 8 -->
+<section class="s">
+  <div class="eyebrow">E tem o detalhe que fecha o laço</div>
+  <h2>A ferramenta que resolveria isso está parada pelo mesmo motivo</h2>
+  <p class="lead" style="max-width:50ch">Falta equipe para tirar do papel. Então hoje vocês pagam por uma coisa que não roda, e perdem o atendimento que ela resolveria.</p>
+</section>
+
+<!-- 9 -->
+<section class="s">
+  <div class="eyebrow">A pergunta que ninguém respondeu</div>
+  <p class="quote">Destravar o que vocês já compraram, <span class="accent">ou fazer diferente?</span></p>
+  <p class="lead" style="max-width:46ch">Eu não sei ainda. Quem responde isso é olhar a operação de perto, não eu chutando aqui. <strong>O que eu sei é que essa pergunta está aberta e custa dinheiro todo dia que continua aberta.</strong></p>
+</section>
+
+<!-- 10 -->
+<section class="s">
+  <div class="eyebrow">O que eu proponho</div>
+  <h2>Consultoria de IA</h2>
+  <p class="lead" style="max-width:50ch">Eu entro na operação, unidade por unidade, e mapeio onde vocês perdem tempo, dinheiro e venda. Saio com o desenho do que dá para automatizar, em que ordem fazer, e o retorno estimado de cada frente.</p>
+  <p class="lead" style="max-width:50ch;margin-top:20px"><strong>As sete lojas e o centro de distribuição. Não uma amostra.</strong></p>
+</section>
+
+<!-- 11 -->
+<section class="s">
+  <div class="eyebrow">O que fica na sua mão</div>
+  <h3>O diagnóstico é seu</h3>
+  <div class="grid">
+    <div class="card"><h4>O mapa da operação</h4><p>Processo por processo, onde o tempo e a venda escapam hoje.</p></div>
+    <div class="card"><h4>O que automatizar</h4><p>Cada frente com o retorno estimado, para você comparar antes de decidir.</p></div>
+    <div class="card"><h4>A ordem de fazer</h4><p>O que vem primeiro e por quê. Sequência importa mais que lista.</p></div>
+    <div class="card"><h4>A resposta sobre o que está parado</h4><p>Destravar o que já foi comprado, ou seguir outro caminho.</p></div>
+  </div>
+  <p class="lead" style="max-width:52ch;margin-top:clamp(24px,3.4vh,40px)"><strong>Se você quiser levar para outro implementar, o diagnóstico é seu do mesmo jeito.</strong></p>
+</section>
+
+<!-- 12 -->
+<section class="s">
+  <div class="eyebrow">O investimento</div>
+  <div class="price" id="priceSlot"></div>
+  <p class="price-sub">Valor fechado. Sem mensalidade. Prazo de <span id="prazoSlot"></span> semanas, contado do início.</p>
+  <p class="lead" style="max-width:46ch">Ele cobre as oito frentes da operação, e o que sai dele é seu, independente do que você decidir construir depois.</p>
+</section>
+
+<!-- 13 -->
+<section class="s">
+  <div class="eyebrow">O que acontece agora</div>
+  <h2>Não vou te pedir pra pensar</h2>
+  <p class="lead" style="max-width:46ch">Você já pensou. As vagas estão abertas há meses e a ferramenta que vocês compraram continua parada.</p>
+  <div class="rule"></div>
+  <p class="lead" style="margin-top:0"><strong>O que falta pra você me dizer sim agora?</strong></p>
+</section>
+
+</div>
+
+<div id="bar"></div>
+<div id="num"></div>
+<div id="hint">← → navegar · N notas</div>
+<div id="notes"></div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   PREENCHA AS DUAS LINHAS ABAIXO DEPOIS DA REUNIÃO DAS 11H.
+   Enquanto estiverem vazias, o slide 12 mostra um aviso laranja.
+   ══════════════════════════════════════════════════════════════ */
+const VALOR = "";   // ex: "22.000"   (só o número, sem o R$)
+const PRAZO = "";   // ex: "4"        (semanas)
+/* ═══════════════════════════════════════════════════════════ */
+
+const TODO = t => '<span class="todo">'+t+'</span>';
+document.getElementById('priceSlot').innerHTML =
+  VALOR ? 'R$ '+VALOR : 'R$ '+TODO('DEFINIR 11H');
+document.getElementById('prazoSlot').innerHTML =
+  PRAZO ? PRAZO : TODO('X');
+
+const NOTES = [
+ "Capa. Não comece falando da IRBIS. Cumprimente, sente, e vá direto para o slide 2.",
+ "BLOCO 1 · 0 a 4 min. Leia os quatro passos em voz alta e termine com 'fechado?'. Espere o sim antes de avançar. Esse sim pequeno ancora os outros.",
+ "BLOCOS 2 e 4 · 4 a 34 min. FECHE A TELA. Authority já está respondido: o Roberto decide sozinho. Falta só BUDGET. No bloco 4: onde parou o projeto da TOTVS, há quanto tempo, qual ERP exatamente, quantos dos 30 estão no digital, e a pergunta que vale o dia: QUANTO CUSTA UM ATENDENTE, TUDO SOMADO? Pergunte e cale a boca. Deixe ele multiplicar por 20 sozinho.",
+ "BLOCO 3 · TETO DE 3 MINUTOS. Este slide estica sozinho, e cada minuto aqui sai do bloco 4. Cite Odery só se ele pedir prova. Nunca cite Adash: nunca foi entregue.",
+ "BLOCO 5 começa. Devolva o que ELE disse, com as palavras dele. Se algum item mudou na conversa, corrija em voz alta: mostra que você escutou.",
+ "O reenquadramento. Diga devagar e pare. É a frase que ele não ouviu de nenhum dos outros fornecedores.",
+ "Se ele deu o custo do atendente no bloco 4, é AQUI que você usa: 'vinte vezes o número que você me deu'. Não diga o número por ele. Deixe a conta aparecer na cabeça dele.",
+ "Depois desta frase, silêncio. Deixe ele reagir antes de seguir.",
+ "NÃO ATAQUE A TOTVS. Ele decidiu e pagou; criticar a escolha é criticar o julgamento dele. A honestidade aqui é o que vende o diagnóstico.",
+ "BLOCO 6 começa. Sem prometer prazo de construção. Se ele perguntar quanto custa implementar: a faixa de Sistemas é pública (R$3.000 a R$10.000), mas o número dele nasce depois do diagnóstico.",
+ "A última linha é o que faz o preço fechar. Num cliente que já foi abandonado por fornecedor, ela vale mais que qualquer garantia.",
+ "PREENCHA OS DOIS CAMPOS ANTES DAS 15H. Saem da reunião com o JDP às 11h. Depois do número: SILÊNCIO. Quem fala primeiro depois do preço, negocia.",
+ "BLOCO 7. A decisão sai NESTA sala. A pergunta pressupõe o sim e pede o obstáculo: qualquer coisa que ele responder é a objeção real, e você trata aquilo. Só se ele travar de vez é que vira data e hora. Proposta escrita em até 24h, confirmando o que foi dito aqui. A proposta confirma, nunca revela."
+];
+const slides=[...document.querySelectorAll('.s')];
+let i=0;
+const bar=document.getElementById('bar'), num=document.getElementById('num'),
+      notes=document.getElementById('notes');
+function render(){
+  slides.forEach((s,k)=>s.classList.toggle('on',k===i));
+  bar.style.width=((i+1)/slides.length*100)+'%';
+  num.textContent=String(i+1).padStart(2,'0')+' / '+slides.length;
+  notes.innerHTML='<b>Nota do apresentador</b>'+(NOTES[i]||'');
+}
+function go(d){i=Math.min(slides.length-1,Math.max(0,i+d));render();}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
+  if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
+  if(e.key==='Home'){i=0;render();}
+  if(e.key==='End'){i=slides.length-1;render();}
+  if(e.key.toLowerCase()==='n'){notes.classList.toggle('on');}
+  if(e.key.toLowerCase()==='f'){document.documentElement.requestFullscreen?.();}
+});
+document.addEventListener('click',e=>{if(!notes.contains(e.target))go(e.clientX<innerWidth*0.28?-1:1);});
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>IRBIS · Fase 1 · Rocha Auto Peças</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Besley:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#21201B;--text:#F2EFE9;--accent:#8FA987;--muted:#9C998A;--line:rgba(242,239,233,.15);
+ --f:'Archivo',sans-serif;--fs:'Besley',Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:var(--f);-webkit-font-smoothing:antialiased}
+.s{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+ padding:clamp(36px,5.4vw,92px);opacity:0;pointer-events:none;transition:opacity .35s}
+.s.on{opacity:1;pointer-events:auto}
+.s.dor{background:linear-gradient(155deg,#3B1F19 0%,#2B1815 44%,#21201B 100%)}
+.eyebrow{font-size:clamp(10px,.9vw,13px);letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(14px,2.2vh,26px);font-weight:600}
+.dor .eyebrow{color:#E8A08C}
+.dtag{display:inline-block;align-self:flex-start;font-size:clamp(9px,.84vw,12px);letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#F0BCA9;background:rgba(216,102,74,.22);border:1px solid rgba(216,102,74,.55);padding:4px 11px;border-radius:3px;margin-bottom:clamp(14px,2.2vh,26px)}
+h1{font-family:var(--fs);font-weight:500;font-size:clamp(38px,6.2vw,96px);line-height:1.02;letter-spacing:-.024em}
+h2{font-family:var(--fs);font-weight:500;font-size:clamp(28px,4.4vw,64px);line-height:1.08;max-width:20ch}
+p.lead{font-size:clamp(16px,1.7vw,25px);line-height:1.5;color:var(--muted);max-width:48ch;margin-top:clamp(16px,2.4vh,30px)}
+p.lead strong{color:var(--text);font-weight:500}
+.punch{font-family:var(--fs);font-size:clamp(20px,2.5vw,36px);line-height:1.25;max-width:28ch;margin-top:clamp(16px,2.4vh,30px)}
+.accent{color:var(--accent)}
+.stats{display:flex;gap:clamp(32px,5vw,92px);margin-top:clamp(20px,3vh,40px);flex-wrap:wrap}
+.stat .v{font-family:var(--fs);font-size:clamp(44px,7.4vw,116px);line-height:.92;letter-spacing:-.035em}
+.stat .k{font-size:clamp(10px,.94vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:14px;max-width:22ch;line-height:1.6}
+.stat.hi .v{color:#E8A08C}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,72px);margin-top:clamp(22px,3.4vh,44px);align-items:start}
+.g h4{font-size:clamp(11px,1vw,14px);letter-spacing:.18em;text-transform:uppercase;color:#E8A08C;font-weight:700;margin-bottom:clamp(10px,1.6vh,18px)}
+.g .sol h4{color:var(--accent)}
+.g p{font-size:clamp(15px,1.5vw,22px);line-height:1.55;color:var(--muted)}
+.g p b{color:var(--text);font-weight:600}
+.center{align-items:center;text-align:center}
+.center .lead,.center .punch{margin-left:auto;margin-right:auto}
+.price{font-family:var(--fs);font-size:clamp(52px,9vw,132px);line-height:.9;letter-spacing:-.04em;color:var(--accent)}
+ul.o{list-style:none;margin-top:clamp(18px,2.8vh,34px);display:flex;flex-direction:column;gap:clamp(12px,2vh,22px);max-width:60ch}
+ul.o li{display:flex;gap:clamp(14px,1.6vw,24px);align-items:baseline;font-size:clamp(16px,1.65vw,25px);line-height:1.45;color:var(--muted)}
+ul.o li b{color:var(--text);font-weight:600}
+ul.o .n{font-family:var(--fs);color:var(--accent);font-size:clamp(13px,1.1vw,17px);min-width:2.2ch;flex-shrink:0}
+#num{position:fixed;right:28px;bottom:20px;font-size:11px;color:var(--muted);z-index:9}
+#bar{position:fixed;left:0;bottom:0;height:2px;background:var(--accent);width:0;transition:width .3s;z-index:9}
+table.stk{width:100%;max-width:1000px;border-collapse:collapse;margin-top:clamp(14px,2vh,26px);font-size:clamp(13px,1.25vw,19px)}
+table.stk td{padding:clamp(8px,1.2vh,13px) 0;border-bottom:1px solid rgba(242,239,233,.09);color:var(--muted)}
+table.stk td:last-child{text-align:right;color:var(--text);white-space:nowrap;padding-left:20px;font-variant-numeric:tabular-nums}
+table.stk tr.tot td{border-bottom:none;padding-top:clamp(14px,2vh,22px);font-size:1.3em;color:var(--text);font-weight:600;font-family:var(--fs)}
+.strike{text-decoration:line-through;color:#6b6858;font-family:var(--fs);font-size:clamp(26px,3.6vw,52px)}
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="s on center">
+  <div class="eyebrow">IRBIS · Rocha Auto Peças</div>
+  <h1>Fase 1<br>O projeto do sistema</h1>
+  <p class="lead">Três gargalos. Um desenho. Preço de construção fechado na entrega.</p>
+</section>
+
+<!-- 2 -->
+<section class="s dor">
+  <span class="dtag">O número desta reunião</span>
+  <h2>Um milhão por mês saindo pela porta.</h2>
+  <div class="stats">
+    <div class="stat hi"><div class="v">R$ 1 mi</div><div class="k">por mês, em venda perdida</div></div>
+    <div class="stat hi"><div class="v">R$ 12 mi</div><div class="k">por ano</div></div>
+    <div class="stat"><div class="v">1 em 10</div><div class="k">orçamentos morre por peça errada — "pelo menos"</div></div>
+  </div>
+  <p class="lead" style="max-width:54ch"><strong>Números de vocês, ditos nesta sala.</strong> E é só o que dá pra ver — o pedido errado que ninguém corrigiu a tempo nem vira orçamento.</p>
+</section>
+
+<!-- 3 -->
+<section class="s dor">
+  <span class="dtag">Gargalo 1 · Venda</span>
+  <h2>O cliente pede a peça errada. A venda morre na confusão.</h2>
+  <div class="g">
+    <div><h4>O problema, como vocês contaram</h4>
+      <p>O cliente <b>não tem noção da peça e não sabe pesquisar</b>. O orçamento sai errado, o preço muda, e pelo menos <b>1 em cada 10 orçamentos</b> se perde. O problema não é o vendedor.</p></div>
+    <div class="sol"><h4>O que a Fase 1 desenha</h4>
+      <p><b>Identificação de peça.</b> O sistema pergunta pelo cliente — veículo, ano, motor, foto — e o pedido <b>chega certo no vendedor</b>. O desenho responde: como isso conversa com o catálogo e o ERP de vocês, e quanto devolve por mês.</p></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="s dor">
+  <span class="dtag">Gargalo 2 · Estoque</span>
+  <h2>O estoque tem CEP completo. Falta o GPS.</h2>
+  <div class="g">
+    <div><h4>O problema, como vocês contaram</h4>
+      <p>O endereçamento existe inteiro — <b>país, cidade, bairro, rua, prédio, apartamento.</b> Mas quem chega na rua <b>entrega no lugar errado</b>, porque ler o mapa depende de experiência — e é exatamente a gente experiente que vocês não acham no mercado.</p></div>
+    <div class="sol"><h4>O que a Fase 1 desenha</h4>
+      <p><b>O GPS do estoque.</b> Ninguém decora mapa: o sistema leva até o endereço certo e <b>confere a entrega</b>. Quem entrou ontem acha a peça no primeiro dia. O desenho responde: como o endereçamento que já existe vira guia dentro do sistema, nas oito unidades.</p></div>
+  </div>
+  <p class="punch" style="margin-top:clamp(14px,2vh,24px)">O endereço vocês já pagaram. <span class="accent">O que falta é o carteiro nunca mais errar.</span></p>
+</section>
+
+<!-- 5 -->
+<section class="s dor">
+  <span class="dtag">Gargalo 3 · WhatsApp</span>
+  <h2>O WhatsApp puxa venda — e entrega confusão.</h2>
+  <div class="g">
+    <div><h4>O problema, como vocês contaram</h4>
+      <p>Cliente e equipe <b>sem conhecimento da peça</b>, conversando por texto. O canal que deveria puxar venda vira retrabalho — e o projeto de integração de vocês está parado.</p></div>
+    <div class="sol"><h4>O que a Fase 1 desenha</h4>
+      <p><b>WhatsApp com pedido identificado.</b> A conversa já sai com a peça certa e cai no balcão pronta. Na Odery isso roda hoje — atende de madrugada, com nome próprio. O desenho responde: destravar o que vocês já começaram, ou seguir outro caminho.</p></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="s">
+  <div class="eyebrow">Os três são um</div>
+  <h2>A informação da peça não flui. Em três lugares.</h2>
+  <ul class="o">
+    <li><span class="n">01</span><span>Do <b>catálogo pro cliente</b> — ele pede errado</span></li>
+    <li><span class="n">02</span><span>Da <b>prateleira pro sistema</b> — ninguém encontra</span></li>
+    <li><span class="n">03</span><span>Do <b>WhatsApp pro balcão</b> — a venda esfria no caminho</span></li>
+  </ul>
+  <p class="punch">Um sistema, três frentes. <span class="accent">A ordem decide o retorno</span> — e a ordem é o que a Fase 1 entrega.</p>
+</section>
+
+<!-- 7 -->
+<section class="s">
+  <div class="eyebrow">Fase 1 · o projeto executivo</div>
+  <h2>Seis semanas. As oito unidades. As três frentes.</h2>
+  <ul class="o">
+    <li><span class="n">→</span><span><b>Desenho das três soluções</b> — identificação de peça, endereço único, WhatsApp — na operação real de vocês</span></li>
+    <li><span class="n">→</span><span><b>A ordem de construção</b>, com retorno estimado por frente</span></li>
+    <li><span class="n">→</span><span><b>Parecer da integração</b> — o que aproveita do ERP e do projeto parado</span></li>
+    <li><span class="n">→</span><span><b>Proposta de construção fechada na entrega</b> — escopo e preço, sem chute</span></li>
+    <li><span class="n">→</span><span>No mínimo <b>8 reuniões</b> ao longo das semanas + <b>90 dias</b> de acompanhamento</span></li>
+  </ul>
+</section>
+
+<!-- 7b · ALAVANCAGEM -->
+<section class="s">
+  <div class="eyebrow">Se cada desenho fosse contratado separado</div>
+  <h2>A conta, na diária de mercado</h2>
+  <p class="lead" style="max-width:52ch;font-size:clamp(13px,1.15vw,17px)">Cada linha é <strong>dias de trabalho × a diária de consultor sênior, R$ 2.600</strong> — abaixo do topo da faixa.</p>
+  <table class="stk">
+    <tr><td>Desenho da Identificação de Peça — 5 dias</td><td>R$ 13.000</td></tr>
+    <tr><td>Desenho do GPS do Estoque, nas 8 unidades — 8 dias</td><td>R$ 20.800</td></tr>
+    <tr><td>Desenho do WhatsApp com pedido identificado — 5 dias</td><td>R$ 13.000</td></tr>
+    <tr><td>Parecer da integração — ERP e o projeto parado — 3 dias</td><td>R$ 7.800</td></tr>
+    <tr><td>Ordem de construção, com retorno por frente — 3 dias</td><td>R$ 7.800</td></tr>
+    <tr><td>8 reuniões de condução — 4 dias</td><td>R$ 10.400</td></tr>
+    <tr><td>Acompanhamento de 90 dias</td><td>R$ 10.000</td></tr>
+    <tr class="tot"><td>Somado, comprado separado</td><td>R$ 82.800</td></tr>
+  </table>
+</section>
+
+<!-- 8 -->
+<section class="s center">
+  <div class="eyebrow">O investimento da Fase 1 · as três frentes, fechadas juntas</div>
+  <div><span class="strike">R$ 82.800</span></div>
+  <div class="price">R$ 20.000</div>
+  <p class="lead"><strong>76% abaixo do somado — e menos de um dia do que sai pela porta todo mês.</strong> À vista, ou em até 12× no cartão.</p>
+  <p class="punch">Se o desenho adiantar a solução em um dia, ele se pagou.</p>
+</section>
+
+<!-- 9 -->
+<section class="s center">
+  <h1>Bem-vindo à IRBIS.</h1>
+</section>
+
+<div id="bar"></div><div id="num"></div>
+<script>
+const S=[...document.querySelectorAll('.s')];let i=0;
+const bar=document.getElementById('bar'),num=document.getElementById('num');
+function r(){S.forEach((s,k)=>s.classList.toggle('on',k===i));bar.style.width=((i+1)/S.length*100)+'%';num.textContent=(i+1)+' / '+S.length;}
+function go(d){i=Math.min(S.length-1,Math.max(0,i+d));r();}
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(1);}
+ if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(-1);}
+ if(e.key.toLowerCase()==='f')document.documentElement.requestFullscreen?.();});
+document.addEventListener('click',e=>go(e.clientX<innerWidth*.28?-1:1));r();
+</script>
+</body>
+</html>

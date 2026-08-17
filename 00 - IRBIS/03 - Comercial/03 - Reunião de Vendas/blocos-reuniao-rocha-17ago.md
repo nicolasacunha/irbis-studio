@@ -177,6 +177,38 @@ Depois, na ordem, e **só onde ele abrir**:
 6. Quando um atendente sai, quanto tempo leva pra repor?
 7. **E a pergunta que vale a reunião inteira:** quanto custa um atendente pra vocês, tudo somado, com encargos?
 
+
+### As 8 perguntas de descoberta — **suas, não do deck**
+
+> Decisão do dono, 14/ago: **estas perguntas não entram na apresentação.** Elas são o seu roteiro falado, feitas com a tela fechada. O deck só mostra o que já é fato fixo.
+
+A ordem importa. Cada uma prepara a seguinte, e a 4 é a que decide a reunião.
+
+| # | Pergunta | Onde ela vai |
+|---|---|---|
+| 1 | Quantas ferramentas vocês já compraram pra melhorar o atendimento? | Deixe ele listar tudo. Quanto maior a lista, mais forte a 2 |
+| 2 | E quantas estão rodando hoje do jeito que você imaginou quando comprou? | **O primeiro soco, e é ele que dá.** Não comente. Só siga |
+| 3 | Faz quanto tempo que as vagas estão abertas? | Anote em meses. Volta no fechamento |
+| 4 | **Se dinheiro não fosse problema, em quanto tempo você preencheria as vinte?** | **A mais importante das oito.** Não existe resposta boa: ou "não sei" ou "não conseguiria". Nos dois casos ele concluiu sozinho que verba não resolve. Fique quieto três segundos depois |
+| 5 | Quanto custa um atendente, tudo somado, com encargos? | **Não estime por ele.** Espere o número e diga "vinte vezes isso, por mês". Deixe ele fazer a conta em voz alta |
+| 6 | O mecânico manda a lista às 8h e ninguém responde até as 11h. Ele espera? | Ele vai rir. A venda perdida vira fato dito por ele |
+| 7 | E isso aparece em algum relatório que chega até você? | A resposta é não. Não alivie o desconforto |
+| 8 | Quantos meses faltam pra unidade nova abrir? | A urgência passa a ser dele. Emenda: *"e ela vai abrir com esse mesmo processo?"* |
+
+### A devolutiva, falada — não é slide
+
+Depois das oito, você recapitula **em voz alta**, com as palavras dele:
+
+> Deixa eu ver se entendi. Vocês compraram [X] ferramentas e nem todas rodam como você imaginou. As vagas estão abertas há [Y] meses, e mesmo com dinheiro você não sabe em quanto tempo preencheria. Cada atendente custa [R$ Z], então as vinte seriam [R$ Z×20] por mês. O cliente que não é respondido compra na esquina, e isso não aparece em relatório nenhum. E a unidade nova abre em [W] meses.
+
+E então a pergunta que fecha o ciclo:
+
+> **Isso parece problema de falta de sistema pra você?**
+
+Ele vai dizer não. **A frase mais importante da reunião sai da boca dele, não da sua.** Só depois do não você abre o deck de novo.
+
+---
+
 ### A regra de saída deste bloco
 
 **Você não sai daqui sem que ELE tenha dito o número.**
@@ -217,7 +249,9 @@ Repare no que as respostas dizem juntas:
 - **"Não se consegue o profissional no mercado"**
 - **"Não temos equipe para desenvolver o processo, daí não estamos conseguindo andar"**
 
-Ele já comprou sistema. Ele já comprou a integração. **As duas coisas estão paradas pelo mesmo motivo pelo qual ele não consegue atender: não existe gente disponível.** Dinheiro não resolve, porque o profissional não está no mercado pra ser contratado.
+Ele tem ERP instalado e um projeto de integração de WhatsApp em andamento. **Os dois estão parados pelo mesmo motivo pelo qual ele não consegue atender: não existe gente disponível.** Dinheiro não resolve, porque o profissional não está no mercado pra ser contratado.
+
+> ⚠️ **Limite do que a gente sabe.** O Gabriel apurou "um programa da TOTVS" travado por falta de equipe. **Não sabemos se foi comprado, licenciado ou se é uma iniciativa oferecida à base de clientes.** Não afirme que ele pagou. Pergunte no bloco 4: *"esse programa da TOTVS, vocês contrataram ou é algo que eles oferecem?"* Se ele confirmar que pagou, o argumento fica mais forte e aí sim você usa.
 
 🔴 **Se você entrar falando "eu automatizo o atendimento", você virou o quinto fornecedor de software de uma empresa que já tem software demais e gente de menos.**
 
@@ -253,7 +287,7 @@ ela resolveria.
 
 ### ⚠️ A armadilha da TOTVS
 
-**Não ataque a TOTVS. Ele já decidiu e já pagou.** Criticar aquela escolha é criticar o julgamento dele, e você perde a sala.
+**Não ataque a TOTVS. Ele já escolheu esse caminho.** Criticar a escolha é criticar o julgamento dele, e você perde a sala.
 
 A posição honesta, e ela **vende o diagnóstico sozinha**:
 
@@ -306,10 +340,10 @@ Depois: **silêncio.** Quem fala primeiro depois do número, negocia.
 
 | Campo | Onde fecha |
 |---|---|
-| **[VALOR FECHADO]** | Reunião com o JDP, segunda 11h. Direção: R$ 20-25 mil |
-| **[X] semanas** de prazo | Mesma reunião. Mercado trabalha 3 a 6 semanas pra diagnóstico |
+| ~~[VALOR FECHADO]~~ | ✅ **R$ 30.000**, definido em 14/ago |
+| ~~[X] semanas~~ | ✅ **6 semanas**, com 8 reuniões e mais 90 dias de acompanhamento |
 
-> 🔴 **Se um dos dois chegar em branco nas 15h, vira improviso no bloco de ancoragem.** Improviso em ancoragem é o que vira desconto na hora.
+> ✅ **Os dois campos estão fechados.** O que continua em aberto para as 11h é a emissão da nota fiscal, sem a qual o pagamento pode não sair do financeiro do Rocha.
 
 ### Se ele perguntar quanto custa construir
 
@@ -338,18 +372,127 @@ Faz sentido pra você o caminho que eu desenhei?
 
 Objeção que aparecer aqui é objeção real, e ainda dá tempo de tratar.
 
-### Fechamento direto
+### Fechamento direto — **a decisão sai nesta sala**
+
+> ⚠️ **Decisão do dono, 14/ago:** o padrão de "sair com data e hora pra resposta", do `estrutura-reuniao-unica-irbis.md`, deixa de valer como fecho principal. Depois de conduzir a hora inteira e apresentar o número, pedir resposta pra amanhã joga fora o que a reunião construiu. **Data e hora viram plano B**, não plano A.
 
 ```
-O não me libera pra cuidar de outro cliente. O talvez é o que me atrapalha.
-Amanhã às 14h você me dá a resposta?
+Não vou te pedir pra pensar. Você já pensou. As vagas estão abertas há [X]
+meses e a ferramenta comprada continua parada.
+
+O que falta pra você me dizer sim agora?
 ```
+
+**Por que essa pergunta e não "você quer fechar?"** A segunda aceita um não como resposta completa. Esta pressupõe o sim e pede o obstáculo. Qualquer coisa que ele disser é a objeção real, e aí você trata *aquilo* em vez de discutir preço.
+
+**Depois de perguntar, silêncio.** Quem falar primeiro perde.
+
+| Se ele disser | Você responde |
+|---|---|
+| "Preciso pensar" | *"Pensar sobre o quê, especificamente? Se for valor a gente fala de valor. Se for prazo, resolve o prazo. Mas pensar solto é o que faz isso continuar do jeito que está."* |
+| "Preciso ver com alguém" | Ele já disse que decide sozinho. Devolva: *"você me disse que essa decisão é sua."* |
+| "Me manda a proposta que eu vejo" | *"Mando hoje. Mas a proposta vai confirmar o que a gente já falou aqui. Tem alguma coisa nela que ainda não está clara pra você?"* |
+| Travou de vez | **Aí sim** data e hora, nunca "te aviso". É plano B, não abertura |
 
 ### O que sai da sala, em qualquer cenário
 
 - Uma data e uma hora pra resposta. **Nunca "vou pensar" em aberto**
 - Se a Isabel não estava na sala: a data do fechamento **com os dois**
 - Proposta escrita em até 24h, confirmando o que foi apresentado ao vivo. A proposta **confirma, nunca revela**
+
+---
+
+
+---
+
+## Os seis entregáveis, com nome
+
+Entregável sem nome vira "ele vai me mandar um relatório". Com nome, vira ativo — e ativo se compara com preço.
+
+| # | Nome | O que é |
+|---|---|---|
+| 1 | **Mapa da Operação** | As 8 unidades, processo por processo, com onde tempo e venda escapam |
+| 2 | **Custo do Trabalho Manual** | Quanto cada processo consome por mês, em pessoas e horas |
+| 3 | **Matriz de Priorização** | Impacto no caixa × esforço até rodar, com os quatro destinos |
+| 4 | **Fila de Casos de Uso** | A ordem de execução, com retorno de cada um e as dependências |
+| 5 | **Parecer da Integração** | Destravar o que está parado ou seguir outro caminho, com o motivo |
+| 6 | **Apresentação Executiva** | Ao vivo, pra ele e pra quem ele quiser na sala |
+
+**Use os números em voz alta.** "O terceiro entregável é a Matriz de Priorização" soa como produto que existe. "Eu vou te mostrar como priorizar" soa como promessa.
+
+---
+
+## O nome do produto na frente do cliente
+
+> Decisão do dono, 17/ago: no pitch, a oferta se chama **"Diagnóstico e priorização de casos de uso"**, não "Consultoria de IA".
+
+**Por que isso fortalece o preço:** essa é a categoria como o mercado a nomeia, e é exatamente a linha do levantamento de referência — *diagnóstico e priorização de IA, R$ 10 mil a R$ 40 mil, 3 a 6 semanas*. Vendendo com o nome da categoria, os R$ 30 mil deixam de parecer preço inventado e passam a ser preço de mercado para um cliente acima do porte típico.
+
+**"Consultoria" também carrega um problema:** para dono de operação, consultoria costuma evocar relatório e slide. "Diagnóstico e priorização de casos de uso" diz o que sai da caixa.
+
+⚠️ **No catálogo interno o produto continua sendo Consultoria de IA** (`politica-de-preco-irbis.md`, `stripe-catalogo-produtos-irbis.md`). O que mudou é o nome comercial na apresentação, não o item do catálogo. Se a IRBIS decidir renomear de vez, os dois documentos precisam ser atualizados juntos.
+
+---
+
+## O processo de entrega, como ele é vendido
+
+> Definido pelo dono em 14/ago. **Substitui, para Consultoria, as 8 fases do `metodo-entrega-irbis.md`**, que foram escritas para projeto de construção e não servem aqui.
+
+**Seis semanas. No mínimo oito reuniões espaçadas ao longo delas.**
+
+### O formato de toda reunião, a partir da F1
+
+1. Mostramos o que foi feito desde o último encontro, e o que já foi revelado da operação
+2. Discutimos a fase atual e como ela será executada
+3. Vocês ajustam o rumo antes da próxima etapa
+
+**Por que isso importa mais neste cliente que em qualquer outro:** o fornecedor que sumiu não sumiu de uma vez, parou de dar notícia. Oito reuniões marcadas é a resposta estrutural a esse medo, e vale dizer isso em voz alta na reunião.
+
+### As oito fases
+
+| Fase | Quando | O que acontece | Quem participa | O que sai daqui |
+|---|---|---|---|---|
+| **F0** Fechamento | Hoje, nesta sala | Decisão e pagamento. Sem espera entre o sim e o começo | Você e ele | Data da F1 marcada antes dele sair da sala |
+| **F1** Escopo e calendário | Até 5 dias úteis | Define junto o que entra: quais processos, quais unidades, com quem falar. **Frente que não faz sentido mapear sai agora, não no fim** | Você, ele e quem ele indicar | Escopo por escrito + calendário das 8 reuniões com data e hora |
+| **F2** Plano do diagnóstico | Semana 1 | Como o levantamento acontece: que dados eles separam, ordem das visitas, quem te acompanha em cada unidade | Você, ele e os responsáveis das unidades | Plano de campo + lista do que você precisa receber antes |
+| **F3** Levantamento em campo | Semanas 1 a 3 | Você vai às unidades. Acompanha atendimento ao vivo, conversa com quem opera, cronometra e conta o que ninguém conta | Você em campo, com a equipe de cada unidade | Base do Mapa da Operação e do Custo do Trabalho Manual · 2 a 3 encontros no período |
+| **F4** Priorização com eles | Semanas 4 e 5 | Apresenta o que achou **antes** de fechar conclusão. Eles confirmam, corrigem o que você leu errado, e a ordem é definida junto | Você, ele e quem mais decidir | Matriz de Priorização e Fila de Casos de Uso, validadas |
+| **F5** Entrega | Semana 6 | Apresentação executiva dos seis entregáveis, ao vivo. **Nada chega por e-mail sem você explicar** | Você, ele e quem ele convidar | Os seis entregáveis, digitais e de propriedade dele |
+| **F6** Acompanhamento | 90 dias após | Disponível para dúvida sobre o material, seja quem for executar. Se contratarem outro, você explica o diagnóstico para ele | Eles e quem estiver executando | Diagnóstico que continua útil depois de entregue |
+| **F7** Relação contínua | Sem data final | Eles passam a ter alguém que conhece a operação por dentro | Eles e você | Acesso direto quando precisarem, sem mensalidade correndo |
+
+**Por que esse nível de detalhe importa nesta venda:** ele vai pagar R$ 30 mil por um trabalho que ainda não existe. Cada linha acima é uma pergunta que ele faria e que você já respondeu. **Fase sem "quem participa" e sem "o que sai daqui" é promessa; com as duas, é plano.**
+
+
+> ⚠️ **F4 e F5 foram reescritas.** No método original elas eram "Homologação" e "Virada e transferência", que só fazem sentido em projeto de construção. Em diagnóstico viram **priorização conjunta** e entrega da fila ranqueada.
+
+### A priorização é o produto, não um anexo dele
+
+Achar problema numa operação de oito unidades é fácil: qualquer um lista vinte. **O que decide o resultado é a ordem**, e é aí que o diagnóstico se paga.
+
+Cada caso de uso é ranqueado por cinco critérios:
+
+| # | Critério |
+|---|---|
+| 1 | Quanto devolve, em dinheiro ou hora de gente, por mês |
+| 2 | Quanto tempo até rodar de verdade, não até ficar pronto |
+| 3 | De quem depende. O que precisa da TOTVS entra em outra fila |
+| 4 | O que trava se der errado. Nada que possa parar o balcão entra primeiro |
+| 5 | O que ele destrava depois. Alguns casos só existem se outro vier antes |
+
+O resultado vai numa matriz de **impacto no caixa × esforço até rodar**, com quatro destinos: começa aqui, entra no plano, se sobrar fôlego, e **não faz**.
+
+**O quadrante "não faz" é o que dá credibilidade ao resto.** Consultor que aprova tudo está vendendo o próximo projeto. Dizer o que não vale a pena é o que separa diagnóstico de proposta comercial disfarçada, e vale dizer isso em voz alta na reunião.
+>
+> ⚠️ **F7 não é despedida.** A redação anterior ("encerramento e carteira") soava como agradecimento de saída. Decisão do dono: acompanhamento contínuo.
+
+### 🔴 O bloqueio que precisa ser resolvido antes de segunda
+
+O fechamento se dá **pelo pagamento**, não pela assinatura de contrato.
+
+Só que o Rocha é empresa de porte com contabilidade estruturada. **O financeiro deles vai pedir nota fiscal** para liberar o valor e para lançar a despesa. Sem CNPJ não há emissão, e sem emissão o pagamento pode não sair de lá mesmo com o Roberto querendo fechar.
+
+**Isso não é risco jurídico distante, é risco de o dinheiro não entrar.** Precisa de resposta antes das 15h: como a nota vai ser emitida. Vale levar a pergunta para a reunião com o JDP às 11h.
 
 ---
 

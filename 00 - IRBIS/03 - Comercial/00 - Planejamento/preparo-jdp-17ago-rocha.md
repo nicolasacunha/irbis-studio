@@ -61,11 +61,11 @@ As cinco respostas chegaram. Duas delas mudam a conversa de preço:
 
 ⚠️ **É estimativa, não medição.** O número real sai da boca dele no bloco 4 da reunião, e a técnica é perguntar em vez de estimar: *"quanto custa um atendente pra vocês, tudo somado?"* Número que o cliente calcula sozinho não se negocia depois.
 
-**Por que isso importa pro preço:** a consultoria deixa de ser comparada com "um relatório" e passa a ser comparada com **um buraco de capacidade de sete dígitos por ano que ele não consegue tapar nem pagando.** R$ 25 mil vira 2% a 3% de um ano do problema, uma vez só.
+**Por que isso importa pro preço:** a consultoria deixa de ser comparada com "um relatório" e passa a ser comparada com **um buraco de capacidade de sete dígitos por ano que ele não consegue tapar nem pagando.** R$ 30 mil vira cerca de 3% a 4% de um ano do problema, pago uma vez só.
 
 ### O argumento, em uma linha
 
-**R$ 20.000 a R$ 25.000 não é preço agressivo. É o meio da faixa de mercado, aplicado a um cliente maior que o cliente típico dessa faixa.**
+**Definido em 14/ago: R$ 30.000.** Está dentro da faixa de mercado para diagnóstico de IA (R$10 mil a R$40 mil), aplicado a um cliente acima do porte típico dessa faixa. Contra o stack de componentes de R$ 106 mil, dá **72% de desconto** — a mesma ordem de grandeza do exemplo de ancoragem do JDP.
 
 A faixa de R$10k a R$40k é descrita para **PME**. O Rocha tem 7 lojas, um CD, mais de 180 pessoas e planeja abrir unidade nova. Cobrar R$10.000 dele é cobrar o **piso de uma faixa de PME** de uma empresa que está acima da PME.
 
@@ -77,7 +77,7 @@ Decisão do dono: **volta pro funil padrão.** Nada de implementação vendida j
 
 Isso derruba o campo em branco mais problemático da lista — a faixa de implementação — que era justamente o que conflitava com a política, porque ela manda "sob consulta" pra Sistemas muito complexo e proíbe estimar teto. **Restam dois campos pra fechar às 11h: valor e prazo.**
 
-Fica de pé um problema que só mudou de data: se a consultoria sai a R$ 20-25 mil e a produção segue na faixa de R$ 3-10 mil, na segunda venda o cliente vai perguntar por que **pensar custou mais que construir**. E ele tem razão de perguntar.
+Fica de pé um problema que só mudou de data: se a consultoria sai a R$ 30 mil e a produção segue na faixa de R$ 3-10 mil, na segunda venda o cliente vai perguntar por que **pensar custou mais que construir**. E ele tem razão de perguntar.
 
 A saída continua sendo tratar o Rocha como enterprise nas duas pontas, com a produção entrando em **"Sistemas muito complexo, sob consulta"** — que a política já prevê. A diferença é que agora essa decisão é tomada com o diagnóstico na mão, e não no escuro. **Melhor assim.**
 
@@ -89,21 +89,21 @@ A saída continua sendo tratar o Rocha como enterprise nas duas pontas, com a pr
 
 Perguntas fechadas, pra sair da reunião com resposta e não com conversa:
 
-**1. R$ 20 mil ou R$ 25 mil?**
-Os dois cabem no meio da faixa de mercado. A diferença é o quanto você aceita de risco de travar o primeiro fechamento grande. Qual eles escolheriam pra um primeiro caso enterprise, sem case de porte equivalente na mão?
+**1. ~~R$ 20 mil ou R$ 25 mil?~~ ✅ RESOLVIDO: R$ 30.000, em 6 semanas.**
+Levar como validação: o stack de R$106 mil sustenta os 72% de desconto? E o parcelado em 8× de R$ 4.309 (total R$ 34.470) atrapalha o fechamento à vista?
 
 **2. Como se diz esse número pra quem nunca comprou diagnóstico?**
 O Rocha compra peça, não compra consultoria. A objeção provável não é "está caro", é **"vinte mil por um relatório?"**. O JDP tem script pra isso e vale pegar dele, não inventar.
 
-**3. Qual o prazo da consultoria?**
-A IRBIS não tem prazo definido, e a estrutura da reunião proíbe inventar número ao vivo. O mercado trabalha com **3 a 6 semanas** pra diagnóstico. Fechar 3 ou 4 semanas antes das 15h resolve isso, e é uma resposta que ele vai pedir.
+**3. ~~Qual o prazo?~~ ✅ RESOLVIDO: 6 semanas**, com no mínimo 8 reuniões ao longo delas e mais 90 dias de acompanhamento.
+**A pergunta que substitui:** sem CNPJ, o pagamento sai de uma empresa de R$100 milhões? O financeiro deles vai exigir nota fiscal. Como resolver isso antes das 15h?
 
 **4. ~~Fecha ao vivo mesmo sem a Isabel?~~ ✅ RESOLVIDO**
 O Gabriel confirmou: **o Roberto decide sozinho.** A Isabel é sócia em todos os CNPJs mas não entra na decisão de investir em sistema. Fecha ao vivo no bloco 7, sem ressalva.
 *Bônus:* ela reclama que o atendimento precisa melhorar. Não decide, mas é voz interna a favor da dor. Vale validar isso na reunião sem transformá-la em fonte de pressão.
 
 **4-bis (substitui a anterior). Como se posiciona diante da TOTVS sem brigar com ela?**
-Ele já contratou e já pagou o módulo de WhatsApp. Atacar a escolha é atacar o julgamento dele.
+Ele já escolheu a TOTVS como caminho para a integração, embora ainda não esteja confirmado se houve pagamento. Atacar a escolha é atacar o julgamento dele.
 A posição que eu levaria: *"não sei ainda se o caminho é destravar o que vocês compraram ou fazer diferente, e é isso que o diagnóstico responde."* Existe uma pergunta real, sem resposta, que sangra caixa todo dia — o que é exatamente o que uma consultoria compra.
 **O JDP concorda com esse enquadramento, ou tem um jeito melhor de conviver com fornecedor incumbente grande?**
 
@@ -155,9 +155,9 @@ Nicolas
 
 Sair com quatro coisas escritas, não faladas:
 
-- [ ] O número da consultoria, fechado
+- [x] ~~O número da consultoria~~ ✅ R$ 30.000
 - [ ] A resposta pronta pra "vinte mil por um relatório?"
-- [ ] O prazo da consultoria em semanas
-- [ ] A decisão de fechar ao vivo ou marcar o fechamento com os dois sócios
+- [x] ~~O prazo~~ ✅ 6 semanas, 8 reuniões, mais 90 dias de acompanhamento
+- [ ] **Como emitir nota fiscal sem CNPJ.** Sem isso o financeiro do Rocha não libera o pagamento
 
 Se algum dos quatro sair de lá em aberto, ele vira improviso às 15h. E improviso em bloco de ancoragem é o que vira desconto na hora.
