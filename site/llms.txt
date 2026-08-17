@@ -37,6 +37,10 @@ Sites, landing pages, branding, identidade visual, social media, Web3 e motion a
 - [Agentes de IA já compram sozinhos](https://irbis.com.br/blog/agentes-ia-compram-sozinhos-site-pronto): estrutura digital para agentes de navegação.
 - [Como clientes encontram empresas por IA](https://irbis.com.br/blog/ia-esta-mudando-como-clientes-encontram-seu-negocio): SEO e busca generativa.
 
+- [Quanto custa automação com IA para agência de marketing?](https://irbis.com.br/blog/quanto-custa-automacao-com-ia-para-agencia-de-marketing): Entenda o que define o investimento em um Bot de IA para agência de marketing, incluindo escopo, dados e revisão humana.
+- [Quanto custa CRM sob medida para agência de marketing?](https://irbis.com.br/blog/quanto-custa-crm-sob-medida-para-agencia-de-marketing): Entenda como funil, dados, integrações e regras de acesso definem o investimento em um CRM para agência.
+- [Como automatizar o follow-up comercial em agência de marketing](https://irbis.com.br/blog/como-automatizar-o-follow-up-comercial-em-agencia-de-marketing): Organize origem, responsável e próxima ação antes de automatizar o follow-up comercial de uma agência.
+
 ## Contato
 
 - [Diagnóstico](https://irbis.com.br/call)

@@ -1,180 +1,170 @@
 {
-    "posts": [
-        {
-            "slug": "como-automatizar-o-follow-up-comercial-em-industria",
-            "title": "Como automatizar o follow-up comercial em indústria",
-            "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial em indústria.",
-            "dateISO": "2026-08-13",
-            "pilar": "solucoes-com-ia",
-            "keywords": ["como automatizar o follow-up comercial em indústria", "CRM industrial", "automação comercial industrial", "follow-up comercial"],
-            "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-industria.svg",
-            "readingTimeMin": 7
-        },
-        {
-            "slug": "como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia",
-            "title": "Como automatizar o follow-up comercial em escritório de advocacia",
-            "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial.",
-            "dateISO": "2026-08-12",
-            "pilar": "solucoes-com-ia",
-            "keywords": ["como automatizar o follow-up comercial em escritório de advocacia", "CRM jurídico", "automação de atendimento jurídico", "follow-up comercial"],
-            "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia.svg",
-            "readingTimeMin": 7
-        },
-        {
-            "slug": "quanto-custa-automacao-com-ia-para-industria",
-            "title": "Quanto custa automação com IA para indústria?",
-            "description": "Entenda quais fatores de escopo, dados e revisão humana determinam o investimento em uma automação com IA para indústria.",
-            "dateISO": "2026-08-11",
-            "pilar": "automacao-ia",
-            "keywords": [
-                "quanto custa automação com IA para indústria",
-                "automação com IA para indústria",
-                "automação industrial com IA",
-                "IA para indústria"
-            ],
-            "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-industria.svg",
-            "readingTimeMin": 7
-        },
-        {
-            "slug": "quanto-custa-automacao-com-ia-para-escritorio-de-advocacia",
-            "title": "Quanto custa uma automação com IA para escritório de advocacia?",
-            "description": "Entenda quais fatores de escopo, dados de cliente e revisão humana determinam o custo de uma automação com IA para escritório de advocacia.",
-            "dateISO": "2026-08-11",
-            "pilar": "automacao-ia",
-            "keywords": [
-                "quanto custa automação com IA para escritório de advocacia",
-                "automação com IA para advocacia",
-                "IA para escritório de advocacia",
-                "OAB inteligência artificial"
-            ],
-            "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.svg",
-            "readingTimeMin": 7
-        },
-        {
-            "slug": "quanto-custa-sistema-com-ia-para-agencia-de-marketing",
-            "title": "Quanto custa um sistema com IA para agência de marketing?",
-            "description": "Entenda quais decisões de escopo, dados e integrações determinam o investimento em um sistema com IA para agência de marketing.",
-            "dateISO": "2026-08-11",
-            "pilar": "sistemas-ia",
-            "keywords": [
-                "quanto custa sistema com IA para agência de marketing",
-                "sistema com IA para agência",
-                "CRM para agência de marketing",
-                "IA para agência de marketing"
-            ],
-            "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-agencia-de-marketing.svg",
-            "readingTimeMin": 7
-        },
-        {
-            "slug": "quanto-custa-sistema-com-ia-para-industria",
-            "title": "Quanto custa um sistema com IA para indústria?",
-            "description": "Entenda quais decisões de escopo determinam o investimento em um sistema com IA para indústria.",
-            "dateISO": "2026-08-07",
-            "pilar": "sistemas-ia",
-            "keywords": [
-                "quanto custa sistema com IA para indústria",
-                "sistema com IA para indústria",
-                "automação industrial",
-                "IA para indústria"
-            ],
-            "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-industria.svg",
-            "readingTimeMin": 7
-        },
-        {
-            "slug": "quanto-custa-sistema-com-ia-para-escritorio-de-advocacia",
-            "title": "Quanto custa um sistema com IA para escritório de advocacia?",
-            "description": "Entenda quais decisões de escopo determinam o investimento em um sistema jurídico com IA.",
-            "dateISO": "2026-08-06",
-            "pilar": "sistemas-ia",
-            "keywords": [
-                "quanto custa sistema com IA para escritório de advocacia",
-                "sistema jurídico com IA",
-                "automação jurídica",
-                "IA para advocacia"
-            ],
-            "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-escritorio-de-advocacia.png",
-            "readingTimeMin": 7
-        },
+  "posts": [
     {
-      "slug": "erros-site-startup",
-      "title": "7 Erros de Site que Afastam Clientes antes da Primeira Conversa",
-      "description": "Auditei 13 sites de startups brasileiras em uma semana. Os mesmos erros aparecem em quase todos. Veja o que está custando leads antes de você perceber.",
-      "dateISO": "2026-06-01",
-      "pilar": "erros-de-site",
+      "slug": "como-automatizar-o-follow-up-comercial-em-agencia-de-marketing",
+      "title": "Como automatizar o follow-up comercial em agência de marketing",
+      "description": "Organize origem, responsável e próxima ação antes de automatizar o follow-up comercial de uma agência.",
+      "dateISO": "2026-08-17",
+      "pilar": "solucoes-com-ia",
       "keywords": [
-        "erros de site startup",
-        "webdesign para startup",
-        "landing page que converte",
-        "site para founder",
-        "CRO startup brasil"
+        "como automatizar o follow-up comercial em agência de marketing",
+        "Como automatizar o follow-up comercial em agência de marketing sem enviar mensagens erradas?",
+        "O CRM precisa receber dados de todas as plataformas de anúncio?",
+        "Automação de follow-up substitui o comercial da agência?"
       ],
-      "coverImage": null,
-      "readingTimeMin": 6
+      "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-agencia-de-marketing.svg",
+      "readingTimeMin": 7
     },
     {
-      "slug": "sinais-hora-trocar-site",
-      "title": "5 Sinais de que Já Passou da Hora de Trocar o Site do Seu Negócio",
-      "description": "O visitante decide o que pensa do seu site em 50 milissegundos. Veja os sinais que aparecem antes do founder perceber que o site virou um problema.",
-      "dateISO": "2026-07-08",
+      "slug": "quanto-custa-crm-sob-medida-para-agencia-de-marketing",
+      "title": "Quanto custa CRM sob medida para agência de marketing?",
+      "description": "Entenda como funil, dados, integrações e regras de acesso definem o investimento em um CRM para agência.",
+      "dateISO": "2026-08-15",
+      "pilar": "sistemas-ia",
+      "keywords": [
+        "quanto custa CRM sob medida para agência de marketing",
+        "Quanto custa um CRM sob medida para agência de marketing na IRBIS?",
+        "O CRM pode integrar dados de anúncios e leads?",
+        "CRM sob medida substitui todas as ferramentas da agência?"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-crm-sob-medida-para-agencia-de-marketing.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "quanto-custa-automacao-com-ia-para-agencia-de-marketing",
+      "title": "Quanto custa automação com IA para agência de marketing?",
+      "description": "Entenda o que define o investimento em um Bot de IA para agência de marketing, incluindo escopo, dados e revisão humana.",
+      "dateISO": "2026-08-14",
+      "pilar": "solucoes-com-ia",
+      "keywords": [
+        "quanto custa automação com IA para agência de marketing",
+        "Quanto custa automação com IA para agência de marketing?",
+        "O que a mensalidade do Bot de IA inclui?",
+        "Uma automação pode enviar respostas para clientes sem revisão?"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-agencia-de-marketing.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "como-automatizar-o-follow-up-comercial-em-industria",
+      "title": "Como automatizar o follow-up comercial em indústria",
+      "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial em indústria.",
+      "dateISO": "2026-08-13",
+      "pilar": "solucoes-com-ia",
+      "keywords": [
+        "como automatizar o follow-up comercial em indústria",
+        "CRM industrial",
+        "automação comercial industrial",
+        "follow-up comercial"
+      ],
+      "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-industria.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia",
+      "title": "Como automatizar o follow-up comercial em escritório de advocacia",
+      "description": "Organize responsáveis, próximos passos e dados antes de automatizar o follow-up comercial.",
+      "dateISO": "2026-08-12",
+      "pilar": "solucoes-com-ia",
+      "keywords": [
+        "como automatizar o follow-up comercial em escritório de advocacia",
+        "CRM jurídico",
+        "automação de atendimento jurídico",
+        "follow-up comercial"
+      ],
+      "coverImage": "/blog/assets/covers/como-automatizar-o-follow-up-comercial-em-escritorio-de-advocacia.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "quanto-custa-automacao-com-ia-para-industria",
+      "title": "Quanto custa automação com IA para indústria?",
+      "description": "Entenda quais fatores de escopo, dados e revisão humana determinam o investimento em uma automação com IA para indústria.",
+      "dateISO": "2026-08-11",
+      "pilar": "automacao-ia",
+      "keywords": [
+        "quanto custa automação com IA para indústria",
+        "automação com IA para indústria",
+        "automação industrial com IA",
+        "IA para indústria"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-industria.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "quanto-custa-automacao-com-ia-para-escritorio-de-advocacia",
+      "title": "Quanto custa uma automação com IA para escritório de advocacia?",
+      "description": "Entenda quais fatores de escopo, dados de cliente e revisão humana determinam o custo de uma automação com IA para escritório de advocacia.",
+      "dateISO": "2026-08-11",
+      "pilar": "automacao-ia",
+      "keywords": [
+        "quanto custa automação com IA para escritório de advocacia",
+        "automação com IA para advocacia",
+        "IA para escritório de advocacia",
+        "OAB inteligência artificial"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-automacao-com-ia-para-escritorio-de-advocacia.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "quanto-custa-sistema-com-ia-para-agencia-de-marketing",
+      "title": "Quanto custa um sistema com IA para agência de marketing?",
+      "description": "Entenda quais decisões de escopo, dados e integrações determinam o investimento em um sistema com IA para agência de marketing.",
+      "dateISO": "2026-08-11",
+      "pilar": "sistemas-ia",
+      "keywords": [
+        "quanto custa sistema com IA para agência de marketing",
+        "sistema com IA para agência",
+        "CRM para agência de marketing",
+        "IA para agência de marketing"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-agencia-de-marketing.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "quanto-custa-sistema-com-ia-para-industria",
+      "title": "Quanto custa um sistema com IA para indústria?",
+      "description": "Entenda quais decisões de escopo determinam o investimento em um sistema com IA para indústria.",
+      "dateISO": "2026-08-07",
+      "pilar": "sistemas-ia",
+      "keywords": [
+        "quanto custa sistema com IA para indústria",
+        "sistema com IA para indústria",
+        "automação industrial",
+        "IA para indústria"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-industria.svg",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "quanto-custa-sistema-com-ia-para-escritorio-de-advocacia",
+      "title": "Quanto custa um sistema com IA para escritório de advocacia?",
+      "description": "Entenda quais decisões de escopo determinam o investimento em um sistema jurídico com IA.",
+      "dateISO": "2026-08-06",
+      "pilar": "sistemas-ia",
+      "keywords": [
+        "quanto custa sistema com IA para escritório de advocacia",
+        "sistema jurídico com IA",
+        "automação jurídica",
+        "IA para advocacia"
+      ],
+      "coverImage": "/blog/assets/covers/quanto-custa-sistema-com-ia-para-escritorio-de-advocacia.png",
+      "readingTimeMin": 7
+    },
+    {
+      "slug": "confianca-site-desatualizado-pesquisa-2026",
+      "title": "60% dos Consumidores Confiam Menos numa Empresa com Site Desatualizado, Aponta Pesquisa de 2026",
+      "description": "Pesquisa com 1.201 consumidores nos EUA mostra que 60% confiam menos numa empresa com site desatualizado. Veja o que muda pro seu negócio.",
+      "dateISO": "2026-07-27",
       "pilar": "hora-de-trocar",
       "keywords": [
+        "site desatualizado confiança",
         "hora de trocar de site",
-        "site desatualizado",
-        "primeira impressão site",
-        "credibilidade design",
-        "redesign site negócio"
+        "credibilidade site negócio",
+        "pesquisa consumidor site 2026",
+        "sinais de confiança site",
+        "redesign de site founder"
       ],
-      "coverImage": "/blog/assets/covers/trocar-site-01.png",
-      "readingTimeMin": 3
-    },
-    {
-      "slug": "ia-esta-mudando-como-clientes-encontram-seu-negocio",
-      "title": "48% das Buscas no Google Já Não Geram Clique: Seu Site Aparece na Resposta?",
-      "description": "Quase metade das buscas no Google já responde sem clique. Veja como estruturar seu site pra continuar sendo encontrado pela IA e por clientes.",
-      "dateISO": "2026-07-09",
-      "pilar": "seo-geo",
-      "keywords": [
-        "GEO generative engine optimization",
-        "IA overviews Google",
-        "SEO para IA",
-        "site aparecer no ChatGPT",
-        "busca por IA negócio",
-        "otimização para IA"
-      ],
-      "coverImage": "/blog/assets/covers/seo-geo-01.png",
-      "readingTimeMin": 4
-    },
-    {
-      "slug": "benchmark-conversao-mobile-2026",
-      "title": "Seu Site Converte Menos que a Média: o Motivo Provável é o Celular",
-      "description": "Micro-empresas convertem 1,87% em média, abaixo da mediana de 2,35%. Veja os números de 2026 sobre mobile e velocidade que explicam essa diferença.",
-      "dateISO": "2026-07-13",
-      "pilar": "conversao-cro",
-      "keywords": [
-        "taxa de conversão site",
-        "CRO para pequenas empresas",
-        "conversão mobile",
-        "benchmark de conversão 2026",
-        "velocidade de carregamento conversão",
-        "otimização de conversão"
-      ],
-      "coverImage": "/blog/assets/covers/cro-01.png",
-      "readingTimeMin": 3
-    },
-    {
-      "slug": "site-bonito-nao-converte",
-      "title": "Site Bonito Que Não Converte: os 4 Buracos que o Elogio Esconde",
-      "description": "80,8% dos redesigns começam porque o site não converte. Veja os 4 buracos que separam um site bonito de um site que gera cliente.",
-      "dateISO": "2026-07-15",
-      "pilar": "erros-de-site",
-      "keywords": [
-        "site bonito que não converte",
-        "site não gera leads",
-        "design vs conversão",
-        "CTA site institucional",
-        "prova social site"
-      ],
-      "coverImage": "/blog/assets/covers/erros-site-01.png",
+      "coverImage": "/blog/assets/covers/trocar-site-02.png",
       "readingTimeMin": 3
     },
     {
@@ -195,21 +185,86 @@
       "readingTimeMin": 4
     },
     {
-      "slug": "confianca-site-desatualizado-pesquisa-2026",
-      "title": "60% dos Consumidores Confiam Menos numa Empresa com Site Desatualizado, Aponta Pesquisa de 2026",
-      "description": "Pesquisa com 1.201 consumidores nos EUA mostra que 60% confiam menos numa empresa com site desatualizado. Veja o que muda pro seu negócio.",
-      "dateISO": "2026-07-27",
+      "slug": "site-bonito-nao-converte",
+      "title": "Site Bonito Que Não Converte: os 4 Buracos que o Elogio Esconde",
+      "description": "80,8% dos redesigns começam porque o site não converte. Veja os 4 buracos que separam um site bonito de um site que gera cliente.",
+      "dateISO": "2026-07-15",
+      "pilar": "erros-de-site",
+      "keywords": [
+        "site bonito que não converte",
+        "site não gera leads",
+        "design vs conversão",
+        "CTA site institucional",
+        "prova social site"
+      ],
+      "coverImage": "/blog/assets/covers/erros-site-01.png",
+      "readingTimeMin": 3
+    },
+    {
+      "slug": "benchmark-conversao-mobile-2026",
+      "title": "Seu Site Converte Menos que a Média: o Motivo Provável é o Celular",
+      "description": "Micro-empresas convertem 1,87% em média, abaixo da mediana de 2,35%. Veja os números de 2026 sobre mobile e velocidade que explicam essa diferença.",
+      "dateISO": "2026-07-13",
+      "pilar": "conversao-cro",
+      "keywords": [
+        "taxa de conversão site",
+        "CRO para pequenas empresas",
+        "conversão mobile",
+        "benchmark de conversão 2026",
+        "velocidade de carregamento conversão",
+        "otimização de conversão"
+      ],
+      "coverImage": "/blog/assets/covers/cro-01.png",
+      "readingTimeMin": 3
+    },
+    {
+      "slug": "ia-esta-mudando-como-clientes-encontram-seu-negocio",
+      "title": "48% das Buscas no Google Já Não Geram Clique: Seu Site Aparece na Resposta?",
+      "description": "Quase metade das buscas no Google já responde sem clique. Veja como estruturar seu site pra continuar sendo encontrado pela IA e por clientes.",
+      "dateISO": "2026-07-09",
+      "pilar": "seo-geo",
+      "keywords": [
+        "GEO generative engine optimization",
+        "IA overviews Google",
+        "SEO para IA",
+        "site aparecer no ChatGPT",
+        "busca por IA negócio",
+        "otimização para IA"
+      ],
+      "coverImage": "/blog/assets/covers/seo-geo-01.png",
+      "readingTimeMin": 4
+    },
+    {
+      "slug": "sinais-hora-trocar-site",
+      "title": "5 Sinais de que Já Passou da Hora de Trocar o Site do Seu Negócio",
+      "description": "O visitante decide o que pensa do seu site em 50 milissegundos. Veja os sinais que aparecem antes do founder perceber que o site virou um problema.",
+      "dateISO": "2026-07-08",
       "pilar": "hora-de-trocar",
       "keywords": [
-        "site desatualizado confiança",
         "hora de trocar de site",
-        "credibilidade site negócio",
-        "pesquisa consumidor site 2026",
-        "sinais de confiança site",
-        "redesign de site founder"
+        "site desatualizado",
+        "primeira impressão site",
+        "credibilidade design",
+        "redesign site negócio"
       ],
-      "coverImage": "/blog/assets/covers/trocar-site-02.png",
+      "coverImage": "/blog/assets/covers/trocar-site-01.png",
       "readingTimeMin": 3
+    },
+    {
+      "slug": "erros-site-startup",
+      "title": "7 Erros de Site que Afastam Clientes antes da Primeira Conversa",
+      "description": "Auditei 13 sites de startups brasileiras em uma semana. Os mesmos erros aparecem em quase todos. Veja o que está custando leads antes de você perceber.",
+      "dateISO": "2026-06-01",
+      "pilar": "erros-de-site",
+      "keywords": [
+        "erros de site startup",
+        "webdesign para startup",
+        "landing page que converte",
+        "site para founder",
+        "CRO startup brasil"
+      ],
+      "coverImage": null,
+      "readingTimeMin": 6
     }
   ]
 }
