@@ -1,0 +1,1609 @@
+SPEAKER 0: É o buraco 104, aí vem o A, que é o térreo, e o A2, que é o segundo andar, vamos dizer assim-
+
+SPEAKER 1: Sim.
+
+SPEAKER 0: O pessoal se confunde muito.
+
+SPEAKER 1: Então, mas esses aqui era pra tá no segundo andar, então?
+
+SPEAKER 0: Não, não, é. Local um, local dois, né?
+
+SPEAKER 1: Ah, sim.
+
+SPEAKER 0: Pra poder tá a altura, né?
+
+SPEAKER 1: Entendi.
+
+SPEAKER 0: Térreo, segundo andar e tem itens que até terceiro andar, lá em cima, então, as conveniência é um pouco maior. E tem aqui. Aqui teria que colocar também caixinha, tá, André? Tá guardado errado, né?
+
+SPEAKER 1: Tá.
+
+SPEAKER 0: Um, dois, três, quatro, cinco, seis, sete, oito, oito locais aqui.
+
+SPEAKER 1: Oito fileiras.
+
+SPEAKER 0: É que isso aqui eu acho que a IA não ia conseguir solucionar o problema, né?
+
+SPEAKER 1: Não, não, é isso aqui a questão...
+
+SPEAKER 0: O que eu vejo que poderia arrumar, esse endereço é alto pra cacete, uma vez a gente foi em São Paulo, nessas feiras de logística. Cada caixinha tinha um chip, coloca um sensor de laser esparramado, você só vir pra requisição, procura o que tem nesse-
+
+SPEAKER 1: Dá um bipzinho.
+
+SPEAKER 0: Nesse corredor ali já e joga o feixe de luz já direto na caixinha.
+
+SPEAKER 1: Só tem que ser caro, né?
+
+SPEAKER 0: Não precisa guardar na sequência, é. Então você colocou, a partir do momento que cê leu, guardou, ele já apaga aqui e vai pro próximo. Um negócio...
+
+SPEAKER 1: Sim. E aqui são todas as fileiras são, seguem o mesmo padrão, em cima, embaixo?
+
+SPEAKER 0: É, ele começa pela A, um A, aí vem B, C, D, até o J, H aqui.
+
+SPEAKER 1: Zero, cento e... Esse zero cento e quatro aqui é o quê?
+
+SPEAKER 0: Então, um H é o corredor. Corredor um H, primeiro piso, corredor H. Cento e quatro está no primeiro, na primeira coluna, que é, que é a dez. Quatro é um, dois, três, um, dois, três, quatro.
+
+SPEAKER 1: Sim.
+
+SPEAKER 0: D, a posição é A, B, C, D. A posição D. Primeiro andar, segundo andar.
+
+SPEAKER 1: Isso é bem organizadinho.
+
+SPEAKER 0: É, se entender, o problema é pegar-
+
+SPEAKER 1: O pessoal decora isso.
+
+SPEAKER 0: É bem interessante. A gente até chegou colocar aqui, né?
+
+SPEAKER 2: Não, esse aqui é pro Fábio.
+
+SPEAKER 0: Eles que tiraram aqui. A gente tinha até colocado, acho que lá em cima tem o desenho como que é. Eu não subo. Poderia fazer talvez uma IA pra explicar isso aqui, algum robozinho, bonequinho do Roxinho, alguma coisa assim. Qual é o conceito do, do endereço, né?
+
+SPEAKER 1: É, isso aqui é muito mais questão de memória.
+
+SPEAKER 0: Porque hoje a geração é mais visual, mais auditiva, mais do que racional, de parar e entender o que tá escrito. Isso eu falei pra ele, hoje a geração é muito visual, muito...
+
+SPEAKER 1: Pessoal quer todas as coisinha na mão, mastigado.
+
+SPEAKER 0: É, então, é. Acho que é o jeito do pessoal gravar mais fácil, né? Que é o dia a dia da, da turma. Porque a molecada fica o dia inteiro no celular, né? Pro mundo é... Talvez criar um desenhinho no virtual mesmo pro cara entender, né?
+
+SPEAKER 1: Esse código, eles veem lá no computador qual que é a peça que o cliente quer e depois eles vêm aqui procurar?
+
+SPEAKER 0: É, tipo, sai a venda com o código do produto, específico pro carro. Aí o vendedor emitiu a venda... Aí teria que descer de novo aqui. Vamo descer de novo.
+
+SPEAKER 1: Vamo lá. Nois é novo, noiz anda [risos] .
+
+SPEAKER 0: Não são todos, não [risos] . O vendedor emite a venda, sai o cupom aqui. Essa é a tela de entrega, que é desse lado aqui. Então tudo que vai sair entrega sai nessa tela. Tudo que é retira balcão, que a gente tá esperando aqui, sai nessa tela aqui. Então eles vão imprimir o cupom, aí sai na ordem decrescente, sai de lá de cima pra, pra baixo. Do menor item, tipo, o A6D tá lá em cima, o cara bate o corredor, desce pra cá, então vem de lá pra cá, da parede pra cá, que aqui é os itens que mais vende tá na, na ponta aqui. Tá nesse corredor aqui, vamos dizer, nos três primeiros corredores e sempre na, nas, nas primeiras prateleiras aqui do produto. Tem que ir lá fazendo zigue-zague até chegar assim.
+
+SPEAKER 1: Todas as lojas seguem esse padrão?
+
+SPEAKER 0: Todas as lojas seguem esse padrão.
+
+SPEAKER 1: Legal.
+
+SPEAKER 0: Todas nesse padrão. Tem sete cupons aguardando no balcão e dois cupons pra, pra entrega, que desceria por, pelo elevador lá embaixo. Aqui que tá, os motoboy tão na, no estacionamento. Aqui separa e deixa no pacote aqui. Então a menina que faz a, faz a, a distribuição.
+
+SPEAKER 1: Entendi. É, de estoque é mais isso, né?
+
+SPEAKER 0: É, de estoque é mais isso. Não sei como que IA, não consegui enxergar onde que IA poderia entrar nisso daí.
+
+SPEAKER 1: No máximo é questão de organização, mesmo.
+
+SPEAKER 0: Hã?
+
+SPEAKER 1: No máximo é questão de organização, mas...
+
+SPEAKER 0: É.
+
+SPEAKER 1: Acho que o problema não é esse.
+
+SPEAKER 0: É, ou talvez, é como eu falo, talvez explicar o processo pra eles com o bonequinho do Roxinho.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Quero criar um, um material didático assim e um videozinho disso daí. Entender o processo e fazer esse treinamento do dia a dia dele, né?
+
+SPEAKER 1: É.
+
+SPEAKER 0: Como que é a composição de endereço, qual que é o processo de, de tudo. Se colocasse, escrever, mapear o processo, puta, molecada não lê, não adianta, não lê. Não, não, não rola.
+
+SPEAKER 1: Mas o pessoal entra aqui, já tem esse problema e continua, não resolve?
+
+SPEAKER 0: É.
+
+SPEAKER 1: Ou depois de um tempo melhora?
+
+SPEAKER 0: Não, isso até acaba melhorando, mas muito eu, né? Até o cara evoluir é muito eu Isso é que tem um cara que é tipo, responsável pra treinar-
+
+SPEAKER 1: Perfeito.
+
+SPEAKER 0: Só que você não acompanha o treinamento, né? A evolução, você solta ele pro mundo... Não, tá mais dois meninos. [telefone tocando] Ela finalizou a primeira separação e iniciou a outra separação.
+
+SPEAKER 1: Entendi. Esse aí é o...
+
+SPEAKER 0: É, tela de entrega.
+
+SPEAKER 1: Tá.
+
+SPEAKER 0: Quando acabou de separar, finaliza a anterior, inicia uma nova com a mesma senha dela. Pra começar-- Pra medir o tempo que tá de separação, né?
+
+SPEAKER 1: E esse aqui que tem nove é o de entrega aqui na loja?
+
+SPEAKER 0: É, o que tá esperando no balcão aqui.
+
+SPEAKER 1: Ah, certo.
+
+SPEAKER 0: Pessoal que tá atrás do balcão aguardando.
+
+SPEAKER 1: É, certo.
+
+SPEAKER 0: Então a prioridade é sempre zerar aqui, de entrega você consegue administrar, né? Tem um tempo um pouco maior.
+
+SPEAKER 1: Uhum. E essas da entrega é pelo WhatsApp, o telefone?
+
+SPEAKER 0: Ah, então, aí já é um... variada.
+
+SPEAKER 1: Certo.
+
+SPEAKER 0: Que aqui ele sai, a entrega tá devendo, então esse aqui é... tá devendo que, que tirou.
+
+SPEAKER 1: Ah.
+
+SPEAKER 0: Quando é WhatsApp, é EW isso aqui, entrega WhatsApp.
+
+SPEAKER 1: Certo.
+
+SPEAKER 0: São, são siglas que tem no, pra poder entender, né? Ó, daqui não enxerga nada as letrinhas aqui.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Esse cara tá mais. Ó, retira balcão, re-retira, tá de-- tá devendo, tá devendo, retira WhatsApp, tá vendo? Então esse aqui foi vendo até por WhatsApp.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: O cara pediu e vai vim retirar no balcão aqui.
+
+SPEAKER 1: Legal. E falando do WhatsApp já, é, dos vinte vendedores ali que cês tão falando que precisa, né? Trinta, precisa de mais vinte. Esses vinte é mais tipo balcão, é digital? Como eles irão operar?
+
+SPEAKER 0: Como assim? Não entendi.
+
+SPEAKER 1: É, tipo, eles iriam trabalhar mais no balcão ou eles iriam focar mais em ficar no canal digital?
+
+SPEAKER 0: É, ficar mais no canal digital.
+
+SPEAKER 1: É.
+
+SPEAKER 0: Uma coisa legal que o pessoal tem, não sei se tem ou poderia pesquisar também. Pra facilitar a vida do cara que tá habituado, ter alguma parceria, não sei se tem essa... como é que chama isso em? Esqueci o nome da cara. Algum esquema de consultar a placa do carro. O cara digita a placa do carro, já sai o veículo, ano, modelo, fica mais fácil pro cara buscar a peça aqui.
+
+SPEAKER 1: Ah, legal. É, se tiver algum, se tiver algum canal. Foda que encontrar a placa... Tem como fazer isso no sistema?
+
+SPEAKER 0: É, tem que pegar pelo dedo? Não, tem.
+
+SPEAKER 1: Tem? Ah, então, então tem como sim, fazer isso?
+
+SPEAKER 0: Deixa eu tentar lembrar o nome agora. O cara que tá aqui no castelo. Já tem isso já mais ou menos desenvolvido.
+
+SPEAKER 1: Uhum. Ó, se tiver como fazer isso sendo, sendo-
+
+SPEAKER 0: Eu falei pra ele, tem no, no Jack Sis, ele tem essa parceria com o cara, você coloca a placa, ele já te-te traz o, a amarração do, desse cara que ele tem, com os fabricantes e com o que eu tenho cadastrado já. Então pelo carro, pela placa, cê já [estalo de dedo] te traz a quantidade, quais são as peças que eu tenho-
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Pra aplicar pro carro.
+
+SPEAKER 1: Cês já pegam a placa já? Quando vocês vão fazer alguma entrega?
+
+SPEAKER 0: Não, hoje... não, hoje ainda não. Tem isso aí, é que a gente paga, pagaria por consulta, né? Cada placa que cê consulta, cê manda pro, pra base do cara, cê paga por consulta pra ele poder trazer a informação de volta, né? É um custo que tem-
+
+SPEAKER 1: E o que que ele traz de volta?
+
+SPEAKER 0: Ele traz, tipo, ele vai trazer o ano, modelo do carro, cê coloca a placa, ano, modelo do carro. Cê dá enter, ele vai pegar tudo no, no banco de dados que ele tem do carro-
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Ele devolve pra você, ó, código da placa, com tudo que eu tenho cadastrado desse carro.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Aí cê vai vim cá, quer freio, suspensão, motor, embreagem, tudo que tiver aplicado pra esse carro, o cara só vai-
+
+SPEAKER 1: Legal.
+
+SPEAKER 0: Alimentar na caixinha de venda, né? Otimizaria muito tempo.
+
+SPEAKER 1: Quanto que é um, uma consulta?
+
+SPEAKER 0: Não sei, cara. Não tenho ideia.
+
+SPEAKER 1: Tá.
+
+SPEAKER 0: Mas eles têm, têm isso daí. O Roberto não quis colocar porque senão vai ficar caro. Pera, faz teste numa loja, acho que vai trazer muito mais produtividade-
+
+SPEAKER 1: É, a questão é se fica caro, mas...
+
+SPEAKER 0: Qual vai ser o retorno de pra frente, né?
+
+SPEAKER 1: É, exato.
+
+SPEAKER 0: Quanto que vai pro-- qual vai ser a produtividade, eu não, eu não vi nada.
+
+SPEAKER 1: Assim, perdendo um milhão em venda por mês, se eu perder metade disso, vai se pagar, né?
+
+SPEAKER 0: É, sim.
+
+SPEAKER 1: Tá, mas acho que por ser uma empresa sólida já, né? Que diferente de uma empresa, por exemplo, ah, tá começando, tal, então às vezes o cara não tem a certeza que vai ter uma, sei lá, uma volta, né?
+
+SPEAKER 0: Sim, sim.
+
+SPEAKER 1: Lógico que por ser uma empresa sólida aí, tá trinta e poucos anos, né?
+
+SPEAKER 0: É, é um investimento barato. Esse... quanto que essa cabeça tá deixando de pensar com essa... Você pode, vai acontecer, é o que já tá acontecendo também. O cara virar um construtor de placa pra vender e não, não decorar o que realmente aplica no carro, né? Você vai virar um tirador de, de pedido de placa. E tu acha que aplica, o cara trouxe isso daí, mas-
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Vamos dizer, é noventa e oito por cento assertivo que dá certo. Então uns detalhezinho ou outro que não aplica pro carro. Ou entra a questão de ano, de, de semestre, aplica pro primeiro semestre, depois do semestre é outro modelo.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Tem umas pegadinhas aí que isso é macete do dia a dia que a gente vai, cê vai pegando.
+
+SPEAKER 1: É, não, acho que... Se o Roberto quiser, a gente consegue ir atrás, correr atrás de ver como faz essa, essa busca da placa e...
+
+SPEAKER 0: Eu não, acho que o sistema tem, até com-
+
+SPEAKER 1: O sistema tem?
+
+SPEAKER 0: Com os caras lá.
+
+SPEAKER 1: Ah, então, então melhor.
+
+SPEAKER 0: Mas a ideia era, tipo, o que eles não têm, é amarrar isso daí no WhatsApp, isso eles não têm.
+
+SPEAKER 1: Tá.
+
+SPEAKER 0: Tá vendo? Integrar o WhatsApp com, com a formação dele, pra ti acho que até o cliente otimizaria o tempo.
+
+SPEAKER 1: Então, no caso-
+
+SPEAKER 0: "Ah, digita sua placa"
+
+SPEAKER 1: O fluxo ia ser-
+
+SPEAKER 0: "Seu carro é esse, esse, esse"
+
+SPEAKER 1: O fluxo então ia ser de cliente digitar a placa dele no WhatsApp e ia buscar automaticamente?
+
+SPEAKER 0: É, tipo, ele vai jogar na tela do vendedor O carro é um Palio. Palio que ano? Modelo? Tem muita placa Cetic, Fit e a Ford. Então, se o cara colocar a placa no carro, vai sair ano, modelo, fabricação, sai tudo detalhado pro vendedor saber qual que é. Ele só digita a placa no sistema, já perguntou que preço que é preciso. Já otimizaria o tempo de retorno pro cara via WhatsApp, né?
+
+SPEAKER 3: Ah, pro cliente, né? Porque tipo, só a placa ali, depois precisa uma confirmação pra ele lá, tipo, "ah, seu carro é esse, modelo tal, tal".
+
+SPEAKER 0: É.
+
+SPEAKER 3: Pra otimizar o tempo dele.
+
+SPEAKER 0: Tá de boa. O sistema já tem pra ser aplicado, mas no WhatsApp não tem. Pra falar, não tem ferramenta que-que faça essa, essa interface.
+
+SPEAKER 1: Mas vocês usam isso pra todo pedido ou vocês não usam isso?
+
+SPEAKER 0: Não, ainda não. Da placa não usa. Exatamente porque ele acha que é custo, ele acha que não vai adiantar, mas vai chegar uma hora que ou você coloca ou não coloca, porque-
+
+SPEAKER 1: É, a-a-a questão é...
+
+SPEAKER 0: Cê tá vendo a perda, a perda, a perda, não tem...
+
+SPEAKER 1: Exato.
+
+SPEAKER 0: Não tem, cê não consegue formar o vendedor, porque pra você formar, o cara tem que ter cabeça.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: A placa já diminuiria, tipo, faria com que o cara pense menos, assim, vamos dizer, né? Que é o que a geração de vocês, vocês querem mais praticidade, né?
+
+SPEAKER 1: É, hoje quem não é...
+
+SPEAKER 0: Usar a tecnologia pra...
+
+SPEAKER 1: Quem não usa a tecnologia fica pra trás.
+
+SPEAKER 0: Exatamente, exatamente. Quem não tiver isso aí fica pra trás. E dizem que até 2032 o varejo vai morrer. Vai ser só e-commerce, só robozinho. Eu não, eu não, não acredito, assim, vai matar, porque tem muita particularidade, assim. É, acessório, acabamento, assim, acho que agora peça mecânica...
+
+SPEAKER 3: Não, tem que ver na mão, né, cara?
+
+SPEAKER 0: É, ver na mão e até questão de garantia, cara. Então, você trocou uma peça, dá um pau, onde cê vai trocar? Onde cê vai recorrer?
+
+SPEAKER 3: Usa uma peça mais cara.
+
+SPEAKER 0: Vou lá no Mercado Livre, São Paulo, fala: "Vou pegar minha garantia".
+
+SPEAKER 3: Não tem como.
+
+SPEAKER 0: Bem, bem, bem difícil chegar nesse nível, assim. Ainda mais com o brasileiro, né? Que é cheio de gambiarra.
+
+SPEAKER 1: Dos vendedores, vocês têm, tipo, dados? "Ah, esse vendedor, hã, fechou noventa e cinco por cento das vendas, esse vendedor aqui fechou oitenta e oito."
+
+SPEAKER 0: Tem, tem.
+
+SPEAKER 1: Tem? Tá, legal. É que eu tava pensando no caso de se a gente fosse fazer, é, a gente analisar tanto os da-- tanto as conversas ali do melhor vendedor, quanto do pior, pra ver o que ele faz de errado, né?
+
+SPEAKER 0: Uhum.
+
+SPEAKER 1: Acho que pra mim isso seria o mais interessante-
+
+SPEAKER 0: Acho que tem
+
+SPEAKER 1: ...pra manter a melhor qualidade.
+
+SPEAKER 0: Então, eu até tenho, só que eu tenho que extrair no sistema e trabalhar no Excel.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Traz uma ferramenta ali mais ou menos mastigado, mas eu tenho que trabalhar no Excel.
+
+SPEAKER 1: Sim.
+
+SPEAKER 0: O ide-- o ideal seria, tipo, fazer talvez um Power BI mesmo, assim. Extrair uma base, só alimenta a base e fazer esse robozinho pensar e, tipo, alertar o cara X tempo pra ele trazer a informação como é que tá a venda, como é que tá o, o vendedor no dia a dia, hora a hora.
+
+SPEAKER 1: É, se não, ter atualizado, né?
+
+SPEAKER 0: É.
+
+SPEAKER 1: Isso aí, isso aí é o ideal.
+
+SPEAKER 0: Eu brigo pra ter, que ele não quer que a informação fique escancarada pra, por medo de vazar. Principalmente hoje em dia, cara. Hoje em dia informação tá na mão de todo mundo. Todo mundo acha.
+
+SPEAKER 1: É. Só não vai vazar se for...
+
+SPEAKER 0: É, então, se você não ti-- não dominar essa informação, não consegue corrigir as falhas, né?
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Tem essa informação, mas é muito manual.
+
+SPEAKER 1: Assim, é difícil vazar também. Mesmo se, se o ca-- se for fazer com um cara bom de cibersegurança, num, muito difícil-
+
+SPEAKER 0: Eu falo pra você que é fácil. Que o cara coloca na tela, tira foto e manda pro cliente.
+
+SPEAKER 1: Ah, não. Nesse caso, isso aí é foda.
+
+SPEAKER 0: Não passa o orçamento, não passa o orçamento. Tem que passar o orçamento só com código interno. Não passa o código do, do, do fa-- do fabricante. Se passar no orçamento com o código do fabricante, o mercado inteiro sabe a peça que cê tá cotando, que marca que é. Passa só o código interno nosso, o cara não vai ficar perdido. O concorrente faz isso também, ele manda com o código interno dele. Você não sabe que marca que é, que modelo, que ano. Você sabe que é do carro X, é o que o mecânico te fala, mas que marca o cara tá cotando e que marca eu tô cotando pra comprar laranja com laranja e ter o custo realmente do, do orçamento. Mas não adianta, o cara tira foto, acabou. O cara consegue te enganar facinho.
+
+SPEAKER 3: Essas peças de vocês, vocês importam ela ou vocês compram no mercado?
+
+SPEAKER 0: No mercado. Importar é difícil. A gente não tem marca própria, né? Compra sempre marcas conceituadas, assim, as originais, assim. Mas hoje...
+
+SPEAKER 1: Tudo importação?
+
+SPEAKER 0: Noventa por cento é tudo importado. Nada se faz aqui mais no Brasil, nem, nem qualquer coisa. Tem de curva, tem, cê pegar tipo rodo, terminal, parte de suspensão, tem quatro marcas fortes, todo mundo importa. Ninguém fabrica mais aqui. Normalmente é o mesmo chinês que faz pra todo mundo, já tá homologado, já tem Inmetro, tudo, que é caro, assim, desenvolver isso daí. Então o cara pega e vem com a embalagem que cê, cê quer lá, mas sempre, a maioria da, da mesma base, né? Fechou essa operação antiga, abrindo a nova agora.
+
+SPEAKER 1: E o ciclo de capital aqui, a, ele acaba ficando ruim por conta da importação ou não muda nada?
+
+SPEAKER 0: Não, não muda nada.
+
+SPEAKER 1: Que bom. É, porque eu, eu já fiz um projeto com uma outra empresa que fazia importação, mas eles vendiam pra revendedor e não pra diretamente pro consumidor. O ciclo lá era horrível, porque o revendedor pedia prazo, ele tinha que pagar era na hora a importação.
+
+SPEAKER 0: Ah, não, sempre é.
+
+SPEAKER 1: Era um ciclo muito ruim.
+
+SPEAKER 0: É. Tem que ter muito capital Por isso que tá uma merda boa pra caramba. Cê vai deixar seu dinheiro parado um bom tempo até rodar esse ciclo tudo de importação aí. No caso, fica seis meses, né?
+
+SPEAKER 1: Sei, até, até mais.
+
+SPEAKER 0: É, cê tem que ter uma-- cê tem que ter pedido na China, pedido no, no mar, pedido no porto e o estoque rodando aqui na, na, no Brasil. Então, é bem longo.
+
+SPEAKER 1: E o pessoal aqui do balcão, eles se viram bem aí? Não tem muitos problemas com esse pessoal?
+
+SPEAKER 0: Não, assim, o que falta mais é se eu tivesse essa placa aí no Jackson, ia facilitar muito.
+
+SPEAKER 1: A placa do carro?
+
+SPEAKER 0: É, eles já têm desenvolvido. Só que um dos parceiros dele, parece que pararam de desenvolver placa Mercosul. Pô, aí ferrou, então eles tão f-- com fraga aqui no Castelo, né? Anota aí procê ter-- se for por a informação deles-
+
+SPEAKER 1: Fraga é do Cassan-- no, no Castelo?
+
+SPEAKER 0: É, eles ficam no Castelo aqui, mas eles são reconhecidos no Brasil inteiro, assim, por-- ele tem toda essa informação ali de placa, de emplacamento, eles têm tudo que cê imaginar, eles têm de automotivo. São pioneiros bem antes de, de ter sistema, eles eram na, na mão mesmo, assim, a informação. São, são referência no nível Brasil. Então, cara, interessante. Se vocês enxergar algo que tenha algum potencial, tem uma parceria com eles, assim, pra, pra desenvolvimento. Mais ver essa integração WhatsApp com essa plataforma dele, vê se vocês padronizam até.
+
+SPEAKER 1: Então o negócio aqui é estoque e canal digital?
+
+SPEAKER 0: É. Ia falar, a parte, a parte de estoque, no meu ver-
+
+SPEAKER 1: Não, eu acho que-
+
+SPEAKER 0: Eu queria mais fazer uma história.
+
+SPEAKER 1: Dá pra ter um suporte, mas a questão é, é gente mesmo, é o cara saber. Mas dá pra ter um-- dá pra existir um suporte pra isso.
+
+SPEAKER 0: É, coisa que facilitaria pro cara agravar melhor o código. É, o processo, é o... O Roberto já liberou, ele até tá com o pessoal da Bosch ele, pra barrar ovo pra Bosch, não tem.
+
+SPEAKER 4: Eu sou o gerente, mas eu não fico vendo peça em loja, né? Ele tem que falar com a loja.
+
+SPEAKER 1: Sem problema, a gente também tá com... Tem que, que...
+
+SPEAKER 0: Os vendedores eles ficam com o celular e... No balcão, geralmente não.
+
+SPEAKER 1: Tá.
+
+SPEAKER 0: Só quando tá... Eles usam o particular deles assim, mas, mas televenda mesmo. Que a ideia é o cara no balcão atender o balcão, assim, dar um atendimento um pouco melhor pro balcão.
+
+SPEAKER 1: Mas o particular deles, é, eles faziam a venda pelo particular deles quando eles foram-
+
+SPEAKER 0: É, eles têm o corporativo, mas tentam arrancar, mas particular não tem como secar. Mas a ideia é não ter, o cara não usar.
+
+SPEAKER 1: Sim.
+
+SPEAKER 0: Antigamente era tudo junto num buraco só.
+
+SPEAKER 1: O balcão aqui também é supermovimentado, né, então...
+
+SPEAKER 0: É, loja ampla assim não parece tanto não, mas quando era na, na matriz que era mais compacto.
+
+SPEAKER 1: Eu vi que tinha uma unidade de virando pra esquerda aqui, né?
+
+SPEAKER 0: É, então, era lá, mas-
+
+SPEAKER 1: Era lá?
+
+SPEAKER 0: A gente mudou faz um mês e meio.
+
+SPEAKER 1: O que que tem lá agora?
+
+SPEAKER 0: Só a parte traseira vazia, tá desmontando lá. Tem televenda do outro lado, cês querem conhecer como é que é o televenda lá? Tem gente-
+
+SPEAKER 1: Claro!
+
+SPEAKER 0: Os meninos.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Não tá não. Não conseguiu transferir pra cá ainda. O cara não pediu o prédio ainda, então embarrigando um pouco ainda.
+
+SPEAKER 1: É, a gente acabou subindo lá no escritório sem querer.
+
+SPEAKER 0: Ah, fora que sim.
+
+SPEAKER 1: É, que a gente achou que era, que era pra gente ir lá falar com o Roberto.
+
+SPEAKER 0: Não, a gente tava no prédio do lado.
+
+SPEAKER 1: Aí a gente viu que tava em construção.
+
+SPEAKER 0: Vai dar pra retocar ou cês bancam o carro do cabra? Mostrar o trabalho dos televendedores. Não assistam o prédio não, tá caindo na cabeça, mas...
+
+SPEAKER 1: É, eu passei na frente aqui, meu ex me mandou pra cá.
+
+SPEAKER 0: Ah, não, era... Acho que tá era... A mulher tá constando aí?
+
+SPEAKER 2: Meu Deus do céu! Meu... Para de mandar foto aí.
+
+SPEAKER 5: Não, pra ver as peças que quer.
+
+SPEAKER 2: Pode ser, pra gente dar uma organizadinha.
+
+SPEAKER 0: Bom dia.
+
+SPEAKER 5: Bom dia, tudo bem?
+
+SPEAKER 2: Mil e tantas peças descendo, vai o Renato que já dá um confrio pra gente. Os cara é ruim, porque a mecanista num, tá tudo pagado aqui, a loja não recebe, olha uma nossa porra.
+
+SPEAKER 5: Autopeças? Nego já tá chamando nós de Autopeças Não Tem. [riso] Verdade, cara. Nego perguntou pra mim se o Roberto construiu aquilo ali, acabou o dinheiro. Verdade, e não tô mentindo procê não, queria tá contando lorota. Esse que é o problema.
+
+SPEAKER 0: Se colocasse um negócio de placa ali, agilizava o processo, no WhatsApp...
+
+SPEAKER 5: Agiliza bastante. Tem que ver ó, só exemplo que você...
+
+SPEAKER 2: Thiagão.
+
+SPEAKER 5: Manda assim ó, não fala nem que carro que é.
+
+SPEAKER 2: Thiagão.
+
+SPEAKER 0: É, então. Aí tá no capô, fica mais fácil de... É, jogo de búzios. Tivesse com a placa já... Por enquanto eu não tenho, eu sei que no Jack System tem, mas no WhatsApp eu não tenho. Se o cara mandasse a placa direto, já sairia toda a informação do carro, né Thiago, adiantaria um abismo.
+
+SPEAKER 5: Tem bastante.
+
+SPEAKER 2: Centro Automotivo, principalmente. Noventa por cento.
+
+SPEAKER 0: Até que os cara passa, se tiver mais eu não tenho.
+
+SPEAKER 5: Não, pode usar, pode usar. Tira foto de longe assim, ó.
+
+SPEAKER 0: Ah, tem outro carro também. Tira foto do carro, mas não manda não. Se o cara tá perdendo tempo.
+
+SPEAKER 5: Em alguns casos é bom, entendeu? Porque nego não sabe nem em que carro que ele tá mexendo.
+
+SPEAKER 0: É, no caso da Montana frente antiga, frente nova...
+
+SPEAKER 5: Claro, Corsa, você pergunta, é uva, tão ovo, mas não sabe falar qual que é.
+
+SPEAKER 0: Qual que é a frente do carro que mudaram, as peças.
+
+SPEAKER 5: As peças?
+
+SPEAKER 0: Que que é isso?
+
+SPEAKER 5: O Corsa.
+
+SPEAKER 0: Ah, já me ligou xingando essa semana passada.
+
+SPEAKER 5: É, pra reclamar.
+
+SPEAKER 0: É, pra caramba.
+
+SPEAKER 5: Fala, Janel.
+
+SPEAKER 0: Ó, tá vendo? Buraco no sistema.
+
+SPEAKER 5: É, não, acho que vem banhada a ouro, né, pelo jeito.
+
+SPEAKER 0: Os caras são cara, velho.
+
+SPEAKER 5: Não, não tem.
+
+SPEAKER 0: Tá errado, tá errado. Você mandou pro código da peça ainda pro cara. Cê deu munição pro, pro concorrente, ele conheceu o preço.
+
+SPEAKER 5: É original. Segundo algumas mentes aí, só essa que funciona.
+
+SPEAKER 0: O cara sabe que, fala que marca que é, tudo certinho. Tem que olhar só o código interno.
+
+SPEAKER 2: Se eu deixar os mecânicos...
+
+SPEAKER 0: Ah, não, mas... Pra consumidor mesmo, trampa o...
+
+SPEAKER 5: Consumidor.
+
+SPEAKER 0: O consumidor vai pegar o código da peça e contar com todo mundo. Compacta o código da fábrica mesmo, a janelinha do código de fábrica, deixa só o código interno.
+
+SPEAKER 5: O que nós usamos é isso aqui, ó.
+
+SPEAKER 0: Muda bastante.
+
+SPEAKER 5: É o que eu uso.
+
+SPEAKER 0: Ah, então, mas na carta é só itens do segmento dele, né?
+
+SPEAKER 5: Não, mas é pra gente descobrir que carro que é.
+
+SPEAKER 0: Ah, tá.
+
+SPEAKER 5: Só que aí, tipo assim, aparece aqui, 2.0, mas não sabe se é...
+
+SPEAKER 0: Não traz.
+
+SPEAKER 2: Tô gravando tudo aqui também.
+
+SPEAKER 5: E tem época do mês que trava aí também, né? Não, isso dá Auto Expert não.
+
+SPEAKER 0: Não trava?
+
+SPEAKER 5: Só o da Vega.
+
+SPEAKER 0: Tem um limite, é. Então é a Vega que tem o limite de consulta.
+
+SPEAKER 5: O da Vega, quinze, vinte dia no máximo. Aí depois já, já começa a travar.
+
+SPEAKER 0: É que o contrato deles é X consulta no mês ali, ultrapassa a consulta.
+
+SPEAKER 5: Esse aqui de vez em quando ele bloqueia, mas aí ele manda uma mensagem no celular, cê pega o código que eles mandou, eles desbloqueiam.
+
+SPEAKER 0: Uhum.
+
+SPEAKER 5: Mas é o melhorzinho que a gente tem.
+
+SPEAKER 2: Quanto cê paga por consulta no site?
+
+SPEAKER 0: Não, isso aí é liberado.
+
+SPEAKER 2: Liberado?
+
+SPEAKER 0: Isso aí tá na carta.
+
+SPEAKER 2: Então... E é limitado também?
+
+SPEAKER 0: É, só que não traz informação cem por cento, né?
+
+SPEAKER 5: É, não, a IX, que nem o João falou, se eu quiser bus-- saber aqui ó, ele vai dar só, só o que eles têm, na carta, Fremax.
+
+SPEAKER 0: É, só do grupo Randon, só as marcas que pertencem ao grupo, não vai te dar o similar do concorrente.
+
+SPEAKER 5: Mas em, no caso, eu utilizo só pra ver que carro que é.
+
+SPEAKER 0: Só se as marcas tão embaixo que ele vai trazer informação.
+
+SPEAKER 2: Mas sabendo qual carro é, já dá pra fazer muita coisa, né? Já agiliza bastante.
+
+SPEAKER 0: É, te dá um norte.
+
+SPEAKER 5: É que, é que é assim, que nem eu dei o exemplo, nego manda a foto da placa e não fala nem que carro que é, entendeu? Aí eu entro aqui, eu descubro o carro que é e ano. Pelo menos isso a gente já descobre.
+
+SPEAKER 2: E vocês, vocês conseguem buscar se vocês têm a peça aqui já, já sabendo o que é?
+
+SPEAKER 5: Não, aí eu tenho que entrar no nosso sistema e ver.
+
+SPEAKER 0: Aí, consulta na placa. FVN.
+
+SPEAKER 2: 9148. Não tá graçando. Ah, deu, PRAT1.
+
+SPEAKER 0: 2017, 18, prata, isso aí. Já dá pra ter uma...
+
+SPEAKER 5: Quando ele não encontra, aparece uma mensagem vermelha. É não, isso é só referência, o chassi.
+
+SPEAKER 2: É o motor não chega, né?
+
+SPEAKER 0: É, não traz o motor, né?
+
+SPEAKER 5: Pra puxar assim tem também.
+
+SPEAKER 0: Ah, não, mas o motor não tem, só traz o ano, o modelo. Ponto cinco. Mas, tipo, nas Volkswagen lá não fala se é TSI-
+
+SPEAKER 5: Não.
+
+SPEAKER 0: 270, TSI 60...
+
+SPEAKER 5: Não, ele vai, ele vai mostrar que é 1.0 ou 1.4.
+
+SPEAKER 0: Uhum. Já é um caminho.
+
+SPEAKER 5: É.
+
+SPEAKER 2: É uma opção.
+
+SPEAKER 0: É. Mas se tivesse isso integrado no WhatsApp, já não dá nem nessa tela, né?
+
+SPEAKER 5: Né?
+
+SPEAKER 0: Vai direto na...
+
+SPEAKER 5: Fala, seu Vicente.
+
+SPEAKER 2: Pô, mas se pesquisasse, tipo, o cara manda a placa, tipo, aí já vai lá e pesquisa...
+
+SPEAKER 5: É isso que a gente quer fazer
+
+SPEAKER 6: Só do lado esquerdo. Sem pipoco, só puxa
+
+SPEAKER 1: Tá, aí tá esse programa aqui, por favor, é gratuito. Só que ele não mostra muita coisa, só vai mostrar a peça da-desses caras aí
+
+SPEAKER 0: Tanto que o Fraga-
+
+SPEAKER 6: Trezentos e trinta e quatro
+
+SPEAKER 0: Ele tem toda essa... Ele pega tanto essa marca quanto o mercado inteiro, todas as marcas que tem no banco de dados dele, ele traz a informação. Desde que eu tenho cadastrado, se eu tiver cadastrado aquela marca, aquele código, ele explode na tela com a parte.
+
+SPEAKER 6: Só porque, ó lá. Só porque. Agora é dar a jogada aqui, né? Pra chegar lá, demorou, demorou.
+
+SPEAKER 1: E pelo WhatsApp cê falou, esses vinte pessoas seria por conta de volume? Vem muita gente, demora muito pra atender, como é que é?
+
+SPEAKER 0: O que que cê quer dizer?
+
+SPEAKER 1: Das vinte pessoas que precisaria pra atender. É, o problema é volume? De, de gente chamando?
+
+SPEAKER 0: Ah, sim, sim.
+
+SPEAKER 1: Volume.
+
+SPEAKER 0: Eu vejo atender telefone, a telefônica lá, o pessoal informa a quantidade de ligação que perde, é absurdo.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Se tivesse aí no WhatsApp, você ficaria enrolando o cara, ganhando tempo, eliminando etapa, até chegar no, no mecânico, no, no vendedor. Já bem resumido já que seria, otimizaria o tempo de atendimento.
+
+SPEAKER 6: Ó, o cabo de vela não tem aqui, tá? Só tem em outra loja.
+
+SPEAKER 1: Acho que o problema dele é menor. Pessoal... Agora é falar pro Roberto.
+
+SPEAKER 0: É.
+
+SPEAKER 1: Ele está na reunião ainda?
+
+SPEAKER 0: Não sei. Ele tá aqui no responder aí. Acho que dá pra fazer um negócio legal pra ele. É, tenta ver esse Fraga aí, ele tem banco de dado de todo mundo. Todos os fabricantes, tipo, usa ele como referência, né? Até acho que essa troca que dá rondom, deve pegar o banco de dados deles. Só que não são das marcas deles, né?
+
+SPEAKER 1: Uhum. Isso aí.
+
+SPEAKER 0: Conseguiu uns vinte robôs estoquista também, uns vinte não, trinta, né? Acho que falta pelo menos trinta. Pra voltar pros lugares.
+
+SPEAKER 1: Isso aí já é com a gente.
+
+SPEAKER 0: Desenvolve o robô, pô.
+
+SPEAKER 1: Eu conheço o pessoal que faz.
+
+SPEAKER 0: Agora desenvolve esses carinha aí. Só pra conferir e guardar peça, o resto eu não sei mexer. O resto é fácil, né, Marcos? Apertar o botão, essa parte é fácil. Duro é abraçar o...
+
+SPEAKER 1: Uhum.
+
+SPEAKER 6: Tem que guardar, né? Porque senão guarda errado ainda.
+
+SPEAKER 0: É, é o que tá acontecendo.
+
+SPEAKER 6: Né?
+
+SPEAKER 0: Tá acontecendo. Eu não acho a peça, acabou de entrar, não, não acho.
+
+SPEAKER 6: Pouco tempo. Tem umas dez por dia.
+
+SPEAKER 0: Nem viu menos gato. Eles inventaram do jeito que tinha enorme.
+
+SPEAKER 6: É, mas...
+
+SPEAKER 0: Daí melhorou um pouco, né, mas-
+
+SPEAKER 6: Não, mas voltou tudo.
+
+SPEAKER 0: Não, voltar, não voltou. O problema é guardaram errado. Tinha mais gato, o Paulo, o Paulo falou isso aí. Fora aqueles, aquela composição que tinha enorme lá, de cento e trinta, teve vinte. Tirei do estoque. É, mas tem mais, falei. Aí não consigo mexer, aí é só no inventário mesmo, pra deixar visível.
+
+SPEAKER 7: Brother, é isso daí, vou deixar o nome dele lá, vou beber a capa pra correr aí, fechou? Se cê falar que ele tiver no meu pacote, tu vai tirar um tempo lá.
+
+SPEAKER 0: É, tô buscando duas, mas não acha nenhuma.
+
+SPEAKER 1: É, quando foi? Eu não tenho entrada, cê não tem, né? Deixa eu ver entrar.
+
+SPEAKER 0: Tá pegando como esse nome? Não, eu vou ver aqui uns sessenta dias, quanto que eu tinha entrado. Entrou... Três. Recebi nove, dia vinte e um do sete. É, guardou.
+
+SPEAKER 1: Entrou aqui uma peça de perto pra cá.
+
+SPEAKER 0: De três, vamos pra quatro. Já tá aqui. Apartou.
+
+SPEAKER 1: Entendi. É, tem que digitar peça por peça.
+
+SPEAKER 6: Só mandar mensagemzinha.
+
+SPEAKER 1: Além do modelo do carro, né?
+
+SPEAKER 0: Manda no meu Zap esse-
+
+SPEAKER 1: Ver no WhatsApp, pesquisar no sistema, encontrar a peça certa, depois fazer repetir esse processo. Quarenta mil vezes no dia.
+
+SPEAKER 0: Os cinco maluco já mandou mensagem agora.
+
+SPEAKER 1: É, sim, perde muito tempo. Qual é o tanto de pedido que tem ali na lista? Pelo menos uns quatro.
+
+SPEAKER 0: Só um eu não achava.
+
+SPEAKER 1: Ele que tá preso em um. Um ia, teria feito isso em cinco minuto.
+
+SPEAKER 0: Eu não tinha nota, lancei na loja, guardei. Quando fui olhar na caixinha tinha seis.
+
+SPEAKER 1: O boy, tipo, não vai substituir o cara também, porque falta nego. Então, cê vai substituir quem não tá. Se não tem nego no mercado, vai substituir quem não está. Não, cê vai substituir quem não tá ainda. Porque eu acho que ainda assim, antes de contratar um mecânico.
+
+SPEAKER 6: As peças que a gente pede pro fornecedor, o que que você faz com a campanha nota pra agilizar? Eu entro algo de emitir a nota.
+
+SPEAKER 0: No, no Nobeis?
+
+SPEAKER 8: Não, não tá contando um contra o outro. Você duvida, nunca veio?
+
+SPEAKER 1: Não.
+
+SPEAKER 8: Cê tem que quase que implorar pra vim.
+
+SPEAKER 1: Mas depois sair...
+
+SPEAKER 8: Eu falo assim-
+
+SPEAKER 1: Eu consigo mentir se não tiver o meu pai ainda. Eu consigo mentir se não tiver o meu pai. Uma vezinha só, não vai ter problema.
+
+SPEAKER 8: Acho que internet demora cinco, cinco a sete dias.
+
+SPEAKER 1: É, é rapidinho. Meu pai, meu pai tem computador aqui. Ele sabe usar o computador, então... Além de, além de ser rápido, a gente não vai pagar caro. Só que eu...
+
+SPEAKER 8: Tinha um cupom que ia ter uma chave lá, recebia-
+
+SPEAKER 1: Clientes, na real. Cliente. Tinha nota aí. Na loja não ia achar nada. Principal não é nada, se a gente achasse, tá ligado? É cinco por cento. Menos. Quinhentos reais. É que tem que pagar pro governo, tem que pagar pro fundador. Todo mês.
+
+SPEAKER 8: Quanto que é por mês?
+
+SPEAKER 1: Caralho, vai ser uns mil reais.
+
+SPEAKER 8: Todo mês?
+
+SPEAKER 1: É. Tá tendo computador aqui.
+
+SPEAKER 8: Se o meio não andar, ele tá pegando nós ao meio hoje. Fala pra mim.
+
+SPEAKER 1: É o esperado, é o esperado.
+
+SPEAKER 8: A peça tá aqui, se eu não consigo o meio, não consigo fazer essa peça.
+
+SPEAKER 1: Eu tô pensando, acho que tipo, cobrar mais barato, só que fazer uma parceria, tá ligado? O cara, o, o Roberto arruma cliente pra gente, e a gente vai cobrar tipo dez mil reais dele, ao invés de vinte. Ele vai arrumar cliente pra gente, e a cada cliente que ele arrumar, a gente ainda vai pagar tipo um por cento do, um por cento daquilo que a gente conseguiu, a gente envia pra ele de comissãozinha. Pô, o cara, o cara além de pagar mais barato, ainda vai ganhar dinheiro de volta, vai ter cashback, tá ligado?
+
+SPEAKER 8: Pra esses cara que pede pra ele, porque esses cara pede pra ele, acho que a maioria não é gente, é outra pessoa. A maioria é mecânico, oficina.
+
+SPEAKER 1: Oficina, tem isso. Caramba.
+
+SPEAKER 8: Oficina.
+
+SPEAKER 1: É, tanto é que a pessoa nem devia saber, né? Tem muita oficina mandando mensagem. O que, o que eu tô vendo aqui é o cara fazendo um por um, véi. Tendo que olhar loja, tendo que olhar cada loja, olhando o código aqui, tem o retentor da roda dianteira da marca Sabo, e tem o código da fábrica.
+
+SPEAKER 8: Que ele iria ter... Tipo assim, indicar a gente pra quem?
+
+SPEAKER 1: Não-
+
+SPEAKER 8: Eu acho que oficina mecânica pode ter mandando pra ele, cara.
+
+SPEAKER 1: A oficina a gente faz um negócio mais simples. Comprando dois, faz um monte de coisa simples que os dois compra. Os cara tudo.
+
+SPEAKER 8: Precisa mandar mensagem pra ele, véi.
+
+SPEAKER 1: Não, eu tô achando mecânico, mecânico. Tipo assim, tem que ser o cara respondendo, porque senão não tem como explicar. Nossa, mas aí tem que cobrar mais caro, se não é simples. Não dá pra cobrar dois mil esse caralho. Não é um negócio simples de fazer. Agora, um botzinho que vai responder a mensagem do cliente, isso é suave, pô.
+
+SPEAKER 8: Não, não, tipo assim, o que que é, é assim. Eu digo oficina mecânica, por quê? Porque oficina mecânica, é o, é o mecânico que tem que mandar o áudio explicando, né? Falando o que, o que precisa, mandar um vídeo do carro, tá ligado? O próprio cara que tem que responder isso. Então, tipo assim, acho que pra mecânico seria interessante, tipo, sei lá, um CRM ou um RP, um desses dois.
+
+SPEAKER 1: Então, o, o que, o ideal é assim, seria vender o bot acoplado com o CRM, porque aí, tipo, a informação já é direto pro CRM, mas aí ia ficar mais caro. Mas então, é, é, essa, essa questão que eu tô falando pra você, que que esse bot vai agregar pro cara da oficina? Vai fazer o que esse bot pra ele? Entendeu? Vai depender muito do, de como funciona a operação do cara, né? Porque, mano... Mas assim, mas cê vê, ele conhece os caras da Bosch, eles ó, por exemplo, ele não é da oficina, tá ligado? Ele conhece. Esse cara deve conhecer gente pra caralho. É. Ele vira um embaixador, tá ligado? O cara vendo aquele fechar, a gente paga um pouquinho pra ele. O, o Arthur do JDP, tá ligado? O de cabo enrolado.
+
+SPEAKER 8: Sei.
+
+SPEAKER 1: Ele que me falou disso aí.
+
+SPEAKER 8: Legal.
+
+SPEAKER 1: Ele falou: "pô, a gente aqui, a gente, a gente começou a fazer isso com um dos nossos clientes, os cara já conseguiu três anos pra gente", não sei o quê. E assim, o ticket mais barato deles é doze mil.
+
+SPEAKER 8: Quanto?
+
+SPEAKER 1: O mais barato deles é doze. O mais caro, mais de cem.
+
+SPEAKER 8: Cinco por cento.
+
+SPEAKER 1: Então, cinco por cento? Ó, tá dando. E ali onde tudo nasceu, a dor de cabeça.
+
+SPEAKER 8: Começou lá.
+
+SPEAKER 1: Começou lá?
+
+SPEAKER 8: Legal. Isso aí há trinta anos atrás, né?
+
+SPEAKER 1: Trinta e quatro anos atrás.
+
+SPEAKER 8: Trinta e quatro.
+
+SPEAKER 1: A primeira loja dele foi essa. Foi essa daí.
+
+SPEAKER 8: Caramba.
+
+SPEAKER 1: Balcãozinho com peça jogada no chão. Um balcão em L assim, começou do nada.
+
+SPEAKER 8: Aquela...
+
+SPEAKER 1: Esse é o louco gerente da loja. Para, vai, vai, vai vender peça, caralho.
+
+SPEAKER 8: Meu Deus do céu, que jeito, relaxa.
+
+SPEAKER 1: Faz uns topzinho pra pagar um custo lá.
+
+SPEAKER 8: Que jeito, mano? Cê é doido.
+
+SPEAKER 1: É. Tô apanhando o dia inteiro, apanho do dono, apanho do estoque, apanho do vendedor, apanho do gerente.
+
+SPEAKER 8: Cê tá que nem eu agora, meu.
+
+SPEAKER 1: Apanho do vendedor também.
+
+SPEAKER 8: Não tô nem empatando. Antes, antes eu tava empatando, ó, tava bom.
+
+SPEAKER 1: Cês compram demais.
+
+SPEAKER 8: Meu, cês têm uma organização legal aqui de que peça tem que comprar, de que peça tá faltando, que peça cês têm?
+
+SPEAKER 1: Não, tem, sistema da Truv então. Curva ABC.
+
+SPEAKER 8: É que eu vi ele reclamando assim, eu não sei se é brincadeira dele, se realmente falta isso.
+
+SPEAKER 1: Não, informação tem.
+
+SPEAKER 8: Aham.
+
+SPEAKER 1: Eu hoje, assim, falando operacionalmente, o meu problema é... Meu primeiro emprego, vamos dizer assim. É a base, meu.
+
+SPEAKER 8: Sim.
+
+SPEAKER 1: Fazer o serviço braçal inicial da outra peça
+
+SPEAKER 8: Só confirmar um negócio. Então, por exemplo, o cliente chega lá no balcão, fala: "Beleza, quero peça tal, tal, tal."
+
+SPEAKER 0: Uhum.
+
+SPEAKER 8: Aí, pro cara ir buscar no estoque, como que ele pega essa informação, aquele, aquele código lá? Sai na, na notinha que sai naquele computador?
+
+SPEAKER 0: Sai no cupom, é, é.
+
+SPEAKER 8: E ele pega aquele cupom e vai no estoque buscar.
+
+SPEAKER 0: É, o cupom sai em ordem crescente do-- decrescente da, pra separação, né?
+
+SPEAKER 8: Ah, certo.
+
+SPEAKER 0: Ele sai sempre do endereço mais longe até chegar, ir chegando no próximo pacote.
+
+SPEAKER 8: Tá.
+
+SPEAKER 0: Pra não ficar rodando que nem barata tonta. Quanto tempo? Dá pra ver?
+
+SPEAKER 8: Então é por essa notinha que ele olha lá e vai olhando e vai, beleza, corredor tal-
+
+SPEAKER 0: É, vai no zig-zag, é. Vai no zig-zag no estoque.
+
+SPEAKER 8: Certo.
+
+SPEAKER 0: Ele vai primeiro, se tiver a peça lá em cima, sai primeiro lá, faz o zig-zag, começa do fundo e vai voltando até chegar mais próximo do pacote.
+
+SPEAKER 8: Entendemos.
+
+SPEAKER 0: Esse computador já tá na... Ele dar-daria lá um pingod'água assim.
+
+SPEAKER 8: Cara, o que eu tinha pensado, de repente, não sei se dá pra gente fazer isso, se é viável. Por isso que eu perguntei se algum vendedor trabalha com celular, por quê?
+
+SPEAKER 0: Dependendo o sistema, antigamente, é, também aquele balcão noventa e seis ali, era telefone, era bip que tinha, depois veio Nextel, um balcão lá na frente, então muitas vezes o cliente não sabia, cê tava conversando com você, cê tava no, no bip lá no, no telefone, ó pro lado. Tira do balcão, não dá atenção cem por cento pro, pro cliente que tá no balcão. Eu tenho só telefone ali, que alguma emergência que o televendedor precisa falar alguma coisa, que conversa com os meninos aí. Mas hoje, cê vê, a maioria não tem celular, nada, só balcão, balcão. Só ambiente de balcão.
+
+SPEAKER 8: Por exemplo, o que eu tinha pensado, por exemplo, se esse celular tem algum sistema, algum aplicativo, alguma coisa assim, sei lá, seja integrado com o sistema daqui, por exemplo, vai aparecer, é, o código lá. Ao invés dele mandar o código pra aquele computador emitir a nota pro cliente, pro, pro vendedor ir lá e buscar, esse código vai aparecer no celular com alguma forma de tipo, sei lá, de facilitar a vida dele, tipo, dele olhar no celular ali o código e falar: "Tá, beleza, é isso que eu tenho que fazer. Então eu vou aqui," sei lá, aperta o próximo passo. Aí, tipo, ah, corredor, qual corredor tem que, que tá no, no, a peça. Só uma-
+
+SPEAKER 0: É
+
+SPEAKER 8: ...ideia que eu tive.
+
+SPEAKER 0: Isso aí ele lê no, no cupom, né?
+
+SPEAKER 8: É, ele lê no cupom.
+
+SPEAKER 0: Você fala: "Talvez imprime o cupom no celular do cara."
+
+SPEAKER 8: Isso, daí não teria mais que imprimir no computador também. Recebe no próprio celular do cara ali, o cara olha...
+
+SPEAKER 0: É, isso eu não pensei ainda, né? Talvez pra molecada seria...
+
+SPEAKER 8: É, porque daí, tipo, se for no celular, a gente dá pra ti bolar alguma coisa, tipo-
+
+SPEAKER 0: Eu tenho uns coletor Zebra aí, acho que oito coletor Zebra.
+
+SPEAKER 8: O quê? Coletor-
+
+SPEAKER 0: É coletor de... É tipo como se fosse um-
+
+SPEAKER 8: Tipo um aparelhinho assim
+
+SPEAKER 0: ...celular, é. Só que ele é específico pra, pra-
+
+SPEAKER 8: Estoque
+
+SPEAKER 0: ...é, logística, cê pode dizer.
+
+SPEAKER 8: Isso é legal.
+
+SPEAKER 0: Como se fosse um... Isso aí não pensei não, mas a ideia é boa também.
+
+SPEAKER 8: Uhum.
+
+SPEAKER 0: Cê fazer isso aí, o cara digita o código dele, sai na, na tela.
+
+SPEAKER 8: Sim.
+
+SPEAKER 0: O cara pegou o item, o cara dá o OK e já vai pro próximo endereço que ele tem que ir. É um passo bem grande também. Não é, não é difícil não. Vamos jogar já isso aqui. Qualquer novidade que eles olham, jogam pra mim, a gente dá pra desenvolver, pode jogar pro sistema pra desenvolver.
+
+SPEAKER 8: Uhum.
+
+SPEAKER 0: A ideia é boa mesmo. Isso que eu falo, subir de fora, às vezes o negócio tá aí na ponta do seu nariz, cê não tem ideia do negócio. Quando o cara de fora enxerga o, o problema assim, né, escancarado o problema.
+
+SPEAKER 8: Mas é legal isso aí, porque eu não sabia que isso daí tem um aparelhinho pra, tipo, logístico pra isso, porque de repente-
+
+SPEAKER 0: Deixa eu ver se tem
+
+SPEAKER 8: ...porque de repente isso daí pode ser útil até.
+
+SPEAKER 9: [conversas ao fundo]
+
+SPEAKER 0: Não tenho a foto que mandar pra ele. Venha Renato.
+
+SPEAKER 8: Pessoal, tem algum Zebra aí perdido?
+
+SPEAKER 0: Oi?
+
+SPEAKER 8: Algum coletorzinho aí perdido?
+
+SPEAKER 0: Se tiver no estoque, hein?
+
+SPEAKER 8: É. Opa!
+
+SPEAKER 6: Oi
+
+SPEAKER 8: Tem algum coletorzinho aí perdido?
+
+SPEAKER 6: Não.
+
+SPEAKER 8: Pra colocar o Rafael.
+
+SPEAKER 6: Tem um aqui, mas vai dar... Tem um aqui.
+
+SPEAKER 8: Você consegue me falar? Entendi.
+
+SPEAKER 0: Carlão.
+
+SPEAKER 6: Oi?
+
+SPEAKER 0: Tem coletor Zebra aqui?
+
+SPEAKER 8: Depois a gente fala mais.
+
+SPEAKER 0: Oi? Coletor Zebra, tem não? Não?
+
+SPEAKER 6: Coletor Zebra, o senhor Roberto. Ah, tem umas aqui, ó.
+
+SPEAKER 0: Não sei se tá ligado ou não.
+
+SPEAKER 8: Como se fosse um celular mesmo.
+
+SPEAKER 0: É, ele é um celular, só que, tá vendo? Tem o...
+
+SPEAKER 8: Uhum. Serve pra ler a, o código?
+
+SPEAKER 0: É, o código de barra tudo. Ele é bem-- não é o... Só aquele feixinho de... Sai tipo, não sei se é 2D, aqui é 3D.
+
+SPEAKER 8: Responsabilidade. Parece que tá sem bateria. Sim, mas esse aí serve pra questão do estoque, né? É, identificação e-
+
+SPEAKER 0: É, até pra guardar. Ele tem... Já tá ligando.
+
+SPEAKER 8: Ah, ligou.
+
+SPEAKER 0: Tem os aplicativos aqui do próprio Jacksis, você pega pra guarda, inventário-
+
+SPEAKER 1: Mostra aí, deixa eu ver. Pega uma fotinha pra ver como é que é. Só pra tá anotando.
+
+SPEAKER 0: Tá desenvolvido em cima do Android, né?
+
+SPEAKER 1: Tira uma fotinha só pra gente ver quando tiver-
+
+SPEAKER 0: Ah, tá.
+
+SPEAKER 1: Quando tiver negócio, né?
+
+SPEAKER 0: Ah, bom. [risos]
+
+SPEAKER 1: Pelo amor de Deus.
+
+SPEAKER 0: O modelo dele, TC26. Lá fora eles tão no TC40, TC-- bom dia, Sabrininha.
+
+SPEAKER 1: Esse aí, o, a questão do, a tela, é, eles usam pra quê?
+
+SPEAKER 0: Então, tanto pra guarda quanto pra inventário, pra própria separação acho que dá pra usar também. Mas é mais pra inventário e guarda hoje, a função dele. Eu não mexo com isso aqui, cara. Tem problema não.
+
+SPEAKER 1: Acho que deu pra entender. Eu pesquiso também depois como é que-
+
+SPEAKER 0: Não demorou nada.
+
+SPEAKER 1: É.
+
+SPEAKER 0: Não, que ele é tipo um, um coletor de dados mesmo, assim. Acho que ele tá sem bateria, né?
+
+SPEAKER 1: E o pessoal usa bastante isso daí ou...?
+
+SPEAKER 0: É, tem um-- esse aqui o preço dele é o preço do notebook, assim.
+
+SPEAKER 1: Caramba.
+
+SPEAKER 0: Hoje preferem comprar isso aqui do que o notebook pra, pra operação mesmo. É caro. Mas ele é muito mais ágil, né, que o notebook sempre empurra.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Isso aqui se botar pulseirinha aqui, trabalha o dia inteiro. Tá devendo só se for, a gente for com o Rafael lá, ele consegue dar uma... Já tá sem bateria.
+
+SPEAKER 1: Essas peças aqui, as, ainda têm que ser guardadas ou elas vão ser entregues? Como que é?
+
+SPEAKER 0: Não, isso aqui tem que ser guardado.
+
+SPEAKER 1: Tá.
+
+SPEAKER 0: O veio da loja um tá meio que enferrujado, coisa antiga, então tamos condenado, nesse caso, condenado como sucata mesmo.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Não tem como cê vender um negócio enferrujado desse.
+
+SPEAKER 1: Não.
+
+SPEAKER 0: É, uma caixinha dessas aqui, tem o, trinta e quatro lá no armazém de sucata, imagina como é que tá. Cês nem ainda eram nascido e tava essas peças guardadas.
+
+SPEAKER 1: Pois é.
+
+SPEAKER 0: É muita coisa velha.
+
+SPEAKER 1: É, dá pra entender tudo agora.
+
+SPEAKER 0: Entendeu?
+
+SPEAKER 1: Todas as lojas são a mesma coisa, né?
+
+SPEAKER 0: Padão. É, não nesse desenho, essa aqui é a loja mais nova, né?
+
+SPEAKER 1: Sei imaginar.
+
+SPEAKER 0: A nossa que é mais-
+
+SPEAKER 1: Digo-
+
+SPEAKER 0: A maioria é mais velha
+
+SPEAKER 1: A operação funciona, funciona igual.
+
+SPEAKER 0: É padrão. O processo em si é, é pra ser padrão, né? Cada um faz de um jeito, mas tem um padrão a ser seguido.
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: Um padrão a ser seguido.
+
+SPEAKER 1: E é muito cliente aqui?
+
+SPEAKER 0: Essa aqui é a loja que mais entra, sempre foi a loja que mais entra, assim. Ela que joga o número pra cima.
+
+SPEAKER 1: Eu vejo aqui, não para de ter rotação de gente aqui.
+
+SPEAKER 0: O negócio não zera, praticamente não zera. É, no seu horário de almoço, tal, o pessoal tira um pouco o pé, mas fica ali uma horinha tranquilo, daqui a pouco começa a ferver de novo a informação e separação. Ainda mais que tem dois pontos, um entrega, outro balcão, então...
+
+SPEAKER 1: Uhum.
+
+SPEAKER 0: O dia inteiro. E todas as lojas têm esse mesmo padrão também, sempre duas telas.
+
+SPEAKER 1: Certo.
+
+SPEAKER 0: Não vai ter como cê levar nenhum, né?
+
+SPEAKER 1: Ainda não. Qualquer coisa a gente espera.
+
+SPEAKER 0: É.
+
+SPEAKER 1: Esperamos aqui, esperamos lá fora.
+
+SPEAKER 0: Se ele era, tá de boa. Quer ir lá no Rafael, ver se ele tem o coletor pra apresentar pro cês?
+
+SPEAKER 1: Vamo lá ver.
+
+SPEAKER 0: Pra ter uma ideia melhor até da, da operação. Isso aqui é do BH. Liberou o varal e já fez o buraco ali no suelo. [barulho de máquina] Oi, Rafael. Bom dia. Tem coletor aí? [barulho de máquina]
+
+SPEAKER 1: Bom dia.
+
+SPEAKER 0: Tudo bem? Deixa eu ver se- É, é... Tela de guarda eu nunca usei esse negócio nunca, então perdi. Tem uma ordem lá, tá sem bateria. Vou botar na minha aqui, tá? Eu nem sei se conecta, será que conecta? Tem que entrar na loja um, na loja de produção dele. Uma logo padrão, Jacksis? É. Deixa eu ver.
+
+SPEAKER 1: O que é isso?
+
+SPEAKER 0: Só buscar item só, né? É, pode ser. Alocação, cê fala? Busca de local. Ah, tá aqui pra, pra guarda, né? Tem uma vela. Não sei se ele vai pegar o código de barras ou código interno. Dá a posição pra guardar.
+
+SPEAKER 1: Ele já falou onde é que vai guardar.
+
+SPEAKER 0: É. Certo. Vou jogar aquela ideia da separação lá nessa porra aqui. Eles deram uma ideia também que pode ser bom, fazer a separação do cupom no próprio coletor. Ele vai jogando na locação que cê tem que ir. Entendeu? No meio que entra o cupom em loop. Hoje dá pra fazer, mas a tela não ajuda do coletor. Ah, ele tem a separação pra ele? Não, dá pra fazer pelo, pelo servidor Mas pra separação é a cega na loja também?
+
+SPEAKER 4: O que que cê fala?
+
+SPEAKER 0: Os menino gosta de cupom, tanto entrega quanto retiro. Não sai separando os itens, não.
+
+SPEAKER 4: Ah, não, ali não. Tem que ter a de lista.
+
+SPEAKER 0: E se cada um tivesse um, um aparelhinho... Cara, um desse menino aqui é caro pra caralho. Talvez um Androidzinho mais barato e o cara só na sequência de, cê pagou, dá OK e vai pro segundo item. Cê pagou, dá OK e vai pro outro item.
+
+SPEAKER 4: Aí tinha que jogar no coletor, né?
+
+SPEAKER 0: É, porque eu conseguiria fazer... Até o cara não saber a quantidade de itens que tem, pra separar, né.
+
+SPEAKER 4: Aí a informação tinha que cair no coletor, ele vai, separa e deixa lá-
+
+SPEAKER 0: É, é, é.
+
+SPEAKER 4: Vai, separa e deixa lá. Cai no coletor-
+
+SPEAKER 0: O cara finalizou, automaticamente já cairia outro na fila pra ele já. Finalizei? Aí o cupom... O cara não sabe se é retira, se entrega, o que que é. O que que ele faz? Ele faz só a guarda, busca preço que é a guarda aqui, que é inventário.
+
+SPEAKER 4: Inventário.
+
+SPEAKER 0: Que mais teria?
+
+SPEAKER 4: Da inventário tem que entrar no outro usuário, né? Que aí no meu usuário ele tá aí, é só pra guarda e audit-auditório e estoque. Ou cê entra no servidor, aí cê tem acesso direto pro SIS.
+
+SPEAKER 0: Através de-- é, se eu fizer direto no servidor fica só uma ponte, cê enxerga o-
+
+SPEAKER 4: Isso.
+
+SPEAKER 0: Uhum. Entendemos. Muito obrigado, gordo.
+
+SPEAKER 4: Legal.
+
+SPEAKER 0: Cê chegou a tirar foto, Dani?
+
+SPEAKER 4: Tirei.
+
+SPEAKER 0: Tira uma fotinha.
+
+SPEAKER 4: Tirei também. Boa, tira. Que que é essa tela aí?
+
+SPEAKER 0: Não, aqui é pra consultar, né, de qual item vai me trazendo pra mesma tela, traz o endereço de guarda.
+
+SPEAKER 4: Certo. Acho que não... Daí cê-- daí cê faria tudo no mesmo aparelhinho, né?
+
+SPEAKER 0: Né?
+
+SPEAKER 4: Já consultava, já achava outro.
+
+SPEAKER 0: Agora eu já viajei, cara. Vou dar trabalho pros cara do sistema. Que que cês vieram aqui? Agora vai dar trabalho pra mim, cara.
+
+SPEAKER 4: [riso] Viemos pra dar trabalho mesmo.
+
+SPEAKER 0: O Roberto aqui em cima.
+
+SPEAKER 6: Oi? Tá lá? Fechou.
+
+SPEAKER 0: Vixe. Esperança.
+
+SPEAKER 4: Aqui abre duas horas essa parada, não sei nada, tem que ver se abre duas horas.
+
+SPEAKER 6: Achou? Achou? Achou lá?
+
+SPEAKER 4: Não sei ver se achou.
+
+SPEAKER 0: Não vou.
+
+SPEAKER 4: Saída.
+
+SPEAKER 0: Deixa eu ver aqui.
+
+SPEAKER 4: Cês vendem aqui é mais pra, por ex-- aqui o pessoal de televendas lá. Eles vendem variado, tanto pra mecânico, oficina, quanto pra gente, particular.
+
+SPEAKER 0: Tem um cara que foca só em mecânico.
+
+SPEAKER 4: Certo.
+
+SPEAKER 0: Tem um cara que só tem contato, só atende mecânico. Agilizar.
+
+SPEAKER 4: Entendi.
+
+SPEAKER 0: Aquele gordinho-
+
+SPEAKER 4: Aham
+
+SPEAKER 0: ...que tava do lado é só consumidor mesmo.
+
+SPEAKER 4: Isso que ele falou.
+
+SPEAKER 0: "Eu não vendo nem com, com código, imagine sem código"
+
+SPEAKER 4: É [riso]
+
+SPEAKER 0: Ele fica mais no consumidor. O Márcio que tava do lado, a carteira é só mecânico.
+
+SPEAKER 4: Certo. Entendi.
+
+SPEAKER 0: Tem ele mais uns dois, três aí-
+
+SPEAKER 4: Aquele que tava na fileira do meio é, é mecânico ou consumidor?
+
+SPEAKER 0: O gordinho que tava na fileira... Consumidor, só. Ele fica só-
+
+SPEAKER 4: A gente viu que tinha uma lista enorme lá, a gente achou que era só pro mecânico. É.
+
+SPEAKER 0: Né, a gente vê, a gente fica-
+
+SPEAKER 4: Na hora que chegar ele vai ficar até sem telefone, é só WhatsApp e...
+
+SPEAKER 0: Uhum.
+
+SPEAKER 4: O guri direto-
+
+SPEAKER 0: A gente viu lá o-
+
+SPEAKER 4: O cara particular-
+
+SPEAKER 0: O cara fazendo e chegando mais mensagem pra, pra mais coisa.
+
+SPEAKER 4: Geralmente é, quem é pessoal do gancho chama no WhatsApp, mas é consumidor. Porque a demanda é muito alta, viu? A agilidade dele também de-
+
+SPEAKER 0: Sim.
+
+SPEAKER 4: Muito rápido mesmo.
+
+SPEAKER 0: É. Aquela peça que o povo não tem?
+
+SPEAKER 4: Deixa eu ver se não tem. Ou se guardaram errado.
+
+SPEAKER 0: Pode chegar.
+
+SPEAKER 4: Aquela, aquela parte lá do lucro, a gente conseguiu fazer hoje?
+
+SPEAKER 0: Lucro da... Da grife?
+
+SPEAKER 4: É.
+
+SPEAKER 0: Não. Quando chegar a gente vai descarregar o carro no pátio, né?
+
+SPEAKER 4: Tá, porque acho que nós vai ter, vai ter que trazer daqui, porque lá não tem. Acho que vai ter que fazer aqui e mandar direto pra lá.
+
+SPEAKER 0: Onde tiver, nós faz. Se os dois lá, eu também, vamo embora.
+
+SPEAKER 4: Cê acha? Amanhã de tarde ou amanhã?
+
+SPEAKER 0: Não, pode até descarregar, amanhã cedo eu começo a fazer isso aí. Eu queria rodar o Talissa já, que é mais de mil item pra, pra conseguir. Pra minimizar essa pauta de peça, que tá todo mundo... Os, os mecânico tá zoando, né?
+
+SPEAKER 4: Porque o, hoje tá faltando dezoito partes.
+
+SPEAKER 0: Não, agora-
+
+SPEAKER 4: Tem mais esse aqui.
+
+SPEAKER 0: Se tiver em parte, mas a quantidade tu nota é bem coisa... Fiz agora quatro, não?
+
+SPEAKER 4: É, dá uns dois mil itens aí, cara.
+
+SPEAKER 0: O máximo... Vinte e cinco nota. Mas tem nota com trinta item, vinte item, quarenta item, bem compactada com, com coisa fácil de controlar e guardar, né?
+
+SPEAKER 4: Vai mandando, rapidinho.
+
+SPEAKER 0: Claro que dá.
+
+SPEAKER 4: Mas é disso que vai cansar pouco, né? O restante é a mão de obra.
+
+SPEAKER 0: Claro que dá.
+
+SPEAKER 4: Tem quanto, Dani?
+
+SPEAKER 1: Não, me dá essa ainda pra falar com ele, que isso aí ele vai querer. A gente faz, tipo, sabe, eu acho que dá pra vender o bot do WhatsApp-
+
+SPEAKER 8: Sim
+
+SPEAKER 1: ...e fazer isso como bônus.
+
+SPEAKER 8: O quê?
+
+SPEAKER 1: Tipo: "Ó, a gente traz esse bônus aqui pra você", ó o Roberto, descendo a escada ali, véio. Ó, tá ele ali. Enfim, tô falando.
+
+SPEAKER 8: Mas só que ele faz isso, né?
+
+SPEAKER 1: A gente vende isso e a gente só coloca isso como bônus. Tá ligado?
+
+SPEAKER 8: Mostra que ele pode comprar mais.
+
+SPEAKER 1: Não, não.
+
+SPEAKER 8: A gente pode fazer pra ele.
+
+SPEAKER 1: É.
+
+SPEAKER 8: Certo.
+
+SPEAKER 1: Bônus de gratidão, sei lá. [riso]
+
+SPEAKER 8: Outro dia eu conversei, né, pra seguir. Se ele quiser ficar cliente pra gente-
+
+SPEAKER 1: Não, é, assim, eu-
+
+SPEAKER 8: Segundo, com acesso pra ele, não tem problema. A gente fala com ele pra deixar pra gente fazer isso aqui. Se ele quiser baixar uma peça mais, mais curtinha.
+
+SPEAKER 1: É. Cada vez que ele fechar, né, você fechar duas venda, ele devolve cinco pra cada uma. E se ele cobrar vinte, se ele fechar duas, se não fechar duas venda de cada, ele vai devolver cinco, vai virar dez. Não, é muito trampo isso aí. É muito trampo, é muita coisa. Não, é só se tu cobra dez e fi-- e fazer a parceria, mano, porque não fica, não fica apegado pra ele.
+
+SPEAKER 8: Exato.
+
+SPEAKER 1: E ele, ele, exato, ele vai fazer o negócio que eles querem.
+
+SPEAKER 8: E a gente vira um parceiro.
+
+SPEAKER 1: A gente vira um cara que é parceiro, um puta parceiro.
+
+SPEAKER 8: Caralho de Deus e o mundo.
+
+SPEAKER 1: Exato.
+
+SPEAKER 8: Mas tipo, como que ele, ele indicaria a gente?
+
+SPEAKER 1: É, cara, ele, ele iria basicamente, tipo, não sei se o cara vai em eventos, mas se ele for, ele vai e fala da gente.
+
+SPEAKER 8: Sim, se ele arrumar um cliente lá, ele fala.
+
+SPEAKER 1: Ele, ele vai, ele fala: "Ó, eu tenho esses contatos aqui, cara, eu acho que vocês conseguiram fazer um trabalho bom pra eles", aí ele passa o contato do cara pra gente, ou ele vai até o contrário. Tipo, o cara fala: "Pô, eu queria, eu vi que cê implementou o bot lá, eu queria fazer também. Fala com os cara. Dá lì meu contato." Tá ligado?
+
+SPEAKER 8: Legal. Aí a gente, meu amigo, aí a gente já...
+
+SPEAKER 1: Então, é, essa é a forma de, essa é a forma de estourar, mano. E sabe um negócio? Eu, eu tô, eu ainda não comecei, mas eu vou fazer um projeto pra minha mãe. E além da minha mãe, eu ainda tô fazendo outro, eu já fiz, na verdade, um outro escritório também. E mano, advogado é um negócio que precisa, eles, tipo, eles precisam, mas eles são meio receosos.
+
+SPEAKER 8: Quadrado, isso.
+
+SPEAKER 1: Além de quadrado, é meio receoso. Por quê? Aaa, agora, o tribunal lá, os cara da Justiça, eles têm tipo um sistema de IA, deles mesmo, que identifica se alguma peça foi feita com IA.
+
+SPEAKER 8: Que peça?
+
+SPEAKER 1: Peças são os, os documentos que o advogado tem que entregar.
+
+SPEAKER 8: Caralho, eu vi isso, velho. Saiu um jornal.
+
+SPEAKER 1: Só que aí que tá. Ééé, tem como burlar isso.
+
+SPEAKER 8: Caralho.
+
+SPEAKER 1: Eee, só que as pessoas não sabem fazer, os advogados eles não sabem que tem como burlar isso. E aí eles ficam meio céticos quanto a comprar. Caralho, o João abandonou a gente.
+
+SPEAKER 8: Não, eu não sei pra que ele foi fazer.
+
+SPEAKER 1: Ele abandonou nós aqui, véio, eu tô perdido agora.
+
+SPEAKER 8: Não, não, ele subiu lá.
+
+SPEAKER 1: A gente tá esperando o João. É.
+
+SPEAKER 8: Ele subiu lá em cima.
+
+SPEAKER 1: Vou ficar por aqui. Enfim, ééé-
+
+SPEAKER 8: O que ele falou? Precisando de alguma coisa?
+
+SPEAKER 1: É, ele falou que ia procurar alguma coisa que o cara falou que não tinha, ele falou que tem assim. Enfim, eee tipo, pegar a indicação desses, desses caras, da minha mãe também. Tipo, a minha mãe é uma advogada que é conhecida num, nos advogados ela é bem conhecida.
+
+SPEAKER 8: Sim.
+
+SPEAKER 1: As pessoa, o pessoal conhece ela, o pessoal não gosta dela. Porque ela-
+
+SPEAKER 8: Porque ela é veia que...
+
+SPEAKER 1: Porque ela ganha mais dinheiro que eles. Tá ligado?
+
+SPEAKER 8: Com certeza, lógico.
+
+SPEAKER 1: Eee, enfim, aí a questão é, é usar isso como indicação, né? Então-
+
+SPEAKER 8: Oi, gente.
+
+SPEAKER 1: Tá tudo bom?
+
+SPEAKER 8: Beleza.
+
+SPEAKER 1: Ah, fiz, fiz um projeto aqui pra Ana Cunha, advogada, pá. Os cara: "Caralho!"
+
+SPEAKER 8: Foda.
+
+SPEAKER 1: Caralho.
+
+SPEAKER 8: Foda.
+
+SPEAKER 1: Eee-
+
+SPEAKER 8: Você falou qual é seu nome?
+
+SPEAKER 1: É, não, eu não vou. Eu não vou falar. Cê acha que eu falei, cê acha que eu falei pros cara que o, que o bagulho da Order era meu pai, porra?
+
+SPEAKER 8: Pergunta pro, pergunta pro, pro pai do seu. Seu pai, cê gosta de rocks? Cê gosta de rocks, guitar rocks? Provavelmente aquela parte que você precisa, né, simples. Eu tenho certeza. Cê conhece o dele? Maior, maior empresa de bateria do Brasil?
+
+SPEAKER 1: É, eu não sei o que ele anda, que ele é da Order aí. Meu pai sempre começou mandando mensagem no meio do negócio.
+
+SPEAKER 8: Cê não viu?
+
+SPEAKER 1: É que eu, eu deixo o nome dele salvo como nome de, como nome mesmo, né?
+
+SPEAKER 8: Sim.
+
+SPEAKER 1: Ó aqui, ó. Eu pesquisei Order. Apareceu assim a listinha.
+
+SPEAKER 8: Ah, eu vi lá que apareceu.
+
+SPEAKER 1: André, marca Team Order, Order, que é o meu vô. Marca Team Order, Order. E aí meu pai apareceu aqui digitando. Aí eu, eu até digitei, eu dei um espacinho e coloquei drugs pra aparecer só isso aqui.
+
+SPEAKER 8: Eu vi que cê fez isso. Eu também não entendi.
+
+SPEAKER 1: É porque eu já pensei, tipo, imagina se ele digita alguma coisa falando: "Filho". Não sei o que, não sei o que lá.
+
+SPEAKER 8: É a maior empresa do Brasil de bateria?
+
+SPEAKER 1: De bateria, sim.
+
+SPEAKER 8: Não fala isso.
+
+SPEAKER 1: Da América Latina, na real.
+
+SPEAKER 8: Porra.
+
+SPEAKER 1: Só não é maior que tipo Pearl, Yamaha.
+
+SPEAKER 8: Sei. Ah, tá.
+
+SPEAKER 1: É Pearl é nível Yamaha.
+
+SPEAKER 8: Caralho.
+
+SPEAKER 1: De, na, na bateria. Ééé, tipo é uns bagulho muito grande. Mas a qualidade é a mesma.
+
+SPEAKER 8: Você curte rock? Você escuta rock? Então, tem essa empresa que tal, maior empresa de bateria. Os cara, os bateristas mais pica que tem usa essas baterias. A gente fez um projeto pra eles.
+
+SPEAKER 1: Baterista do Dieguinho, o baterista do Ed Motta, baterista do, do Scarah.
+
+SPEAKER 8: Alguma banda antiga aí, cê sabe.
+
+SPEAKER 1: É, não, tem, tem bastante cara famoso que, baterista famoso, mas aí o cara tem que tá no mundo da música pra conhecer.
+
+SPEAKER 8: Essa aí virou chavão na minha cabeça, mano, da parceria com o cara.
+
+SPEAKER 1: Então parceria é o que mais vira, véio.
+
+SPEAKER 8: É
+
+SPEAKER 1: Parceria e publicidade, porque é uma forma de tu adquirir cliente. Assim, assim, só que a gente tem que pensar que a gente tá de certa forma abdicando de grana pra fazer a parceria.
+
+SPEAKER 8: Sim.
+
+SPEAKER 1: Então a gente tá gastando dinheiro com a parceria.
+
+SPEAKER 8: Sim.
+
+SPEAKER 1: Mas a gente tá investindo, né?
+
+SPEAKER 8: O potencial-
+
+SPEAKER 1: É, a gente tá investindo. Investindo dinheiro nessa parceria, né. Então...
+
+SPEAKER 8: Que que isso, mano, o que cê tá pensando em implementar? Porra, eu te juro que eu não sei nada. Sabe assim?
+
+SPEAKER 1: Cara, eu quero-- o que eu tô pensando.
+
+SPEAKER 8: Que eu sei se-
+
+SPEAKER 1: Eu, eu ainda, eu ainda não vou oferecer nada pra ele, eu não vou oferecer, eu não vou querer fechar com ele hoje. Não, quer dizer, se, se ele tiver aberto a fechar hoje, eu vou, quero fechar com ele hoje. Mas, tô falando, se não, o que que eu quero fazer? Eu quero, é... Como é que fala? Eu quero implementar um bagulho que tipo assim, que a gente tem um bot no WhatsApp. Se ele tiver disposto a gastar mensalmente uma grana, é, quer dizer, ele vai ter que gastar mensalmente uma grana com o bot de qualquer forma.
+
+SPEAKER 8: Esse bot responde todas as-
+
+SPEAKER 1: Exato. Então, tipo-
+
+SPEAKER 8: Todas as-
+
+SPEAKER 1: É, ó, eu mesmo, eu tinha um bot de WhatsApp, eu tinha, que eu criei pra mim, mas que eu comercializei também. Era de nutrição, era tipo: "ah, comi tantas, de tantos" e eu envio uma foto. "Eu comi isso aqui", o cara, ele identificava, tá ligado? E... Peraí, deixa eu ver até se eu tenho, ó.
+
+SPEAKER 8: É tipo assim, esse bagulho de sistema eu não sei. Isso aqui, ó, tá ligado? Vem uma empresa do cara e chega um bagulho desse aí. Os cara emitir, ficar emitindo notinha, mano. Porra, que isso? Imagina a quant-- tudo bem, não deve ser um gasto grande pra ele, mas porra, para pensar, todos os dias, sete lojas, ficar emitindo... Imagina quantos rolos-
+
+SPEAKER 1: É no tempo, né?
+
+SPEAKER 8: Imagina quantos rolos de notinha amarela esse cara não compra.
+
+SPEAKER 1: Não, mas aí, aí tipo... Eu, eu fiz isso e assim, é, não usava tanta gente assim, era tipo todo dia umas cinco pessoas usavam. Eu não, eu não fiz marketing pro negócio nem nada, né. E tipo...
+
+SPEAKER 8: Limpar dois já.
+
+SPEAKER 1: É, e devia ter ali umas, aí se cada pessoa, contando ida e volta, né? Devia ter umas, se cada pessoa mandar vinte mensagem, é quarenta pessoas, cinco. Quarenta vezes cinco, duzentos.
+
+SPEAKER 8: Duzentos.
+
+SPEAKER 1: Então, tipo, duzentos mensagens todo dia. E eu gastava no mês, uns duzentos reais.
+
+SPEAKER 8: Caralho.
+
+SPEAKER 1: O mês inteiro. Só que aqui ia ser muito mais do que duzentos mensagens por dia, né? Então, você tem que considerar-
+
+SPEAKER 8: Mensalmente, vai, porra. Você vai receber trinta cliente a mais por dia, vai te, você vai-
+
+SPEAKER 1: A gente, a gente vai ter que fazer, falar com ele: "quanto, quanto que tu, quantos clientes por dia no WhatsApp?" Ele vai falar: "porra, quinhentos." Quantas mensagens cê acha que cada cliente manda? Umas duas, três. Vamos dizer, a gente vai considerar três então. Porra, são seis mensagens, considerando ida e volta.
+
+SPEAKER 8: A gente vê se tá vindo.
+
+SPEAKER 1: Hã? A gente vê se tá vindo. Seis mensagens, seis quinhentos, tá ligado? Não, não acho que seja quinhentos por dia, não deve ser tanto assim. Porra, sei lá, que seja cem, tá ligado? Seis mensagens, seiscentos. Aí já aumentaria o custo pra seiscentos. Pra seis... Aumentaria o custo pra sessenta, quer dizer. Que aí obviamente a gente vai, a gente dá uma, uma bancada. A, a questão é de ligar, cara. Eu vou ter que aprender a fazer ligação.
+
+SPEAKER 8: Mas é...
+
+SPEAKER 1: Ligação, tipo, pro cara ligar e o bot atender.
+
+SPEAKER 8: Ah, tá.
+
+SPEAKER 1: Mas aí é só usar Eleven Labs. Eu-- sabe aquele hackathon que eu falei no camping?
+
+SPEAKER 8: Sim.
+
+SPEAKER 1: Lá eu ganhei um mês grátis de Eleven Labs.
+
+SPEAKER 8: Caralho.
+
+SPEAKER 1: Que é uma IA de voz.
+
+SPEAKER 8: Tô ligado, Eleven Labs, conheço.
+
+SPEAKER 1: Então, eu ganhei um mês grátis, né? E aí eu tenho os créditos lá e eu posso usar esses créditos pra fazer a voz-
+
+SPEAKER 8: Caralho.
+
+SPEAKER 1: Pra falar pro cara conversar no celular. Assim, tipo, no, no, no total, eu acho que de API, pensando ali se o cara fosse usar um cloud da vida. Eu, eu tenho um amigo, na verdade, que ele fez uma parada muito da hora, mas eu não sei se ele é bom porque é meio lento. Mas é basicamente um negócio que eu, tipo, não vou pagar por, por uso na API, eu vou pagar um fixo. Tipo, aí, aí, vai, vamos dizer que a minha, eu tô, eu tô começando um negócio e eu tô pagando vinte e cinco reais por mês de API, só que aí do nada o negócio explode e eu começo a pagar duzentos e cinquenta reais. E tipo, não tava no meu orçamento esses duzentos e cinquenta. Esse cara, ele meio que preveni isso, então tipo eu vou pagar um fixo pra usar a API dele e eu posso extrapolar o limite que eu não vou pagar mais que isso, tá ligado?
+
+SPEAKER 8: Legal.
+
+SPEAKER 1: Só que ele usa open source, então...
+
+SPEAKER 8: O que é isso aí?
+
+SPEAKER 1: Open source é um pouquinho mais lento só, mais burrinho.
+
+SPEAKER 8: Deixa eu gravar um áudio.
+
+SPEAKER 1: Vou parar de gravar

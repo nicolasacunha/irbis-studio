@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo · Atendimento por placa · IRBIS</title>
+<style>
+  :root{--bg:#21201B;--text:#F2EFE9;--accent:#8FA987;--muted:#9C998A;--line:#3A3831;--card:#2A2925;
+        --wa-bg:#0b141a;--wa-header:#202c33;--wa-in:#202c33;--wa-out:#005c4b;--wa-input:#2a3942}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+  header{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;border-bottom:1px solid var(--line)}
+  header .logo{font-weight:800;letter-spacing:.3em;font-size:14px}
+  header .hint{font-size:12px;color:var(--muted)}
+  header .hint b{color:var(--accent)}
+  header button{background:none;border:1px solid var(--line);color:var(--muted);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px}
+  header button:hover{color:var(--text);border-color:var(--accent)}
+  main{flex:1;display:grid;grid-template-columns:410px 1fr;gap:26px;padding:24px;max-width:1200px;width:100%;margin:0 auto}
+  /* ===== telefone ===== */
+  .phone{background:#000;border-radius:34px;padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.5);height:78vh;min-height:560px;display:flex;flex-direction:column}
+  .screen{background:var(--wa-bg);border-radius:26px;flex:1;display:flex;flex-direction:column;overflow:hidden}
+  .wa-top{background:var(--wa-header);padding:12px 14px;display:flex;align-items:center;gap:10px}
+  .avatar{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#21201B;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+  .wa-top .who{line-height:1.25}
+  .wa-top .who b{font-size:14.5px;color:#e9edef;display:block}
+  .wa-top .who span{font-size:11.5px;color:#8696a0}
+  .chat{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:6px;
+        background-image:radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);background-size:22px 22px}
+  .msg{max-width:82%;padding:7px 10px 8px;border-radius:8px;font-size:13.5px;line-height:1.4;color:#e9edef;position:relative;white-space:pre-wrap;word-wrap:break-word}
+  .msg.in{background:var(--wa-in);align-self:flex-start;border-top-left-radius:2px}
+  .msg.out{background:var(--wa-out);align-self:flex-end;border-top-right-radius:2px}
+  .msg .t{display:block;font-size:10px;color:#8696a0;text-align:right;margin-top:3px}
+  .msg b{font-weight:700}
+  .typing{align-self:flex-start;background:var(--wa-in);border-radius:8px;padding:10px 14px;display:none}
+  .typing span{display:inline-block;width:6px;height:6px;border-radius:50%;background:#8696a0;margin:0 1.5px;animation:blink 1.2s infinite}
+  .typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  .wa-input{display:flex;gap:8px;padding:8px 10px;background:var(--wa-header)}
+  .wa-input input{flex:1;background:var(--wa-input);border:none;border-radius:20px;padding:10px 16px;color:#e9edef;font-size:14px;outline:none}
+  .wa-input button{background:var(--accent);border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;color:#21201B;font-size:17px;font-weight:800}
+  /* ===== painel vendedor ===== */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;height:78vh;min-height:560px;display:flex;flex-direction:column}
+  .panel h2{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+  .panel .sub{font-size:12.5px;color:var(--muted);margin-bottom:16px}
+  .orders{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+  .empty{border:1px dashed var(--line);border-radius:10px;padding:34px 20px;text-align:center;color:var(--muted);font-size:13px}
+  .order{border:1px solid var(--accent);border-radius:10px;padding:14px 16px;background:var(--bg);animation:pop .35s ease}
+  @keyframes pop{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+  .order .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .order .head b{font-size:14px}
+  .order .head span{font-size:11px;color:var(--muted)}
+  .order .car{font-size:12.5px;color:var(--accent);font-weight:600;margin-bottom:10px}
+  .item{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:8px 0;border-top:1px solid var(--line);font-size:12.5px}
+  .item .nm{font-weight:700}
+  .item .cd{color:var(--muted);font-size:11.5px}
+  .item .addr{text-align:right}
+  .item .addr b{color:var(--accent);font-family:ui-monospace,Menlo,monospace;font-size:13px}
+  .item .addr span{display:block;font-size:11px;color:var(--muted)}
+  .order .act{margin-top:10px;display:flex;gap:8px;align-items:center}
+  .order .act button{background:var(--accent);color:#21201B;border:none;border-radius:6px;padding:7px 14px;font-weight:700;font-size:12px;cursor:pointer}
+  .order .act .done{color:var(--accent);font-weight:700;font-size:12.5px;display:none}
+  .foot{margin-top:14px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+  @media(max-width:920px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">IRBIS</div>
+  <div class="hint">Demonstração · placa de teste: <b>FVN-9148</b> (qualquer outra placa também responde)</div>
+  <button onclick="location.reload()">Reiniciar</button>
+</header>
+<main>
+  <!-- telefone do cliente -->
+  <div class="phone"><div class="screen">
+    <div class="wa-top">
+      <div class="avatar">R</div>
+      <div class="who"><b>Rocha Auto Peças</b><span id="status">online</span></div>
+    </div>
+    <div class="chat" id="chat">
+      <div class="typing" id="typing"><span></span><span></span><span></span></div>
+    </div>
+    <div class="wa-input">
+      <input id="inp" placeholder="Mensagem" autocomplete="off">
+      <button onclick="send()">➤</button>
+    </div>
+  </div></div>
+
+  <!-- tela do vendedor -->
+  <div class="panel">
+    <h2>Tela do vendedor</h2>
+    <div class="sub">O pedido chega traduzido: carro identificado, peça resolvida pelo cross, endereço de estoque pronto pra separação.</div>
+    <div class="orders" id="orders">
+      <div class="empty" id="empty">Nenhum pedido ainda.<br>Quando o cliente fechar no WhatsApp, o pedido aparece aqui.</div>
+    </div>
+    <div class="foot">Demonstração local, sem integração. Na versão real: placa consultada no catálogo Fraga via Jacsys, cross da casa, estoque ao vivo.</div>
+  </div>
+</main>
+
+<script>
+/* ================================================================
+   DADOS DA DEMONSTRAÇÃO · EDITE AQUI ANTES DE APRESENTAR
+   ---------------------------------------------------------------
+   ATENÇÃO: a placa FVN9148 foi consultada na visita de 18/ago.
+   Confirme com o time qual era o carro de verdade e ajuste abaixo,
+   porque o Thiago e o João podem lembrar do modelo.
+   ================================================================ */
+const CARROS = {
+  'FVN9148': { nome: 'Fiat Argo Drive 1.3 2017/2018 · prata', curto: 'Argo 2018' }, // <-- CONFIRA O CARRO REAL
+  'BRA2E19': { nome: 'VW Gol 1.0 MPI 2020/2021 · branco',      curto: 'Gol 2021' },
+  'GHI7C55': { nome: 'Chevrolet Onix LT 1.0 2019/2020 · preto', curto: 'Onix 2020' },
+};
+// Qualquer placa fora da lista cai neste carro (mantém a demo viva se o Roberto inventar uma placa):
+const CARRO_PADRAO = { nome: 'Fiat Uno Evo Way 1.4 2013/2014 · vermelho', curto: 'Uno Evo 2014' };
+
+// Peças por palavra-chave. Os códigos seguem o formato interno visto no coletor (ex.: 1C1003E).
+const PECAS = [
+  { chaves:['vela','velas'], nome:'Jogo de velas', marca:'Bosch SP10', cod:'1C1003E', estoque:8, end:'1C · 100 · 3 · E',
+    obs:null },
+  { chaves:['amortecedor','amortecedores'], nome:'Amortecedor dianteiro (par)', marca:'Monroe', cod:'2H0871B', estoque:4, end:'2H · 087 · 1 · B',
+    obs:'Esse modelo muda o amortecedor conforme o semestre de fabricação. Pela placa, o seu usa a versão com batente integrado.' },
+  { chaves:['pastilha','pastilhas','freio'], nome:'Jogo de pastilhas de freio dianteiras', marca:'Fras-le', cod:'1A0442C', estoque:12, end:'1A · 044 · 2 · C',
+    obs:null },
+  { chaves:['pivo','pivô'], nome:'Pivô de suspensão', marca:'Nakata', cod:'1B2091A', estoque:6, end:'1B · 209 · 1 · A',
+    obs:null },
+  { chaves:['retentor'], nome:'Retentor da roda dianteira', marca:'Sabó', cod:'3D1187D', estoque:9, end:'3D · 118 · 7 · D',
+    obs:null },
+  { chaves:['filtro'], nome:'Filtro de óleo', marca:'Mann', cod:'1A0023A', estoque:22, end:'1A · 002 · 3 · A',
+    obs:null },
+  { chaves:['correia'], nome:'Correia dentada (kit)', marca:'Continental', cod:'2C0554B', estoque:3, end:'2C · 055 · 4 · B',
+    obs:'Pra esse motor o kit certo já vem com o tensor. Evita a pegadinha de comprar a correia avulsa.' },
+];
+/* ================== fim dos dados ================== */
+
+const chat = document.getElementById('chat'), typing = document.getElementById('typing'),
+      inp = document.getElementById('inp'), orders = document.getElementById('orders'),
+      statusEl = document.getElementById('status');
+let estado = 'inicio';           // inicio -> confirmando -> escolhendo -> orcando
+let carro = null, pecaAtual = null, itens = [];
+
+function hora(){ const d=new Date(); return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'); }
+function add(texto, dir){
+  const m=document.createElement('div'); m.className='msg '+dir;
+  m.innerHTML = texto.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>') + '<span class="t">'+hora()+'</span>';
+  chat.insertBefore(m, typing); chat.scrollTop = chat.scrollHeight;
+}
+function bot(texto, atraso){
+  return new Promise(r=>{
+    setTimeout(()=>{ typing.style.display='block'; statusEl.textContent='digitando…'; chat.scrollTop=chat.scrollHeight;
+      setTimeout(()=>{ typing.style.display='none'; statusEl.textContent='online'; add(texto,'in'); r(); }, 900+Math.random()*600);
+    }, atraso||250);
+  });
+}
+function achaPlaca(t){
+  const m = t.toUpperCase().replace(/[^A-Z0-9]/g,'').match(/[A-Z]{3}[0-9][A-Z0-9][0-9]{2}/);
+  return m ? m[0] : null;
+}
+function achaPeca(t){
+  t = t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  return PECAS.find(p => p.chaves.some(c => t.includes(c.normalize('NFD').replace(/[̀-ͯ]/g,''))));
+}
+function simNao(t){
+  t=t.toLowerCase();
+  if(/(^|\b)(sim|isso|confere|pode|quero|fechou|beleza|manda|ss|s)($|\b)/.test(t)) return 'sim';
+  if(/(^|\b)(nao|não|errado|outra|n)($|\b)/.test(t)) return 'nao';
+  return null;
+}
+function enviaPedido(){
+  document.getElementById('empty')?.remove();
+  let o=document.getElementById('pedido-atual');
+  if(!o){ o=document.createElement('div'); o.className='order'; o.id='pedido-atual'; orders.prepend(o); }
+  o.innerHTML = `<div class="head"><b>Cliente · WhatsApp</b><span>atualizado · ${hora()}</span></div>
+    <div class="car">${carro.nome}</div>` +
+    itens.map(i=>`<div class="item">
+        <div><div class="nm">${i.nome} · ${i.marca}</div><div class="cd">cód. interno ${i.cod} · ${i.estoque} em estoque</div></div>
+        <div class="addr"><b>${i.end}</b><span>piso · coluna · posição · andar</span></div>
+      </div>`).join('') +
+    `<div class="act"><button onclick="this.style.display='none';this.nextElementSibling.style.display='inline'">Iniciar separação</button><span class="done">✔ em separação</span></div>`;
+}
+
+async function processa(t){
+  const placa = achaPlaca(t);
+
+  if(estado==='inicio' || (placa && estado!=='confirmando')){
+    if(placa){
+      carro = CARROS[placa] || CARRO_PADRAO;
+      estado='confirmando';
+      await bot('Achei aqui pela placa: **'+carro.nome+'**. Confere?');
+    } else {
+      await bot('Oi! Aqui é o atendimento da Rocha. Me manda a **placa do carro** que eu já identifico ele pra você e a gente acha a peça certa.');
+    }
+    return;
+  }
+
+  if(estado==='confirmando'){
+    const r=simNao(t);
+    if(r==='sim'){ estado='escolhendo';
+      await bot('Fechou. Qual peça você precisa? Pode falar do seu jeito: vela, amortecedor, pastilha de freio, pivô…');
+    } else if(r==='nao'){ estado='inicio'; carro=null;
+      await bot('Sem problema. Me manda a placa de novo, ou me fala o modelo e o ano que a gente acerta.');
+    } else {
+      await bot('Só me confirma: o carro é o **'+carro.nome+'**?');
+    }
+    return;
+  }
+
+  if(estado==='escolhendo'){
+    const p=achaPeca(t);
+    if(p){
+      pecaAtual=p; estado='orcando';
+      let msg='Pra esse '+carro.curto+', a certa é **'+p.marca+' · '+p.nome.toLowerCase()+'** (cód. '+p.cod+'). Tem '+p.estoque+' em estoque.';
+      if(p.obs) msg+='\n\n'+p.obs;
+      msg+='\n\nQuer que eu já monte o orçamento?';
+      await bot(msg);
+    } else {
+      await bot('Me fala a peça de um jeito simples, tipo: vela, amortecedor, pastilha, pivô, retentor, filtro ou correia.');
+    }
+    return;
+  }
+
+  if(estado==='orcando'){
+    const r=simNao(t);
+    if(r==='sim'){
+      itens.push(pecaAtual); pecaAtual=null; estado='escolhendo';
+      enviaPedido();
+      await bot('Pedido montado e enviado pro vendedor. Já já ele te chama com o valor certinho.\n\nPrecisa de mais alguma peça?');
+    } else if(r==='nao'){
+      pecaAtual=null; estado='escolhendo';
+      await bot('Tranquilo. Quer olhar outra peça? É só falar o nome, ou mandar outra placa.');
+    } else {
+      await bot('Monto o orçamento então? É só responder sim ou não.');
+    }
+    return;
+  }
+}
+
+function send(){
+  const t=inp.value.trim(); if(!t) return;
+  add(t,'out'); inp.value=''; processa(t);
+}
+inp.addEventListener('keydown',e=>{ if(e.key==='Enter') send(); });
+
+// abertura
+setTimeout(()=>bot('Oi! Aqui é o atendimento da **Rocha Auto Peças**. Me manda a **placa do carro** que eu identifico ele pra você e a gente já acha a peça certa.'),600);
+</script>
+</body>
+</html>
