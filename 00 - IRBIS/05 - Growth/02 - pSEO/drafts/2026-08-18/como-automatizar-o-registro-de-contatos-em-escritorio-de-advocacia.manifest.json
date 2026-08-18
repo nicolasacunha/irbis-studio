@@ -1,0 +1,47 @@
+{
+  "keyword": "como automatizar o registro de contatos em escritório de advocacia",
+  "title": "Como automatizar o registro de contatos em escritório de advocacia",
+  "summary": "Um escritório automatiza o registro de contatos quando todo atendimento entra em uma base única com origem, responsável e próximo passo definidos. A equipe deve coletar apenas os dados necessários, restringir acessos e manter um procedimento para corrigir duplicidades e exceções. A ANPD orienta agentes de tratamento sobre medidas de segurança da informação, enquanto o Provimento 205/2021 da OAB permite ferramentas tecnológicas sem retirar o poder decisório e a responsabilidade do profissional. A IRBIS desenvolveu para a Odery Drums um CRM com funil, agenda, histórico e IA para registro e consulta de contatos, mas esse case comprova a entrega, não resultado financeiro público.",
+  "faq": [
+    {
+      "question": "Como automatizar o registro de contatos em escritório de advocacia sem perder o contexto?",
+      "answer": "Centralize os contatos em uma base com origem, responsável, resumo do assunto e próxima ação. A automação cria ou atualiza o registro e sinaliza pendências; a equipe confere o histórico antes de decidir o encaminhamento."
+    },
+    {
+      "question": "Posso enviar toda conversa de WhatsApp para o CRM do escritório?",
+      "answer": "O escritório precisa avaliar finalidade, necessidade, acesso e retenção antes de integrar conteúdo de conversas. Comece pelos dados necessários para a triagem e mantenha uma regra clara para informações e documentos que exigem tratamento mais restrito."
+    },
+    {
+      "question": "Automação pode responder dúvidas jurídicas de novos contatos?",
+      "answer": "Use automação para confirmação de recebimento, organização e alertas internos. O advogado e a equipe continuam responsáveis pela resposta e pelo encaminhamento, conforme a situação e as regras profissionais aplicáveis."
+    },
+    {
+      "question": "O CRM da Odery prova resultado para escritório de advocacia?",
+      "answer": "Não. O case mostra que a IRBIS entregou um CRM com funil, agenda, histórico e IA para registro e consulta de contatos. Não há resultado financeiro público medido e a Odery não é um escritório de advocacia."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-publicacaooriginal-156212-pl.html",
+      "type": "legislação",
+      "claim": "A LGPD define tratamento de dados pessoais e exige medidas técnicas e administrativas para protegê-los de acessos não autorizados e tratamento inadequado ou ilícito."
+    },
+    {
+      "url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_seguranca_da_informacao_para_atpps___defeso_eleitoral.pdf/%40%40display-file/file",
+      "type": "guia de autoridade pública",
+      "claim": "A ANPD publicou um guia orientativo com medidas e checklist de segurança da informação para agentes de tratamento de pequeno porte."
+    },
+    {
+      "url": "https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021",
+      "type": "regulação profissional",
+      "claim": "O Provimento 205/2021 permite ferramentas tecnológicas para auxiliar a eficiência da advocacia, sem suprimir o poder decisório e as responsabilidades do profissional."
+    }
+  ],
+  "firstPartyEvidence": ["odery-crm-entrega"],
+  "image": {
+    "filename": "como-automatizar-o-registro-de-contatos-em-escritorio-de-advocacia.svg",
+    "alt": "como automatizar o registro de contatos em escritório de advocacia"
+  },
+  "internalLinks": ["https://irbis.com.br/odery-crm"],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-18/como-automatizar-o-registro-de-contatos-em-escritorio-de-advocacia.md"
+}
