@@ -32,6 +32,9 @@ build/
 *.key
 *.xlsx
 *.bak
+# gravações de reunião: pesadas demais para o git (guardar fora do repo)
+*.m4a
+*.wav
 
 # === Downloads brutos ===
 /docs/drive/
