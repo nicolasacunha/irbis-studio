@@ -1,0 +1,19 @@
+{
+  "keyword": "alternativa a planilha de follow-up comercial para escritório de advocacia",
+  "title": "Alternativa à planilha de follow-up comercial para escritório de advocacia",
+  "summary": "Um escritório substitui a planilha de follow-up quando cada contato passa a ter um responsável, uma próxima ação e um histórico consultável no mesmo lugar. A automação pode avisar sobre pendências e registrar mudanças de etapa, mas não deve enviar orientação jurídica ou decidir o destino de um caso. A LGPD exige que o tratamento de dados tenha finalidade e use apenas o necessário, enquanto o Provimento 205/2021 da OAB preserva o poder decisório e a responsabilidade do profissional. A IRBIS desenvolveu um CRM para a Odery Drums com funil, agenda, histórico e IA para registro e consulta de contatos; o case demonstra a entrega, sem informar resultado financeiro público.",
+  "faq": [
+    {"question": "Qual é a melhor alternativa à planilha de follow-up comercial para escritório de advocacia?", "answer": "Uma base de atendimentos com responsável, etapa, próxima ação e histórico por contato."},
+    {"question": "A automação pode enviar respostas jurídicas automaticamente?", "answer": "Use automação para organização, alertas e tarefas internas; a equipe mantém a decisão sobre conteúdo e encaminhamento."},
+    {"question": "Quais dados devem entrar no follow-up comercial?", "answer": "Comece pelos dados necessários para a triagem e defina finalidade, acesso e retenção antes de adicionar outros campos."},
+    {"question": "O case da Odery garante resultado para escritório de advocacia?", "answer": "Não. Ele demonstra a entrega de CRM e não traz resultado financeiro público medido."}
+  ],
+  "sources": [
+    {"url": "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-publicacaooriginal-156212-pl.html", "type": "legislação", "claim": "A LGPD define o tratamento de dados pessoais e estabelece os princípios de finalidade, adequação e necessidade."},
+    {"url": "https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021", "type": "regulação profissional", "claim": "O Provimento 205/2021 preserva o poder decisório e a responsabilidade profissional e veda aplicativos usados indiscriminadamente para responder automaticamente consultas jurídicas de não clientes."}
+  ],
+  "firstPartyEvidence": ["odery-crm-entrega"],
+  "image": {"filename": "alternativa-a-planilha-de-follow-up-comercial-para-escritorio-de-advocacia.svg", "alt": "alternativa a planilha de follow-up comercial para escritório de advocacia"},
+  "internalLinks": ["https://irbis.com.br/blog/como-automatizar-o-registro-de-contatos-em-escritorio-de-advocacia"],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-19/alternativa-a-planilha-de-follow-up-comercial-para-escritorio-de-advocacia.md"
+}

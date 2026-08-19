@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">alternativa a planilha de follow-up comercial para escritório de advocacia</title>
+  <desc id="desc">Ilustração editorial de uma fila de follow-up com responsável, próxima ação e revisão humana.</desc>
+  <rect width="1600" height="900" fill="#f4f1eb"/>
+  <rect x="116" y="130" width="1368" height="640" rx="30" fill="#e1e2da"/>
+  <rect x="218" y="282" width="442" height="336" rx="20" fill="#f4f1eb"/>
+  <rect x="722" y="282" width="660" height="336" rx="20" fill="#2d554a"/>
+  <path d="M270 366h338M270 442h278M270 518h216" stroke="#b35436" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="796" cy="372" r="38" fill="#f4f1eb"/>
+  <path d="M872 372h384M796 470h460M796 548h294" stroke="#f4f1eb" stroke-width="18" stroke-linecap="round"/>
+  <path d="M608 450h108" stroke="#3d433e" stroke-width="16" stroke-linecap="round"/>
+  <path d="M684 420l32 30-32 30" fill="none" stroke="#3d433e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="116" y="92" fill="#3d433e" font-family="Georgia, serif" font-size="42">Follow-up comercial com contexto e responsável</text>
+</svg>

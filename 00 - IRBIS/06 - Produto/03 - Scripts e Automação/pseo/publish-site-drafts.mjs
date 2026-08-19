@@ -26,6 +26,12 @@ const articles = [
     description: 'Organize origem, responsável e próxima ação antes de automatizar o follow-up comercial de uma agência.',
     dateISO: '2026-08-17', pilar: 'solucoes-com-ia', readingTimeMin: 7, draftDate: '2026-08-16',
   },
+  {
+    slug: 'alternativa-a-planilha-de-follow-up-comercial-para-escritorio-de-advocacia',
+    title: 'Alternativa à planilha de follow-up comercial para escritório de advocacia',
+    description: 'Estruture responsáveis, próxima ação e revisão humana para substituir a planilha de follow-up comercial do escritório.',
+    dateISO: '2026-08-19', pilar: 'sistemas-ia', readingTimeMin: 7, draftDate: '2026-08-19',
+  },
 ];
 
 const labels = { 'solucoes-com-ia': 'Soluções com IA', 'sistemas-ia': 'Sistemas', 'automacao-ia': 'Soluções com IA' };
@@ -75,6 +81,9 @@ const entries = articles.filter((article) => !sitemap.includes(`/blog/${article.
 writeFileSync(path.join(site, 'sitemap.xml'), sitemap.replace('</urlset>', `${entries}\n\n</urlset>`));
 const llmsPath = path.join(site, 'llms.txt');
 const llms = readFileSync(llmsPath, 'utf8');
-const additions = articles.map((article) => `- [${article.title}](https://irbis.com.br/blog/${article.slug}): ${article.description}`).join('\n');
-writeFileSync(llmsPath, llms.replace('## Contato', `${additions}\n\n## Contato`));
+const additions = articles
+  .filter((article) => !llms.includes(`https://irbis.com.br/blog/${article.slug}`))
+  .map((article) => `- [${article.title}](https://irbis.com.br/blog/${article.slug}): ${article.description}`)
+  .join('\n');
+if (additions) writeFileSync(llmsPath, llms.replace('## Contato', `${additions}\n\n## Contato`));
 console.log(`Preparadas ${articles.length} páginas estáticas para publicação.`);
