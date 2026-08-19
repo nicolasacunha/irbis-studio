@@ -412,6 +412,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/blog/alternativa-a-planilha-de-follow-up-comercial-para-escritorio-de-advocacia"/>
   </url>
 
+  <url>
+    <loc>https://irbis.com.br/minuta</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/minuta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/minuta"/>
+  </url>
 
+  <url>
+    <loc>https://irbis.com.br/odery-bot</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-bot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-bot"/>
+  </url>
 
 </urlset>
