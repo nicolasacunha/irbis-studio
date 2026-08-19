@@ -17,9 +17,9 @@
     }
   ],
   "redirects": [
-    { "source": "/odery-crm",                      "destination": "/odery-erp", "permanent": true },
-    { "source": "/odery-crm/(.*)",                 "destination": "/odery-erp", "permanent": true },
-    { "source": "/cases-hub/odery-crm/index.html", "destination": "/odery-erp", "permanent": true },
+    { "source": "/odery-crm",                      "destination": "/odery-erp", "statusCode": 301 },
+    { "source": "/odery-crm/(.*)",                 "destination": "/odery-erp", "statusCode": 301 },
+    { "source": "/cases-hub/odery-crm/index.html", "destination": "/odery-erp", "statusCode": 301 },
     { "source": "/cases-hub/adash/index.html", "destination": "/adash", "permanent": true },
     { "source": "/cases-hub",              "destination": "/cases",         "permanent": true },
     { "source": "/cases-hub/eforce",       "destination": "/eforce",        "permanent": true },
