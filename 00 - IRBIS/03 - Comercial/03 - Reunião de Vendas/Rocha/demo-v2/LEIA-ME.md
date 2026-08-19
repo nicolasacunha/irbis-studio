@@ -31,3 +31,21 @@ Pra plugar a consulta real: cria conta na **apiplacas.com.br** (créditos pré-p
 ## O que dizer se ele pedir pra ficar com a demo
 
 "Isso aqui é maquete: meia dúzia de peças decoradas e uma placa de teste. A versão de verdade consulta a Fraga, o seu cross e o seu estoque ao vivo, e o desenho dela é exatamente o que está na proposta."
+
+## Publicar na Vercel (pro Roberto testar sozinho)
+
+O projeto já está no formato certo: `index.html` estático + `api/chat.mjs` como função. As chaves ficam na Vercel, nunca no código.
+
+```bash
+cd demo-v2
+npm i -g vercel
+vercel login
+vercel                       # primeiro deploy (responde as perguntas com Enter)
+vercel env add ANTHROPIC_API_KEY    # cola a chave quando pedir, marca Production
+vercel env add PLACA_TOKEN          # cola o token da API Placas
+vercel --prod                # deploy final com as chaves
+```
+
+A URL sai no final (algo como `demo-rocha-xxxx.vercel.app`). Manda essa URL pro Roberto.
+
+Proteções já embutidas: 30 mensagens por pessoa a cada 5 minutos, conversa limitada a 80 mensagens e mensagens de até 600 caracteres. Mesmo assim, o combinado é o link ter prazo: depois que cumprir o papel, `vercel remove demo-rocha` desliga tudo. E vale colocar um limite de gasto na conta da Anthropic (console.anthropic.com > Billing > Spend limit) pra dormir tranquilo.
