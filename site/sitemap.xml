@@ -364,6 +364,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-erp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/odery-erp"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-erp"/>
   </url>
 
@@ -418,6 +419,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/minuta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/minuta"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/minuta"/>
   </url>
 
@@ -427,6 +429,37 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-bot"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/odery-bot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-bot"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/odery-erp</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-erp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/odery-erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-erp"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/minuta</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/minuta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/minuta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/minuta"/>
+  </url>
+
+  <url>
+    <loc>https://irbis.com.br/en/odery-bot</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://irbis.com.br/odery-bot"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irbis.com.br/en/odery-bot"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irbis.com.br/odery-bot"/>
   </url>
 

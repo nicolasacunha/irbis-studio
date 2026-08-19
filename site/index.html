@@ -1915,7 +1915,7 @@ html.no-motion .h-scroll-hint { display: none; }
          NUMEROS
     ================================================================ -->
     <section id="prova" aria-label="Prova">
-      <p class="prova-quote">Na Odery, funil, agenda e histórico comercial vivem no mesmo CRM. No Adash, mídia, CRM e conteúdo dividem o mesmo painel. No MINUTA, o critério de aceite foi escrito antes do código.</p>
+      <p class="prova-quote">Na Odery, funil, agenda e histórico comercial vivem no mesmo CRM. No Adash, mídia, CRM e conteúdo dividem o mesmo painel. No MINUTA, cada peça sai no padrão do escritório com a fonte de cada fundamento à vista.</p>
       <p class="prova-de">Odery ERP · Adash · MINUTA</p>
     </section>
 
@@ -2425,8 +2425,9 @@ html.no-motion .h-scroll-hint { display: none; }
         const el = document.querySelector(sel);
         if (!el) return;
         el.style.borderBottom = 'none';
+        if (getComputedStyle(el).position === 'static') el.style.position = 'relative';
         const rule = document.createElement('div');
-        rule.style.cssText = 'height:1px;background:var(--s2);transform:scaleX(0);transform-origin:left;';
+        rule.style.cssText = 'position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--s2);transform:scaleX(0);transform-origin:left;';
         el.appendChild(rule);
         gsap.to(rule, {
           scaleX: 1, duration: 1.1, ease: 'power3.inOut',
