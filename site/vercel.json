@@ -17,7 +17,9 @@
     }
   ],
   "redirects": [
-    { "source": "/cases-hub/odery-crm/index.html", "destination": "/odery-crm", "permanent": true },
+    { "source": "/odery-crm",                      "destination": "/odery-erp", "permanent": true },
+    { "source": "/odery-crm/(.*)",                 "destination": "/odery-erp", "permanent": true },
+    { "source": "/cases-hub/odery-crm/index.html", "destination": "/odery-erp", "permanent": true },
     { "source": "/cases-hub/adash/index.html", "destination": "/adash", "permanent": true },
     { "source": "/cases-hub",              "destination": "/cases",         "permanent": true },
     { "source": "/cases-hub/eforce",       "destination": "/eforce",        "permanent": true },
@@ -25,6 +27,8 @@
     { "source": "/cases-hub/design",       "destination": "/design",        "permanent": true },
     { "source": "/cases-hub/design/:slug", "destination": "/design/:slug",  "permanent": true },
     { "source": "/cases-hub/odery-erp",    "destination": "/odery-erp",     "permanent": true },
+    { "source": "/cases-hub/minuta/index.html", "destination": "/minuta",    "permanent": true },
+    { "source": "/cases-hub/odery-bot/index.html", "destination": "/odery-bot", "permanent": true },
     { "source": "/vs-agencia",          "destination": "/", "permanent": true },
     { "source": "/vs-agencia.html",     "destination": "/", "permanent": true },
     { "source": "/founder",             "destination": "/", "permanent": true },
@@ -34,8 +38,6 @@
   ],
   "rewrites": [
     { "source": "/jarvis", "destination": "/jarvis/index.html" },
-    { "source": "/odery-crm/(.*)",  "destination": "/cases-hub/odery-crm/$1" },
-    { "source": "/odery-crm",       "destination": "/cases-hub/odery-crm/index.html" },
     { "source": "/adash-demo/(.*)", "destination": "/adash-demo/$1" },
     { "source": "/adash-demo",      "destination": "/adash-demo/index.html" },
     { "source": "/adash/(.*)",      "destination": "/cases-hub/adash/$1" },
@@ -94,6 +96,10 @@
     { "source": "/portal-casa-paes",   "destination": "/p/casa-paes.html" },
     { "source": "/odery-erp/(.*)",     "destination": "/cases-hub/odery-erp/$1" },
     { "source": "/odery-erp",          "destination": "/cases-hub/odery-erp/index.html" },
+    { "source": "/minuta/(.*)",        "destination": "/cases-hub/minuta/$1" },
+    { "source": "/minuta",             "destination": "/cases-hub/minuta/index.html" },
+    { "source": "/odery-bot/(.*)",     "destination": "/cases-hub/odery-bot/$1" },
+    { "source": "/odery-bot",          "destination": "/cases-hub/odery-bot/index.html" },
     { "source": "/claude-skills",         "destination": "/claude-skills/index.html" },
     { "source": "/claude-skills/acesso",  "destination": "/claude-skills/acesso.html" }
   ]

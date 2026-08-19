@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom: agente de WhatsApp da Odery · Case IRBIS</title>
+  <meta name="description" content="Como a IRBIS construiu o Tom, agente de IA no WhatsApp da Odery Drums: consentimento LGPD, cadastro de lead e entrega de catálogo sem atendente.">
+  <link rel="canonical" href="https://irbis.com.br/odery-bot">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://irbis.com.br/odery-bot">
+  <meta property="og:title" content="Tom: agente de WhatsApp da Odery · Case IRBIS">
+  <meta property="og:description" content="Agente de IA no WhatsApp da Odery Drums: consentimento, cadastro e catálogo sem atendente.">
+  <meta property="og:image" content="https://irbis.com.br/Design/og-image.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IRBIS Estúdio Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tom: agente de WhatsApp da Odery · IRBIS">
+  <meta name="twitter:description" content="Agente de IA no WhatsApp que atende, cadastra e entrega catálogo.">
+  <meta name="twitter:image" content="https://irbis.com.br/Design/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="/Design/icone/favicon-eye.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Design/icone/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://irbis.com.br/odery-bot#webpage",
+    "url": "https://irbis.com.br/odery-bot",
+    "name": "Tom: agente de WhatsApp da Odery · Case IRBIS",
+    "description": "Como a IRBIS construiu o Tom, agente de IA no WhatsApp da Odery Drums.",
+    "isPartOf": { "@id": "https://irbis.com.br/#website" },
+    "datePublished": "2026-08-19",
+    "dateModified": "2026-08-19",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "IRBIS", "item": "https://irbis.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Cases", "item": "https://irbis.com.br/cases" },
+        { "@type": "ListItem", "position": 3, "name": "Tom", "item": "https://irbis.com.br/odery-bot" }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Tom: agente de WhatsApp da Odery Drums",
+      "applicationCategory": "BusinessApplication",
+      "description": "Agente de IA no WhatsApp que capta consentimento LGPD, cadastra o lead e entrega o catálogo.",
+      "creator": { "@id": "https://irbis.com.br/#organization" },
+      "dateCreated": "2026",
+      "keywords": ["agente de IA", "WhatsApp", "atendimento", "Z-API", "Supabase"]
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  <link rel="preload" href="/Design/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Design/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Besley';font-style:normal;font-weight:400 900;font-display:swap;src:url('/Design/fonts/besley-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122}@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('/Design/fonts/archivo-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+1E00-1E9F,U+1EF2-1EFF,U+20A0-20AB,U+20AD-20C0}</style>
+  <style>
+    :root{--bg:#E6E5E1;--s1:#EEEDEA;--s2:#D3D2CC;--accent:#4A5D43;--accent2:#8FA987;--text:#26251F;--muted:#6E6C60;--f:'Archivo',sans-serif;--f-serif:'Besley',Georgia,serif}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{background:var(--bg)}
+    body{font-family:var(--f);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    @media (prefers-reduced-motion: reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.75rem 3rem;background:linear-gradient(to bottom,rgba(242,239,233,.85) 0%,transparent 100%)}
+    .nav-logo{font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    .nav-back{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:.4rem}
+    .nav-back:hover{color:var(--text)}
+    .case-hero{background-color:#21201B;color:#F2EFE9;min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3rem 4rem;overflow:hidden}
+    .case-hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#1B1A16 0%,#2A2822 35%,#39362C 65%,#1B1A16 100%)}
+    .case-hero-bg::after{content:'';position:absolute;bottom:0;right:0;width:60%;height:75%;background:radial-gradient(ellipse at 80% 90%,rgba(143,169,135,.16) 0%,transparent 60%)}
+    .case-hero-ghost{position:absolute;bottom:-2rem;right:2rem;font-size:clamp(12rem,25vw,22rem);font-weight:800;letter-spacing:-.08em;text-transform:uppercase;color:rgba(250,250,250,.03);pointer-events:none;user-select:none;line-height:1}
+    .case-hero-label{position:absolute;top:7rem;left:3rem;display:flex;flex-direction:column;gap:.4rem;z-index:2}
+    .case-hero-client{font-size:.55rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent2)}
+    .case-hero-type{font-size:.52rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,250,.35)}
+    .case-hero-title{position:relative;z-index:2;font-family:var(--f-serif);font-size:clamp(3.5rem,9vw,9rem);font-weight:700;letter-spacing:-.015em;line-height:1.02;margin-bottom:3rem}
+    .case-hero-meta{position:relative;z-index:2;display:flex;gap:3rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(250,250,250,.1)}
+    .case-meta-key{font-size:.48rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#9C998A;display:block;margin-bottom:.3rem}
+    .case-meta-val{font-size:.75rem;font-weight:600;letter-spacing:.06em}
+    .sec{border-bottom:1px solid var(--s2)}
+    .case-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding:5rem 3rem}
+    .case-intro-body{font-size:clamp(.9rem,1.3vw,1.05rem);font-weight:300;color:var(--muted);line-height:1.8}
+    .case-intro-body strong{color:var(--text);font-weight:600}
+    .case-intro-right{display:flex;flex-direction:column;gap:1.5rem;padding-left:4rem;border-left:1px solid var(--s2)}
+    .case-spec-key{font-size:.48rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.3rem}
+    .case-spec-val{font-size:.8rem;font-weight:400}
+    .shotwrap{padding:5rem 3rem;background:var(--s1);border-bottom:1px solid var(--s2)}
+    .shot-eyebrow{font-size:.52rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.6rem;text-align:center}
+    .shot-cap{font-family:var(--f-serif);font-size:clamp(1.3rem,2.4vw,2rem);font-weight:700;letter-spacing:-.015em;text-align:center;margin-bottom:.6rem}
+    .shot-sub{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.7;text-align:center;max-width:52ch;margin:0 auto 2.5rem}
+    .phone-duo{display:flex;gap:3.5rem;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1000px;margin:0 auto}
+    .phone-shot{width:100%;max-width:340px}
+    .phone-shot img{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 45px rgba(26,25,20,.28))}
+    .phone-cap{text-align:center;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:1.4rem}
+    .wawin{max-width:900px;margin:0 auto;border-radius:13px;overflow:hidden;box-shadow:0 34px 60px -26px rgba(26,25,20,.42);border:1px solid rgba(38,37,31,.12)}
+    .wawin-bar{display:flex;align-items:center;gap:.5rem;padding:.62rem .95rem;background:#202c33}
+    .wawin-dot{width:.72rem;height:.72rem;border-radius:50%}
+    .wawin-dot.r{background:#ff5f57}.wawin-dot.y{background:#febc2e}.wawin-dot.g{background:#28c840}
+    .wawin-title{margin-left:.55rem;font-size:.68rem;font-weight:600;color:#8696a0;letter-spacing:.03em}
+    .wawin img{display:block;width:100%;height:auto}
+    .case-cenario{display:grid;grid-template-columns:1fr 2fr;gap:4rem;padding:6rem 3rem}
+    .case-cenario-label{font-size:.52rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);padding-top:.4rem}
+    .case-cenario-headline{font-family:var(--f-serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.015em;line-height:1.05;margin-bottom:2rem}
+    .case-cenario-headline .acc{color:var(--accent)}
+    .case-cenario-body{font-size:clamp(.85rem,1.2vw,1rem);font-weight:300;color:var(--muted);line-height:1.8}
+    .case-desafios{display:grid;grid-template-columns:1fr 2fr;gap:4rem;padding:6rem 3rem}
+    .case-desafios-eyebrow{font-size:.52rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1.5rem}
+    .case-desafios-headline{font-family:var(--f-serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;letter-spacing:-.015em;line-height:1.05}
+    .case-desafio-item{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--s2)}
+    .case-desafio-item:last-child{border-bottom:none}
+    .case-desafio-num{font-size:.55rem;font-weight:700;letter-spacing:.2em;color:var(--accent);padding-top:.25rem;min-width:2rem}
+    .case-desafio-text{font-size:clamp(.85rem,1.2vw,1rem);font-weight:300;color:var(--muted);line-height:1.7}
+    .case-desafio-text strong{color:var(--text);font-weight:600}
+    .case-entrega{padding:6rem 3rem;border-bottom:1px solid var(--s2)}
+    .case-entrega-eyebrow{font-size:.52rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1.5rem}
+    .case-entrega-headline{font-family:var(--f-serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.015em;line-height:1.05;margin-bottom:2rem}
+    .case-entrega-body{font-size:clamp(.85rem,1.2vw,1rem);font-weight:300;color:var(--muted);line-height:1.8;max-width:65ch;margin-bottom:3.5rem}
+    .case-stats{display:flex;gap:4rem;flex-wrap:wrap}
+    .case-stat-num{font-family:var(--f-serif);font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.02em;color:var(--accent);display:block;line-height:1.05}
+    .case-stat-label{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-top:.5rem;max-width:20ch}
+    .entrega-note{margin-top:3.5rem;padding:1.4rem 1.6rem;background:var(--s1);border-left:2px solid var(--accent2);font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.7;max-width:70ch}
+    .entrega-note strong{color:var(--text);font-weight:600}
+    .case-next{padding:5rem 3rem;border-bottom:1px solid var(--s2)}
+    .case-next-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}
+    .case-next-title{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    .case-next-ver{font-size:.6rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+    .case-next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .case-next-card{color:#F2EFE9;position:relative;overflow:hidden;border-radius:4px;aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .3s ease;cursor:pointer}
+    .case-next-card:hover{transform:scale(1.01)}
+    .case-next-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:1.5rem;background:linear-gradient(to top,rgba(24,23,19,.7) 0%,transparent 100%)}
+    .case-next-name{font-family:var(--f-serif);font-size:clamp(.9rem,1.5vw,1.2rem);font-weight:700}
+    .case-next-type{font-size:.52rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,250,250,.5);margin-top:.3rem}
+    .case-next-arrow{font-size:1.2rem;color:var(--accent2)}
+    .case-cta{padding:8rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:4rem;flex-wrap:wrap}
+    .case-cta-eyebrow{font-size:.52rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1.5rem}
+    .case-cta-headline{font-family:var(--f-serif);font-size:clamp(2.5rem,5vw,5rem);font-weight:700;letter-spacing:-.02em;line-height:1.02;margin-bottom:1.5rem}
+    .case-cta-sub{font-size:clamp(.85rem,1.2vw,1rem);font-weight:300;color:var(--muted);line-height:1.7;max-width:40ch}
+    .case-cta-btn{display:inline-flex;align-items:center;gap:.75rem;background:#26251F;color:#F2EFE9;padding:1.1rem 2.5rem;border-radius:2px;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;transition:background .2s;white-space:nowrap;flex-shrink:0}
+    .case-cta-btn:hover{background:#4A5D43}
+    @media (max-width:900px){
+      nav{padding:1.25rem 1.5rem}
+      .case-hero{padding:0 1.5rem 3rem}.case-hero-label{left:1.5rem}
+      .case-intro,.case-cenario,.case-desafios{grid-template-columns:1fr;padding:3rem 1.5rem}
+      .case-intro-right{padding-left:0;border-left:none;border-top:1px solid var(--s2);padding-top:2rem}
+      .case-entrega,.case-next{padding:3rem 1.5rem}
+      .shotwrap{padding:3rem 1.25rem}
+      .case-cta{padding:4rem 1.5rem;flex-direction:column;align-items:flex-start}
+      .phone-shot{max-width:280px}
+    }
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" style="display:inline-flex;align-items:center"><svg viewBox="24 30 84 60" style="height:1.05em;width:auto;fill:currentColor;flex-shrink:0;margin-right:.45em" aria-hidden="true"><path fill-rule="evenodd" d="M28 64 C40 36 74 34 104 42 C92 74 56 86 28 64 Z M62 42 C72 53 72 67 62 79 C52 67 52 53 62 42 Z"/></svg>IRBIS</a>
+  <a href="/cases" class="nav-back">← Cases</a>
+</nav>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="case-hero-bg"></div>
+  <div class="case-hero-ghost">TO</div>
+  <div class="case-hero-label">
+    <span class="case-hero-client">Odery Drums</span>
+    <span class="case-hero-type">Soluções com IA · Agente de WhatsApp · 2026</span>
+  </div>
+  <h1 class="case-hero-title">Tom</h1>
+  <div class="case-hero-meta">
+    <div><span class="case-meta-key">Ano</span><span class="case-meta-val">2026</span></div>
+    <div><span class="case-meta-key">Serviço</span><span class="case-meta-val">Agente de IA no WhatsApp</span></div>
+    <div><span class="case-meta-key">Setor</span><span class="case-meta-val">Instrumentos musicais</span></div>
+    <div><span class="case-meta-key">Núcleo</span><span class="case-meta-val">Atende, cadastra e entrega catálogo</span></div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="case-intro sec">
+  <p class="case-intro-body">
+    A <strong>Odery Drums</strong> recebe contato de cliente pelo WhatsApp o tempo todo: quer catálogo, quer preço, quer conhecer as marcas. Responder tudo na mão não escala, e boa parte chega fora do horário comercial. O <strong>Tom</strong> é o agente de IA que atende esse primeiro contato: se apresenta, registra o aceite da política de privacidade, cadastra o lead e entrega o catálogo, sem depender de alguém do outro lado.
+  </p>
+  <div class="case-intro-right">
+    <div><span class="case-spec-key">Cliente</span><span class="case-spec-val">Odery Drums</span></div>
+    <div><span class="case-spec-key">Canal</span><span class="case-spec-val">WhatsApp comercial</span></div>
+    <div><span class="case-spec-key">Stack</span><span class="case-spec-val">Z-API · Supabase · Claude via API</span></div>
+    <div><span class="case-spec-key">Escopo</span><span class="case-spec-val">Fluxo de atendimento, consentimento LGPD, cadastro e catálogo</span></div>
+  </div>
+</div>
+
+<!-- TELA 1 -->
+<section class="shotwrap">
+  <span class="shot-eyebrow">Conversa 01 · Entrada e cadastro</span>
+  <h2 class="shot-cap">Se apresenta, pede o aceite, cadastra.</h2>
+  <p class="shot-sub">Na primeira mensagem o Tom já se identifica, registra o aceite da Política de Privacidade conforme a LGPD e coleta os dados do lead antes de seguir. O atendimento começa organizado, não no improviso.</p>
+  <div class="wawin">
+    <div class="wawin-bar"><span class="wawin-dot r"></span><span class="wawin-dot y"></span><span class="wawin-dot g"></span><span class="wawin-title">WhatsApp · Odery Drums</span></div>
+    <img src="/cases-hub/odery-bot/assets/ODERY-BOT-1.jpg" alt="Tom no WhatsApp: apresentação, aceite de LGPD e início do cadastro" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- CENÁRIO -->
+<section class="case-cenario sec">
+  <span class="case-cenario-label">O Cenário</span>
+  <div>
+    <h2 class="case-cenario-headline">O WhatsApp virou a porta. <span class="acc">Ninguém guardava a porta.</span></h2>
+    <p class="case-cenario-body">
+      O cliente de instrumento pesquisa, se interessa e chama no WhatsApp. Só que o volume é alto, as perguntas se repetem e muita gente escreve fora do horário. Quando o atendimento é todo manual, o lead espera, esfria ou some, e ninguém registra que aquela conversa aconteceu. O Tom foi desenhado para segurar essa entrada: recebe, responde na hora, formaliza o consentimento e guarda o contato, para que o time comercial pegue a conversa já com dados, não do zero.
+    </p>
+  </div>
+</section>
+
+<!-- O QUE RESOLVEMOS -->
+<section class="case-desafios sec">
+  <div>
+    <span class="case-desafios-eyebrow">O que resolvemos</span>
+    <h3 class="case-desafios-headline">O primeiro contato, no automático.</h3>
+  </div>
+  <div>
+    <div class="case-desafio-item"><span class="case-desafio-num">01</span><p class="case-desafio-text"><strong>Abertura e identidade.</strong> O Tom se apresenta como assistente da Odery e conduz a conversa com a linguagem da marca, sem parecer robô travado.</p></div>
+    <div class="case-desafio-item"><span class="case-desafio-num">02</span><p class="case-desafio-text"><strong>Consentimento LGPD registrado.</strong> Antes de coletar qualquer dado, o aceite da Política de Privacidade é apresentado e registrado. A conformidade entra no começo do fluxo.</p></div>
+    <div class="case-desafio-item"><span class="case-desafio-num">03</span><p class="case-desafio-text"><strong>Cadastro do lead.</strong> Nome e dados de contato são coletados na conversa e guardados, para o comercial continuar de onde o Tom parou.</p></div>
+    <div class="case-desafio-item"><span class="case-desafio-num">04</span><p class="case-desafio-text"><strong>Catálogo na hora.</strong> O menu entrega o material certo na mesma conversa: vídeo, catálogo em PDF e a escolha por marca, sem transferir para um humano.</p></div>
+    <div class="case-desafio-item"><span class="case-desafio-num">05</span><p class="case-desafio-text"><strong>Disponível 24/7.</strong> A porta de entrada fica aberta fora do horário comercial, quando boa parte do cliente escreve.</p></div>
+  </div>
+</section>
+
+<!-- TELA 2 -->
+<section class="shotwrap">
+  <span class="shot-eyebrow">Conversa 02 · Menu e catálogo</span>
+  <h2 class="shot-cap">O cliente escolhe. O Tom entrega.</h2>
+  <p class="shot-sub">Pelo menu guiado o cliente pede o catálogo e recebe o PDF na hora, e é levado a escolher a marca. Tudo dentro do WhatsApp, sem sair da conversa e sem esperar atendente.</p>
+  <div class="wawin">
+    <div class="wawin-bar"><span class="wawin-dot r"></span><span class="wawin-dot y"></span><span class="wawin-dot g"></span><span class="wawin-title">WhatsApp · Odery Drums</span></div>
+    <img src="/cases-hub/odery-bot/assets/ODERY-BOT-2.jpg" alt="Tom no WhatsApp: menu de opções, entrega do catálogo em PDF e escolha de marca" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- O QUE ENTREGA -->
+<section class="case-entrega">
+  <span class="case-entrega-eyebrow">O que entrega</span>
+  <h3 class="case-entrega-headline">Um atendente que nunca dorme na entrada.</h3>
+  <p class="case-entrega-body">
+    O Tom assume o trabalho repetitivo do primeiro contato: apresentar a marca, formalizar o consentimento, cadastrar quem chegou e entregar o catálogo. O que antes dependia de alguém disponível passa a acontecer na hora, a qualquer hora, com registro. O time comercial entra depois, com o lead já qualificado e os dados na mão.
+  </p>
+  <div class="case-stats">
+    <div><span class="case-stat-num">24/7</span><span class="case-stat-label">na porta de entrada do WhatsApp</span></div>
+    <div><span class="case-stat-num">LGPD</span><span class="case-stat-label">consentimento registrado antes do dado</span></div>
+    <div><span class="case-stat-num">0</span><span class="case-stat-label">atendente para cadastrar e entregar o catálogo</span></div>
+  </div>
+  <div class="entrega-note">
+    <strong>Sobre os números:</strong> este case mostra o que o agente faz e como foi construído. Ele não apresenta volume de conversas ou taxa de conversão medidos em produção, então nenhuma métrica de resultado é atribuída aqui.
+  </div>
+</section>
+
+<!-- MAIS CASES -->
+<div class="case-next">
+  <div class="case-next-header">
+    <span class="case-next-title">Mais projetos</span>
+    <a href="/cases" class="case-next-ver">Ver todos →</a>
+  </div>
+  <div class="case-next-grid">
+    <a class="case-next-card" href="/odery-erp" style="background:linear-gradient(135deg,#1B1A16 0%,#2A2822 50%,#1B1A16 100%)">
+      <div style="position:absolute;top:0;right:0;width:60%;height:60%;background:radial-gradient(ellipse at 70% 20%,rgba(143,169,135,.10) 0%,transparent 65%)"></div>
+      <div class="case-next-bottom"><div><div class="case-next-name">Odery ERP</div><div class="case-next-type">Sistema · CRM &amp; ERP · 2026</div></div><span class="case-next-arrow">↗</span></div>
+    </a>
+    <a class="case-next-card" href="/#contato" style="background:linear-gradient(135deg,#21201B 0%,#2A2822 100%)">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(3rem,6vw,5rem);font-weight:800;letter-spacing:-.06em;color:rgba(143,169,135,.06);text-transform:uppercase;user-select:none">IRBIS</div>
+      <div class="case-next-bottom"><div><div class="case-next-name">Seu Projeto</div><div class="case-next-type">Iniciar conversa</div></div><span class="case-next-arrow">↗</span></div>
+    </a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="case-cta">
+  <div>
+    <span class="case-cta-eyebrow">Próximo passo</span>
+    <h2 class="case-cta-headline">Seu WhatsApp<br>recebe mais do que<br>o time dá conta.</h2>
+    <p class="case-cta-sub">Conta como é o atendimento hoje. A gente desenha o agente em cima do fluxo que você já usa.</p>
+  </div>
+  <a href="https://wa.me/5519991591265" class="case-cta-btn">Iniciar conversa →</a>
+</section>
+
+</body>
+</html>

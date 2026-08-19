@@ -20,7 +20,7 @@ Sites, landing pages, branding, identidade visual, social media, Web3 e motion a
 
 ## Cases de sistemas e IA
 
-- [Odery CRM](https://irbis.com.br/odery-crm): CRM comercial para a Odery Drums com funil, agenda, histórico e IA para registro e consulta de contatos.
+- [Odery CRM](https://irbis.com.br/odery-erp): CRM comercial para a Odery Drums com funil, agenda, histórico e IA para registro e consulta de contatos.
 - [Adash](https://irbis.com.br/adash): sistema que reúne mídia, CRM, conteúdo, relatórios e agente de IA na operação da QG Group.
 - MINUTA: sistema em desenvolvimento para a A. Cunha Advocacia, com geração de peças, fontes conferíveis e revisão humana obrigatória. O projeto ainda não tem resultado público medido.
 

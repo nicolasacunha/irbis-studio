@@ -1889,25 +1889,15 @@ html.no-motion .h-scroll-hint { display: none; }
             <li><span class="n">Agenda</span><span class="l">prioridades de contato e próximos passos</span></li>
             <li><span class="n">IA</span><span class="l">registro por voz e consulta ao histórico do cliente</span></li>
           </ul>
-          <a class="case-ed-link" href="cases-hub/odery-crm/index.html">Ver case completo →</a>
+          <a class="case-ed-link" href="cases-hub/odery-erp/index.html">Ver case completo →</a>
         </div>
-        <a class="case-ed-foto is-system is-crm-showcase" href="cases-hub/odery-crm/index.html" aria-label="Ver o case completo do Odery CRM">
+        <a class="case-ed-foto is-system is-crm-showcase" href="cases-hub/odery-erp/index.html" aria-label="Ver o case completo do Odery CRM">
           <span class="case-shot-top" aria-hidden="true">
             <span class="case-shot-label">CRM · Agenda semanal</span>
             <span class="case-shot-index">OD / 01</span>
           </span>
           <span class="case-shot-window" role="img" aria-label="Agenda semanal do Odery CRM com contatos organizados por prioridade">
-            <span class="crm-demo" aria-hidden="true">
-              <span class="crm-demo-toolbar"><span class="crm-demo-title">27 JUL. — 02 AGO. 2026</span><span class="crm-demo-view">SEMANA</span></span>
-              <span class="crm-demo-legend"><i></i><span>Prioridade</span><i></i><span>Previsão de fechar</span></span>
-              <span class="crm-week">
-                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">SEG</span><span class="crm-day-date">27</span></span><span class="crm-event">Retorno urgente</span><span class="crm-event">Enviar proposta</span></span>
-                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">TER</span><span class="crm-day-date">28</span></span><span class="crm-event">Contato comercial</span></span>
-                <span class="crm-day is-today"><span class="crm-day-head"><span class="crm-day-name">QUA</span><span class="crm-day-date">29</span></span><span class="crm-event">Follow-up</span><span class="crm-event">Obter resposta</span></span>
-                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">QUI</span><span class="crm-day-date">30</span></span><span class="crm-event is-close">Previsão de fechar</span></span>
-                <span class="crm-day"><span class="crm-day-head"><span class="crm-day-name">SEX</span><span class="crm-day-date">31</span></span></span>
-              </span>
-            </span>
+            <img src="cases-hub/odery-erp/assets/ODERY-ERP-AGENDA.jpg" alt="Agenda semanal do Odery ERP com contatos organizados por prioridade" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:4px;" loading="lazy" decoding="async">
           </span>
           <span class="case-shot-note" aria-hidden="true"><strong>Próximos passos à vista.</strong><span>Prioridade, data e responsável.</span></span>
         </a>
@@ -2600,7 +2590,7 @@ html.no-motion .h-scroll-hint { display: none; }
       const logo    = document.getElementById('curtain-logo');
       if (!curtain) return;
       function navigate(href) {
-        const isCaseHandoff = href.includes('odery-crm') || href.includes('adash');
+        const isCaseHandoff = href.includes('odery-erp') || href.includes('adash');
         try {
           if (isCaseHandoff) sessionStorage.setItem('irbis:case-curtain', '1');
           else sessionStorage.removeItem('irbis:case-curtain');
@@ -2618,7 +2608,7 @@ html.no-motion .h-scroll-hint { display: none; }
          mas a página seguinte não tem o script que a reabre. */
       const CURTAIN_PAGES = [
         'sobre.html', '/sobre', '/call', 'call.html', '/en',
-        'cases-hub/odery-crm/index.html', '/odery-crm',
+        'cases-hub/odery-erp/index.html', '/odery-erp',
         'cases-hub/adash/index.html', '/adash'
       ];
       document.querySelectorAll('a[href]').forEach(a => {
