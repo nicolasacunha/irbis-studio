@@ -12,6 +12,7 @@ review-copy.html
 # Rascunhos, templates e lixo de build (nunca servir)
 _*_tmp.*
 _archived/
+video/irbis-promo/
 blog/_content/
 blog/_template-post.html
 cases-hub/_template-case.html
