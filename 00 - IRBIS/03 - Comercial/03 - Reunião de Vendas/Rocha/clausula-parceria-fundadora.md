@@ -8,7 +8,7 @@
 
 O valor do serviço contratado é de **R$ 20.000,00** (vinte mil reais).
 
-Fica concedido à CONTRATANTE um desconto promocional de **R$ 3.000,00**, resultando no valor final de **R$ 17.000,00**, condicionado ao cumprimento cumulativo das seguintes contrapartidas:
+Fica concedido à CONTRATANTE um desconto promocional de **R$ 6.000,00**, resultando no valor final de **R$ 14.000,00**, condicionado ao cumprimento cumulativo das seguintes contrapartidas:
 
 **a) Pagamento à vista.** O valor com desconto será pago em parcela única, via Pix, na data de assinatura deste contrato. A perda dessa condição de pagamento implica a cobrança pelo valor integral, nas condições de parcelamento previstas neste contrato.
 
@@ -18,7 +18,7 @@ Fica concedido à CONTRATANTE um desconto promocional de **R$ 3.000,00**, result
 
 **d) Apresentações.** Durante a vigência do projeto, a CONTRATANTE apresentará a CONTRATADA a, no mínimo, **3 (três)** potenciais clientes empresariais, por meio de contato direto (mensagem, ligação ou reunião presencial). Considera-se cumprida a contrapartida com a apresentação efetivada, independentemente de contratação pelos apresentados.
 
-**Parágrafo primeiro.** As contrapartidas das alíneas (b), (c) e (d) deverão estar cumpridas em até 30 (trinta) dias após a entrega final do projeto. O não cumprimento converterá o desconto em valor devido, e a diferença de R$ 3.000,00 será cobrada com vencimento em 15 (quinze) dias.
+**Parágrafo primeiro.** As contrapartidas das alíneas (b), (c) e (d) deverão estar cumpridas em até 30 (trinta) dias após a entrega final do projeto. O não cumprimento converterá o desconto em valor devido, e a diferença de R$ 6.000,00 será cobrada com vencimento em 15 (quinze) dias.
 
 **Parágrafo segundo.** A presente condição é pessoal, aplicável somente a este contrato, e não gera precedente para contratações futuras entre as partes.
 
@@ -26,7 +26,7 @@ Fica concedido à CONTRATANTE um desconto promocional de **R$ 3.000,00**, result
 
 ## Notas pra reunião (não vão pro contrato)
 
-- Valor decidido: R$ 20.000 → **R$ 17.000 à vista**, desconto de R$ 3.000, já impresso na proposta.
-- A fala de apresentação: *"Roberto, o preço do projeto é vinte. Pra você, eu coloquei na proposta uma condição de parceiro fundador: dezessete à vista. Não é desconto de pechincha, é uma troca: seu caso vira minha vitrine, seu depoimento na entrega, e três apresentações a donos de operação durante o projeto. Você economiza três mil e eu ganho o que dinheiro não compra no começo: prova. Fechamos assim?"*
+- Valor decidido: R$ 20.000 → **R$ 14.000 à vista**, desconto de R$ 6.000, já impresso na proposta.
+- A fala de apresentação: *"Roberto, o preço do projeto é vinte. Pra você, eu coloquei na proposta uma condição de parceiro fundador: quatorze à vista. Não é desconto de pechincha, é uma troca: seu caso vira minha vitrine, seu depoimento na entrega, e três apresentações a donos de operação durante o projeto. Você economiza seis mil e eu ganho o que dinheiro não compra no começo: prova. Fechamos assim?"*
 - Se ele pedir mais desconto: as contrapartidas aumentam junto (mais uma apresentação, participação num evento do setor), o número não desce. Desconto extra sem contrapartida extra, não existe.
 - O parágrafo primeiro é o dente da cláusula: sem ele, as contrapartidas viram promessa. Com ele, o desconto é adiantamento de confiança com data pra se confirmar.
