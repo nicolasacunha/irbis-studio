@@ -123,7 +123,7 @@
     if (leadId) { finishBook(); return; }
 
     var payload = {};
-    ['nome', 'email', 'whatsapp', 'negocio', 'site', 'dor', 'decisorContato']
+    ['nome', 'email', 'whatsapp', 'negocio', 'dor', 'decisorContato']
       .forEach(function (n) {
         var el = form.querySelector('[name="' + n + '"]');
         payload[n] = el ? el.value.trim() : '';

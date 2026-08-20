@@ -8,3 +8,29 @@ node_modules/
 screenshots/
 index.html.bak
 review-copy.html
+
+# Rascunhos, templates e lixo de build (nunca servir)
+_*_tmp.*
+_archived/
+blog/_content/
+blog/_template-post.html
+cases-hub/_template-case.html
+cases-hub/_mockup-preview.html
+cases-hub/_mockup-case-eforce.html
+
+# Despublicado no pivot (sites/founder/SaaS saíram do escopo) — rotas com redirect 301 no vercel.json
+para/saas.html
+para/startups.html
+beta.html
+en/for/saas.html
+en/for/startups.html
+blog/agentes-ia-compram-sozinhos-site-pronto.html
+blog/benchmark-conversao-mobile-2026.html
+blog/campos-formulario-conversao-site.html
+blog/confianca-site-desatualizado-pesquisa-2026.html
+blog/erros-site-startup.html
+blog/sinais-hora-trocar-site.html
+blog/site-bonito-nao-converte.html
+en/blog/mobile-conversion-benchmark-2026.html
+en/blog/signs-its-time-to-replace-your-website.html
+en/blog/startup-website-mistakes.html
