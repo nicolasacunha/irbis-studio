@@ -45,7 +45,7 @@ Regra: **pasta vazia é sinal**. Se `04-homologacao/` está vazia na semana da e
 
 ---
 
-## 3. As 7 fases
+## 3. As 8 fases
 
 Formato de leitura: **Entra** (pré-requisito) · **Faz** · **Sai** (artefato) · **🚪 Gate** · **Erro clássico**.
 
