@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">quanto custa sistema com IA para distribuidora</title>
+  <desc id="description">Ilustração abstrata de fluxo comercial, dados e revisão humana para uma distribuidora.</desc>
+  <rect width="1600" height="900" fill="#f1f3ec"/>
+  <rect x="112" y="132" width="1376" height="636" rx="28" fill="#173f39"/>
+  <path d="M232 577h404V356h326v221h406" fill="none" stroke="#a8c79a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="232" cy="577" r="33" fill="#e85d3f"/>
+  <circle cx="636" cy="356" r="33" fill="#e85d3f"/>
+  <circle cx="962" cy="577" r="33" fill="#e85d3f"/>
+  <circle cx="1368" cy="577" r="33" fill="#e85d3f"/>
+  <text x="230" y="243" fill="#f1f3ec" font-family="Georgia, serif" font-size="66">Sistema com IA</text>
+  <text x="230" y="310" fill="#a8c79a" font-family="Helvetica Neue, sans-serif" font-size="34">para distribuidora</text>
+  <text x="230" y="684" fill="#f1f3ec" font-family="Helvetica Neue, sans-serif" font-size="30">dados · regras · revisão</text>
+</svg>

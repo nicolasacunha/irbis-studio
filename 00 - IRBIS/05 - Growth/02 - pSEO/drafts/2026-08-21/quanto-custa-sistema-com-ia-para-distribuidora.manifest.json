@@ -1,0 +1,46 @@
+{
+  "keyword": "quanto custa sistema com IA para distribuidora",
+  "title": "Quanto custa um sistema com IA para distribuidora?",
+  "summary": "O investimento em um sistema com IA para distribuidora varia conforme o fluxo que a equipe precisa organizar, os dados que entram nele e as integrações que precisam funcionar. Na IRBIS, Sistemas têm faixa pública de R$ 3.000 a R$ 10.000, com valor fechado definido após o diagnóstico do processo. Dados de clientes, representantes e contatos exigem regras de acesso, finalidade e tratamento compatíveis com a LGPD. Quando a IA participa do fluxo, a equipe precisa definir limites, responsáveis e revisão para usar o recurso com controle. A IRBIS desenvolveu o Adash para centralizar mídia, CRM, conteúdo, relatórios e um agente de IA na operação da QG Group, mas o case não traz resultado financeiro público e não representa uma distribuidora.",
+  "faq": [
+    {
+      "question": "Quanto custa um sistema com IA para distribuidora na IRBIS?",
+      "answer": "Sistemas da IRBIS têm faixa pública de R$ 3.000 a R$ 10.000; o valor fechado depende do fluxo, dos dados, dos acessos, das integrações e do uso de IA definidos na reunião."
+    },
+    {
+      "question": "O sistema pode integrar pedidos, clientes e representantes?",
+      "answer": "Pode, quando essas integrações forem necessárias para o primeiro fluxo e tiverem origem, atualização, exceções e responsável definidos."
+    },
+    {
+      "question": "A IA pode responder automaticamente clientes da distribuidora?",
+      "answer": "Ela pode apoiar tarefas delimitadas, como consulta de histórico ou preparação para revisão, mas o envio deve seguir regras aprovadas e responsável definido."
+    },
+    {
+      "question": "O case do Adash garante resultado para uma distribuidora?",
+      "answer": "Não. Ele comprova a entrega para uma agência e não apresenta resultado financeiro público."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.gov.br/int/pt-br/acesso-a-informacao/lgpd",
+      "type": "orientação governamental",
+      "claim": "A LGPD abrange o tratamento de dados pessoais em meios manuais e digitais e descreve os papéis de controlador e operador."
+    },
+    {
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "type": "diretriz técnica",
+      "claim": "O NIST AI RMF é um framework voluntário para incorporar considerações de confiabilidade e gestão de riscos no desenho, desenvolvimento, uso e avaliação de sistemas de IA."
+    }
+  ],
+  "firstPartyEvidence": [
+    "adash-entrega"
+  ],
+  "image": {
+    "filename": "quanto-custa-sistema-com-ia-para-distribuidora.svg",
+    "alt": "quanto custa sistema com IA para distribuidora"
+  },
+  "internalLinks": [
+    "https://irbis.com.br/blog/como-automatizar-o-follow-up-comercial-em-industria"
+  ],
+  "bodyPath": "/Users/nicolascunha/Projects/Business/irbis/00 - IRBIS/05 - Growth/02 - pSEO/drafts/2026-08-21/quanto-custa-sistema-com-ia-para-distribuidora.md"
+}
