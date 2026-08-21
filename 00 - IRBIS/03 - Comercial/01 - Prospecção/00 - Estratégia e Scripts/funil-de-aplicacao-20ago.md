@@ -1,6 +1,6 @@
 # Funil de aplicação — página, formulário e resposta rápida
 
-> Escrito em 20/ago/2026 (quinta). Fecha a tarefa **3.4** do `plano-mesclado-18a24ago.md`: formulário + página + sequência de resposta rápida. Regra dura do plano: **nada de tráfego (4.1) antes disto estar fechado.**
+> Escrito em 20/ago/2026 (quinta). **Especifica**, mas ainda não conclui, a tarefa **3.4** do `plano-mesclado-18a24ago.md`: formulário + página + sequência de resposta rápida. Regra dura do plano: **nada de tráfego (4.1) antes da implementação e do teste ponta a ponta.**
 >
 > Fonte de voz: `IRBIS_Manual_de_Copy_v2.md`. Fonte da isca e do vilão: `P1-posicionamento-nicolas.md` (Big Idea v4). Árbitro do funil de produto: `funil-consultoria-producao-irbis.md` (13/ago). Objeções: `banco-objecoes-prospeccao-irbis.md`. Camada de aprofundamento: `script-qualificacao-bant-irbis.md`.
 >
@@ -19,16 +19,16 @@ FORMULÁRIO DE APLICAÇÃO   ── CAMADA 1 ──       →  triagem automáti
   ↓  quem passa no filtro de topo
 WHATSAPP + BANT (Gabriel) ── CAMADA 2 ──       →  aprofunda e cobre Authority (o buraco do form)
   ↓  quem passa nas DUAS camadas
-REUNIÃO ÚNICA (1h, Nicolas)                    →  fecha CONSULTORIA DE IA (R$5–7k PME)
+REUNIÃO ÚNICA (1h, Nicolas)                    →  fecha CONSULTORIA DE IA (R$5k ou R$10k, conforme faturamento)
   ↓
 ENTREGA DA CONSULTORIA                          →  2º fechamento: produção (Sistemas / Bot)
 ```
 
 **Qualificação em duas camadas (aprovado 20/ago):** o **formulário qualifica** de graça e no automático — corta quem está fora da faixa ou sem dor antes de gastar um minuto de agenda. O **BANT aprofunda** — é a conversa consultiva do Gabriel que confirma o que o form só tocou e pega o que ele não alcança (quem decide, urgência real, impacto). Uma camada é barata e rasa; a outra é cara e profunda. Só quem passa nas duas chega na reunião do Nicolas. Detalhe do encaixe no Bloco 1.5.
 
-**A distinção que não pode borrar:** a isca (a análise de topo, com reserva de R$ 97 reembolsável) **não é** a Consultoria de IA paga. A isca revela *que* o caixa está escapando e aponta *onde* — o suficiente pra pessoa querer a reunião. A Consultoria de IA (R$5–10k, o produto pago da porta, per `funil-consultoria-producao-irbis.md`) é o diagnóstico completo, ponta a ponta, com a devolutiva e o caminho. A reunião de 1h é onde a Consultoria fecha. Se a isca entregar o diagnóstico inteiro de graça, ela canibaliza o produto pago — então ela dá o **sinal**, não o **mapa**.
+**A distinção que não pode borrar:** a isca (a análise de topo, com reserva de R$ 97) **não é** a Consultoria de IA paga. A isca revela *que* o caixa está escapando e aponta *onde* — o suficiente pra pessoa querer a reunião. A Consultoria de IA (R$ 5 mil ou R$ 10 mil, conforme faturamento; enterprise sob consulta) é o diagnóstico completo, ponta a ponta, com a devolutiva e o caminho. A reunião de 1h é onde a Consultoria fecha. Se a isca entregar o diagnóstico inteiro de graça, ela canibaliza o produto pago — então ela dá o **sinal**, não o **mapa**.
 
-**✅ Decisão 3.3 fechada (dono, 20/ago): reserva de R$ 97 reembolsável.** Não é o preço da análise — é uma **reserva de vaga**, que volta inteira na contratação, cobrada **depois** do formulário e do BANT (não na entrada). Serve pra filtrar quem está sério de quem só passeia. **É uma premissa, não verdade:** existe o risco de um lead qualificado ver os R$ 97 e não pagar por achar que é "slop" (isca barata/duvidosa). Por isso a cobrança fica no fim do funil, depois de uma pessoa real já ter conversado com ele, e vira número no placar — medida, não assumida. Detalhe e plano de teste no fim do doc.
+**✅ Decisão 3.3 fechada (dono, 20/ago): reserva de R$ 97.** Não é o preço da análise — é uma **reserva de horário**, abatida integralmente na contratação da Consultoria e cobrada **depois** do formulário e do BANT. A hipótese é que reduza faltas e confirme intenção. **É uma premissa, não verdade:** existe o risco de um lead qualificado ver os R$ 97 e não pagar por achar que é "slop" (isca barata/duvidosa). Por isso a cobrança fica no fim do funil, depois de uma pessoa real já ter conversado com ele, e vira número no placar — medida, não assumida. Detalhe e plano de teste no fim do doc.
 
 ---
 
@@ -121,7 +121,7 @@ O formulário **não** substitui o BANT — ele o prepara. O form é a peneira g
 
 # BLOCO 2 · PÁGINA DO FUNIL (a isca)
 
-Landing de uma coluna, uma leitura, um CTA. **Preço não entra** (mesma regra da VSL). O produto desta página é a **análise**, não o sistema. Linguagem do Diagnóstico de Operação, nunca "eu faço automação".
+Landing de uma coluna, uma leitura, um CTA. **O preço da Consultoria não entra**; a reserva de R$ 97 aparece perto do CTA final, com transparência, porque será cobrada depois do BANT para confirmar o horário. O produto desta página é a **análise inicial**, não o sistema nem a Consultoria completa. Linguagem do Diagnóstico de Operação, nunca "eu faço automação".
 
 Voz: Fórmula 1 (setup calmo + punch em caps), Fórmula 6 (afirmação que parece provocação), número concreto antes de afirmação vaga.
 
@@ -202,7 +202,7 @@ Voz: Fórmula 1 (setup calmo + punch em caps), Fórmula 6 (afirmação que parec
 
 > As vagas de diagnóstico são poucas — trabalho com atenção total por projeto.
 >
-> Preenche o formulário. Eu leio, e se fizer sentido, te chamo no WhatsApp pra marcar a sua. Pra travar a vaga tem uma reserva de R$ 97, que volta pra você inteira se decidir construir comigo — ela existe pra eu não abrir agenda pra quem não está levando a própria operação a sério.
+> Preenche o formulário. Eu leio, e se fizer sentido, te chamo no WhatsApp pra marcar a sua. Pra confirmar o horário tem uma reserva de R$ 97, abatida integralmente se você contratar a Consultoria de IA — ela existe pra reduzir faltas e proteger a agenda.
 >
 > `QUERO MEU DIAGNÓSTICO`
 
@@ -250,11 +250,11 @@ Aqui é onde a qualificação aprofunda. **Não é bloco de perguntas seguidas**
 
 *(Uma reunião só, de 1h. Nunca marcar duas calls antes dela.)*
 
-### A2.5 · Reserva da vaga (R$ 97 reembolsável — trava o horário)
+### A2.5 · Reserva do horário (R$ 97 — abatida na Consultoria)
 
 Depois que ele escolhe o horário, e só então. A reserva não abre a conversa, fecha ela.
 
-> Fechei [dia] às [hora] no seu nome. Pra travar a vaga tem uma reserva de R$ 97 — ela volta inteira pra você se a gente fechar a construção, e existe só pra eu segurar o horário pra quem tá sério. Segue o link: [pagamento].
+> Fechei [dia] às [hora] no seu nome. Pra confirmar o horário tem uma reserva de R$ 97 — ela é abatida integralmente se você contratar a Consultoria de IA. Segue o link: [pagamento].
 > Assim que cair, tá confirmado e eu te mando o material pra chegar preparado.
 
 **Regra:** a reserva entra **depois** do BANT, nunca antes do form. Quem trava o horário e não paga em [prazo] libera a vaga e cai no follow-up — não perde o lead, só não ocupa agenda sem compromisso. Registrar em `interacoes`: horário oferecido → reserva paga (sim/não). **Esse "não" é o dado que testa a premissa** (ver fim do doc).
@@ -305,13 +305,13 @@ A faixa é pública, o número fechado nasce na reunião (regra literal). Se per
 
 ---
 
-# ✅ Decisão 3.3 — reserva de R$ 97 reembolsável (dono, 20/ago)
+# ✅ Decisão 3.3 — reserva de R$ 97 abatida na Consultoria (dono, 20/ago)
 
-**O que foi decidido:** a vaga de diagnóstico tem uma **reserva de R$ 97, reembolsável na contratação.** Objetivo do dono: filtrar quem está sério de quem só passeia, e afastar quem não tem caixa pra seguir.
+**O que foi decidido:** a reunião tem uma **reserva de R$ 97, abatida integralmente na contratação da Consultoria de IA.** Ela não é o preço da análise nem prova capacidade de pagar a Consultoria. A hipótese é que reduza faltas e ajude a confirmar intenção; isso precisa ser medido.
 
 **Onde ela entra:** depois do formulário e do BANT (passo A2.5), como trava do horário — **nunca na entrada.** Isso mantém o topo do funil livre, então o teste de tráfego de sexta ainda lê "qual criativo converte" pelo preenchimento do form, sem misturar com "quem topa pagar". A cobrança só toca lead já qualificado, com uma pessoa real já na conversa — que é o que reduz a chance de parecer slop.
 
-**Nota sobre o que os R$ 97 filtram:** eles filtram **seriedade e show-up**, não capacidade de pagar os R$ 5–10k da Consultoria. Quem paga 97 não provou que paga 5 mil — isso é o campo de faturamento (form) + o Budget do BANT que provam. Não confundir os dois filtros.
+**Nota sobre o que os R$ 97 testam:** a hipótese é que confirmem **intenção e comparecimento**, não capacidade de pagar os R$ 5 mil ou R$ 10 mil da Consultoria. Quem paga 97 não provou que paga a Consultoria — isso é avaliado pela faixa de faturamento no formulário e pelo Budget do BANT. Não confundir os dois filtros.
 
 **⚠️ A ressalva do dono — isto é premissa, não verdade:** é possível que um lead qualificado veja os R$ 97 e não pague por achar que é isca barata/duvidosa (slop). A hipótese é que a reserva qualifica; ela pode, em vez disso, espantar gente boa. **Por isso vira teste, não fé:**
 
@@ -324,7 +324,7 @@ A faixa é pública, o número fechado nasce na reunião (regra literal). Se per
 
 # Checklist pra fechar 3.4 (antes de subir tráfego)
 
-- [x] Decidir 3.3 — **reserva de R$ 97 reembolsável**, no A2.5 (depois do BANT). Página e sequência já ajustadas
+- [x] Decidir 3.3 — **reserva de R$ 97 abatida na Consultoria**, no A2.5 (depois do BANT). Página e sequência já ajustadas
 - [ ] Montar o link de pagamento da reserva (Stripe/Pix) + definir o prazo pra pagar antes de liberar a vaga
 - [ ] Registrar no placar a coluna "reserva paga (sim/não)" pra testar a premissa
 - [ ] Montar o formulário (Typeform ou página própria) com as 8 perguntas

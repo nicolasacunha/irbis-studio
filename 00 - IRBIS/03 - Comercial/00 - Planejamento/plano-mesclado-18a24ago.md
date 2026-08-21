@@ -20,9 +20,9 @@ O plano abaixo assume o caminho A com o B de contingência.
 
 | Verba tráfego | Ticket do funil | Agendamentos qualif. | Conversão alvo | Meta/mês |
 |---|---|---|---|---|
-| R$ 2 mil | R$ 5–7 mil | 4 a 5 /semana | 25% | R$ 30 mil |
+| R$ 2 mil | R$ 5 mil ou R$ 10 mil | 4 a 5 /semana | 25% | R$ 30 mil |
 
-> ⚠️ Os R$ 5–7 mil são o ticket **do funil novo** (economia real, entrada pela análise). O Rocha é o lead grande, fora dessa régua — Fase 1 a R$ 20 mil, construção depois.
+> ⚠️ A política de preço é o árbitro: Consultoria de IA custa **R$ 5 mil até R$ 10 milhões/ano de faturamento e R$ 10 mil acima disso**; enterprise segue sob consulta. O intervalo de R$ 5–7 mil vindo do plano do JDP não virou política da IRBIS. O Rocha é um lead grande tratado por proposta específica — Fase 1 a R$ 20 mil, construção depois.
 
 ---
 
@@ -84,7 +84,7 @@ O plano abaixo assume o caminho A com o B de contingência.
 
 - [ ] 4.1 · Subir a campanha com os R$ 2 mil (só se 3.4 estiver fechado)
 - [ ] 4.2 · Três criativos: estático, vídeo, depoimento/análise falada — deixar rodar, não matar cedo
-- [ ] 5.1 · **Régua de preço por porte** — formalizar o que a semana já provou na prática: PME entra pela análise (R$ 5–7 mil), lead grande entra pela Fase 1 (R$ 20 mil+), construção sob proposta fechada na entrega do desenho
+- [ ] 5.1 · **Régua de preço por porte** — consolidar sem contrariar a política vigente: Consultoria de IA a R$ 5 mil ou R$ 10 mil conforme faturamento; enterprise sob consulta; exceções como Rocha só por proposta específica documentada; produção sob proposta na entrega do diagnóstico
 - [ ] 5.2 · Resposta de prova social pronta (o texto do plano serve — decorar a versão: *"método, não sorte com um segmento"*)
 - [ ] 5.4 · Atualizar o banco de objeções com as da call real: **"vai garantir que funciona?"**, "o nosso não seria assim", "travou tudo"
 
